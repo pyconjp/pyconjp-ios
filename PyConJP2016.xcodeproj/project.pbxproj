@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB5D5A811C72320E00CEF0CD /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5D5A801C72320E00CEF0CD /* Setting.storyboard */; };
+		DB5D5A831C72345000CEF0CD /* TalksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D5A821C72345000CEF0CD /* TalksViewController.swift */; };
+		DB5D5A851C72346C00CEF0CD /* Talks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5D5A841C72346C00CEF0CD /* Talks.storyboard */; };
+		DBA1C0AD1C7228E2004F0C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0AC1C7228E2004F0C8D /* AppDelegate.swift */; };
+		DBA1C0AF1C7228E2004F0C8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0AE1C7228E2004F0C8D /* ViewController.swift */; };
+		DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */; };
+		DBA1C0C21C7228E2004F0C8D /* PyConJP2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0C11C7228E2004F0C8D /* PyConJP2016Tests.swift */; };
+		DBA1C0CD1C7228E2004F0C8D /* PyConJP2016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0CC1C7228E2004F0C8D /* PyConJP2016UITests.swift */; };
+		DBA1C0DF1C722E99004F0C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */; };
+		DBA1C0E01C722E99004F0C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0DE1C722E99004F0C8D /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DBA1C0BE1C7228E2004F0C8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBA1C0A11C7228E2004F0C8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBA1C0A81C7228E2004F0C8D;
+			remoteInfo = PyConJP2016;
+		};
+		DBA1C0C91C7228E2004F0C8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBA1C0A11C7228E2004F0C8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBA1C0A81C7228E2004F0C8D;
+			remoteInfo = PyConJP2016;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB5D5A801C72320E00CEF0CD /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		DB5D5A821C72345000CEF0CD /* TalksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksViewController.swift; sourceTree = "<group>"; };
+		DB5D5A841C72346C00CEF0CD /* Talks.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Talks.storyboard; sourceTree = "<group>"; };
+		DBA1C0A91C7228E2004F0C8D /* PyConJP2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PyConJP2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA1C0AC1C7228E2004F0C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DBA1C0AE1C7228E2004F0C8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBA1C0B81C7228E2004F0C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBA1C0BD1C7228E2004F0C8D /* PyConJP2016Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PyConJP2016Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA1C0C11C7228E2004F0C8D /* PyConJP2016Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyConJP2016Tests.swift; sourceTree = "<group>"; };
+		DBA1C0C31C7228E2004F0C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBA1C0C81C7228E2004F0C8D /* PyConJP2016UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PyConJP2016UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA1C0CC1C7228E2004F0C8D /* PyConJP2016UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyConJP2016UITests.swift; sourceTree = "<group>"; };
+		DBA1C0CE1C7228E2004F0C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DBA1C0DE1C722E99004F0C8D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBA1C0A61C7228E2004F0C8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA1C0BA1C7228E2004F0C8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA1C0C51C7228E2004F0C8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DBA1C0A01C7228E2004F0C8D = {
+			isa = PBXGroup;
+			children = (
+				DBA1C0AB1C7228E2004F0C8D /* PyConJP2016 */,
+				DBA1C0C01C7228E2004F0C8D /* PyConJP2016Tests */,
+				DBA1C0CB1C7228E2004F0C8D /* PyConJP2016UITests */,
+				DBA1C0AA1C7228E2004F0C8D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DBA1C0AA1C7228E2004F0C8D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBA1C0A91C7228E2004F0C8D /* PyConJP2016.app */,
+				DBA1C0BD1C7228E2004F0C8D /* PyConJP2016Tests.xctest */,
+				DBA1C0C81C7228E2004F0C8D /* PyConJP2016UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBA1C0AB1C7228E2004F0C8D /* PyConJP2016 */ = {
+			isa = PBXGroup;
+			children = (
+				DBA1C0DA1C722E77004F0C8D /* Model */,
+				DBA1C0DC1C722E99004F0C8D /* Storyboard */,
+				DBA1C0DB1C722E82004F0C8D /* ViewController */,
+				DBA1C0AC1C7228E2004F0C8D /* AppDelegate.swift */,
+				DBA1C0AE1C7228E2004F0C8D /* ViewController.swift */,
+				DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */,
+				DBA1C0B81C7228E2004F0C8D /* Info.plist */,
+			);
+			path = PyConJP2016;
+			sourceTree = "<group>";
+		};
+		DBA1C0C01C7228E2004F0C8D /* PyConJP2016Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DBA1C0C11C7228E2004F0C8D /* PyConJP2016Tests.swift */,
+				DBA1C0C31C7228E2004F0C8D /* Info.plist */,
+			);
+			path = PyConJP2016Tests;
+			sourceTree = "<group>";
+		};
+		DBA1C0CB1C7228E2004F0C8D /* PyConJP2016UITests */ = {
+			isa = PBXGroup;
+			children = (
+				DBA1C0CC1C7228E2004F0C8D /* PyConJP2016UITests.swift */,
+				DBA1C0CE1C7228E2004F0C8D /* Info.plist */,
+			);
+			path = PyConJP2016UITests;
+			sourceTree = "<group>";
+		};
+		DBA1C0DA1C722E77004F0C8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DBA1C0DB1C722E82004F0C8D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB5D5A821C72345000CEF0CD /* TalksViewController.swift */,
+			);
+			name = ViewController;
+			path = PyConJP2016/ViewController;
+			sourceTree = SOURCE_ROOT;
+		};
+		DBA1C0DC1C722E99004F0C8D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */,
+				DBA1C0DE1C722E99004F0C8D /* Main.storyboard */,
+				DB5D5A841C72346C00CEF0CD /* Talks.storyboard */,
+				DB5D5A801C72320E00CEF0CD /* Setting.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBA1C0A81C7228E2004F0C8D /* PyConJP2016 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBA1C0D11C7228E2004F0C8D /* Build configuration list for PBXNativeTarget "PyConJP2016" */;
+			buildPhases = (
+				DBA1C0A51C7228E2004F0C8D /* Sources */,
+				DBA1C0A61C7228E2004F0C8D /* Frameworks */,
+				DBA1C0A71C7228E2004F0C8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PyConJP2016;
+			productName = PyConJP2016;
+			productReference = DBA1C0A91C7228E2004F0C8D /* PyConJP2016.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DBA1C0BC1C7228E2004F0C8D /* PyConJP2016Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBA1C0D41C7228E2004F0C8D /* Build configuration list for PBXNativeTarget "PyConJP2016Tests" */;
+			buildPhases = (
+				DBA1C0B91C7228E2004F0C8D /* Sources */,
+				DBA1C0BA1C7228E2004F0C8D /* Frameworks */,
+				DBA1C0BB1C7228E2004F0C8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBA1C0BF1C7228E2004F0C8D /* PBXTargetDependency */,
+			);
+			name = PyConJP2016Tests;
+			productName = PyConJP2016Tests;
+			productReference = DBA1C0BD1C7228E2004F0C8D /* PyConJP2016Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DBA1C0C71C7228E2004F0C8D /* PyConJP2016UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBA1C0D71C7228E2004F0C8D /* Build configuration list for PBXNativeTarget "PyConJP2016UITests" */;
+			buildPhases = (
+				DBA1C0C41C7228E2004F0C8D /* Sources */,
+				DBA1C0C51C7228E2004F0C8D /* Frameworks */,
+				DBA1C0C61C7228E2004F0C8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBA1C0CA1C7228E2004F0C8D /* PBXTargetDependency */,
+			);
+			name = PyConJP2016UITests;
+			productName = PyConJP2016UITests;
+			productReference = DBA1C0C81C7228E2004F0C8D /* PyConJP2016UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBA1C0A11C7228E2004F0C8D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Yutaro Muta";
+				TargetAttributes = {
+					DBA1C0A81C7228E2004F0C8D = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 3T8B5JQDB8;
+					};
+					DBA1C0BC1C7228E2004F0C8D = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 3T8B5JQDB8;
+						TestTargetID = DBA1C0A81C7228E2004F0C8D;
+					};
+					DBA1C0C71C7228E2004F0C8D = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 3T8B5JQDB8;
+						TestTargetID = DBA1C0A81C7228E2004F0C8D;
+					};
+				};
+			};
+			buildConfigurationList = DBA1C0A41C7228E2004F0C8D /* Build configuration list for PBXProject "PyConJP2016" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DBA1C0A01C7228E2004F0C8D;
+			productRefGroup = DBA1C0AA1C7228E2004F0C8D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBA1C0A81C7228E2004F0C8D /* PyConJP2016 */,
+				DBA1C0BC1C7228E2004F0C8D /* PyConJP2016Tests */,
+				DBA1C0C71C7228E2004F0C8D /* PyConJP2016UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBA1C0A71C7228E2004F0C8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA1C0E01C722E99004F0C8D /* Main.storyboard in Resources */,
+				DBA1C0DF1C722E99004F0C8D /* LaunchScreen.storyboard in Resources */,
+				DB5D5A811C72320E00CEF0CD /* Setting.storyboard in Resources */,
+				DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */,
+				DB5D5A851C72346C00CEF0CD /* Talks.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA1C0BB1C7228E2004F0C8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA1C0C61C7228E2004F0C8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBA1C0A51C7228E2004F0C8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB5D5A831C72345000CEF0CD /* TalksViewController.swift in Sources */,
+				DBA1C0AF1C7228E2004F0C8D /* ViewController.swift in Sources */,
+				DBA1C0AD1C7228E2004F0C8D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA1C0B91C7228E2004F0C8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA1C0C21C7228E2004F0C8D /* PyConJP2016Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA1C0C41C7228E2004F0C8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA1C0CD1C7228E2004F0C8D /* PyConJP2016UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBA1C0BF1C7228E2004F0C8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBA1C0A81C7228E2004F0C8D /* PyConJP2016 */;
+			targetProxy = DBA1C0BE1C7228E2004F0C8D /* PBXContainerItemProxy */;
+		};
+		DBA1C0CA1C7228E2004F0C8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBA1C0A81C7228E2004F0C8D /* PyConJP2016 */;
+			targetProxy = DBA1C0C91C7228E2004F0C8D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DBA1C0CF1C7228E2004F0C8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DBA1C0D01C7228E2004F0C8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBA1C0D21C7228E2004F0C8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PyConJP2016/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yutaro.PyConJP2016;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DBA1C0D31C7228E2004F0C8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PyConJP2016/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yutaro.PyConJP2016;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DBA1C0D51C7228E2004F0C8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PyConJP2016Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yutaro.PyConJP2016Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PyConJP2016.app/PyConJP2016";
+			};
+			name = Debug;
+		};
+		DBA1C0D61C7228E2004F0C8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PyConJP2016Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yutaro.PyConJP2016Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PyConJP2016.app/PyConJP2016";
+			};
+			name = Release;
+		};
+		DBA1C0D81C7228E2004F0C8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PyConJP2016UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yutaro.PyConJP2016UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PyConJP2016;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DBA1C0D91C7228E2004F0C8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PyConJP2016UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yutaro.PyConJP2016UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PyConJP2016;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBA1C0A41C7228E2004F0C8D /* Build configuration list for PBXProject "PyConJP2016" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBA1C0CF1C7228E2004F0C8D /* Debug */,
+				DBA1C0D01C7228E2004F0C8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBA1C0D11C7228E2004F0C8D /* Build configuration list for PBXNativeTarget "PyConJP2016" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBA1C0D21C7228E2004F0C8D /* Debug */,
+				DBA1C0D31C7228E2004F0C8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBA1C0D41C7228E2004F0C8D /* Build configuration list for PBXNativeTarget "PyConJP2016Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBA1C0D51C7228E2004F0C8D /* Debug */,
+				DBA1C0D61C7228E2004F0C8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBA1C0D71C7228E2004F0C8D /* Build configuration list for PBXNativeTarget "PyConJP2016UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBA1C0D81C7228E2004F0C8D /* Debug */,
+				DBA1C0D91C7228E2004F0C8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DBA1C0A11C7228E2004F0C8D /* Project object */;
+}
