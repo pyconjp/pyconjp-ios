@@ -5,7 +5,23 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Talks-->
+        <!--Navigation Controller-->
+        <scene sceneID="0d8-7H-coq">
+            <objects>
+                <navigationController storyboardIdentifier="TalksNavigationController" id="NyO-IO-ozg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jtO-Cp-LAb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="437-Ed-YlZ" kind="relationship" relationship="rootViewController" id="JnQ-wS-VH1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IXI-qV-md3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-261" y="139"/>
+        </scene>
+        <!--Talks View Controller-->
         <scene sceneID="EWf-hH-bGU">
             <objects>
                 <viewController storyboardIdentifier="TalksViewController" id="437-Ed-YlZ" customClass="TalksViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +34,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Talks" id="e9e-R0-lyO"/>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="e9e-R0-lyO"/>
+                    <navigationItem key="navigationItem" id="zN7-B8-vNJ">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="XeB-lX-KFz">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Day1"/>
+                                <segment title="Day2"/>
+                            </segments>
+                        </segmentedControl>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="talksTabBarItem" destination="e9e-R0-lyO" id="eSO-V2-uHb"/>
@@ -26,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKg-3W-4gp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="299" y="342"/>
+            <point key="canvasLocation" x="419" y="139"/>
         </scene>
     </scenes>
 </document>

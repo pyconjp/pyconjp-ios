@@ -22,9 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //TalkTab
         let talkStoryboard = UIStoryboard(name: "Talks", bundle: NSBundle.mainBundle())
-        let talksViewController = talkStoryboard.instantiateViewControllerWithIdentifier("TalksViewController") as! TalksViewController
-        self.talksNavigationController = UINavigationController(rootViewController: talksViewController)
-        self.talksNavigationController?.tabBarItem = talksNavigationController?.tabBarItem
+        self.talksNavigationController = talkStoryboard.instantiateViewControllerWithIdentifier("TalksNavigationController") as? UINavigationController
         
         //TabBar init
         let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
