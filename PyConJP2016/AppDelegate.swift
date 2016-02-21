@@ -20,18 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        //TalkTab
-        let talkStoryboard = UIStoryboard(name: "Talks", bundle: NSBundle.mainBundle())
-        self.talksNavigationController = talkStoryboard.instantiateViewControllerWithIdentifier("TalksNavigationController") as? UINavigationController
-        
-        //TabBar init
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        mainTabBarController = mainStoryboard.instantiateViewControllerWithIdentifier("MainTabBarController") as? UITabBarController
-        mainTabBarController?.setViewControllers(NSArray(objects: talksNavigationController!) as? [UIViewController], animated: false)
-        
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        self.window?.rootViewController = mainTabBarController
-        self.window?.makeKeyAndVisible()
+//        //TalkTab
+//        let talkStoryboard = UIStoryboard(name: "Talks", bundle: NSBundle.mainBundle())
+//        self.talksNavigationController = talkStoryboard.instantiateViewControllerWithIdentifier("TalksNavigationController") as? UINavigationController
+//        
+//        //TabBar init
+//        let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+//        mainTabBarController = mainStoryboard.instantiateViewControllerWithIdentifier("MainTabBarController") as? UITabBarController
+//        mainTabBarController?.setViewControllers(NSArray(objects: talksNavigationController!) as? [UIViewController], animated: false)
+//        
+//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        self.window?.rootViewController = mainTabBarController
+//        self.window?.makeKeyAndVisible()
         
         return true
     }

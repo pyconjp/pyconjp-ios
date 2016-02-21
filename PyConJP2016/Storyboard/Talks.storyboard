@@ -21,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-261" y="139"/>
         </scene>
-        <!--Talks View Controller-->
+        <!--Talks Root View Controller-->
         <scene sceneID="EWf-hH-bGU">
             <objects>
-                <viewController storyboardIdentifier="TalksViewController" id="437-Ed-YlZ" customClass="TalksViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TalksRootViewController" id="437-Ed-YlZ" customClass="TalksRootViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JnA-Er-CiG"/>
                         <viewControllerLayoutGuide type="bottom" id="tVv-lx-jms"/>
@@ -32,9 +32,35 @@
                     <view key="view" contentMode="scaleToFill" id="eXP-xv-0f9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RmS-dn-drK">
+                                <rect key="frame" x="0.0" y="64" width="600" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hOu-Cn-Ela"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="SkF-I0-giB" kind="embed" id="968-ps-v0l"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CK1-RC-sJO">
+                                <rect key="frame" x="0.0" y="104" width="600" height="447"/>
+                                <connections>
+                                    <segue destination="zcE-YM-RUe" kind="embed" id="vt6-48-heR"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RmS-dn-drK" firstAttribute="top" secondItem="JnA-Er-CiG" secondAttribute="bottom" id="8vZ-Pd-PQF"/>
+                            <constraint firstItem="CK1-RC-sJO" firstAttribute="top" secondItem="RmS-dn-drK" secondAttribute="bottom" id="ATb-E1-U2L"/>
+                            <constraint firstItem="tVv-lx-jms" firstAttribute="top" secondItem="CK1-RC-sJO" secondAttribute="bottom" id="Zxo-YC-mTg"/>
+                            <constraint firstItem="CK1-RC-sJO" firstAttribute="leading" secondItem="eXP-xv-0f9" secondAttribute="leading" id="ezX-jn-6zp"/>
+                            <constraint firstAttribute="trailing" secondItem="CK1-RC-sJO" secondAttribute="trailing" id="lMM-uT-Y10"/>
+                            <constraint firstAttribute="trailing" secondItem="RmS-dn-drK" secondAttribute="trailing" id="v1t-Yr-IE4"/>
+                            <constraint firstItem="RmS-dn-drK" firstAttribute="leading" secondItem="eXP-xv-0f9" secondAttribute="leading" id="xL3-ts-4nK"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="e9e-R0-lyO"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="e9e-R0-lyO"/>
                     <navigationItem key="navigationItem" id="zN7-B8-vNJ">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="XeB-lX-KFz">
@@ -47,13 +73,54 @@
                         </segmentedControl>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="talksTabBarItem" destination="e9e-R0-lyO" id="eSO-V2-uHb"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKg-3W-4gp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="419" y="139"/>
+        </scene>
+        <!--Talks List View Controller-->
+        <scene sceneID="ADw-Iw-zoE">
+            <objects>
+                <viewController storyboardIdentifier="TalksListViewController" id="gEP-34-GP9" customClass="TalksListViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BKU-My-l0W"/>
+                        <viewControllerLayoutGuide type="bottom" id="edm-os-Eba"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8xg-FZ-IfU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5kH-pl-Oiz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1835" y="139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UZ7-vc-pIY">
+            <objects>
+                <viewController id="SkF-I0-giB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ORd-mA-7vd"/>
+                        <viewControllerLayoutGuide type="bottom" id="S01-A3-v3M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aWp-EZ-sBV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.074387517099999995" green="0.33806037459999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eme-xo-4ir" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1138" y="-83"/>
+        </scene>
+        <!--Talks Page View Controller-->
+        <scene sceneID="Hot-Kp-tam">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="zcE-YM-RUe" customClass="TalksPageViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wTM-ML-PBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1138" y="231.5"/>
         </scene>
     </scenes>
 </document>
