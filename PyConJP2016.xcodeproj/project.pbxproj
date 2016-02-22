@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F534C431C7AF99D00599E10 /* TalksRoomBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F534C421C7AF99D00599E10 /* TalksRoomBarViewController.swift */; };
 		7F534C491C7B08A900599E10 /* TalksBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F534C481C7B08A900599E10 /* TalksBaseViewController.swift */; };
-		7F534C4B1C7B0A4C00599E10 /* TalksRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F534C4A1C7B0A4C00599E10 /* TalksRootViewController.swift */; };
+		7F534C4D1C7B1F5000599E10 /* TalksDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F534C4C1C7B1F5000599E10 /* TalksDateViewController.swift */; };
 		DB0C6C471C78C99C0026622B /* TalksPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C6C461C78C99C0026622B /* TalksPageViewController.swift */; };
 		DB0C6C4B1C78CD080026622B /* TalksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C6C4A1C78CD080026622B /* TalksListViewController.swift */; };
 		DB1579D61C79F93200A5F5BA /* TalksModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1579D51C79F93200A5F5BA /* TalksModelController.swift */; };
@@ -49,9 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7F534C421C7AF99D00599E10 /* TalksRoomBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksRoomBarViewController.swift; sourceTree = "<group>"; };
 		7F534C481C7B08A900599E10 /* TalksBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksBaseViewController.swift; sourceTree = "<group>"; };
-		7F534C4A1C7B0A4C00599E10 /* TalksRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksRootViewController.swift; sourceTree = "<group>"; };
+		7F534C4C1C7B1F5000599E10 /* TalksDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksDateViewController.swift; sourceTree = "<group>"; };
 		DB0C6C461C78C99C0026622B /* TalksPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksPageViewController.swift; sourceTree = "<group>"; };
 		DB0C6C4A1C78CD080026622B /* TalksListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksListViewController.swift; sourceTree = "<group>"; };
 		DB1579D51C79F93200A5F5BA /* TalksModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksModelController.swift; sourceTree = "<group>"; };
@@ -194,9 +192,8 @@
 				DB0C6C461C78C99C0026622B /* TalksPageViewController.swift */,
 				DB0C6C4A1C78CD080026622B /* TalksListViewController.swift */,
 				DB1579D51C79F93200A5F5BA /* TalksModelController.swift */,
-				7F534C421C7AF99D00599E10 /* TalksRoomBarViewController.swift */,
 				7F534C481C7B08A900599E10 /* TalksBaseViewController.swift */,
-				7F534C4A1C7B0A4C00599E10 /* TalksRootViewController.swift */,
+				7F534C4C1C7B1F5000599E10 /* TalksDateViewController.swift */,
 			);
 			path = Talks;
 			sourceTree = "<group>";
@@ -357,10 +354,9 @@
 				DB0C6C471C78C99C0026622B /* TalksPageViewController.swift in Sources */,
 				DBA1C0AD1C7228E2004F0C8D /* AppDelegate.swift in Sources */,
 				DB1579D61C79F93200A5F5BA /* TalksModelController.swift in Sources */,
-				7F534C4B1C7B0A4C00599E10 /* TalksRootViewController.swift in Sources */,
-				7F534C431C7AF99D00599E10 /* TalksRoomBarViewController.swift in Sources */,
 				7F534C491C7B08A900599E10 /* TalksBaseViewController.swift in Sources */,
 				DB1579DA1C7A13C400A5F5BA /* PlaceModel.swift in Sources */,
+				7F534C4D1C7B1F5000599E10 /* TalksDateViewController.swift in Sources */,
 				DB1579D81C7A10B800A5F5BA /* TalkModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

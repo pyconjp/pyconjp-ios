@@ -1,5 +1,5 @@
 //
-//  TalksRoomBarViewController.swift
+//  TalksDateViewController.swift
 //  PyConJP2016
 //
 //  Created by 牟田　裕太郎 on 2016/02/22.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TalksRoomBarViewController: UIViewController {
+class TalksDateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +21,8 @@ class TalksRoomBarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func didMoveToParentViewController(parent: UIViewController?) {
-        let talksRootViewController = parent as! TalksRootViewController
-    }
 
+    override func didMoveToParentViewController(parent: UIViewController?) {
+        let talksBaseViewController = parent as! TalksBaseViewController
+    }
 }

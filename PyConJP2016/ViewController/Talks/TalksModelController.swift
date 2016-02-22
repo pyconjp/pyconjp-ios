@@ -15,7 +15,7 @@ class TalksModelController: NSObject, UIPageViewControllerDataSource {
     override init() {
         super.init()
         // Create the data model.
-        colorArray = [UIColor.redColor(), UIColor.purpleColor(), UIColor.yellowColor(), UIColor.whiteColor()]
+        colorArray = [UIColor.redColor(), UIColor.purpleColor()]
     }
 
     func viewControllerAtIndex(index: Int, storyboard: UIStoryboard) -> TalksListViewController? {

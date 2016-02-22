@@ -19,7 +19,7 @@ class TalksListViewController: UIViewController, UITableViewDataSource, UITableV
         let nib  = UINib(nibName: "TalkTableViewCell", bundle:nil)
         tableView.registerNib(nib, forCellReuseIdentifier:"TalkTableViewCell")
         
-        tableView.estimatedRowHeight = 100
+        tableView.estimatedRowHeight = 120
     }
 
     override func didReceiveMemoryWarning() {
