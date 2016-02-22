@@ -139,6 +139,7 @@
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="dff-7J-ksT" secondAttribute="bottom" id="84D-0C-FZM"/>
                                     <constraint firstAttribute="height" constant="3" id="Mvt-KJ-oI0"/>
@@ -146,10 +147,6 @@
                                     <constraint firstItem="dff-7J-ksT" firstAttribute="top" secondItem="A7j-C2-3fK" secondAttribute="top" id="ycF-MJ-c7g"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3A-xF-IfK">
-                                <rect key="frame" x="450" y="0.0" width="150" height="37"/>
-                                <state key="normal" title="room4"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEC-K7-3BF">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="37"/>
                                 <state key="normal" title="room1"/>
@@ -162,6 +159,10 @@
                                 <rect key="frame" x="300" y="0.0" width="150" height="37"/>
                                 <state key="normal" title="room3"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3A-xF-IfK">
+                                <rect key="frame" x="450" y="0.0" width="150" height="37"/>
+                                <state key="normal" title="room4"/>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="fNF-R4-aQr" firstAttribute="top" secondItem="ORd-mA-7vd" secondAttribute="bottom" id="0Je-0b-zXt"/>
@@ -171,6 +172,7 @@
                             <constraint firstItem="Z3A-xF-IfK" firstAttribute="top" secondItem="ORd-mA-7vd" secondAttribute="bottom" id="HEq-NV-Yad"/>
                             <constraint firstItem="6pA-sY-mHk" firstAttribute="leading" secondItem="fNF-R4-aQr" secondAttribute="trailing" id="I7x-dX-5Lg"/>
                             <constraint firstItem="fNF-R4-aQr" firstAttribute="width" secondItem="xEC-K7-3BF" secondAttribute="width" id="Jfg-oE-7la"/>
+                            <constraint firstItem="xEC-K7-3BF" firstAttribute="top" secondItem="ORd-mA-7vd" secondAttribute="bottom" id="LNE-TM-Vbe"/>
                             <constraint firstItem="S01-A3-v3M" firstAttribute="top" secondItem="A7j-C2-3fK" secondAttribute="bottom" id="RuM-es-DfC"/>
                             <constraint firstItem="xEC-K7-3BF" firstAttribute="top" secondItem="aWp-EZ-sBV" secondAttribute="top" id="ULh-np-YsC"/>
                             <constraint firstItem="Z3A-xF-IfK" firstAttribute="width" secondItem="xEC-K7-3BF" secondAttribute="width" id="VSc-Dg-TKR"/>
@@ -185,6 +187,11 @@
                             <constraint firstItem="dff-7J-ksT" firstAttribute="width" secondItem="xEC-K7-3BF" secondAttribute="width" id="uF8-D1-IAG"/>
                             <constraint firstItem="A7j-C2-3fK" firstAttribute="leading" secondItem="aWp-EZ-sBV" secondAttribute="leading" id="vuQ-OA-LbU"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ULh-np-YsC"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eme-xo-4ir" userLabel="First Responder" sceneMemberID="firstResponder"/>
