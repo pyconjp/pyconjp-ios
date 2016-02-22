@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB0C6C451C78C95C0026622B /* TalksRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C6C441C78C95C0026622B /* TalksRootViewController.swift */; };
+		7F534C431C7AF99D00599E10 /* TalksRoomBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F534C421C7AF99D00599E10 /* TalksRoomBarViewController.swift */; };
+		7F534C491C7B08A900599E10 /* TalksBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F534C481C7B08A900599E10 /* TalksBaseViewController.swift */; };
+		7F534C4B1C7B0A4C00599E10 /* TalksRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F534C4A1C7B0A4C00599E10 /* TalksRootViewController.swift */; };
 		DB0C6C471C78C99C0026622B /* TalksPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C6C461C78C99C0026622B /* TalksPageViewController.swift */; };
 		DB0C6C4B1C78CD080026622B /* TalksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0C6C4A1C78CD080026622B /* TalksListViewController.swift */; };
 		DB1579D61C79F93200A5F5BA /* TalksModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1579D51C79F93200A5F5BA /* TalksModelController.swift */; };
@@ -47,7 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DB0C6C441C78C95C0026622B /* TalksRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksRootViewController.swift; sourceTree = "<group>"; };
+		7F534C421C7AF99D00599E10 /* TalksRoomBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksRoomBarViewController.swift; sourceTree = "<group>"; };
+		7F534C481C7B08A900599E10 /* TalksBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksBaseViewController.swift; sourceTree = "<group>"; };
+		7F534C4A1C7B0A4C00599E10 /* TalksRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksRootViewController.swift; sourceTree = "<group>"; };
 		DB0C6C461C78C99C0026622B /* TalksPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksPageViewController.swift; sourceTree = "<group>"; };
 		DB0C6C4A1C78CD080026622B /* TalksListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksListViewController.swift; sourceTree = "<group>"; };
 		DB1579D51C79F93200A5F5BA /* TalksModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksModelController.swift; sourceTree = "<group>"; };
@@ -187,10 +191,12 @@
 		DBC748131C7624AA00895D4A /* Talks */ = {
 			isa = PBXGroup;
 			children = (
-				DB0C6C441C78C95C0026622B /* TalksRootViewController.swift */,
 				DB0C6C461C78C99C0026622B /* TalksPageViewController.swift */,
 				DB0C6C4A1C78CD080026622B /* TalksListViewController.swift */,
 				DB1579D51C79F93200A5F5BA /* TalksModelController.swift */,
+				7F534C421C7AF99D00599E10 /* TalksRoomBarViewController.swift */,
+				7F534C481C7B08A900599E10 /* TalksBaseViewController.swift */,
+				7F534C4A1C7B0A4C00599E10 /* TalksRootViewController.swift */,
 			);
 			path = Talks;
 			sourceTree = "<group>";
@@ -348,10 +354,12 @@
 				DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */,
 				DBA1C0AF1C7228E2004F0C8D /* ViewController.swift in Sources */,
 				DB1579DE1C7A157C00A5F5BA /* SpeakerModel.swift in Sources */,
-				DB0C6C451C78C95C0026622B /* TalksRootViewController.swift in Sources */,
 				DB0C6C471C78C99C0026622B /* TalksPageViewController.swift in Sources */,
 				DBA1C0AD1C7228E2004F0C8D /* AppDelegate.swift in Sources */,
 				DB1579D61C79F93200A5F5BA /* TalksModelController.swift in Sources */,
+				7F534C4B1C7B0A4C00599E10 /* TalksRootViewController.swift in Sources */,
+				7F534C431C7AF99D00599E10 /* TalksRoomBarViewController.swift in Sources */,
+				7F534C491C7B08A900599E10 /* TalksBaseViewController.swift in Sources */,
 				DB1579DA1C7A13C400A5F5BA /* PlaceModel.swift in Sources */,
 				DB1579D81C7A10B800A5F5BA /* TalkModel.swift in Sources */,
 			);

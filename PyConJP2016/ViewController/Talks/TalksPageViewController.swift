@@ -51,5 +51,10 @@ class TalksPageViewController: UIPageViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func didMoveToParentViewController(parent: UIViewController?) {
+        let talksRootViewController = parent as! TalksRootViewController
+        
+    }
+    
 
 }

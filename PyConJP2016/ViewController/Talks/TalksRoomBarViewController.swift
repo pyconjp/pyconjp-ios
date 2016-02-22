@@ -1,5 +1,5 @@
 //
-//  TalksRootViewController.swift
+//  TalksRoomBarViewController.swift
 //  PyConJP2016
 //
 //  Created by 牟田　裕太郎 on 2016/02/22.
@@ -8,9 +8,7 @@
 
 import UIKit
 
-class TalksRootViewController: UIViewController {
-    
-    var dayNumber: Int = 0
+class TalksRoomBarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +22,7 @@ class TalksRootViewController: UIViewController {
     }
     
     override func didMoveToParentViewController(parent: UIViewController?) {
-        let talksBaseViewController = parent as! TalksBaseViewController
+        let talksRootViewController = parent as! TalksRootViewController
     }
 
 }
