@@ -10,6 +10,7 @@ import UIKit
 
 class TalksPageViewController: UIPageViewController {
     
+    var dayNumber: Int = 0
     var childrenViewControllers: Array<TalksListViewController> = []
 
     override func viewDidLoad() {
