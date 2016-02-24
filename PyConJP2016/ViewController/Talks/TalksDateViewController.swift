@@ -10,12 +10,14 @@ import UIKit
 
 class TalksDateViewController: UIViewController {
     
-    var activeBar: UIView = UIView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: UIScreen.mainScreen().bounds.width, height: 3)))
+    @IBOutlet weak var activeBarView: UIView!
+    var activeBar: UIView = UIView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: UIScreen.mainScreen().bounds.width / 2, height: 3)))
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        activeBar.backgroundColor = UIColor.redColor()
+        activeBarView.addSubview(activeBar)
     }
 
     override func didReceiveMemoryWarning() {

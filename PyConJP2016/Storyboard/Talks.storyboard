@@ -120,28 +120,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7j-C2-3fK">
-                                <rect key="frame" x="0.0" y="40" width="600" height="4"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dff-7J-ksT">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="4"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="41" width="600" height="3"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="dff-7J-ksT" secondAttribute="bottom" id="84D-0C-FZM"/>
-                                    <constraint firstAttribute="height" constant="4" id="Mvt-KJ-oI0"/>
-                                    <constraint firstItem="dff-7J-ksT" firstAttribute="leading" secondItem="A7j-C2-3fK" secondAttribute="leading" id="Weg-Ft-fh4"/>
-                                    <constraint firstItem="dff-7J-ksT" firstAttribute="top" secondItem="A7j-C2-3fK" secondAttribute="top" id="ycF-MJ-c7g"/>
+                                    <constraint firstAttribute="height" constant="3" id="Mvt-KJ-oI0"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEC-K7-3BF">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
-                                <state key="normal" title="Day1"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="41"/>
+                                <state key="normal" title="Day1">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNF-R4-aQr">
-                                <rect key="frame" x="300" y="0.0" width="300" height="40"/>
-                                <state key="normal" title="Day2"/>
+                                <rect key="frame" x="300" y="0.0" width="300" height="41"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Day2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <constraints>
@@ -156,7 +151,6 @@
                             <constraint firstItem="A7j-C2-3fK" firstAttribute="top" secondItem="fNF-R4-aQr" secondAttribute="bottom" id="lmd-8J-jJh"/>
                             <constraint firstItem="fNF-R4-aQr" firstAttribute="leading" secondItem="xEC-K7-3BF" secondAttribute="trailing" id="ohf-Rq-iwr"/>
                             <constraint firstItem="xEC-K7-3BF" firstAttribute="leading" secondItem="aWp-EZ-sBV" secondAttribute="leading" id="sKQ-2h-B4n"/>
-                            <constraint firstItem="dff-7J-ksT" firstAttribute="width" secondItem="xEC-K7-3BF" secondAttribute="width" id="uF8-D1-IAG"/>
                             <constraint firstItem="A7j-C2-3fK" firstAttribute="leading" secondItem="aWp-EZ-sBV" secondAttribute="leading" id="vuQ-OA-LbU"/>
                         </constraints>
                         <variation key="default">
@@ -165,6 +159,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="activeBarView" destination="A7j-C2-3fK" id="2qV-JI-RvN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eme-xo-4ir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
