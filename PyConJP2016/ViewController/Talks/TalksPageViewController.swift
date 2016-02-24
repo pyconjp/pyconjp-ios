@@ -53,6 +53,12 @@ class TalksPageViewController: UIPageViewController {
     override func didMoveToParentViewController(parent: UIViewController?) {
         let talksBaseViewController = parent as! TalksBaseViewController
         self.delegate = talksBaseViewController
+        
+        for subview in self.view.subviews {
+            if let scrollView = subview as? UIScrollView {
+                scrollView.delegate = talksBaseViewController
+            }
+        }
     }
     
 }

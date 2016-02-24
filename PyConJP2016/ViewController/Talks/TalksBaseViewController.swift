@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TalksBaseViewController: UIViewController, UIPageViewControllerDelegate {
+class TalksBaseViewController: UIViewController, UIPageViewControllerDelegate, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,10 @@ class TalksBaseViewController: UIViewController, UIPageViewControllerDelegate {
     }
     
     func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
         
     }
     

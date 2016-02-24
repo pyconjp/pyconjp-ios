@@ -279,7 +279,7 @@
 				TargetAttributes = {
 					DBA1C0A81C7228E2004F0C8D = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 3T8B5JQDB8;
+						DevelopmentTeam = 655CB4BL24;
 					};
 					DBA1C0BC1C7228E2004F0C8D = {
 						CreatedOnToolsVersion = 7.2;
@@ -489,7 +489,7 @@
 				INFOPLIST_FILE = PyConJP2016/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PyConJP2016;
+				PRODUCT_BUNDLE_IDENTIFIER = yutaro.PyConJP2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -504,7 +504,7 @@
 				INFOPLIST_FILE = PyConJP2016/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PyConJP2016;
+				PRODUCT_BUNDLE_IDENTIFIER = yutaro.PyConJP2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
