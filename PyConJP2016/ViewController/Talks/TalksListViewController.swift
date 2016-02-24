@@ -21,6 +21,14 @@ class TalksListViewController: UIViewController, UITableViewDataSource, UITableV
         
         tableView.estimatedRowHeight = 120
     }
+    
+    override func viewWillAppear(animated: Bool) {
+//        let indexPath = tableView.indexPathsForSelectedRows![0] as NSIndexPath {
+//            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//        }
+//        tableView.deselectRowAtIndexPath(tableView.indexPathsForSelectedRows![0], animated: true)
+//        tableView.deselectRowAtIndexPath(NSIndexPath, animated: <#T##Bool#>)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -34,6 +42,14 @@ class TalksListViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TalkTableViewCell") as? TalkTableViewCell
         return cell!
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let talkDetailViewController = mainStoryboard.instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
+        self.navigationController?.pushViewController(talkDetailViewController, animated: true)
     }
 
 }

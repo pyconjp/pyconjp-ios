@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TalksBaseViewController: UIViewController {
+class TalksBaseViewController: UIViewController, UIPageViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +17,10 @@ class TalksBaseViewController: UIViewController {
         
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        
     }
     
 }

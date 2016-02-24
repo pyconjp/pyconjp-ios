@@ -51,7 +51,8 @@ class TalksPageViewController: UIPageViewController {
     }
     
     override func didMoveToParentViewController(parent: UIViewController?) {
-        let talksRootViewController = parent as! TalksBaseViewController
+        let talksBaseViewController = parent as! TalksBaseViewController
+        self.delegate = talksBaseViewController
     }
     
 }

@@ -13,7 +13,8 @@ class TalkTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var speakerLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var notificationButton: UIButton!
+    @IBOutlet weak var roomLabel: UILabel!
+    @IBOutlet weak var notificationSwitch: UISwitch!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,8 +25,16 @@ class TalkTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    @IBAction func onNotificationButton(sender: UIButton) {
-        //todo Local通知の登録
+    
+    override func prepareForReuse() {
+        titleLabel.text = nil
+        timeLabel.text = nil
+        roomLabel.text = nil
+        speakerLabel.text = nil
+        notificationSwitch.on = false
+    }
+    
+    @IBAction func changeSwitch(sender: UISwitch) {
     }
     
 }
