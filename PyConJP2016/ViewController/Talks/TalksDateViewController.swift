@@ -28,5 +28,12 @@ class TalksDateViewController: UIViewController {
 
     override func didMoveToParentViewController(parent: UIViewController?) {
         let talksBaseViewController = parent as! TalksBaseViewController
+        talksBaseViewController.addObserver(self, forKeyPath: "moveLength", options: NSKeyValueObservingOptions.New, context: nil)
+    }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        if keyPath == "moveLength" {
+            print("hoge")
+        }
     }
 }

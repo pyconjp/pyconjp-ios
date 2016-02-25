@@ -10,6 +10,8 @@ import UIKit
 
 class TalksBaseViewController: UIViewController, UIPageViewControllerDelegate, UIScrollViewDelegate {
     
+    var moveLength: Double = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

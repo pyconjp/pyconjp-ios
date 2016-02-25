@@ -29,6 +29,7 @@
 		DBA1C0DF1C722E99004F0C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */; };
 		DBA1C0E01C722E99004F0C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0DE1C722E99004F0C8D /* Main.storyboard */; };
 		DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC748171C76254000895D4A /* BaseTabBarController.swift */; };
+		DBF4A7491C7F649A00AB8BE4 /* PCJWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF4A7481C7F649A00AB8BE4 /* PCJWKWebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBA1C0DE1C722E99004F0C8D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DBC748171C76254000895D4A /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		DBF4A7481C7F649A00AB8BE4 /* PCJWKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJWKWebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 				DB1579DF1C7A1CB400A5F5BA /* TalkTableViewCell.swift */,
 				DB1579E01C7A1CB400A5F5BA /* TalkTableViewCell.xib */,
 				DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */,
+				DBF4A7481C7F649A00AB8BE4 /* PCJWKWebViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			files = (
 				DB1579DC1C7A154B00A5F5BA /* LevelModel.swift in Sources */,
 				DB1579E11C7A1CB400A5F5BA /* TalkTableViewCell.swift in Sources */,
+				DBF4A7491C7F649A00AB8BE4 /* PCJWKWebViewController.swift in Sources */,
 				DB0C6C4B1C78CD080026622B /* TalksListViewController.swift in Sources */,
 				DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */,
 				DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */,

@@ -21,14 +21,6 @@ class TalksListViewController: UIViewController, UITableViewDataSource, UITableV
         
         tableView.estimatedRowHeight = 120
     }
-    
-    override func viewWillAppear(animated: Bool) {
-//        let indexPath = tableView.indexPathsForSelectedRows![0] as NSIndexPath {
-//            tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//        }
-//        tableView.deselectRowAtIndexPath(tableView.indexPathsForSelectedRows![0], animated: true)
-//        tableView.deselectRowAtIndexPath(NSIndexPath, animated: <#T##Bool#>)
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

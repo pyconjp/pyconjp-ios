@@ -241,6 +241,24 @@
             </objects>
             <point key="canvasLocation" x="757" y="423"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="ORt-PX-o5h">
+            <objects>
+                <viewController storyboardIdentifier="PCJWKWebViewController" id="gmt-s7-TvW" customClass="PCJWKWebViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aJ3-bu-cHt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Syu-fn-HAx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TaP-Ke-BZo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a34-wH-AFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1486" y="423"/>
+        </scene>
     </scenes>
     <resources>
         <image name="clock" width="16" height="16"/>
