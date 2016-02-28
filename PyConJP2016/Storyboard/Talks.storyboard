@@ -65,6 +65,10 @@
                         <nil key="title"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="barContainerView" destination="P5M-SO-a3c" id="Sya-36-MA6"/>
+                        <outlet property="pageContainerView" destination="h5T-yd-r81" id="w60-PQ-C0b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKg-3W-4gp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,6 +165,8 @@
                     </view>
                     <connections>
                         <outlet property="activeBarView" destination="A7j-C2-3fK" id="2qV-JI-RvN"/>
+                        <outlet property="day1Button" destination="xEC-K7-3BF" id="poj-Wa-qlZ"/>
+                        <outlet property="day2Button" destination="fNF-R4-aQr" id="F7L-wa-jFK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eme-xo-4ir" userLabel="First Responder" sceneMemberID="firstResponder"/>

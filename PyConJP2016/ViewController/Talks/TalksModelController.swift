@@ -25,6 +25,7 @@ class TalksModelController: NSObject, UIPageViewControllerDataSource {
         
         let talksListViewController = storyboard.instantiateViewControllerWithIdentifier("TalksListViewController") as! TalksListViewController
         talksListViewController.view.backgroundColor = self.colorArray[index]
+        talksListViewController.viewControllerIndex = index
         return talksListViewController
 
     }

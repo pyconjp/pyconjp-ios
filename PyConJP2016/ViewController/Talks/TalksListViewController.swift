@@ -11,7 +11,7 @@ import UIKit
 class TalksListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-//    var roomNumber: Int = 0
+    var viewControllerIndex: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
