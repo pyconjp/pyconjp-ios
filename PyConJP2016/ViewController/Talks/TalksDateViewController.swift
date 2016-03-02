@@ -38,11 +38,11 @@ class TalksDateViewController: UIViewController {
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         print(change)
         switch keyPath! {
-        case "offsetToChange":
-            if let offsetToChange = change?["new"] as? CGFloat {
-                activeBar.frame.origin.x = offsetToChange / 2
-                print(activeBar.frame)
-            }
+//        case "offsetToChange":
+//            if let offsetToChange = change?["new"] as? CGFloat {
+//                activeBar.frame.origin.x = offsetToChange / 2
+//                print(activeBar.frame)
+//            }
         case "displayIndex":
             if let displayIndex = change?["new"] as? Int {
                 UIView.animateWithDuration(0.3, animations: { () -> Void in
@@ -58,9 +58,11 @@ class TalksDateViewController: UIViewController {
         case 0:
             self.changeActiveButton(self.day1Button)
             self.changeUnactiveButton(self.day2Button)
+            activeBarView.frame.origin.x = 0
         case 1:
             self.changeUnactiveButton(self.day1Button)
             self.changeActiveButton(self.day2Button)
+            activeBarView.frame.origin.x = self.view.frame.width / 2
         default: break
         }
     }
@@ -72,7 +74,7 @@ class TalksDateViewController: UIViewController {
     }
     
     func changeUnactiveButton(button: UIButton) {
-        button.backgroundColor = UIColor.grayColor()
+        button.backgroundColor = UIColor.lightGrayColor()
         button.titleLabel?.textColor = UIColor.whiteColor()
 //        button.enabled = true
     }

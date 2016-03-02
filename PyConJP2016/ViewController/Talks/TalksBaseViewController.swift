@@ -22,7 +22,7 @@ class TalksBaseViewController: UIViewController, UIPageViewControllerDelegate, U
     }
     
     override func viewDidAppear(animated: Bool) {
-        offsetToChange = 0.0
+//        offsetToChange = 0.0
     }
         
     override func didReceiveMemoryWarning() {
