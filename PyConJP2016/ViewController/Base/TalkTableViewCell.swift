@@ -26,6 +26,14 @@ class TalkTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configurationData(model: TalkModel) {
+        titleLabel.text = model.title
+        speakerLabel.text = model.speaker?.name
+        timeLabel.text =  model.periodTime
+        roomLabel.text = model.place?.name
+        notificationSwitch.on = model.isSetNotification
+    }
+    
     override func prepareForReuse() {
         titleLabel.text = nil
         timeLabel.text = nil

@@ -2,7 +2,7 @@
 //  TalksDateViewController.swift
 //  PyConJP2016
 //
-//  Created by 牟田　裕太郎 on 2016/02/22.
+//  Created by Yutaro Muta on 2016/02/22.
 //  Copyright © 2016年 Yutaro Muta. All rights reserved.
 //
 
@@ -22,6 +22,7 @@ class TalksDateViewController: UIViewController {
         
         activeBar.backgroundColor = UIColor.redColor()
         activeBarView.addSubview(activeBar)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +37,6 @@ class TalksDateViewController: UIViewController {
     }
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        print(change)
         switch keyPath! {
 //        case "offsetToChange":
 //            if let offsetToChange = change?["new"] as? CGFloat {
@@ -56,27 +56,29 @@ class TalksDateViewController: UIViewController {
     func changeActive(index: Int) {
         switch index {
         case 0:
-            self.changeActiveButton(self.day1Button)
-            self.changeUnactiveButton(self.day2Button)
+            self.changeActiveButton(day1Button)
+            self.changeUnactiveButton(day2Button)
             activeBarView.frame.origin.x = 0
         case 1:
-            self.changeUnactiveButton(self.day1Button)
-            self.changeActiveButton(self.day2Button)
-            activeBarView.frame.origin.x = self.view.frame.width / 2
+            self.changeUnactiveButton(day1Button)
+            self.changeActiveButton(day2Button)
+            activeBarView.frame.origin.x = UIScreen.mainScreen().bounds.width / 2
         default: break
         }
     }
     
     func changeActiveButton(button: UIButton) {
-        button.backgroundColor = UIColor.whiteColor()
-        button.titleLabel?.textColor = UIColor.blackColor()
-//        button.enabled = false
+        button.enabled = false
+        button.backgroundColor = .whiteColor()
+//        button.titleLabel?.textColor = .blackColor()
+//        button.setTitleColor(.blackColor(), forState: .Normal)
     }
     
     func changeUnactiveButton(button: UIButton) {
-        button.backgroundColor = UIColor.lightGrayColor()
-        button.titleLabel?.textColor = UIColor.whiteColor()
-//        button.enabled = true
+        button.enabled = true
+        button.backgroundColor = .lightGrayColor()
+//        button.titleLabel?.textColor = .whiteColor()
+//        button.setTitleColor(.whiteColor(), forState: .Normal)
     }
     
 }

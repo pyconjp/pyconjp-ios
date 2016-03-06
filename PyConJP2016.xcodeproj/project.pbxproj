@@ -19,7 +19,6 @@
 		DB1579E11C7A1CB400A5F5BA /* TalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1579DF1C7A1CB400A5F5BA /* TalkTableViewCell.swift */; };
 		DB1579E21C7A1CB400A5F5BA /* TalkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB1579E01C7A1CB400A5F5BA /* TalkTableViewCell.xib */; };
 		DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */; };
-		DB5D5A811C72320E00CEF0CD /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5D5A801C72320E00CEF0CD /* Setting.storyboard */; };
 		DB5D5A851C72346C00CEF0CD /* Talks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5D5A841C72346C00CEF0CD /* Talks.storyboard */; };
 		DBA1C0AD1C7228E2004F0C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0AC1C7228E2004F0C8D /* AppDelegate.swift */; };
 		DBA1C0AF1C7228E2004F0C8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0AE1C7228E2004F0C8D /* ViewController.swift */; };
@@ -29,6 +28,8 @@
 		DBA1C0DF1C722E99004F0C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */; };
 		DBA1C0E01C722E99004F0C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0DE1C722E99004F0C8D /* Main.storyboard */; };
 		DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC748171C76254000895D4A /* BaseTabBarController.swift */; };
+		DBDE0E7C1C8C19F50094BF36 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBDE0E7B1C8C19F50094BF36 /* More.storyboard */; };
+		DBEBDB481C8C89FC002B25B3 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */; };
 		DBF4A7491C7F649A00AB8BE4 /* PCJWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF4A7481C7F649A00AB8BE4 /* PCJWKWebViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +63,6 @@
 		DB1579DF1C7A1CB400A5F5BA /* TalkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkTableViewCell.swift; sourceTree = "<group>"; };
 		DB1579E01C7A1CB400A5F5BA /* TalkTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkTableViewCell.xib; sourceTree = "<group>"; };
 		DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkDetailViewController.swift; sourceTree = "<group>"; };
-		DB5D5A801C72320E00CEF0CD /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		DB5D5A841C72346C00CEF0CD /* Talks.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Talks.storyboard; sourceTree = "<group>"; };
 		DBA1C0A91C7228E2004F0C8D /* PyConJP2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PyConJP2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA1C0AC1C7228E2004F0C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +78,8 @@
 		DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBA1C0DE1C722E99004F0C8D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DBC748171C76254000895D4A /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		DBDE0E7B1C8C19F50094BF36 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		DBF4A7481C7F649A00AB8BE4 /* PCJWKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJWKWebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 				DBA1C0DA1C722E77004F0C8D /* Model */,
 				DBA1C0DC1C722E99004F0C8D /* Storyboard */,
 				DBA1C0DB1C722E82004F0C8D /* ViewController */,
+				DBEBDB491C8C9046002B25B3 /* Category */,
 				DBA1C0AC1C7228E2004F0C8D /* AppDelegate.swift */,
 				DBA1C0AE1C7228E2004F0C8D /* ViewController.swift */,
 				DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */,
@@ -174,6 +177,7 @@
 			children = (
 				DBC748161C7624CB00895D4A /* Base */,
 				DBC748131C7624AA00895D4A /* Talks */,
+				DBDE0E7A1C8C19CB0094BF36 /* More */,
 			);
 			name = ViewController;
 			path = PyConJP2016/ViewController;
@@ -185,7 +189,7 @@
 				DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */,
 				DBA1C0DE1C722E99004F0C8D /* Main.storyboard */,
 				DB5D5A841C72346C00CEF0CD /* Talks.storyboard */,
-				DB5D5A801C72320E00CEF0CD /* Setting.storyboard */,
+				DBDE0E7B1C8C19F50094BF36 /* More.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -212,6 +216,21 @@
 				DBF4A7481C7F649A00AB8BE4 /* PCJWKWebViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		DBDE0E7A1C8C19CB0094BF36 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		DBEBDB491C8C9046002B25B3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,9 +341,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBA1C0E01C722E99004F0C8D /* Main.storyboard in Resources */,
+				DBDE0E7C1C8C19F50094BF36 /* More.storyboard in Resources */,
 				DB1579E21C7A1CB400A5F5BA /* TalkTableViewCell.xib in Resources */,
 				DBA1C0DF1C722E99004F0C8D /* LaunchScreen.storyboard in Resources */,
-				DB5D5A811C72320E00CEF0CD /* Setting.storyboard in Resources */,
 				DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */,
 				DB5D5A851C72346C00CEF0CD /* Talks.storyboard in Resources */,
 			);
@@ -356,6 +375,7 @@
 				DBF4A7491C7F649A00AB8BE4 /* PCJWKWebViewController.swift in Sources */,
 				DB0C6C4B1C78CD080026622B /* TalksListViewController.swift in Sources */,
 				DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */,
+				DBEBDB481C8C89FC002B25B3 /* MoreViewController.swift in Sources */,
 				DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */,
 				DBA1C0AF1C7228E2004F0C8D /* ViewController.swift in Sources */,
 				DB1579DE1C7A157C00A5F5BA /* SpeakerModel.swift in Sources */,

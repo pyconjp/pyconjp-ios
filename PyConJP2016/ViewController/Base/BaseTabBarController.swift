@@ -10,16 +10,22 @@ import UIKit
 
 class BaseTabBarController: UITabBarController {
     
-    var talksNavigationController: UINavigationController?
+    var talksTabNavigationController: UINavigationController?
+    var moreTabNavigationController: UINavigationController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //TabBar
+        //TalkTab
         let talkStoryboard = UIStoryboard(name: "Talks", bundle: NSBundle.mainBundle())
-        self.talksNavigationController = talkStoryboard.instantiateViewControllerWithIdentifier("TalksNavigationController") as? UINavigationController
+        self.talksTabNavigationController = talkStoryboard.instantiateViewControllerWithIdentifier("TalksNavigationController") as? UINavigationController
         
-        self.setViewControllers(NSArray(objects: talksNavigationController!) as? [UIViewController], animated: false)
+        //MoreTab
+        let moreStoryboard = UIStoryboard(name: "More", bundle: NSBundle.mainBundle())
+        self.moreTabNavigationController = moreStoryboard.instantiateViewControllerWithIdentifier("MoreNavigationController") as? UINavigationController
+        
+        let viewControllers = [talksTabNavigationController!, moreTabNavigationController!] as [UIViewController]
+        self.setViewControllers(viewControllers, animated: false)
 
     }
 

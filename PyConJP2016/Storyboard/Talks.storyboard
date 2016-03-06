@@ -9,6 +9,8 @@
         <scene sceneID="0d8-7H-coq">
             <objects>
                 <navigationController storyboardIdentifier="TalksNavigationController" id="NyO-IO-ozg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="ZuP-30-Iu1"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jtO-Cp-LAb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -60,7 +62,6 @@
                             <constraint firstItem="tVv-lx-jms" firstAttribute="top" secondItem="h5T-yd-r81" secondAttribute="bottom" id="gTz-EE-1IZ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="e9e-R0-lyO"/>
                     <navigationItem key="navigationItem" id="zN7-B8-vNJ">
                         <nil key="title"/>
                     </navigationItem>
@@ -129,7 +130,7 @@
                                     <constraint firstAttribute="height" constant="3" id="Mvt-KJ-oI0"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEC-K7-3BF">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEC-K7-3BF">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="41"/>
                                 <state key="normal" title="Day1">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -137,9 +138,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNF-R4-aQr">
                                 <rect key="frame" x="300" y="0.0" width="300" height="41"/>
-                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Day2">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
@@ -165,8 +166,8 @@
                     </view>
                     <connections>
                         <outlet property="activeBarView" destination="A7j-C2-3fK" id="2qV-JI-RvN"/>
-                        <outlet property="day1Button" destination="xEC-K7-3BF" id="poj-Wa-qlZ"/>
-                        <outlet property="day2Button" destination="fNF-R4-aQr" id="F7L-wa-jFK"/>
+                        <outlet property="day1Button" destination="xEC-K7-3BF" id="JEs-Eb-kqb"/>
+                        <outlet property="day2Button" destination="fNF-R4-aQr" id="wBX-TS-7tD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eme-xo-4ir" userLabel="First Responder" sceneMemberID="firstResponder"/>

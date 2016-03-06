@@ -2,7 +2,7 @@
 //  TalksBaseViewController.swift
 //  PyConJP2016
 //
-//  Created by 牟田　裕太郎 on 2016/02/22.
+//  Created by Yutaro Muta on 2016/02/22.
 //  Copyright © 2016年 Yutaro Muta. All rights reserved.
 //
 
@@ -37,9 +37,7 @@ class TalksBaseViewController: UIViewController, UIPageViewControllerDelegate, U
 //        } else if 1 - (barContainerView.frame.size.width / 2) < 1 {
 //            
 //        }
-        
     }
-    
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         if scrollView.contentOffset.x - pageContainerView.frame.size.width != 0 {
