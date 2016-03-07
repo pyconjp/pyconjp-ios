@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -35,15 +36,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HEv-8u-Vu4">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="HEv-8u-Vu4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Eoe-mf-Wnx">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Eoe-mf-Wnx">
+                                        <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eoe-mf-Wnx" id="leF-5C-BEd">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -56,10 +57,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FZV-uH-09g" firstAttribute="top" secondItem="HEv-8u-Vu4" secondAttribute="bottom" id="XPs-YC-IEI"/>
+                            <constraint firstItem="HEv-8u-Vu4" firstAttribute="top" secondItem="POV-N5-5Vw" secondAttribute="topMargin" id="F6l-8M-IrO"/>
                             <constraint firstItem="HEv-8u-Vu4" firstAttribute="leading" secondItem="POV-N5-5Vw" secondAttribute="leading" id="bOo-Vw-sDV"/>
                             <constraint firstAttribute="trailing" secondItem="HEv-8u-Vu4" secondAttribute="trailing" id="lTZ-zw-GpK"/>
-                            <constraint firstItem="HEv-8u-Vu4" firstAttribute="top" secondItem="Tjz-EM-fcs" secondAttribute="bottom" id="ow9-xy-nD8"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="HEv-8u-Vu4" secondAttribute="bottom" id="tCZ-Wo-Hf9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hD4-75-OI6"/>

@@ -23,6 +23,14 @@ class ScheduleListViewController: UIViewController, UITableViewDataSource, UITab
         tableView.estimatedRowHeight = 120
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -40,7 +48,6 @@ class ScheduleListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let talkDetailViewController = mainStoryboard.instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
