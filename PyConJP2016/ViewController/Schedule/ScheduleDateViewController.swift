@@ -1,48 +1,47 @@
 //
-//  TalksDateViewController.swift
+//  ScheduleDateViewController.swift
 //  PyConJP2016
 //
-//  Created by Yutaro Muta on 2016/02/22.
+//  Created by Yutaro Muta on 2016/03/07.
 //  Copyright © 2016年 Yutaro Muta. All rights reserved.
 //
 
 import UIKit
 
-class TalksDateViewController: UIViewController {
-    
+class ScheduleDateViewController: UIViewController {
+
     @IBOutlet weak var activeBarView: UIView!
     @IBOutlet weak var day1Button: UIButton!
     @IBOutlet weak var day2Button: UIButton!
     
-    
     var activeBar = UIView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: UIScreen.mainScreen().bounds.width / 2, height: 3)))
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         activeBar.backgroundColor = UIColor.redColor()
         activeBarView.addSubview(activeBar)
-
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     override func didMoveToParentViewController(parent: UIViewController?) {
-        let talksBaseViewController = parent as! TalksBaseViewController
-        talksBaseViewController.addObserver(self, forKeyPath: "offsetToChange", options: [.New, .Old], context: nil)
-        talksBaseViewController.addObserver(self, forKeyPath: "displayIndex", options: [.New, .Old], context: nil)
+        let scheduleBaseViewController = parent as! ScheduleBaseViewController
+        scheduleBaseViewController.addObserver(self, forKeyPath: "offsetToChange", options: [.New, .Old], context: nil)
+        scheduleBaseViewController.addObserver(self, forKeyPath: "displayIndex", options: [.New, .Old], context: nil)
     }
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         switch keyPath! {
-//        case "offsetToChange":
-//            if let offsetToChange = change?["new"] as? CGFloat {
-//                activeBar.frame.origin.x = offsetToChange / 2
-//                print(activeBar.frame)
-//            }
+            //        case "offsetToChange":
+            //            if let offsetToChange = change?["new"] as? CGFloat {
+            //                activeBar.frame.origin.x = offsetToChange / 2
+            //                print(activeBar.frame)
+            //            }
         case "displayIndex":
             if let displayIndex = change?["new"] as? Int {
                 UIView.animateWithDuration(0.3, animations: { () -> Void in
@@ -70,15 +69,15 @@ class TalksDateViewController: UIViewController {
     func changeActiveButton(button: UIButton) {
         button.enabled = false
         button.backgroundColor = .whiteColor()
-//        button.titleLabel?.textColor = .blackColor()
-//        button.setTitleColor(.blackColor(), forState: .Normal)
+        //        button.titleLabel?.textColor = .blackColor()
+        //        button.setTitleColor(.blackColor(), forState: .Normal)
     }
     
     func changeUnactiveButton(button: UIButton) {
         button.enabled = true
         button.backgroundColor = .lightGrayColor()
-//        button.titleLabel?.textColor = .whiteColor()
-//        button.setTitleColor(.whiteColor(), forState: .Normal)
+        //        button.titleLabel?.textColor = .whiteColor()
+        //        button.setTitleColor(.whiteColor(), forState: .Normal)
     }
-    
+
 }

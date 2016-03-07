@@ -1,18 +1,19 @@
 //
-//  TalksListViewController.swift
+//  ScheduleListViewController.swift
 //  PyConJP2016
 //
-//  Created by Yutaro Muta on 2016/02/21.
+//  Created by 牟田　裕太郎 on 2016/03/07.
 //  Copyright © 2016年 Yutaro Muta. All rights reserved.
 //
 
 import UIKit
 
-class TalksListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ScheduleListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    
     var viewControllerIndex: Int = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,10 +22,10 @@ class TalksListViewController: UIViewController, UITableViewDataSource, UITableV
         
         tableView.estimatedRowHeight = 120
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
+        
     }
     
     //mark UITableViewDelegate
@@ -45,5 +46,5 @@ class TalksListViewController: UIViewController, UITableViewDataSource, UITableV
         let talkDetailViewController = mainStoryboard.instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
         self.navigationController?.pushViewController(talkDetailViewController, animated: true)
     }
-
+    
 }
