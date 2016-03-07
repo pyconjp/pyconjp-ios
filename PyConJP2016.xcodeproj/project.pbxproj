@@ -12,6 +12,8 @@
 		7F82F6A41C8D4BF9004EAC0E /* ScheduleDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */; };
 		7F82F6A61C8D4C3D004EAC0E /* ScheduleBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A51C8D4C3D004EAC0E /* ScheduleBaseViewController.swift */; };
 		7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A71C8D4CF3004EAC0E /* ScheduleListViewController.swift */; };
+		7FFD33301C8D84BA000494E7 /* ScheduleListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFD332E1C8D84BA000494E7 /* ScheduleListTableViewCell.swift */; };
+		7FFD33311C8D84BA000494E7 /* ScheduleListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FFD332F1C8D84BA000494E7 /* ScheduleListTableViewCell.xib */; };
 		DB1579D81C7A10B800A5F5BA /* TalkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1579D71C7A10B800A5F5BA /* TalkModel.swift */; };
 		DB1579DA1C7A13C400A5F5BA /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1579D91C7A13C400A5F5BA /* PlaceModel.swift */; };
 		DB1579DC1C7A154B00A5F5BA /* LevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1579DB1C7A154B00A5F5BA /* LevelModel.swift */; };
@@ -56,6 +58,8 @@
 		7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDateViewController.swift; sourceTree = "<group>"; };
 		7F82F6A51C8D4C3D004EAC0E /* ScheduleBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleBaseViewController.swift; sourceTree = "<group>"; };
 		7F82F6A71C8D4CF3004EAC0E /* ScheduleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListViewController.swift; sourceTree = "<group>"; };
+		7FFD332E1C8D84BA000494E7 /* ScheduleListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListTableViewCell.swift; sourceTree = "<group>"; };
+		7FFD332F1C8D84BA000494E7 /* ScheduleListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleListTableViewCell.xib; sourceTree = "<group>"; };
 		DB1579D71C7A10B800A5F5BA /* TalkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkModel.swift; sourceTree = "<group>"; };
 		DB1579D91C7A13C400A5F5BA /* PlaceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		DB1579DB1C7A154B00A5F5BA /* LevelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelModel.swift; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 				DB1579DF1C7A1CB400A5F5BA /* TalkTableViewCell.swift */,
 				DB1579E01C7A1CB400A5F5BA /* TalkTableViewCell.xib */,
 				DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */,
+				7FFD332E1C8D84BA000494E7 /* ScheduleListTableViewCell.swift */,
+				7FFD332F1C8D84BA000494E7 /* ScheduleListTableViewCell.xib */,
 				DBF4A7481C7F649A00AB8BE4 /* PCJWKWebViewController.swift */,
 			);
 			path = Base;
@@ -341,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBA1C0E01C722E99004F0C8D /* Main.storyboard in Resources */,
+				7FFD33311C8D84BA000494E7 /* ScheduleListTableViewCell.xib in Resources */,
 				DBDE0E7C1C8C19F50094BF36 /* More.storyboard in Resources */,
 				DB1579E21C7A1CB400A5F5BA /* TalkTableViewCell.xib in Resources */,
 				DBA1C0DF1C722E99004F0C8D /* LaunchScreen.storyboard in Resources */,
@@ -371,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB1579DC1C7A154B00A5F5BA /* LevelModel.swift in Sources */,
+				7FFD33301C8D84BA000494E7 /* ScheduleListTableViewCell.swift in Sources */,
 				DB1579E11C7A1CB400A5F5BA /* TalkTableViewCell.swift in Sources */,
 				DBF4A7491C7F649A00AB8BE4 /* PCJWKWebViewController.swift in Sources */,
 				7F82F6A01C8D4B62004EAC0E /* SchedulePageViewController.swift in Sources */,
