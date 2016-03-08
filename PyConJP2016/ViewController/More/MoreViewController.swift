@@ -35,11 +35,7 @@ class MoreViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
-    
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
-    }
-    
+        
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
@@ -56,8 +52,10 @@ class MoreViewController: UIViewController, UITableViewDataSource, UITableViewDe
         switch indexPath.section {
         case 0:
             cell?.textLabel?.text = "About"
-        case 1:
+        case 1 where indexPath.row == 0:
             cell?.textLabel?.text = "Map"
+        case 1 where indexPath.row == 1:
+            cell?.textLabel?.text = "Sponsors"
         default:
             break
         }

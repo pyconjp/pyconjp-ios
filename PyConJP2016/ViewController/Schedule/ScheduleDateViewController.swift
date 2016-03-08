@@ -17,6 +17,8 @@ class ScheduleDateViewController: UIViewController {
     var activeBar = UIView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: UIScreen.mainScreen().bounds.width / 2, height: 3)))
     var buttonOriginXArray: [CGFloat] = []
     
+    var movePage: ((index: Int) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +40,7 @@ class ScheduleDateViewController: UIViewController {
     
     override func didMoveToParentViewController(parent: UIViewController?) {
         let scheduleBaseViewController = parent as! ScheduleBaseViewController
+        movePage = scheduleBaseViewController.movePage
         scheduleBaseViewController.addObserver(self, forKeyPath: "offsetToChange", options: [.New, .Old], context: nil)
         scheduleBaseViewController.addObserver(self, forKeyPath: "displayIndex", options: [.New, .Old], context: nil)
     }
@@ -51,11 +54,10 @@ class ScheduleDateViewController: UIViewController {
 //            }
         case "displayIndex":
             if let displayIndex = change?["new"] as? Int {
-                UIView.animateWithDuration(0.3, animations: { () -> Void in
-                    self.changeActive(displayIndex)
-                })
+                self.changeActive(displayIndex)
             }
-        default : break
+        default:
+            break
         }
     }
     
@@ -68,18 +70,19 @@ class ScheduleDateViewController: UIViewController {
     }
     
     func changeActive(index: Int) {
-        activeBar.frame.origin.x = buttonOriginXArray[index]
-        switch index {
-        case 0:
-            self.changeActiveButton(day1Button)
-            self.changeUnactiveButton(day2Button)
-//            activeBar.frame.origin.x = 0
-        case 1:
-            self.changeUnactiveButton(day1Button)
-            self.changeActiveButton(day2Button)
-//            activeBar.frame.origin.x = UIScreen.mainScreen().bounds.width / 2
-        default: break
-        }
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.activeBar.frame.origin.x = self.buttonOriginXArray[index]
+            switch index {
+            case 0:
+                self.changeActiveButton(self.day1Button)
+                self.changeUnactiveButton(self.day2Button)
+            case 1:
+                self.changeUnactiveButton(self.day1Button)
+                self.changeActiveButton(self.day2Button)
+            default:
+                break
+            }
+        })
     }
     
     func changeActiveButton(button: UIButton) {
@@ -92,5 +95,17 @@ class ScheduleDateViewController: UIViewController {
         button.enabled = true
         button.backgroundColor = .lightGrayColor()
         button.setTitleColor(.whiteColor(), forState: .Normal)
+    }
+    
+    //mark day button
+    
+    @IBAction func onDay1Button(sender: UIButton) {
+        movePage!(index: 0)
+        self.changeActive(0)
+    }
+    
+    @IBAction func onDay2Button(sender: UIButton) {
+        movePage!(index: 1)
+        self.changeActive(1)
     }
 }

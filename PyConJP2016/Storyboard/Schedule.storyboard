@@ -135,6 +135,9 @@
                                 <state key="normal" title="Day1">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onDay1Button:" destination="SkF-I0-giB" eventType="touchUpInside" id="3Aq-8H-APg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNF-R4-aQr">
                                 <rect key="frame" x="300" y="0.0" width="300" height="41"/>
@@ -142,6 +145,9 @@
                                 <state key="normal" title="Day2">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onDay2Button:" destination="SkF-I0-giB" eventType="touchUpInside" id="ZGc-tr-qY3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>

@@ -2,7 +2,7 @@
 //  ScheduleListViewController.swift
 //  PyConJP2016
 //
-//  Created by 牟田　裕太郎 on 2016/03/07.
+//  Created by Yutaro Muta on 2016/03/07.
 //  Copyright © 2016年 Yutaro Muta. All rights reserved.
 //
 

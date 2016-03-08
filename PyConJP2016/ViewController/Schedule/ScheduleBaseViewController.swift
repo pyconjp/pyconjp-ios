@@ -2,7 +2,7 @@
 //  ScheduleBaseViewController.swift
 //  PyConJP2016
 //
-//  Created by 牟田　裕太郎 on 2016/03/07.
+//  Created by Yutaro Muta on 2016/03/07.
 //  Copyright © 2016年 Yutaro Muta. All rights reserved.
 //
 
@@ -16,9 +16,15 @@ class ScheduleBaseViewController: UIViewController, UIPageViewControllerDelegate
     dynamic var offsetToChange: CGFloat = 0.0
     dynamic var displayIndex: Int = 0
     
+    dynamic var movePage: ((index: Int) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        let scheduleDateViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ScheduleDateViewController")
+//        self.addChildViewController(scheduleDateViewController!)
+//        self.view.addSubview(scheduleDateViewController!.view)
+//        scheduleDateViewController?.didMoveToParentViewController(self)
     }
     
     override func viewDidAppear(animated: Bool) {

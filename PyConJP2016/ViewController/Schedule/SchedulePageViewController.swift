@@ -43,10 +43,18 @@ class SchedulePageViewController: UIPageViewController {
         let scheduleBaseViewController = parent as! ScheduleBaseViewController
         self.delegate = scheduleBaseViewController
         
+        scheduleBaseViewController.movePage = {(index: Int) -> Void in self.movePage(index)}
+        
         for subview in self.view.subviews {
             if let scrollView = subview as? UIScrollView {
                 scrollView.delegate = scheduleBaseViewController
             }
         }
+    }
+    
+    func movePage(index: Int) {
+        let viewController: ScheduleListViewController = scheduleModelController.viewControllerAtIndex(index, storyboard: self.storyboard!)!
+        let viewControllers = [viewController]
+        self.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: {done in})
     }
 }
