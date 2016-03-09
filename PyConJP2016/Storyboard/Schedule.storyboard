@@ -78,7 +78,7 @@
         <!--Schedule List View Controller-->
         <scene sceneID="ADw-Iw-zoE">
             <objects>
-                <viewController storyboardIdentifier="ScheduleListViewController" id="gEP-34-GP9" customClass="ScheduleListViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScheduleListViewController" automaticallyAdjustsScrollViewInsets="NO" id="gEP-34-GP9" customClass="ScheduleListViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BKU-My-l0W"/>
                         <viewControllerLayoutGuide type="bottom" id="edm-os-Eba"/>
