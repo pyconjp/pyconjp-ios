@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F63319F1C9123BD00B5CB00 /* HogeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F63319E1C9123BD00B5CB00 /* HogeCollectionViewController.swift */; };
 		7F6331A11C912EB400B5CB00 /* SponsorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6331A01C912EB400B5CB00 /* SponsorCollectionViewCell.swift */; };
 		7F82F6A01C8D4B62004EAC0E /* SchedulePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F69F1C8D4B62004EAC0E /* SchedulePageViewController.swift */; };
 		7F82F6A21C8D4B9A004EAC0E /* ScheduleModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A11C8D4B9A004EAC0E /* ScheduleModelController.swift */; };
@@ -58,7 +57,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7F63319E1C9123BD00B5CB00 /* HogeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HogeCollectionViewController.swift; sourceTree = "<group>"; };
 		7F6331A01C912EB400B5CB00 /* SponsorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorCollectionViewCell.swift; sourceTree = "<group>"; };
 		7F82F69F1C8D4B62004EAC0E /* SchedulePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulePageViewController.swift; sourceTree = "<group>"; };
 		7F82F6A11C8D4B9A004EAC0E /* ScheduleModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleModelController.swift; sourceTree = "<group>"; };
@@ -240,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */,
-				7F63319E1C9123BD00B5CB00 /* HogeCollectionViewController.swift */,
 				7FFB73321C914FB4006FB375 /* SponsorListViewController.swift */,
 				7F6331A01C912EB400B5CB00 /* SponsorCollectionViewCell.swift */,
 				7FFB733D1C915B6D006FB375 /* MapViewController.swift */,
@@ -393,7 +390,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F63319F1C9123BD00B5CB00 /* HogeCollectionViewController.swift in Sources */,
 				DB1579DC1C7A154B00A5F5BA /* LevelModel.swift in Sources */,
 				7FFD33301C8D84BA000494E7 /* ScheduleListTableViewCell.swift in Sources */,
 				DB1579E11C7A1CB400A5F5BA /* TalkTableViewCell.swift in Sources */,
