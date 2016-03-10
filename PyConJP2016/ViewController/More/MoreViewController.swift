@@ -64,7 +64,18 @@ class MoreViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
+        switch indexPath.section {
+        case 0:
+            break
+        case 1 where indexPath.row == 0:
+            let mapViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController
+            self.navigationController?.pushViewController(mapViewController, animated: true)
+        case 1 where indexPath.row == 1:
+			let sponserListViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SponsorListViewController") as! SponsorListViewController
+            self.navigationController?.pushViewController(sponserListViewController, animated: true)
+        default:
+            break
+        }
     }
 
 }

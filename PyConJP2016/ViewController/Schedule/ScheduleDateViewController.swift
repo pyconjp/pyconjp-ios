@@ -100,12 +100,16 @@ class ScheduleDateViewController: UIViewController {
     //mark day button
     
     @IBAction func onDay1Button(sender: UIButton) {
-        movePage!(index: 0)
-        self.changeActive(0)
+        if let moveDay1Page = movePage {
+        	moveDay1Page(index: 0)
+        	self.changeActive(0)
+        }
     }
     
     @IBAction func onDay2Button(sender: UIButton) {
-        movePage!(index: 1)
-        self.changeActive(1)
+        if let moveDay2Page = movePage {
+            moveDay2Page(index: 1)
+        	self.changeActive(1)
+        }
     }
 }

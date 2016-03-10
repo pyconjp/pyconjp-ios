@@ -15,6 +15,7 @@ class TalkTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var roomLabel: UILabel!
     @IBOutlet weak var notificationSwitch: UISwitch!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
