@@ -55,12 +55,12 @@ struct Talk {
     var id: Int = 0
     var title: String = ""
     var descriptions: String = ""
-    var speaker: SpeakerModel?
+    var speaker: Speaker?
     var startTime: NSDate = NSDate()
     var endTime: NSDate = NSDate()
     var periodTime: String = ""
-    var level: LevelModel?
-    var place: PlaceModel?
+    var level: Level?
+    var place: Place?
     var language: String = ""
     
     init(dictionary: [String : AnyObject]) {
@@ -68,16 +68,16 @@ struct Talk {
         title = dictionary["title"] as! String
         descriptions = dictionary["description"] as! String
         if let speakerDictionary = dictionary["speaker"] as? [String : AnyObject] {
-            speaker = SpeakerModel(dictionary: speakerDictionary)
+            speaker = Speaker(dictionary: speakerDictionary)
         }
         startTime = dictionary["start_time"] as! NSDate
         endTime = dictionary["end_time"] as! NSDate
         periodTime = self.timeToString(startTime) + "~" + self.timeToString(endTime)
         if let levelDictionary = dictionary["level"] as? [String : AnyObject] {
-            level = LevelModel(dictionary: levelDictionary)
+            level = Level(dictionary: levelDictionary)
         }
         if let placeDictionary = dictionary["place"] as? [String : AnyObject] {
-            place = PlaceModel(dictionary: placeDictionary)
+            place = Place(dictionary: placeDictionary)
         }
         language = dictionary["language"] as! String
     }

@@ -19,3 +19,15 @@ class LevelModel: NSObject {
     }
     
 }
+
+struct Level {
+    
+    var id: Int = 0
+    var name: String = ""
+    
+    init(dictionary: [String : AnyObject]) {
+        id = dictionary["id"] as! Int
+        name = dictionary["name"] as! String
+    }
+    
+}

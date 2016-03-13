@@ -9,6 +9,8 @@
 import UIKit
 
 class TalkDetailViewController: UIViewController {
+    
+    var talk: Talk?
 
     override func viewDidLoad() {
         super.viewDidLoad()

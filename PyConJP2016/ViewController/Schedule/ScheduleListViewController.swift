@@ -14,11 +14,13 @@ class ScheduleListViewController: UIViewController, UITableViewDataSource, UITab
     
     var viewControllerIndex: Int = 0
     
+    let reuseIdentifier = "ScheduleListTableViewCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let nib  = UINib(nibName: "ScheduleListTableViewCell", bundle:nil)
-        tableView.registerNib(nib, forCellReuseIdentifier:"ScheduleListTableViewCell")
+        tableView.registerNib(nib, forCellReuseIdentifier:reuseIdentifier)
         
         tableView.estimatedRowHeight = 120
     }
@@ -55,7 +57,7 @@ class ScheduleListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ScheduleListTableViewCell") as? ScheduleListTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier) as? ScheduleListTableViewCell
         return cell!
     }
     

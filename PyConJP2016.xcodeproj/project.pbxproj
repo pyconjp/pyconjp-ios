@@ -27,12 +27,12 @@
 		DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */; };
 		DB5D5A851C72346C00CEF0CD /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5D5A841C72346C00CEF0CD /* Schedule.storyboard */; };
 		DBA1C0AD1C7228E2004F0C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0AC1C7228E2004F0C8D /* AppDelegate.swift */; };
-		DBA1C0AF1C7228E2004F0C8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0AE1C7228E2004F0C8D /* ViewController.swift */; };
 		DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */; };
 		DBA1C0C21C7228E2004F0C8D /* PyConJP2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0C11C7228E2004F0C8D /* PyConJP2016Tests.swift */; };
 		DBA1C0CD1C7228E2004F0C8D /* PyConJP2016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0CC1C7228E2004F0C8D /* PyConJP2016UITests.swift */; };
 		DBA1C0DF1C722E99004F0C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */; };
 		DBA1C0E01C722E99004F0C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0DE1C722E99004F0C8D /* Main.storyboard */; };
+		DBAD5BBC1C95B621004B71B3 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAD5BBB1C95B621004B71B3 /* LocalNotificationManager.swift */; };
 		DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC748171C76254000895D4A /* BaseTabBarController.swift */; };
 		DBDE0E7C1C8C19F50094BF36 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBDE0E7B1C8C19F50094BF36 /* More.storyboard */; };
 		DBEBDB481C8C89FC002B25B3 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */; };
@@ -78,7 +78,6 @@
 		DB5D5A841C72346C00CEF0CD /* Schedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
 		DBA1C0A91C7228E2004F0C8D /* PyConJP2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PyConJP2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA1C0AC1C7228E2004F0C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DBA1C0AE1C7228E2004F0C8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBA1C0B81C7228E2004F0C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBA1C0BD1C7228E2004F0C8D /* PyConJP2016Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PyConJP2016Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +88,7 @@
 		DBA1C0CE1C7228E2004F0C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBA1C0DE1C722E99004F0C8D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DBAD5BBB1C95B621004B71B3 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		DBC748171C76254000895D4A /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		DBDE0E7B1C8C19F50094BF36 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -157,12 +157,12 @@
 		DBA1C0AB1C7228E2004F0C8D /* PyConJP2016 */ = {
 			isa = PBXGroup;
 			children = (
-				DBA1C0DA1C722E77004F0C8D /* Model */,
 				DBA1C0DC1C722E99004F0C8D /* Storyboard */,
-				DBA1C0DB1C722E82004F0C8D /* ViewController */,
 				DBEBDB491C8C9046002B25B3 /* Category */,
+				DBA1C0DA1C722E77004F0C8D /* Model */,
+				DBA1C0DB1C722E82004F0C8D /* ViewController */,
+				DBAD5BBA1C95B54E004B71B3 /* Service */,
 				DBA1C0AC1C7228E2004F0C8D /* AppDelegate.swift */,
-				DBA1C0AE1C7228E2004F0C8D /* ViewController.swift */,
 				DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */,
 				DBA1C0B81C7228E2004F0C8D /* Info.plist */,
 			);
@@ -218,6 +218,14 @@
 				DBDE0E7B1C8C19F50094BF36 /* More.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		DBAD5BBA1C95B54E004B71B3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DBAD5BBB1C95B621004B71B3 /* LocalNotificationManager.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		DBC748161C7624CB00895D4A /* Base */ = {
@@ -392,6 +400,7 @@
 			files = (
 				DB1579DC1C7A154B00A5F5BA /* LevelModel.swift in Sources */,
 				7FFD33301C8D84BA000494E7 /* ScheduleListTableViewCell.swift in Sources */,
+				DBAD5BBC1C95B621004B71B3 /* LocalNotificationManager.swift in Sources */,
 				DB1579E11C7A1CB400A5F5BA /* TalkTableViewCell.swift in Sources */,
 				DBF4A7491C7F649A00AB8BE4 /* PCJWKWebViewController.swift in Sources */,
 				7F82F6A01C8D4B62004EAC0E /* SchedulePageViewController.swift in Sources */,
@@ -401,7 +410,6 @@
 				7FFB73331C914FB4006FB375 /* SponsorListViewController.swift in Sources */,
 				DBEBDB481C8C89FC002B25B3 /* MoreViewController.swift in Sources */,
 				DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */,
-				DBA1C0AF1C7228E2004F0C8D /* ViewController.swift in Sources */,
 				7FFB733E1C915B6E006FB375 /* MapViewController.swift in Sources */,
 				DB1579DE1C7A157C00A5F5BA /* SpeakerModel.swift in Sources */,
 				7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */,
