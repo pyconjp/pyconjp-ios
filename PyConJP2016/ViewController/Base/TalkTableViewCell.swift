@@ -16,6 +16,8 @@ class TalkTableViewCell: UITableViewCell {
     @IBOutlet weak var roomLabel: UILabel!
     @IBOutlet weak var notificationSwitch: UISwitch!
     
+    var talk: Talk?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,7 +29,8 @@ class TalkTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configurationData(model: TalkModel) {
+    func configurationData(model: Talk) {
+        talk = model
         titleLabel.text = model.title
         speakerLabel.text = model.speaker?.name
         timeLabel.text =  model.periodTime
@@ -44,6 +47,14 @@ class TalkTableViewCell: UITableViewCell {
     }
     
     @IBAction func changeSwitch(sender: UISwitch) {
+        if let talk = talk {
+            let localNotificationManager = LocalNotificationManager()
+            if (talk.isSetNotification) {
+            	localNotificationManager.makeNotification(talk)
+        	} else {
+            	localNotificationManager.cancelSchedule(talk)
+        	}
+        }
     }
     
 }

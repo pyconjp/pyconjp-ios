@@ -62,6 +62,7 @@ struct Talk {
     var level: Level?
     var place: Place?
     var language: String = ""
+    var isSetNotification: Bool = false
     
     init(dictionary: [String : AnyObject]) {
         id = dictionary["id"] as! Int

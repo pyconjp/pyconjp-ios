@@ -14,10 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        if let localNotification = launchOptions![UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification{
-            self.application(application, didReceiveLocalNotification: localNotification)
-        }
+        let settings = UIUserNotificationSettings(forTypes: [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound], categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+
+//        if let _ = launchOptions![UIApplicationLaunchOptionsURLKey] as? [NSObject : AnyObject] {
+//            if let osVersion = Float64(UIDevice.currentDevice().systemVersion) {
+//                if osVersion >= 9.0 {
+//                }
+//            }
+//        }
+//        if let localNotification = launchOptions![UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification{
+//            self.application(application, didReceiveLocalNotification: localNotification)
+//        }
         
         return true
     }
@@ -37,19 +45,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0;
     }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+//    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+//        
+//    }
+//    
+//    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+//        
+//    }
+//    
+//    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+//        
+//    }
+    
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         if let userInfo = notification.userInfo {
             switch userInfo["type"] as! String {
             case "Talk" where application.applicationState == .Active:
                 let alertController = UIAlertController(title: "", message: "", preferredStyle: .Alert)
-                alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                alertController.addAction(UIAlertAction(title: "閉じる", style: .Default, handler: nil))
                 alertController.addAction(UIAlertAction(title: "詳細へ", style: .Default, handler: {[weak self] (action) -> Void in
                     if let weakSelf = self {
                         weakSelf.openTalkDetailViewController()
