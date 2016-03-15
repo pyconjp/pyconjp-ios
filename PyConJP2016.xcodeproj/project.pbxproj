@@ -13,6 +13,9 @@
 		7F82F6A41C8D4BF9004EAC0E /* ScheduleDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */; };
 		7F82F6A61C8D4C3D004EAC0E /* ScheduleBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A51C8D4C3D004EAC0E /* ScheduleBaseViewController.swift */; };
 		7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A71C8D4CF3004EAC0E /* ScheduleListViewController.swift */; };
+		7FE830F71C97FA390076C079 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE830F61C97FA390076C079 /* LocalNotificationManager.swift */; };
+		7FE830FA1C97FCA00076C079 /* AppDelegate+OpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE830F91C97FCA00076C079 /* AppDelegate+OpenViewController.swift */; };
+		7FE830FC1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE830FB1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift */; };
 		7FFB73331C914FB4006FB375 /* SponsorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFB73321C914FB4006FB375 /* SponsorListViewController.swift */; };
 		7FFB733E1C915B6E006FB375 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFB733D1C915B6D006FB375 /* MapViewController.swift */; };
 		7FFB73401C9162C2006FB375 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFB733F1C9162C2006FB375 /* MapKit.framework */; };
@@ -32,7 +35,6 @@
 		DBA1C0CD1C7228E2004F0C8D /* PyConJP2016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0CC1C7228E2004F0C8D /* PyConJP2016UITests.swift */; };
 		DBA1C0DF1C722E99004F0C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */; };
 		DBA1C0E01C722E99004F0C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0DE1C722E99004F0C8D /* Main.storyboard */; };
-		DBAD5BBC1C95B621004B71B3 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAD5BBB1C95B621004B71B3 /* LocalNotificationManager.swift */; };
 		DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC748171C76254000895D4A /* BaseTabBarController.swift */; };
 		DBDE0E7C1C8C19F50094BF36 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBDE0E7B1C8C19F50094BF36 /* More.storyboard */; };
 		DBEBDB481C8C89FC002B25B3 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */; };
@@ -63,6 +65,9 @@
 		7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDateViewController.swift; sourceTree = "<group>"; };
 		7F82F6A51C8D4C3D004EAC0E /* ScheduleBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleBaseViewController.swift; sourceTree = "<group>"; };
 		7F82F6A71C8D4CF3004EAC0E /* ScheduleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListViewController.swift; sourceTree = "<group>"; };
+		7FE830F61C97FA390076C079 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		7FE830F91C97FCA00076C079 /* AppDelegate+OpenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+OpenViewController.swift"; sourceTree = "<group>"; };
+		7FE830FB1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveLocalNotificationService.swift; sourceTree = "<group>"; };
 		7FFB73321C914FB4006FB375 /* SponsorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorListViewController.swift; sourceTree = "<group>"; };
 		7FFB733D1C915B6D006FB375 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7FFB733F1C9162C2006FB375 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -88,7 +93,6 @@
 		DBA1C0CE1C7228E2004F0C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBA1C0DE1C722E99004F0C8D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		DBAD5BBB1C95B621004B71B3 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		DBC748171C76254000895D4A /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		DBDE0E7B1C8C19F50094BF36 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,23 @@
 			path = Schedule;
 			sourceTree = "<group>";
 		};
+		7FE830F51C97FA210076C079 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				7FE830F61C97FA390076C079 /* LocalNotificationManager.swift */,
+				7FE830FB1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		7FE830F81C97FC800076C079 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				7FE830F91C97FCA00076C079 /* AppDelegate+OpenViewController.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		DBA1C0A01C7228E2004F0C8D = {
 			isa = PBXGroup;
 			children = (
@@ -158,8 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				DBA1C0DC1C722E99004F0C8D /* Storyboard */,
-				DBEBDB491C8C9046002B25B3 /* Category */,
 				DBA1C0DA1C722E77004F0C8D /* Model */,
+				7FE830F81C97FC800076C079 /* Category */,
 				DBA1C0DB1C722E82004F0C8D /* ViewController */,
 				DBAD5BBA1C95B54E004B71B3 /* Service */,
 				DBA1C0AC1C7228E2004F0C8D /* AppDelegate.swift */,
@@ -223,7 +244,7 @@
 		DBAD5BBA1C95B54E004B71B3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				DBAD5BBB1C95B621004B71B3 /* LocalNotificationManager.swift */,
+				7FE830F51C97FA210076C079 /* Notification */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -251,13 +272,6 @@
 				7FFB733D1C915B6D006FB375 /* MapViewController.swift */,
 			);
 			path = More;
-			sourceTree = "<group>";
-		};
-		DBEBDB491C8C9046002B25B3 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,12 +414,13 @@
 			files = (
 				DB1579DC1C7A154B00A5F5BA /* LevelModel.swift in Sources */,
 				7FFD33301C8D84BA000494E7 /* ScheduleListTableViewCell.swift in Sources */,
-				DBAD5BBC1C95B621004B71B3 /* LocalNotificationManager.swift in Sources */,
+				7FE830F71C97FA390076C079 /* LocalNotificationManager.swift in Sources */,
 				DB1579E11C7A1CB400A5F5BA /* TalkTableViewCell.swift in Sources */,
 				DBF4A7491C7F649A00AB8BE4 /* PCJWKWebViewController.swift in Sources */,
 				7F82F6A01C8D4B62004EAC0E /* SchedulePageViewController.swift in Sources */,
 				DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */,
 				7F82F6A41C8D4BF9004EAC0E /* ScheduleDateViewController.swift in Sources */,
+				7FE830FC1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift in Sources */,
 				7F6331A11C912EB400B5CB00 /* SponsorCollectionViewCell.swift in Sources */,
 				7FFB73331C914FB4006FB375 /* SponsorListViewController.swift in Sources */,
 				DBEBDB481C8C89FC002B25B3 /* MoreViewController.swift in Sources */,
@@ -417,6 +432,7 @@
 				7F82F6A21C8D4B9A004EAC0E /* ScheduleModelController.swift in Sources */,
 				7F82F6A61C8D4C3D004EAC0E /* ScheduleBaseViewController.swift in Sources */,
 				DB1579DA1C7A13C400A5F5BA /* PlaceModel.swift in Sources */,
+				7FE830FA1C97FCA00076C079 /* AppDelegate+OpenViewController.swift in Sources */,
 				DB1579D81C7A10B800A5F5BA /* TalkModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,9 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                }
 //            }
 //        }
-//        if let localNotification = launchOptions![UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification{
-//            self.application(application, didReceiveLocalNotification: localNotification)
-//        }
+        if let launchOptions = launchOptions {
+            if let localNotification = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification {
+            	self.application(application, didReceiveLocalNotification: localNotification)
+        	}
+        }
         
         return true
     }
@@ -52,20 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-//    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-//        
-//    }
-//    
-//    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-//        
-//    }
-//    
-//    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-//        
-//    }
-    
-    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
-        if let userInfo = notification.userInfo {
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {        if let userInfo = notification.userInfo {
             switch userInfo["type"] as! String {
             case "Talk" where application.applicationState == .Active:
                 let alertController = UIAlertController(title: "", message: "", preferredStyle: .Alert)
