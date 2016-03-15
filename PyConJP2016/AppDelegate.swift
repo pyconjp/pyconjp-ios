@@ -54,32 +54,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {        if let userInfo = notification.userInfo {
-            switch userInfo["type"] as! String {
-            case "Talk" where application.applicationState == .Active:
-                let alertController = UIAlertController(title: "", message: "", preferredStyle: .Alert)
-                alertController.addAction(UIAlertAction(title: "閉じる", style: .Default, handler: nil))
-                alertController.addAction(UIAlertAction(title: "詳細へ", style: .Default, handler: {[weak self] (action) -> Void in
-                    if let weakSelf = self {
-                        weakSelf.openTalkDetailViewController()
-                    }
-                }))
-            case "Talk" where application.applicationState == .Inactive:
-                self.openTalkDetailViewController()
-            case "Information":
-                break
-            default:
-                break
-            }
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        if let userInfo = notification.userInfo {
+            let receiveLocalNotificationService = ReceiveLocalNotificationService()
+            receiveLocalNotificationService.application(application, didReceiveLocalNotification: userInfo)
         }
         
         UIApplication.sharedApplication().cancelLocalNotification(notification)
     }
     
-    func openTalkDetailViewController() {
-        let talkDetailViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
-        talkDetailViewController.talk = nil
-        self.window?.rootViewController?.presentedViewController?.navigationController?.pushViewController(talkDetailViewController, animated: true)
-    }
+//    func openTalkDetailViewController() {
+//        let talkDetailViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
+//        talkDetailViewController.talk = nil
+//        self.window?.rootViewController?.presentedViewController?.navigationController?.pushViewController(talkDetailViewController, animated: true)
+//    }
 }
 
