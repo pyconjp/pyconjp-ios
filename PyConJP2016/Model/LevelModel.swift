@@ -8,22 +8,22 @@
 
 import UIKit
 
-class LevelModel: NSObject {
-    
-    var id: Int = 0
-    var name: String = ""
-    
-    init(dictionary: [String : AnyObject]) {
-        id = dictionary["id"] as! Int
-        name = dictionary["name"] as! String
-    }
-    
-}
+//class LevelModel: NSObject {
+//    
+//    var id: Int = 0
+//    var name: String = ""
+//    
+//    init(dictionary: [String : AnyObject]) {
+//        id = dictionary["id"] as! Int
+//        name = dictionary["name"] as! String
+//    }
+//    
+//}
 
 struct Level {
     
-    var id: Int = 0
-    var name: String = ""
+    let id: Int
+    let name: String
     
     init(dictionary: [String : AnyObject]) {
         id = dictionary["id"] as! Int

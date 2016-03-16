@@ -16,6 +16,7 @@
 		7FE830F71C97FA390076C079 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE830F61C97FA390076C079 /* LocalNotificationManager.swift */; };
 		7FE830FA1C97FCA00076C079 /* AppDelegate+OpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE830F91C97FCA00076C079 /* AppDelegate+OpenViewController.swift */; };
 		7FE830FC1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE830FB1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift */; };
+		7FF4B0F11C990383001438C6 /* TalkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF4B0F01C990383001438C6 /* TalkService.swift */; };
 		7FFB73331C914FB4006FB375 /* SponsorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFB73321C914FB4006FB375 /* SponsorListViewController.swift */; };
 		7FFB733E1C915B6E006FB375 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFB733D1C915B6D006FB375 /* MapViewController.swift */; };
 		7FFB73401C9162C2006FB375 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFB733F1C9162C2006FB375 /* MapKit.framework */; };
@@ -68,6 +69,7 @@
 		7FE830F61C97FA390076C079 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		7FE830F91C97FCA00076C079 /* AppDelegate+OpenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+OpenViewController.swift"; sourceTree = "<group>"; };
 		7FE830FB1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveLocalNotificationService.swift; sourceTree = "<group>"; };
+		7FF4B0F01C990383001438C6 /* TalkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkService.swift; sourceTree = "<group>"; };
 		7FFB73321C914FB4006FB375 /* SponsorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorListViewController.swift; sourceTree = "<group>"; };
 		7FFB733D1C915B6D006FB375 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7FFB733F1C9162C2006FB375 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -152,6 +154,14 @@
 				7FE830F91C97FCA00076C079 /* AppDelegate+OpenViewController.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		7FF4B0EF1C99035F001438C6 /* Talk */ = {
+			isa = PBXGroup;
+			children = (
+				7FF4B0F01C990383001438C6 /* TalkService.swift */,
+			);
+			path = Talk;
 			sourceTree = "<group>";
 		};
 		DBA1C0A01C7228E2004F0C8D = {
@@ -244,6 +254,7 @@
 		DBAD5BBA1C95B54E004B71B3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				7FF4B0EF1C99035F001438C6 /* Talk */,
 				7FE830F51C97FA210076C079 /* Notification */,
 			);
 			path = Service;
@@ -426,6 +437,7 @@
 				DBEBDB481C8C89FC002B25B3 /* MoreViewController.swift in Sources */,
 				DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */,
 				7FFB733E1C915B6E006FB375 /* MapViewController.swift in Sources */,
+				7FF4B0F11C990383001438C6 /* TalkService.swift in Sources */,
 				DB1579DE1C7A157C00A5F5BA /* SpeakerModel.swift in Sources */,
 				7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */,
 				DBA1C0AD1C7228E2004F0C8D /* AppDelegate.swift in Sources */,
