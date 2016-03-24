@@ -92,9 +92,9 @@ struct Talk {
     }
     
     init(dictionary: [String : AnyObject]) {
-        let id = dictionary["id"] as! Int
-        let title = dictionary["title"] as! String
-        let descriptions = dictionary["description"] as! String
+        let id = dictionary["id"] as? Int ?? 0
+        let title = dictionary["title"] as? String ?? ""
+        let descriptions = dictionary["description"] as? String ?? ""
         var speaker: Speaker?
         if let speakerDictionary = dictionary["speaker"] as? [String : AnyObject] {
             speaker = Speaker(dictionary: speakerDictionary)
@@ -110,7 +110,7 @@ struct Talk {
         if let placeDictionary = dictionary["place"] as? [String : AnyObject] {
             place = Place(dictionary: placeDictionary)
         }
-        let language = dictionary["language"] as! String
+        let language = dictionary["language"] as? String ?? ""
         
         self.init(id: id, title: title, descriptions: descriptions, speaker: speaker, startTime: startTime, endTime: endTime, periodTime: periodTime, level: level, place: place, language: language)
     }

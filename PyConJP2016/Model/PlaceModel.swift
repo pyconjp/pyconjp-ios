@@ -26,8 +26,8 @@ struct Place {
     let name: String
     
     init(dictionary: [String : AnyObject]) {
-        id = dictionary["id"] as! Int
-        name = dictionary["name"] as! String
+        id = dictionary["id"] as? Int ?? 0
+        name = dictionary["name"] as? String ?? ""
     }
     
 }
