@@ -10,7 +10,6 @@ import UIKit
 
 class SchedulePageViewController: UIPageViewController {
 
-    var dayNumber: Int = 0
     var childrenViewControllers: Array<ScheduleListViewController> = []
     
     override func viewDidLoad() {
@@ -55,6 +54,6 @@ class SchedulePageViewController: UIPageViewController {
     func movePage(index: Int) {
         let viewController: ScheduleListViewController = scheduleModelController.viewControllerAtIndex(index, storyboard: self.storyboard!)!
         let viewControllers = [viewController]
-        self.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: {done in})
+        self.setViewControllers(viewControllers, direction: .Forward, animated: true, completion: {done in})
     }
 }

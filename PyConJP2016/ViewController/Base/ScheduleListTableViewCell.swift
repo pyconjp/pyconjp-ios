@@ -27,7 +27,7 @@ class ScheduleListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configurationData(model: TalkModel) {
+    func configurationData(model: Talk) {
         titleLabel.text = model.title
         speakerLabel.text = model.speaker?.name
         timeLabel.text =  model.periodTime
