@@ -10,28 +10,27 @@ import UIKit
 
 class ScheduleModelController: NSObject, UIPageViewControllerDataSource {
     //    var childrenViewControllers: Array<ScheduleListViewController> = []
-    var colorArray: Array<UIColor> = []
+    let dates: Array<String> = ["2016/09/21", "2016/09/22"]
     
     override init() {
         super.init()
-        // Create the data model.
-        colorArray = [UIColor.redColor(), UIColor.purpleColor()]
     }
     
     func viewControllerAtIndex(index: Int, storyboard: UIStoryboard) -> ScheduleListViewController? {
-        if (self.colorArray.count == 0) || (index >= self.colorArray.count) {
-            return nil
+        
+        if (self.dates.count == 0) || (index >= self.dates.count) {
+            return nil;
         }
         
         let scheduleListViewController = storyboard.instantiateViewControllerWithIdentifier("ScheduleListViewController") as! ScheduleListViewController
-        scheduleListViewController.view.backgroundColor = self.colorArray[index]
+        scheduleListViewController.date = dates[index]
         scheduleListViewController.viewControllerIndex = index
         return scheduleListViewController
         
     }
     
     func indexOfViewController(viewController: ScheduleListViewController) -> Int {
-        return colorArray.indexOf(viewController.view.backgroundColor!) ?? NSNotFound
+        return dates.indexOf(viewController.date) ?? NSNotFound
     }
     
     // MARK: - Page View Controller Data Source
@@ -53,9 +52,10 @@ class ScheduleModelController: NSObject, UIPageViewControllerDataSource {
         }
         
         index += 1
-        if index == self.colorArray.count {
-            return nil
+        if index == self.dates.count {
+            return nil;
         }
+        
         return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
     }
 }

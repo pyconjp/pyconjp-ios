@@ -15,7 +15,12 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
         let location = CLLocationCoordinate2D(latitude: 35.4941, longitude: 139.4315)
         mapView.setCenterCoordinate(location, animated: true)
         

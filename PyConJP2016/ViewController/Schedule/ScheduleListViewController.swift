@@ -13,6 +13,7 @@ class ScheduleListViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var tableView: UITableView!
     
     var viewControllerIndex: Int = 0
+    var date: String = ""
     
     let reuseIdentifier = "ScheduleListTableViewCell"
     
