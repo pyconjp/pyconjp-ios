@@ -21,10 +21,18 @@ class ScheduleBaseViewController: UIViewController, UIPageViewControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let scheduleDateViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ScheduleDateViewController")
-//        self.addChildViewController(scheduleDateViewController!)
-//        self.view.addSubview(scheduleDateViewController!.view)
-//        scheduleDateViewController?.didMoveToParentViewController(self)
+        let schedulePageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SchedulePageViewController")
+        schedulePageViewController?.view.frame = pageContainerView.bounds
+        self.addChildViewController(schedulePageViewController!)
+        pageContainerView.addSubview(schedulePageViewController!.view)
+        schedulePageViewController?.didMoveToParentViewController(self)
+        
+        let scheduleDateViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ScheduleDateViewController")
+        scheduleDateViewController?.view.frame = barContainerView.bounds
+        self.addChildViewController(scheduleDateViewController!)
+        barContainerView.addSubview(scheduleDateViewController!.view)
+        scheduleDateViewController?.didMoveToParentViewController(self)
+        
     }
     
     override func viewDidAppear(animated: Bool) {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -35,31 +35,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5T-yd-r81">
-                                <rect key="frame" x="0.0" y="108" width="600" height="443"/>
-                                <connections>
-                                    <segue destination="zcE-YM-RUe" kind="embed" id="Eb4-xH-cmA"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P5M-SO-a3c">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abk-T8-czR">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Mj3-en-ayy"/>
+                                    <constraint firstAttribute="height" constant="44" id="8PM-T4-LfR"/>
                                 </constraints>
-                                <connections>
-                                    <segue destination="SkF-I0-giB" kind="embed" id="dv8-i9-5L2"/>
-                                </connections>
-                            </containerView>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I46-EO-ChX">
+                                <rect key="frame" x="0.0" y="108" width="600" height="443"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="P5M-SO-a3c" firstAttribute="leading" secondItem="eXP-xv-0f9" secondAttribute="leading" id="2cq-eX-MGs"/>
-                            <constraint firstItem="P5M-SO-a3c" firstAttribute="top" secondItem="JnA-Er-CiG" secondAttribute="bottom" id="3Yd-YL-dD6"/>
-                            <constraint firstAttribute="trailing" secondItem="h5T-yd-r81" secondAttribute="trailing" id="6DX-JG-Heb"/>
-                            <constraint firstItem="h5T-yd-r81" firstAttribute="top" secondItem="P5M-SO-a3c" secondAttribute="bottom" id="9Zs-HT-Xq3"/>
-                            <constraint firstAttribute="trailing" secondItem="P5M-SO-a3c" secondAttribute="trailing" id="DOk-nV-J2S"/>
-                            <constraint firstItem="h5T-yd-r81" firstAttribute="leading" secondItem="eXP-xv-0f9" secondAttribute="leading" id="WYT-Df-jQR"/>
-                            <constraint firstItem="tVv-lx-jms" firstAttribute="top" secondItem="h5T-yd-r81" secondAttribute="bottom" id="gTz-EE-1IZ"/>
+                            <constraint firstItem="abk-T8-czR" firstAttribute="top" secondItem="JnA-Er-CiG" secondAttribute="bottom" id="2mr-C3-zXR"/>
+                            <constraint firstAttribute="trailing" secondItem="I46-EO-ChX" secondAttribute="trailing" id="4U5-1K-eUS"/>
+                            <constraint firstAttribute="trailing" secondItem="abk-T8-czR" secondAttribute="trailing" id="Kdr-nH-Ugg"/>
+                            <constraint firstItem="I46-EO-ChX" firstAttribute="leading" secondItem="eXP-xv-0f9" secondAttribute="leading" id="L05-h4-yB6"/>
+                            <constraint firstItem="abk-T8-czR" firstAttribute="leading" secondItem="eXP-xv-0f9" secondAttribute="leading" id="toF-3T-Dql"/>
+                            <constraint firstItem="I46-EO-ChX" firstAttribute="top" secondItem="abk-T8-czR" secondAttribute="bottom" id="vI8-8U-fLL"/>
+                            <constraint firstItem="tVv-lx-jms" firstAttribute="top" secondItem="I46-EO-ChX" secondAttribute="bottom" id="zDM-To-pB1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zN7-B8-vNJ">
@@ -67,8 +63,8 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="barContainerView" destination="P5M-SO-a3c" id="Sya-36-MA6"/>
-                        <outlet property="pageContainerView" destination="h5T-yd-r81" id="w60-PQ-C0b"/>
+                        <outlet property="barContainerView" destination="abk-T8-czR" id="Jc8-uu-yvG"/>
+                        <outlet property="pageContainerView" destination="I46-EO-ChX" id="bLR-RG-sdS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKg-3W-4gp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -121,17 +117,17 @@
                         <viewControllerLayoutGuide type="bottom" id="S01-A3-v3M"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aWp-EZ-sBV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7j-C2-3fK">
-                                <rect key="frame" x="0.0" y="41" width="600" height="3"/>
+                                <rect key="frame" x="0.0" y="597" width="600" height="3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="3" id="Mvt-KJ-oI0"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEC-K7-3BF">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="41"/>
+                                <rect key="frame" x="0.0" y="20" width="300" height="577"/>
                                 <state key="normal" title="Day1">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -140,7 +136,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNF-R4-aQr">
-                                <rect key="frame" x="300" y="0.0" width="300" height="41"/>
+                                <rect key="frame" x="300" y="20" width="300" height="577"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Day2">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -178,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eme-xo-4ir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1149" y="-153"/>
+            <point key="canvasLocation" x="1149" y="-473"/>
         </scene>
         <!--Schedule Page View Controller-->
         <scene sceneID="Hot-Kp-tam">
