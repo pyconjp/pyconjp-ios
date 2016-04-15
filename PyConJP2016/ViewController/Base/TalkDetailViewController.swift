@@ -12,6 +12,18 @@ class TalkDetailViewController: UIViewController {
     
     var talk: Talk?
 
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var notificationSwitch: UISwitch!
+    
+    @IBOutlet weak var speakerImageView: UIImageView!
+    @IBOutlet weak var speakerNameLabel: UILabel!
+    
+    @IBOutlet weak var descriptionTextView: UITextView!
+    
+    @IBOutlet weak var abstractTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,4 +33,7 @@ class TalkDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+    @IBAction func swithNotification(sender: UISwitch) {
+        print("hogehoge")
+    }
 }

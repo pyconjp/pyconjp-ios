@@ -14,7 +14,6 @@ class ScheduleListTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var roomLabel: UILabel!
     @IBOutlet weak var speakerLabel: UILabel!
-    @IBOutlet weak var notificationSwitch: UISwitch!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,7 +31,6 @@ class ScheduleListTableViewCell: UITableViewCell {
         speakerLabel.text = model.speaker?.name
         timeLabel.text =  model.periodTime
         roomLabel.text = model.place?.name
-        notificationSwitch.on = model.isSetNotification
     }
     
     override func prepareForReuse() {
@@ -40,10 +38,6 @@ class ScheduleListTableViewCell: UITableViewCell {
         timeLabel.text = nil
         roomLabel.text = nil
         speakerLabel.text = nil
-        notificationSwitch.on = false
-    }
-    
-    @IBAction func changeSwitch(sender: UISwitch) {
     }
     
 }
