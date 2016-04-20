@@ -23,7 +23,7 @@ class LocalNotificationManager: NSObject {
         }
     }
     
-    func schedule(talk: Talk) {
+    private func schedule(talk: Talk) {
         
         let placeName = talk.place?.name ?? ""
         

@@ -11,6 +11,7 @@ import UIKit
 class TalkDetailViewController: UIViewController {
     
     var talk: Talk?
+    private let _localNotificationManager = LocalNotificationManager()
 
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -34,6 +35,12 @@ class TalkDetailViewController: UIViewController {
     }
 
     @IBAction func swithNotification(sender: UISwitch) {
-        print("hogehoge")
+        if let talk = talk {
+            if (talk.isSetNotification) {
+                _localNotificationManager.makeNotification(talk)
+            } else {
+                _localNotificationManager.cancelSchedule(talk)
+            }
+        }
     }
 }

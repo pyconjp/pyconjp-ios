@@ -35,16 +35,16 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IkL-Dy-Ecl" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="301"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="304"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cC-hE-Hba">
-                                                <rect key="frame" x="15" y="15" width="570" height="29"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <rect key="frame" x="15" y="15" width="570" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfh-NF-r2y" userLabel="Time View">
-                                                <rect key="frame" x="0.0" y="54" width="600" height="35"/>
+                                                <rect key="frame" x="0.0" y="57" width="600" height="35"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="HFy-oz-V2n">
                                                         <rect key="frame" x="15" y="5" width="25" height="25"/>
@@ -81,7 +81,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-Dv-Jho">
-                                                <rect key="frame" x="0.0" y="104" width="600" height="50"/>
+                                                <rect key="frame" x="0.0" y="107" width="600" height="50"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="BpM-8a-gQL">
                                                         <rect key="frame" x="15" y="0.0" width="50" height="50"/>
@@ -147,7 +147,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oIs-bF-9kT">
-                                                <rect key="frame" x="0.0" y="164" width="600" height="64"/>
+                                                <rect key="frame" x="0.0" y="167" width="600" height="64"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOD-c6-zk2">
                                                         <rect key="frame" x="15" y="0.0" width="95" height="21"/>
@@ -175,7 +175,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SkO-Gq-LyM">
-                                                <rect key="frame" x="0.0" y="238" width="600" height="63"/>
+                                                <rect key="frame" x="0.0" y="241" width="600" height="63"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abstract" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgw-0x-wge">
                                                         <rect key="frame" x="15" y="0.0" width="72" height="21"/>
