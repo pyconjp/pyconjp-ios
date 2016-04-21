@@ -26,11 +26,11 @@ class ScheduleListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configurationData(model: Talk) {
-        titleLabel.text = model.title
-        speakerLabel.text = model.speaker?.name
-        timeLabel.text =  model.periodTime
-        roomLabel.text = model.place?.name
+    func fillWith(talk: Talk) {
+        titleLabel.text = talk.title
+        speakerLabel.text = talk.speaker?.name
+        timeLabel.text =  talk.periodTime
+        roomLabel.text = talk.place?.name
     }
     
     override func prepareForReuse() {

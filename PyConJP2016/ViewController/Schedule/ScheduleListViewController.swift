@@ -39,14 +39,10 @@ class ScheduleListViewController: UIViewController, UITableViewDataSource, UITab
         
     }
     
-    //mark UITableViewDelegate
+    // MARK: - Table View Controller Data Source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 4
-    }
-    
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -62,6 +58,12 @@ class ScheduleListViewController: UIViewController, UITableViewDataSource, UITab
             fatalError("Could not create ScheduleListTableViewCell")
         }
         return cell
+    }
+    
+    // MARK: - Table View Controller Delegate
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

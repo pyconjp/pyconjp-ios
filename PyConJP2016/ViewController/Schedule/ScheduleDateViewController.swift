@@ -97,7 +97,7 @@ class ScheduleDateViewController: UIViewController {
         button.setTitleColor(.whiteColor(), forState: .Normal)
     }
     
-    //mark day button
+    // MARK: - Day Button
     
     @IBAction func onDay1Button(sender: UIButton) {
         if let movePage = movePage {
