@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class PCJWKWebViewController: UIViewController, WKNavigationDelegate {
+class PCJWKWebViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
     var url: String = "https://google.com"
     
@@ -39,4 +39,15 @@ class PCJWKWebViewController: UIViewController, WKNavigationDelegate {
     func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
     }
     
+    func webView(webView: WKWebView, createWebViewWithConfiguration configuration: WKWebViewConfiguration, forNavigationAction navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        guard let url = navigationAction.request.URL else {
+            return nil
+        }
+        guard let targetFrame = navigationAction.targetFrame where targetFrame.mainFrame else {
+            webView.loadRequest(NSURLRequest.init(URL: url))
+            return nil
+        }
+        
+        return nil
+    }
 }
