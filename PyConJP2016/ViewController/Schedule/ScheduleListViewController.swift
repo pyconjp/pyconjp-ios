@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScheduleListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ScheduleListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TalkAPIType, ErrorAlertType {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,6 +28,19 @@ class ScheduleListViewController: UIViewController, UITableViewDataSource, UITab
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        weak var weakSelf = self
+        
+        getTalksWithParameter(["day": viewControllerIndex], successClosure: { _ in
+            dispatch_async(dispatch_get_main_queue(), { 
+                weakSelf!.tableView.reloadData()
+            })
+            }) { error in
+//                let alert = UIAlertController(title: "hogehoge", message: "fugafuga", preferredStyle: .Alert)
+//                alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+//                weakSelf?.presentViewController(alert, animated: true, completion: nil)
+                self.showAlartWith(error, parent: weakSelf!);
+        }
         
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)

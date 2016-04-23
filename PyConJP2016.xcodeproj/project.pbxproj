@@ -25,6 +25,8 @@
 		954B7D7AE17B5936AC1F49FC /* Pods_PyConJP2016Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1BDDC1CABB963F52098EAB7 /* Pods_PyConJP2016Tests.framework */; };
 		C832600FD904D3FFADAA174C /* Pods_PyConJP2016.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7952AFBF6B014E7BBED90FE3 /* Pods_PyConJP2016.framework */; };
 		DB1347DC1CC7DEDF00CA0539 /* AlamofireType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */; };
+		DB1347DE1CCB092000CA0539 /* TalkAPIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DD1CCB092000CA0539 /* TalkAPIType.swift */; };
+		DB1347E01CCB27D900CA0539 /* ErrorAlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */; };
 		DB1579D81C7A10B800A5F5BA /* TalkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1579D71C7A10B800A5F5BA /* TalkModel.swift */; };
 		DB1579DA1C7A13C400A5F5BA /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1579D91C7A13C400A5F5BA /* PlaceModel.swift */; };
 		DB1579DC1C7A154B00A5F5BA /* LevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1579DB1C7A154B00A5F5BA /* LevelModel.swift */; };
@@ -82,6 +84,8 @@
 		A1BDDC1CABB963F52098EAB7 /* Pods_PyConJP2016Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PyConJP2016Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A81D8527364825FA466121 /* Pods-PyConJP2016Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016Tests/Pods-PyConJP2016Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireType.swift; sourceTree = "<group>"; };
+		DB1347DD1CCB092000CA0539 /* TalkAPIType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkAPIType.swift; sourceTree = "<group>"; };
+		DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlertType.swift; sourceTree = "<group>"; };
 		DB1579D71C7A10B800A5F5BA /* TalkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkModel.swift; sourceTree = "<group>"; };
 		DB1579D91C7A13C400A5F5BA /* PlaceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		DB1579DB1C7A154B00A5F5BA /* LevelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelModel.swift; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */,
+				DB1347DD1CCB092000CA0539 /* TalkAPIType.swift */,
+				DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -396,7 +402,7 @@
 				TargetAttributes = {
 					DBA1C0A81C7228E2004F0C8D = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 655CB4BL24;
+						DevelopmentTeam = 3T8B5JQDB8;
 					};
 					DBA1C0BC1C7228E2004F0C8D = {
 						CreatedOnToolsVersion = 7.2;
@@ -562,6 +568,7 @@
 				7FFD33301C8D84BA000494E7 /* ScheduleListTableViewCell.swift in Sources */,
 				7FE830F71C97FA390076C079 /* LocalNotificationManager.swift in Sources */,
 				DBF4A7491C7F649A00AB8BE4 /* PCJWKWebViewController.swift in Sources */,
+				DB1347DE1CCB092000CA0539 /* TalkAPIType.swift in Sources */,
 				7F82F6A01C8D4B62004EAC0E /* SchedulePageViewController.swift in Sources */,
 				DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */,
 				7F82F6A41C8D4BF9004EAC0E /* ScheduleDateViewController.swift in Sources */,
@@ -577,6 +584,7 @@
 				7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */,
 				DBA1C0AD1C7228E2004F0C8D /* AppDelegate.swift in Sources */,
 				7F82F6A21C8D4B9A004EAC0E /* ScheduleModelController.swift in Sources */,
+				DB1347E01CCB27D900CA0539 /* ErrorAlertType.swift in Sources */,
 				7F82F6A61C8D4C3D004EAC0E /* ScheduleBaseViewController.swift in Sources */,
 				DB1579DA1C7A13C400A5F5BA /* PlaceModel.swift in Sources */,
 				7FE830FA1C97FCA00076C079 /* AppDelegate+OpenViewController.swift in Sources */,
@@ -709,7 +717,7 @@
 				INFOPLIST_FILE = PyConJP2016/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yutaro.PyConJP2016;
+				PRODUCT_BUNDLE_IDENTIFIER = PyConJP2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -725,7 +733,7 @@
 				INFOPLIST_FILE = PyConJP2016/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yutaro.PyConJP2016;
+				PRODUCT_BUNDLE_IDENTIFIER = PyConJP2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
