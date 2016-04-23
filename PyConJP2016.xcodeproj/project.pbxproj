@@ -39,6 +39,7 @@
 		DBA1C0CD1C7228E2004F0C8D /* PyConJP2016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0CC1C7228E2004F0C8D /* PyConJP2016UITests.swift */; };
 		DBA1C0DF1C722E99004F0C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */; };
 		DBA1C0E01C722E99004F0C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0DE1C722E99004F0C8D /* Main.storyboard */; };
+		DBB2538B1CCB700400AA17C8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */; };
 		DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC748171C76254000895D4A /* BaseTabBarController.swift */; };
 		DBDE0E7C1C8C19F50094BF36 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBDE0E7B1C8C19F50094BF36 /* More.storyboard */; };
 		DBEBDB481C8C89FC002B25B3 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */; };
@@ -104,6 +105,7 @@
 		DBA1C0CE1C7228E2004F0C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBA1C0DE1C722E99004F0C8D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		DBC748171C76254000895D4A /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		DBDE0E7B1C8C19F50094BF36 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */,
 				DB1347DD1CCB092000CA0539 /* TalkAPIType.swift */,
 				DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */,
+				DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 				DB1579DE1C7A157C00A5F5BA /* SpeakerModel.swift in Sources */,
 				7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */,
 				DBA1C0AD1C7228E2004F0C8D /* AppDelegate.swift in Sources */,
+				DBB2538B1CCB700400AA17C8 /* UIColorExtension.swift in Sources */,
 				7F82F6A21C8D4B9A004EAC0E /* ScheduleModelController.swift in Sources */,
 				DB1347E01CCB27D900CA0539 /* ErrorAlertType.swift in Sources */,
 				7F82F6A61C8D4C3D004EAC0E /* ScheduleBaseViewController.swift in Sources */,

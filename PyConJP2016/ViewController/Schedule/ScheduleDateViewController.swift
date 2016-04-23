@@ -22,7 +22,7 @@ class ScheduleDateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        activeBar.backgroundColor = UIColor.redColor()
+        activeBar.backgroundColor = .pyconJP2016BlueColor()
         activeBarView.addSubview(activeBar)
         
     }
@@ -93,7 +93,7 @@ class ScheduleDateViewController: UIViewController {
     
     func changeUnactiveButton(button: UIButton) {
         button.enabled = true
-        button.backgroundColor = .lightGrayColor()
+        button.backgroundColor = .pyconJP2016GlayColor()
         button.setTitleColor(.whiteColor(), forState: .Normal)
     }
     

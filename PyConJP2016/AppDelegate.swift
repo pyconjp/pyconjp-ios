@@ -29,6 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         	}
         }
         
+        UINavigationBar.appearance().barTintColor = .pyconJP2016RedColor()
+        UINavigationBar.appearance().tintColor = .whiteColor()
+        
+//        UIBarButtonItem.appearance().tintColor = UIColor.pyconJP2016RedColor()
+        
         return true
     }
 
