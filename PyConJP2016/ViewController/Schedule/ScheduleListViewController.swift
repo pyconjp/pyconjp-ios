@@ -39,7 +39,7 @@ class ScheduleListViewController: UIViewController, UITableViewDataSource, UITab
 //                let alert = UIAlertController(title: "hogehoge", message: "fugafuga", preferredStyle: .Alert)
 //                alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
 //                weakSelf?.presentViewController(alert, animated: true, completion: nil)
-                self.showAlartWith(error, parent: weakSelf!);
+                self.showErrorAlartWith(error, parent: weakSelf!);
         }
         
         if let indexPath = tableView.indexPathForSelectedRow {

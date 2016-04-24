@@ -13,7 +13,7 @@ protocol ErrorAlertType {
 }
 
 extension ErrorAlertType {
-    func showAlartWith(error: NSError, parent viewController: UIViewController) -> Void {
+    func showErrorAlartWith(error: NSError, parent viewController: UIViewController) -> Void {
         let alert = UIAlertController(title: "hogehoge", message: "fugafuga", preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         viewController.presentViewController(alert, animated: true, completion: nil)

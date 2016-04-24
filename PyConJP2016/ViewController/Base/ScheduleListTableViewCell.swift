@@ -34,10 +34,10 @@ class ScheduleListTableViewCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-        titleLabel.text = nil
-        timeLabel.text = nil
-        roomLabel.text = nil
-        speakerLabel.text = nil
+//        titleLabel.text = nil
+//        timeLabel.text = nil
+//        roomLabel.text = nil
+//        speakerLabel.text = nil
     }
     
 }

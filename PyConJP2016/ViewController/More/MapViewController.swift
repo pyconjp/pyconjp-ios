@@ -11,15 +11,13 @@ import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
 
+    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+        addressLabel.text = ""
         
         let location = CLLocationCoordinate2D(latitude: 35.4941, longitude: 139.4315)
         mapView.setCenterCoordinate(location, animated: true)
@@ -34,6 +32,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         annotation.coordinate = location
         annotation.title = "foobar"
         mapView.addAnnotation(annotation)
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
     }
 
