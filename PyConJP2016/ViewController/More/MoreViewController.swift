@@ -53,7 +53,7 @@ class MoreViewController: UIViewController, UITableViewDataSource, UITableViewDe
         case 0:
             cell?.textLabel?.text = "About"
         case 1 where indexPath.row == 0:
-            cell?.textLabel?.text = "Map"
+            cell?.textLabel?.text = "Access"
         case 1 where indexPath.row == 1:
             cell?.textLabel?.text = "Sponsors"
         default:
@@ -66,6 +66,8 @@ class MoreViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         switch indexPath.section {
         case 0:
+            let aboutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("AboutViewController")
+            self.navigationController?.pushViewController(aboutViewController!, animated: true)
             break
         case 1 where indexPath.row == 0:
             let mapViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController
