@@ -8,24 +8,6 @@
 
 import UIKit
 
-//class SpeakerModel: NSObject {
-//    
-//    var id: Int = 0
-//    var name: String = ""
-//    var imageURL: String = ""
-//    var twitterName: String = ""
-//    var githubName: String = ""
-//    
-//    init(dictionary : [String : AnyObject]) {
-//        id = dictionary["id"] as! Int
-//        name = dictionary["name"] as! String
-//        imageURL = dictionary["image_url"] as! String
-//        twitterName = dictionary["twitter_name"] as! String
-//        githubName = dictionary["github_name"] as! String
-//    }
-//    
-//}
-
 struct Speaker {
     
     let id: Int
@@ -33,6 +15,10 @@ struct Speaker {
     let imageURL: String
     let twitterName: String
     let githubName: String
+    
+}
+
+extension Speaker {
     
     init(dictionary : [String : AnyObject]) {
         id = dictionary["id"] as? Int ?? 0

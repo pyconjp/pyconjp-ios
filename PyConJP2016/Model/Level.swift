@@ -1,5 +1,5 @@
 //
-//  PlaceModel.swift
+//  LevelModel.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/02/22.
@@ -8,22 +8,14 @@
 
 import UIKit
 
-//class PlaceModel: NSObject {
-//    
-//    var id: Int = 0
-//    var name: String = ""
-//    
-//    init(dictionary: [String : AnyObject]) {
-//        id = dictionary["id"] as! Int
-//        name = dictionary["name"] as! String
-//    }
-//
-//}
-
-struct Place {
+struct Level {
     
     let id: Int
     let name: String
+    
+}
+
+extension Level {
     
     init(dictionary: [String : AnyObject]) {
         id = dictionary["id"] as? Int ?? 0
