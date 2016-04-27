@@ -14,6 +14,8 @@
 		7F82F6A41C8D4BF9004EAC0E /* ScheduleDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */; };
 		7F82F6A61C8D4C3D004EAC0E /* ScheduleBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A51C8D4C3D004EAC0E /* ScheduleBaseViewController.swift */; };
 		7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A71C8D4CF3004EAC0E /* ScheduleListViewController.swift */; };
+		7FA9228A1CD0B7910057136D /* Dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FA922891CD0B7910057136D /* Dummy.json */; };
+		7FA9228C1CD0BD8F0057136D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9228B1CD0BD8F0057136D /* Category.swift */; };
 		7FE830F71C97FA390076C079 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE830F61C97FA390076C079 /* LocalNotificationManager.swift */; };
 		7FE830FA1C97FCA00076C079 /* AppDelegate+OpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE830F91C97FCA00076C079 /* AppDelegate+OpenViewController.swift */; };
 		7FE830FC1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE830FB1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift */; };
@@ -75,6 +77,8 @@
 		7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDateViewController.swift; sourceTree = "<group>"; };
 		7F82F6A51C8D4C3D004EAC0E /* ScheduleBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleBaseViewController.swift; sourceTree = "<group>"; };
 		7F82F6A71C8D4CF3004EAC0E /* ScheduleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListViewController.swift; sourceTree = "<group>"; };
+		7FA922891CD0B7910057136D /* Dummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Dummy.json; sourceTree = "<group>"; };
+		7FA9228B1CD0BD8F0057136D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		7FE830F61C97FA390076C079 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		7FE830F91C97FCA00076C079 /* AppDelegate+OpenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+OpenViewController.swift"; sourceTree = "<group>"; };
 		7FE830FB1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveLocalNotificationService.swift; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 		DBA1C0AB1C7228E2004F0C8D /* PyConJP2016 */ = {
 			isa = PBXGroup;
 			children = (
+				7FA922891CD0B7910057136D /* Dummy.json */,
 				7FE830F81C97FC800076C079 /* Category */,
 				DBA1C0DA1C722E77004F0C8D /* Model */,
 				DB1347DA1CC7DECF00CA0539 /* Protocol */,
@@ -275,6 +280,7 @@
 				DB1579D91C7A13C400A5F5BA /* PlaceModel.swift */,
 				DB1579DB1C7A154B00A5F5BA /* LevelModel.swift */,
 				DB1579DD1C7A157C00A5F5BA /* SpeakerModel.swift */,
+				7FA9228B1CD0BD8F0057136D /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -408,7 +414,7 @@
 				TargetAttributes = {
 					DBA1C0A81C7228E2004F0C8D = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 3T8B5JQDB8;
+						DevelopmentTeam = 655CB4BL24;
 					};
 					DBA1C0BC1C7228E2004F0C8D = {
 						CreatedOnToolsVersion = 7.2;
@@ -448,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBA1C0E01C722E99004F0C8D /* Main.storyboard in Resources */,
+				7FA9228A1CD0B7910057136D /* Dummy.json in Resources */,
 				7FFD33311C8D84BA000494E7 /* ScheduleListTableViewCell.xib in Resources */,
 				DBDE0E7C1C8C19F50094BF36 /* More.storyboard in Resources */,
 				DBA1C0DF1C722E99004F0C8D /* LaunchScreen.storyboard in Resources */,
@@ -597,6 +604,7 @@
 				DB1579DA1C7A13C400A5F5BA /* PlaceModel.swift in Sources */,
 				7FE830FA1C97FCA00076C079 /* AppDelegate+OpenViewController.swift in Sources */,
 				DB1579D81C7A10B800A5F5BA /* TalkModel.swift in Sources */,
+				7FA9228C1CD0BD8F0057136D /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,7 +733,7 @@
 				INFOPLIST_FILE = PyConJP2016/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PyConJP2016;
+				PRODUCT_BUNDLE_IDENTIFIER = yutaro.PyConJP2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -742,7 +750,7 @@
 				INFOPLIST_FILE = PyConJP2016/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PyConJP2016;
+				PRODUCT_BUNDLE_IDENTIFIER = yutaro.PyConJP2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

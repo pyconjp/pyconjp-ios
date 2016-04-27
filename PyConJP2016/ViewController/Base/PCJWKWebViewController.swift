@@ -11,7 +11,7 @@ import WebKit
 
 class PCJWKWebViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
-    var url: String = "https://google.com"
+    var url: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,7 @@ class PCJWKWebViewController: UIViewController, WKNavigationDelegate, WKUIDelega
         let webView = WKWebView(frame: CGRectZero, configuration: WKWebViewConfiguration())
         webView.translatesAutoresizingMaskIntoConstraints = false
         webView.navigationDelegate = self
+        webView.allowsBackForwardNavigationGestures = true
         view.addSubview(webView)
         
         let noLayoutFormatOptions = NSLayoutFormatOptions(rawValue: 0)

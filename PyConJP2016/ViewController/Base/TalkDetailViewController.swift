@@ -47,4 +47,23 @@ class TalkDetailViewController: UIViewController {
             }
         }
     }
+    @IBAction func onHashTagButton(sender: UIButton) {
+
+        var hashTag = "pyconjp"
+        if let talk = talk, room = talk.place?.name {
+                hashTag.appendContentsOf(room)
+        }
+        
+        if UIApplication.sharedApplication().canOpenURL(NSURL(string: "twitter://")!) {
+            let urlString = "twitter://search?query=%23" + hashTag
+            UIApplication.sharedApplication().openURL(NSURL(string: urlString)!)
+        } else {
+            let urlString = "https://mobile.twitter.com/search?q=%23" + hashTag + "&s=typd"
+            
+            let webViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PCJWKWebViewController") as! PCJWKWebViewController
+            webViewController.url = urlString
+            self.navigationController?.pushViewController(webViewController, animated: true)
+        }
+        
+    }
 }

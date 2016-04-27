@@ -38,8 +38,8 @@ struct Speaker {
         id = dictionary["id"] as? Int ?? 0
         name = dictionary["name"] as? String ?? ""
         imageURL = dictionary["image_url"] as? String ?? ""
-        twitterName = dictionary["twitter_name"] as? String ?? ""
-        githubName = dictionary["github_name"] as? String ?? ""
+        twitterName = dictionary["twitter"] as? String ?? ""
+        githubName = dictionary["github"] as? String ?? ""
     }
     
 }
