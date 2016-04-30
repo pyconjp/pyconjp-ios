@@ -1,0 +1,21 @@
+//
+//  Category.swift
+//  PyConJP2016
+//
+//  Created by Yutaro Muta on 2016/04/27.
+//  Copyright © 2016年 Yutaro Muta. All rights reserved.
+//
+
+import UIKit
+
+struct Category {
+    
+    let id: Int
+    let name: String
+    
+    init(dictionary: [String : AnyObject]) {
+        id = dictionary["id"] as? Int ?? 0
+        name = dictionary["name"] as? String ?? ""
+    }
+    
+}
