@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cjm-2q-dxH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cjm-2q-dxH">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -46,7 +46,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfh-NF-r2y" userLabel="Time View">
                                                 <rect key="frame" x="0.0" y="57" width="600" height="35"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="HFy-oz-V2n">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Schedule" translatesAutoresizingMaskIntoConstraints="NO" id="HFy-oz-V2n">
                                                         <rect key="frame" x="15" y="5" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="25" id="2IU-EC-icz"/>
@@ -83,14 +83,14 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKf-oq-5Pg" userLabel="Locale View">
                                                 <rect key="frame" x="0.0" y="107" width="600" height="35"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cdb-zm-JQc">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pin" translatesAutoresizingMaskIntoConstraints="NO" id="Cdb-zm-JQc">
                                                         <rect key="frame" x="15" y="5" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="25" id="86u-Gb-fj2"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="201" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Rcf-qG-0nK">
-                                                        <rect key="frame" x="50" y="5" width="35" height="25"/>
+                                                        <rect key="frame" x="45" y="5" width="35" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="250" id="91y-Rm-5K2"/>
                                                         </constraints>
@@ -117,14 +117,14 @@
                                                     <constraint firstItem="hCS-O3-Zgz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rcf-qG-0nK" secondAttribute="trailing" constant="10" id="eyX-Jd-sz5"/>
                                                     <constraint firstAttribute="bottom" secondItem="Cdb-zm-JQc" secondAttribute="bottom" constant="5" id="fzB-IQ-nVk"/>
                                                     <constraint firstAttribute="trailing" secondItem="hCS-O3-Zgz" secondAttribute="trailing" constant="15" id="ifv-rH-fA3"/>
-                                                    <constraint firstItem="Rcf-qG-0nK" firstAttribute="leading" secondItem="Cdb-zm-JQc" secondAttribute="trailing" constant="10" id="kJg-pb-Up7"/>
+                                                    <constraint firstItem="Rcf-qG-0nK" firstAttribute="leading" secondItem="Cdb-zm-JQc" secondAttribute="trailing" constant="5" id="kJg-pb-Up7"/>
                                                     <constraint firstAttribute="height" constant="35" id="p7d-M9-gh3"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-Dv-Jho" userLabel="Speaker View">
                                                 <rect key="frame" x="0.0" y="157" width="600" height="50"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="BpM-8a-gQL">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Schedule" translatesAutoresizingMaskIntoConstraints="NO" id="BpM-8a-gQL">
                                                         <rect key="frame" x="15" y="0.0" width="50" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="iAW-nw-CQl"/>
@@ -161,7 +161,7 @@
                                                 <rect key="frame" x="0.0" y="222" width="600" height="35"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqe-EW-BxS">
-                                                        <rect key="frame" x="15" y="0.0" width="183" height="35"/>
+                                                        <rect key="frame" x="15" y="0.0" width="183.5" height="35"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bua-7j-fWI">
                                                                 <rect key="frame" x="0.0" y="0.0" width="67" height="35"/>
@@ -187,7 +187,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qST-hg-5ge">
-                                                        <rect key="frame" x="208" y="0.0" width="184" height="35"/>
+                                                        <rect key="frame" x="208.5" y="0.0" width="183" height="35"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audience Level: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHk-Dp-GNG">
                                                                 <rect key="frame" x="0.0" y="0.0" width="99" height="35"/>
@@ -213,7 +213,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jo0-Q4-gTy">
-                                                        <rect key="frame" x="402" y="0.0" width="183" height="35"/>
+                                                        <rect key="frame" x="401" y="0.0" width="183.5" height="35"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbg-wa-R1a">
                                                                 <rect key="frame" x="0.0" y="0.0" width="63" height="35"/>
@@ -395,6 +395,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clock" width="16" height="16"/>
+        <image name="Pin" width="36" height="36"/>
+        <image name="Schedule" width="36" height="36"/>
     </resources>
 </document>

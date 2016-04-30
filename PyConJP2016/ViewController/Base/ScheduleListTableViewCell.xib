@@ -22,28 +22,28 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="V2i-he-5V4">
-                        <rect key="frame" x="15" y="44" width="15" height="15"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Schedule" translatesAutoresizingMaskIntoConstraints="NO" id="V2i-he-5V4">
+                        <rect key="frame" x="15" y="44" width="20" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="15" id="1pb-R3-7Lp"/>
-                            <constraint firstAttribute="width" constant="15" id="IW0-5X-tmw"/>
+                            <constraint firstAttribute="height" constant="20" id="1pb-R3-7Lp"/>
+                            <constraint firstAttribute="width" constant="20" id="IW0-5X-tmw"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Speaker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ooi-FX-o1G">
-                        <rect key="frame" x="15" y="92" width="290" height="17"/>
+                        <rect key="frame" x="15" y="94.5" width="290" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text=" room1 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKg-ux-So1">
-                        <rect key="frame" x="15" y="67" width="47" height="17"/>
+                        <rect key="frame" x="15" y="72" width="47" height="14.5"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00~11:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edp-c0-Zyo">
-                        <rect key="frame" x="35" y="43" width="84" height="18"/>
+                        <rect key="frame" x="40" y="45.5" width="84" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -81,6 +81,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="clock" width="16" height="16"/>
+        <image name="Schedule" width="36" height="36"/>
     </resources>
 </document>

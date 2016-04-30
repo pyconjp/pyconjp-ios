@@ -17,7 +17,6 @@
 		7FA9228A1CD0B7910057136D /* Dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FA922891CD0B7910057136D /* Dummy.json */; };
 		7FA9228C1CD0BD8F0057136D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9228B1CD0BD8F0057136D /* Category.swift */; };
 		7FE830F71C97FA390076C079 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE830F61C97FA390076C079 /* LocalNotificationManager.swift */; };
-		7FE830FA1C97FCA00076C079 /* AppDelegate+OpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE830F91C97FCA00076C079 /* AppDelegate+OpenViewController.swift */; };
 		7FE830FC1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE830FB1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift */; };
 		7FF4B0F11C990383001438C6 /* TalkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF4B0F01C990383001438C6 /* TalkService.swift */; };
 		7FFB73331C914FB4006FB375 /* SponsorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFB73321C914FB4006FB375 /* SponsorListViewController.swift */; };
@@ -46,6 +45,7 @@
 		DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC748171C76254000895D4A /* BaseTabBarController.swift */; };
 		DBDE0E7C1C8C19F50094BF36 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBDE0E7B1C8C19F50094BF36 /* More.storyboard */; };
 		DBEBDB481C8C89FC002B25B3 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */; };
+		DBF32BB51CD48C4C004E7F3B /* AppDelegate+OpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF32BB41CD48C4C004E7F3B /* AppDelegate+OpenViewController.swift */; };
 		DBF4A7491C7F649A00AB8BE4 /* PCJWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF4A7481C7F649A00AB8BE4 /* PCJWKWebViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +80,6 @@
 		7FA922891CD0B7910057136D /* Dummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Dummy.json; sourceTree = "<group>"; };
 		7FA9228B1CD0BD8F0057136D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		7FE830F61C97FA390076C079 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
-		7FE830F91C97FCA00076C079 /* AppDelegate+OpenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+OpenViewController.swift"; sourceTree = "<group>"; };
 		7FE830FB1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveLocalNotificationService.swift; sourceTree = "<group>"; };
 		7FF4B0F01C990383001438C6 /* TalkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkService.swift; sourceTree = "<group>"; };
 		7FFB73321C914FB4006FB375 /* SponsorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorListViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +114,7 @@
 		DBC748171C76254000895D4A /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		DBDE0E7B1C8C19F50094BF36 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		DBF32BB41CD48C4C004E7F3B /* AppDelegate+OpenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+OpenViewController.swift"; sourceTree = "<group>"; };
 		DBF4A7481C7F649A00AB8BE4 /* PCJWKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJWKWebViewController.swift; sourceTree = "<group>"; };
 		E2EB42880CF0B0E1ABE59123 /* Pods-PyConJP2016Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016Tests/Pods-PyConJP2016Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,14 +179,6 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
-		7FE830F81C97FC800076C079 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				7FE830F91C97FCA00076C079 /* AppDelegate+OpenViewController.swift */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
 		7FF4B0EF1C99035F001438C6 /* Talk */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,8 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				7FA922891CD0B7910057136D /* Dummy.json */,
-				7FE830F81C97FC800076C079 /* Category */,
 				DBA1C0DA1C722E77004F0C8D /* Model */,
+				DBF32BB31CD48C4C004E7F3B /* Extension */,
 				DB1347DA1CC7DECF00CA0539 /* Protocol */,
 				DBAD5BBA1C95B54E004B71B3 /* Service */,
 				DBA1C0DB1C722E82004F0C8D /* ViewController */,
@@ -340,6 +332,14 @@
 			path = More;
 			sourceTree = "<group>";
 		};
+		DBF32BB31CD48C4C004E7F3B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DBF32BB41CD48C4C004E7F3B /* AppDelegate+OpenViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -414,7 +414,7 @@
 				TargetAttributes = {
 					DBA1C0A81C7228E2004F0C8D = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 655CB4BL24;
+						DevelopmentTeam = 3T8B5JQDB8;
 					};
 					DBA1C0BC1C7228E2004F0C8D = {
 						CreatedOnToolsVersion = 7.2;
@@ -596,13 +596,13 @@
 				7FF4B0F11C990383001438C6 /* TalkService.swift in Sources */,
 				DB1579DE1C7A157C00A5F5BA /* Speaker.swift in Sources */,
 				7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */,
+				DBF32BB51CD48C4C004E7F3B /* AppDelegate+OpenViewController.swift in Sources */,
 				DBA1C0AD1C7228E2004F0C8D /* AppDelegate.swift in Sources */,
 				DBB2538B1CCB700400AA17C8 /* UIColorExtension.swift in Sources */,
 				7F82F6A21C8D4B9A004EAC0E /* ScheduleModelController.swift in Sources */,
 				DB1347E01CCB27D900CA0539 /* ErrorAlertType.swift in Sources */,
 				7F82F6A61C8D4C3D004EAC0E /* ScheduleBaseViewController.swift in Sources */,
 				DB1579DA1C7A13C400A5F5BA /* Place.swift in Sources */,
-				7FE830FA1C97FCA00076C079 /* AppDelegate+OpenViewController.swift in Sources */,
 				DB1579D81C7A10B800A5F5BA /* Talk.swift in Sources */,
 				7FA9228C1CD0BD8F0057136D /* Category.swift in Sources */,
 			);
@@ -733,7 +733,7 @@
 				INFOPLIST_FILE = PyConJP2016/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yutaro.PyConJP2016;
+				PRODUCT_BUNDLE_IDENTIFIER = PyConJP2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -750,7 +750,7 @@
 				INFOPLIST_FILE = PyConJP2016/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yutaro.PyConJP2016;
+				PRODUCT_BUNDLE_IDENTIFIER = PyConJP2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

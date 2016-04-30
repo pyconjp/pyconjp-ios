@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "clock@1×.png",
+      "filename" : "schedule.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "clock@2×.png",
+      "filename" : "schedule2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "clock@3×.png",
+      "filename" : "schedule3x.png",
       "scale" : "3x"
     }
   ],

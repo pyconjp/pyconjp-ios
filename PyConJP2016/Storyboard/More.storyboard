@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vCT-82-8T9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vCT-82-8T9">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -217,7 +217,7 @@
         <!--More View Controller-->
         <scene sceneID="prx-J4-qMk">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="xdf-4Z-lOx" customClass="MoreViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoreViewController" automaticallyAdjustsScrollViewInsets="NO" id="xdf-4Z-lOx" customClass="MoreViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tjz-EM-fcs"/>
                         <viewControllerLayoutGuide type="bottom" id="FZV-uH-09g"/>
@@ -231,10 +231,10 @@
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Eoe-mf-Wnx">
-                                        <rect key="frame" x="0.0" y="50" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eoe-mf-Wnx" id="leF-5C-BEd">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -267,6 +267,6 @@
     </scenes>
     <resources>
         <image name="Logo" width="60" height="60"/>
-        <image name="clock" width="16" height="16"/>
+        <image name="clock" width="36" height="36"/>
     </resources>
 </document>

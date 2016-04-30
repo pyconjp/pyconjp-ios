@@ -70,10 +70,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().cancelLocalNotification(notification)
     }
     
-//    func openTalkDetailViewController() {
-//        let talkDetailViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
-//        talkDetailViewController.talk = nil
-//        self.window?.rootViewController?.presentedViewController?.navigationController?.pushViewController(talkDetailViewController, animated: true)
-//    }
 }
+
 
