@@ -17,7 +17,8 @@ class ScheduleDateViewController: UIViewController {
     var activeBar = UIView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: UIScreen.mainScreen().bounds.width / 2, height: 3)))
     var buttonOriginXArray: [CGFloat] = []
     
-    var movePage: ((index: Int) -> Void)?
+    var fowardPage: ((index: Int) -> Void)?
+    var reversePage: ((index: Int) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +41,8 @@ class ScheduleDateViewController: UIViewController {
     
     override func didMoveToParentViewController(parent: UIViewController?) {
         let scheduleBaseViewController = parent as! ScheduleBaseViewController
-        movePage = scheduleBaseViewController.movePage
+        fowardPage = scheduleBaseViewController.fowardPage
+        reversePage = scheduleBaseViewController.reversePage
         scheduleBaseViewController.addObserver(self, forKeyPath: "offsetToChange", options: [.New, .Old], context: nil)
         scheduleBaseViewController.addObserver(self, forKeyPath: "displayIndex", options: [.New, .Old], context: nil)
     }
@@ -100,15 +102,15 @@ class ScheduleDateViewController: UIViewController {
     // MARK: - Day Button
     
     @IBAction func onDay1Button(sender: UIButton) {
-        if let movePage = movePage {
-        	movePage(index: 0)
+        if let reversePage = reversePage {
+        	reversePage(index: 0)
         	self.changeActive(0)
         }
     }
     
     @IBAction func onDay2Button(sender: UIButton) {
-        if let movePage = movePage {
-            movePage(index: 1)
+        if let fowardPage = fowardPage {
+            fowardPage(index: 1)
         	self.changeActive(1)
         }
     }

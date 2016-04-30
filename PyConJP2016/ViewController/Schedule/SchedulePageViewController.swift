@@ -42,7 +42,8 @@ class SchedulePageViewController: UIPageViewController {
         let scheduleBaseViewController = parent as! ScheduleBaseViewController
         self.delegate = scheduleBaseViewController
         
-        scheduleBaseViewController.movePage = {(index: Int) -> Void in self.movePage(index)}
+        scheduleBaseViewController.fowardPage = {(index: Int) -> Void in self.fowardPageWith(index)}
+        scheduleBaseViewController.reversePage = {(index: Int) -> Void in self.reversePageWith(index)}
         
         for subview in self.view.subviews {
             if let scrollView = subview as? UIScrollView {
@@ -51,9 +52,17 @@ class SchedulePageViewController: UIPageViewController {
         }
     }
     
-    func movePage(index: Int) {
+    func fowardPageWith(index: Int) {
+        self.movePageWith(index, direction: .Forward)
+    }
+    
+    func reversePageWith(index: Int) {
+        self.movePageWith(index, direction: .Reverse)
+    }
+    
+    private func movePageWith(index: Int, direction: UIPageViewControllerNavigationDirection) {
         let viewController: ScheduleListViewController = scheduleModelController.viewControllerAtIndex(index, storyboard: self.storyboard!)!
         let viewControllers = [viewController]
-        self.setViewControllers(viewControllers, direction: .Forward, animated: true, completion: {done in})
+        self.setViewControllers(viewControllers, direction: direction, animated: true, completion: {done in})
     }
 }

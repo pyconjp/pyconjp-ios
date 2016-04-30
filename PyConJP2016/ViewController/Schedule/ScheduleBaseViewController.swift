@@ -16,7 +16,8 @@ class ScheduleBaseViewController: UIViewController, UIPageViewControllerDelegate
     dynamic var offsetToChange: CGFloat = 0.0
     dynamic var displayIndex: Int = 0
     
-    dynamic var movePage: ((index: Int) -> Void)?
+    dynamic var fowardPage: ((index: Int) -> Void)?
+    dynamic var reversePage: ((index: Int) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
