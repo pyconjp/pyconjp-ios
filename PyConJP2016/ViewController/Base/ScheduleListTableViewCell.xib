@@ -22,7 +22,7 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Schedule" translatesAutoresizingMaskIntoConstraints="NO" id="V2i-he-5V4">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="V2i-he-5V4">
                         <rect key="frame" x="15" y="44" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="1pb-R3-7Lp"/>
@@ -81,6 +81,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Schedule" width="36" height="36"/>
+        <image name="Clock" width="36" height="36"/>
     </resources>
 </document>

@@ -46,7 +46,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfh-NF-r2y" userLabel="Time View">
                                                 <rect key="frame" x="0.0" y="57" width="600" height="35"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Schedule" translatesAutoresizingMaskIntoConstraints="NO" id="HFy-oz-V2n">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="HFy-oz-V2n">
                                                         <rect key="frame" x="15" y="5" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="25" id="2IU-EC-icz"/>
@@ -124,7 +124,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-Dv-Jho" userLabel="Speaker View">
                                                 <rect key="frame" x="0.0" y="157" width="600" height="50"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Schedule" translatesAutoresizingMaskIntoConstraints="NO" id="BpM-8a-gQL">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="BpM-8a-gQL">
                                                         <rect key="frame" x="15" y="0.0" width="50" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="iAW-nw-CQl"/>
@@ -395,7 +395,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Clock" width="36" height="36"/>
         <image name="Pin" width="36" height="36"/>
-        <image name="Schedule" width="36" height="36"/>
     </resources>
 </document>

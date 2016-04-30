@@ -5,11 +5,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Schedule-->
         <scene sceneID="0d8-7H-coq">
             <objects>
                 <navigationController storyboardIdentifier="ScheduleNavigationController" id="NyO-IO-ozg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="ZuP-30-Iu1"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" image="Schedule" selectedImage="Schedule" id="ZuP-30-Iu1">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jtO-Cp-LAb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -185,4 +187,7 @@
             <point key="canvasLocation" x="1149" y="165.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Schedule" width="36" height="36"/>
+    </resources>
 </document>

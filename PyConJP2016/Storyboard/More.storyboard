@@ -6,11 +6,11 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--More-->
         <scene sceneID="gDt-tz-pwJ">
             <objects>
                 <navigationController storyboardIdentifier="MoreNavigationController" id="vCT-82-8T9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="SUT-Im-w67"/>
+                    <tabBarItem key="tabBarItem" title="More" image="More" selectedImage="More" id="SUT-Im-w67"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N58-04-WTF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -267,6 +267,7 @@
     </scenes>
     <resources>
         <image name="Logo" width="60" height="60"/>
+        <image name="More" width="36" height="36"/>
         <image name="clock" width="36" height="36"/>
     </resources>
 </document>
