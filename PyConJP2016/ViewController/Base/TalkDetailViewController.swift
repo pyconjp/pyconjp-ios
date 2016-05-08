@@ -62,7 +62,7 @@ class TalkDetailViewController: UIViewController {
             
             let webViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PCJWKWebViewController") as! PCJWKWebViewController
             webViewController.url = urlString
-            self.navigationController?.pushViewController(webViewController, animated: true)
+            self.presentViewController(webViewController, animated: true, completion: nil)
         }
         
     }

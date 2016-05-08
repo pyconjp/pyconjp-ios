@@ -124,14 +124,14 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-Dv-Jho" userLabel="Speaker View">
                                                 <rect key="frame" x="0.0" y="157" width="600" height="50"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="BpM-8a-gQL">
-                                                        <rect key="frame" x="15" y="0.0" width="50" height="50"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Speaker" translatesAutoresizingMaskIntoConstraints="NO" id="BpM-8a-gQL">
+                                                        <rect key="frame" x="15" y="5" width="40" height="40"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="50" id="iAW-nw-CQl"/>
+                                                            <constraint firstAttribute="width" constant="40" id="iAW-nw-CQl"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speaker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzM-Hy-Nxe">
-                                                        <rect key="frame" x="70" y="15" width="63" height="21"/>
+                                                        <rect key="frame" x="60" y="15" width="63" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -146,13 +146,13 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="BpM-8a-gQL" secondAttribute="bottom" id="7Vx-qK-86e"/>
+                                                    <constraint firstAttribute="bottom" secondItem="BpM-8a-gQL" secondAttribute="bottom" constant="5" id="7Vx-qK-86e"/>
                                                     <constraint firstAttribute="height" constant="50" id="OZJ-v3-22J"/>
                                                     <constraint firstItem="kzM-Hy-Nxe" firstAttribute="centerY" secondItem="BpM-8a-gQL" secondAttribute="centerY" id="PTf-dS-QEK"/>
                                                     <constraint firstAttribute="trailing" secondItem="p5P-NC-Ey5" secondAttribute="trailing" constant="15" id="Rgn-Tn-xHX"/>
                                                     <constraint firstItem="p5P-NC-Ey5" firstAttribute="top" secondItem="ofa-Dv-Jho" secondAttribute="top" constant="10" id="doK-uc-1sG"/>
                                                     <constraint firstItem="kzM-Hy-Nxe" firstAttribute="leading" secondItem="BpM-8a-gQL" secondAttribute="trailing" constant="5" id="g2T-dM-3cu"/>
-                                                    <constraint firstItem="BpM-8a-gQL" firstAttribute="top" secondItem="ofa-Dv-Jho" secondAttribute="top" id="n18-8U-Nhq"/>
+                                                    <constraint firstItem="BpM-8a-gQL" firstAttribute="top" secondItem="ofa-Dv-Jho" secondAttribute="top" constant="5" id="n18-8U-Nhq"/>
                                                     <constraint firstAttribute="bottom" secondItem="p5P-NC-Ey5" secondAttribute="bottom" constant="10" id="nbh-bn-lda"/>
                                                     <constraint firstItem="BpM-8a-gQL" firstAttribute="leading" secondItem="ofa-Dv-Jho" secondAttribute="leading" constant="15" id="xFn-8P-I39"/>
                                                 </constraints>
@@ -386,8 +386,37 @@
                     <view key="view" contentMode="scaleToFill" id="TaP-Ke-BZo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQj-rh-fGf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CsT-dV-ZPq"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="Jw9-Gk-qxr">
+                                        <barButtonItem key="leftBarButtonItem" title="Close" id="sTT-Yh-3Cc"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pHh-SO-rPn">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iQj-rh-fGf" secondAttribute="trailing" id="2L3-XA-he5"/>
+                            <constraint firstItem="iQj-rh-fGf" firstAttribute="top" secondItem="TaP-Ke-BZo" secondAttribute="top" id="EsJ-Lm-cht"/>
+                            <constraint firstItem="Syu-fn-HAx" firstAttribute="top" secondItem="pHh-SO-rPn" secondAttribute="bottom" id="TsH-ZR-XoQ"/>
+                            <constraint firstItem="iQj-rh-fGf" firstAttribute="leading" secondItem="TaP-Ke-BZo" secondAttribute="leading" id="ZZq-DA-HV4"/>
+                            <constraint firstAttribute="trailing" secondItem="pHh-SO-rPn" secondAttribute="trailing" id="bGm-ai-Gyt"/>
+                            <constraint firstItem="pHh-SO-rPn" firstAttribute="leading" secondItem="TaP-Ke-BZo" secondAttribute="leading" id="qjE-vm-o0t"/>
+                            <constraint firstItem="pHh-SO-rPn" firstAttribute="top" secondItem="iQj-rh-fGf" secondAttribute="bottom" id="tqp-cT-j7c"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webContentView" destination="pHh-SO-rPn" id="Xa1-X5-hR7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a34-wH-AFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -397,5 +426,6 @@
     <resources>
         <image name="Clock" width="36" height="36"/>
         <image name="Pin" width="36" height="36"/>
+        <image name="Speaker" width="36" height="36"/>
     </resources>
 </document>

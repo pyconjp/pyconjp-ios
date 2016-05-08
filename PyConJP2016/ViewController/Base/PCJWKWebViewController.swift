@@ -11,6 +11,8 @@ import WebKit
 
 class PCJWKWebViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
+    @IBOutlet weak var webContentView: UIView!
+    
     var url: String = ""
     
     override func viewDidLoad() {
@@ -20,15 +22,16 @@ class PCJWKWebViewController: UIViewController, WKNavigationDelegate, WKUIDelega
         webView.translatesAutoresizingMaskIntoConstraints = false
         webView.navigationDelegate = self
         webView.allowsBackForwardNavigationGestures = true
-        view.addSubview(webView)
+        webContentView.addSubview(webView)
         
         let noLayoutFormatOptions = NSLayoutFormatOptions(rawValue: 0)
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[webView]|", options: noLayoutFormatOptions, metrics: nil, views: ["webView": webView]))
+        webContentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[webView]|", options: noLayoutFormatOptions, metrics: nil, views: ["webView": webView]))
         
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[webView]|", options: noLayoutFormatOptions, metrics: nil, views: ["webView": webView]))
+        webContentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[webView]|", options: noLayoutFormatOptions, metrics: nil, views: ["webView": webView]))
         
         let request = NSURLRequest(URL: NSURL(string: url)!)
         webView.loadRequest(request)
+        
         
     }
     
@@ -51,4 +54,5 @@ class PCJWKWebViewController: UIViewController, WKNavigationDelegate, WKUIDelega
         
         return nil
     }
+    
 }
