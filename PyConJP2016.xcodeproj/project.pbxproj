@@ -414,7 +414,6 @@
 				TargetAttributes = {
 					DBA1C0A81C7228E2004F0C8D = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 3T8B5JQDB8;
 					};
 					DBA1C0BC1C7228E2004F0C8D = {
 						CreatedOnToolsVersion = 7.2;
