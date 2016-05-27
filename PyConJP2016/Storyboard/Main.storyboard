@@ -160,8 +160,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLQ-X3-Cvv" userLabel="Supplement View">
                                                 <rect key="frame" x="0.0" y="222" width="600" height="35"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqe-EW-BxS">
-                                                        <rect key="frame" x="15" y="0.0" width="183.5" height="35"/>
+                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mqe-EW-BxS">
+                                                        <rect key="frame" x="15" y="0.0" width="184" height="35"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bua-7j-fWI">
                                                                 <rect key="frame" x="0.0" y="0.0" width="67" height="35"/>
@@ -186,8 +186,8 @@
                                                             <constraint firstItem="bua-7j-fWI" firstAttribute="leading" secondItem="mqe-EW-BxS" secondAttribute="leading" id="pcu-OP-fKQ"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qST-hg-5ge">
-                                                        <rect key="frame" x="208.5" y="0.0" width="183" height="35"/>
+                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qST-hg-5ge">
+                                                        <rect key="frame" x="209" y="0.0" width="183" height="35"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audience Level: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHk-Dp-GNG">
                                                                 <rect key="frame" x="0.0" y="0.0" width="99" height="35"/>
@@ -212,8 +212,8 @@
                                                             <constraint firstItem="TI7-iT-4zd" firstAttribute="leading" secondItem="aHk-Dp-GNG" secondAttribute="trailing" id="xeR-aM-olW"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jo0-Q4-gTy">
-                                                        <rect key="frame" x="401" y="0.0" width="183.5" height="35"/>
+                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jo0-Q4-gTy">
+                                                        <rect key="frame" x="401" y="0.0" width="184" height="35"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbg-wa-R1a">
                                                                 <rect key="frame" x="0.0" y="0.0" width="63" height="35"/>
@@ -388,18 +388,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQj-rh-fGf">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="CsT-dV-ZPq"/>
+                                    <constraint firstAttribute="height" constant="64" id="CsT-dV-ZPq"/>
                                 </constraints>
                                 <items>
                                     <navigationItem id="Jw9-Gk-qxr">
-                                        <barButtonItem key="leftBarButtonItem" title="Close" id="sTT-Yh-3Cc"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Close" id="sTT-Yh-3Cc">
+                                            <connections>
+                                                <action selector="onCleseButton:" destination="gmt-s7-TvW" id="DMZ-BD-Km8"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pHh-SO-rPn">
-                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>

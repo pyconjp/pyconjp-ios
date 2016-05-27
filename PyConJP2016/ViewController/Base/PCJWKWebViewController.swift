@@ -55,4 +55,8 @@ class PCJWKWebViewController: UIViewController, WKNavigationDelegate, WKUIDelega
         return nil
     }
     
+    @IBAction func onCleseButton(sender: UIBarButtonItem) {
+    	self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
