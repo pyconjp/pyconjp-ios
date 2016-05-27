@@ -28,9 +28,23 @@ class ScheduleListTableViewCell: UITableViewCell {
     
     func fillWith(talk: Talk) {
         titleLabel.text = talk.title
-        speakerLabel.text = talk.speaker?.name
+        if let speaker = talk.speaker {
+            speakerLabel.text = speaker.name
+        }
         timeLabel.text =  talk.periodTime
-        roomLabel.text = talk.place?.name
+        if let plase = talk.place {
+            roomLabel.text = plase.name
+            self.fillRoomColorWith(plase.id)
+        }
+    }
+    
+    private func fillRoomColorWith(id: Int) {
+        switch id {
+        case 201:
+            roomLabel.backgroundColor = .redColor()
+        default:
+            roomLabel.backgroundColor = .grayColor()
+        }
     }
     
     override func prepareForReuse() {
@@ -38,6 +52,7 @@ class ScheduleListTableViewCell: UITableViewCell {
 //        timeLabel.text = nil
 //        roomLabel.text = nil
 //        speakerLabel.text = nil
+//        self.fillRoomColorWith(0)
     }
     
 }
