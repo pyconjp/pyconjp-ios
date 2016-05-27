@@ -1,11 +1,39 @@
 ##PyCon JPのガイド用iOSアプリ
 
-ライブラリはCocoaPodsで管理されています
+ライブラリはCocoaPodsで管理しています   
 https://cocoapods.org
 
+CocoaPodsはBundlerで管理しています  
+http://bundler.io
+
+###Bundlerのインストール
+
 ```
-$ sudo gem install cocoapods
-$ pod install #Podfileがあるディレクトリで
+$ (sudo) gem install bundler
 ```
 
-`PyConJP2016.xcworkspace` を開き、実行してください
+###CocoaPodsのインストール
+
+```
+$ bundle install #Gemfileがあるディレクトリで
+```
+
+###CocoaPods管理のライブラリをインストール
+
+```
+$ bundle exec pod install  #Podfileがあるディレクトリで
+```
+
+###CocoaPods管理のライブラリをアップデート
+
+```
+$ bundle exec pod update #Podfileがあるディレクトリで
+```
+
+もしくは
+
+```
+$ ./cleanCocoapod.sh
+```
+
+`PyConJP2016.xcworkspace` を開く
