@@ -202,7 +202,6 @@
 				DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */,
 				DB1347DD1CCB092000CA0539 /* TalkAPIType.swift */,
 				DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */,
-				DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -335,6 +334,7 @@
 		DBF32BB31CD48C4C004E7F3B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */,
 				DBF32BB41CD48C4C004E7F3B /* AppDelegate+OpenViewController.swift */,
 			);
 			path = Extension;
