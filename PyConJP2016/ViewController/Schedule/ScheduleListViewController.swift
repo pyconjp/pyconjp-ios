@@ -31,7 +31,7 @@ class ScheduleListViewController: UIViewController, UITableViewDataSource, UITab
         
         weak var weakSelf = self
         
-        getTalksWithParameter(["day": viewControllerIndex], successClosure: { _ in
+        getTalksWithParameter("", parameter: ["day": viewControllerIndex], successClosure: { _ in
             dispatch_async(dispatch_get_main_queue(), { 
                 weakSelf!.tableView.reloadData()
             })

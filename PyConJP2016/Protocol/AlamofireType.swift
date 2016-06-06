@@ -10,13 +10,13 @@ import UIKit
 import Alamofire
 
 protocol AlamofireType {
-    func getWithParameter(parameter: [String : AnyObject], successClosure success: (NSDictionary) -> Void, failClosure fail: (NSError) -> Void) -> Void
+    func getWithParameter(url: String, parameter: [String : AnyObject], successClosure success: (NSDictionary) -> Void, failClosure fail: (NSError) -> Void) -> Void
 //    func postWithParameter(parameter: [String : AnyObject], successClosure success: () -> Void, failClosure fail: (NSError) -> Void) -> Void
 }
 
 extension AlamofireType {
-    func getWithParameter(parameter: [String : AnyObject], successClosure success: (NSDictionary) -> Void, failClosure fail: (NSError) -> Void) -> Void {
-        Alamofire.request(.GET, "", parameters: parameter).responseJSON { response in
+    func getWithParameter(url: String, parameter: [String : AnyObject], successClosure success: (NSDictionary) -> Void, failClosure fail: (NSError) -> Void) -> Void {
+        Alamofire.request(.GET, url, parameters: parameter).responseJSON { response in
             switch response.result {
             case .Success:
                 if let responseDicsionary = response.result.value as? NSDictionary {
