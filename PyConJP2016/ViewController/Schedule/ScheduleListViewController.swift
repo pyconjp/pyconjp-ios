@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ScheduleListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TalkAPIType, ErrorAlertType {
+class ScheduleListViewController: UIViewController, UITableViewDelegate, TalkAPIType, ErrorAlertType {
     
     @IBOutlet weak var tableView: UITableView!
     
     var viewControllerIndex: Int = 0
     var date: String = ""
+    
+    let scheduleListDataSource = ScheduleListDataSource()
     
     let reuseIdentifier = "ScheduleListTableViewCell"
     
@@ -23,54 +25,36 @@ class ScheduleListViewController: UIViewController, UITableViewDataSource, UITab
         let nib  = UINib(nibName: "ScheduleListTableViewCell", bundle:nil)
         tableView.registerNib(nib, forCellReuseIdentifier:reuseIdentifier)
         
+        tableView.dataSource = scheduleListDataSource
+//        tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        weak var weakSelf = self
-        
-        getTalksWithParameter("", parameter: ["day": viewControllerIndex], successClosure: { _ in
-            dispatch_async(dispatch_get_main_queue(), { 
-                weakSelf!.tableView.reloadData()
-            })
-            }) { error in
-//                let alert = UIAlertController(title: "hogehoge", message: "fugafuga", preferredStyle: .Alert)
-//                alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-//                weakSelf?.presentViewController(alert, animated: true, completion: nil)
-                self.showErrorAlartWith(error, parent: weakSelf!);
-        }
-        
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
+        getTalksWithParameter("", parameter: ["day": viewControllerIndex], successClosure: { [weak self](talks) in
+            guard let weakSelf = self else { return }
+            weakSelf.scheduleListDataSource.talks = talks
+            dispatch_async(dispatch_get_main_queue(), {
+                weakSelf.tableView.reloadData()
+            })
+        }) { [weak self](error) in
+            guard let weakSelf = self else { return }
+//            let alert = UIAlertController(title: "hogehoge", message: "fugafuga", preferredStyle: .Alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+//            weakSelf?.presentViewController(alert, animated: true, completion: nil)
+            weakSelf.showErrorAlartWith(error, parent: weakSelf);
+        }
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
-    }
-    
-    // MARK: - Table View Controller Data Source
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 4
-    }
-    
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "10:00~"
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as? ScheduleListTableViewCell else {
-            fatalError("Could not create ScheduleListTableViewCell")
-        }
-        return cell
     }
     
     // MARK: - Table View Controller Delegate
