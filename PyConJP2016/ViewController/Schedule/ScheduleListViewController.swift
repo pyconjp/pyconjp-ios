@@ -43,9 +43,6 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalkAPI
             })
         }) { [weak self](error) in
             guard let weakSelf = self else { return }
-//            let alert = UIAlertController(title: "hogehoge", message: "fugafuga", preferredStyle: .Alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-//            weakSelf?.presentViewController(alert, animated: true, completion: nil)
             weakSelf.showErrorAlartWith(error, parent: weakSelf);
         }
         
