@@ -16,6 +16,7 @@
 		7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A71C8D4CF3004EAC0E /* ScheduleListViewController.swift */; };
 		7FA9228A1CD0B7910057136D /* Dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FA922891CD0B7910057136D /* Dummy.json */; };
 		7FA9228C1CD0BD8F0057136D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9228B1CD0BD8F0057136D /* Category.swift */; };
+		7FC773BF1D126A1600F5A202 /* ScheduleListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC773BE1D126A1600F5A202 /* ScheduleListDataSource.swift */; };
 		7FE830F71C97FA390076C079 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE830F61C97FA390076C079 /* LocalNotificationManager.swift */; };
 		7FE830FC1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE830FB1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift */; };
 		7FF4B0F11C990383001438C6 /* TalkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF4B0F01C990383001438C6 /* TalkService.swift */; };
@@ -79,6 +80,7 @@
 		7F82F6A71C8D4CF3004EAC0E /* ScheduleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListViewController.swift; sourceTree = "<group>"; };
 		7FA922891CD0B7910057136D /* Dummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Dummy.json; sourceTree = "<group>"; };
 		7FA9228B1CD0BD8F0057136D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		7FC773BE1D126A1600F5A202 /* ScheduleListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListDataSource.swift; sourceTree = "<group>"; };
 		7FE830F61C97FA390076C079 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		7FE830FB1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveLocalNotificationService.swift; sourceTree = "<group>"; };
 		7FF4B0F01C990383001438C6 /* TalkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkService.swift; sourceTree = "<group>"; };
@@ -170,6 +172,22 @@
 			path = Schedule;
 			sourceTree = "<group>";
 		};
+		7FC773BC1D126A1600F5A202 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				7FC773BD1D126A1600F5A202 /* Schedule */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		7FC773BD1D126A1600F5A202 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				7FC773BE1D126A1600F5A202 /* ScheduleListDataSource.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
 		7FE830F51C97FA210076C079 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				7FA922891CD0B7910057136D /* Dummy.json */,
+				7FC773BC1D126A1600F5A202 /* DataSource */,
 				DBA1C0DA1C722E77004F0C8D /* Model */,
 				DBF32BB31CD48C4C004E7F3B /* Extension */,
 				DB1347DA1CC7DECF00CA0539 /* Protocol */,
@@ -589,6 +608,7 @@
 				7F6331A11C912EB400B5CB00 /* SponsorCollectionViewCell.swift in Sources */,
 				7FFB73331C914FB4006FB375 /* SponsorListViewController.swift in Sources */,
 				7F201B861CCDD8C200235412 /* AboutViewController.swift in Sources */,
+				7FC773BF1D126A1600F5A202 /* ScheduleListDataSource.swift in Sources */,
 				DBEBDB481C8C89FC002B25B3 /* MoreViewController.swift in Sources */,
 				DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */,
 				7FFB733E1C915B6E006FB375 /* MapViewController.swift in Sources */,
