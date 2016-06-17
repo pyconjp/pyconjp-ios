@@ -2,7 +2,7 @@
 //  ScheduleListDataSource.swift
 //  PyConJP2016
 //
-//  Created by 牟田　裕太郎 on 2016/06/13.
+//  Created by Yutaro Muta on 2016/06/13.
 //  Copyright © 2016年 Yutaro Muta. All rights reserved.
 //
 

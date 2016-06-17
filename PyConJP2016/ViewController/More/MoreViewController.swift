@@ -8,14 +8,16 @@
 
 import UIKit
 
-class MoreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MoreViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let moreDataSource = MoreDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        tableView.dataSource = moreDataSource
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -30,35 +32,7 @@ class MoreViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.didReceiveMemoryWarning()
     }
     
-    //mark UITableViewDelegate
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
-    }
-        
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0, 1, 2:
-            return 1
-        default:
-            return 0
-        }
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        switch indexPath.section {
-        case 0:
-            cell.textLabel?.text = "About"
-        case 1 where indexPath.row == 0:
-            cell.textLabel?.text = "Access"
-        case 2:
-            cell.textLabel?.text = "Repository"
-        default:
-            break
-        }
-        return cell
-    }
+    // MARK: - Table View Controller Delegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.section {

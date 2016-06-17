@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F201B861CCDD8C200235412 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F201B851CCDD8C200235412 /* AboutViewController.swift */; };
 		7F6331A11C912EB400B5CB00 /* SponsorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6331A01C912EB400B5CB00 /* SponsorCollectionViewCell.swift */; };
+		7F7B50951D138E66000AC1B3 /* MoreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7B50941D138E66000AC1B3 /* MoreDataSource.swift */; };
 		7F82F6A01C8D4B62004EAC0E /* SchedulePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F69F1C8D4B62004EAC0E /* SchedulePageViewController.swift */; };
 		7F82F6A21C8D4B9A004EAC0E /* ScheduleModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A11C8D4B9A004EAC0E /* ScheduleModelController.swift */; };
 		7F82F6A41C8D4BF9004EAC0E /* ScheduleDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */; };
@@ -73,6 +74,7 @@
 		7B4525E7CD6B481FCC38979C /* Pods-PyConJP2016.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016.release.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016/Pods-PyConJP2016.release.xcconfig"; sourceTree = "<group>"; };
 		7F201B851CCDD8C200235412 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		7F6331A01C912EB400B5CB00 /* SponsorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorCollectionViewCell.swift; sourceTree = "<group>"; };
+		7F7B50941D138E66000AC1B3 /* MoreDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreDataSource.swift; sourceTree = "<group>"; };
 		7F82F69F1C8D4B62004EAC0E /* SchedulePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulePageViewController.swift; sourceTree = "<group>"; };
 		7F82F6A11C8D4B9A004EAC0E /* ScheduleModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleModelController.swift; sourceTree = "<group>"; };
 		7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDateViewController.swift; sourceTree = "<group>"; };
@@ -172,9 +174,18 @@
 			path = Schedule;
 			sourceTree = "<group>";
 		};
+		7F7B50931D138E3B000AC1B3 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				7F7B50941D138E66000AC1B3 /* MoreDataSource.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
 		7FC773BC1D126A1600F5A202 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				7F7B50931D138E3B000AC1B3 /* More */,
 				7FC773BD1D126A1600F5A202 /* Schedule */,
 			);
 			path = DataSource;
@@ -616,6 +627,7 @@
 				DB1579DE1C7A157C00A5F5BA /* Speaker.swift in Sources */,
 				7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */,
 				DBF32BB51CD48C4C004E7F3B /* AppDelegate+OpenViewController.swift in Sources */,
+				7F7B50951D138E66000AC1B3 /* MoreDataSource.swift in Sources */,
 				DBA1C0AD1C7228E2004F0C8D /* AppDelegate.swift in Sources */,
 				DBB2538B1CCB700400AA17C8 /* UIColorExtension.swift in Sources */,
 				7F82F6A21C8D4B9A004EAC0E /* ScheduleModelController.swift in Sources */,
