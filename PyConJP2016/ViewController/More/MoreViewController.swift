@@ -8,14 +8,16 @@
 
 import UIKit
 
-class MoreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MoreViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let moreDataSource = MoreDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        tableView.dataSource = moreDataSource
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -30,51 +32,21 @@ class MoreViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.didReceiveMemoryWarning()
     }
     
-    //mark UITableViewDelegate
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
-    }
-        
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 1
-        case 1:
-            return 2
-        default:
-            return 0
-        }
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
-        switch indexPath.section {
-        case 0:
-            cell?.textLabel?.text = "About"
-        case 1 where indexPath.row == 0:
-            cell?.textLabel?.text = "Access"
-        case 1 where indexPath.row == 1:
-            cell?.textLabel?.text = "Sponsors"
-        default:
-            break
-        }
-        return cell!
-    }
+    // MARK: - Table View Controller Delegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         switch indexPath.section {
         case 0:
             let aboutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("AboutViewController")
             self.navigationController?.pushViewController(aboutViewController!, animated: true)
             break
-        case 1 where indexPath.row == 0:
+        case 1:
             let mapViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController
             self.navigationController?.pushViewController(mapViewController, animated: true)
-        case 1 where indexPath.row == 1:
-			let sponserListViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SponsorListViewController") as! SponsorListViewController
-            self.navigationController?.pushViewController(sponserListViewController, animated: true)
+        case 2:
+            let webViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("PCJWKWebViewController") as! PCJWKWebViewController
+            webViewController.url = "https://github.com/pyconjp/pyconjp-ios"
+            self.navigationController?.pushViewController(webViewController, animated: true)
         default:
             break
         }
