@@ -22,4 +22,10 @@ extension Level {
         name = dictionary["name"] as? String ?? ""
     }
     
+    init?(dictionary: [String : AnyObject]?) {
+        guard let dictionary = dictionary else { return nil }
+        id = dictionary["id"] as? Int ?? 0
+        name = dictionary["name"] as? String ?? ""
+    }
+    
 }

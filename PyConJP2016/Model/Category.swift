@@ -13,9 +13,11 @@ struct Category {
     let id: Int
     let name: String
     
+}
+
+extension Category {
     init(dictionary: [String : AnyObject]) {
         id = dictionary["id"] as? Int ?? 0
         name = dictionary["name"] as? String ?? ""
     }
-    
 }
