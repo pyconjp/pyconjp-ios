@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SchedulePageViewController: UIPageViewController {
+class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol {
 
     var childrenViewControllers: Array<ScheduleListViewController> = []
     
@@ -41,26 +41,26 @@ class SchedulePageViewController: UIPageViewController {
     override func didMoveToParentViewController(parent: UIViewController?) {
         let scheduleBaseViewController = parent as! ScheduleBaseViewController
         self.delegate = scheduleBaseViewController
+        scheduleBaseViewController.schedulePageViewProtocol = self
         
-        scheduleBaseViewController.fowardPage = {(index: Int) -> Void in self.fowardPageWith(index)}
-        scheduleBaseViewController.reversePage = {(index: Int) -> Void in self.reversePageWith(index)}
-        
-        for subview in self.view.subviews {
-            if let scrollView = subview as? UIScrollView {
+        self.view.subviews.forEach {
+            if let scrollView = $0 as? UIScrollView {
                 scrollView.delegate = scheduleBaseViewController
             }
         }
     }
     
-    func fowardPageWith(index: Int) {
-        self.movePageWith(index, direction: .Forward)
+    // MARK: - SchedulePageViewProtocol
+    
+    func fowardPage(index: Int) {
+        self.movePage(index, direction: .Forward)
     }
     
-    func reversePageWith(index: Int) {
-        self.movePageWith(index, direction: .Reverse)
+    func reversePage(index: Int) {
+        self.movePage(index, direction: .Reverse)
     }
     
-    private func movePageWith(index: Int, direction: UIPageViewControllerNavigationDirection) {
+    private func movePage(index: Int, direction: UIPageViewControllerNavigationDirection) {
         let viewController: ScheduleListViewController = scheduleModelController.viewControllerAtIndex(index, storyboard: self.storyboard!)!
         let viewControllers = [viewController]
         self.setViewControllers(viewControllers, direction: direction, animated: true, completion: {done in})

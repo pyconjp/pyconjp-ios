@@ -13,11 +13,21 @@ class ScheduleBaseViewController: UIViewController, UIPageViewControllerDelegate
     @IBOutlet weak var barContainerView: UIView!
     @IBOutlet weak var pageContainerView: UIView!
     
-    dynamic var offsetToChange: CGFloat = 0.0
-    dynamic var displayIndex: Int = 0
+    var scheduleDateViewProtocol: ScheduleDateViewProtocol?
+    var schedulePageViewProtocol: SchedulePageViewProtocol?
     
-    dynamic var fowardPage: ((index: Int) -> Void)?
-    dynamic var reversePage: ((index: Int) -> Void)?
+    var offsetToChange: CGFloat = 0.0 {
+        didSet {
+            
+        }
+    }
+    var displayIndex: Int = 0 {
+        didSet {
+            if let scheduleDateViewProtocol = scheduleDateViewProtocol {
+            	scheduleDateViewProtocol.changeActive(displayIndex)
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,4 +70,13 @@ class ScheduleBaseViewController: UIViewController, UIPageViewControllerDelegate
         }
     }
 
+}
+
+protocol SchedulePageViewProtocol {
+    func fowardPage(index: Int)
+    func reversePage(index: Int)
+}
+
+protocol ScheduleDateViewProtocol {
+    func changeActive(index: Int)
 }
