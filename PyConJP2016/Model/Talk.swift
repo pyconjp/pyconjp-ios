@@ -54,15 +54,12 @@ extension Talk {
                   title: dictionary["title"] as? String ?? "",
                   descriptions: dictionary["description"] as? String ?? "",
                   abstract: dictionary["abstract"] as? String ?? "",
-                  speaker: dictionary["speaker"] as? [String: AnyObject] != nil ? Speaker(dictionary: dictionary["speaker"] as! [String: AnyObject]) : nil,
-//                  speaker: Speaker(dictionary: dictionary["speaker"] as? [String: AnyObject] ?? [:]),
+                  speaker: Speaker(dictionary: dictionary["speaker"] as? [String: AnyObject]),
                   startTime: dictionary["start_time"] as! NSDate,
                   endTime: dictionary["end_time"] as! NSDate,
                   periodTime: Talk.timeToString(dictionary["start_time"] as! NSDate) + "~" + Talk.timeToString(dictionary["end_time"] as! NSDate),
-                  level: dictionary["level"] as? [String : AnyObject] != nil ? Level(dictionary: dictionary["level"] as! [String : AnyObject]) : nil,
-//                  level: Level(dictionary: dictionary["level"] as? [String : AnyObject] ?? [:]),
-                  place: dictionary["place"] as? [String : AnyObject] != nil ? Place(dictionary: dictionary["place"] as! [String : AnyObject]) : nil,
-//                  place: Place(dictionary: dictionary["place"] as? [String : AnyObject] ?? [:]),
+                  level: Level(dictionary: dictionary["level"] as? [String: AnyObject]),
+                  place: Place(dictionary: dictionary["place"] as? [String: AnyObject]),
                   language: dictionary["language"] as? String ?? "")
     }
     
