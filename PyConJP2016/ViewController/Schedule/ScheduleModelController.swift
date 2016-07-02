@@ -19,7 +19,7 @@ class ScheduleModelController: NSObject, UIPageViewControllerDataSource {
     func viewControllerAtIndex(index: Int, storyboard: UIStoryboard) -> ScheduleListViewController? {
         
         if (self.dates.count == 0) || (index >= self.dates.count) {
-            return nil;
+            return nil
         }
         
         let scheduleListViewController = storyboard.instantiateViewControllerWithIdentifier("ScheduleListViewController") as! ScheduleListViewController
@@ -53,7 +53,7 @@ class ScheduleModelController: NSObject, UIPageViewControllerDataSource {
         
         index += 1
         if index == self.dates.count {
-            return nil;
+            return nil
         }
         
         return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)

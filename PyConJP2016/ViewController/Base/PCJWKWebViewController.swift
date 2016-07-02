@@ -18,7 +18,7 @@ class PCJWKWebViewController: UIViewController, WKNavigationDelegate, WKUIDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let webView = WKWebView(frame: CGRectZero, configuration: WKWebViewConfiguration())
+        let webView = WKWebView(frame: .zero, configuration: WKWebViewConfiguration())
         webView.translatesAutoresizingMaskIntoConstraints = false
         webView.navigationDelegate = self
         webView.allowsBackForwardNavigationGestures = true

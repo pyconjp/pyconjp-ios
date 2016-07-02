@@ -10,7 +10,7 @@ import UIKit
 
 class ReceiveLocalNotificationService: NSObject {
     
-    func application(application: UIApplication, didReceiveLocalNotification userInfo :[NSObject : AnyObject]) {
+    func application(application: UIApplication, didReceiveLocalNotification userInfo: [NSObject : AnyObject]) {
         switch userInfo["type"] as! String {
         case "Talk" where application.applicationState == .Active:
             let alertController = UIAlertController(title: "", message: "", preferredStyle: .Alert)

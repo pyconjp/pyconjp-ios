@@ -27,7 +27,7 @@ class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol
     
     var _scheduleModelController: ScheduleModelController? = nil
     
-    var scheduleModelController: ScheduleModelController{
+    var scheduleModelController: ScheduleModelController {
         if _scheduleModelController == nil {
             _scheduleModelController = ScheduleModelController()
         }
