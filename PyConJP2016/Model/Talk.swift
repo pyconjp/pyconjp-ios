@@ -63,9 +63,9 @@ extension Talk {
                   language: dictionary["language"] as? String ?? "")
     }
     
-    static func timeToString(date: NSDate)-> String {
+    static func timeToString(date: NSDate) -> String {
         let calender = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
-        let components = calender?.components([.Year, .Month, .Day,.Weekday, .Hour, .Minute], fromDate: date)
+        let components = calender?.components([.Year, .Month, .Day, .Weekday, .Hour, .Minute], fromDate: date)
         return "\(components?.hour):\(components?.minute)"
     }
 }

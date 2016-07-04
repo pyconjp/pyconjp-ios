@@ -40,7 +40,7 @@ class TalkDetailViewController: UIViewController {
 
     @IBAction func swithNotification(sender: UISwitch) {
         if let talk = talk {
-            if (talk.isSetNotification) {
+            if talk.isSetNotification {
                 _localNotificationManager.makeNotification(talk)
             } else {
                 _localNotificationManager.cancelSchedule(talk)

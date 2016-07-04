@@ -20,7 +20,7 @@ extension TalkAPIType {
                 fatalError()
             }
             
-            if (result) {
+            if result {
                 var array = [Talk]()
                 for talkDictionary in data {
                     let talk = Talk(dictionary: talkDictionary as! [String : AnyObject])

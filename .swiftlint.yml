@@ -1,0 +1,29 @@
+disabled_rules:
+# FourceCastを許可
+- force_cast
+# ネストの許可
+#- nesting
+# コードの記載のない改行を許可
+- trailing_whitespace
+# パラメータ個数条件を解除
+- function_parameter_count
+# 変数名の条件を解除
+- variable_name
+
+# 追加したOSSライブラリを対象としない
+excluded:
+- Pods/
+- Podfile
+- Podfile.lock
+
+# 1行あたりの文字数制限を300に変更
+line_length: 300
+
+# 変数名の長さのMAXとMINを変更
+#variable_name:
+#  max_length:
+#    warning: 60
+#    error: 80
+#  min_length:
+#    warning: 1
+#    error: 0
