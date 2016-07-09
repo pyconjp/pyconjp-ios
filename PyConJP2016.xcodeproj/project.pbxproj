@@ -377,12 +377,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBA1C0D11C7228E2004F0C8D /* Build configuration list for PBXNativeTarget "PyConJP2016" */;
 			buildPhases = (
-				14DE1E801E45FA778A833CFE /* Check Pods Manifest.lock */,
+				14DE1E801E45FA778A833CFE /* [CP] Check Pods Manifest.lock */,
 				DBA1C0A51C7228E2004F0C8D /* Sources */,
 				DBA1C0A61C7228E2004F0C8D /* Frameworks */,
 				DBA1C0A71C7228E2004F0C8D /* Resources */,
-				A0EC586907CE24167572B517 /* Embed Pods Frameworks */,
-				44305B3CEB4EA4C3DBAA7BE1 /* Copy Pods Resources */,
+				A0EC586907CE24167572B517 /* [CP] Embed Pods Frameworks */,
+				44305B3CEB4EA4C3DBAA7BE1 /* [CP] Copy Pods Resources */,
 				DBEE75F11D27A53E008A9D47 /* ShellScript */,
 			);
 			buildRules = (
@@ -398,12 +398,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBA1C0D41C7228E2004F0C8D /* Build configuration list for PBXNativeTarget "PyConJP2016Tests" */;
 			buildPhases = (
-				271C41C67B6C95998E85D776 /* Check Pods Manifest.lock */,
+				271C41C67B6C95998E85D776 /* [CP] Check Pods Manifest.lock */,
 				DBA1C0B91C7228E2004F0C8D /* Sources */,
 				DBA1C0BA1C7228E2004F0C8D /* Frameworks */,
 				DBA1C0BB1C7228E2004F0C8D /* Resources */,
-				6A5B2BBA62F961A03AE1D9A7 /* Embed Pods Frameworks */,
-				270A71A7107320E64310FE10 /* Copy Pods Resources */,
+				6A5B2BBA62F961A03AE1D9A7 /* [CP] Embed Pods Frameworks */,
+				270A71A7107320E64310FE10 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -510,14 +510,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		14DE1E801E45FA778A833CFE /* Check Pods Manifest.lock */ = {
+		14DE1E801E45FA778A833CFE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,14 +525,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		270A71A7107320E64310FE10 /* Copy Pods Resources */ = {
+		270A71A7107320E64310FE10 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,14 +540,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PyConJP2016Tests/Pods-PyConJP2016Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		271C41C67B6C95998E85D776 /* Check Pods Manifest.lock */ = {
+		271C41C67B6C95998E85D776 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,14 +555,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		44305B3CEB4EA4C3DBAA7BE1 /* Copy Pods Resources */ = {
+		44305B3CEB4EA4C3DBAA7BE1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,14 +570,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PyConJP2016/Pods-PyConJP2016-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6A5B2BBA62F961A03AE1D9A7 /* Embed Pods Frameworks */ = {
+		6A5B2BBA62F961A03AE1D9A7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,14 +585,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PyConJP2016Tests/Pods-PyConJP2016Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A0EC586907CE24167572B517 /* Embed Pods Frameworks */ = {
+		A0EC586907CE24167572B517 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

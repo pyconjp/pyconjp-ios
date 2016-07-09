@@ -22,6 +22,9 @@ DerivedData
 PyConJP2016.xcodeproj/xcuserdata
 PyConJP2016.xcworkspace/xcuserdata
 
+#Bundler
+Gemfile.lock
+
 ##cocoaPods
 Pods/*
 Podfile.lock

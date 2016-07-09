@@ -3,7 +3,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 def install_pods 
- pod 'Alamofire', '~> 3.3'
+ pod 'Alamofire', '~> 3.4'
 end
 
 target "PyConJP2016" do

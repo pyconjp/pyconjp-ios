@@ -1,3 +1,3 @@
 rm -rf Pods
 rm Podfile.lock
-pod install
+bundle exec pod install
