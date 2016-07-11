@@ -31,7 +31,7 @@
 		DB1347DC1CC7DEDF00CA0539 /* AlamofireType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */; };
 		DB1347DE1CCB092000CA0539 /* TalkAPIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DD1CCB092000CA0539 /* TalkAPIType.swift */; };
 		DB1347E01CCB27D900CA0539 /* ErrorAlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */; };
-		DB1579D81C7A10B800A5F5BA /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1579D71C7A10B800A5F5BA /* Talk.swift */; };
+		DB1579D81C7A10B800A5F5BA /* TalkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1579D71C7A10B800A5F5BA /* TalkDetail.swift */; };
 		DB1579DA1C7A13C400A5F5BA /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1579D91C7A13C400A5F5BA /* Place.swift */; };
 		DB1579DC1C7A154B00A5F5BA /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1579DB1C7A154B00A5F5BA /* Level.swift */; };
 		DB1579DE1C7A157C00A5F5BA /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1579DD1C7A157C00A5F5BA /* Speaker.swift */; };
@@ -49,6 +49,8 @@
 		DBEBDB481C8C89FC002B25B3 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */; };
 		DBF32BB51CD48C4C004E7F3B /* AppDelegate+OpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF32BB41CD48C4C004E7F3B /* AppDelegate+OpenViewController.swift */; };
 		DBF4A7491C7F649A00AB8BE4 /* PCJWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF4A7481C7F649A00AB8BE4 /* PCJWKWebViewController.swift */; };
+		DBFB28341D33B02A00EFBC24 /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFB28331D33B02A00EFBC24 /* Talk.swift */; };
+		DBFB28361D33B8C000EFBC24 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFB28351D33B8C000EFBC24 /* Language.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +98,7 @@
 		DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireType.swift; sourceTree = "<group>"; };
 		DB1347DD1CCB092000CA0539 /* TalkAPIType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkAPIType.swift; sourceTree = "<group>"; };
 		DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlertType.swift; sourceTree = "<group>"; };
-		DB1579D71C7A10B800A5F5BA /* Talk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
+		DB1579D71C7A10B800A5F5BA /* TalkDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkDetail.swift; sourceTree = "<group>"; };
 		DB1579D91C7A13C400A5F5BA /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		DB1579DB1C7A154B00A5F5BA /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		DB1579DD1C7A157C00A5F5BA /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
@@ -120,6 +122,8 @@
 		DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		DBF32BB41CD48C4C004E7F3B /* AppDelegate+OpenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+OpenViewController.swift"; sourceTree = "<group>"; };
 		DBF4A7481C7F649A00AB8BE4 /* PCJWKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJWKWebViewController.swift; sourceTree = "<group>"; };
+		DBFB28331D33B02A00EFBC24 /* Talk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
+		DBFB28351D33B8C000EFBC24 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		E2EB42880CF0B0E1ABE59123 /* Pods-PyConJP2016Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016Tests/Pods-PyConJP2016Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -297,11 +301,13 @@
 		DBA1C0DA1C722E77004F0C8D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DB1579D71C7A10B800A5F5BA /* Talk.swift */,
+				DBFB28331D33B02A00EFBC24 /* Talk.swift */,
+				DB1579D71C7A10B800A5F5BA /* TalkDetail.swift */,
 				DB1579D91C7A13C400A5F5BA /* Place.swift */,
 				DB1579DB1C7A154B00A5F5BA /* Level.swift */,
 				DB1579DD1C7A157C00A5F5BA /* Speaker.swift */,
 				7FA9228B1CD0BD8F0057136D /* Category.swift */,
+				DBFB28351D33B8C000EFBC24 /* Language.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -633,12 +639,14 @@
 				7F6331A11C912EB400B5CB00 /* SponsorCollectionViewCell.swift in Sources */,
 				7FFB73331C914FB4006FB375 /* SponsorListViewController.swift in Sources */,
 				7F201B861CCDD8C200235412 /* AboutViewController.swift in Sources */,
+				DBFB28361D33B8C000EFBC24 /* Language.swift in Sources */,
 				7FC773BF1D126A1600F5A202 /* ScheduleListDataSource.swift in Sources */,
 				DBEBDB481C8C89FC002B25B3 /* MoreViewController.swift in Sources */,
 				DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */,
 				7FFB733E1C915B6E006FB375 /* MapViewController.swift in Sources */,
 				7FF4B0F11C990383001438C6 /* TalkService.swift in Sources */,
 				DB1579DE1C7A157C00A5F5BA /* Speaker.swift in Sources */,
+				DBFB28341D33B02A00EFBC24 /* Talk.swift in Sources */,
 				7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */,
 				DBF32BB51CD48C4C004E7F3B /* AppDelegate+OpenViewController.swift in Sources */,
 				7F7B50951D138E66000AC1B3 /* MoreDataSource.swift in Sources */,
@@ -648,7 +656,7 @@
 				DB1347E01CCB27D900CA0539 /* ErrorAlertType.swift in Sources */,
 				7F82F6A61C8D4C3D004EAC0E /* ScheduleBaseViewController.swift in Sources */,
 				DB1579DA1C7A13C400A5F5BA /* Place.swift in Sources */,
-				DB1579D81C7A10B800A5F5BA /* Talk.swift in Sources */,
+				DB1579D81C7A10B800A5F5BA /* TalkDetail.swift in Sources */,
 				7FA9228C1CD0BD8F0057136D /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

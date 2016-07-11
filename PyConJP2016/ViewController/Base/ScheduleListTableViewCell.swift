@@ -28,14 +28,14 @@ class ScheduleListTableViewCell: UITableViewCell {
     
     func fillWith(talk: Talk) {
         titleLabel.text = talk.title
-        if let speaker = talk.speaker {
-            speakerLabel.text = speaker.name
-        }
-        timeLabel.text =  talk.periodTime
-        if let plase = talk.place {
-            roomLabel.text = plase.name
-            self.fillRoomColorWith(plase.id)
-        }
+//        if let speaker = talk.speaker {
+//            speakerLabel.text = speaker.name
+//        }
+//        timeLabel.text =  talk.periodTime
+//        if let plase = talk.place {
+//            roomLabel.text = plase.name
+//            self.fillRoomColorWith(plase.id)
+//        }
     }
     
     private func fillRoomColorWith(id: Int) {

@@ -10,7 +10,7 @@ import UIKit
 
 class TalkDetailViewController: UIViewController {
     
-    var talk: Talk?
+    var talkDetail: TalkDetail?
     private let _localNotificationManager = LocalNotificationManager()
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -39,19 +39,19 @@ class TalkDetailViewController: UIViewController {
     }
 
     @IBAction func swithNotification(sender: UISwitch) {
-        if let talk = talk {
-            if talk.isSetNotification {
-                _localNotificationManager.makeNotification(talk)
+        if let talkDetail = talkDetail {
+            if talkDetail.isSetNotification {
+                _localNotificationManager.makeNotification(talkDetail)
             } else {
-                _localNotificationManager.cancelSchedule(talk)
+                _localNotificationManager.cancelSchedule(talkDetail)
             }
         }
     }
     @IBAction func onHashTagButton(sender: UIButton) {
 
         var hashTag = "pyconjp"
-        if let talk = talk, room = talk.place?.name {
-                hashTag.appendContentsOf(room)
+        if let talkDetail = talkDetail {
+            hashTag.appendContentsOf(talkDetail.place )
         }
         
         if UIApplication.sharedApplication().canOpenURL(NSURL(string: "twitter://")!) {

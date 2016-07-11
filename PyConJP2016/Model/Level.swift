@@ -1,5 +1,5 @@
 //
-//  LevelModel.swift
+//  Level.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/02/22.

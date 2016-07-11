@@ -9,28 +9,21 @@
 import UIKit
 
 protocol TalkAPIType: AlamofireType {
-//    var talks: [Talk] { get set }
-//    func getTalksWithParameter(parameter: [String : AnyObject], successClosure success: (NSDictionary) -> Void, failClosure fail: (NSError) -> Void) -> Void
+    //    func getTalks(parameter: Dictionary<String, AnyObject>?, successClosure success: (NSDictionary) -> Void, failClosure fail: (NSError) -> Void) -> Void
 }
 
 extension TalkAPIType {
-  func getTalksWithParameter(url: String, parameter: [String : AnyObject], successClosure success: ([Talk]) -> Void, failClosure fail: (NSError) -> Void) {
-      getWithParameter(url, parameter: parameter, successClosure: { dictionary in
-            guard let result = dictionary["result"]?.boolValue, data = dictionary["data"] as? [NSDictionary] else {
+    func getTalks(url: String, parameter: Dictionary<String, AnyObject>?, successClosure success: ([Talk]) -> Void, failClosure fail: (NSError) -> Void) {
+        get(url, parameter: parameter, successClosure: { dictionary in
+            guard let presentations = dictionary["presentations"] as? Array<Dictionary<String, AnyObject>> else {
                 fatalError()
             }
             
-            if result {
-                var array = [Talk]()
-                for talkDictionary in data {
-                    let talk = Talk(dictionary: talkDictionary as! [String : AnyObject])
-                    array.append(talk)
-                }
-                
-                success(array)
-            } else {
-                
-            }
+            let talks = presentations.map({
+                Talk(dictionary: $0)
+            })
+            
+            success(talks)
             
             }, failClosure: { error in
                 

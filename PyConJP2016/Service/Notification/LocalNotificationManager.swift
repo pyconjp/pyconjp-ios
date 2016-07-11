@@ -10,42 +10,42 @@ import UIKit
 
 class LocalNotificationManager: NSObject {
     
-    func makeNotification(talk: Talk) -> Bool {
+    func makeNotification(talkDetail: TalkDetail) -> Bool {
         
         let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)
-        let fireDate = calendar?.dateByAddingUnit(.Minute, value: -10, toDate: talk.startTime, options: NSCalendarOptions())
+        let fireDate = calendar?.dateByAddingUnit(.Minute, value: -10, toDate: talkDetail.startTime, options: NSCalendarOptions())
         
         if fireDate!.timeIntervalSinceNow > 0 {
-            self.schedule(talk)
+            self.schedule(talkDetail)
             return true
         } else {
             return false
         }
     }
     
-    private func schedule(talk: Talk) {
+    private func schedule(talkDetail: TalkDetail) {
         
-        let placeName = talk.place?.name ?? ""
+//        let placeName = talk.place
         
         let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)
-        let fireDate =  calendar?.dateByAddingUnit(.Minute, value: -10, toDate: talk.startTime, options: NSCalendarOptions())
-        let userInfo = ["type" : "Talk", "id" : talk.id] as [NSObject : AnyObject]
+        let fireDate =  calendar?.dateByAddingUnit(.Minute, value: -10, toDate: talkDetail.startTime, options: NSCalendarOptions())
+        let userInfo = ["type" : "Talk", "id" : talkDetail.id] as [NSObject : AnyObject]
         
         let notificaiton = UILocalNotification()
         notificaiton.fireDate = fireDate
         notificaiton.timeZone = NSTimeZone.systemTimeZone()
-        notificaiton.alertBody = "10分後に \"" + talk.title + "\" が開始します。" + placeName
+        notificaiton.alertBody = "10分後に \"" + talkDetail.title + "\" が開始します。" + talkDetail.place
         notificaiton.userInfo = userInfo
         
         UIApplication.sharedApplication().scheduleLocalNotification(notificaiton)
         
     }
     
-    func cancelSchedule(talk: Talk) {
+    func cancelSchedule(talkDetail: TalkDetail) {
         if let localNotifications = UIApplication.sharedApplication().scheduledLocalNotifications {
            localNotifications.forEach({ (notification) -> () in
             if let userInfo = notification.userInfo {
-                if userInfo["id"] as! Int == talk.id {
+                if userInfo["id"] as! Int == talkDetail.id {
                     UIApplication.sharedApplication().cancelLocalNotification(notification)
                 }
             }

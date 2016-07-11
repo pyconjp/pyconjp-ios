@@ -16,7 +16,7 @@ extension AppDelegate {
     
     func openTalkDetailViewController() {
         let talkDetailViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
-        talkDetailViewController.talk = nil
+        talkDetailViewController.talkDetail = nil
         self.window?.rootViewController?.presentedViewController?.navigationController?.pushViewController(talkDetailViewController, animated: true)
     }
     
