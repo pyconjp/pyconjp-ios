@@ -37,7 +37,7 @@ extension Talk {
         self.periodTime = periodTime
         self.category = category
         self.place = place
-        self.language = Language.convert(language)
+        self.language = Language(rawValue: language) ?? .JA
     }
     
     init(dictionary: [String : AnyObject]) {

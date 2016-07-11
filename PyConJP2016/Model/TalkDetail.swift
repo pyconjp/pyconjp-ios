@@ -40,7 +40,7 @@ extension TalkDetail {
         self.category = category
         self.level = level
         self.place = place
-        self.language = Language.convert(language)
+        self.language = Language(rawValue: language) ?? .JA
         
         if let notifications = UIApplication.sharedApplication().scheduledLocalNotifications {
             notifications.forEach({ (notification) -> () in

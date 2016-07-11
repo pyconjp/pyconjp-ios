@@ -35,7 +35,7 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalkAPI
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
-        getTalks("https://pycon.jp/2016/ja/api/talks/list/", parameter: nil, successClosure: { [weak self](talks) in
+        getTalks("talks/list/", parameter: nil, successClosure: { [weak self](talks) in
             guard let weakSelf = self else { return }
             weakSelf.scheduleListDataSource.talks = talks
             dispatch_async(dispatch_get_main_queue(), {

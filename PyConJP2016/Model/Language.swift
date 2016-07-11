@@ -12,7 +12,12 @@ enum Language: String {
     case JA = "ja"
     case EN = "en"
     
-    static func convert(type: String) -> Language {
-        return Language(rawValue: type) ?? .EN
+    var lang: String {
+        switch self {
+        case .JA:
+            return "Japanese"
+        case .EN:
+            return "English"
+        }
     }
 }

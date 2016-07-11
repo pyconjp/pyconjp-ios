@@ -13,11 +13,9 @@ protocol TalkAPIType: AlamofireType {
 }
 
 extension TalkAPIType {
-    func getTalks(url: String, parameter: Dictionary<String, AnyObject>?, successClosure success: ([Talk]) -> Void, failClosure fail: (NSError) -> Void) {
-        get(url, parameter: parameter, successClosure: { dictionary in
-            guard let presentations = dictionary["presentations"] as? Array<Dictionary<String, AnyObject>> else {
-                fatalError()
-            }
+    func getTalks(path: String, parameter: Dictionary<String, AnyObject>?, successClosure success: ([Talk]) -> Void, failClosure fail: (NSError) -> Void) {
+        get(path, parameter: parameter, successClosure: { dictionary in
+            let presentations = dictionary["presentations"] as? Array<Dictionary<String, AnyObject>> ?? Array()
             
             let talks = presentations.map({
                 Talk(dictionary: $0)
