@@ -10,23 +10,34 @@ import UIKit
 import Alamofire
 
 protocol AlamofireType {
-    var host: String { get }
+    var alamofireManager: Alamofire.Manager { get }
+    var baseURL: String { get }
+    var authUser: String { get }
+    var authPassword: String { get }
     func get(path: String, parameter: Dictionary<String, AnyObject>?, successClosure success: (Dictionary<String, AnyObject>) -> Void, failClosure fail: (NSError) -> Void) -> Void
 //    func post(url: String, parameter: Dictionary<String, AnyObject>?, successClosure success: () -> Void, failClosure fail: (NSError) -> Void) -> Void
 }
 
 extension AlamofireType {
     
-    var host: String {
-//        #if STG
-            return ""
-//        #else
-//            return "https://pycon.jp/2016/ja/api/"
-//        #endif
+    var alamofireManager: Alamofire.Manager {
+        return Alamofire.Manager.sharedInstance
+    }
+    
+    var baseURL: String {
+        return NSProcessInfo.processInfo().environment["APIBaseURL"] ?? "https://pycon.jp/2016/ja/api/"
+    }
+    
+    var authUser: String {
+        return NSProcessInfo.processInfo().environment["APIAuthUser"] ?? ""
+    }
+    
+    var authPassword: String {
+        return NSProcessInfo.processInfo().environment["APIAuthPassword"] ?? ""
     }
     
     func get(path: String, parameter: Dictionary<String, AnyObject>?, successClosure success: (Dictionary<String, AnyObject>) -> Void, failClosure fail: (NSError) -> Void) -> Void {
-        let url = host + path
+        let url = baseURL + path
         let responseClosure = { (response: Response<AnyObject, NSError>) in
             switch response.result {
             case .Success:
@@ -37,34 +48,9 @@ extension AlamofireType {
                 fail(error)
             }
         }
-        #if STG
-            Alamofire.request(.GET, url).authenticate(user: "", password: "").responseJSON(completionHandler: responseClosure)
-        #else
-            Alamofire.request(.GET, url, parameters: parameter).responseJSON(completionHandler: responseClosure)
-        #endif
         
-//        #if STG
-//            Alamofire.request(.GET, url).authenticate(user: "", password: "").responseJSON { response in
-//                switch response.result {
-//                case .Success:
-//                    if let responseDicsionary = response.result.value as? Dictionary<String, AnyObject> {
-//                        success(responseDicsionary)
-//                    }
-//                case .Failure(let error):
-//                    fail(error)
-//                }
-//            }
-//        #else
-//        Alamofire.request(.GET, url, parameters: parameter).responseJSON { response in
-//            switch response.result {
-//            case .Success:
-//                if let responseDicsionary = response.result.value as? Dictionary<String, AnyObject> {
-//                    success(responseDicsionary)
-//                }
-//            case .Failure(let error):
-//                fail(error)
-//            }
-//        }
-//        #endif
+        alamofireManager.request(.GET, url).authenticate(user: authUser, password: authPassword).responseJSON(completionHandler: responseClosure)
+
     }
+    
 }
