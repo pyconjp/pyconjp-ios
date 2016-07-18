@@ -12,6 +12,7 @@ import Alamofire
 protocol AlamofireType {
     var alamofireManager: Alamofire.Manager { get }
     var baseURL: String { get }
+    var path: String { get }
     var authUser: String { get }
     var authPassword: String { get }
     func get(path: String, parameter: Dictionary<String, AnyObject>?, successClosure success: (Dictionary<String, AnyObject>) -> Void, failClosure fail: (NSError) -> Void) -> Void

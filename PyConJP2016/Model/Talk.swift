@@ -14,9 +14,10 @@ struct Talk {
     let title: String
     let description: String
     let speakers: [String]?
-    let days: String
-    let startTime: NSDate
-    let endTime: NSDate
+    let date: NSDate?
+    let day: String
+    let startTime: String
+    let endTime: String
     let periodTime: String
     let category: String
     let place: String
@@ -26,12 +27,13 @@ struct Talk {
 
 extension Talk {
     
-    init(id: Int, title: String, description: String, speakers: [String]?, day: String, startTime: NSDate, endTime: NSDate, periodTime: String, category: String, place: String, language: String) {
+    init(id: Int, title: String, description: String, speakers: [String]?, day: String, startTime: String, endTime: String, periodTime: String, category: String, place: String, language: String) {
         self.id = id
         self.title = title
         self.description = description
         self.speakers = speakers
-        self.days = day
+        self.date = NSDate.dateFromString(day + " " + startTime)
+        self.day = day
         self.startTime = startTime
         self.endTime = endTime
         self.periodTime = periodTime
@@ -46,17 +48,12 @@ extension Talk {
                   description: dictionary["description"] as? String ?? "",
                   speakers: dictionary["speakers"] as? [String],
                   day: dictionary["day"] as? String ?? "",
-                  startTime: dictionary["start"] as! NSDate,
-                  endTime: dictionary["end"] as! NSDate,
-                  periodTime: TalkDetail.timeToString(dictionary["start"] as! NSDate) + "~" + TalkDetail.timeToString(dictionary["end"] as! NSDate),
+                  startTime: dictionary["start"] as? String ?? "",
+                  endTime: dictionary["end"] as? String ?? "",
+                  periodTime: (dictionary["start"] as? String ?? "") + " ~ " + (dictionary["end"] as? String ?? ""),
                   category: dictionary["category"] as? String ?? "",
                   place: dictionary["rooms"] as? String ?? "",
                   language: dictionary["language"] as? String ?? "")
     }
     
-    static func timeToString(date: NSDate) -> String {
-        let calender = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
-        let components = calender?.components([.Year, .Month, .Day, .Weekday, .Hour, .Minute], fromDate: date)
-        return "\(components?.hour):\(components?.minute)"
-    }
 }

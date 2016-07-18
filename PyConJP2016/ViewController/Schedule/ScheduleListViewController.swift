@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScheduleListViewController: UIViewController, UITableViewDelegate, TalkAPIType, ErrorAlertType {
+class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAPIType, ErrorAlertType {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,6 +17,7 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalkAPI
     
     let scheduleListDataSource = ScheduleListDataSource()
     
+    // MARK: - TalksAPIType
     let reuseIdentifier = "ScheduleListTableViewCell"
     
     override func viewDidLoad() {
@@ -35,7 +36,7 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalkAPI
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
-        getTalks("talks/list/", parameter: nil, successClosure: { [weak self](talks) in
+        getTalks(nil, successClosure: { [weak self](talks) in
             guard let weakSelf = self else { return }
             weakSelf.scheduleListDataSource.talks = talks
             dispatch_async(dispatch_get_main_queue(), {
