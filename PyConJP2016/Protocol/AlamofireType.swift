@@ -15,7 +15,7 @@ protocol AlamofireType {
     var path: String { get }
     var authUser: String { get }
     var authPassword: String { get }
-    func get(path: String, parameter: Dictionary<String, AnyObject>?, successClosure success: (Dictionary<String, AnyObject>) -> Void, failClosure fail: (NSError) -> Void) -> Void
+    func get(parameter: Dictionary<String, AnyObject>?, successClosure success: (Dictionary<String, AnyObject>) -> Void, failClosure fail: (NSError) -> Void) -> Void
 //    func post(url: String, parameter: Dictionary<String, AnyObject>?, successClosure success: () -> Void, failClosure fail: (NSError) -> Void) -> Void
 }
 
@@ -37,7 +37,7 @@ extension AlamofireType {
         return NSProcessInfo.processInfo().environment["APIAuthPassword"] ?? ""
     }
     
-    func get(path: String, parameter: Dictionary<String, AnyObject>?, successClosure success: (Dictionary<String, AnyObject>) -> Void, failClosure fail: (NSError) -> Void) -> Void {
+    func get(parameter: Dictionary<String, AnyObject>?, successClosure success: (Dictionary<String, AnyObject>) -> Void, failClosure fail: (NSError) -> Void) -> Void {
         let url = baseURL + path
         let responseClosure = { (response: Response<AnyObject, NSError>) in
             switch response.result {
