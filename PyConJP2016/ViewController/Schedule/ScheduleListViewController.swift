@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAPIType, ErrorAlertType {
+class ScheduleListViewController: UIViewController, UITableViewDelegate, ErrorAlertType {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,18 +17,27 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
     
     let scheduleListDataSource = ScheduleListDataSource()
     
+    let refreshControl = UIRefreshControl()
+    
     // MARK: - TalksAPIType
     let reuseIdentifier = "ScheduleListTableViewCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ScheduleListViewController.onRefresh(_:)), name: AppConfig.PCJCompleteFetchDataNotification, object: nil)
+        
         let nib  = UINib(nibName: "ScheduleListTableViewCell", bundle:nil)
         tableView.registerNib(nib, forCellReuseIdentifier:reuseIdentifier)
         
+        refreshControl.addTarget(self, action: #selector(ScheduleListViewController.onRefresh(_:)), forControlEvents: .ValueChanged)
+        tableView.addSubview(refreshControl)
+        
         tableView.dataSource = scheduleListDataSource
-//        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120
+        
+        refreshControl.beginRefreshing()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -36,18 +45,15 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
-        getTalks(nil, successClosure: { [weak self](talks) in
-            guard let weakSelf = self else { return }
-            weakSelf.scheduleListDataSource.talks = talks
-            dispatch_async(dispatch_get_main_queue(), {
-                weakSelf.tableView.reloadData()
-            })
-        }) { [weak self](error) in
-            guard let weakSelf = self else { return }
-            weakSelf.showErrorAlartWith(error, parent: weakSelf)
+        
+    }
+    
+    func onRefresh(sender: UIRefreshControl) {
+        scheduleListDataSource.refreshData("2016-03-15")
+        dispatch_async(dispatch_get_main_queue()) {
+            self.tableView.reloadData()
+            self.refreshControl.endRefreshing()
         }
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,7 +68,6 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
         let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let talkDetailViewController = mainStoryboard.instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
         self.navigationController?.pushViewController(talkDetailViewController, animated: true)

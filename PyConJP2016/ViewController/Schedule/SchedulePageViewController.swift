@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol {
+class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol, TalksAPIType, ErrorAlertType {
 
     var childrenViewControllers: Array<ScheduleListViewController> = []
     
@@ -23,6 +23,12 @@ class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol
         
         self.dataSource = self.scheduleModelController
         
+        getTalks(successClosure: {
+            //TODO 何かしらのNotification
+            NSNotificationCenter.defaultCenter().postNotificationName(AppConfig.PCJCompleteFetchDataNotification, object: nil)
+        }) { (error) in
+            self.showErrorAlartWith(error, parent: self)
+        }
     }
     
     var _scheduleModelController: ScheduleModelController? = nil

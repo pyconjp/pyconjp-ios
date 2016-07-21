@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        let settings = UIUserNotificationSettings(forTypes: [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound], categories: nil)
-        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+//        let settings = UIUserNotificationSettings(forTypes: [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound], categories: nil)
+//        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
 
 //        if let _ = launchOptions![UIApplicationLaunchOptionsURLKey] as? [NSObject : AnyObject] {
 //            if let osVersion = Float64(UIDevice.currentDevice().systemVersion) {
@@ -23,12 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                }
 //            }
 //        }
-        if let launchOptions = launchOptions {
-            if let localNotification = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification {
-            	self.application(application, didReceiveLocalNotification: localNotification)
-        	}
-        }
-        
+//        if let launchOptions = launchOptions {
+//            if let localNotification = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification {
+//            	self.application(application, didReceiveLocalNotification: localNotification)
+//        	}
+//        }
+      
         UINavigationBar.appearance().barTintColor = .pyconJP2016RedColor()
         UINavigationBar.appearance().tintColor = .whiteColor()
 

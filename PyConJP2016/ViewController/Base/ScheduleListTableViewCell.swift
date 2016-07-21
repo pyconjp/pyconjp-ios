@@ -15,27 +15,11 @@ class ScheduleListTableViewCell: UITableViewCell {
     @IBOutlet weak var roomLabel: UILabel!
     @IBOutlet weak var speakerLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-    
-    func fillWith(talk: Talk) {
-        titleLabel.text = talk.title
-//        if let speaker = talk.speaker {
-//            speakerLabel.text = speaker.name
-//        }
-//        timeLabel.text =  talk.periodTime
-//        if let plase = talk.place {
-//            roomLabel.text = plase.name
-//            self.fillRoomColorWith(plase.id)
-//        }
+    func fillWith(talkObject: TalkObject) {
+        titleLabel.text = talkObject.title
+        timeLabel.text = talkObject.periodTime
+        roomLabel.text = talkObject.place
+        speakerLabel.text = talkObject.speakers
     }
     
     private func fillRoomColorWith(id: Int) {

@@ -43,7 +43,7 @@ class ScheduleBaseViewController: UIViewController, UIPageViewControllerDelegate
         self.addChildViewController(scheduleDateViewController!)
         barContainerView.addSubview(scheduleDateViewController!.view)
         scheduleDateViewController?.didMoveToParentViewController(self)
-        
+
     }
     
     override func viewDidAppear(animated: Bool) {

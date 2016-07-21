@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 struct Talk {
     
@@ -54,6 +55,44 @@ extension Talk {
                   category: dictionary["category"] as? String ?? "",
                   place: dictionary["rooms"] as? String ?? "",
                   language: dictionary["language"] as? String ?? "")
+    }
+    
+}
+
+class TalkObject: Object {
+    dynamic var id =  0
+    dynamic var title = ""
+    dynamic var descriptionText = ""
+    dynamic var speakers = ""
+    dynamic var date: NSDate?
+    dynamic var day = ""
+    dynamic var startTime = ""
+    dynamic var endTime = ""
+    dynamic var periodTime = ""
+    dynamic var category = ""
+    dynamic var place = ""
+    dynamic var language = "ja"
+    
+    dynamic var favorited = false
+    
+    convenience init(dictionary: [String : AnyObject]) {
+        self.init()
+        id = dictionary["id"] as? Int ?? 0
+        title =  dictionary["title"] as? String ?? ""
+        descriptionText = dictionary["description"] as? String ?? ""
+        (dictionary["speakers"] as? [String] ?? []).forEach { speakers += $0 }
+        day = dictionary["day"] as? String ?? ""
+        startTime = dictionary["start"] as? String ?? ""
+        endTime = dictionary["end"] as? String ?? ""
+        date = NSDate.dateFromString(day + " " + startTime)
+        periodTime = (dictionary["start"] as? String ?? "") + " ~ " + (dictionary["end"] as? String ?? "")
+        category = dictionary["category"] as? String ?? ""
+        place = dictionary["rooms"] as? String ?? ""
+        language = dictionary["language"] as? String ?? ""
+    }
+    
+    override static func primaryKey() -> String? {
+        return "id"
     }
     
 }

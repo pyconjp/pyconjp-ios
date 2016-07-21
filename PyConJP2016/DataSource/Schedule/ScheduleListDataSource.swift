@@ -7,31 +7,43 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ScheduleListDataSource: NSObject, UITableViewDataSource {
   
     let reuseIdentifier = "ScheduleListTableViewCell"
     
-    var talks: [Talk] = []
-
+    var timelines: [Timeline] = []
+    
+    func refreshData(day: String) {
+        timelines.removeAll()
+        let realm = try! Realm()
+        let talks = realm.objects(TalkObject).filter("day == %@", day).sorted("date", ascending: false).map{ $0 }
+        let keys = Set(talks.map { $0.startTime }).map{ $0 }
+        for (index, _) in keys.enumerate() {
+            timelines.append(Timeline(header: keys[index], talks: talks.filter{ $0.startTime == keys[index]}))
+        }
+    }
+    
     // MARK: - Table View Controller Data Source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 4
+        return timelines.count
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "10:00~"
+        return timelines[section].header
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return talks.count
+        return timelines[section].talks.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as? ScheduleListTableViewCell else {
             fatalError("Could not create ScheduleListTableViewCell")
         }
+        cell.fillWith(timelines[indexPath.section].talks[indexPath.row])
         return cell
     }
 }

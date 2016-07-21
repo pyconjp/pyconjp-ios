@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 protocol TalksAPIType: AlamofireType {
     //    func getTalks(parameter: Dictionary<String, AnyObject>?, successClosure success: (NSDictionary) -> Void, failClosure fail: (NSError) -> Void) -> Void
@@ -18,18 +19,38 @@ extension TalksAPIType {
         return "talks/list/"
     }
     
-    func getTalks(parameter: Dictionary<String, AnyObject>?, successClosure success: ([Talk]) -> Void, failClosure fail: (NSError) -> Void) {
-        get(parameter, successClosure: { dictionary in
+    //    func getTalks(parameter: Dictionary<String, AnyObject>?, successClosure success: ([Talk]) -> Void, failClosure fail: (NSError) -> Void) {
+    //        get(parameter, successClosure: { dictionary in
+    //            let presentations = dictionary["presentations"] as? Array<Dictionary<String, AnyObject>> ?? Array()
+    //
+    //            let talks = presentations.map({
+    //                Talk(dictionary: $0)
+    //            })
+    //
+    //            success(talks)
+    //
+    //            }, failClosure: { error in
+    //
+    //        })
+    //    }
+    
+    func getTalks(successClosure success: () -> Void, failClosure fail: (NSError) -> Void) {
+        get(nil, successClosure: { dictionary in
             let presentations = dictionary["presentations"] as? Array<Dictionary<String, AnyObject>> ?? Array()
             
-            let talks = presentations.map({
-                Talk(dictionary: $0)
+            let realm = try! Realm()
+            try! realm.write({
+                presentations.forEach({
+                    let talkObject = TalkObject(dictionary: $0)
+                    realm.add(talkObject, update: true)
+                })
             })
             
-            success(talks)
+            success()
             
             }, failClosure: { error in
-                
+                fail(error)
         })
     }
+    
 }
