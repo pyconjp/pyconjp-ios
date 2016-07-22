@@ -10,7 +10,7 @@ import UIKit
 
 class ScheduleModelController: NSObject, UIPageViewControllerDataSource {
     //    var childrenViewControllers: Array<ScheduleListViewController> = []
-    let dates: Array<String> = ["2016/09/21", "2016/09/22"]
+    let days: Array<String> = ["2016-09-21", "2016-09-22"]
     
     override init() {
         super.init()
@@ -18,19 +18,19 @@ class ScheduleModelController: NSObject, UIPageViewControllerDataSource {
     
     func viewControllerAtIndex(index: Int, storyboard: UIStoryboard) -> ScheduleListViewController? {
         
-        if (self.dates.count == 0) || (index >= self.dates.count) {
+        if self.days.isEmpty || index >= days.count {
             return nil
         }
         
         let scheduleListViewController = storyboard.instantiateViewControllerWithIdentifier("ScheduleListViewController") as! ScheduleListViewController
-        scheduleListViewController.date = dates[index]
+        scheduleListViewController.day = days[index]
         scheduleListViewController.viewControllerIndex = index
         return scheduleListViewController
         
     }
     
     func indexOfViewController(viewController: ScheduleListViewController) -> Int {
-        return dates.indexOf(viewController.date) ?? NSNotFound
+        return days.indexOf(viewController.day) ?? NSNotFound
     }
     
     // MARK: - Page View Controller Data Source
@@ -52,7 +52,7 @@ class ScheduleModelController: NSObject, UIPageViewControllerDataSource {
         }
         
         index += 1
-        if index == self.dates.count {
+        if index == days.count {
             return nil
         }
         

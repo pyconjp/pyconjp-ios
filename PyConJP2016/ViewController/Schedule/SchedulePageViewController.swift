@@ -10,7 +10,7 @@ import UIKit
 
 class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol, TalksAPIType, ErrorAlertType {
 
-    var childrenViewControllers: Array<ScheduleListViewController> = []
+//    var childrenViewControllers: Array<ScheduleListViewController> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +23,15 @@ class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol
         
         self.dataSource = self.scheduleModelController
         
-        getTalks(successClosure: {
-            //TODO 何かしらのNotification
+//        getTalks(successClosure: {
+//            //TODO 何かしらのNotification
+//            NSNotificationCenter.defaultCenter().postNotificationName(AppConfig.PCJCompleteFetchDataNotification, object: nil)
+//        }) {(error) in
+//            self.showErrorAlartWith(error, parent: self)
+//        }
+        getTalksFromLocalDummyJson(successClosure: {
             NSNotificationCenter.defaultCenter().postNotificationName(AppConfig.PCJCompleteFetchDataNotification, object: nil)
-        }) { (error) in
+        }) {(error) in
             self.showErrorAlartWith(error, parent: self)
         }
     }

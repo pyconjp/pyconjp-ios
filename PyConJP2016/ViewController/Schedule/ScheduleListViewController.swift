@@ -13,13 +13,12 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, ErrorAl
     @IBOutlet weak var tableView: UITableView!
     
     var viewControllerIndex: Int = 0
-    var date: String = ""
+    var day: String = ""
     
     let scheduleListDataSource = ScheduleListDataSource()
     
     let refreshControl = UIRefreshControl()
     
-    // MARK: - TalksAPIType
     let reuseIdentifier = "ScheduleListTableViewCell"
     
     override func viewDidLoad() {
@@ -49,7 +48,7 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, ErrorAl
     }
     
     func onRefresh(sender: UIRefreshControl) {
-        scheduleListDataSource.refreshData("2016-03-15")
+        scheduleListDataSource.refreshData(day)
         dispatch_async(dispatch_get_main_queue()) {
             self.tableView.reloadData()
             self.refreshControl.endRefreshing()
