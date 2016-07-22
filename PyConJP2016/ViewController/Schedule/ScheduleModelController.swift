@@ -9,7 +9,7 @@
 import UIKit
 
 class ScheduleModelController: NSObject, UIPageViewControllerDataSource {
-    //    var childrenViewControllers: Array<ScheduleListViewController> = []
+
     let days: Array<String> = ["2016-09-21", "2016-09-22"]
     
     override init() {

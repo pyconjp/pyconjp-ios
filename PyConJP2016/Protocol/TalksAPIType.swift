@@ -38,18 +38,22 @@ extension TalksAPIType {
         get(nil, successClosure: { dictionary in
             let presentations = dictionary["presentations"] as? Array<Dictionary<String, AnyObject>> ?? [Dictionary<String, AnyObject>]()
             
-            let realm = try! Realm()
-            try! realm.write({
-                presentations.forEach({
-                    let talkObject = TalkObject(dictionary: $0)
-                    realm.add(talkObject, update: true)
+            do {
+                let realm = try Realm()
+                try realm.write({
+                    presentations.forEach({
+                        let talkObject = TalkObject(dictionary: $0)
+                        realm.add(talkObject, update: true)
+                    })
                 })
-            })
-            
-            success()
-            
-            }, failClosure: { error in
+                
+                success()
+            } catch let error as NSError {
                 fail(error)
+            }
+            
+        }, failClosure: { error in
+            fail(error)
         })
     }
     
@@ -58,17 +62,21 @@ extension TalksAPIType {
         let fileHandle = NSFileHandle(forReadingAtPath: path!)
         let data = fileHandle?.readDataToEndOfFile()
         let dictionary = try! NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as! Dictionary<String, AnyObject>
-        let presentations = dictionary["presentations"] as? Array<Dictionary<String, AnyObject>> ?? Array()
+        let presentations = dictionary["presentations"] as? Array<Dictionary<String, AnyObject>> ?? [Dictionary<String, AnyObject>]()
         
-        let realm = try! Realm()
-        try! realm.write({
-            presentations.forEach({
-                let talkObject = TalkObject(dictionary: $0)
-                realm.add(talkObject, update: true)
+        do {
+            let realm = try Realm()
+            try realm.write({
+                presentations.forEach({
+                    let talkObject = TalkObject(dictionary: $0)
+                    realm.add(talkObject, update: true)
+                })
             })
-        })
-        
-        success()
+            
+            success()
+        } catch let error as NSError {
+            fail(error)
+        }
         
     }
     

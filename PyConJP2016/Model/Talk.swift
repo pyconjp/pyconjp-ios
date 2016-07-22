@@ -80,12 +80,12 @@ class TalkObject: Object {
         id = dictionary["id"] as? Int ?? 0
         title =  dictionary["title"] as? String ?? ""
         descriptionText = dictionary["description"] as? String ?? ""
-        (dictionary["speakers"] as? [String] ?? []).forEach { speakers += $0 }
+        speakers = (dictionary["speakers"] as? [String] ?? []).reduce("") { $0 + $1 + ", " }
+        date = NSDate.dateFromString((dictionary["day"] as? String ?? "") + " " + (dictionary["start"] as? String ?? ""))
         day = dictionary["day"] as? String ?? ""
         startTime = dictionary["start"] as? String ?? ""
         endTime = dictionary["end"] as? String ?? ""
-        date = NSDate.dateFromString(day + " " + startTime)
-        periodTime = (dictionary["start"] as? String ?? "") + " ~ " + (dictionary["end"] as? String ?? "")
+        periodTime = (dictionary["start"] as? String ?? "").timeStringByTrimingSecond() + " ~ " + (dictionary["end"] as? String ?? "").timeStringByTrimingSecond()
         category = dictionary["category"] as? String ?? ""
         place = dictionary["rooms"] as? String ?? ""
         language = dictionary["language"] as? String ?? ""

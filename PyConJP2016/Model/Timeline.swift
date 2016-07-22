@@ -12,9 +12,9 @@ struct Timeline {
     let header: String
     var talks: Array<TalkObject>
     
-    init(header: String, talks: Array<TalkObject>?) {
-        self.header = header
-        self.talks = talks ?? []
+    init(startTime: String, talks: Array<TalkObject>?) {
+        self.header = startTime.timeStringByTrimingSecond()
+        self.talks = talks ?? [TalkObject]()
     }
     
 }
