@@ -43,7 +43,7 @@ extension Talk {
         self.language = Language(rawValue: language) ?? .JA
     }
     
-    init(dictionary: [String : AnyObject]) {
+    init(dictionary: Dictionary<String, AnyObject>) {
         self.init(id: dictionary["id"] as? Int ?? 0,
                   title: dictionary["title"] as? String ?? "",
                   description: dictionary["description"] as? String ?? "",
@@ -75,7 +75,7 @@ class TalkObject: Object {
     
     dynamic var favorited = false
     
-    convenience init(dictionary: [String : AnyObject]) {
+    convenience init(dictionary: Dictionary<String, AnyObject>) {
         self.init()
         id = dictionary["id"] as? Int ?? 0
         title =  dictionary["title"] as? String ?? ""

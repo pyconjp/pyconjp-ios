@@ -8,15 +8,18 @@
 
 import UIKit
 
-class TalkDetailViewController: UIViewController {
-    
-    var talkDetail: TalkDetail?
-    private let _localNotificationManager = LocalNotificationManager()
+class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertType {
 
+    @IBOutlet weak var baseScrollView: UIScrollView!
+    
     @IBOutlet weak var titleLabel: UILabel!
     
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var periodTimeLabel: UILabel!
     @IBOutlet weak var notificationSwitch: UISwitch!
+    
+    @IBOutlet weak var placeLabel: UILabel!
+    @IBOutlet weak var hashTagButton: UIButton!
     
     @IBOutlet weak var speakerImageView: UIImageView!
     @IBOutlet weak var speakerNameLabel: UILabel!
@@ -25,13 +28,62 @@ class TalkDetailViewController: UIViewController {
     
     @IBOutlet weak var abstractTextView: UITextView!
     
+    var id: Int?
+    var talkDetail: TalkDetailStruct?
+    private let _localNotificationManager = LocalNotificationManager()
+    let refreshControl = UIRefreshControl()
+    
+    class func build() -> TalkDetailViewController {
+        return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        descriptionTextView.text = "hogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehogehogehogehgoehoge"
+        refreshControl.addTarget(self, action: #selector(TalkDetailViewController.refresh(_:)), forControlEvents: .ValueChanged)
+        baseScrollView.addSubview(refreshControl)
         
-        abstractTextView.text = "fugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafugafuga"
+        refreshControl.beginRefreshing()
+        getDetail()
 
+    }
+    
+    func refresh(refreshControl: UIRefreshControl) {
+        talkDetail = nil
+        getDetail()
+    }
+    
+    private func getDetail() {
+//        getTalkDetail(successClosure: { (talkDetail) in
+//            self.talkDetail = talkDetail
+//            self.fillData()
+//            self.refreshControl.endRefreshing()
+//        }) { [weak self](error) in
+//            self?.refreshControl.endRefreshing()
+//            guard let weakSelf = self else { return }
+//            weakSelf.showErrorAlartWith(error, parent: weakSelf)
+//        }
+        getTalkDetailFromLocalDummyJson(successClosure: { (talkDetail) in
+            self.talkDetail = talkDetail
+            self.fillData()
+            self.refreshControl.endRefreshing()
+        }) { [weak self](error) in
+            self?.refreshControl.endRefreshing()
+            guard let weakSelf = self else { return }
+            weakSelf.showErrorAlartWith(error, parent: weakSelf)
+        }
+    }
+    
+    private func fillData() {
+        guard let talkDetail = talkDetail else { return }
+        titleLabel.text = talkDetail.talkObject.title
+        dayLabel.text = talkDetail.talkObject.day
+        periodTimeLabel.text = talkDetail.talkObject.periodTime
+        placeLabel.text = talkDetail.talkObject.place
+        hashTagButton.setTitle("#pyconjp\(talkDetail.talkObject.place)", forState: .Normal)
+        speakerNameLabel.text = talkDetail.talkObject.speakers
+        descriptionTextView.text = talkDetail.talkObject.descriptionText
+        abstractTextView.text = talkDetail.abstract
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,19 +91,19 @@ class TalkDetailViewController: UIViewController {
     }
 
     @IBAction func swithNotification(sender: UISwitch) {
-        if let talkDetail = talkDetail {
-            if talkDetail.isSetNotification {
-                _localNotificationManager.makeNotification(talkDetail)
-            } else {
-                _localNotificationManager.cancelSchedule(talkDetail)
-            }
-        }
+//        if let talkDetail = talkDetail {
+//            if talkDetail.isSetNotification {
+//                _localNotificationManager.makeNotification(talkDetail)
+//            } else {
+//                _localNotificationManager.cancelSchedule(talkDetail)
+//            }
+//        }
     }
     @IBAction func onHashTagButton(sender: UIButton) {
 
         var hashTag = "pyconjp"
         if let talkDetail = talkDetail {
-            hashTag.appendContentsOf(talkDetail.place )
+            hashTag.appendContentsOf(talkDetail.talkObject.place )
         }
         
         if UIApplication.sharedApplication().canOpenURL(NSURL(string: "twitter://")!) {

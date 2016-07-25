@@ -55,7 +55,7 @@ extension TalkDetail {
         }
     }
     
-    init(dictionary: [String : AnyObject]) {
+    init(dictionary: Dictionary<String, AnyObject>) {
         self.init(id: dictionary["id"] as? Int ?? 0,
                   title: dictionary["title"] as? String ?? "",
                   description: dictionary["description"] as? String ?? "",
@@ -70,5 +70,48 @@ extension TalkDetail {
                   place: dictionary["rooms"] as? String ?? "",
                   language: dictionary["language"] as? String ?? "")
     }
+    
+}
 
+class TalkDetailObject: TalkObject {
+    
+    dynamic var abstract = ""
+    dynamic var level = ""
+    
+    convenience init(dictionary: Dictionary<String, AnyObject>) {
+        self.init()
+        id = dictionary["id"] as? Int ?? 0
+        title =  dictionary["title"] as? String ?? ""
+        descriptionText = dictionary["description"] as? String ?? ""
+        speakers = (dictionary["speakers"] as? [String] ?? []).reduce("") { $0 + $1 + ", " }
+        date = NSDate.dateFromString((dictionary["day"] as? String ?? "") + " " + (dictionary["start"] as? String ?? ""))
+        day = dictionary["day"] as? String ?? ""
+        startTime = dictionary["start"] as? String ?? ""
+        endTime = dictionary["end"] as? String ?? ""
+        periodTime = (dictionary["start"] as? String ?? "").timeStringByTrimingSecond() + " ~ " + (dictionary["end"] as? String ?? "").timeStringByTrimingSecond()
+        category = dictionary["category"] as? String ?? ""
+        place = dictionary["rooms"] as? String ?? ""
+        language = dictionary["language"] as? String ?? ""
+        abstract = dictionary["abstract"] as? String ?? ""
+        level = dictionary["level"] as? String ?? ""
+    }
+    
+}
+
+struct TalkDetailStruct {
+    
+    var talkObject: TalkObject
+    let abstract: String
+    let level: String
+    
+}
+
+extension TalkDetailStruct {
+    
+    init(dictionary: Dictionary<String, AnyObject>) {
+        self.init(talkObject: TalkObject(dictionary: dictionary),
+                  abstract: dictionary["abstract"] as? String ?? "",
+                  level: dictionary["level"] as? String ?? "")
+    }
+    
 }

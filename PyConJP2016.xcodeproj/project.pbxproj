@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F201B861CCDD8C200235412 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F201B851CCDD8C200235412 /* AboutViewController.swift */; };
+		7F2878F61D460078003D65B1 /* TalkDetailAPIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2878F51D460078003D65B1 /* TalkDetailAPIType.swift */; };
 		7F6331A11C912EB400B5CB00 /* SponsorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6331A01C912EB400B5CB00 /* SponsorCollectionViewCell.swift */; };
 		7F6879031D41BE28003D5742 /* ArrayExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6879021D41BE28003D5742 /* ArrayExtention.swift */; };
 		7F6879051D420626003D5742 /* StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6879041D420626003D5742 /* StringExtention.swift */; };
@@ -17,7 +18,6 @@
 		7F82F6A41C8D4BF9004EAC0E /* ScheduleDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */; };
 		7F82F6A61C8D4C3D004EAC0E /* ScheduleBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A51C8D4C3D004EAC0E /* ScheduleBaseViewController.swift */; };
 		7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A71C8D4CF3004EAC0E /* ScheduleListViewController.swift */; };
-		7FA9228A1CD0B7910057136D /* DummyTalks.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FA922891CD0B7910057136D /* DummyTalks.json */; };
 		7FA9228C1CD0BD8F0057136D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9228B1CD0BD8F0057136D /* Category.swift */; };
 		7FBC34CC1D40DABC002919B1 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34CB1D40DABC002919B1 /* Timeline.swift */; };
 		7FBC34CF1D40F956002919B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34CE1D40F956002919B1 /* AppDelegate.swift */; };
@@ -33,6 +33,8 @@
 		7FFD33311C8D84BA000494E7 /* ScheduleListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FFD332F1C8D84BA000494E7 /* ScheduleListTableViewCell.xib */; };
 		954B7D7AE17B5936AC1F49FC /* Pods_PyConJP2016Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1BDDC1CABB963F52098EAB7 /* Pods_PyConJP2016Tests.framework */; };
 		C832600FD904D3FFADAA174C /* Pods_PyConJP2016.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7952AFBF6B014E7BBED90FE3 /* Pods_PyConJP2016.framework */; };
+		DB0A81651D463A4E0048ACB4 /* DummyTalks.json in Resources */ = {isa = PBXBuildFile; fileRef = DB0A81641D463A4E0048ACB4 /* DummyTalks.json */; };
+		DB0A81671D463A710048ACB4 /* DummyTalkDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = DB0A81661D463A710048ACB4 /* DummyTalkDetail.json */; };
 		DB1347DC1CC7DEDF00CA0539 /* AlamofireType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */; };
 		DB1347DE1CCB092000CA0539 /* TalksAPIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DD1CCB092000CA0539 /* TalksAPIType.swift */; };
 		DB1347E01CCB27D900CA0539 /* ErrorAlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */; };
@@ -80,6 +82,7 @@
 		7952AFBF6B014E7BBED90FE3 /* Pods_PyConJP2016.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PyConJP2016.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4525E7CD6B481FCC38979C /* Pods-PyConJP2016.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016.release.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016/Pods-PyConJP2016.release.xcconfig"; sourceTree = "<group>"; };
 		7F201B851CCDD8C200235412 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		7F2878F51D460078003D65B1 /* TalkDetailAPIType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkDetailAPIType.swift; sourceTree = "<group>"; };
 		7F6331A01C912EB400B5CB00 /* SponsorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorCollectionViewCell.swift; sourceTree = "<group>"; };
 		7F6879021D41BE28003D5742 /* ArrayExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtention.swift; sourceTree = "<group>"; };
 		7F6879041D420626003D5742 /* StringExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtention.swift; sourceTree = "<group>"; };
@@ -89,7 +92,6 @@
 		7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDateViewController.swift; sourceTree = "<group>"; };
 		7F82F6A51C8D4C3D004EAC0E /* ScheduleBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleBaseViewController.swift; sourceTree = "<group>"; };
 		7F82F6A71C8D4CF3004EAC0E /* ScheduleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListViewController.swift; sourceTree = "<group>"; };
-		7FA922891CD0B7910057136D /* DummyTalks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyTalks.json; sourceTree = "<group>"; };
 		7FA9228B1CD0BD8F0057136D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		7FBC34CB1D40DABC002919B1 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		7FBC34CE1D40F956002919B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,8 @@
 		7FFD332F1C8D84BA000494E7 /* ScheduleListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleListTableViewCell.xib; sourceTree = "<group>"; };
 		A1BDDC1CABB963F52098EAB7 /* Pods_PyConJP2016Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PyConJP2016Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A81D8527364825FA466121 /* Pods-PyConJP2016Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016Tests/Pods-PyConJP2016Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DB0A81641D463A4E0048ACB4 /* DummyTalks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyTalks.json; sourceTree = "<group>"; };
+		DB0A81661D463A710048ACB4 /* DummyTalkDetail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyTalkDetail.json; sourceTree = "<group>"; };
 		DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireType.swift; sourceTree = "<group>"; };
 		DB1347DD1CCB092000CA0539 /* TalksAPIType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksAPIType.swift; sourceTree = "<group>"; };
 		DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlertType.swift; sourceTree = "<group>"; };
@@ -248,12 +252,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DB0A81631D463A4E0048ACB4 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DB0A81661D463A710048ACB4 /* DummyTalkDetail.json */,
+				DB0A81641D463A4E0048ACB4 /* DummyTalks.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		DB1347DA1CC7DECF00CA0539 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
 				DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */,
 				DB1347DD1CCB092000CA0539 /* TalksAPIType.swift */,
 				DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */,
+				7F2878F51D460078003D65B1 /* TalkDetailAPIType.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -285,7 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				7FBC34CD1D40F956002919B1 /* Application */,
-				7FA922891CD0B7910057136D /* DummyTalks.json */,
+				DB0A81631D463A4E0048ACB4 /* Resource */,
 				7FC773BC1D126A1600F5A202 /* DataSource */,
 				DBA1C0DA1C722E77004F0C8D /* Model */,
 				DBF32BB31CD48C4C004E7F3B /* Extension */,
@@ -513,12 +527,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBA1C0E01C722E99004F0C8D /* Main.storyboard in Resources */,
-				7FA9228A1CD0B7910057136D /* DummyTalks.json in Resources */,
+				DB0A81651D463A4E0048ACB4 /* DummyTalks.json in Resources */,
 				7FFD33311C8D84BA000494E7 /* ScheduleListTableViewCell.xib in Resources */,
 				DBDE0E7C1C8C19F50094BF36 /* More.storyboard in Resources */,
 				DBA1C0DF1C722E99004F0C8D /* LaunchScreen.storyboard in Resources */,
 				DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */,
 				DB5D5A851C72346C00CEF0CD /* Schedule.storyboard in Resources */,
+				DB0A81671D463A710048ACB4 /* DummyTalkDetail.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,6 +672,7 @@
 				DB1347DE1CCB092000CA0539 /* TalksAPIType.swift in Sources */,
 				7F82F6A01C8D4B62004EAC0E /* SchedulePageViewController.swift in Sources */,
 				DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */,
+				7F2878F61D460078003D65B1 /* TalkDetailAPIType.swift in Sources */,
 				7F82F6A41C8D4BF9004EAC0E /* ScheduleDateViewController.swift in Sources */,
 				DB1347DC1CC7DEDF00CA0539 /* AlamofireType.swift in Sources */,
 				7FE830FC1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift in Sources */,
@@ -812,7 +828,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PyConJP2016/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PyConJP2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -829,7 +845,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PyConJP2016/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PyConJP2016;
 				PRODUCT_NAME = "$(TARGET_NAME)";

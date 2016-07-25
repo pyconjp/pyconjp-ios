@@ -12,22 +12,23 @@ class ScheduleListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var roomLabel: UILabel!
+    @IBOutlet weak var placeLabel: UILabel!
+    @IBOutlet weak var placeView: UIView!
     @IBOutlet weak var speakerLabel: UILabel!
     
     func fillWith(talkObject: TalkObject) {
         titleLabel.text = talkObject.title
         timeLabel.text = talkObject.periodTime
-        roomLabel.text = talkObject.place
+        placeLabel.text = talkObject.place
         speakerLabel.text = talkObject.speakers
     }
     
     private func fillRoomColorWith(id: Int) {
         switch id {
         case 201:
-            roomLabel.backgroundColor = .redColor()
+            placeView.backgroundColor = .redColor()
         default:
-            roomLabel.backgroundColor = .grayColor()
+            placeView.backgroundColor = .grayColor()
         }
     }
     

@@ -19,10 +19,10 @@ class ScheduleListDataSource: NSObject, UITableViewDataSource {
         timelines.removeAll()
         let realm = try! Realm()
         let sortProperties = [SortDescriptor(property: "date", ascending: true), SortDescriptor(property: "id", ascending: true)]
-        let talks = realm.objects(TalkObject).filter("day == %@", day).sorted(sortProperties).map{ $0 }
+        let talks = realm.objects(TalkObject).filter("day == %@", day).sorted(sortProperties).map { $0 }
         let keys = talks.map { $0.startTime }.unique()
         for tuple in keys.enumerate() {
-            timelines.append(Timeline(startTime: keys[tuple.index], talks: talks.filter{ $0.startTime == keys[tuple.index]}))
+            timelines.append(Timeline(startTime: keys[tuple.index], talks: talks.filter { $0.startTime == keys[tuple.index]}))
         }
     }
     

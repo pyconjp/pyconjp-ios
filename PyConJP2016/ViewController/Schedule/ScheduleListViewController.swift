@@ -67,8 +67,8 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, ErrorAl
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        let talkDetailViewController = mainStoryboard.instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
+        let talkDetailViewController = TalkDetailViewController.build()
+        talkDetailViewController.id = scheduleListDataSource.timelines[indexPath.section].talks[indexPath.row].id
         self.navigationController?.pushViewController(talkDetailViewController, animated: true)
     }
     
