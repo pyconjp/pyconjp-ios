@@ -10,26 +10,21 @@ import UIKit
 
 class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol, TalksAPIType, ErrorAlertType {
 
-//    var childrenViewControllers: Array<ScheduleListViewController> = []
+    var scheduleModelViewProtocol: ScheduleModelViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.grayColor()
-        
-        let startingViewController: ScheduleListViewController = self.scheduleModelController.viewControllerAtIndex(0, storyboard: self.storyboard!)!
+        let startingViewController = self.scheduleModelController.viewControllerAtIndex(0, storyboard: self.storyboard!)!
         let viewControllers = [startingViewController]
         self.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: {done in })
         
         self.dataSource = self.scheduleModelController
-        
-//        getTalks(successClosure: {
-//            //TODO 何かしらのNotification
-//            NSNotificationCenter.defaultCenter().postNotificationName(AppConfig.PCJCompleteFetchDataNotification, object: nil)
-//        }) {(error) in
-//            self.showErrorAlartWith(error, parent: self)
-//        }
-        getTalksFromLocalDummyJson(successClosure: {
+//        getTalksFromLocalDummyJson(successClosure: {
+        getTalks(successClosure: { [weak self]() in
+            //TODO 何かしらのNotification
+//            self?.scheduleModelViewProtocol?.loadData()
+//            startingViewController.refresh()
             NSNotificationCenter.defaultCenter().postNotificationName(AppConfig.PCJCompleteFetchDataNotification, object: nil)
         }) {(error) in
             self.showErrorAlartWith(error, parent: self)
@@ -76,4 +71,9 @@ class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol
         let viewControllers = [viewController]
         self.setViewControllers(viewControllers, direction: direction, animated: true, completion: {done in})
     }
+    
+}
+
+protocol ScheduleModelViewProtocol {
+    func loadData()
 }

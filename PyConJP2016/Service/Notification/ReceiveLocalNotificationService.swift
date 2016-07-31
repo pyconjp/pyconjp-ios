@@ -17,7 +17,7 @@ class ReceiveLocalNotificationService: NSObject {
             alertController.addAction(UIAlertAction(title: "閉じる", style: .Default, handler: nil))
             alertController.addAction(UIAlertAction(title: "詳細へ", style: .Default, handler: {(action) -> Void in
                 if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
-                    appDelegate.openTalkDetailViewController()
+//                    appDelegate.openTalkDetailViewController()
                 }
             }))
             if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
@@ -25,7 +25,7 @@ class ReceiveLocalNotificationService: NSObject {
             }
         case "Talk" where application.applicationState == .Inactive:
             if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
-                appDelegate.openTalkDetailViewController()
+//                appDelegate.openTalkDetailViewController()
             }
         case "Information":
             break

@@ -33,6 +33,8 @@
 		7FFD33311C8D84BA000494E7 /* ScheduleListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FFD332F1C8D84BA000494E7 /* ScheduleListTableViewCell.xib */; };
 		954B7D7AE17B5936AC1F49FC /* Pods_PyConJP2016Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1BDDC1CABB963F52098EAB7 /* Pods_PyConJP2016Tests.framework */; };
 		C832600FD904D3FFADAA174C /* Pods_PyConJP2016.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7952AFBF6B014E7BBED90FE3 /* Pods_PyConJP2016.framework */; };
+		DB0159D21D4DB7B500B17018 /* PCJSFSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0159D01D4DB7B500B17018 /* PCJSFSafariViewController.swift */; };
+		DB0159D31D4DB7B500B17018 /* PCJWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0159D11D4DB7B500B17018 /* PCJWKWebViewController.swift */; };
 		DB0A81651D463A4E0048ACB4 /* DummyTalks.json in Resources */ = {isa = PBXBuildFile; fileRef = DB0A81641D463A4E0048ACB4 /* DummyTalks.json */; };
 		DB0A81671D463A710048ACB4 /* DummyTalkDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = DB0A81661D463A710048ACB4 /* DummyTalkDetail.json */; };
 		DB1347DC1CC7DEDF00CA0539 /* AlamofireType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */; };
@@ -54,7 +56,6 @@
 		DBDE0E7C1C8C19F50094BF36 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBDE0E7B1C8C19F50094BF36 /* More.storyboard */; };
 		DBEBDB481C8C89FC002B25B3 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */; };
 		DBF32BB51CD48C4C004E7F3B /* AppDelegateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF32BB41CD48C4C004E7F3B /* AppDelegateExtention.swift */; };
-		DBF4A7491C7F649A00AB8BE4 /* PCJWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF4A7481C7F649A00AB8BE4 /* PCJWKWebViewController.swift */; };
 		DBFAEC551D3CF7AD00BCC880 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFAEC541D3CF7AD00BCC880 /* NSDateExtension.swift */; };
 		DBFB28341D33B02A00EFBC24 /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFB28331D33B02A00EFBC24 /* Talk.swift */; };
 		DBFB28361D33B8C000EFBC24 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFB28351D33B8C000EFBC24 /* Language.swift */; };
@@ -107,6 +108,8 @@
 		7FFD332F1C8D84BA000494E7 /* ScheduleListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleListTableViewCell.xib; sourceTree = "<group>"; };
 		A1BDDC1CABB963F52098EAB7 /* Pods_PyConJP2016Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PyConJP2016Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A81D8527364825FA466121 /* Pods-PyConJP2016Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016Tests/Pods-PyConJP2016Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DB0159D01D4DB7B500B17018 /* PCJSFSafariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJSFSafariViewController.swift; sourceTree = "<group>"; };
+		DB0159D11D4DB7B500B17018 /* PCJWKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJWKWebViewController.swift; sourceTree = "<group>"; };
 		DB0A81641D463A4E0048ACB4 /* DummyTalks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyTalks.json; sourceTree = "<group>"; };
 		DB0A81661D463A710048ACB4 /* DummyTalkDetail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyTalkDetail.json; sourceTree = "<group>"; };
 		DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireType.swift; sourceTree = "<group>"; };
@@ -134,7 +137,6 @@
 		DBDE0E7B1C8C19F50094BF36 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		DBF32BB41CD48C4C004E7F3B /* AppDelegateExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateExtention.swift; sourceTree = "<group>"; };
-		DBF4A7481C7F649A00AB8BE4 /* PCJWKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJWKWebViewController.swift; sourceTree = "<group>"; };
 		DBFAEC541D3CF7AD00BCC880 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 		DBFB28331D33B02A00EFBC24 /* Talk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
 		DBFB28351D33B8C000EFBC24 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
@@ -252,6 +254,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DB0159CF1D4DB7B500B17018 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				DB0159D01D4DB7B500B17018 /* PCJSFSafariViewController.swift */,
+				DB0159D11D4DB7B500B17018 /* PCJWKWebViewController.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		DB0A81631D463A4E0048ACB4 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +362,7 @@
 			children = (
 				DBC748161C7624CB00895D4A /* Base */,
 				7F67D1F71C8D4AD2001C8F9C /* Schedule */,
+				DB0159CF1D4DB7B500B17018 /* WebView */,
 				DBDE0E7A1C8C19CB0094BF36 /* More */,
 			);
 			name = ViewController;
@@ -384,7 +396,6 @@
 				DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */,
 				7FFD332E1C8D84BA000494E7 /* ScheduleListTableViewCell.swift */,
 				7FFD332F1C8D84BA000494E7 /* ScheduleListTableViewCell.xib */,
-				DBF4A7481C7F649A00AB8BE4 /* PCJWKWebViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -667,8 +678,8 @@
 				7F6879031D41BE28003D5742 /* ArrayExtention.swift in Sources */,
 				DB1579DC1C7A154B00A5F5BA /* Level.swift in Sources */,
 				7FFD33301C8D84BA000494E7 /* ScheduleListTableViewCell.swift in Sources */,
+				DB0159D31D4DB7B500B17018 /* PCJWKWebViewController.swift in Sources */,
 				7FE830F71C97FA390076C079 /* LocalNotificationManager.swift in Sources */,
-				DBF4A7491C7F649A00AB8BE4 /* PCJWKWebViewController.swift in Sources */,
 				DB1347DE1CCB092000CA0539 /* TalksAPIType.swift in Sources */,
 				7F82F6A01C8D4B62004EAC0E /* SchedulePageViewController.swift in Sources */,
 				DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */,
@@ -700,6 +711,7 @@
 				DB1579DA1C7A13C400A5F5BA /* Place.swift in Sources */,
 				7FBC34D11D40F98D002919B1 /* AppConfig.swift in Sources */,
 				DBFAEC551D3CF7AD00BCC880 /* NSDateExtension.swift in Sources */,
+				DB0159D21D4DB7B500B17018 /* PCJSFSafariViewController.swift in Sources */,
 				DB1579D81C7A10B800A5F5BA /* TalkDetail.swift in Sources */,
 				7FA9228C1CD0BD8F0057136D /* Category.swift in Sources */,
 			);

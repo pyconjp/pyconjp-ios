@@ -24,6 +24,10 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     @IBOutlet weak var speakerImageView: UIImageView!
     @IBOutlet weak var speakerNameLabel: UILabel!
     
+    @IBOutlet weak var languageLabel: UILabel!
+    @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    
     @IBOutlet weak var descriptionTextView: UITextView!
     
     @IBOutlet weak var abstractTextView: UITextView!
@@ -37,13 +41,19 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
         return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
     }
     
+    class func build(id: Int) -> TalkDetailViewController {
+        let talkDetailViewController = TalkDetailViewController.build()
+        talkDetailViewController.id = id
+        return talkDetailViewController
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         refreshControl.addTarget(self, action: #selector(TalkDetailViewController.refresh(_:)), forControlEvents: .ValueChanged)
         baseScrollView.addSubview(refreshControl)
         
-        refreshControl.beginRefreshing()
+//        refreshControl.beginRefreshing()
         getDetail()
 
     }
@@ -54,16 +64,8 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     }
     
     private func getDetail() {
-//        getTalkDetail(successClosure: { (talkDetail) in
-//            self.talkDetail = talkDetail
-//            self.fillData()
-//            self.refreshControl.endRefreshing()
-//        }) { [weak self](error) in
-//            self?.refreshControl.endRefreshing()
-//            guard let weakSelf = self else { return }
-//            weakSelf.showErrorAlartWith(error, parent: weakSelf)
-//        }
-        getTalkDetailFromLocalDummyJson(successClosure: { (talkDetail) in
+//        getTalkDetailFromLocalDummyJson(successClosure: { (talkDetail) in
+        getTalkDetail(successClosure: { (talkDetail) in
             self.talkDetail = talkDetail
             self.fillData()
             self.refreshControl.endRefreshing()
@@ -77,11 +79,19 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     private func fillData() {
         guard let talkDetail = talkDetail else { return }
         titleLabel.text = talkDetail.talkObject.title
+        
         dayLabel.text = talkDetail.talkObject.day
         periodTimeLabel.text = talkDetail.talkObject.periodTime
+        
         placeLabel.text = talkDetail.talkObject.place
         hashTagButton.setTitle("#pyconjp\(talkDetail.talkObject.place)", forState: .Normal)
+        
         speakerNameLabel.text = talkDetail.talkObject.speakers
+        
+        languageLabel.text = talkDetail.talkObject.languageName()
+        levelLabel.text = talkDetail.level
+        categoryLabel.text = talkDetail.talkObject.category
+        
         descriptionTextView.text = talkDetail.talkObject.descriptionText
         abstractTextView.text = talkDetail.abstract
     }
@@ -90,7 +100,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
         super.didReceiveMemoryWarning()
     }
 
-    @IBAction func swithNotification(sender: UISwitch) {
+//    @IBAction func swithNotification(sender: UISwitch) {
 //        if let talkDetail = talkDetail {
 //            if talkDetail.isSetNotification {
 //                _localNotificationManager.makeNotification(talkDetail)
@@ -98,12 +108,13 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
 //                _localNotificationManager.cancelSchedule(talkDetail)
 //            }
 //        }
-    }
+//    }
+    
     @IBAction func onHashTagButton(sender: UIButton) {
 
         var hashTag = "pyconjp"
-        if let talkDetail = talkDetail {
-            hashTag.appendContentsOf(talkDetail.talkObject.place )
+        if let talkDetail = talkDetail, roomNumber = talkDetail.talkObject.place .componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet).last {
+            hashTag.appendContentsOf(roomNumber)
         }
         
         if UIApplication.sharedApplication().canOpenURL(NSURL(string: "twitter://")!) {

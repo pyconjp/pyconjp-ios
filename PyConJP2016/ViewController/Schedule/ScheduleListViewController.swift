@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScheduleListViewController: UIViewController, UITableViewDelegate, ErrorAlertType {
+class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAPIType, ErrorAlertType {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,7 +24,7 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, ErrorAl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ScheduleListViewController.onRefresh(_:)), name: AppConfig.PCJCompleteFetchDataNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ScheduleListViewController.refreshNotification(_:)), name: AppConfig.PCJCompleteFetchDataNotification, object: nil)
         
         let nib  = UINib(nibName: "ScheduleListTableViewCell", bundle:nil)
         tableView.registerNib(nib, forCellReuseIdentifier:reuseIdentifier)
@@ -37,6 +37,7 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, ErrorAl
         tableView.estimatedRowHeight = 120
         
         refreshControl.beginRefreshing()
+        refresh()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -48,10 +49,27 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, ErrorAl
     }
     
     func onRefresh(sender: UIRefreshControl) {
+        scheduleListDataSource.timelines = []
+        tableView.reloadData()
+        getTalks(successClosure: { [weak self]() in
+            self?.refresh()
+        }) { [weak self](error) in
+            guard let weakSelf = self else { return }
+            weakSelf.showErrorAlartWith(error, parent: weakSelf)
+        }
+    }
+    
+    func refreshNotification(notification: NSNotification) {
+        refresh()
+    }
+    
+    func refresh() {
         scheduleListDataSource.refreshData(day)
         dispatch_async(dispatch_get_main_queue()) {
             self.tableView.reloadData()
-            self.refreshControl.endRefreshing()
+            if !self.scheduleListDataSource.timelines.isEmpty {
+                self.refreshControl.endRefreshing()
+            }
         }
     }
     

@@ -16,6 +16,7 @@ protocol TalkDetailAPIType: AlamofireType {
 extension TalkDetailAPIType {
     
     var path: String {
+        guard let id = id else { return "" }
         return "presentation/\(id)/"
     }
     

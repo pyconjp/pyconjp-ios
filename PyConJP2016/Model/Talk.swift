@@ -95,4 +95,15 @@ class TalkObject: Object {
         return "id"
     }
     
+    func languageName() -> String {
+        switch language {
+        case "ja":
+            return "Japanese"
+        case "en":
+            return "English"
+        default:
+            return ""
+        }
+    }
+    
 }
