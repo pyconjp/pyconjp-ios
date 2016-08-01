@@ -33,7 +33,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     @IBOutlet weak var abstractTextView: UITextView!
     
     var id: Int?
-    var talkDetail: TalkDetailStruct?
+    var talkDetail: TalkDetail?
     private let _localNotificationManager = LocalNotificationManager()
     let refreshControl = UIRefreshControl()
     

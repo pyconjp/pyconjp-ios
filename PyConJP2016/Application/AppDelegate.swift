@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, TalksAPIType, ErrorAlertType {
     
     var window: UIWindow?
     
@@ -29,6 +29,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                self.application(application, didReceiveLocalNotification: localNotification)
 //            }
 //        }
+        
+//        getTalksFromLocalDummyJson(successClosure: {
+        getTalks(successClosure: {
+            NSNotificationCenter.defaultCenter().postNotificationName(AppConfig.PCJCompleteFetchDataNotification, object: nil)
+        }) {(error) in
+            self.showErrorAlartWith(error, parent: nil)
+        }
         
         UINavigationBar.appearance().barTintColor = .pyconJP2016RedColor()
         UINavigationBar.appearance().tintColor = .whiteColor()
@@ -57,8 +64,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         if let userInfo = notification.userInfo {
-            let receiveLocalNotificationService = ReceiveLocalNotificationService()
-            receiveLocalNotificationService.application(application, didReceiveLocalNotification: userInfo)
+            let receiveLocalNotificationManager = ReceiveLocalNotificationManager()
+            receiveLocalNotificationManager.application(application, didReceiveLocalNotification: userInfo)
         }
         
         UIApplication.sharedApplication().cancelLocalNotification(notification)

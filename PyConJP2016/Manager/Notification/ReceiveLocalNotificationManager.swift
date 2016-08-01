@@ -1,5 +1,5 @@
 //
-//  ReceiveLocalNotificationService.swift
+//  ReceiveLocalNotificationManager.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/03/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReceiveLocalNotificationService: NSObject {
+class ReceiveLocalNotificationManager: NSObject {
     
     func application(application: UIApplication, didReceiveLocalNotification userInfo: [NSObject : AnyObject]) {
         switch userInfo["type"] as! String {

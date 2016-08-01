@@ -15,6 +15,7 @@ protocol AlamofireType {
     var path: String { get }
     var authUser: String { get }
     var authPassword: String { get }
+    
     func get(parameter: Dictionary<String, AnyObject>?, successClosure success: (Dictionary<String, AnyObject>) -> Void, failClosure fail: (NSError) -> Void) -> Void
 //    func post(url: String, parameter: Dictionary<String, AnyObject>?, successClosure success: () -> Void, failClosure fail: (NSError) -> Void) -> Void
 }

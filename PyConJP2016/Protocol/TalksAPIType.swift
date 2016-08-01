@@ -10,7 +10,9 @@ import UIKit
 import RealmSwift
 
 protocol TalksAPIType: AlamofireType {
-    //    func getTalks(parameter: Dictionary<String, AnyObject>?, successClosure success: (NSDictionary) -> Void, failClosure fail: (NSError) -> Void) -> Void
+//    func getTalks(parameter: Dictionary<String, AnyObject>?, successClosure success: ([Talk]) -> Void, failClosure fail: (NSError) -> Void)
+    func getTalks(successClosure success: () -> Void, failClosure fail: (NSError) -> Void)
+    func getTalksFromLocalDummyJson(successClosure success: () -> Void, failClosure fail: (NSError) -> Void)
 }
 
 extension TalksAPIType {

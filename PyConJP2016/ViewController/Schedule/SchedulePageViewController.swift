@@ -20,15 +20,7 @@ class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol
         self.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: {done in })
         
         self.dataSource = self.scheduleModelController
-//        getTalksFromLocalDummyJson(successClosure: {
-        getTalks(successClosure: { [weak self]() in
-            //TODO 何かしらのNotification
-//            self?.scheduleModelViewProtocol?.loadData()
-//            startingViewController.refresh()
-            NSNotificationCenter.defaultCenter().postNotificationName(AppConfig.PCJCompleteFetchDataNotification, object: nil)
-        }) {(error) in
-            self.showErrorAlartWith(error, parent: self)
-        }
+        
     }
     
     var _scheduleModelController: ScheduleModelController? = nil
@@ -67,7 +59,7 @@ class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol
     }
     
     private func movePage(index: Int, direction: UIPageViewControllerNavigationDirection) {
-        let viewController: ScheduleListViewController = scheduleModelController.viewControllerAtIndex(index, storyboard: self.storyboard!)!
+        let viewController = scheduleModelController.viewControllerAtIndex(index, storyboard: self.storyboard!)!
         let viewControllers = [viewController]
         self.setViewControllers(viewControllers, direction: direction, animated: true, completion: {done in})
     }

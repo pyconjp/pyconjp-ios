@@ -23,9 +23,6 @@
 		7FBC34CF1D40F956002919B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34CE1D40F956002919B1 /* AppDelegate.swift */; };
 		7FBC34D11D40F98D002919B1 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34D01D40F98D002919B1 /* AppConfig.swift */; };
 		7FC773BF1D126A1600F5A202 /* ScheduleListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC773BE1D126A1600F5A202 /* ScheduleListDataSource.swift */; };
-		7FE830F71C97FA390076C079 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE830F61C97FA390076C079 /* LocalNotificationManager.swift */; };
-		7FE830FC1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE830FB1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift */; };
-		7FF4B0F11C990383001438C6 /* TalkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF4B0F01C990383001438C6 /* TalkService.swift */; };
 		7FFB73331C914FB4006FB375 /* SponsorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFB73321C914FB4006FB375 /* SponsorListViewController.swift */; };
 		7FFB733E1C915B6E006FB375 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFB733D1C915B6D006FB375 /* MapViewController.swift */; };
 		7FFB73401C9162C2006FB375 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFB733F1C9162C2006FB375 /* MapKit.framework */; };
@@ -35,6 +32,8 @@
 		C832600FD904D3FFADAA174C /* Pods_PyConJP2016.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7952AFBF6B014E7BBED90FE3 /* Pods_PyConJP2016.framework */; };
 		DB0159D21D4DB7B500B17018 /* PCJSFSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0159D01D4DB7B500B17018 /* PCJSFSafariViewController.swift */; };
 		DB0159D31D4DB7B500B17018 /* PCJWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0159D11D4DB7B500B17018 /* PCJWKWebViewController.swift */; };
+		DB0206881D4FB8430067C94B /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0206851D4FB8430067C94B /* LocalNotificationManager.swift */; };
+		DB0206891D4FB8430067C94B /* ReceiveLocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0206861D4FB8430067C94B /* ReceiveLocalNotificationManager.swift */; };
 		DB0A81651D463A4E0048ACB4 /* DummyTalks.json in Resources */ = {isa = PBXBuildFile; fileRef = DB0A81641D463A4E0048ACB4 /* DummyTalks.json */; };
 		DB0A81671D463A710048ACB4 /* DummyTalkDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = DB0A81661D463A710048ACB4 /* DummyTalkDetail.json */; };
 		DB1347DC1CC7DEDF00CA0539 /* AlamofireType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */; };
@@ -98,9 +97,6 @@
 		7FBC34CE1D40F956002919B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FBC34D01D40F98D002919B1 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		7FC773BE1D126A1600F5A202 /* ScheduleListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListDataSource.swift; sourceTree = "<group>"; };
-		7FE830F61C97FA390076C079 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
-		7FE830FB1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveLocalNotificationService.swift; sourceTree = "<group>"; };
-		7FF4B0F01C990383001438C6 /* TalkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkService.swift; sourceTree = "<group>"; };
 		7FFB73321C914FB4006FB375 /* SponsorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorListViewController.swift; sourceTree = "<group>"; };
 		7FFB733D1C915B6D006FB375 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7FFB733F1C9162C2006FB375 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -110,6 +106,8 @@
 		B1A81D8527364825FA466121 /* Pods-PyConJP2016Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016Tests/Pods-PyConJP2016Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB0159D01D4DB7B500B17018 /* PCJSFSafariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJSFSafariViewController.swift; sourceTree = "<group>"; };
 		DB0159D11D4DB7B500B17018 /* PCJWKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJWKWebViewController.swift; sourceTree = "<group>"; };
+		DB0206851D4FB8430067C94B /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		DB0206861D4FB8430067C94B /* ReceiveLocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveLocalNotificationManager.swift; sourceTree = "<group>"; };
 		DB0A81641D463A4E0048ACB4 /* DummyTalks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyTalks.json; sourceTree = "<group>"; };
 		DB0A81661D463A710048ACB4 /* DummyTalkDetail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyTalkDetail.json; sourceTree = "<group>"; };
 		DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireType.swift; sourceTree = "<group>"; };
@@ -228,23 +226,6 @@
 			path = Schedule;
 			sourceTree = "<group>";
 		};
-		7FE830F51C97FA210076C079 /* Notification */ = {
-			isa = PBXGroup;
-			children = (
-				7FE830F61C97FA390076C079 /* LocalNotificationManager.swift */,
-				7FE830FB1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift */,
-			);
-			path = Notification;
-			sourceTree = "<group>";
-		};
-		7FF4B0EF1C99035F001438C6 /* Talk */ = {
-			isa = PBXGroup;
-			children = (
-				7FF4B0F01C990383001438C6 /* TalkService.swift */,
-			);
-			path = Talk;
-			sourceTree = "<group>";
-		};
 		BB6F29A77E8682EFE6C9DA97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +242,23 @@
 				DB0159D11D4DB7B500B17018 /* PCJWKWebViewController.swift */,
 			);
 			path = WebView;
+			sourceTree = "<group>";
+		};
+		DB0206831D4FB8430067C94B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				DB0206841D4FB8430067C94B /* Notification */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		DB0206841D4FB8430067C94B /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				DB0206851D4FB8430067C94B /* LocalNotificationManager.swift */,
+				DB0206861D4FB8430067C94B /* ReceiveLocalNotificationManager.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		DB0A81631D463A4E0048ACB4 /* Resource */ = {
@@ -315,7 +313,7 @@
 				DBA1C0DA1C722E77004F0C8D /* Model */,
 				DBF32BB31CD48C4C004E7F3B /* Extension */,
 				DB1347DA1CC7DECF00CA0539 /* Protocol */,
-				DBAD5BBA1C95B54E004B71B3 /* Service */,
+				DB0206831D4FB8430067C94B /* Manager */,
 				DBA1C0DB1C722E82004F0C8D /* ViewController */,
 				DBA1C0DC1C722E99004F0C8D /* Storyboard */,
 				DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */,
@@ -378,15 +376,6 @@
 				DBDE0E7B1C8C19F50094BF36 /* More.storyboard */,
 			);
 			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		DBAD5BBA1C95B54E004B71B3 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				7FF4B0EF1C99035F001438C6 /* Talk */,
-				7FE830F51C97FA210076C079 /* Notification */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		DBC748161C7624CB00895D4A /* Base */ = {
@@ -675,18 +664,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0206891D4FB8430067C94B /* ReceiveLocalNotificationManager.swift in Sources */,
 				7F6879031D41BE28003D5742 /* ArrayExtention.swift in Sources */,
 				DB1579DC1C7A154B00A5F5BA /* Level.swift in Sources */,
 				7FFD33301C8D84BA000494E7 /* ScheduleListTableViewCell.swift in Sources */,
+				DB0206881D4FB8430067C94B /* LocalNotificationManager.swift in Sources */,
 				DB0159D31D4DB7B500B17018 /* PCJWKWebViewController.swift in Sources */,
-				7FE830F71C97FA390076C079 /* LocalNotificationManager.swift in Sources */,
 				DB1347DE1CCB092000CA0539 /* TalksAPIType.swift in Sources */,
 				7F82F6A01C8D4B62004EAC0E /* SchedulePageViewController.swift in Sources */,
 				DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */,
 				7F2878F61D460078003D65B1 /* TalkDetailAPIType.swift in Sources */,
 				7F82F6A41C8D4BF9004EAC0E /* ScheduleDateViewController.swift in Sources */,
 				DB1347DC1CC7DEDF00CA0539 /* AlamofireType.swift in Sources */,
-				7FE830FC1C97FD4F0076C079 /* ReceiveLocalNotificationService.swift in Sources */,
 				7FBC34CC1D40DABC002919B1 /* Timeline.swift in Sources */,
 				7F6331A11C912EB400B5CB00 /* SponsorCollectionViewCell.swift in Sources */,
 				7FFB73331C914FB4006FB375 /* SponsorListViewController.swift in Sources */,
@@ -697,7 +686,6 @@
 				DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */,
 				7FBC34CF1D40F956002919B1 /* AppDelegate.swift in Sources */,
 				7FFB733E1C915B6E006FB375 /* MapViewController.swift in Sources */,
-				7FF4B0F11C990383001438C6 /* TalkService.swift in Sources */,
 				DB1579DE1C7A157C00A5F5BA /* Speaker.swift in Sources */,
 				DBFB28341D33B02A00EFBC24 /* Talk.swift in Sources */,
 				7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */,
