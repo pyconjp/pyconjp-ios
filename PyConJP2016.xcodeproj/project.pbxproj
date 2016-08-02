@@ -18,6 +18,7 @@
 		7F82F6A41C8D4BF9004EAC0E /* ScheduleDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */; };
 		7F82F6A61C8D4C3D004EAC0E /* ScheduleBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A51C8D4C3D004EAC0E /* ScheduleBaseViewController.swift */; };
 		7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A71C8D4CF3004EAC0E /* ScheduleListViewController.swift */; };
+		7F8443CE1D50320400A0BCBA /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8443CD1D50320400A0BCBA /* UIViewExtention.swift */; };
 		7FA9228C1CD0BD8F0057136D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9228B1CD0BD8F0057136D /* Category.swift */; };
 		7FBC34CC1D40DABC002919B1 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34CB1D40DABC002919B1 /* Timeline.swift */; };
 		7FBC34CF1D40F956002919B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34CE1D40F956002919B1 /* AppDelegate.swift */; };
@@ -92,6 +93,7 @@
 		7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDateViewController.swift; sourceTree = "<group>"; };
 		7F82F6A51C8D4C3D004EAC0E /* ScheduleBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleBaseViewController.swift; sourceTree = "<group>"; };
 		7F82F6A71C8D4CF3004EAC0E /* ScheduleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListViewController.swift; sourceTree = "<group>"; };
+		7F8443CD1D50320400A0BCBA /* UIViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
 		7FA9228B1CD0BD8F0057136D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		7FBC34CB1D40DABC002919B1 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		7FBC34CE1D40F956002919B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 				DBFAEC541D3CF7AD00BCC880 /* NSDateExtension.swift */,
 				7F6879021D41BE28003D5742 /* ArrayExtention.swift */,
 				7F6879041D420626003D5742 /* StringExtention.swift */,
+				7F8443CD1D50320400A0BCBA /* UIViewExtention.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 				DBEBDB481C8C89FC002B25B3 /* MoreViewController.swift in Sources */,
 				DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */,
 				7FBC34CF1D40F956002919B1 /* AppDelegate.swift in Sources */,
+				7F8443CE1D50320400A0BCBA /* UIViewExtention.swift in Sources */,
 				7FFB733E1C915B6E006FB375 /* MapViewController.swift in Sources */,
 				DB1579DE1C7A157C00A5F5BA /* Speaker.swift in Sources */,
 				DBFB28341D33B02A00EFBC24 /* Talk.swift in Sources */,

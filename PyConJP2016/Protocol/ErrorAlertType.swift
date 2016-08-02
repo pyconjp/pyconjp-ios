@@ -22,7 +22,7 @@ extension ErrorAlertType {
             return viewController!
         }
         
-        let alert = UIAlertController(title: "hogehoge", message: "fugafuga", preferredStyle: .Alert)
+        let alert = UIAlertController(title: error.localizedFailureReason, message: error.localizedRecoverySuggestion, preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         rootViewController.presentViewController(alert, animated: true, completion: nil)
     }
