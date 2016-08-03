@@ -109,14 +109,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0v-8z-vLL">
-                                <rect key="frame" x="20" y="30" width="560" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ml7-yL-sG0">
+                                <rect key="frame" x="15" y="30" width="570" height="73.5"/>
+                                <string key="text">〒169-8555
+東京都新宿区大久保3-4-1
+早稲田大学西早稲田キャンパス</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" address="YES"/>
+                            </textView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ht7-xk-tUc">
-                                <rect key="frame" x="20" y="50" width="560" height="530"/>
+                                <rect key="frame" x="15" y="103" width="570" height="481.5"/>
                                 <connections>
                                     <outlet property="delegate" destination="hpc-Y6-di0" id="HLG-UC-7W4"/>
                                 </connections>
@@ -124,18 +127,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="n0v-8z-vLL" firstAttribute="leading" secondItem="Gub-8Q-x2b" secondAttribute="leading" constant="20" id="4aP-d2-qkR"/>
-                            <constraint firstItem="ht7-xk-tUc" firstAttribute="leading" secondItem="Gub-8Q-x2b" secondAttribute="leading" constant="20" id="56k-wU-cfH"/>
-                            <constraint firstAttribute="trailing" secondItem="n0v-8z-vLL" secondAttribute="trailing" constant="20" id="ItF-XX-tHs"/>
-                            <constraint firstItem="ht7-xk-tUc" firstAttribute="top" secondItem="n0v-8z-vLL" secondAttribute="bottom" constant="20" id="Knu-Vp-CRB"/>
-                            <constraint firstItem="n0v-8z-vLL" firstAttribute="top" secondItem="BsD-5t-hhM" secondAttribute="bottom" constant="10" id="LDA-dY-Wwr"/>
-                            <constraint firstItem="t8r-pm-83N" firstAttribute="top" secondItem="ht7-xk-tUc" secondAttribute="bottom" constant="20" id="eaI-iw-NtW"/>
-                            <constraint firstAttribute="trailing" secondItem="ht7-xk-tUc" secondAttribute="trailing" constant="20" id="yAL-JO-rQZ"/>
+                            <constraint firstItem="Ml7-yL-sG0" firstAttribute="leading" secondItem="Gub-8Q-x2b" secondAttribute="leading" constant="15" id="3ms-7F-iVl"/>
+                            <constraint firstItem="ht7-xk-tUc" firstAttribute="leading" secondItem="Gub-8Q-x2b" secondAttribute="leading" constant="15" id="56k-wU-cfH"/>
+                            <constraint firstItem="Ml7-yL-sG0" firstAttribute="top" secondItem="BsD-5t-hhM" secondAttribute="bottom" constant="10" id="902-4Q-XDc"/>
+                            <constraint firstAttribute="trailing" secondItem="Ml7-yL-sG0" secondAttribute="trailing" constant="15" id="Ofb-R4-BGN"/>
+                            <constraint firstItem="t8r-pm-83N" firstAttribute="top" secondItem="ht7-xk-tUc" secondAttribute="bottom" constant="15" id="eaI-iw-NtW"/>
+                            <constraint firstItem="ht7-xk-tUc" firstAttribute="top" secondItem="Ml7-yL-sG0" secondAttribute="bottom" id="mr2-BS-xih"/>
+                            <constraint firstAttribute="trailing" secondItem="ht7-xk-tUc" secondAttribute="trailing" constant="15" id="yAL-JO-rQZ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addressLabel" destination="n0v-8z-vLL" id="GnA-OS-P4Z"/>
                         <outlet property="mapView" destination="ht7-xk-tUc" id="eQU-1q-66Q"/>
+                        <outlet property="textView" destination="Ml7-yL-sG0" id="RCN-g0-mZA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Knx-6w-c0q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -250,7 +253,9 @@
                             <constraint firstAttribute="trailing" secondItem="HEv-8u-Vu4" secondAttribute="trailing" id="lTZ-zw-GpK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hD4-75-OI6"/>
+                    <navigationItem key="navigationItem" id="hD4-75-OI6">
+                        <barButtonItem key="backBarButtonItem" title=" " id="uuG-FK-HDd"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="HEv-8u-Vu4" id="sSj-vz-QcO"/>
                     </connections>

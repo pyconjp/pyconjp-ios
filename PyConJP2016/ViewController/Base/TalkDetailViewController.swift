@@ -53,7 +53,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
         refreshControl.addTarget(self, action: #selector(TalkDetailViewController.refresh(_:)), forControlEvents: .ValueChanged)
         baseScrollView.addSubview(refreshControl)
         
-//        refreshControl.beginRefreshing()
+        refreshControl.beginRefreshing()
         getDetail()
 
     }
@@ -84,11 +84,11 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
         periodTimeLabel.text = talkDetail.talkObject.periodTime
         
         placeLabel.text = talkDetail.talkObject.place
-        hashTagButton.setTitle("#pyconjp\(talkDetail.talkObject.place)", forState: .Normal)
+        hashTagButton.setTitle("#pyconjp\(talkDetail.talkObject.placeNumber)", forState: .Normal)
         
         speakerNameLabel.text = talkDetail.talkObject.speakers
         
-        languageLabel.text = talkDetail.talkObject.languageName()
+        languageLabel.text = talkDetail.talkObject.languageName
         levelLabel.text = talkDetail.level
         categoryLabel.text = talkDetail.talkObject.category
         
@@ -112,9 +112,9 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     
     @IBAction func onHashTagButton(sender: UIButton) {
 
-        var hashTag = "pyconjp"
-        if let talkDetail = talkDetail, roomNumber = talkDetail.talkObject.place .componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet).last {
-            hashTag.appendContentsOf(roomNumber)
+        var  hashTag = "pyconjp"
+        if let talkDetail = talkDetail {
+            hashTag.appendContentsOf(talkDetail.talkObject.placeNumber)
         }
         
         if UIApplication.sharedApplication().canOpenURL(NSURL(string: "twitter://")!) {

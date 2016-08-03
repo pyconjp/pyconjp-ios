@@ -362,8 +362,8 @@
 			children = (
 				DBC748161C7624CB00895D4A /* Base */,
 				7F67D1F71C8D4AD2001C8F9C /* Schedule */,
-				DB0159CF1D4DB7B500B17018 /* WebView */,
 				DBDE0E7A1C8C19CB0094BF36 /* More */,
+				DB0159CF1D4DB7B500B17018 /* WebView */,
 			);
 			name = ViewController;
 			path = PyConJP2016/ViewController;

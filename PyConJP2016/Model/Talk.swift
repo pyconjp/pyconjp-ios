@@ -80,7 +80,9 @@ class TalkObject: Object {
         id = dictionary["id"] as? Int ?? 0
         title =  dictionary["title"] as? String ?? ""
         descriptionText = dictionary["description"] as? String ?? ""
-        speakers = (dictionary["speakers"] as? [String] ?? []).reduce("") { $0 + $1 + ", " }
+        speakers = (dictionary["speakers"] as? [String] ?? []).enumerate().reduce("") {
+            $0 + $1.element + ((dictionary["speakers"] as? [String] ?? []).count - 1 == $1.index ? "" : ", ")
+        }
         date = NSDate.dateFromString((dictionary["day"] as? String ?? "") + " " + (dictionary["start"] as? String ?? ""))
         day = dictionary["day"] as? String ?? ""
         startTime = dictionary["start"] as? String ?? ""
@@ -95,7 +97,7 @@ class TalkObject: Object {
         return "id"
     }
     
-    func languageName() -> String {
+    var languageName: String {
         switch language {
         case "ja":
             return "Japanese"
@@ -104,6 +106,11 @@ class TalkObject: Object {
         default:
             return ""
         }
+    }
+    
+    var placeNumber: String {
+        guard let placeNumber = self.place.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet).last else { return "" }
+        return placeNumber
     }
     
 }

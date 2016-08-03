@@ -12,10 +12,8 @@ extension UIViewController {
   func topMostViewController() -> UIViewController {
     if let presentedViewController = self.presentedViewController {
       return presentedViewController.topMostViewController()
-    }
-    else {
-      for view in self.view.subviews
-      {
+    } else {
+      for view in self.view.subviews {
         if let subViewController = view.nextResponder() {
           if subViewController is UIViewController {
             let viewController = subViewController as! UIViewController
