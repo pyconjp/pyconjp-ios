@@ -10,7 +10,7 @@ import UIKit
 
 class ScheduleModelController: NSObject, UIPageViewControllerDataSource {
 
-    let days: Array<String> = ["2016-09-21", "2016-09-22"]
+    let days: Array<PyConJPDate> = PyConJPDate.confarenceDate()
     
     override init() {
         super.init()
@@ -22,21 +22,20 @@ class ScheduleModelController: NSObject, UIPageViewControllerDataSource {
             return nil
         }
         
-        let scheduleListViewController = storyboard.instantiateViewControllerWithIdentifier("ScheduleListViewController") as! ScheduleListViewController
-        scheduleListViewController.day = days[index]
-        scheduleListViewController.viewControllerIndex = index
+        let scheduleListViewController = ScheduleListViewController.build(index, storyboard: storyboard, pyconJPDate: days[index])
         return scheduleListViewController
         
     }
     
-    func indexOfViewController(viewController: ScheduleListViewController) -> Int {
-        return days.indexOf(viewController.day) ?? NSNotFound
+    func indexOfViewController(viewController: UIViewController) -> Int {
+        guard let viewController = viewController as? ScheduleListViewController, pyconJPDate = viewController.pyconJPDate else { return NSNotFound }
+        return days.indexOf(pyconJPDate) ?? NSNotFound
     }
     
     // MARK: - Page View Controller Data Source
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        var index = self.indexOfViewController(viewController as! ScheduleListViewController)
+        var index = self.indexOfViewController(viewController)
         if (index == 0) || (index == NSNotFound) {
             return nil
         }
@@ -46,7 +45,7 @@ class ScheduleModelController: NSObject, UIPageViewControllerDataSource {
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        var index = self.indexOfViewController(viewController as! ScheduleListViewController)
+        var index = self.indexOfViewController(viewController)
         if index == NSNotFound {
             return nil
         }

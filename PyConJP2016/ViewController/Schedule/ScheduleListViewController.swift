@@ -13,13 +13,21 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
     @IBOutlet weak var tableView: UITableView!
     
     var viewControllerIndex: Int = 0
-    var day: String = ""
+    var pyconJPDate: PyConJPDate?
     
     let scheduleListDataSource = ScheduleListDataSource()
     
     let refreshControl = UIRefreshControl()
     
     let reuseIdentifier = "ScheduleListTableViewCell"
+    
+    class func build(index: Int,storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ScheduleListViewController {
+        let scheduleListViewController = storyboard.instantiateViewControllerWithIdentifier("ScheduleListViewController") as! ScheduleListViewController
+        scheduleListViewController.viewControllerIndex = index
+        scheduleListViewController.pyconJPDate = pyconJPDate
+
+        return scheduleListViewController
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +72,8 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
     }
     
     func refresh() {
-        scheduleListDataSource.refreshData(day)
+        guard let pyconJPDate = pyconJPDate else { return }
+        scheduleListDataSource.refreshData(pyconJPDate)
         dispatch_async(dispatch_get_main_queue()) {
             self.tableView.reloadData()
             if !self.scheduleListDataSource.timelines.isEmpty {
