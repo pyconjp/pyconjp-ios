@@ -9,23 +9,17 @@
 import UIKit
 
 class MoreViewController: UITableViewController {
-
-//    @IBOutlet weak var tableView: UITableView!
-    
-//    let moreDataSource = MoreDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        tableView.dataSource = moreDataSource
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-//        if let indexPath = tableView.indexPathForSelectedRow {
-//            tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//        }
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
     }
     
     // MARK: - Table View Controller Delegate
@@ -35,28 +29,31 @@ class MoreViewController: UITableViewController {
         case .About:
             switch indexPath.row {
             case 0:
-                let aboutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("AboutViewController")
+                let aboutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("WhatPyConJPViewController")
                 self.navigationController?.pushViewController(aboutViewController!, animated: true)
             case 1:
-                break
+                let aboutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("AboutViewController")
+                self.navigationController?.pushViewController(aboutViewController!, animated: true)
             default:
                 break
             }
         case .Map:
             switch indexPath.row {
             case 0:
-                break
+                let mapViewController = MapViewController.build(MapViewController.Venue.Waseda)
+                self.navigationController?.pushViewController(mapViewController, animated: true)
             case 1:
-                break
+                let mapViewController = MapViewController.build(MapViewController.Venue.Microsoft)
+                self.navigationController?.pushViewController(mapViewController, animated: true)
             default:
                 break
             }
-//            let mapViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController
-//            self.navigationController?.pushViewController(mapViewController, animated: true)
         case .Application:
             switch indexPath.row {
             case 0:
-                break
+                let webViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("PCJWKWebViewController") as! PCJWKWebViewController
+                webViewController.url = "https://github.com/pyconjp/pyconjp-ios"
+                self.navigationController?.pushViewController(webViewController, animated: true)
             case 1:
                 break
             case 2:
@@ -64,9 +61,6 @@ class MoreViewController: UITableViewController {
             default:
                 break
             }
-//            let webViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("PCJWKWebViewController") as! PCJWKWebViewController
-//            webViewController.url = "https://github.com/pyconjp/pyconjp-ios"
-//            self.navigationController?.pushViewController(webViewController, animated: true)
         }
     }
 

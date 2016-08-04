@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vCT-82-8T9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--More-->
@@ -39,38 +38,54 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Z9-t6-3WX" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="469"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="506"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Eq8-oW-zBA">
-                                                <rect key="frame" x="120" y="30" width="360" height="360"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Eq8-oW-zBA" secondAttribute="height" multiplier="1:1" id="cYX-jv-Fgz"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDD-IK-eRY">
-                                                <rect key="frame" x="15" y="420" width="54" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDD-IK-eRY">
+                                                <rect key="frame" x="15" y="15" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3V-yD-yYQ">
-                                                <rect key="frame" x="15" y="454" width="570" height="0.0"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3V-yD-yYQ">
+                                                <rect key="frame" x="15" y="25" width="570" height="466"/>
+                                                <string key="text">
+チュートリアル	2016年9月20(火)
+カンファレンス	2016年9月21(水)、22(木・祝)
+開発スプリント	2016年9月23(金)、24(土)
+会場	早稲田大学西早稲田キャンパス
+テーマ	Everyone's different, all are wonderful.
+参加者数(予定)	700
+参加費	
+Patron 20,000円
+Business 15,000円(Early Bird 12,000円)
+Personal 10,000円(Early Bird 8,000円)
+Student 5,000円(without After-Party 2,000円)
+詳細: PyCon JP 2016 への参加登録
+
+運営	PyCon JP 実行委員会 PyCon JP 2016 運営チーム
+連絡先	2016@pycon.jp
+運営情報
+PyCon JP 2016 は PyCon JP 実行委員会 PyCon JP 2016 運営チームによって運営されています。
+
+座長	鈴木 たかのり
+Webサイト	http://www.pycon.jp/
+連絡先	2016@pycon.jp
+主催: 一般社団法人PyCon JP
+
+共催: 早稲田大学グローバルソフトウェアエンジニアリング研究所</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="vDD-IK-eRY" firstAttribute="top" secondItem="Eq8-oW-zBA" secondAttribute="bottom" constant="30" id="1bz-Fp-juy"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vDD-IK-eRY" secondAttribute="trailing" constant="15" id="0AX-vC-6jo"/>
                                             <constraint firstAttribute="bottom" secondItem="Q3V-yD-yYQ" secondAttribute="bottom" constant="15" id="4bm-mh-ITX"/>
-                                            <constraint firstItem="Eq8-oW-zBA" firstAttribute="leading" secondItem="4Z9-t6-3WX" secondAttribute="leading" constant="120" id="GLk-6z-HXA"/>
                                             <constraint firstAttribute="trailing" secondItem="Q3V-yD-yYQ" secondAttribute="trailing" constant="15" id="Gct-Nb-WJr"/>
                                             <constraint firstItem="Q3V-yD-yYQ" firstAttribute="top" secondItem="vDD-IK-eRY" secondAttribute="bottom" constant="10" id="LTo-dm-ga3"/>
-                                            <constraint firstItem="Eq8-oW-zBA" firstAttribute="top" secondItem="4Z9-t6-3WX" secondAttribute="top" constant="30" id="QVe-8n-nvE"/>
                                             <constraint firstItem="Q3V-yD-yYQ" firstAttribute="leading" secondItem="4Z9-t6-3WX" secondAttribute="leading" constant="15" id="Tgc-OA-tPj"/>
                                             <constraint firstItem="vDD-IK-eRY" firstAttribute="leading" secondItem="4Z9-t6-3WX" secondAttribute="leading" constant="15" id="Wzv-Kt-v3m"/>
-                                            <constraint firstAttribute="trailing" secondItem="Eq8-oW-zBA" secondAttribute="trailing" constant="120" id="bgx-TP-Xem"/>
+                                            <constraint firstItem="vDD-IK-eRY" firstAttribute="top" secondItem="4Z9-t6-3WX" secondAttribute="top" constant="15" id="XFR-Ay-QuP"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -110,16 +125,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ml7-yL-sG0">
-                                <rect key="frame" x="15" y="30" width="570" height="74"/>
-                                <string key="text">〒169-8555
-東京都新宿区大久保3-4-1
-早稲田大学西早稲田キャンパス</string>
+                                <rect key="frame" x="15" y="30" width="570" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" address="YES"/>
                             </textView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ht7-xk-tUc">
-                                <rect key="frame" x="15" y="103" width="570" height="482"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ht7-xk-tUc">
+                                <rect key="frame" x="15" y="66" width="570" height="519"/>
                                 <connections>
                                     <outlet property="delegate" destination="hpc-Y6-di0" id="HLG-UC-7W4"/>
                                 </connections>
@@ -213,19 +225,19 @@
             </objects>
             <point key="canvasLocation" x="3745" y="1209"/>
         </scene>
-        <!--Table View Controller-->
+        <!--More View Controller-->
         <scene sceneID="nLO-Iz-h5u">
             <objects>
-                <tableViewController id="is5-HJ-jbp" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MoreViewController" id="is5-HJ-jbp" customClass="MoreViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="a8M-T6-scV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
-                            <tableViewSection footerTitle=" " id="wH9-cs-78M">
+                            <tableViewSection headerTitle=" " footerTitle=" " id="wH9-cs-78M">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="uwO-ra-bUh" style="IBUITableViewCellStyleDefault" id="E0P-zY-b2c">
-                                        <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E0P-zY-b2c" id="Bq4-f8-IHa">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -242,7 +254,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="mBD-f5-xKD" style="IBUITableViewCellStyleDefault" id="1No-Pm-SHq">
-                                        <rect key="frame" x="0.0" y="108" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1No-Pm-SHq" id="h8E-y6-u9P">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -262,15 +274,15 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="会場情報" footerTitle=" " id="OVX-Ci-m6R">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="hoO-0c-K2E" style="IBUITableViewCellStyleDefault" id="eYg-QM-F1g">
-                                        <rect key="frame" x="0.0" y="208" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="hoO-0c-K2E" style="IBUITableViewCellStyleDefault" id="eYg-QM-F1g">
+                                        <rect key="frame" x="0.0" y="236" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eYg-QM-F1g" id="uC8-jp-w8F">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="チュートリアル・カンファレンス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="hoO-0c-K2E">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -279,15 +291,15 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="J3n-hJ-8rS" style="IBUITableViewCellStyleDefault" id="yVv-mH-j4E">
-                                        <rect key="frame" x="0.0" y="252" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="J3n-hJ-8rS" style="IBUITableViewCellStyleDefault" id="yVv-mH-j4E">
+                                        <rect key="frame" x="0.0" y="280" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yVv-mH-j4E" id="Y67-dH-LtB">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="開発スプリント" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="J3n-hJ-8rS">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -300,15 +312,15 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="このアプリについて" id="FgW-wC-612">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="PYC-kg-am7" style="IBUITableViewCellStyleDefault" id="vk8-QR-1bo">
-                                        <rect key="frame" x="0.0" y="352" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="PYC-kg-am7" style="IBUITableViewCellStyleDefault" id="vk8-QR-1bo">
+                                        <rect key="frame" x="0.0" y="380" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vk8-QR-1bo" id="CaG-Ii-e66">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="リポジトリ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PYC-kg-am7">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -317,15 +329,15 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Mrt-oQ-gLO" style="IBUITableViewCellStyleDefault" id="dvE-FL-22b">
-                                        <rect key="frame" x="0.0" y="396" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Mrt-oQ-gLO" style="IBUITableViewCellStyleDefault" id="dvE-FL-22b">
+                                        <rect key="frame" x="0.0" y="424" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dvE-FL-22b" id="VHc-lk-mfH">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="ライブラリ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mrt-oQ-gLO">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -334,15 +346,15 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="YPP-Wn-fR4" style="IBUITableViewCellStyleDefault" id="AIA-8U-9I1">
-                                        <rect key="frame" x="0.0" y="440" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="YPP-Wn-fR4" style="IBUITableViewCellStyleDefault" id="AIA-8U-9I1">
+                                        <rect key="frame" x="0.0" y="468" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AIA-8U-9I1" id="Mst-YC-bSU">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="ライセンス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YPP-Wn-fR4">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -356,18 +368,110 @@
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="is5-HJ-jbp" id="shN-Za-Abf"/>
-                            <outlet property="delegate" destination="is5-HJ-jbp" id="GlN-Ex-vm6"/>
+                            <outlet property="delegate" destination="is5-HJ-jbp" id="P7l-b6-yEG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8fj-00-cY3"/>
+                    <navigationItem key="navigationItem" id="8fj-00-cY3">
+                        <barButtonItem key="backBarButtonItem" title=" " id="atp-H1-RH7"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KET-6k-jD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3028" y="520"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="adS-bb-kCU">
+            <objects>
+                <viewController storyboardIdentifier="WhatPyConJPViewController" id="pWN-DT-OFA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xeB-Rm-HeV"/>
+                        <viewControllerLayoutGuide type="bottom" id="3U3-DD-81f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yke-Xl-DKP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAW-4w-8uo">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ddo-6o-1b4" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLU-Hp-fbd">
+                                                <rect key="frame" x="15" y="15" width="0.0" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmb-E2-P1g">
+                                                <rect key="frame" x="15" y="25" width="570" height="860"/>
+                                                <string key="text">PyCon JPは、Pythonユーザが集まり、PythonやPythonを使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。 PyCon JPの開催を通じて、Pythonの使い手が一堂に集まり、Pythonにまつわる様々な分野の知識や情報を交換し、新たな友達やコミュニティとのつながり、仕事やビジネスチャンスを増やせる場所とすることが目標です。
+
+PyCon JP 2016では、「Everyone's different, all are wonderful.」をテーマに据えました。Pythonをキーワードに多様な人たちが、いろいろ楽しめて、新しい可能性が生まれるカンファレンスを目指して、スタッフ全員で企画を進めています。
+
+今年は、例年好評いただいているチュートリアルやYouth Coder Workshop、ジョブフェアと言った様々なイベントに加え、招待講演などの新しい取り組みも行っていきます。詳細は下記のとおりですので、ぜひご期待ください。
+
+
+招待講演
+『PyCon JP参加者と接点が少ない分野の方々を招待し、参加者と講演者とが交流できる場所を提供する』ことを目的に、招待講演を行います。今回は、早稲田大学でソフトウェア工学の研究されている鷲崎先生と、深層学習フレームワークChainerの開発者である得居さんの講演を予定しています。研究者の方と話してみたいという方は、この機会にぜひ講演を聞きに来てください。
+
+
+Youth Coder Workshop
+PyCon JP 2015から実施している、小学生高学年から高校生を対象としたワークショップです。Pythonを使って様々な『でんのう地図』を作っていく予定です。このワークショップを通じて、便利なプログラミング言語であるPythonを体験してみてください。
+
+
+チュートリアル
+例年ご好評いただいているチュートリアルですが、今年はPython入門者向け、データ分析、ディープラーニング入門、ドキュメンテーションといった分野の講座を設定しています。また、今年はチュートリアルへの参加に、PyCon JP 2016 カンファレンスへの申し込みは必須ではありません。
+
+
+ジョブフェア
+毎年テーマを決めてパネルディスカッション形式で行っています。今年は、サービス開発におけるプロダクトマネジメントや開発チームの多様性などをテーマに据えて検討しております。詳細が決定次第、改めて告知をする予定です。
+
+
+スプリント
+カンファレンス後半の9/23(金),24(土)に行われる、ソフトウェア開発イベントです。開発したいテーマを提案する人と、そのテーマに興味を持った人が集まり、共通の興味をもった沢山の開発者の方と交流をする機会になりますので、ぜひご参加ください。</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Nmb-E2-P1g" secondAttribute="bottom" constant="15" id="Fye-pt-mFc"/>
+                                            <constraint firstItem="KLU-Hp-fbd" firstAttribute="leading" secondItem="Ddo-6o-1b4" secondAttribute="leading" constant="15" id="Rga-tJ-CNQ"/>
+                                            <constraint firstItem="Nmb-E2-P1g" firstAttribute="top" secondItem="KLU-Hp-fbd" secondAttribute="bottom" constant="10" id="Z3N-60-gD7"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KLU-Hp-fbd" secondAttribute="trailing" constant="15" id="Zg8-um-Izc"/>
+                                            <constraint firstAttribute="trailing" secondItem="Nmb-E2-P1g" secondAttribute="trailing" constant="15" id="bTN-Ab-nA6"/>
+                                            <constraint firstItem="KLU-Hp-fbd" firstAttribute="top" secondItem="Ddo-6o-1b4" secondAttribute="top" constant="15" id="bkA-VL-WPU"/>
+                                            <constraint firstItem="Nmb-E2-P1g" firstAttribute="leading" secondItem="Ddo-6o-1b4" secondAttribute="leading" constant="15" id="irg-UG-lG9"/>
+                                            <constraint firstItem="Nmb-E2-P1g" firstAttribute="top" secondItem="KLU-Hp-fbd" secondAttribute="bottom" constant="10" id="jrQ-2S-t6U"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ddo-6o-1b4" firstAttribute="top" secondItem="QAW-4w-8uo" secondAttribute="top" id="ImA-WU-1fR"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ddo-6o-1b4" secondAttribute="bottom" id="VQG-hC-CtD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ddo-6o-1b4" secondAttribute="trailing" id="t29-sA-gkk"/>
+                                    <constraint firstItem="Ddo-6o-1b4" firstAttribute="leading" secondItem="QAW-4w-8uo" secondAttribute="leading" id="vCO-fX-LqF"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="QAW-4w-8uo" secondAttribute="bottom" id="D1m-hz-5CH"/>
+                            <constraint firstAttribute="trailing" secondItem="QAW-4w-8uo" secondAttribute="trailing" id="VO3-yq-4xp"/>
+                            <constraint firstItem="QAW-4w-8uo" firstAttribute="top" secondItem="yke-Xl-DKP" secondAttribute="top" id="iNl-2A-Hrx"/>
+                            <constraint firstItem="QAW-4w-8uo" firstAttribute="leading" secondItem="yke-Xl-DKP" secondAttribute="leading" id="jm7-Al-Eff"/>
+                            <constraint firstItem="Ddo-6o-1b4" firstAttribute="height" secondItem="yke-Xl-DKP" secondAttribute="height" priority="250" id="mqd-Km-AMp"/>
+                            <constraint firstItem="Ddo-6o-1b4" firstAttribute="width" secondItem="yke-Xl-DKP" secondAttribute="width" id="wUg-Wy-9us"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vkF-hR-jCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3745" y="-834"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="60" height="60"/>
         <image name="More" width="36" height="36"/>
         <image name="clock" width="36" height="36"/>
     </resources>

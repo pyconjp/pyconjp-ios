@@ -9,8 +9,6 @@
 import UIKit
 
 class AboutViewController: UIViewController {
-
-    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,11 +8,11 @@
 
 import UIKit
 
-enum PyConJPDate: Int {
-    case Tutorials = 0
-    case Confarence1 = 1
-    case Confarence2 = 2
-    case Sprints = 3
+enum PyConJPDate {
+    case Tutorials
+    case Confarence1
+    case Confarence2
+    case Sprints
     
     var date: String {
         switch self {
@@ -28,6 +28,6 @@ enum PyConJPDate: Int {
     }
     
     static func confarenceDate() -> [PyConJPDate] {
-        return [PyConJPDate(rawValue: 1)!, PyConJPDate(rawValue: 2)!]
+        return [PyConJPDate.Confarence1, PyConJPDate.Confarence2]
     }
 }
