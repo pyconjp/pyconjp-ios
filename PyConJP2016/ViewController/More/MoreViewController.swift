@@ -29,8 +29,8 @@ class MoreViewController: UITableViewController {
         case .About:
             switch indexPath.row {
             case 0:
-                let aboutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("WhatPyConJPViewController")
-                self.navigationController?.pushViewController(aboutViewController!, animated: true)
+                let whatPyConJPViewController = self.storyboard?.instantiateViewControllerWithIdentifier("WhatPyConJPViewController")
+                self.navigationController?.pushViewController(whatPyConJPViewController!, animated: true)
             case 1:
                 let aboutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("AboutViewController")
                 self.navigationController?.pushViewController(aboutViewController!, animated: true)
@@ -40,8 +40,9 @@ class MoreViewController: UITableViewController {
         case .Map:
             switch indexPath.row {
             case 0:
-                let mapViewController = MapViewController.build(MapViewController.Venue.Waseda)
-                self.navigationController?.pushViewController(mapViewController, animated: true)
+                let mapListViewController = MapListViewController.build()
+                self.navigationController?.pushViewController(mapListViewController, animated: true)
+                break
             case 1:
                 let mapViewController = MapViewController.build(MapViewController.Venue.Microsoft)
                 self.navigationController?.pushViewController(mapViewController, animated: true)
@@ -57,7 +58,8 @@ class MoreViewController: UITableViewController {
             case 1:
                 break
             case 2:
-                break
+                let licenseViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LicenseViewController")
+                self.navigationController?.pushViewController(licenseViewController!, animated: true)
             default:
                 break
             }
