@@ -33,6 +33,7 @@
 		7FB4D3091D544333005F314E /* LibraryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3081D544333005F314E /* LibraryListViewController.swift */; };
 		7FB4D30C1D5461C3005F314E /* ScheduleListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D30A1D5461C3005F314E /* ScheduleListTableViewCell.swift */; };
 		7FB4D30D1D5461C3005F314E /* ScheduleListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB4D30B1D5461C3005F314E /* ScheduleListTableViewCell.xib */; };
+		7FB4D3101D546269005F314E /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D30F1D546269005F314E /* CustomImageView.swift */; };
 		7FBC34CF1D40F956002919B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34CE1D40F956002919B1 /* AppDelegate.swift */; };
 		7FBC34D11D40F98D002919B1 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34D01D40F98D002919B1 /* AppConfig.swift */; };
 		7FC773BF1D126A1600F5A202 /* ScheduleListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC773BE1D126A1600F5A202 /* ScheduleListDataSource.swift */; };
@@ -112,6 +113,7 @@
 		7FB4D3081D544333005F314E /* LibraryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryListViewController.swift; sourceTree = "<group>"; };
 		7FB4D30A1D5461C3005F314E /* ScheduleListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListTableViewCell.swift; sourceTree = "<group>"; };
 		7FB4D30B1D5461C3005F314E /* ScheduleListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleListTableViewCell.xib; sourceTree = "<group>"; };
+		7FB4D30F1D546269005F314E /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		7FBC34CE1D40F956002919B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FBC34D01D40F98D002919B1 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		7FC773BE1D126A1600F5A202 /* ScheduleListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListDataSource.swift; sourceTree = "<group>"; };
@@ -242,6 +244,14 @@
 			path = More;
 			sourceTree = "<group>";
 		};
+		7FB4D30E1D546240005F314E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7FB4D30F1D546269005F314E /* CustomImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7FBC34CD1D40F956002919B1 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +367,7 @@
 				DB1347DA1CC7DECF00CA0539 /* Protocol */,
 				DB0206831D4FB8430067C94B /* Manager */,
 				DBA1C0DB1C722E82004F0C8D /* ViewController */,
+				7FB4D30E1D546240005F314E /* View */,
 				DBA1C0DC1C722E99004F0C8D /* Storyboard */,
 				DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */,
 				DBA1C0B81C7228E2004F0C8D /* Info.plist */,
@@ -732,6 +743,7 @@
 				DBF32BB51CD48C4C004E7F3B /* AppDelegateExtention.swift in Sources */,
 				7F7B50951D138E66000AC1B3 /* MoreDataSource.swift in Sources */,
 				DBB2538B1CCB700400AA17C8 /* UIColorExtension.swift in Sources */,
+				7FB4D3101D546269005F314E /* CustomImageView.swift in Sources */,
 				7F1CBE9F1D52CAFA007C058D /* Place.swift in Sources */,
 				7F82F6A21C8D4B9A004EAC0E /* ScheduleModelController.swift in Sources */,
 				7FB4D3031D542DD2005F314E /* FloorMapListViewController.swift in Sources */,
