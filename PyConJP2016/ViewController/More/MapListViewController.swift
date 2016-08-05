@@ -40,5 +40,4 @@ class MapListViewController: UITableViewController {
         case Floor = 1
     }
 
-
 }

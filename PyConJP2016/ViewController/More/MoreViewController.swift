@@ -42,7 +42,6 @@ class MoreViewController: UITableViewController {
             case 0:
                 let mapListViewController = MapListViewController.build()
                 self.navigationController?.pushViewController(mapListViewController, animated: true)
-                break
             case 1:
                 let mapViewController = MapViewController.build(MapViewController.Venue.Microsoft)
                 self.navigationController?.pushViewController(mapViewController, animated: true)

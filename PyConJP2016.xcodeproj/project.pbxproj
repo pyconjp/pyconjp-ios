@@ -28,6 +28,9 @@
 		7F82F6A61C8D4C3D004EAC0E /* ScheduleBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A51C8D4C3D004EAC0E /* ScheduleBaseViewController.swift */; };
 		7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A71C8D4CF3004EAC0E /* ScheduleListViewController.swift */; };
 		7F8443CE1D50320400A0BCBA /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8443CD1D50320400A0BCBA /* UIViewExtention.swift */; };
+		7FB4D3031D542DD2005F314E /* FloorMapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3021D542DD2005F314E /* FloorMapListViewController.swift */; };
+		7FB4D3051D5433CA005F314E /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */; };
+		7FB4D3071D5434E2005F314E /* FloorMapImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3061D5434E2005F314E /* FloorMapImageViewController.swift */; };
 		7FBC34CF1D40F956002919B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34CE1D40F956002919B1 /* AppDelegate.swift */; };
 		7FBC34D11D40F98D002919B1 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34D01D40F98D002919B1 /* AppConfig.swift */; };
 		7FC773BF1D126A1600F5A202 /* ScheduleListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC773BE1D126A1600F5A202 /* ScheduleListDataSource.swift */; };
@@ -105,6 +108,9 @@
 		7F82F6A51C8D4C3D004EAC0E /* ScheduleBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleBaseViewController.swift; sourceTree = "<group>"; };
 		7F82F6A71C8D4CF3004EAC0E /* ScheduleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListViewController.swift; sourceTree = "<group>"; };
 		7F8443CD1D50320400A0BCBA /* UIViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
+		7FB4D3021D542DD2005F314E /* FloorMapListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapListViewController.swift; sourceTree = "<group>"; };
+		7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
+		7FB4D3061D5434E2005F314E /* FloorMapImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapImageViewController.swift; sourceTree = "<group>"; };
 		7FBC34CE1D40F956002919B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FBC34D01D40F98D002919B1 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		7FC773BE1D126A1600F5A202 /* ScheduleListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListDataSource.swift; sourceTree = "<group>"; };
@@ -416,6 +422,7 @@
 				DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */,
 				7FFD332E1C8D84BA000494E7 /* ScheduleListTableViewCell.swift */,
 				7FFD332F1C8D84BA000494E7 /* ScheduleListTableViewCell.xib */,
+				7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -429,6 +436,8 @@
 				7FFB733D1C915B6D006FB375 /* MapViewController.swift */,
 				7F201B851CCDD8C200235412 /* AboutViewController.swift */,
 				DB8C1B031D5392BE00221F36 /* MapListViewController.swift */,
+				7FB4D3021D542DD2005F314E /* FloorMapListViewController.swift */,
+				7FB4D3061D5434E2005F314E /* FloorMapImageViewController.swift */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -706,6 +715,7 @@
 				7F1CBEA41D52CB3C007C058D /* PyConJPDate.swift in Sources */,
 				DB1347DE1CCB092000CA0539 /* TalksAPIType.swift in Sources */,
 				7F82F6A01C8D4B62004EAC0E /* SchedulePageViewController.swift in Sources */,
+				7FB4D3051D5433CA005F314E /* DetailImageViewController.swift in Sources */,
 				DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */,
 				7F2878F61D460078003D65B1 /* TalkDetailAPIType.swift in Sources */,
 				7F82F6A41C8D4BF9004EAC0E /* ScheduleDateViewController.swift in Sources */,
@@ -714,6 +724,7 @@
 				7FFB73331C914FB4006FB375 /* SponsorListViewController.swift in Sources */,
 				7F201B861CCDD8C200235412 /* AboutViewController.swift in Sources */,
 				7FC773BF1D126A1600F5A202 /* ScheduleListDataSource.swift in Sources */,
+				7FB4D3071D5434E2005F314E /* FloorMapImageViewController.swift in Sources */,
 				DBEBDB481C8C89FC002B25B3 /* MoreViewController.swift in Sources */,
 				7F1CBE9E1D52CAFA007C058D /* Level.swift in Sources */,
 				DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */,
@@ -729,6 +740,7 @@
 				DBB2538B1CCB700400AA17C8 /* UIColorExtension.swift in Sources */,
 				7F1CBE9F1D52CAFA007C058D /* Place.swift in Sources */,
 				7F82F6A21C8D4B9A004EAC0E /* ScheduleModelController.swift in Sources */,
+				7FB4D3031D542DD2005F314E /* FloorMapListViewController.swift in Sources */,
 				DB1347E01CCB27D900CA0539 /* ErrorAlertType.swift in Sources */,
 				7F6879051D420626003D5742 /* StringExtention.swift in Sources */,
 				7F82F6A61C8D4C3D004EAC0E /* ScheduleBaseViewController.swift in Sources */,
