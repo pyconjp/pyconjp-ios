@@ -11,21 +11,21 @@ import UIKit
 class FloorMapImageViewController: DetailImageViewController {
     
     var assetCatalogType: AssetCatalogType?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         guard let assetCatalogType = assetCatalogType else { return }
-        imageView?.image = UIImage(named: assetCatalogType.rawValue)
+        customImageView?.image = UIImage(named: assetCatalogType.rawValue)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     enum AssetCatalogType: String {
-        case FirstFloorView = "WasedaFirstFloorMap"
+        case FirstFloorView = "Logo"
         case SecondFloorView = "WasedaSecondFloorMap"
         case ThirdFloorView = "WasedaThirdFloorMap"
         case SecondFloorRoom201 = "WasedaRoom201Map"
@@ -35,5 +35,5 @@ class FloorMapImageViewController: DetailImageViewController {
         case SecondFloorRoom205 = "WasedaRoom205Map"
         
     }
-
+    
 }

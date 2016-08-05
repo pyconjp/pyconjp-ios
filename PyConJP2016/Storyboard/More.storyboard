@@ -48,7 +48,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3V-yD-yYQ">
                                                 <rect key="frame" x="15" y="25" width="570" height="448"/>
-                                                <mutableString key="text">チュートリアル	2016年9月20(火)
+                                                <string key="text">チュートリアル	2016年9月20(火)
 カンファレンス	2016年9月21(水)、22(木・祝)
 開発スプリント	2016年9月23(金)、24(土)
 会場	早稲田大学西早稲田キャンパス
@@ -71,7 +71,7 @@ Webサイト	http://www.pycon.jp/
 連絡先	2016@pycon.jp
 主催: 一般社団法人PyCon JP
 
-共催: 早稲田大学グローバルソフトウェアエンジニアリング研究所</mutableString>
+共催: 早稲田大学グローバルソフトウェアエンジニアリング研究所</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -497,7 +497,7 @@ PyCon JP 2015から実施している、小学生高学年から高校生を対�
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6S-7Z-Xo2">
                                                 <rect key="frame" x="15" y="25" width="570" height="484"/>
-                                                <mutableString key="text">The MIT License (MIT)
+                                                <string key="text">The MIT License (MIT)
 
 Copyright (c) 2016 PyCon JP
 
@@ -517,7 +517,7 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.</mutableString>
+SOFTWARE.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -577,6 +577,7 @@ SOFTWARE.</mutableString>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="l6n-u0-h7y" firstAttribute="top" secondItem="ftN-Rj-gZe" secondAttribute="bottom" id="QNq-ND-wcY"/>
                             <constraint firstAttribute="trailing" secondItem="ftN-Rj-gZe" secondAttribute="trailing" id="Ygq-ja-QE6"/>
@@ -588,7 +589,7 @@ SOFTWARE.</mutableString>
                         <barButtonItem key="backBarButtonItem" title=" " id="A4B-jt-eRz"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageView" destination="ftN-Rj-gZe" id="zH1-T2-bbQ"/>
+                        <outlet property="customImageView" destination="ftN-Rj-gZe" id="UEr-Q5-F9N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oy6-3q-Nqt" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -21,31 +21,31 @@ class CustomImageView: UIImageView {
         
         self.userInteractionEnabled = true
         
-        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(CustomImageView.handleGesture(_:)))
-        doubleTapGesture.numberOfTapsRequired = 2
-        self.addGestureRecognizer(doubleTapGesture)
-        
-        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(CustomImageView.handleGesture(_:)))
-        self.addGestureRecognizer(pinchGesture)
-        
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(CustomImageView.handleGesture(_:)))
-        self.addGestureRecognizer(longPressGesture)
-        
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(CustomImageView.handleGesture(_:)))
-        self.addGestureRecognizer(panGesture)
+//        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(CustomImageView.handleGesture(_:)))
+//        doubleTapGesture.numberOfTapsRequired = 2
+//        self.addGestureRecognizer(doubleTapGesture)
+//        
+//        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(CustomImageView.handleGesture(_:)))
+//        self.addGestureRecognizer(pinchGesture)
+//        
+//        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(CustomImageView.handleGesture(_:)))
+//        self.addGestureRecognizer(longPressGesture)
+//        
+//        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(CustomImageView.handleGesture(_:)))
+//        self.addGestureRecognizer(panGesture)
     }
     
     func handleGesture(gesture: UIGestureRecognizer) {
         if let doubleTapGesture = gesture as? UITapGestureRecognizer {
             doubleTap(doubleTapGesture)
-        }else if let pinchGesture = gesture as? UIPinchGestureRecognizer {
+        } else if let pinchGesture = gesture as? UIPinchGestureRecognizer {
             pinch(pinchGesture)
-        }else if let panGesture = gesture as? UIPanGestureRecognizer {
+        } else if let panGesture = gesture as? UIPanGestureRecognizer {
             pan(panGesture)
         }
     }
     
-    private func doubleTap(gesture:UITapGestureRecognizer) {
+    func doubleTap(gesture: UITapGestureRecognizer) {
         if gestureEnabled {
             beforePoint = CGPointMake(0.0, 0.0)
             currentScale = 1.0
@@ -55,7 +55,7 @@ class CustomImageView: UIImageView {
         }
     }
     
-    private func pinch(gesture:UIPinchGestureRecognizer) {
+    private func pinch(gesture: UIPinchGestureRecognizer) {
         if gestureEnabled {
             var scale = gesture.scale
             if currentScale > 1.0{
@@ -83,14 +83,14 @@ class CustomImageView: UIImageView {
         }
     }
     
-    private func pan(gesture:UIPanGestureRecognizer) {
+    private func pan(gesture: UIPanGestureRecognizer) {
         if currentScale == 1.0 { return }
         if let gestureView = gesture.view where gestureEnabled {
             
             var translation = gesture.translationInView(gestureView)
             
             if abs(beforePoint.x) > 0.0 || abs(beforePoint.y) > 0.0 {
-                translation = CGPointMake(beforePoint.x + translation.x * 2, beforePoint.y + translation.y * 2)
+                translation = CGPointMake(beforePoint.x + translation.x, beforePoint.y + translation.y)
             }
             
             switch gesture.state {
