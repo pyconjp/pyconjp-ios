@@ -31,13 +31,13 @@
 		7FB4D3051D5433CA005F314E /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */; };
 		7FB4D3071D5434E2005F314E /* FloorMapImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3061D5434E2005F314E /* FloorMapImageViewController.swift */; };
 		7FB4D3091D544333005F314E /* LibraryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3081D544333005F314E /* LibraryListViewController.swift */; };
+		7FB4D30C1D5461C3005F314E /* ScheduleListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D30A1D5461C3005F314E /* ScheduleListTableViewCell.swift */; };
+		7FB4D30D1D5461C3005F314E /* ScheduleListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB4D30B1D5461C3005F314E /* ScheduleListTableViewCell.xib */; };
 		7FBC34CF1D40F956002919B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34CE1D40F956002919B1 /* AppDelegate.swift */; };
 		7FBC34D11D40F98D002919B1 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34D01D40F98D002919B1 /* AppConfig.swift */; };
 		7FC773BF1D126A1600F5A202 /* ScheduleListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC773BE1D126A1600F5A202 /* ScheduleListDataSource.swift */; };
 		7FFB733E1C915B6E006FB375 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFB733D1C915B6D006FB375 /* MapViewController.swift */; };
 		7FFB73401C9162C2006FB375 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFB733F1C9162C2006FB375 /* MapKit.framework */; };
-		7FFD33301C8D84BA000494E7 /* ScheduleListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFD332E1C8D84BA000494E7 /* ScheduleListTableViewCell.swift */; };
-		7FFD33311C8D84BA000494E7 /* ScheduleListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FFD332F1C8D84BA000494E7 /* ScheduleListTableViewCell.xib */; };
 		954B7D7AE17B5936AC1F49FC /* Pods_PyConJP2016Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1BDDC1CABB963F52098EAB7 /* Pods_PyConJP2016Tests.framework */; };
 		C832600FD904D3FFADAA174C /* Pods_PyConJP2016.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7952AFBF6B014E7BBED90FE3 /* Pods_PyConJP2016.framework */; };
 		DB0159D21D4DB7B500B17018 /* PCJSFSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0159D01D4DB7B500B17018 /* PCJSFSafariViewController.swift */; };
@@ -110,13 +110,13 @@
 		7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
 		7FB4D3061D5434E2005F314E /* FloorMapImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapImageViewController.swift; sourceTree = "<group>"; };
 		7FB4D3081D544333005F314E /* LibraryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryListViewController.swift; sourceTree = "<group>"; };
+		7FB4D30A1D5461C3005F314E /* ScheduleListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListTableViewCell.swift; sourceTree = "<group>"; };
+		7FB4D30B1D5461C3005F314E /* ScheduleListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleListTableViewCell.xib; sourceTree = "<group>"; };
 		7FBC34CE1D40F956002919B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FBC34D01D40F98D002919B1 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		7FC773BE1D126A1600F5A202 /* ScheduleListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListDataSource.swift; sourceTree = "<group>"; };
 		7FFB733D1C915B6D006FB375 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7FFB733F1C9162C2006FB375 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		7FFD332E1C8D84BA000494E7 /* ScheduleListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListTableViewCell.swift; sourceTree = "<group>"; };
-		7FFD332F1C8D84BA000494E7 /* ScheduleListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleListTableViewCell.xib; sourceTree = "<group>"; };
 		A1BDDC1CABB963F52098EAB7 /* Pods_PyConJP2016Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PyConJP2016Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A81D8527364825FA466121 /* Pods-PyConJP2016Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016Tests/Pods-PyConJP2016Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB0159D01D4DB7B500B17018 /* PCJSFSafariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJSFSafariViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +223,8 @@
 		7F67D1F71C8D4AD2001C8F9C /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				7FB4D30A1D5461C3005F314E /* ScheduleListTableViewCell.swift */,
+				7FB4D30B1D5461C3005F314E /* ScheduleListTableViewCell.xib */,
 				7F82F69F1C8D4B62004EAC0E /* SchedulePageViewController.swift */,
 				7F82F6A11C8D4B9A004EAC0E /* ScheduleModelController.swift */,
 				7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */,
@@ -418,8 +420,6 @@
 			children = (
 				DBC748171C76254000895D4A /* BaseTabBarController.swift */,
 				DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */,
-				7FFD332E1C8D84BA000494E7 /* ScheduleListTableViewCell.swift */,
-				7FFD332F1C8D84BA000494E7 /* ScheduleListTableViewCell.xib */,
 				7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */,
 			);
 			path = Base;
@@ -567,7 +567,7 @@
 			files = (
 				DBA1C0E01C722E99004F0C8D /* Main.storyboard in Resources */,
 				DB0A81651D463A4E0048ACB4 /* DummyTalks.json in Resources */,
-				7FFD33311C8D84BA000494E7 /* ScheduleListTableViewCell.xib in Resources */,
+				7FB4D30D1D5461C3005F314E /* ScheduleListTableViewCell.xib in Resources */,
 				DBDE0E7C1C8C19F50094BF36 /* More.storyboard in Resources */,
 				DBA1C0DF1C722E99004F0C8D /* LaunchScreen.storyboard in Resources */,
 				DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */,
@@ -705,7 +705,6 @@
 			files = (
 				DB0206891D4FB8430067C94B /* ReceiveLocalNotificationManager.swift in Sources */,
 				7F6879031D41BE28003D5742 /* ArrayExtention.swift in Sources */,
-				7FFD33301C8D84BA000494E7 /* ScheduleListTableViewCell.swift in Sources */,
 				DB8C1B041D5392BE00221F36 /* MapListViewController.swift in Sources */,
 				DB0206881D4FB8430067C94B /* LocalNotificationManager.swift in Sources */,
 				DB0159D31D4DB7B500B17018 /* PCJWKWebViewController.swift in Sources */,
@@ -737,6 +736,7 @@
 				7F82F6A21C8D4B9A004EAC0E /* ScheduleModelController.swift in Sources */,
 				7FB4D3031D542DD2005F314E /* FloorMapListViewController.swift in Sources */,
 				DB1347E01CCB27D900CA0539 /* ErrorAlertType.swift in Sources */,
+				7FB4D30C1D5461C3005F314E /* ScheduleListTableViewCell.swift in Sources */,
 				7F6879051D420626003D5742 /* StringExtention.swift in Sources */,
 				7F82F6A61C8D4C3D004EAC0E /* ScheduleBaseViewController.swift in Sources */,
 				7F1CBE9B1D52CAFA007C058D /* Talk.swift in Sources */,
