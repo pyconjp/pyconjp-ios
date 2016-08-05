@@ -51,11 +51,12 @@ class MoreViewController: UITableViewController {
         case .Application:
             switch indexPath.row {
             case 0:
-                let webViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("PCJWKWebViewController") as! PCJWKWebViewController
+                let webViewController = PCJWKWebViewController.build()
                 webViewController.url = "https://github.com/pyconjp/pyconjp-ios"
                 self.navigationController?.pushViewController(webViewController, animated: true)
             case 1:
-                break
+                let libraryViewController = LibraryListViewController.build()
+                self.navigationController?.pushViewController(libraryViewController, animated: true)
             case 2:
                 let licenseViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LicenseViewController")
                 self.navigationController?.pushViewController(licenseViewController!, animated: true)

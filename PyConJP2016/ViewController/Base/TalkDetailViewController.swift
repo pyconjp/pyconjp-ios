@@ -123,7 +123,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
         } else {
             let urlString = "https://mobile.twitter.com/search?q=%23" + hashTag + "&s=typd"
             
-            let webViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PCJWKWebViewController") as! PCJWKWebViewController
+            let webViewController = PCJWKWebViewController.build()
             webViewController.url = urlString
             self.presentViewController(webViewController, animated: true, completion: nil)
         }

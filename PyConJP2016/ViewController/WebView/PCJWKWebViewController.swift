@@ -15,6 +15,10 @@ class PCJWKWebViewController: UIViewController, WKNavigationDelegate, WKUIDelega
     
     var url: String = ""
     
+    class func build() -> PCJWKWebViewController {
+        return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("PCJWKWebViewController") as! PCJWKWebViewController
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
