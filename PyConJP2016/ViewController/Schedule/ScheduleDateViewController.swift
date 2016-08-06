@@ -14,7 +14,7 @@ class ScheduleDateViewController: UIViewController, ScheduleDateViewProtocol {
     @IBOutlet weak var day1Button: UIButton!
     @IBOutlet weak var day2Button: UIButton!
     
-    var activeBar = UIView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: UIScreen.mainScreen().bounds.width / 2, height: 3)))
+    lazy var activeBar: UIView = UIView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: UIScreen.mainScreen().bounds.width / 2, height: self.activeBarView.bounds.size.height)))
     var buttonOriginXArray: [CGFloat] = []
     
     var schedulePageViewProtocol: SchedulePageViewProtocol?
