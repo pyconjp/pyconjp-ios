@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TalksAPIType, ErrorAlertT
         
         UINavigationBar.appearance().barTintColor = .pyconJP2016RedColor()
         UINavigationBar.appearance().tintColor = .whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         UITabBar.appearance().tintColor = UIColor.pyconJP2016BlueColor()
         UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont.boldSystemFontOfSize(10), NSForegroundColorAttributeName: UIColor.pyconJP2016BlueColor()], forState: .Selected)

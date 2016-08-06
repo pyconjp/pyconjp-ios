@@ -34,7 +34,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     
     var id: Int?
     var talkDetail: TalkDetail?
-    private let _localNotificationManager = LocalNotificationManager()
+//    private let localNotificationManager = LocalNotificationManager()
     let refreshControl = UIRefreshControl()
     
     class func build() -> TalkDetailViewController {
@@ -103,9 +103,9 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
 //    @IBAction func swithNotification(sender: UISwitch) {
 //        if let talkDetail = talkDetail {
 //            if talkDetail.isSetNotification {
-//                _localNotificationManager.makeNotification(talkDetail)
+//                localNotificationManager.makeNotification(talkDetail)
 //            } else {
-//                _localNotificationManager.cancelSchedule(talkDetail)
+//                localNotificationManager.cancelSchedule(talkDetail)
 //            }
 //        }
 //    }

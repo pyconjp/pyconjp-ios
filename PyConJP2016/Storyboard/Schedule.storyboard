@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-261" y="139"/>
         </scene>
-        <!--Schedule Base View Controller-->
+        <!--Schedule-->
         <scene sceneID="EWf-hH-bGU">
             <objects>
                 <viewController storyboardIdentifier="ScheduleBaseViewController" id="437-Ed-YlZ" customClass="ScheduleBaseViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,8 +59,7 @@
                             <constraint firstItem="tVv-lx-jms" firstAttribute="top" secondItem="I46-EO-ChX" secondAttribute="bottom" id="zDM-To-pB1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="zN7-B8-vNJ">
-                        <nil key="title"/>
+                    <navigationItem key="navigationItem" title="Schedule" id="zN7-B8-vNJ">
                         <barButtonItem key="backBarButtonItem" title=" " id="ARZ-4x-RxF"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
