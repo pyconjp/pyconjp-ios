@@ -25,7 +25,7 @@ class FloorMapImageViewController: DetailImageViewController {
     }
     
     enum AssetCatalogType: String {
-        case FirstFloorView = "Logo"
+        case FirstFloorView = "WasedaFirstFloorMap"
         case SecondFloorView = "WasedaSecondFloorMap"
         case ThirdFloorView = "WasedaThirdFloorMap"
         case SecondFloorRoom201 = "WasedaRoom201Map"

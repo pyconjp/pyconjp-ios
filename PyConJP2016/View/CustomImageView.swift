@@ -13,8 +13,8 @@ class CustomImageView: UIImageView {
     //* Gesture Enabled Whether or not */
     var gestureEnabled = true
     
-    private var beforePoint = CGPointMake(0.0, 0.0)
-    private var currentScale:CGFloat = 1.0
+    private var beforePoint = CGPoint(x: 0.0, y: 0.0)
+    private var currentScale: CGFloat = 1.0
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -47,7 +47,7 @@ class CustomImageView: UIImageView {
     
     func doubleTap(gesture: UITapGestureRecognizer) {
         if gestureEnabled {
-            beforePoint = CGPointMake(0.0, 0.0)
+            beforePoint = CGPoint(x: 0.0, y: 0.0)
             currentScale = 1.0
             UIView.animateWithDuration(0.2, animations: { [weak self]() in
                 self?.transform = CGAffineTransformIdentity
@@ -58,7 +58,7 @@ class CustomImageView: UIImageView {
     private func pinch(gesture: UIPinchGestureRecognizer) {
         if gestureEnabled {
             var scale = gesture.scale
-            if currentScale > 1.0{
+            if currentScale > 1.0 {
                 scale = currentScale + (scale - 1.0)
             }
             
@@ -67,14 +67,14 @@ class CustomImageView: UIImageView {
                 let scaleTransform = CGAffineTransformMakeScale(scale, scale)
                 let transitionTransform = CGAffineTransformMakeTranslation(beforePoint.x, beforePoint.y)
                 transform = CGAffineTransformConcat(scaleTransform, transitionTransform)
-            case .Ended , .Cancelled:
-                if scale <= 1.0{
-                    beforePoint = CGPointMake(0.0, 0.0)
+            case .Ended, .Cancelled:
+                if scale <= 1.0 {
+                    beforePoint = CGPoint(x: 0.0, y: 0.0)
                     currentScale = 1.0
                     UIView.animateWithDuration(0.1, animations: { [weak self]() in
                         self?.transform = CGAffineTransformIdentity
                         })
-                }else{
+                } else {
                     currentScale = scale
                 }
             default:
@@ -90,7 +90,7 @@ class CustomImageView: UIImageView {
             var translation = gesture.translationInView(gestureView)
             
             if abs(beforePoint.x) > 0.0 || abs(beforePoint.y) > 0.0 {
-                translation = CGPointMake(beforePoint.x + translation.x, beforePoint.y + translation.y)
+                translation = CGPoint(x: beforePoint.x + translation.x, y: beforePoint.y + translation.y)
             }
             
             switch gesture.state {
@@ -98,7 +98,7 @@ class CustomImageView: UIImageView {
                 let scaleTransform = CGAffineTransformMakeScale(currentScale, currentScale)
                 let translationTransform = CGAffineTransformMakeTranslation(translation.x, translation.y)
                 transform = CGAffineTransformConcat(scaleTransform, translationTransform)
-            case .Ended , .Cancelled:
+            case .Ended, .Cancelled:
                 beforePoint = translation
             default:
                 break

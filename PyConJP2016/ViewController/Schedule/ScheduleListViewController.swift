@@ -21,7 +21,7 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
     
     let reuseIdentifier = "ScheduleListTableViewCell"
     
-    class func build(index: Int,storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ScheduleListViewController {
+    class func build(index: Int, storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ScheduleListViewController {
         let scheduleListViewController = storyboard.instantiateViewControllerWithIdentifier("ScheduleListViewController") as! ScheduleListViewController
         scheduleListViewController.viewControllerIndex = index
         scheduleListViewController.pyconJPDate = pyconJPDate
