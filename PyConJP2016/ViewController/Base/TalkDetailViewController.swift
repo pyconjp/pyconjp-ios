@@ -9,7 +9,7 @@
 import UIKit
 
 class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertType {
-
+    
     @IBOutlet weak var baseScrollView: UIScrollView!
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -34,7 +34,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     
     var id: Int?
     private var talkDetail: TalkDetail?
-//    private let localNotificationManager = LocalNotificationManager()
+    //    private let localNotificationManager = LocalNotificationManager()
     private let refreshControl = UIRefreshControl()
     
     class func build() -> TalkDetailViewController {
@@ -55,7 +55,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
         
         refreshControl.beginRefreshing()
         getDetail()
-
+        
     }
     
     func refresh(refreshControl: UIRefreshControl) {
@@ -77,40 +77,43 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     
     private func fillData() {
         guard let talkDetail = talkDetail else { return }
-        titleLabel.text = talkDetail.talkObject.title
+        dispatch_async(dispatch_get_main_queue()) {
+            self.titleLabel.text = talkDetail.talkObject.title
+            
+            self.dayLabel.text = talkDetail.talkObject.day
+            self.periodTimeLabel.text = talkDetail.talkObject.periodTime
+            
+            self.placeLabel.text = talkDetail.talkObject.place
+            self.hashTagButton.setTitle("#pyconjp\(talkDetail.talkObject.placeNumber)", forState: .Normal)
+            
+            self.speakerNameLabel.text = talkDetail.talkObject.speakers
+            
+            self.languageLabel.text = talkDetail.talkObject.languageName
+            self.levelLabel.text = talkDetail.level
+            self.categoryLabel.text = talkDetail.talkObject.category
+            
+            self.descriptionTextView.text = talkDetail.talkObject.descriptionText
+            self.abstractTextView.text = talkDetail.abstract
+        }
         
-        dayLabel.text = talkDetail.talkObject.day
-        periodTimeLabel.text = talkDetail.talkObject.periodTime
-        
-        placeLabel.text = talkDetail.talkObject.place
-        hashTagButton.setTitle("#pyconjp\(talkDetail.talkObject.placeNumber)", forState: .Normal)
-        
-        speakerNameLabel.text = talkDetail.talkObject.speakers
-        
-        languageLabel.text = talkDetail.talkObject.languageName
-        levelLabel.text = talkDetail.level
-        categoryLabel.text = talkDetail.talkObject.category
-        
-        descriptionTextView.text = talkDetail.talkObject.descriptionText
-        abstractTextView.text = talkDetail.abstract
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-//    @IBAction func swithNotification(sender: UISwitch) {
-//        if let talkDetail = talkDetail {
-//            if talkDetail.isSetNotification {
-//                localNotificationManager.makeNotification(talkDetail)
-//            } else {
-//                localNotificationManager.cancelSchedule(talkDetail)
-//            }
-//        }
-//    }
+    
+    //    @IBAction func swithNotification(sender: UISwitch) {
+    //        if let talkDetail = talkDetail {
+    //            if talkDetail.isSetNotification {
+    //                localNotificationManager.makeNotification(talkDetail)
+    //            } else {
+    //                localNotificationManager.cancelSchedule(talkDetail)
+    //            }
+    //        }
+    //    }
     
     @IBAction func onHashTagButton(sender: UIButton) {
-
+        
         var  hashTag = "pyconjp"
         if let talkDetail = talkDetail {
             hashTag.appendContentsOf(talkDetail.talkObject.placeNumber)
@@ -125,6 +128,6 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
             let webViewController = PCJWKWebViewController.build(urlString)
             self.presentViewController(webViewController, animated: true, completion: nil)
         }
-      
+        
     }
 }
