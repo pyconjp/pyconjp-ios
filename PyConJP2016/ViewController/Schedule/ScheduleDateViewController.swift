@@ -10,21 +10,17 @@ import UIKit
 
 class ScheduleDateViewController: UIViewController, ScheduleDateViewProtocol {
     
-    @IBOutlet weak var activeBarView: UIView!
+    @IBOutlet weak var activeBar: UIView!
     @IBOutlet weak var day1Button: UIButton!
     @IBOutlet weak var day2Button: UIButton!
     
-    lazy var activeBar: UIView = UIView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: UIScreen.mainScreen().bounds.width / 2, height: self.activeBarView.bounds.size.height)))
     var buttonOriginXArray: [CGFloat] = []
     
     var schedulePageViewProtocol: SchedulePageViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        activeBar.backgroundColor = .pyconJP2016BlueColor()
-        activeBarView.addSubview(activeBar)
-        
+
     }
     
     override func viewDidAppear(animated: Bool) {

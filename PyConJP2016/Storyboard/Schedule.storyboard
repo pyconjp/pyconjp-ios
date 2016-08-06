@@ -122,8 +122,17 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7j-C2-3fK">
                                 <rect key="frame" x="0.0" y="597" width="600" height="3"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDU-mH-Qbt">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="3"/>
+                                        <color key="backgroundColor" red="0.32941176470588235" green="0.76078431372549016" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
                                 <constraints>
+                                    <constraint firstItem="pDU-mH-Qbt" firstAttribute="top" secondItem="A7j-C2-3fK" secondAttribute="top" id="2db-Hi-kK2"/>
+                                    <constraint firstItem="pDU-mH-Qbt" firstAttribute="leading" secondItem="A7j-C2-3fK" secondAttribute="leading" id="LNf-m1-ma5"/>
                                     <constraint firstAttribute="height" constant="3" id="Mvt-KJ-oI0"/>
+                                    <constraint firstAttribute="bottom" secondItem="pDU-mH-Qbt" secondAttribute="bottom" id="rC1-eC-K4j"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEC-K7-3BF">
@@ -154,6 +163,7 @@
                             <constraint firstAttribute="trailing" secondItem="fNF-R4-aQr" secondAttribute="trailing" id="JuY-Nx-Vlo"/>
                             <constraint firstItem="xEC-K7-3BF" firstAttribute="top" secondItem="aWp-EZ-sBV" secondAttribute="top" id="ULh-np-YsC"/>
                             <constraint firstAttribute="trailing" secondItem="A7j-C2-3fK" secondAttribute="trailing" id="Vob-dA-7iy"/>
+                            <constraint firstItem="pDU-mH-Qbt" firstAttribute="width" secondItem="xEC-K7-3BF" secondAttribute="width" id="ZLi-IB-Srj"/>
                             <constraint firstItem="A7j-C2-3fK" firstAttribute="top" secondItem="xEC-K7-3BF" secondAttribute="bottom" id="eZ4-Id-yzZ"/>
                             <constraint firstItem="A7j-C2-3fK" firstAttribute="top" secondItem="fNF-R4-aQr" secondAttribute="bottom" id="lmd-8J-jJh"/>
                             <constraint firstItem="fNF-R4-aQr" firstAttribute="leading" secondItem="xEC-K7-3BF" secondAttribute="trailing" id="ohf-Rq-iwr"/>
@@ -167,7 +177,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="activeBarView" destination="A7j-C2-3fK" id="N45-qz-Oe7"/>
+                        <outlet property="activeBar" destination="pDU-mH-Qbt" id="tx3-tB-Xbi"/>
                         <outlet property="day1Button" destination="xEC-K7-3BF" id="dEi-9e-Cq0"/>
                         <outlet property="day2Button" destination="fNF-R4-aQr" id="ba5-R6-MUM"/>
                     </connections>
