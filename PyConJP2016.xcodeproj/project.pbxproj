@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F1CBE9B1D52CAFA007C058D /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1CBE911D52CAFA007C058D /* Talk.swift */; };
 		7F1CBE9C1D52CAFA007C058D /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1CBE931D52CAFA007C058D /* Language.swift */; };
 		7F1CBE9D1D52CAFA007C058D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1CBE951D52CAFA007C058D /* Category.swift */; };
 		7F1CBE9E1D52CAFA007C058D /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1CBE961D52CAFA007C058D /* Level.swift */; };
@@ -51,6 +50,8 @@
 		DB1347DE1CCB092000CA0539 /* TalksAPIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DD1CCB092000CA0539 /* TalksAPIType.swift */; };
 		DB1347E01CCB27D900CA0539 /* ErrorAlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */; };
 		DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */; };
+		DB3A77AE1D5631A400C25D8D /* TalkObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A77AD1D5631A400C25D8D /* TalkObject.swift */; };
+		DB3A77B01D5631F200C25D8D /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A77AF1D5631F200C25D8D /* Talk.swift */; };
 		DB5D5A851C72346C00CEF0CD /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5D5A841C72346C00CEF0CD /* Schedule.storyboard */; };
 		DB8C1B041D5392BE00221F36 /* MapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C1B031D5392BE00221F36 /* MapListViewController.swift */; };
 		DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */; };
@@ -87,7 +88,6 @@
 		30241316839D846FC4C64534 /* Pods-PyConJP2016.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016/Pods-PyConJP2016.debug.xcconfig"; sourceTree = "<group>"; };
 		7952AFBF6B014E7BBED90FE3 /* Pods_PyConJP2016.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PyConJP2016.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4525E7CD6B481FCC38979C /* Pods-PyConJP2016.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016.release.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016/Pods-PyConJP2016.release.xcconfig"; sourceTree = "<group>"; };
-		7F1CBE911D52CAFA007C058D /* Talk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
 		7F1CBE931D52CAFA007C058D /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		7F1CBE951D52CAFA007C058D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		7F1CBE961D52CAFA007C058D /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
@@ -131,6 +131,8 @@
 		DB1347DD1CCB092000CA0539 /* TalksAPIType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksAPIType.swift; sourceTree = "<group>"; };
 		DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlertType.swift; sourceTree = "<group>"; };
 		DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkDetailViewController.swift; sourceTree = "<group>"; };
+		DB3A77AD1D5631A400C25D8D /* TalkObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkObject.swift; sourceTree = "<group>"; };
+		DB3A77AF1D5631F200C25D8D /* Talk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
 		DB5D5A841C72346C00CEF0CD /* Schedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
 		DB8C1B031D5392BE00221F36 /* MapListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapListViewController.swift; sourceTree = "<group>"; };
 		DBA1C0A91C7228E2004F0C8D /* PyConJP2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PyConJP2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,7 +197,7 @@
 		7F1CBE901D52CAFA007C058D /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				7F1CBE911D52CAFA007C058D /* Talk.swift */,
+				DB3A77AD1D5631A400C25D8D /* TalkObject.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -212,6 +214,7 @@
 		7F1CBE941D52CAFA007C058D /* Struct */ = {
 			isa = PBXGroup;
 			children = (
+				DB3A77AF1D5631F200C25D8D /* Talk.swift */,
 				7F1CBE951D52CAFA007C058D /* Category.swift */,
 				7F1CBE961D52CAFA007C058D /* Level.swift */,
 				7F1CBE971D52CAFA007C058D /* Place.swift */,
@@ -723,6 +726,7 @@
 				DB1347DE1CCB092000CA0539 /* TalksAPIType.swift in Sources */,
 				7F82F6A01C8D4B62004EAC0E /* SchedulePageViewController.swift in Sources */,
 				7FB4D3051D5433CA005F314E /* DetailImageViewController.swift in Sources */,
+				DB3A77B01D5631F200C25D8D /* Talk.swift in Sources */,
 				DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */,
 				7F2878F61D460078003D65B1 /* TalkDetailAPIType.swift in Sources */,
 				7F82F6A41C8D4BF9004EAC0E /* ScheduleDateViewController.swift in Sources */,
@@ -740,6 +744,7 @@
 				7FFB733E1C915B6E006FB375 /* MapViewController.swift in Sources */,
 				7F1CBE9C1D52CAFA007C058D /* Language.swift in Sources */,
 				7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */,
+				DB3A77AE1D5631A400C25D8D /* TalkObject.swift in Sources */,
 				DBF32BB51CD48C4C004E7F3B /* AppDelegateExtention.swift in Sources */,
 				7F7B50951D138E66000AC1B3 /* MoreDataSource.swift in Sources */,
 				DBB2538B1CCB700400AA17C8 /* UIColorExtension.swift in Sources */,
@@ -751,7 +756,6 @@
 				7FB4D30C1D5461C3005F314E /* ScheduleListTableViewCell.swift in Sources */,
 				7F6879051D420626003D5742 /* StringExtention.swift in Sources */,
 				7F82F6A61C8D4C3D004EAC0E /* ScheduleBaseViewController.swift in Sources */,
-				7F1CBE9B1D52CAFA007C058D /* Talk.swift in Sources */,
 				7FBC34D11D40F98D002919B1 /* AppConfig.swift in Sources */,
 				7FB4D3091D544333005F314E /* LibraryListViewController.swift in Sources */,
 				DBFAEC551D3CF7AD00BCC880 /* NSDateExtension.swift in Sources */,

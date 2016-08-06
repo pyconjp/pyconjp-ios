@@ -64,7 +64,6 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     }
     
     private func getDetail() {
-//        getTalkDetailFromLocalDummyJson(successClosure: { (talkDetail) in
         getTalkDetail(successClosure: { (talkDetail) in
             self.talkDetail = talkDetail
             self.fillData()

@@ -9,8 +9,13 @@
 import UIKit
 
 struct Timeline {
+    
     let header: String
     var talks: Array<TalkObject>
+    
+}
+
+extension Timeline {
     
     init(startTime: String, talks: Array<TalkObject>?) {
         self.header = startTime.timeStringByTrimingSecond()

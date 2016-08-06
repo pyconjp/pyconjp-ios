@@ -30,7 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TalksAPIType, ErrorAlertT
 //            }
 //        }
         
-//        getTalksFromLocalDummyJson(successClosure: {
         getTalks(successClosure: {
             NSNotificationCenter.defaultCenter().postNotificationName(AppConfig.PCJCompleteFetchDataNotification, object: nil)
         }) {(error) in
