@@ -3,14 +3,14 @@
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/03/07.
-//  Copyright © 2016年 Yutaro Muta. All rights reserved.
+//  Copyright © 2016 Yutaro Muta. All rights reserved.
 //
 
 import UIKit
 
 class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol, TalksAPIType, ErrorAlertType {
 
-    var scheduleModelViewProtocol: ScheduleModelViewProtocol?
+    private var scheduleModelViewProtocol: ScheduleModelViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +23,9 @@ class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol
         
     }
     
-    var _scheduleModelController: ScheduleModelController? = nil
+    private var _scheduleModelController: ScheduleModelController? = nil
     
-    var scheduleModelController: ScheduleModelController {
+    private var scheduleModelController: ScheduleModelController {
         if _scheduleModelController == nil {
             _scheduleModelController = ScheduleModelController()
         }

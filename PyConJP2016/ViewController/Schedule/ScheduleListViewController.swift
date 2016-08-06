@@ -3,7 +3,7 @@
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/03/07.
-//  Copyright © 2016年 Yutaro Muta. All rights reserved.
+//  Copyright © 2016 Yutaro Muta. All rights reserved.
 //
 
 import UIKit
@@ -12,14 +12,14 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
     
     @IBOutlet weak var tableView: UITableView!
     
-    var viewControllerIndex: Int = 0
-    var pyconJPDate: PyConJPDate?
+    private(set) var viewControllerIndex: Int = 0
+    private(set) var pyconJPDate: PyConJPDate?
     
-    let scheduleListDataSource = ScheduleListDataSource()
+    private let scheduleListDataSource = ScheduleListDataSource()
     
-    let refreshControl = UIRefreshControl()
+    private let refreshControl = UIRefreshControl()
     
-    let reuseIdentifier = "ScheduleListTableViewCell"
+    private let reuseIdentifier = "ScheduleListTableViewCell"
     
     class func build(index: Int, storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ScheduleListViewController {
         let scheduleListViewController = storyboard.instantiateViewControllerWithIdentifier("ScheduleListViewController") as! ScheduleListViewController
@@ -94,8 +94,7 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let talkDetailViewController = TalkDetailViewController.build()
-        talkDetailViewController.id = scheduleListDataSource.timelines[indexPath.section].talks[indexPath.row].id
+        let talkDetailViewController = TalkDetailViewController.build(scheduleListDataSource.timelines[indexPath.section].talks[indexPath.row].id)
         self.navigationController?.pushViewController(talkDetailViewController, animated: true)
     }
     

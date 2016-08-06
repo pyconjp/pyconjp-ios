@@ -51,8 +51,7 @@ class MoreViewController: UITableViewController {
     private func applicationSection(row: Int) {
         switch row {
         case 0:
-            let webViewController = PCJWKWebViewController.build()
-            webViewController.url = "https://github.com/pyconjp/pyconjp-ios"
+            let webViewController = PCJWKWebViewController.build("https://github.com/pyconjp/pyconjp-ios")
             self.navigationController?.pushViewController(webViewController, animated: true)
         case 1:
             let libraryViewController = LibraryListViewController.build()

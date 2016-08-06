@@ -3,7 +3,7 @@
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/08/05.
-//  Copyright © 2016年 Yutaro Muta. All rights reserved.
+//  Copyright © 2016 Yutaro Muta. All rights reserved.
 //
 
 import UIKit
@@ -17,8 +17,7 @@ class LibraryListViewController: UITableViewController {
     // MARK: - Table View Controller Delegate
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let webViewController = PCJWKWebViewController.build()
-        webViewController.url = LibraryList(rawValue: indexPath.row)?.url ?? ""
+        let webViewController = PCJWKWebViewController.build(LibraryList(rawValue: indexPath.row)?.url ?? "")
         self.navigationController?.pushViewController(webViewController, animated: true)
     }
     

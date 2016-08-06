@@ -3,7 +3,7 @@
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/03/07.
-//  Copyright © 2016年 Yutaro Muta. All rights reserved.
+//  Copyright © 2016 Yutaro Muta. All rights reserved.
 //
 
 import UIKit
@@ -14,9 +14,9 @@ class ScheduleDateViewController: UIViewController, ScheduleDateViewProtocol {
     @IBOutlet weak var day1Button: UIButton!
     @IBOutlet weak var day2Button: UIButton!
     
-    var buttonOriginXArray: [CGFloat] = []
+    private var buttonOriginXArray: [CGFloat] = []
     
-    var schedulePageViewProtocol: SchedulePageViewProtocol?
+    private var schedulePageViewProtocol: SchedulePageViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -3,7 +3,7 @@
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/02/23.
-//  Copyright © 2016年 Yutaro Muta. All rights reserved.
+//  Copyright © 2016 Yutaro Muta. All rights reserved.
 //
 
 import UIKit
@@ -33,9 +33,9 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     @IBOutlet weak var abstractTextView: UITextView!
     
     var id: Int?
-    var talkDetail: TalkDetail?
+    private var talkDetail: TalkDetail?
 //    private let localNotificationManager = LocalNotificationManager()
-    let refreshControl = UIRefreshControl()
+    private let refreshControl = UIRefreshControl()
     
     class func build() -> TalkDetailViewController {
         return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
@@ -123,8 +123,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
         } else {
             let urlString = "https://mobile.twitter.com/search?q=%23" + hashTag + "&s=typd"
             
-            let webViewController = PCJWKWebViewController.build()
-            webViewController.url = urlString
+            let webViewController = PCJWKWebViewController.build(urlString)
             self.presentViewController(webViewController, animated: true, completion: nil)
         }
       

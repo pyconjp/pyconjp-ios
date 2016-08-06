@@ -3,7 +3,7 @@
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/08/05.
-//  Copyright © 2016年 Yutaro Muta. All rights reserved.
+//  Copyright © 2016 Yutaro Muta. All rights reserved.
 //
 
 import UIKit
