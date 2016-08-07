@@ -8,6 +8,24 @@
 
 import UIKit
 
+struct TalkDetail {
+    
+    var talkObject: TalkObject
+    let abstract: String
+    let level: String
+    
+}
+
+extension TalkDetail {
+    
+    init(dictionary: Dictionary<String, AnyObject>) {
+        self.init(talkObject: TalkObject(dictionary: dictionary),
+                  abstract: dictionary["abstract"] as? String ?? "",
+                  level: dictionary["level"] as? String ?? "")
+    }
+    
+}
+
 //struct TalkDetail {
 //    
 //    let id: Int
@@ -71,21 +89,3 @@ import UIKit
 //    }
 //    
 //}
-
-struct TalkDetail {
-    
-    var talkObject: TalkObject
-    let abstract: String
-    let level: String
-    
-}
-
-extension TalkDetail {
-    
-    init(dictionary: Dictionary<String, AnyObject>) {
-        self.init(talkObject: TalkObject(dictionary: dictionary),
-                  abstract: dictionary["abstract"] as? String ?? "",
-                  level: dictionary["level"] as? String ?? "")
-    }
-    
-}

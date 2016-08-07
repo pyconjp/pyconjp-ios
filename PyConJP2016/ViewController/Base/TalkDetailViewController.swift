@@ -33,6 +33,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     @IBOutlet weak var abstractTextView: UITextView!
     
     var id: Int?
+    private var talkTitle: String?
     private var talkDetail: TalkDetail?
     //    private let localNotificationManager = LocalNotificationManager()
     private let refreshControl = UIRefreshControl()
@@ -41,9 +42,10 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
         return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
     }
     
-    class func build(id: Int) -> TalkDetailViewController {
+    class func build(id: Int, title: String) -> TalkDetailViewController {
         let talkDetailViewController = TalkDetailViewController.build()
         talkDetailViewController.id = id
+        talkDetailViewController.talkTitle = title
         return talkDetailViewController
     }
     
@@ -66,6 +68,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     private func getDetail() {
         getTalkDetail(successClosure: { (talkDetail) in
             self.talkDetail = talkDetail
+            self.talkDetail?.talkObject.title = self.talkTitle ?? ""
             self.fillData()
             self.refreshControl.endRefreshing()
         }) { [weak self](error) in
@@ -84,10 +87,8 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
             self.periodTimeLabel.text = talkDetail.talkObject.periodTime
             
             self.placeLabel.text = talkDetail.talkObject.place
-            if let room = talkDetail.talkObject.room {
-                self.placeLabel.textColor = room.color
-                self.hashTagButton.setTitle("#\(room.hashTag)", forState: .Normal)
-            }
+            self.placeLabel.textColor = talkDetail.talkObject.room?.color ?? UIColor.blackColor()
+            self.hashTagButton.setTitle("#" + (talkDetail.talkObject.room?.hashTag ?? "pyconjp"), forState: .Normal)
             
             self.speakerNameLabel.text = talkDetail.talkObject.speakers
             
@@ -117,10 +118,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     
     @IBAction func onHashTagButton(sender: UIButton) {
         
-        var hashTag: String {
-            guard let talkDetail = talkDetail, room = talkDetail.talkObject.room else { return "pyconjp" }
-            return room.hashTag
-        }
+        let hashTag = talkDetail?.talkObject.room?.hashTag ?? "pyconjp"
         
         if UIApplication.sharedApplication().canOpenURL(NSURL(string: "twitter://")!) {
             let urlString = "twitter://search?query=%23" + hashTag

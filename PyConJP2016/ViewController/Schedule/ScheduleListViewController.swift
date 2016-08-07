@@ -94,7 +94,8 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let talkDetailViewController = TalkDetailViewController.build(scheduleListDataSource.timelines[indexPath.section].talks[indexPath.row].id)
+        let talkObject = scheduleListDataSource.timelines[indexPath.section].talks[indexPath.row]
+        let talkDetailViewController = TalkDetailViewController.build(talkObject.id, title: talkObject.title)
         self.navigationController?.pushViewController(talkDetailViewController, animated: true)
     }
     

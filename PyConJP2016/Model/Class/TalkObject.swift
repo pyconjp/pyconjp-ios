@@ -59,8 +59,7 @@ class TalkObject: Object {
     }
     
     var placeNumber: String {
-        guard let placeNumber = self.place.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet).last else { return "" }
-        return placeNumber
+        return self.place.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet).last ?? ""
     }
     
     var room: TalkRoom? {
