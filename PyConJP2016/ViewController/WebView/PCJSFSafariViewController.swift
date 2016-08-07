@@ -11,10 +11,12 @@ import SafariServices
 
 class PCJSFSafariViewController: UIViewController, SFSafariViewControllerDelegate {
     
-    var url: String = ""
+    private var url: String = ""
     
 //    class func build(url: String) -> PCJSFSafariViewController {
-//        return
+//        let pcjSFSafariViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("PCJSFSafariViewController") as! PCJSFSafariViewController
+//        pcjSFSafariViewController.url = url
+//        return pcjSFSafariViewController
 //    }
 
     override func viewDidLoad() {

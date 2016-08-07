@@ -19,7 +19,6 @@
 		7F2878F61D460078003D65B1 /* TalkDetailAPIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2878F51D460078003D65B1 /* TalkDetailAPIType.swift */; };
 		7F6879031D41BE28003D5742 /* ArrayExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6879021D41BE28003D5742 /* ArrayExtention.swift */; };
 		7F6879051D420626003D5742 /* StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6879041D420626003D5742 /* StringExtention.swift */; };
-		7F7B50951D138E66000AC1B3 /* MoreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7B50941D138E66000AC1B3 /* MoreDataSource.swift */; };
 		7F82F6A01C8D4B62004EAC0E /* SchedulePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F69F1C8D4B62004EAC0E /* SchedulePageViewController.swift */; };
 		7F82F6A21C8D4B9A004EAC0E /* ScheduleModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A11C8D4B9A004EAC0E /* ScheduleModelController.swift */; };
 		7F82F6A41C8D4BF9004EAC0E /* ScheduleDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */; };
@@ -101,7 +100,6 @@
 		7F2878F51D460078003D65B1 /* TalkDetailAPIType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkDetailAPIType.swift; sourceTree = "<group>"; };
 		7F6879021D41BE28003D5742 /* ArrayExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtention.swift; sourceTree = "<group>"; };
 		7F6879041D420626003D5742 /* StringExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtention.swift; sourceTree = "<group>"; };
-		7F7B50941D138E66000AC1B3 /* MoreDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreDataSource.swift; sourceTree = "<group>"; };
 		7F82F69F1C8D4B62004EAC0E /* SchedulePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulePageViewController.swift; sourceTree = "<group>"; };
 		7F82F6A11C8D4B9A004EAC0E /* ScheduleModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleModelController.swift; sourceTree = "<group>"; };
 		7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDateViewController.swift; sourceTree = "<group>"; };
@@ -245,7 +243,6 @@
 		7F7B50931D138E3B000AC1B3 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				7F7B50941D138E66000AC1B3 /* MoreDataSource.swift */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -750,7 +747,6 @@
 				7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */,
 				DB3A77AE1D5631A400C25D8D /* TalkObject.swift in Sources */,
 				DBF32BB51CD48C4C004E7F3B /* AppDelegateExtention.swift in Sources */,
-				7F7B50951D138E66000AC1B3 /* MoreDataSource.swift in Sources */,
 				DBB2538B1CCB700400AA17C8 /* UIColorExtension.swift in Sources */,
 				7FB4D3101D546269005F314E /* CustomImageView.swift in Sources */,
 				7F1CBE9F1D52CAFA007C058D /* Place.swift in Sources */,
