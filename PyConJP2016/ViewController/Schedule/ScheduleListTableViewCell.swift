@@ -21,22 +21,17 @@ class ScheduleListTableViewCell: UITableViewCell {
         timeLabel.text = talkObject.periodTime
         placeLabel.text = talkObject.place
         speakerLabel.text = talkObject.speakers
+        if let room = talkObject.room {
+            placeView.backgroundColor = room.color
+        }
     }
-    
-//    private func fillRoomColorWith(id: Int) {
-//        switch id {
-//        case 201:
-//            placeView.backgroundColor = .redColor()
-//        default:
-//            placeView.backgroundColor = .grayColor()
-//        }
-//    }
     
     override func prepareForReuse() {
         titleLabel.text = nil
         timeLabel.text = nil
         placeLabel.text = nil
         speakerLabel.text = nil
+        placeView.backgroundColor = UIColor.darkGrayColor()
     }
     
 }

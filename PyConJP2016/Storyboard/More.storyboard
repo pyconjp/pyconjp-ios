@@ -38,16 +38,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Z9-t6-3WX" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="488"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="478"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDD-IK-eRY">
-                                                <rect key="frame" x="15" y="15" width="0.0" height="0.0"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3V-yD-yYQ">
-                                                <rect key="frame" x="15" y="25" width="570" height="448"/>
+                                                <rect key="frame" x="15" y="15" width="570" height="448"/>
                                                 <string key="text">チュートリアル	2016年9月20(火)
 カンファレンス	2016年9月21(水)、22(木・祝)
 開発スプリント	2016年9月23(金)、24(土)
@@ -78,13 +72,10 @@ Webサイト	http://www.pycon.jp/
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vDD-IK-eRY" secondAttribute="trailing" constant="15" id="0AX-vC-6jo"/>
                                             <constraint firstAttribute="bottom" secondItem="Q3V-yD-yYQ" secondAttribute="bottom" constant="15" id="4bm-mh-ITX"/>
                                             <constraint firstAttribute="trailing" secondItem="Q3V-yD-yYQ" secondAttribute="trailing" constant="15" id="Gct-Nb-WJr"/>
-                                            <constraint firstItem="Q3V-yD-yYQ" firstAttribute="top" secondItem="vDD-IK-eRY" secondAttribute="bottom" constant="10" id="LTo-dm-ga3"/>
                                             <constraint firstItem="Q3V-yD-yYQ" firstAttribute="leading" secondItem="4Z9-t6-3WX" secondAttribute="leading" constant="15" id="Tgc-OA-tPj"/>
-                                            <constraint firstItem="vDD-IK-eRY" firstAttribute="leading" secondItem="4Z9-t6-3WX" secondAttribute="leading" constant="15" id="Wzv-Kt-v3m"/>
-                                            <constraint firstItem="vDD-IK-eRY" firstAttribute="top" secondItem="4Z9-t6-3WX" secondAttribute="top" constant="15" id="XFR-Ay-QuP"/>
+                                            <constraint firstItem="Q3V-yD-yYQ" firstAttribute="top" secondItem="4Z9-t6-3WX" secondAttribute="top" constant="15" id="bMp-WX-SDl"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -273,7 +264,7 @@ Webサイト	http://www.pycon.jp/
                             <tableViewSection headerTitle="会場情報" footerTitle=" " id="OVX-Ci-m6R">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="hoO-0c-K2E" style="IBUITableViewCellStyleDefault" id="eYg-QM-F1g">
-                                        <rect key="frame" x="0.0" y="253" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="253.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eYg-QM-F1g" id="uC8-jp-w8F">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -290,7 +281,7 @@ Webサイト	http://www.pycon.jp/
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="J3n-hJ-8rS" style="IBUITableViewCellStyleDefault" id="yVv-mH-j4E">
-                                        <rect key="frame" x="0.0" y="297" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="297.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yVv-mH-j4E" id="Y67-dH-LtB">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -311,7 +302,7 @@ Webサイト	http://www.pycon.jp/
                             <tableViewSection headerTitle="このアプリについて" id="FgW-wC-612">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="PYC-kg-am7" style="IBUITableViewCellStyleDefault" id="vk8-QR-1bo">
-                                        <rect key="frame" x="0.0" y="407" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="408" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vk8-QR-1bo" id="CaG-Ii-e66">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -328,7 +319,7 @@ Webサイト	http://www.pycon.jp/
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Mrt-oQ-gLO" style="IBUITableViewCellStyleDefault" id="dvE-FL-22b">
-                                        <rect key="frame" x="0.0" y="451" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="452" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dvE-FL-22b" id="VHc-lk-mfH">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -345,7 +336,7 @@ Webサイト	http://www.pycon.jp/
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="YPP-Wn-fR4" style="IBUITableViewCellStyleDefault" id="AIA-8U-9I1">
-                                        <rect key="frame" x="0.0" y="495" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="496" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AIA-8U-9I1" id="Mst-YC-bSU">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -393,16 +384,10 @@ Webサイト	http://www.pycon.jp/
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ddo-6o-1b4" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="889.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLU-Hp-fbd">
-                                                <rect key="frame" x="15" y="15" width="0.0" height="0.0"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmb-E2-P1g">
-                                                <rect key="frame" x="15" y="25" width="570" height="860"/>
+                                                <rect key="frame" x="15" y="15" width="570" height="859.5"/>
                                                 <string key="text">PyCon JPは、Pythonユーザが集まり、PythonやPythonを使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。 PyCon JPの開催を通じて、Pythonの使い手が一堂に集まり、Pythonにまつわる様々な分野の知識や情報を交換し、新たな友達やコミュニティとのつながり、仕事やビジネスチャンスを増やせる場所とすることが目標です。
 
 PyCon JP 2016では、「Everyone's different, all are wonderful.」をテーマに据えました。Pythonをキーワードに多様な人たちが、いろいろ楽しめて、新しい可能性が生まれるカンファレンスを目指して、スタッフ全員で企画を進めています。
@@ -435,13 +420,9 @@ PyCon JP 2015から実施している、小学生高学年から高校生を対�
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Nmb-E2-P1g" secondAttribute="bottom" constant="15" id="Fye-pt-mFc"/>
-                                            <constraint firstItem="KLU-Hp-fbd" firstAttribute="leading" secondItem="Ddo-6o-1b4" secondAttribute="leading" constant="15" id="Rga-tJ-CNQ"/>
-                                            <constraint firstItem="Nmb-E2-P1g" firstAttribute="top" secondItem="KLU-Hp-fbd" secondAttribute="bottom" constant="10" id="Z3N-60-gD7"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KLU-Hp-fbd" secondAttribute="trailing" constant="15" id="Zg8-um-Izc"/>
                                             <constraint firstAttribute="trailing" secondItem="Nmb-E2-P1g" secondAttribute="trailing" constant="15" id="bTN-Ab-nA6"/>
-                                            <constraint firstItem="KLU-Hp-fbd" firstAttribute="top" secondItem="Ddo-6o-1b4" secondAttribute="top" constant="15" id="bkA-VL-WPU"/>
                                             <constraint firstItem="Nmb-E2-P1g" firstAttribute="leading" secondItem="Ddo-6o-1b4" secondAttribute="leading" constant="15" id="irg-UG-lG9"/>
-                                            <constraint firstItem="Nmb-E2-P1g" firstAttribute="top" secondItem="KLU-Hp-fbd" secondAttribute="bottom" constant="10" id="jrQ-2S-t6U"/>
+                                            <constraint firstItem="Nmb-E2-P1g" firstAttribute="top" secondItem="Ddo-6o-1b4" secondAttribute="top" constant="15" id="mbQ-Nn-ag4"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -487,16 +468,10 @@ PyCon JP 2015から実施している、小学生高学年から高校生を対�
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58r-sf-r7I" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="524"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="513.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywv-vh-OCW">
-                                                <rect key="frame" x="15" y="15" width="0.0" height="0.0"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6S-7Z-Xo2">
-                                                <rect key="frame" x="15" y="25" width="570" height="484"/>
+                                                <rect key="frame" x="15" y="15" width="570" height="483.5"/>
                                                 <string key="text">The MIT License (MIT)
 
 Copyright (c) 2016 PyCon JP
@@ -525,12 +500,9 @@ SOFTWARE.</string>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="N6S-7Z-Xo2" firstAttribute="leading" secondItem="58r-sf-r7I" secondAttribute="leading" constant="15" id="1LZ-nB-8Ur"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ywv-vh-OCW" secondAttribute="trailing" constant="15" id="Iyn-i6-6UQ"/>
                                             <constraint firstAttribute="bottom" secondItem="N6S-7Z-Xo2" secondAttribute="bottom" constant="15" id="Uea-YS-j4V"/>
-                                            <constraint firstItem="Ywv-vh-OCW" firstAttribute="leading" secondItem="58r-sf-r7I" secondAttribute="leading" constant="15" id="VSg-IP-zOy"/>
-                                            <constraint firstItem="N6S-7Z-Xo2" firstAttribute="top" secondItem="Ywv-vh-OCW" secondAttribute="bottom" constant="10" id="aQy-2D-RT9"/>
                                             <constraint firstAttribute="trailing" secondItem="N6S-7Z-Xo2" secondAttribute="trailing" constant="15" id="aUJ-YA-bQr"/>
-                                            <constraint firstItem="Ywv-vh-OCW" firstAttribute="top" secondItem="58r-sf-r7I" secondAttribute="top" constant="15" id="ige-vr-CQT"/>
+                                            <constraint firstItem="N6S-7Z-Xo2" firstAttribute="top" secondItem="58r-sf-r7I" secondAttribute="top" constant="15" id="bby-AJ-aIr"/>
                                         </constraints>
                                     </view>
                                 </subviews>

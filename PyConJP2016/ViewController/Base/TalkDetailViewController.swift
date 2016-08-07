@@ -84,7 +84,10 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
             self.periodTimeLabel.text = talkDetail.talkObject.periodTime
             
             self.placeLabel.text = talkDetail.talkObject.place
-            self.hashTagButton.setTitle("#pyconjp\(talkDetail.talkObject.placeNumber)", forState: .Normal)
+            if let room = talkDetail.talkObject.room {
+                self.placeLabel.textColor = room.color
+                self.hashTagButton.setTitle("#\(room.hashTag)", forState: .Normal)
+            }
             
             self.speakerNameLabel.text = talkDetail.talkObject.speakers
             
@@ -114,9 +117,9 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     
     @IBAction func onHashTagButton(sender: UIButton) {
         
-        var  hashTag = "pyconjp"
-        if let talkDetail = talkDetail {
-            hashTag.appendContentsOf(talkDetail.talkObject.placeNumber)
+        var hashTag: String {
+            guard let talkDetail = talkDetail, room = talkDetail.talkObject.room else { return "pyconjp" }
+            return room.hashTag
         }
         
         if UIApplication.sharedApplication().canOpenURL(NSURL(string: "twitter://")!) {

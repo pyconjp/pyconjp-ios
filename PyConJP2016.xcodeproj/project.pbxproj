@@ -49,6 +49,7 @@
 		DB1347DC1CC7DEDF00CA0539 /* AlamofireType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */; };
 		DB1347DE1CCB092000CA0539 /* TalksAPIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DD1CCB092000CA0539 /* TalksAPIType.swift */; };
 		DB1347E01CCB27D900CA0539 /* ErrorAlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */; };
+		DB23836E1D563BFE00DA5376 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB23836D1D563BFE00DA5376 /* Room.swift */; };
 		DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */; };
 		DB3A77AE1D5631A400C25D8D /* TalkObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A77AD1D5631A400C25D8D /* TalkObject.swift */; };
 		DB3A77B01D5631F200C25D8D /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A77AF1D5631F200C25D8D /* Talk.swift */; };
@@ -130,6 +131,7 @@
 		DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireType.swift; sourceTree = "<group>"; };
 		DB1347DD1CCB092000CA0539 /* TalksAPIType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksAPIType.swift; sourceTree = "<group>"; };
 		DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlertType.swift; sourceTree = "<group>"; };
+		DB23836D1D563BFE00DA5376 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkDetailViewController.swift; sourceTree = "<group>"; };
 		DB3A77AD1D5631A400C25D8D /* TalkObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkObject.swift; sourceTree = "<group>"; };
 		DB3A77AF1D5631F200C25D8D /* Talk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				7F1CBE931D52CAFA007C058D /* Language.swift */,
 				7F1CBEA31D52CB3C007C058D /* PyConJPDate.swift */,
+				DB23836D1D563BFE00DA5376 /* Room.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -729,6 +732,7 @@
 				DB3A77B01D5631F200C25D8D /* Talk.swift in Sources */,
 				DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */,
 				7F2878F61D460078003D65B1 /* TalkDetailAPIType.swift in Sources */,
+				DB23836E1D563BFE00DA5376 /* Room.swift in Sources */,
 				7F82F6A41C8D4BF9004EAC0E /* ScheduleDateViewController.swift in Sources */,
 				DB1347DC1CC7DEDF00CA0539 /* AlamofireType.swift in Sources */,
 				7F201B861CCDD8C200235412 /* AboutViewController.swift in Sources */,

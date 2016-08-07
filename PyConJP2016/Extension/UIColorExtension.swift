@@ -28,12 +28,28 @@ extension UIColor {
         return UIColor.hexStr("#EB6D9A", alpha: 1)
     }
     
-    class func pyconJP2016BlueColor() -> UIColor {
-        return UIColor.hexStr("#54c2f0", alpha: 1)
+    class func pyconJP2016OrangeColor() -> UIColor {
+        return UIColor.hexStr("#F19975", alpha: 1)
+    }
+    
+    class func pyconJP2016LightOrangeColor() -> UIColor {
+        return UIColor.hexStr("#F8C058", alpha: 1)
+    }
+    
+    class func pyconJP2016YellowColor() -> UIColor {
+        return UIColor.hexStr("#FFE45F", alpha: 1)
+    }
+    
+    class func pyconJP2016LightGreenColor() -> UIColor {
+        return UIColor.hexStr("#A9C952", alpha: 1)
     }
     
     class func pyconJP2016GreenColor() -> UIColor {
-        return UIColor.hexStr("#a9c952", alpha: 1)
+        return UIColor.hexStr("#86C8A0", alpha: 1)
+    }
+    
+    class func pyconJP2016BlueColor() -> UIColor {
+        return UIColor.hexStr("#54c2f0", alpha: 1)
     }
     
     class func pyconJP2016GlayColor() -> UIColor {

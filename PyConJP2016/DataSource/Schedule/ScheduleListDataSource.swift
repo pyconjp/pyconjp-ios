@@ -19,7 +19,7 @@ class ScheduleListDataSource: NSObject, UITableViewDataSource {
         timelines.removeAll()
         do {
             let realm = try Realm()
-            let sortProperties = [SortDescriptor(property: "date", ascending: true), SortDescriptor(property: "id", ascending: true)]
+            let sortProperties = [SortDescriptor(property: "date", ascending: true), SortDescriptor(property: "place", ascending: true)]
             let talks = realm.objects(TalkObject).filter("day == %@", pyconJPDate.rawValue).sorted(sortProperties).map { $0 }
             let keys = talks.map { $0.startTime }.unique()
             for tuple in keys.enumerate() {

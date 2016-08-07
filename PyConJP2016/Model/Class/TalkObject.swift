@@ -63,4 +63,8 @@ class TalkObject: Object {
         return placeNumber
     }
     
+    var room: TalkRoom? {
+        return TalkRoom(rawValue: place)
+    }
+    
 }
