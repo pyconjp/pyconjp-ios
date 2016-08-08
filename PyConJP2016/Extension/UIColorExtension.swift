@@ -49,7 +49,7 @@ extension UIColor {
     }
     
     class func pyconJP2016BlueColor() -> UIColor {
-        return UIColor.hexStr("#54c2f0", alpha: 1)
+        return UIColor.hexStr("#54C2F0", alpha: 1)
     }
     
     class func pyconJP2016GlayColor() -> UIColor {
