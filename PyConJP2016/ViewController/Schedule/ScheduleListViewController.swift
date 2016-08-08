@@ -42,7 +42,7 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
         
         tableView.dataSource = scheduleListDataSource
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 120
+        tableView.estimatedRowHeight = 134
         
         refreshControl.beginRefreshing()
         refresh()
