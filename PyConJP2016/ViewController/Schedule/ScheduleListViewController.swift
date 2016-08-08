@@ -62,6 +62,7 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
         getTalks(successClosure: { [weak self]() in
             self?.refresh()
         }) { [weak self](error) in
+            self?.refreshControl.endRefreshing()
             guard let weakSelf = self else { return }
             weakSelf.showErrorAlartWith(error, parent: weakSelf)
         }
