@@ -1,6 +1,8 @@
 disabled_rules:
 # FourceCastを許可
 - force_cast
+# FourceTryを許可
+- force_try
 # ネストの許可
 #- nesting
 # コードの記載のない改行を許可

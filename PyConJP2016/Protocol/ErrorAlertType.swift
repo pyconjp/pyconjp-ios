@@ -9,13 +9,21 @@
 import UIKit
 
 protocol ErrorAlertType {
-    
+    func showErrorAlartWith(error: NSError, parent viewController: UIViewController?) -> Void
 }
 
 extension ErrorAlertType {
-    func showErrorAlartWith(error: NSError, parent viewController: UIViewController) -> Void {
-        let alert = UIAlertController(title: "hogehoge", message: "fugafuga", preferredStyle: .Alert)
+    func showErrorAlartWith(error: NSError, parent viewController: UIViewController?) -> Void {
+
+        var rootViewController: UIViewController {
+            if viewController == nil {
+                return UIApplication.sharedApplication().keyWindow!.rootViewController!
+            }
+            return viewController!
+        }
+        
+        let alert = UIAlertController(title: error.localizedFailureReason, message: error.localizedRecoverySuggestion, preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-        viewController.presentViewController(alert, animated: true, completion: nil)
+        rootViewController.presentViewController(alert, animated: true, completion: nil)
     }
 }

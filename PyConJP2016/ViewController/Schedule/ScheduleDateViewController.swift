@@ -3,28 +3,24 @@
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/03/07.
-//  Copyright © 2016年 Yutaro Muta. All rights reserved.
+//  Copyright © 2016 Yutaro Muta. All rights reserved.
 //
 
 import UIKit
 
 class ScheduleDateViewController: UIViewController, ScheduleDateViewProtocol {
     
-    @IBOutlet weak var activeBarView: UIView!
+    @IBOutlet weak var activeBar: UIView!
     @IBOutlet weak var day1Button: UIButton!
     @IBOutlet weak var day2Button: UIButton!
     
-    var activeBar = UIView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: UIScreen.mainScreen().bounds.width / 2, height: 3)))
-    var buttonOriginXArray: [CGFloat] = []
+    private var buttonOriginXArray: [CGFloat] = []
     
-    var schedulePageViewProtocol: SchedulePageViewProtocol?
+    private var schedulePageViewProtocol: SchedulePageViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        activeBar.backgroundColor = .pyconJP2016BlueColor()
-        activeBarView.addSubview(activeBar)
-        
+
     }
     
     override func viewDidAppear(animated: Bool) {

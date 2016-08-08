@@ -8,16 +8,10 @@
 
 import UIKit
 
-class MoreViewController: UIViewController, UITableViewDelegate {
-
-    @IBOutlet weak var tableView: UITableView!
-    
-    let moreDataSource = MoreDataSource()
+class MoreViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.dataSource = moreDataSource
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -27,29 +21,66 @@ class MoreViewController: UIViewController, UITableViewDelegate {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
-    // MARK: - Table View Controller Delegate
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        switch indexPath.section {
+    private func aboutSection(row: Int) {
+        switch row {
         case 0:
+            let whatPyConJPViewController = self.storyboard?.instantiateViewControllerWithIdentifier("WhatPyConJPViewController")
+            self.navigationController?.pushViewController(whatPyConJPViewController!, animated: true)
+        case 1:
             let aboutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("AboutViewController")
             self.navigationController?.pushViewController(aboutViewController!, animated: true)
-            break
-        case 1:
-            let mapViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController
-            self.navigationController?.pushViewController(mapViewController, animated: true)
-        case 2:
-            let webViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("PCJWKWebViewController") as! PCJWKWebViewController
-            webViewController.url = "https://github.com/pyconjp/pyconjp-ios"
-            self.navigationController?.pushViewController(webViewController, animated: true)
         default:
             break
         }
     }
-
+    
+    private func mapSection(row: Int) {
+        switch row {
+        case 0:
+            let mapListViewController = MapListViewController.build()
+            self.navigationController?.pushViewController(mapListViewController, animated: true)
+        case 1:
+            let mapViewController = MapViewController.build(MapViewController.Venue.Microsoft)
+            self.navigationController?.pushViewController(mapViewController, animated: true)
+        default:
+            break
+        }
+    }
+    
+    private func applicationSection(row: Int) {
+        switch row {
+        case 0:
+            let webViewController = PCJWKWebViewController.build("https://github.com/pyconjp/pyconjp-ios")
+            self.navigationController?.pushViewController(webViewController, animated: true)
+        case 1:
+            let libraryViewController = LibraryListViewController.build()
+            self.navigationController?.pushViewController(libraryViewController, animated: true)
+        case 2:
+            let licenseViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LicenseViewController")
+            self.navigationController?.pushViewController(licenseViewController!, animated: true)
+        default:
+            break
+        }
+    }
+    
+    // MARK: - Table View Controller Delegate
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch TableViewSection(rawValue: indexPath.section) ?? .About {
+        case .About:
+            aboutSection(indexPath.row)
+        case .Map:
+            mapSection(indexPath.row)
+        case .Application:
+            applicationSection(indexPath.row)
+        }
+    }
+    
+    private enum TableViewSection: Int {
+        case About =  0
+        case Map = 1
+        case Application = 2
+    }
+    
 }

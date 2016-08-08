@@ -3,21 +3,19 @@
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/03/07.
-//  Copyright © 2016年 Yutaro Muta. All rights reserved.
+//  Copyright © 2016 Yutaro Muta. All rights reserved.
 //
 
 import UIKit
 
-class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol {
+class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol, TalksAPIType, ErrorAlertType {
 
-    var childrenViewControllers: Array<ScheduleListViewController> = []
+    private var scheduleModelViewProtocol: ScheduleModelViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.grayColor()
-        
-        let startingViewController: ScheduleListViewController = self.scheduleModelController.viewControllerAtIndex(0, storyboard: self.storyboard!)!
+        let startingViewController = self.scheduleModelController.viewControllerAtIndex(0, storyboard: self.storyboard!)!
         let viewControllers = [startingViewController]
         self.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: {done in })
         
@@ -25,9 +23,9 @@ class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol
         
     }
     
-    var _scheduleModelController: ScheduleModelController? = nil
+    private var _scheduleModelController: ScheduleModelController? = nil
     
-    var scheduleModelController: ScheduleModelController {
+    private var scheduleModelController: ScheduleModelController {
         if _scheduleModelController == nil {
             _scheduleModelController = ScheduleModelController()
         }
@@ -61,8 +59,13 @@ class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol
     }
     
     private func movePage(index: Int, direction: UIPageViewControllerNavigationDirection) {
-        let viewController: ScheduleListViewController = scheduleModelController.viewControllerAtIndex(index, storyboard: self.storyboard!)!
+        let viewController = scheduleModelController.viewControllerAtIndex(index, storyboard: self.storyboard!)!
         let viewControllers = [viewController]
         self.setViewControllers(viewControllers, direction: direction, animated: true, completion: {done in})
     }
+    
+}
+
+protocol ScheduleModelViewProtocol {
+    func loadData()
 }

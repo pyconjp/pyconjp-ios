@@ -27,7 +27,7 @@ struct Talk {
 
 extension Talk {
     
-    init(id: Int, title: String, description: String, speakers: [String]?, day: String, startTime: String, endTime: String, periodTime: String, category: String, place: String, language: String) {
+    init(id: Int, title: String, description: String, speakers: [String]?, day: String, startTime: String, endTime: String, category: String, place: String, language: String) {
         self.id = id
         self.title = title
         self.description = description
@@ -36,13 +36,13 @@ extension Talk {
         self.day = day
         self.startTime = startTime
         self.endTime = endTime
-        self.periodTime = periodTime
+        self.periodTime = startTime.timeStringByTrimingSecond() + " ~ " + endTime.timeStringByTrimingSecond()
         self.category = category
         self.place = place
         self.language = Language(rawValue: language) ?? .JA
     }
     
-    init(dictionary: [String : AnyObject]) {
+    init(dictionary: Dictionary<String, AnyObject>) {
         self.init(id: dictionary["id"] as? Int ?? 0,
                   title: dictionary["title"] as? String ?? "",
                   description: dictionary["description"] as? String ?? "",
@@ -50,7 +50,6 @@ extension Talk {
                   day: dictionary["day"] as? String ?? "",
                   startTime: dictionary["start"] as? String ?? "",
                   endTime: dictionary["end"] as? String ?? "",
-                  periodTime: (dictionary["start"] as? String ?? "") + " ~ " + (dictionary["end"] as? String ?? ""),
                   category: dictionary["category"] as? String ?? "",
                   place: dictionary["rooms"] as? String ?? "",
                   language: dictionary["language"] as? String ?? "")

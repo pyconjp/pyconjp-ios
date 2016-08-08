@@ -3,7 +3,7 @@
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/02/26.
-//  Copyright © 2016年 Yutaro Muta. All rights reserved.
+//  Copyright © 2016 Yutaro Muta. All rights reserved.
 //
 
 import UIKit
@@ -13,7 +13,13 @@ class PCJWKWebViewController: UIViewController, WKNavigationDelegate, WKUIDelega
     
     @IBOutlet weak var webContentView: UIView!
     
-    var url: String = ""
+    private var url: String = ""
+    
+    class func build(url: String) -> PCJWKWebViewController {
+        let pcjWKWebViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("PCJWKWebViewController") as! PCJWKWebViewController
+        pcjWKWebViewController.url = url
+        return pcjWKWebViewController
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

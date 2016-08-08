@@ -3,7 +3,7 @@
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/03/07.
-//  Copyright © 2016年 Yutaro Muta. All rights reserved.
+//  Copyright © 2016 Yutaro Muta. All rights reserved.
 //
 
 import UIKit
@@ -16,12 +16,13 @@ class ScheduleBaseViewController: UIViewController, UIPageViewControllerDelegate
     var scheduleDateViewProtocol: ScheduleDateViewProtocol?
     var schedulePageViewProtocol: SchedulePageViewProtocol?
     
-    var offsetToChange: CGFloat = 0.0 {
+    private var offsetToChange: CGFloat = 0.0 {
         didSet {
             
         }
     }
-    var displayIndex: Int = 0 {
+    
+    private var displayIndex: Int = 0 {
         didSet {
             if let scheduleDateViewProtocol = scheduleDateViewProtocol {
             	scheduleDateViewProtocol.changeActive(displayIndex)
@@ -43,7 +44,7 @@ class ScheduleBaseViewController: UIViewController, UIPageViewControllerDelegate
         self.addChildViewController(scheduleDateViewController!)
         barContainerView.addSubview(scheduleDateViewController!.view)
         scheduleDateViewController?.didMoveToParentViewController(self)
-        
+
     }
     
     override func viewDidAppear(animated: Bool) {

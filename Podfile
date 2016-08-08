@@ -4,6 +4,7 @@ use_frameworks!
 
 def install_pods 
  pod 'Alamofire', '~> 3.4'
+ pod 'RealmSwift', '~>1.0'
 end
 
 target "PyConJP2016" do

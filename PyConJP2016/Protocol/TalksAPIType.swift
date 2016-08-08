@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 protocol TalksAPIType: AlamofireType {
-    //    func getTalks(parameter: Dictionary<String, AnyObject>?, successClosure success: (NSDictionary) -> Void, failClosure fail: (NSError) -> Void) -> Void
+    func getTalks(successClosure success: () -> Void, failClosure fail: (NSError) -> Void)
+    func getTalksFromLocalDummyJson(successClosure success: () -> Void, failClosure fail: (NSError) -> Void)
 }
 
 extension TalksAPIType {
@@ -18,18 +20,50 @@ extension TalksAPIType {
         return "talks/list/"
     }
     
-    func getTalks(parameter: Dictionary<String, AnyObject>?, successClosure success: ([Talk]) -> Void, failClosure fail: (NSError) -> Void) {
-        get(parameter, successClosure: { dictionary in
-            let presentations = dictionary["presentations"] as? Array<Dictionary<String, AnyObject>> ?? Array()
+    func getTalks(successClosure success: () -> Void, failClosure fail: (NSError) -> Void) {
+        get(nil, successClosure: { dictionary in
+            let presentations = dictionary["presentations"] as? Array<Dictionary<String, AnyObject>> ?? [Dictionary<String, AnyObject>]()
             
-            let talks = presentations.map({
-                Talk(dictionary: $0)
-            })
-            
-            success(talks)
-            
-            }, failClosure: { error in
+            do {
+                let realm = try Realm()
+                try realm.write({
+                    presentations.forEach({
+                        let talkObject = TalkObject(dictionary: $0)
+                        realm.add(talkObject, update: true)
+                    })
+                })
                 
+                success()
+            } catch let error as NSError {
+                fail(error)
+            }
+            
+        }, failClosure: { error in
+            fail(error)
         })
     }
+    
+    func getTalksFromLocalDummyJson(successClosure success: () -> Void, failClosure fail: (NSError) -> Void) {
+        let path = NSBundle.mainBundle().pathForResource("DummyTalks", ofType: "json")
+        let fileHandle = NSFileHandle(forReadingAtPath: path!)
+        let data = fileHandle?.readDataToEndOfFile()
+        let dictionary = try! NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as! Dictionary<String, AnyObject>
+        let presentations = dictionary["presentations"] as? Array<Dictionary<String, AnyObject>> ?? [Dictionary<String, AnyObject>]()
+        
+        do {
+            let realm = try Realm()
+            try realm.write({
+                presentations.forEach({
+                    let talkObject = TalkObject(dictionary: $0)
+                    realm.add(talkObject, update: true)
+                })
+            })
+            
+            success()
+        } catch let error as NSError {
+            fail(error)
+        }
+        
+    }
+    
 }

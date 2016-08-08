@@ -3,14 +3,14 @@
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/03/07.
-//  Copyright © 2016年 Yutaro Muta. All rights reserved.
+//  Copyright © 2016 Yutaro Muta. All rights reserved.
 //
 
 import UIKit
 
 class ScheduleModelController: NSObject, UIPageViewControllerDataSource {
-    //    var childrenViewControllers: Array<ScheduleListViewController> = []
-    let dates: Array<String> = ["2016/09/21", "2016/09/22"]
+
+    private let days: Array<PyConJPDate> = PyConJPDate.confarenceDate()
     
     override init() {
         super.init()
@@ -18,25 +18,24 @@ class ScheduleModelController: NSObject, UIPageViewControllerDataSource {
     
     func viewControllerAtIndex(index: Int, storyboard: UIStoryboard) -> ScheduleListViewController? {
         
-        if (self.dates.count == 0) || (index >= self.dates.count) {
+        if self.days.isEmpty || index >= days.count {
             return nil
         }
         
-        let scheduleListViewController = storyboard.instantiateViewControllerWithIdentifier("ScheduleListViewController") as! ScheduleListViewController
-        scheduleListViewController.date = dates[index]
-        scheduleListViewController.viewControllerIndex = index
+        let scheduleListViewController = ScheduleListViewController.build(index, storyboard: storyboard, pyconJPDate: days[index])
         return scheduleListViewController
         
     }
     
-    func indexOfViewController(viewController: ScheduleListViewController) -> Int {
-        return dates.indexOf(viewController.date) ?? NSNotFound
+    func indexOfViewController(viewController: UIViewController) -> Int {
+        guard let viewController = viewController as? ScheduleListViewController, pyconJPDate = viewController.pyconJPDate else { return NSNotFound }
+        return days.indexOf(pyconJPDate) ?? NSNotFound
     }
     
     // MARK: - Page View Controller Data Source
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        var index = self.indexOfViewController(viewController as! ScheduleListViewController)
+        var index = self.indexOfViewController(viewController)
         if (index == 0) || (index == NSNotFound) {
             return nil
         }
@@ -46,13 +45,13 @@ class ScheduleModelController: NSObject, UIPageViewControllerDataSource {
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        var index = self.indexOfViewController(viewController as! ScheduleListViewController)
+        var index = self.indexOfViewController(viewController)
         if index == NSNotFound {
             return nil
         }
         
         index += 1
-        if index == self.dates.count {
+        if index == days.count {
             return nil
         }
         

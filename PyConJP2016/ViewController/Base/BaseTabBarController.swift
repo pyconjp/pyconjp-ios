@@ -3,15 +3,15 @@
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/02/19.
-//  Copyright © 2016年 Yutaro Muta. All rights reserved.
+//  Copyright © 2016 Yutaro Muta. All rights reserved.
 //
 
 import UIKit
 
 class BaseTabBarController: UITabBarController {
     
-    var scheduleTabNavigationController: UINavigationController?
-    var moreTabNavigationController: UINavigationController?
+    private var scheduleTabNavigationController: UINavigationController?
+    private var moreTabNavigationController: UINavigationController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
