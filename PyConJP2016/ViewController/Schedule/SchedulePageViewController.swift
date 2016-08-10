@@ -9,7 +9,7 @@
 import UIKit
 
 class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol, TalksAPIType, ErrorAlertType {
-
+    
     private var scheduleModelViewProtocol: ScheduleModelViewProtocol?
     
     override func viewDidLoad() {

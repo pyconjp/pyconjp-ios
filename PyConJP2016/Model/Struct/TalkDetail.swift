@@ -27,7 +27,7 @@ extension TalkDetail {
 }
 
 //struct TalkDetail {
-//    
+//
 //    let id: Int
 //    let title: String
 //    let description: String
@@ -43,11 +43,11 @@ extension TalkDetail {
 //    let place: String
 //    let language: Language
 //    var isSetNotification: Bool = false
-//    
+//
 //}
 //
 //extension TalkDetail {
-//    
+//
 //    init(id: Int, title: String, description: String, abstract: String, speakers: [String]?, day: String, startTime: String, endTime: String, category: String, level: String, place: String, language: String) {
 //        self.id = id
 //        self.title = title
@@ -63,7 +63,7 @@ extension TalkDetail {
 //        self.level = level
 //        self.place = place
 //        self.language = Language(rawValue: language) ?? .JA
-//        
+//
 //        if let notifications = UIApplication.sharedApplication().scheduledLocalNotifications {
 //            notifications.forEach({ (notification) -> () in
 //                if let settingId = notification.userInfo?["id"] as? Int where settingId == self.id {
@@ -72,7 +72,7 @@ extension TalkDetail {
 //            })
 //        }
 //    }
-//    
+//
 //    init(dictionary: Dictionary<String, AnyObject>) {
 //        self.init(id: dictionary["id"] as? Int ?? 0,
 //                  title: dictionary["title"] as? String ?? "",
@@ -87,5 +87,5 @@ extension TalkDetail {
 //                  place: dictionary["rooms"] as? String ?? "",
 //                  language: dictionary["language"] as? String ?? "")
 //    }
-//    
+//
 //}

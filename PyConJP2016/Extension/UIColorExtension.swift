@@ -9,8 +9,8 @@
 import UIKit
 
 extension UIColor {
-    class func hexStr (hexStr: NSString, alpha: CGFloat) -> UIColor {
-        let hex = hexStr.stringByReplacingOccurrencesOfString("#", withString: "") as String
+    class func hexStr(hexStr: NSString, alpha: CGFloat) -> UIColor {
+        let hex = hexStr.stringByReplacingOccurrencesOfString("#", withString: "")
         let scanner = NSScanner(string: hex)
         var color: UInt32 = 0
         if scanner.scanHexInt(&color) {

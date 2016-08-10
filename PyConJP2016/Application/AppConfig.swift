@@ -10,6 +10,6 @@ import UIKit
 
 class AppConfig {
     
-	static let PCJCompleteFetchDataNotification = "PCJCompleteFetchDateNotification"
+    static let PCJCompleteFetchDataNotification = "PCJCompleteFetchDateNotification"
     
 }

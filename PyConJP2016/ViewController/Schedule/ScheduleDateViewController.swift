@@ -20,12 +20,12 @@ class ScheduleDateViewController: UIViewController, ScheduleDateViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     override func viewDidAppear(animated: Bool) {
-        if buttonOriginXArray.count == 0 {
-            self.createButtonOriginXArray()
+        if buttonOriginXArray.isEmpty {
+            view.subviews.filter({ $0 is UIButton }).forEach({ buttonOriginXArray.append($0.frame.origin.x) })
         }
     }
     
@@ -34,14 +34,6 @@ class ScheduleDateViewController: UIViewController, ScheduleDateViewProtocol {
         scheduleBaseViewController.scheduleDateViewProtocol = self
         schedulePageViewProtocol = scheduleBaseViewController.schedulePageViewProtocol
         
-    }
-    
-    func createButtonOriginXArray() {
-        self.view.subviews.forEach {
-            if let button = $0 as? UIButton {
-                buttonOriginXArray.append(button.frame.origin.x)
-            }
-        }
     }
     
     // MARK: - Day Button

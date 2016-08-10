@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailImageViewController: UIViewController {
-
+    
     @IBOutlet weak var customImageView: CustomImageView?
     
     override func viewDidLoad() {
@@ -28,5 +28,5 @@ class DetailImageViewController: UIViewController {
         let panGesture = UIPanGestureRecognizer(target: customImageView, action: #selector(CustomImageView.handleGesture(_:)))
         view.addGestureRecognizer(panGesture)
     }
-
+    
 }

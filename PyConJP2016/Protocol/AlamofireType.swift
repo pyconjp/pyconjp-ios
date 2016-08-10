@@ -17,7 +17,7 @@ protocol AlamofireType {
     var authPassword: String { get }
     
     func get(parameter: Dictionary<String, AnyObject>?, successClosure success: (Dictionary<String, AnyObject>) -> Void, failClosure fail: (NSError) -> Void) -> Void
-//    func post(url: String, parameter: Dictionary<String, AnyObject>?, successClosure success: () -> Void, failClosure fail: (NSError) -> Void) -> Void
+    //    func post(url: String, parameter: Dictionary<String, AnyObject>?, successClosure success: () -> Void, failClosure fail: (NSError) -> Void) -> Void
 }
 
 extension AlamofireType {
@@ -52,7 +52,7 @@ extension AlamofireType {
         }
         
         alamofireManager.request(.GET, url).authenticate(user: authUser, password: authPassword).responseJSON(completionHandler: responseClosure)
-
+        
     }
     
 }

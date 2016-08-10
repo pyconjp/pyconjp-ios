@@ -13,7 +13,7 @@ class MapListViewController: UITableViewController {
     class func build() -> MapListViewController {
         return UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("MapListViewController") as! MapListViewController
     }
-
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -39,5 +39,5 @@ class MapListViewController: UITableViewController {
         case Access =  0
         case Floor = 1
     }
-
+    
 }

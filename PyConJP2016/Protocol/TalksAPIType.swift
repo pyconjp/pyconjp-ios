@@ -38,8 +38,8 @@ extension TalksAPIType {
                 fail(error)
             }
             
-        }, failClosure: { error in
-            fail(error)
+            }, failClosure: { error in
+                fail(error)
         })
     }
     

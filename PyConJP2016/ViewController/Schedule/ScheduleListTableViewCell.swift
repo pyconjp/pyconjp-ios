@@ -9,7 +9,7 @@
 import UIKit
 
 class ScheduleListTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var placeLabel: UILabel!

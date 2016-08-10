@@ -12,7 +12,7 @@ struct Place {
     
     let id: Int
     let name: String
-
+    
 }
 
 extension Place {

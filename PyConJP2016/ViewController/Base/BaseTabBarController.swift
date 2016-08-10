@@ -26,11 +26,11 @@ class BaseTabBarController: UITabBarController {
         
         let viewControllers = [scheduleTabNavigationController!, moreTabNavigationController!] as [UIViewController]
         self.setViewControllers(viewControllers, animated: false)
-
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
 }
