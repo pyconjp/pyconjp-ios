@@ -37,6 +37,7 @@
 		7FC773BF1D126A1600F5A202 /* ScheduleListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC773BE1D126A1600F5A202 /* ScheduleListDataSource.swift */; };
 		7FFB733E1C915B6E006FB375 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFB733D1C915B6D006FB375 /* MapViewController.swift */; };
 		7FFB73401C9162C2006FB375 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFB733F1C9162C2006FB375 /* MapKit.framework */; };
+		7FFF87EE1D5AF2070093E316 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF87ED1D5AF2070093E316 /* Result.swift */; };
 		954B7D7AE17B5936AC1F49FC /* Pods_PyConJP2016Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1BDDC1CABB963F52098EAB7 /* Pods_PyConJP2016Tests.framework */; };
 		C832600FD904D3FFADAA174C /* Pods_PyConJP2016.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7952AFBF6B014E7BBED90FE3 /* Pods_PyConJP2016.framework */; };
 		DB0159D21D4DB7B500B17018 /* PCJSFSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0159D01D4DB7B500B17018 /* PCJSFSafariViewController.swift */; };
@@ -118,6 +119,7 @@
 		7FC773BE1D126A1600F5A202 /* ScheduleListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListDataSource.swift; sourceTree = "<group>"; };
 		7FFB733D1C915B6D006FB375 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7FFB733F1C9162C2006FB375 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7FFF87ED1D5AF2070093E316 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		A1BDDC1CABB963F52098EAB7 /* Pods_PyConJP2016Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PyConJP2016Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A81D8527364825FA466121 /* Pods-PyConJP2016Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016Tests/Pods-PyConJP2016Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB0159D01D4DB7B500B17018 /* PCJSFSafariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJSFSafariViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				7F1CBE931D52CAFA007C058D /* Language.swift */,
 				7F1CBEA31D52CB3C007C058D /* PyConJPDate.swift */,
 				DB23836D1D563BFE00DA5376 /* Room.swift */,
+				7FFF87ED1D5AF2070093E316 /* Result.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -753,6 +756,7 @@
 				7F82F6A21C8D4B9A004EAC0E /* ScheduleModelController.swift in Sources */,
 				7FB4D3031D542DD2005F314E /* FloorMapListViewController.swift in Sources */,
 				DB1347E01CCB27D900CA0539 /* ErrorAlertType.swift in Sources */,
+				7FFF87EE1D5AF2070093E316 /* Result.swift in Sources */,
 				7FB4D30C1D5461C3005F314E /* ScheduleListTableViewCell.swift in Sources */,
 				7F6879051D420626003D5742 /* StringExtention.swift in Sources */,
 				7F82F6A61C8D4C3D004EAC0E /* ScheduleBaseViewController.swift in Sources */,

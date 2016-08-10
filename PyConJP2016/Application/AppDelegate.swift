@@ -30,10 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TalksAPIType, ErrorAlertT
         //            }
         //        }
         
-        getTalks(successClosure: {
-            NSNotificationCenter.defaultCenter().postNotificationName(AppConfig.PCJCompleteFetchDataNotification, object: nil)
-        }) {(error) in
-            self.showErrorAlartWith(error, parent: nil)
+        getTalks { result in
+            switch result {
+            case .Success:
+            	NSNotificationCenter.defaultCenter().postNotificationName(AppConfig.PCJCompleteFetchDataNotification, object: nil)
+            case .Failure(let error):
+                self.showErrorAlartWith(error)
+            }
         }
         
         UINavigationBar.appearance().barTintColor = .pyconJP2016RedColor()
