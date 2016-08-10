@@ -20,11 +20,11 @@ class ScheduleDateViewController: UIViewController, ScheduleDateViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     override func viewDidAppear(animated: Bool) {
-        if buttonOriginXArray.count == 0 {
+        if buttonOriginXArray.isEmpty {
             self.createButtonOriginXArray()
         }
     }

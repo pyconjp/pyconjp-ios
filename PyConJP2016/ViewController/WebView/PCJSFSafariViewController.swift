@@ -13,12 +13,12 @@ class PCJSFSafariViewController: UIViewController, SFSafariViewControllerDelegat
     
     private var url: String = ""
     
-//    class func build(url: String) -> PCJSFSafariViewController {
-//        let pcjSFSafariViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("PCJSFSafariViewController") as! PCJSFSafariViewController
-//        pcjSFSafariViewController.url = url
-//        return pcjSFSafariViewController
-//    }
-
+    //    class func build(url: String) -> PCJSFSafariViewController {
+    //        let pcjSFSafariViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("PCJSFSafariViewController") as! PCJSFSafariViewController
+    //        pcjSFSafariViewController.url = url
+    //        return pcjSFSafariViewController
+    //    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -34,5 +34,5 @@ class PCJSFSafariViewController: UIViewController, SFSafariViewControllerDelegat
     func safariViewControllerDidFinish(controller: SFSafariViewController) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-
+    
 }

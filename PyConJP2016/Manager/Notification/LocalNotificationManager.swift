@@ -45,13 +45,13 @@ class LocalNotificationManager: NSObject {
     
     func cancelSchedule(talkDetail: TalkDetail) {
         if let localNotifications = UIApplication.sharedApplication().scheduledLocalNotifications {
-           localNotifications.forEach({ (notification) -> () in
-            if let userInfo = notification.userInfo {
-                if userInfo["id"] as! Int == talkDetail.talkObject.id {
-                    UIApplication.sharedApplication().cancelLocalNotification(notification)
+            localNotifications.forEach({ (notification) -> () in
+                if let userInfo = notification.userInfo {
+                    if userInfo["id"] as! Int == talkDetail.talkObject.id {
+                        UIApplication.sharedApplication().cancelLocalNotification(notification)
+                    }
                 }
-            }
-           })
+            })
         }
     }
     

@@ -9,7 +9,7 @@
 import UIKit
 
 class ScheduleModelController: NSObject, UIPageViewControllerDataSource {
-
+    
     private let days: Array<PyConJPDate> = PyConJPDate.confarenceDate()
     
     override init() {

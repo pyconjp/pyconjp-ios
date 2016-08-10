@@ -25,7 +25,7 @@ class ScheduleBaseViewController: UIViewController, UIPageViewControllerDelegate
     private var displayIndex: Int = 0 {
         didSet {
             if let scheduleDateViewProtocol = scheduleDateViewProtocol {
-            	scheduleDateViewProtocol.changeActive(displayIndex)
+                scheduleDateViewProtocol.changeActive(displayIndex)
             }
         }
     }
@@ -44,11 +44,11 @@ class ScheduleBaseViewController: UIViewController, UIPageViewControllerDelegate
         self.addChildViewController(scheduleDateViewController!)
         barContainerView.addSubview(scheduleDateViewController!.view)
         scheduleDateViewController?.didMoveToParentViewController(self)
-
+        
     }
     
     override func viewDidAppear(animated: Bool) {
-//        offsetToChange = 0.0
+        //        offsetToChange = 0.0
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,7 +70,7 @@ class ScheduleBaseViewController: UIViewController, UIPageViewControllerDelegate
             offsetToChange = scrollView.contentOffset.x - pageContainerView.frame.size.width
         }
     }
-
+    
 }
 
 protocol SchedulePageViewProtocol {

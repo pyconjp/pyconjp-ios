@@ -15,20 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TalksAPIType, ErrorAlertT
     var window: UIWindow?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-//        let settings = UIUserNotificationSettings(forTypes: [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound], categories: nil)
-//        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
-//        
-//        if let _ = launchOptions![UIApplicationLaunchOptionsURLKey] as? [NSObject : AnyObject] {
-//            if let osVersion = Float64(UIDevice.currentDevice().systemVersion) {
-//                if osVersion >= 9.0 {
-//                }
-//            }
-//        }
-//        if let launchOptions = launchOptions {
-//            if let localNotification = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification {
-//                self.application(application, didReceiveLocalNotification: localNotification)
-//            }
-//        }
+        //        let settings = UIUserNotificationSettings(forTypes: [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound], categories: nil)
+        //        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+        //
+        //        if let _ = launchOptions![UIApplicationLaunchOptionsURLKey] as? [NSObject : AnyObject] {
+        //            if let osVersion = Float64(UIDevice.currentDevice().systemVersion) {
+        //                if osVersion >= 9.0 {
+        //                }
+        //            }
+        //        }
+        //        if let launchOptions = launchOptions {
+        //            if let localNotification = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification {
+        //                self.application(application, didReceiveLocalNotification: localNotification)
+        //            }
+        //        }
         
         getTalks(successClosure: {
             NSNotificationCenter.defaultCenter().postNotificationName(AppConfig.PCJCompleteFetchDataNotification, object: nil)

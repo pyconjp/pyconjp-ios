@@ -9,7 +9,7 @@
 import UIKit
 
 class FloorMapListViewController: UITableViewController {
-
+    
     class func build() -> FloorMapListViewController {
         return UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("FloorMapListViewController") as! FloorMapListViewController
     }
@@ -58,5 +58,5 @@ class FloorMapListViewController: UITableViewController {
         case SecondFloor = 1
         case ThirdFloor = 2
     }
-
+    
 }

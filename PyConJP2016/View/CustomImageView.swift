@@ -21,18 +21,18 @@ class CustomImageView: UIImageView {
         
         self.userInteractionEnabled = true
         
-//        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(CustomImageView.handleGesture(_:)))
-//        doubleTapGesture.numberOfTapsRequired = 2
-//        self.addGestureRecognizer(doubleTapGesture)
-//        
-//        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(CustomImageView.handleGesture(_:)))
-//        self.addGestureRecognizer(pinchGesture)
-//        
-//        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(CustomImageView.handleGesture(_:)))
-//        self.addGestureRecognizer(longPressGesture)
-//        
-//        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(CustomImageView.handleGesture(_:)))
-//        self.addGestureRecognizer(panGesture)
+        //        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(CustomImageView.handleGesture(_:)))
+        //        doubleTapGesture.numberOfTapsRequired = 2
+        //        self.addGestureRecognizer(doubleTapGesture)
+        //
+        //        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(CustomImageView.handleGesture(_:)))
+        //        self.addGestureRecognizer(pinchGesture)
+        //
+        //        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(CustomImageView.handleGesture(_:)))
+        //        self.addGestureRecognizer(longPressGesture)
+        //
+        //        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(CustomImageView.handleGesture(_:)))
+        //        self.addGestureRecognizer(panGesture)
     }
     
     func handleGesture(gesture: UIGestureRecognizer) {

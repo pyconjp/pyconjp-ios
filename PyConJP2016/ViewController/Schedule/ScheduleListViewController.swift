@@ -25,7 +25,7 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
         let scheduleListViewController = storyboard.instantiateViewControllerWithIdentifier("ScheduleListViewController") as! ScheduleListViewController
         scheduleListViewController.viewControllerIndex = index
         scheduleListViewController.pyconJPDate = pyconJPDate
-
+        
         return scheduleListViewController
     }
     

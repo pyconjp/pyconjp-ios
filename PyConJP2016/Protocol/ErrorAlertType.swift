@@ -14,7 +14,7 @@ protocol ErrorAlertType {
 
 extension ErrorAlertType {
     func showErrorAlartWith(error: NSError, parent viewController: UIViewController?) -> Void {
-
+        
         var rootViewController: UIViewController {
             if viewController == nil {
                 return UIApplication.sharedApplication().keyWindow!.rootViewController!
