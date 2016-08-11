@@ -44,6 +44,7 @@
 		DB0159D31D4DB7B500B17018 /* PCJWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0159D11D4DB7B500B17018 /* PCJWKWebViewController.swift */; };
 		DB0206881D4FB8430067C94B /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0206851D4FB8430067C94B /* LocalNotificationManager.swift */; };
 		DB0206891D4FB8430067C94B /* ReceiveLocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0206861D4FB8430067C94B /* ReceiveLocalNotificationManager.swift */; };
+		DB03ADAB1D5CD25400AB0713 /* Bookmark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB03ADAA1D5CD25400AB0713 /* Bookmark.storyboard */; };
 		DB0A81651D463A4E0048ACB4 /* DummyTalks.json in Resources */ = {isa = PBXBuildFile; fileRef = DB0A81641D463A4E0048ACB4 /* DummyTalks.json */; };
 		DB0A81671D463A710048ACB4 /* DummyTalkDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = DB0A81661D463A710048ACB4 /* DummyTalkDetail.json */; };
 		DB1347DC1CC7DEDF00CA0539 /* AlamofireType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */; };
@@ -126,6 +127,7 @@
 		DB0159D11D4DB7B500B17018 /* PCJWKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJWKWebViewController.swift; sourceTree = "<group>"; };
 		DB0206851D4FB8430067C94B /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		DB0206861D4FB8430067C94B /* ReceiveLocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveLocalNotificationManager.swift; sourceTree = "<group>"; };
+		DB03ADAA1D5CD25400AB0713 /* Bookmark.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bookmark.storyboard; sourceTree = "<group>"; };
 		DB0A81641D463A4E0048ACB4 /* DummyTalks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyTalks.json; sourceTree = "<group>"; };
 		DB0A81661D463A710048ACB4 /* DummyTalkDetail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyTalkDetail.json; sourceTree = "<group>"; };
 		DB1347DB1CC7DEDF00CA0539 /* AlamofireType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireType.swift; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 				DBA1C0DE1C722E99004F0C8D /* Main.storyboard */,
 				DB5D5A841C72346C00CEF0CD /* Schedule.storyboard */,
 				DBDE0E7B1C8C19F50094BF36 /* More.storyboard */,
+				DB03ADAA1D5CD25400AB0713 /* Bookmark.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBA1C0E01C722E99004F0C8D /* Main.storyboard in Resources */,
+				DB03ADAB1D5CD25400AB0713 /* Bookmark.storyboard in Resources */,
 				DB0A81651D463A4E0048ACB4 /* DummyTalks.json in Resources */,
 				7FB4D30D1D5461C3005F314E /* ScheduleListTableViewCell.xib in Resources */,
 				DBDE0E7C1C8C19F50094BF36 /* More.storyboard in Resources */,
