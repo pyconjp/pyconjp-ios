@@ -3,7 +3,7 @@
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/08/10.
-//  Copyright © 2016 Yutaro Muta. All rights reserved.
+//  Copyright © 2016 PyCon JP. All rights reserved.
 //
 
 import Foundation
@@ -42,4 +42,5 @@ enum Result<T, Error: ErrorType> {
             return error
         }
     }
+    
 }
