@@ -13,14 +13,9 @@ protocol ErrorAlertType {
 }
 
 extension ErrorAlertType {
-    func showErrorAlartWith(error: NSError, parent viewController: UIViewController?) -> Void {
+    func showErrorAlartWith(error: NSError, parent viewController: UIViewController? = nil) -> Void {
         
-        var rootViewController: UIViewController {
-            if viewController == nil {
-                return UIApplication.sharedApplication().keyWindow!.rootViewController!
-            }
-            return viewController!
-        }
+        let rootViewController = viewController != nil ? viewController! : UIApplication.sharedApplication().keyWindow!.rootViewController!
         
         let alert = UIAlertController(title: error.localizedFailureReason, message: error.localizedRecoverySuggestion, preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))

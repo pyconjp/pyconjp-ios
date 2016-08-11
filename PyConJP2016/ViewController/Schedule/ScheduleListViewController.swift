@@ -59,12 +59,15 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
     func onRefresh(sender: UIRefreshControl) {
         scheduleListDataSource.timelines = []
         tableView.reloadData()
-        getTalks(successClosure: { [weak self]() in
-            self?.refresh()
-        }) { [weak self](error) in
-            self?.refreshControl.endRefreshing()
+        getTalks { [weak self](result) in
             guard let weakSelf = self else { return }
-            weakSelf.showErrorAlartWith(error, parent: weakSelf)
+            switch result {
+            case .Success:
+                weakSelf.refresh()
+            case .Failure(let error):
+                weakSelf.refreshControl.endRefreshing()
+                weakSelf.showErrorAlartWith(error, parent: weakSelf)
+            }
         }
     }
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol, TalksAPIType, ErrorAlertType {
+class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol, ErrorAlertType {
     
     private var scheduleModelViewProtocol: ScheduleModelViewProtocol?
     

@@ -66,15 +66,18 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     }
     
     private func getDetail() {
-        getTalkDetail(successClosure: { (talkDetail) in
-            self.talkDetail = talkDetail
-            self.talkDetail?.talkObject.title = self.talkTitle ?? ""
-            self.fillData()
-            self.refreshControl.endRefreshing()
-        }) { [weak self](error) in
-            self?.refreshControl.endRefreshing()
+        getTalkDetail { [weak self](result) in
             guard let weakSelf = self else { return }
-            weakSelf.showErrorAlartWith(error, parent: weakSelf)
+            switch result {
+            case .Success(let talkDetail):
+                weakSelf.talkDetail = talkDetail
+                weakSelf.talkDetail?.talkObject.title = weakSelf.talkTitle ?? ""
+                weakSelf.fillData()
+                weakSelf.refreshControl.endRefreshing()
+            case .Failure(let error):
+                weakSelf.refreshControl.endRefreshing()
+                weakSelf.showErrorAlartWith(error, parent: weakSelf)
+            }
         }
     }
     
