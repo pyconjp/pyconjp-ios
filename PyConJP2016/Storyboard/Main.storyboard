@@ -365,9 +365,18 @@
                             <constraint firstAttribute="bottom" secondItem="I4z-sw-OgW" secondAttribute="bottom" id="yPh-4t-tvt"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="QM1-Ot-9C9">
+                        <barButtonItem key="backBarButtonItem" title=" " id="agf-dK-8uB"/>
+                        <barButtonItem key="rightBarButtonItem" image="BookmarkOff" id="hA9-VP-GTX">
+                            <connections>
+                                <action selector="onBookmarkBarButton:" destination="1zf-tJ-49N" id="Z6Y-mf-ujr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="abstractTextView" destination="Xv1-pi-G9F" id="lta-ci-47R"/>
                         <outlet property="baseScrollView" destination="I4z-sw-OgW" id="MDV-Yn-9Fe"/>
+                        <outlet property="bookmarkBarButtonItem" destination="hA9-VP-GTX" id="Th3-So-F01"/>
                         <outlet property="categoryLabel" destination="hz9-pO-j7e" id="bfe-YW-eMK"/>
                         <outlet property="dayLabel" destination="nqD-Zb-1cG" id="Srk-cR-Xg6"/>
                         <outlet property="descriptionTextView" destination="qqF-jB-eJE" id="dcz-4i-3CX"/>
@@ -439,6 +448,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BookmarkOff" width="36" height="36"/>
         <image name="Clock" width="36" height="36"/>
         <image name="Logo" width="60" height="60"/>
         <image name="Pin" width="36" height="36"/>

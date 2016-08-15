@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertType {
     
     @IBOutlet weak var baseScrollView: UIScrollView!
+    @IBOutlet weak var bookmarkBarButtonItem: UIBarButtonItem!
     
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -71,6 +73,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
             switch result {
             case .Success(let talkDetail):
                 weakSelf.talkDetail = talkDetail
+                weakSelf.talkDetail?.talkObject.id = weakSelf.id ?? 0
                 weakSelf.talkDetail?.talkObject.title = weakSelf.talkTitle ?? ""
                 weakSelf.fillData()
                 weakSelf.refreshControl.endRefreshing()
@@ -101,23 +104,39 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
             
             self.descriptionTextView.text = talkDetail.talkObject.descriptionText
             self.abstractTextView.text = talkDetail.abstract
+            
+            self.toggleBookmarkBarButtonItem(talkDetail.talkObject.favorited)
         }
         
+    }
+    
+    func toggleBookmarkBarButtonItem(isFavorite: Bool) {
+        let image = isFavorite ? UIImage(named: "BookmarkOn") : UIImage(named: "BookmarkOff")
+        bookmarkBarButtonItem.image = image
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    //    @IBAction func swithNotification(sender: UISwitch) {
-    //        if let talkDetail = talkDetail {
-    //            if talkDetail.isSetNotification {
-    //                localNotificationManager.makeNotification(talkDetail)
-    //            } else {
-    //                localNotificationManager.cancelSchedule(talkDetail)
-    //            }
-    //        }
-    //    }
+    @IBAction func onBookmarkBarButton(sender: UIBarButtonItem) {
+        guard let id = id, talkDetail = talkDetail else { return }
+//        let talkObject = TalkObject()
+//        talkObject.id = talkDetail.talkObject.id
+//        talkObject.favorited = !talkDetail.talkObject.favorited
+//        print(talkObject)
+        do {
+            talkDetail.talkObject.favorited = !talkDetail.talkObject.favorited
+            let realm = try Realm()
+            try realm.write({ 
+//                talkDetail.talkObject.favorited = !talkDetail.talkObject.favorited
+                realm.create(TalkObject.self, value: ["id": id, "favorited": talkDetail.talkObject.favorited], update: true)
+            })
+            toggleBookmarkBarButtonItem(talkDetail.talkObject.favorited)
+        } catch {
+            
+        }
+    }
     
     @IBAction func onHashTagButton(sender: UIButton) {
         

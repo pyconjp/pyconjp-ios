@@ -41,6 +41,15 @@ class TalkObject: Object {
         category = dictionary["category"] as? String ?? ""
         place = dictionary["rooms"] as? String ?? ""
         language = dictionary["language"] as? String ?? ""
+        
+        do {
+            let realm = try Realm()
+            if let localTalkObject = (realm.objects(TalkObject).filter("id == %@", id).map { $0 }).first {
+                favorited = localTalkObject.favorited
+            }
+        } catch {
+            
+        }
     }
     
     override static func primaryKey() -> String? {
