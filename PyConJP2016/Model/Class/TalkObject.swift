@@ -22,7 +22,6 @@ class TalkObject: Object {
     dynamic var category = ""
     dynamic var place = ""
     dynamic var language = "ja"
-    
     dynamic var favorited = false
     
     convenience init(dictionary: Dictionary<String, AnyObject>) {

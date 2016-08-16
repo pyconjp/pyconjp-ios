@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 struct TalkDetail {
     
@@ -21,24 +20,6 @@ extension TalkDetail {
     
     init(dictionary: Dictionary<String, AnyObject>) {
         self.init(talkObject: TalkObject(dictionary: dictionary),
-                  abstract: dictionary["abstract"] as? String ?? "",
-                  level: dictionary["level"] as? String ?? "")
-    }
-    
-    init?(id: Int?, dictionary: Dictionary<String, AnyObject>) {
-        guard let id = id else { return nil }
-        let talkObject = TalkObject(dictionary: dictionary)
-        talkObject.id = id
-        do {
-            let realm = try Realm()
-            if let localTalkObject = (realm.objects(TalkObject).filter("id == %@", id).map { $0 }).first {
-                talkObject.title = localTalkObject.title
-                talkObject.favorited = localTalkObject.favorited
-            }
-        } catch {
-            
-        }
-        self.init(talkObject: talkObject,
                   abstract: dictionary["abstract"] as? String ?? "",
                   level: dictionary["level"] as? String ?? "")
     }

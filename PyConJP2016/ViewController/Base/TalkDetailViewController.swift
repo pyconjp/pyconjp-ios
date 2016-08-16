@@ -35,7 +35,6 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     @IBOutlet weak var abstractTextView: UITextView!
     
     var id: Int?
-    private var talkTitle: String?
     private var talkDetail: TalkDetail?
     //    private let localNotificationManager = LocalNotificationManager()
     private let refreshControl = UIRefreshControl()
@@ -44,10 +43,9 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
         return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
     }
     
-    class func build(id: Int, title: String) -> TalkDetailViewController {
+    class func build(id: Int) -> TalkDetailViewController {
         let talkDetailViewController = TalkDetailViewController.build()
         talkDetailViewController.id = id
-        talkDetailViewController.talkTitle = title
         return talkDetailViewController
     }
     
@@ -73,8 +71,6 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
             switch result {
             case .Success(let talkDetail):
                 weakSelf.talkDetail = talkDetail
-                weakSelf.talkDetail?.talkObject.id = weakSelf.id ?? 0
-                weakSelf.talkDetail?.talkObject.title = weakSelf.talkTitle ?? ""
                 weakSelf.fillData()
                 weakSelf.refreshControl.endRefreshing()
             case .Failure(let error):
@@ -120,17 +116,12 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     }
     
     @IBAction func onBookmarkBarButton(sender: UIBarButtonItem) {
-        guard let id = id, talkDetail = talkDetail else { return }
-//        let talkObject = TalkObject()
-//        talkObject.id = talkDetail.talkObject.id
-//        talkObject.favorited = !talkDetail.talkObject.favorited
-//        print(talkObject)
+        guard let talkDetail = talkDetail else { return }
         do {
             talkDetail.talkObject.favorited = !talkDetail.talkObject.favorited
             let realm = try Realm()
-            try realm.write({ 
-//                talkDetail.talkObject.favorited = !talkDetail.talkObject.favorited
-                realm.create(TalkObject.self, value: ["id": id, "favorited": talkDetail.talkObject.favorited], update: true)
+            try realm.write({
+                realm.create(TalkObject.self, value: ["id": talkDetail.talkObject.id, "favorited": talkDetail.talkObject.favorited], update: true)
             })
             toggleBookmarkBarButtonItem(talkDetail.talkObject.favorited)
         } catch {

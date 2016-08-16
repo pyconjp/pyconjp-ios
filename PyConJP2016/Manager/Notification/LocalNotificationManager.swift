@@ -31,7 +31,7 @@ class LocalNotificationManager: NSObject {
         
         let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)
         let fireDate =  calendar?.dateByAddingUnit(.Minute, value: -10, toDate: date, options: NSCalendarOptions())
-        let userInfo = ["type": "Talk", "id": talkDetail.talkObject.id, "title": talkDetail.talkObject.title] as [NSObject : AnyObject]
+        let userInfo = ["type": "Talk", "id": talkDetail.talkObject.id] as [NSObject : AnyObject]
         
         let notificaiton = UILocalNotification()
         notificaiton.fireDate = fireDate

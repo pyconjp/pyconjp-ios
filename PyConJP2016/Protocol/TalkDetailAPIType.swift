@@ -41,7 +41,7 @@ extension TalkDetailAPIType {
         get() { result in
             switch result {
             case .Success(let value):
-                guard let talkDetail = TalkDetail(id: self.id, dictionary: value) else { return }
+                let talkDetail = TalkDetail(dictionary: value)
                 completionHandler(.Success(talkDetail))
             case .Failure(let error):
                 completionHandler(.Failure(error))
