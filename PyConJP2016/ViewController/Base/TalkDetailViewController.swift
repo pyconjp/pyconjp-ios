@@ -60,6 +60,22 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let talkDetail = talkDetail else { return }
+        do {
+            let realm = try Realm()
+            if let talkObject = realm.objectForPrimaryKey(TalkObject.self, key: id) {
+                talkDetail.talkObject.favorited = talkObject.favorited
+                toggleBookmarkBarButtonItem(talkDetail.talkObject.favorited)
+            }
+        } catch {
+            
+        }
+        
+    }
+    
     func refresh(refreshControl: UIRefreshControl) {
         talkDetail = nil
         getDetail()
@@ -108,7 +124,9 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     
     func toggleBookmarkBarButtonItem(isFavorite: Bool) {
         let image = isFavorite ? UIImage(named: "BookmarkOn") : UIImage(named: "BookmarkOff")
-        bookmarkBarButtonItem.image = image
+        dispatch_async(dispatch_get_main_queue()) {
+            self.bookmarkBarButtonItem.image = image
+        }
     }
     
     override func didReceiveMemoryWarning() {
