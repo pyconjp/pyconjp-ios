@@ -1,5 +1,5 @@
 //
-//  TimelineDataSource.swift
+//  RealmTalksType.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/08/18.
@@ -9,20 +9,14 @@
 import UIKit
 import RealmSwift
 
-protocol TimelineDataSource {
-    var reuseIdentifier: String { get }
-    var timelines: Array<Timeline> { get set }
+protocol RealmTalksType {
     var filterPredicate: NSPredicate { get }
     var sortProperties: Array<SortDescriptor> { get }
     
     func loadTalkObjects(completionHandler: (Result<Array<TalkObject>, NSError> -> Void)) -> Void
 }
 
-extension TimelineDataSource {
-    
-    var reuseIdentifier: String {
-        return "TalkTableViewCell"
-    }
+extension RealmTalksType {
     
     func loadTalkObjects(completionHandler: (Result<Array<TalkObject>, NSError> -> Void)) -> Void {
         do {
