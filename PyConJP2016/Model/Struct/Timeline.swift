@@ -10,15 +10,20 @@ import UIKit
 
 struct Timeline {
     
-    let header: String
+    let key: String
     var talks: Array<TalkObject>
     
 }
 
 extension Timeline {
     
+    init(key: String, talks: Array<TalkObject>?) {
+        self.key = key
+        self.talks = talks ?? [TalkObject]()
+    }
+    
     init(startTime: String, talks: Array<TalkObject>?) {
-        self.header = startTime.timeStringByTrimingSecond()
+        self.key = startTime.timeStringByTrimingSecond()
         self.talks = talks ?? [TalkObject]()
     }
     

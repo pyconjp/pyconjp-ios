@@ -1,5 +1,5 @@
 //
-//  ScheduleListTableViewCell.swift
+//  TalkTableViewCell.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/03/07.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScheduleListTableViewCell: UITableViewCell {
+class TalkTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!

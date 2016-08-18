@@ -19,8 +19,6 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
     
     private let refreshControl = UIRefreshControl()
     
-    private let reuseIdentifier = "ScheduleListTableViewCell"
-    
     class func build(index: Int, storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ScheduleListViewController {
         let scheduleListViewController = storyboard.instantiateViewControllerWithIdentifier("ScheduleListViewController") as! ScheduleListViewController
         scheduleListViewController.viewControllerIndex = index
@@ -34,8 +32,8 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ScheduleListViewController.refreshNotification(_:)), name: AppConfig.PCJCompleteFetchDataNotification, object: nil)
         
-        let nib  = UINib(nibName: "ScheduleListTableViewCell", bundle:nil)
-        tableView.registerNib(nib, forCellReuseIdentifier:reuseIdentifier)
+        let nib  = UINib(nibName: "TalkTableViewCell", bundle:nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: "TalkTableViewCell")
         
         refreshControl.addTarget(self, action: #selector(ScheduleListViewController.onRefresh(_:)), forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)

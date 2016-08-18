@@ -11,7 +11,7 @@ import RealmSwift
 
 class ScheduleListDataSource: NSObject, UITableViewDataSource {
     
-    let reuseIdentifier = "ScheduleListTableViewCell"
+    private let reuseIdentifier = "TalkTableViewCell"
     
     var timelines: [Timeline] = []
     
@@ -37,7 +37,7 @@ class ScheduleListDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return timelines[section].header
+        return timelines[section].key
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,7 +45,7 @@ class ScheduleListDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as? ScheduleListTableViewCell else {
+        guard let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as? TalkTableViewCell else {
             fatalError("Could not create ScheduleListTableViewCell")
         }
         cell.fillWith(timelines[indexPath.section].talks[indexPath.row])
