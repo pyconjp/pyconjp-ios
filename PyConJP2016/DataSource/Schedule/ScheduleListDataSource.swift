@@ -9,24 +9,29 @@
 import UIKit
 import RealmSwift
 
-class ScheduleListDataSource: NSObject, UITableViewDataSource {
-    
-    private let reuseIdentifier = "TalkTableViewCell"
+class ScheduleListDataSource: NSObject, UITableViewDataSource, TimelineDataSource {
     
     var timelines: [Timeline] = []
     
-    func refreshData(pyconJPDate: PyConJPDate) {
+    let filterPredicate: NSPredicate
+    let sortProperties = [SortDescriptor(property: "date", ascending: true), SortDescriptor(property: "place", ascending: true)]
+    
+    init(day: String?) {
+        self.filterPredicate = day != nil ? NSPredicate(format: "day == %@", day!) : NSPredicate()
+        super.init()
+    }
+    
+    func refreshData() {
         timelines.removeAll()
-        do {
-            let realm = try Realm()
-            let sortProperties = [SortDescriptor(property: "date", ascending: true), SortDescriptor(property: "place", ascending: true)]
-            let talks = realm.objects(TalkObject).filter("day == %@", pyconJPDate.rawValue).sorted(sortProperties).map { $0 }
-            let keys = talks.map { $0.startTime }.unique()
-            for tuple in keys.enumerate() {
-                timelines.append(Timeline(key: keys[tuple.index], talks: talks.filter { $0.startTime == keys[tuple.index]}))
+        loadTalkObjects { result in
+            switch result {
+            case .Success(let talks):
+                let keys = talks.map { $0.startTime }.unique()
+                for tuple in keys.enumerate() {
+                    self.timelines.append(Timeline(time: keys[tuple.index], talks: talks.filter { $0.startTime == keys[tuple.index]}))
+                }
+            case .Failure: break
             }
-        } catch {
-            
         }
     }
     

@@ -15,7 +15,7 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
     private(set) var viewControllerIndex: Int = 0
     private(set) var pyconJPDate: PyConJPDate?
     
-    private let scheduleListDataSource = ScheduleListDataSource()
+    private lazy var scheduleListDataSource: ScheduleListDataSource = ScheduleListDataSource(day: self.pyconJPDate?.rawValue)
     
     private let refreshControl = UIRefreshControl()
     
@@ -32,8 +32,8 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ScheduleListViewController.refreshNotification(_:)), name: AppConfig.PCJCompleteFetchDataNotification, object: nil)
         
-        let nib  = UINib(nibName: "TalkTableViewCell", bundle:nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: "TalkTableViewCell")
+        let nib  = UINib(nibName: scheduleListDataSource.reuseIdentifier, bundle:nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: scheduleListDataSource.reuseIdentifier)
         
         refreshControl.addTarget(self, action: #selector(ScheduleListViewController.onRefresh(_:)), forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
@@ -55,7 +55,7 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
     }
     
     func onRefresh(sender: UIRefreshControl) {
-        scheduleListDataSource.timelines = []
+        scheduleListDataSource.timelines.removeAll()
         tableView.reloadData()
         getTalks { [weak self](result) in
             guard let weakSelf = self else { return }
@@ -74,19 +74,13 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
     }
     
     func refresh() {
-        guard let pyconJPDate = pyconJPDate else { return }
-        scheduleListDataSource.refreshData(pyconJPDate)
+        scheduleListDataSource.refreshData()
         dispatch_async(dispatch_get_main_queue()) {
             self.tableView.reloadData()
             if !self.scheduleListDataSource.timelines.isEmpty {
                 self.refreshControl.endRefreshing()
             }
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
     }
     
     // MARK: - Table View Controller Delegate

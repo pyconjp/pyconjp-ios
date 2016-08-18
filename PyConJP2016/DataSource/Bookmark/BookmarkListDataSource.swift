@@ -9,25 +9,26 @@
 import UIKit
 import RealmSwift
 
-class BookmarkListDataSource: NSObject, UITableViewDataSource {
-    
-    private let reuseIdentifier = "TalkTableViewCell"
+class BookmarkListDataSource: NSObject, UITableViewDataSource, TimelineDataSource {
     
     var timelines: [Timeline] = []
     
+    let filterPredicate = NSPredicate(format: "favorited == %@", true)
+    let sortProperties = [SortDescriptor(property: "date", ascending: true), SortDescriptor(property: "place", ascending: true)]
+    
     func refreshData() {
         timelines.removeAll()
-        do {
-            let realm = try Realm()
-            let sortProperties = [SortDescriptor(property: "date", ascending: true), SortDescriptor(property: "place", ascending: true)]
-            let talks = realm.objects(TalkObject).filter("favorited == %@", true).sorted(sortProperties).map { $0 }
-            let keys = talks.map { $0.day }.unique()
-            for tuple in keys.enumerate() {
-                timelines.append(Timeline(key: keys[tuple.index], talks: talks.filter { $0.day == keys[tuple.index]}))
+        loadTalkObjects({ result in
+            switch result {
+            case .Success(let talks):
+                let keys = talks.map { $0.day }.unique()
+                for tuple in keys.enumerate() {
+                    self.timelines.append(Timeline(key: keys[tuple.index], talks: talks.filter { $0.day == keys[tuple.index]}))
+                }
+                break
+            case .Failure: break
             }
-        } catch {
-            
-        }
+        })
     }
     
     // MARK: - Table View Controller Data Source

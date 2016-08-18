@@ -17,9 +17,9 @@ struct Timeline {
 
 extension Timeline {
     
-    init(key: String, talks: Array<TalkObject>?) {
-        self.key = key.timeStringByTrimingSecond()
-        self.talks = talks ?? [TalkObject]()
+    init(time: String, talks: Array<TalkObject>) {
+        self.key = time.timeStringByTrimingSecond()
+        self.talks = talks
     }
     
 }

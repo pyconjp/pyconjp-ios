@@ -23,6 +23,7 @@
 		7F2B717B1D653F49006A60BC /* TalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B71791D653F49006A60BC /* TalkTableViewCell.swift */; };
 		7F2B717C1D653F49006A60BC /* TalkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2B717A1D653F49006A60BC /* TalkTableViewCell.xib */; };
 		7F2B717F1D654D44006A60BC /* BookmarkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B717E1D654D44006A60BC /* BookmarkListViewController.swift */; };
+		7F52375D1D65917500C5A048 /* TimelineDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52375C1D65917500C5A048 /* TimelineDataSource.swift */; };
 		7F6879031D41BE28003D5742 /* ArrayExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6879021D41BE28003D5742 /* ArrayExtention.swift */; };
 		7F6879051D420626003D5742 /* StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6879041D420626003D5742 /* StringExtention.swift */; };
 		7F82F6A01C8D4B62004EAC0E /* SchedulePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F69F1C8D4B62004EAC0E /* SchedulePageViewController.swift */; };
@@ -108,6 +109,7 @@
 		7F2B71791D653F49006A60BC /* TalkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkTableViewCell.swift; sourceTree = "<group>"; };
 		7F2B717A1D653F49006A60BC /* TalkTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkTableViewCell.xib; sourceTree = "<group>"; };
 		7F2B717E1D654D44006A60BC /* BookmarkListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkListViewController.swift; sourceTree = "<group>"; };
+		7F52375C1D65917500C5A048 /* TimelineDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineDataSource.swift; sourceTree = "<group>"; };
 		7F6879021D41BE28003D5742 /* ArrayExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtention.swift; sourceTree = "<group>"; };
 		7F6879041D420626003D5742 /* StringExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtention.swift; sourceTree = "<group>"; };
 		7F82F69F1C8D4B62004EAC0E /* SchedulePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulePageViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +263,14 @@
 			path = Bookmark;
 			sourceTree = "<group>";
 		};
+		7F5237591D6590D900C5A048 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				7F52375C1D65917500C5A048 /* TimelineDataSource.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		7F67D1F71C8D4AD2001C8F9C /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				7F23AD401D656B8E0066771B /* Alamofire */,
+				7F5237591D6590D900C5A048 /* Realm */,
 				DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */,
 			);
 			path = Protocol;
@@ -755,6 +766,7 @@
 				DB0159D31D4DB7B500B17018 /* PCJWKWebViewController.swift in Sources */,
 				7F1CBEA41D52CB3C007C058D /* PyConJPDate.swift in Sources */,
 				7F82F6A01C8D4B62004EAC0E /* SchedulePageViewController.swift in Sources */,
+				7F52375D1D65917500C5A048 /* TimelineDataSource.swift in Sources */,
 				7FB4D3051D5433CA005F314E /* DetailImageViewController.swift in Sources */,
 				7F2B717F1D654D44006A60BC /* BookmarkListViewController.swift in Sources */,
 				DB3A77B01D5631F200C25D8D /* Talk.swift in Sources */,

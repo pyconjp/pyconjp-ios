@@ -19,8 +19,8 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BookmarkListViewController.refreshNotification(_:)), name: AppConfig.PCJCompleteFetchDataNotification, object: nil)
         
-        let nib  = UINib(nibName: "TalkTableViewCell", bundle:nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: "TalkTableViewCell")
+        let nib  = UINib(nibName: bookmarkListDataSource.reuseIdentifier, bundle:nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: bookmarkListDataSource.reuseIdentifier)
         
         tableView.dataSource = bookmarkListDataSource
         tableView.rowHeight = UITableViewAutomaticDimension
