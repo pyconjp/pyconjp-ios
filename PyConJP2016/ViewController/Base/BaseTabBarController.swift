@@ -11,6 +11,7 @@ import UIKit
 class BaseTabBarController: UITabBarController {
     
     private var scheduleTabNavigationController: UINavigationController?
+    private var bookmarkTabNavigationController: UINavigationController?
     private var moreTabNavigationController: UINavigationController?
     
     override func viewDidLoad() {
@@ -18,13 +19,17 @@ class BaseTabBarController: UITabBarController {
         
         //ScheduleTab
         let scheduleStoryboard = UIStoryboard(name: "Schedule", bundle: NSBundle.mainBundle())
-        self.scheduleTabNavigationController = scheduleStoryboard.instantiateViewControllerWithIdentifier("ScheduleNavigationController") as? UINavigationController
+        scheduleTabNavigationController = scheduleStoryboard.instantiateViewControllerWithIdentifier("ScheduleNavigationController") as? UINavigationController
+        
+        //BookmarkTab
+        let bookmarkStoryboard = UIStoryboard(name: "Bookmark", bundle: NSBundle.mainBundle())
+        bookmarkTabNavigationController = bookmarkStoryboard.instantiateViewControllerWithIdentifier("BookmarkNavigationController") as? UINavigationController
         
         //MoreTab
         let moreStoryboard = UIStoryboard(name: "More", bundle: NSBundle.mainBundle())
-        self.moreTabNavigationController = moreStoryboard.instantiateViewControllerWithIdentifier("MoreNavigationController") as? UINavigationController
+        moreTabNavigationController = moreStoryboard.instantiateViewControllerWithIdentifier("MoreNavigationController") as? UINavigationController
         
-        let viewControllers = [scheduleTabNavigationController!, moreTabNavigationController!] as [UIViewController]
+        let viewControllers = [scheduleTabNavigationController!, bookmarkTabNavigationController!, moreTabNavigationController!] as [UIViewController]
         self.setViewControllers(viewControllers, animated: false)
         
     }

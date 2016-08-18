@@ -23,7 +23,7 @@ extension TalkDetail {
                   abstract: dictionary["abstract"] as? String ?? "",
                   level: dictionary["level"] as? String ?? "")
     }
-    
+
 }
 
 //struct TalkDetail {

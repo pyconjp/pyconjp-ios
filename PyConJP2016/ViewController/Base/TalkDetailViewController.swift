@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertType {
     
     @IBOutlet weak var baseScrollView: UIScrollView!
+    @IBOutlet weak var bookmarkBarButtonItem: UIBarButtonItem!
     
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -33,7 +35,6 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     @IBOutlet weak var abstractTextView: UITextView!
     
     var id: Int?
-    private var talkTitle: String?
     private var talkDetail: TalkDetail?
     //    private let localNotificationManager = LocalNotificationManager()
     private let refreshControl = UIRefreshControl()
@@ -42,10 +43,9 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
         return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
     }
     
-    class func build(id: Int, title: String) -> TalkDetailViewController {
+    class func build(id: Int) -> TalkDetailViewController {
         let talkDetailViewController = TalkDetailViewController.build()
         talkDetailViewController.id = id
-        talkDetailViewController.talkTitle = title
         return talkDetailViewController
     }
     
@@ -60,6 +60,22 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let talkDetail = talkDetail else { return }
+        do {
+            let realm = try Realm()
+            if let talkObject = realm.objectForPrimaryKey(TalkObject.self, key: id) {
+                talkDetail.talkObject.favorited = talkObject.favorited
+                toggleBookmarkBarButtonItem(talkDetail.talkObject.favorited)
+            }
+        } catch {
+            
+        }
+        
+    }
+    
     func refresh(refreshControl: UIRefreshControl) {
         talkDetail = nil
         getDetail()
@@ -71,7 +87,6 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
             switch result {
             case .Success(let talkDetail):
                 weakSelf.talkDetail = talkDetail
-                weakSelf.talkDetail?.talkObject.title = weakSelf.talkTitle ?? ""
                 weakSelf.fillData()
                 weakSelf.refreshControl.endRefreshing()
             case .Failure(let error):
@@ -101,23 +116,36 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
             
             self.descriptionTextView.text = talkDetail.talkObject.descriptionText
             self.abstractTextView.text = talkDetail.abstract
+            
+            self.toggleBookmarkBarButtonItem(talkDetail.talkObject.favorited)
         }
         
+    }
+    
+    func toggleBookmarkBarButtonItem(isFavorite: Bool) {
+        let image = isFavorite ? UIImage(named: "BookmarkOn") : UIImage(named: "BookmarkOff")
+        dispatch_async(dispatch_get_main_queue()) {
+            self.bookmarkBarButtonItem.image = image
+        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    //    @IBAction func swithNotification(sender: UISwitch) {
-    //        if let talkDetail = talkDetail {
-    //            if talkDetail.isSetNotification {
-    //                localNotificationManager.makeNotification(talkDetail)
-    //            } else {
-    //                localNotificationManager.cancelSchedule(talkDetail)
-    //            }
-    //        }
-    //    }
+    @IBAction func onBookmarkBarButton(sender: UIBarButtonItem) {
+        guard let talkDetail = talkDetail else { return }
+        do {
+            talkDetail.talkObject.favorited = !talkDetail.talkObject.favorited
+            let realm = try Realm()
+            try realm.write({
+                realm.create(TalkObject.self, value: ["id": talkDetail.talkObject.id, "favorited": talkDetail.talkObject.favorited], update: true)
+            })
+            toggleBookmarkBarButtonItem(talkDetail.talkObject.favorited)
+        } catch {
+            
+        }
+    }
     
     @IBAction func onHashTagButton(sender: UIButton) {
         
