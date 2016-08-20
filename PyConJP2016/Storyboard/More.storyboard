@@ -388,31 +388,31 @@ Webサイト	http://www.pycon.jp/
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmb-E2-P1g">
                                                 <rect key="frame" x="15" y="15" width="570" height="859.5"/>
-                                                <string key="text">PyCon JPは、Pythonユーザが集まり、PythonやPythonを使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。 PyCon JPの開催を通じて、Pythonの使い手が一堂に集まり、Pythonにまつわる様々な分野の知識や情報を交換し、新たな友達やコミュニティとのつながり、仕事やビジネスチャンスを増やせる場所とすることが目標です。
+                                                <mutableString key="text"> PyCon JPは、Pythonユーザが集まり、PythonやPythonを使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。 PyCon JPの開催を通じて、Pythonの使い手が一堂に集まり、Pythonにまつわる様々な分野の知識や情報を交換し、新たな友達やコミュニティとのつながり、仕事やビジネスチャンスを増やせる場所とすることが目標です。
 
 PyCon JP 2016では、「Everyone's different, all are wonderful.」をテーマに据えました。Pythonをキーワードに多様な人たちが、いろいろ楽しめて、新しい可能性が生まれるカンファレンスを目指して、スタッフ全員で企画を進めています。
 
 今年は、例年好評いただいているチュートリアルやYouth Coder Workshop、ジョブフェアと言った様々なイベントに加え、招待講演などの新しい取り組みも行っていきます。詳細は下記のとおりですので、ぜひご期待ください。
 
 
-招待講演
+# 招待講演
 『PyCon JP参加者と接点が少ない分野の方々を招待し、参加者と講演者とが交流できる場所を提供する』ことを目的に、招待講演を行います。今回は、早稲田大学でソフトウェア工学の研究されている鷲崎先生と、深層学習フレームワークChainerの開発者である得居さんの講演を予定しています。研究者の方と話してみたいという方は、この機会にぜひ講演を聞きに来てください。
 
 
-Youth Coder Workshop
+# Youth Coder Workshop
 PyCon JP 2015から実施している、小学生高学年から高校生を対象としたワークショップです。Pythonを使って様々な『でんのう地図』を作っていく予定です。このワークショップを通じて、便利なプログラミング言語であるPythonを体験してみてください。
 
 
-チュートリアル
+# チュートリアル
 例年ご好評いただいているチュートリアルですが、今年はPython入門者向け、データ分析、ディープラーニング入門、ドキュメンテーションといった分野の講座を設定しています。また、今年はチュートリアルへの参加に、PyCon JP 2016 カンファレンスへの申し込みは必須ではありません。
 
 
-ジョブフェア
+# ジョブフェア
 毎年テーマを決めてパネルディスカッション形式で行っています。今年は、サービス開発におけるプロダクトマネジメントや開発チームの多様性などをテーマに据えて検討しております。詳細が決定次第、改めて告知をする予定です。
 
 
-スプリント
-カンファレンス後半の9/23(金),24(土)に行われる、ソフトウェア開発イベントです。開発したいテーマを提案する人と、そのテーマに興味を持った人が集まり、共通の興味をもった沢山の開発者の方と交流をする機会になりますので、ぜひご参加ください。</string>
+# スプリント
+カンファレンス後半の9/23(金),24(土)に行われる、ソフトウェア開発イベントです。開発したいテーマを提案する人と、そのテーマに興味を持った人が集まり、共通の興味をもった沢山の開発者の方と交流をする機会になりますので、ぜひご参加ください。</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -769,7 +769,7 @@ SOFTWARE.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
-                            <tableViewSection headerTitle="Thanks Librarys 🎉" footerTitle=" " id="Qdc-1m-5di">
+                            <tableViewSection headerTitle="Acknowledgments 🎉" footerTitle=" " id="Qdc-1m-5di">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="6fK-fD-RtY" style="IBUITableViewCellStyleDefault" id="ofl-BW-AO4">
                                         <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
