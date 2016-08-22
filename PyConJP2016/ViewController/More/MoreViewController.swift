@@ -23,15 +23,20 @@ class MoreViewController: UITableViewController {
     }
     
     private func aboutSection(row: Int) {
-        switch row {
-        case 0:
-            let whatPyConJPViewController = self.storyboard?.instantiateViewControllerWithIdentifier("WhatPyConJPViewController")
-            self.navigationController?.pushViewController(whatPyConJPViewController!, animated: true)
-        case 1:
-            let aboutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("AboutViewController")
-            self.navigationController?.pushViewController(aboutViewController!, animated: true)
-        default:
-            break
+        let identifier: String = {
+            switch row {
+            case 0:
+                return "WhatPyConJPViewController"
+            case 1:
+                return "CodeOfConductViewController"
+            case 2:
+                return "SummaryViewController"
+            default:
+                return ""
+            }
+        }()
+        if let viewController = self.storyboard?.instantiateViewControllerWithIdentifier(identifier) {
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
     
