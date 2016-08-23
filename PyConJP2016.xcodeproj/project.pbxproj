@@ -43,7 +43,6 @@
 		7FFF87EE1D5AF2070093E316 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF87ED1D5AF2070093E316 /* Result.swift */; };
 		954B7D7AE17B5936AC1F49FC /* Pods_PyConJP2016Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1BDDC1CABB963F52098EAB7 /* Pods_PyConJP2016Tests.framework */; };
 		C832600FD904D3FFADAA174C /* Pods_PyConJP2016.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7952AFBF6B014E7BBED90FE3 /* Pods_PyConJP2016.framework */; };
-		DB0159D21D4DB7B500B17018 /* PCJSFSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0159D01D4DB7B500B17018 /* PCJSFSafariViewController.swift */; };
 		DB0159D31D4DB7B500B17018 /* PCJWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0159D11D4DB7B500B17018 /* PCJWKWebViewController.swift */; };
 		DB0206881D4FB8430067C94B /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0206851D4FB8430067C94B /* LocalNotificationManager.swift */; };
 		DB0206891D4FB8430067C94B /* ReceiveLocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0206861D4FB8430067C94B /* ReceiveLocalNotificationManager.swift */; };
@@ -130,7 +129,6 @@
 		7FFF87ED1D5AF2070093E316 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		A1BDDC1CABB963F52098EAB7 /* Pods_PyConJP2016Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PyConJP2016Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A81D8527364825FA466121 /* Pods-PyConJP2016Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016Tests/Pods-PyConJP2016Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		DB0159D01D4DB7B500B17018 /* PCJSFSafariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJSFSafariViewController.swift; sourceTree = "<group>"; };
 		DB0159D11D4DB7B500B17018 /* PCJWKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJWKWebViewController.swift; sourceTree = "<group>"; };
 		DB0206851D4FB8430067C94B /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		DB0206861D4FB8430067C94B /* ReceiveLocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveLocalNotificationManager.swift; sourceTree = "<group>"; };
@@ -316,7 +314,6 @@
 		DB0159CF1D4DB7B500B17018 /* WebView */ = {
 			isa = PBXGroup;
 			children = (
-				DB0159D01D4DB7B500B17018 /* PCJSFSafariViewController.swift */,
 				DB0159D11D4DB7B500B17018 /* PCJWKWebViewController.swift */,
 			);
 			path = WebView;
@@ -815,7 +812,6 @@
 				7FB4D3091D544333005F314E /* LibraryListViewController.swift in Sources */,
 				DBFAEC551D3CF7AD00BCC880 /* NSDateExtension.swift in Sources */,
 				DBFE922E1D66136B00327F74 /* BookmarkListDataSource.swift in Sources */,
-				DB0159D21D4DB7B500B17018 /* PCJSFSafariViewController.swift in Sources */,
 				7F1CBEA01D52CAFA007C058D /* Speaker.swift in Sources */,
 				7F1CBE9D1D52CAFA007C058D /* Category.swift in Sources */,
 			);

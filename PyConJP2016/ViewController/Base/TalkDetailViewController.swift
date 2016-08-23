@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 import RealmSwift
 
 class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertType {
@@ -157,8 +158,8 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
         } else {
             let urlString = "https://mobile.twitter.com/search?q=%23" + hashTag + "&s=typd"
             
-            let webViewController = PCJWKWebViewController.build(urlString)
-            self.presentViewController(webViewController, animated: true, completion: nil)
+            let safariViewController = SFSafariViewController(URL: NSURL(string: urlString)!)
+            self.presentViewController(safariViewController, animated: true, completion: nil)
         }
         
     }
