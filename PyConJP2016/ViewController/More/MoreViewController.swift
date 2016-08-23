@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class MoreViewController: UITableViewController {
     
@@ -56,8 +57,8 @@ class MoreViewController: UITableViewController {
     private func applicationSection(row: Int) {
         switch row {
         case 0:
-            let webViewController = PCJWKWebViewController.build("https://github.com/pyconjp/pyconjp-ios")
-            self.navigationController?.pushViewController(webViewController, animated: true)
+            let safariViewController = SFSafariViewController(URL: NSURL(string: "https://github.com/pyconjp/pyconjp-ios")!)
+            self.presentViewController(safariViewController, animated: true, completion: nil)
         case 1:
             let libraryViewController = LibraryListViewController.build()
             self.navigationController?.pushViewController(libraryViewController, animated: true)

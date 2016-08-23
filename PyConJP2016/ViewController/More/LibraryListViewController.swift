@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class LibraryListViewController: UITableViewController {
     
@@ -25,8 +26,8 @@ class LibraryListViewController: UITableViewController {
     // MARK: - Table View Controller Delegate
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let webViewController = PCJWKWebViewController.build(LibraryList(rawValue: indexPath.row)?.url ?? "")
-        self.navigationController?.pushViewController(webViewController, animated: true)
+        let safariViewController = SFSafariViewController(URL: NSURL(string: LibraryList(rawValue: indexPath.row)?.url ?? "")!)
+        self.presentViewController(safariViewController, animated: true, completion: nil)
     }
     
     private enum LibraryList: Int {
