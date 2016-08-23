@@ -31,14 +31,14 @@ class FloorMapImageViewController: DetailImageViewController {
     }
     
     enum AssetCatalogType: String {
-        case FirstFloorView = "WasedaFirstFloorMap"
-        case SecondFloorView = "WasedaSecondFloorMap"
-        case ThirdFloorView = "WasedaThirdFloorMap"
-        case SecondFloorRoom201 = "WasedaRoom201Map"
-        case SecondFloorRoom202 = "WasedaRoom202Map"
-        case SecondFloorRoom203 = "WasedaRoom203Map"
-        case SecondFloorRoom204 = "WasedaRoom204Map"
-        case SecondFloorRoom205 = "WasedaRoom205Map"
+        case FirstFloorView = "FirstFloorMap"
+        case SecondFloorView = "SecondFloorMap"
+        case ThirdFloorView = "ThirdFloorMap"
+        case SecondFloorRoom201 = "Room201Map"
+        case SecondFloorRoom202 = "Room202Map"
+        case SecondFloorRoom203 = "Room203Map"
+        case SecondFloorRoom204 = "Room204Map"
+        case SecondFloorRoom205 = "Room205Map"
         
     }
     
