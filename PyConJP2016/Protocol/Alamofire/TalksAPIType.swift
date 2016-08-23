@@ -30,12 +30,13 @@ extension TalksAPIType {
             let presentations = dictionary["presentations"] as? Array<Dictionary<String, AnyObject>> ?? [Dictionary<String, AnyObject>]()
             
             do {
+                let apiTalks = presentations.map({ TalkObject(dictionary: $0) })
+                
                 let realm = try Realm()
+                let rejectedLocalTalks = realm.objects(TalkObject).filter("NOT(id IN %@)", apiTalks.map({ $0.id }))
                 try realm.write({
-                    presentations.forEach({
-                        let talkObject = TalkObject(dictionary: $0)
-                        realm.add(talkObject, update: true)
-                    })
+                    realm.delete(rejectedLocalTalks)
+                    realm.add(apiTalks, update: true)
                 })
                 
                 success()
@@ -55,12 +56,13 @@ extension TalksAPIType {
                 let presentations = value["presentations"] as? Array<Dictionary<String, AnyObject>> ?? [Dictionary<String, AnyObject>]()
                 
                 do {
+                    let apiTalks = presentations.map({ TalkObject(dictionary: $0) })
+                    
                     let realm = try Realm()
+                    let rejectedLocalTalks = realm.objects(TalkObject).filter("NOT(id IN %@)", apiTalks.map({ $0.id }))
                     try realm.write({
-                        presentations.forEach({
-                            let talkObject = TalkObject(dictionary: $0)
-                            realm.add(talkObject, update: true)
-                        })
+                        realm.delete(rejectedLocalTalks)
+                        realm.add(apiTalks, update: true)
                     })
                     
                     completionHandler(.Success())
