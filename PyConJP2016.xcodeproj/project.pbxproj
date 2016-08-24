@@ -25,11 +25,6 @@
 		7F52375D1D65917500C5A048 /* RealmTalksType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52375C1D65917500C5A048 /* RealmTalksType.swift */; };
 		7F6879031D41BE28003D5742 /* ArrayExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6879021D41BE28003D5742 /* ArrayExtention.swift */; };
 		7F6879051D420626003D5742 /* StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6879041D420626003D5742 /* StringExtention.swift */; };
-		7F82F6A01C8D4B62004EAC0E /* SchedulePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F69F1C8D4B62004EAC0E /* SchedulePageViewController.swift */; };
-		7F82F6A21C8D4B9A004EAC0E /* ScheduleModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A11C8D4B9A004EAC0E /* ScheduleModelController.swift */; };
-		7F82F6A41C8D4BF9004EAC0E /* ScheduleDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */; };
-		7F82F6A61C8D4C3D004EAC0E /* ScheduleBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A51C8D4C3D004EAC0E /* ScheduleBaseViewController.swift */; };
-		7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82F6A71C8D4CF3004EAC0E /* ScheduleListViewController.swift */; };
 		7F8443CE1D50320400A0BCBA /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8443CD1D50320400A0BCBA /* UIViewExtention.swift */; };
 		7FB4D3031D542DD2005F314E /* FloorMapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3021D542DD2005F314E /* FloorMapListViewController.swift */; };
 		7FB4D3051D5433CA005F314E /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */; };
@@ -54,7 +49,7 @@
 		DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */; };
 		DB3A77AE1D5631A400C25D8D /* TalkObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A77AD1D5631A400C25D8D /* TalkObject.swift */; };
 		DB3A77B01D5631F200C25D8D /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A77AF1D5631F200C25D8D /* Talk.swift */; };
-		DB5D5A851C72346C00CEF0CD /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5D5A841C72346C00CEF0CD /* Schedule.storyboard */; };
+		DB5D5A851C72346C00CEF0CD /* Conference.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5D5A841C72346C00CEF0CD /* Conference.storyboard */; };
 		DB8C1B041D5392BE00221F36 /* MapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C1B031D5392BE00221F36 /* MapListViewController.swift */; };
 		DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */; };
 		DBA1C0C21C7228E2004F0C8D /* PyConJP2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0C11C7228E2004F0C8D /* PyConJP2016Tests.swift */; };
@@ -64,11 +59,16 @@
 		DBB2538B1CCB700400AA17C8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */; };
 		DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC748171C76254000895D4A /* BaseTabBarController.swift */; };
 		DBDE0E7C1C8C19F50094BF36 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBDE0E7B1C8C19F50094BF36 /* More.storyboard */; };
+		DBE611F71D6DF8F10043F2DF /* ConferenceListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE611F61D6DF8F10043F2DF /* ConferenceListDataSource.swift */; };
+		DBE612091D6DFFBF0043F2DF /* ConferenceBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE612041D6DFFBF0043F2DF /* ConferenceBaseViewController.swift */; };
+		DBE6120A1D6DFFBF0043F2DF /* ConferenceDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE612051D6DFFBF0043F2DF /* ConferenceDateViewController.swift */; };
+		DBE6120B1D6DFFBF0043F2DF /* ConferenceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE612061D6DFFBF0043F2DF /* ConferenceListViewController.swift */; };
+		DBE6120C1D6DFFBF0043F2DF /* ConferenceModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE612071D6DFFBF0043F2DF /* ConferenceModelController.swift */; };
+		DBE6120D1D6DFFBF0043F2DF /* ConferencePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE612081D6DFFBF0043F2DF /* ConferencePageViewController.swift */; };
 		DBEBDB481C8C89FC002B25B3 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */; };
 		DBF32BB51CD48C4C004E7F3B /* AppDelegateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF32BB41CD48C4C004E7F3B /* AppDelegateExtention.swift */; };
 		DBFAEC551D3CF7AD00BCC880 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFAEC541D3CF7AD00BCC880 /* NSDateExtension.swift */; };
 		DBFE922E1D66136B00327F74 /* BookmarkListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE922B1D66136B00327F74 /* BookmarkListDataSource.swift */; };
-		DBFE922F1D66136B00327F74 /* ScheduleListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE922D1D66136B00327F74 /* ScheduleListDataSource.swift */; };
 		DBFE92311D6613C300327F74 /* TimelineDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE92301D6613C300327F74 /* TimelineDataSource.swift */; };
 /* End PBXBuildFile section */
 
@@ -111,11 +111,6 @@
 		7F52375C1D65917500C5A048 /* RealmTalksType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmTalksType.swift; sourceTree = "<group>"; };
 		7F6879021D41BE28003D5742 /* ArrayExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtention.swift; sourceTree = "<group>"; };
 		7F6879041D420626003D5742 /* StringExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtention.swift; sourceTree = "<group>"; };
-		7F82F69F1C8D4B62004EAC0E /* SchedulePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulePageViewController.swift; sourceTree = "<group>"; };
-		7F82F6A11C8D4B9A004EAC0E /* ScheduleModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleModelController.swift; sourceTree = "<group>"; };
-		7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDateViewController.swift; sourceTree = "<group>"; };
-		7F82F6A51C8D4C3D004EAC0E /* ScheduleBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleBaseViewController.swift; sourceTree = "<group>"; };
-		7F82F6A71C8D4CF3004EAC0E /* ScheduleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListViewController.swift; sourceTree = "<group>"; };
 		7F8443CD1D50320400A0BCBA /* UIViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
 		7FB4D3021D542DD2005F314E /* FloorMapListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapListViewController.swift; sourceTree = "<group>"; };
 		7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
@@ -140,7 +135,7 @@
 		DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkDetailViewController.swift; sourceTree = "<group>"; };
 		DB3A77AD1D5631A400C25D8D /* TalkObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkObject.swift; sourceTree = "<group>"; };
 		DB3A77AF1D5631F200C25D8D /* Talk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
-		DB5D5A841C72346C00CEF0CD /* Schedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
+		DB5D5A841C72346C00CEF0CD /* Conference.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Conference.storyboard; sourceTree = "<group>"; };
 		DB8C1B031D5392BE00221F36 /* MapListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapListViewController.swift; sourceTree = "<group>"; };
 		DBA1C0A91C7228E2004F0C8D /* PyConJP2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PyConJP2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -156,11 +151,16 @@
 		DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		DBC748171C76254000895D4A /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		DBDE0E7B1C8C19F50094BF36 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		DBE611F61D6DF8F10043F2DF /* ConferenceListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceListDataSource.swift; sourceTree = "<group>"; };
+		DBE612041D6DFFBF0043F2DF /* ConferenceBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceBaseViewController.swift; sourceTree = "<group>"; };
+		DBE612051D6DFFBF0043F2DF /* ConferenceDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceDateViewController.swift; sourceTree = "<group>"; };
+		DBE612061D6DFFBF0043F2DF /* ConferenceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceListViewController.swift; sourceTree = "<group>"; };
+		DBE612071D6DFFBF0043F2DF /* ConferenceModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceModelController.swift; sourceTree = "<group>"; };
+		DBE612081D6DFFBF0043F2DF /* ConferencePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferencePageViewController.swift; sourceTree = "<group>"; };
 		DBEBDB471C8C89FC002B25B3 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		DBF32BB41CD48C4C004E7F3B /* AppDelegateExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateExtention.swift; sourceTree = "<group>"; };
 		DBFAEC541D3CF7AD00BCC880 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 		DBFE922B1D66136B00327F74 /* BookmarkListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkListDataSource.swift; sourceTree = "<group>"; };
-		DBFE922D1D66136B00327F74 /* ScheduleListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListDataSource.swift; sourceTree = "<group>"; };
 		DBFE92301D6613C300327F74 /* TimelineDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineDataSource.swift; sourceTree = "<group>"; };
 		E2EB42880CF0B0E1ABE59123 /* Pods-PyConJP2016Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016Tests/Pods-PyConJP2016Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -261,18 +261,6 @@
 				7F52375C1D65917500C5A048 /* RealmTalksType.swift */,
 			);
 			path = Realm;
-			sourceTree = "<group>";
-		};
-		7F67D1F71C8D4AD2001C8F9C /* Schedule */ = {
-			isa = PBXGroup;
-			children = (
-				7F82F69F1C8D4B62004EAC0E /* SchedulePageViewController.swift */,
-				7F82F6A11C8D4B9A004EAC0E /* ScheduleModelController.swift */,
-				7F82F6A31C8D4BF9004EAC0E /* ScheduleDateViewController.swift */,
-				7F82F6A51C8D4C3D004EAC0E /* ScheduleBaseViewController.swift */,
-				7F82F6A71C8D4CF3004EAC0E /* ScheduleListViewController.swift */,
-			);
-			path = Schedule;
 			sourceTree = "<group>";
 		};
 		7FB4D30E1D546240005F314E /* View */ = {
@@ -429,7 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				DBC748161C7624CB00895D4A /* Base */,
-				7F67D1F71C8D4AD2001C8F9C /* Schedule */,
+				DBE612031D6DFFBF0043F2DF /* Conference */,
 				7F2B717D1D654D30006A60BC /* Bookmark */,
 				DBDE0E7A1C8C19CB0094BF36 /* More */,
 				DB0159CF1D4DB7B500B17018 /* WebView */,
@@ -443,7 +431,7 @@
 			children = (
 				DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */,
 				DBA1C0DE1C722E99004F0C8D /* Main.storyboard */,
-				DB5D5A841C72346C00CEF0CD /* Schedule.storyboard */,
+				DB5D5A841C72346C00CEF0CD /* Conference.storyboard */,
 				DBDE0E7B1C8C19F50094BF36 /* More.storyboard */,
 				DB03ADAA1D5CD25400AB0713 /* Bookmark.storyboard */,
 			);
@@ -474,6 +462,26 @@
 			path = More;
 			sourceTree = "<group>";
 		};
+		DBE611F51D6DF8F10043F2DF /* Conference */ = {
+			isa = PBXGroup;
+			children = (
+				DBE611F61D6DF8F10043F2DF /* ConferenceListDataSource.swift */,
+			);
+			path = Conference;
+			sourceTree = "<group>";
+		};
+		DBE612031D6DFFBF0043F2DF /* Conference */ = {
+			isa = PBXGroup;
+			children = (
+				DBE612041D6DFFBF0043F2DF /* ConferenceBaseViewController.swift */,
+				DBE612051D6DFFBF0043F2DF /* ConferenceDateViewController.swift */,
+				DBE612061D6DFFBF0043F2DF /* ConferenceListViewController.swift */,
+				DBE612071D6DFFBF0043F2DF /* ConferenceModelController.swift */,
+				DBE612081D6DFFBF0043F2DF /* ConferencePageViewController.swift */,
+			);
+			path = Conference;
+			sourceTree = "<group>";
+		};
 		DBF32BB31CD48C4C004E7F3B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,7 +500,7 @@
 			children = (
 				DBFE92301D6613C300327F74 /* TimelineDataSource.swift */,
 				DBFE922A1D66136B00327F74 /* Bookmark */,
-				DBFE922C1D66136B00327F74 /* Schedule */,
+				DBE611F51D6DF8F10043F2DF /* Conference */,
 			);
 			path = Timeline;
 			sourceTree = "<group>";
@@ -503,14 +511,6 @@
 				DBFE922B1D66136B00327F74 /* BookmarkListDataSource.swift */,
 			);
 			path = Bookmark;
-			sourceTree = "<group>";
-		};
-		DBFE922C1D66136B00327F74 /* Schedule */ = {
-			isa = PBXGroup;
-			children = (
-				DBFE922D1D66136B00327F74 /* ScheduleListDataSource.swift */,
-			);
-			path = Schedule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -633,7 +633,7 @@
 				7F2B717C1D653F49006A60BC /* TalkTableViewCell.xib in Resources */,
 				DBA1C0DF1C722E99004F0C8D /* LaunchScreen.storyboard in Resources */,
 				DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */,
-				DB5D5A851C72346C00CEF0CD /* Schedule.storyboard in Resources */,
+				DB5D5A851C72346C00CEF0CD /* Conference.storyboard in Resources */,
 				DB0A81671D463A710048ACB4 /* DummyTalkDetail.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -765,24 +765,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE6120D1D6DFFBF0043F2DF /* ConferencePageViewController.swift in Sources */,
 				DB0206891D4FB8430067C94B /* ReceiveLocalNotificationManager.swift in Sources */,
 				7F6879031D41BE28003D5742 /* ArrayExtention.swift in Sources */,
+				DBE6120A1D6DFFBF0043F2DF /* ConferenceDateViewController.swift in Sources */,
+				DBE6120B1D6DFFBF0043F2DF /* ConferenceListViewController.swift in Sources */,
+				DBE612091D6DFFBF0043F2DF /* ConferenceBaseViewController.swift in Sources */,
 				DB8C1B041D5392BE00221F36 /* MapListViewController.swift in Sources */,
 				7F23AD461D656B8E0066771B /* TalksAPIType.swift in Sources */,
 				DB0206881D4FB8430067C94B /* LocalNotificationManager.swift in Sources */,
 				DB0159D31D4DB7B500B17018 /* PCJWKWebViewController.swift in Sources */,
 				7F1CBEA41D52CB3C007C058D /* PyConJPDate.swift in Sources */,
-				7F82F6A01C8D4B62004EAC0E /* SchedulePageViewController.swift in Sources */,
 				7F52375D1D65917500C5A048 /* RealmTalksType.swift in Sources */,
 				7FB4D3051D5433CA005F314E /* DetailImageViewController.swift in Sources */,
 				7F2B717F1D654D44006A60BC /* BookmarkListViewController.swift in Sources */,
 				DB3A77B01D5631F200C25D8D /* Talk.swift in Sources */,
 				DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */,
 				DB23836E1D563BFE00DA5376 /* Room.swift in Sources */,
-				7F82F6A41C8D4BF9004EAC0E /* ScheduleDateViewController.swift in Sources */,
 				7F201B861CCDD8C200235412 /* AboutViewController.swift in Sources */,
 				7FB4D3071D5434E2005F314E /* FloorMapImageViewController.swift in Sources */,
-				DBFE922F1D66136B00327F74 /* ScheduleListDataSource.swift in Sources */,
 				DBEBDB481C8C89FC002B25B3 /* MoreViewController.swift in Sources */,
 				7F1CBE9E1D52CAFA007C058D /* Level.swift in Sources */,
 				DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */,
@@ -792,20 +793,19 @@
 				7F1CBEA21D52CAFA007C058D /* Timeline.swift in Sources */,
 				7FFB733E1C915B6E006FB375 /* MapViewController.swift in Sources */,
 				7F1CBE9C1D52CAFA007C058D /* Language.swift in Sources */,
-				7F82F6A81C8D4CF3004EAC0E /* ScheduleListViewController.swift in Sources */,
 				DB3A77AE1D5631A400C25D8D /* TalkObject.swift in Sources */,
 				DBF32BB51CD48C4C004E7F3B /* AppDelegateExtention.swift in Sources */,
 				7F23AD441D656B8E0066771B /* AlamofireType.swift in Sources */,
 				7F23AD451D656B8E0066771B /* TalkDetailAPIType.swift in Sources */,
+				DBE611F71D6DF8F10043F2DF /* ConferenceListDataSource.swift in Sources */,
 				DBB2538B1CCB700400AA17C8 /* UIColorExtension.swift in Sources */,
 				7FB4D3101D546269005F314E /* CustomImageView.swift in Sources */,
 				7F1CBE9F1D52CAFA007C058D /* Place.swift in Sources */,
-				7F82F6A21C8D4B9A004EAC0E /* ScheduleModelController.swift in Sources */,
 				7FB4D3031D542DD2005F314E /* FloorMapListViewController.swift in Sources */,
 				DB1347E01CCB27D900CA0539 /* ErrorAlertType.swift in Sources */,
 				7FFF87EE1D5AF2070093E316 /* Result.swift in Sources */,
 				7F6879051D420626003D5742 /* StringExtention.swift in Sources */,
-				7F82F6A61C8D4C3D004EAC0E /* ScheduleBaseViewController.swift in Sources */,
+				DBE6120C1D6DFFBF0043F2DF /* ConferenceModelController.swift in Sources */,
 				DBFE92311D6613C300327F74 /* TimelineDataSource.swift in Sources */,
 				7F2B717B1D653F49006A60BC /* TalkTableViewCell.swift in Sources */,
 				7FBC34D11D40F98D002919B1 /* AppConfig.swift in Sources */,

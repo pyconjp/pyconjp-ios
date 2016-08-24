@@ -1,5 +1,5 @@
 //
-//  ScheduleListViewController.swift
+//  ConferenceListViewController.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/03/07.
@@ -8,37 +8,37 @@
 
 import UIKit
 
-class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAPIType, ErrorAlertType {
+class ConferenceListViewController: UIViewController, UITableViewDelegate, TalksAPIType, ErrorAlertType {
     
     @IBOutlet weak var tableView: UITableView!
     
     private(set) var viewControllerIndex: Int = 0
     private(set) var pyconJPDate: PyConJPDate?
     
-    private lazy var scheduleListDataSource: ScheduleListDataSource = ScheduleListDataSource(day: self.pyconJPDate?.rawValue)
+    private lazy var conferenceListDataSource: ConferenceListDataSource = ConferenceListDataSource(day: self.pyconJPDate?.rawValue)
     
     private let refreshControl = UIRefreshControl()
     
-    class func build(index: Int, storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ScheduleListViewController {
-        let scheduleListViewController = storyboard.instantiateViewControllerWithIdentifier("ScheduleListViewController") as! ScheduleListViewController
-        scheduleListViewController.viewControllerIndex = index
-        scheduleListViewController.pyconJPDate = pyconJPDate
+    class func build(index: Int, storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ConferenceListViewController {
+        let conferenceListViewController = storyboard.instantiateViewControllerWithIdentifier("ConferenceListViewController") as! ConferenceListViewController
+        conferenceListViewController.viewControllerIndex = index
+        conferenceListViewController.pyconJPDate = pyconJPDate
         
-        return scheduleListViewController
+        return conferenceListViewController
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ScheduleListViewController.refreshNotification(_:)), name: AppConfig.PCJCompleteFetchDataNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ConferenceListViewController.refreshNotification(_:)), name: AppConfig.PCJCompleteFetchDataNotification, object: nil)
         
-        let nib  = UINib(nibName: scheduleListDataSource.reuseIdentifier, bundle:nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: scheduleListDataSource.reuseIdentifier)
+        let nib  = UINib(nibName: conferenceListDataSource.reuseIdentifier, bundle:nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: conferenceListDataSource.reuseIdentifier)
         
-        refreshControl.addTarget(self, action: #selector(ScheduleListViewController.onRefresh(_:)), forControlEvents: .ValueChanged)
+        refreshControl.addTarget(self, action: #selector(ConferenceListViewController.onRefresh(_:)), forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
         
-        tableView.dataSource = scheduleListDataSource
+        tableView.dataSource = conferenceListDataSource
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 134
         
@@ -55,7 +55,7 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
     }
     
     func onRefresh(sender: UIRefreshControl) {
-        scheduleListDataSource.timelines.removeAll()
+        conferenceListDataSource.timelines.removeAll()
         tableView.reloadData()
         getTalks { [weak self](result) in
             guard let weakSelf = self else { return }
@@ -74,10 +74,10 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
     }
     
     func refresh() {
-        scheduleListDataSource.refreshData()
+        conferenceListDataSource.refreshData()
         dispatch_async(dispatch_get_main_queue()) {
             self.tableView.reloadData()
-            if !self.scheduleListDataSource.timelines.isEmpty {
+            if !self.conferenceListDataSource.timelines.isEmpty {
                 self.refreshControl.endRefreshing()
             }
         }
@@ -90,7 +90,7 @@ class ScheduleListViewController: UIViewController, UITableViewDelegate, TalksAP
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let talkObject = scheduleListDataSource.timelines[indexPath.section].talks[indexPath.row]
+        let talkObject = conferenceListDataSource.timelines[indexPath.section].talks[indexPath.row]
         let talkDetailViewController = TalkDetailViewController.build(talkObject.id)
         self.navigationController?.pushViewController(talkDetailViewController, animated: true)
     }

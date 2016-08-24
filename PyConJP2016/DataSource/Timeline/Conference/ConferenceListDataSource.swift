@@ -1,5 +1,5 @@
 //
-//  ScheduleListDataSource.swift
+//  ConferenceListDataSource.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/06/13.
@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ScheduleListDataSource: TimelineDataSource, RealmTalksType {
+class ConferenceListDataSource: TimelineDataSource, RealmTalksType {
     
     let filterPredicate: NSPredicate
     let sortProperties = [SortDescriptor(property: "date", ascending: true), SortDescriptor(property: "place", ascending: true)]

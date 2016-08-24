@@ -1,5 +1,5 @@
 //
-//  ScheduleModelController.swift
+//  ConferenceModelController.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/03/07.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScheduleModelController: NSObject, UIPageViewControllerDataSource {
+class ConferenceModelController: NSObject, UIPageViewControllerDataSource {
     
     private let days: Array<PyConJPDate> = PyConJPDate.confarenceDate()
     
@@ -16,19 +16,19 @@ class ScheduleModelController: NSObject, UIPageViewControllerDataSource {
         super.init()
     }
     
-    func viewControllerAtIndex(index: Int, storyboard: UIStoryboard) -> ScheduleListViewController? {
+    func viewControllerAtIndex(index: Int, storyboard: UIStoryboard) -> ConferenceListViewController? {
         
         if self.days.isEmpty || index >= days.count {
             return nil
         }
         
-        let scheduleListViewController = ScheduleListViewController.build(index, storyboard: storyboard, pyconJPDate: days[index])
-        return scheduleListViewController
+        let conferenceListViewController = ConferenceListViewController.build(index, storyboard: storyboard, pyconJPDate: days[index])
+        return conferenceListViewController
         
     }
     
     func indexOfViewController(viewController: UIViewController) -> Int {
-        guard let viewController = viewController as? ScheduleListViewController, pyconJPDate = viewController.pyconJPDate else { return NSNotFound }
+        guard let viewController = viewController as? ConferenceListViewController, pyconJPDate = viewController.pyconJPDate else { return NSNotFound }
         return days.indexOf(pyconJPDate) ?? NSNotFound
     }
     
