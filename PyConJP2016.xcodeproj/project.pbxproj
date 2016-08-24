@@ -305,6 +305,7 @@
 		BB6F29A77E8682EFE6C9DA97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7FFB733F1C9162C2006FB375 /* MapKit.framework */,
 				7952AFBF6B014E7BBED90FE3 /* Pods_PyConJP2016.framework */,
 				A1BDDC1CABB963F52098EAB7 /* Pods_PyConJP2016Tests.framework */,
 			);
@@ -358,7 +359,6 @@
 		DBA1C0A01C7228E2004F0C8D = {
 			isa = PBXGroup;
 			children = (
-				7FFB733F1C9162C2006FB375 /* MapKit.framework */,
 				DBA1C0AB1C7228E2004F0C8D /* PyConJP2016 */,
 				DBA1C0C01C7228E2004F0C8D /* PyConJP2016Tests */,
 				DBA1C0CB1C7228E2004F0C8D /* PyConJP2016UITests */,
