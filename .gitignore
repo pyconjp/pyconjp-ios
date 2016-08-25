@@ -31,6 +31,10 @@ Podfile.lock
 !default.xcworkspace
 *.xcworkspace
 
+#Carthage
+Carthage/*
+Cartfile.resolved
+
 ##AppCode
 .idea
 
