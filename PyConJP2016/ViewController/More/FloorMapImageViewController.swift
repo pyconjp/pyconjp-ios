@@ -22,6 +22,7 @@ class FloorMapImageViewController: DetailImageViewController {
         super.viewDidLoad()
         
         guard let assetCatalogType = assetCatalogType else { return }
+        self.navigationItem.title = assetCatalogType.navigationItemTitle
         customImageView?.image = UIImage(named: assetCatalogType.rawValue)
     }
     
@@ -39,6 +40,27 @@ class FloorMapImageViewController: DetailImageViewController {
         case SecondFloorRoom203 = "Room203Map"
         case SecondFloorRoom204 = "Room204Map"
         case SecondFloorRoom205 = "Room205Map"
+        
+        var navigationItemTitle: String {
+            switch self {
+            case .FirstFloorView:
+                return "1F"
+            case SecondFloorView:
+                return "2F"
+            case ThirdFloorView:
+                return "3F"
+            case SecondFloorRoom201:
+                return "Room 201"
+            case SecondFloorRoom202:
+                return "Room 202"
+            case SecondFloorRoom203:
+                return "Room 203"
+            case SecondFloorRoom204:
+                return "Room 204"
+            case SecondFloorRoom205:
+                return "Room 205"
+            }
+        }
         
     }
     
