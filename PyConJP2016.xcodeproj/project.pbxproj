@@ -36,8 +36,6 @@
 		7FFB733E1C915B6E006FB375 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFB733D1C915B6D006FB375 /* MapViewController.swift */; };
 		7FFB73401C9162C2006FB375 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFB733F1C9162C2006FB375 /* MapKit.framework */; };
 		7FFF87EE1D5AF2070093E316 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF87ED1D5AF2070093E316 /* Result.swift */; };
-		954B7D7AE17B5936AC1F49FC /* Pods_PyConJP2016Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1BDDC1CABB963F52098EAB7 /* Pods_PyConJP2016Tests.framework */; };
-		C832600FD904D3FFADAA174C /* Pods_PyConJP2016.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7952AFBF6B014E7BBED90FE3 /* Pods_PyConJP2016.framework */; };
 		DB0159D31D4DB7B500B17018 /* PCJWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0159D11D4DB7B500B17018 /* PCJWKWebViewController.swift */; };
 		DB0206881D4FB8430067C94B /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0206851D4FB8430067C94B /* LocalNotificationManager.swift */; };
 		DB0206891D4FB8430067C94B /* ReceiveLocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0206861D4FB8430067C94B /* ReceiveLocalNotificationManager.swift */; };
@@ -57,6 +55,12 @@
 		DBA1C0DF1C722E99004F0C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */; };
 		DBA1C0E01C722E99004F0C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0DE1C722E99004F0C8D /* Main.storyboard */; };
 		DBB2538B1CCB700400AA17C8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */; };
+		DBC72D151D6F0B0C008DF718 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC72D121D6F0B0C008DF718 /* Alamofire.framework */; };
+		DBC72D161D6F0B0C008DF718 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBC72D121D6F0B0C008DF718 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DBC72D171D6F0B0C008DF718 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC72D131D6F0B0C008DF718 /* Realm.framework */; };
+		DBC72D181D6F0B0C008DF718 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBC72D131D6F0B0C008DF718 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DBC72D191D6F0B0C008DF718 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC72D141D6F0B0C008DF718 /* RealmSwift.framework */; };
+		DBC72D1A1D6F0B0C008DF718 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBC72D141D6F0B0C008DF718 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC748171C76254000895D4A /* BaseTabBarController.swift */; };
 		DBDE0E7C1C8C19F50094BF36 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBDE0E7B1C8C19F50094BF36 /* More.storyboard */; };
 		DBE611F71D6DF8F10043F2DF /* ConferenceListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE611F61D6DF8F10043F2DF /* ConferenceListDataSource.swift */; };
@@ -89,10 +93,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DB533BD01D6F05690056C09A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DBC72D181D6F0B0C008DF718 /* Realm.framework in Embed Frameworks */,
+				DBC72D161D6F0B0C008DF718 /* Alamofire.framework in Embed Frameworks */,
+				DBC72D1A1D6F0B0C008DF718 /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		30241316839D846FC4C64534 /* Pods-PyConJP2016.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016/Pods-PyConJP2016.debug.xcconfig"; sourceTree = "<group>"; };
-		7952AFBF6B014E7BBED90FE3 /* Pods_PyConJP2016.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PyConJP2016.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B4525E7CD6B481FCC38979C /* Pods-PyConJP2016.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016.release.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016/Pods-PyConJP2016.release.xcconfig"; sourceTree = "<group>"; };
 		7F1CBE931D52CAFA007C058D /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		7F1CBE951D52CAFA007C058D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		7F1CBE961D52CAFA007C058D /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
@@ -122,8 +139,6 @@
 		7FFB733D1C915B6D006FB375 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7FFB733F1C9162C2006FB375 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7FFF87ED1D5AF2070093E316 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		A1BDDC1CABB963F52098EAB7 /* Pods_PyConJP2016Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PyConJP2016Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1A81D8527364825FA466121 /* Pods-PyConJP2016Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016Tests/Pods-PyConJP2016Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB0159D11D4DB7B500B17018 /* PCJWKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJWKWebViewController.swift; sourceTree = "<group>"; };
 		DB0206851D4FB8430067C94B /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		DB0206861D4FB8430067C94B /* ReceiveLocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveLocalNotificationManager.swift; sourceTree = "<group>"; };
@@ -149,6 +164,9 @@
 		DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBA1C0DE1C722E99004F0C8D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		DBC72D121D6F0B0C008DF718 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		DBC72D131D6F0B0C008DF718 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		DBC72D141D6F0B0C008DF718 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		DBC748171C76254000895D4A /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		DBDE0E7B1C8C19F50094BF36 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		DBE611F61D6DF8F10043F2DF /* ConferenceListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceListDataSource.swift; sourceTree = "<group>"; };
@@ -162,7 +180,6 @@
 		DBFAEC541D3CF7AD00BCC880 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 		DBFE922B1D66136B00327F74 /* BookmarkListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkListDataSource.swift; sourceTree = "<group>"; };
 		DBFE92301D6613C300327F74 /* TimelineDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineDataSource.swift; sourceTree = "<group>"; };
-		E2EB42880CF0B0E1ABE59123 /* Pods-PyConJP2016Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyConJP2016Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PyConJP2016Tests/Pods-PyConJP2016Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +187,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC72D171D6F0B0C008DF718 /* Realm.framework in Frameworks */,
 				7FFB73401C9162C2006FB375 /* MapKit.framework in Frameworks */,
-				C832600FD904D3FFADAA174C /* Pods_PyConJP2016.framework in Frameworks */,
+				DBC72D191D6F0B0C008DF718 /* RealmSwift.framework in Frameworks */,
+				DBC72D151D6F0B0C008DF718 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +198,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				954B7D7AE17B5936AC1F49FC /* Pods_PyConJP2016Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,17 +211,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0EC7DFA7A1F2C68AE3E46B7C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				30241316839D846FC4C64534 /* Pods-PyConJP2016.debug.xcconfig */,
-				7B4525E7CD6B481FCC38979C /* Pods-PyConJP2016.release.xcconfig */,
-				B1A81D8527364825FA466121 /* Pods-PyConJP2016Tests.debug.xcconfig */,
-				E2EB42880CF0B0E1ABE59123 /* Pods-PyConJP2016Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		7F1CBE901D52CAFA007C058D /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,8 +301,9 @@
 			isa = PBXGroup;
 			children = (
 				7FFB733F1C9162C2006FB375 /* MapKit.framework */,
-				7952AFBF6B014E7BBED90FE3 /* Pods_PyConJP2016.framework */,
-				A1BDDC1CABB963F52098EAB7 /* Pods_PyConJP2016Tests.framework */,
+				DBC72D121D6F0B0C008DF718 /* Alamofire.framework */,
+				DBC72D131D6F0B0C008DF718 /* Realm.framework */,
+				DBC72D141D6F0B0C008DF718 /* RealmSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -351,7 +359,6 @@
 				DBA1C0C01C7228E2004F0C8D /* PyConJP2016Tests */,
 				DBA1C0CB1C7228E2004F0C8D /* PyConJP2016UITests */,
 				DBA1C0AA1C7228E2004F0C8D /* Products */,
-				0EC7DFA7A1F2C68AE3E46B7C /* Pods */,
 				BB6F29A77E8682EFE6C9DA97 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -520,13 +527,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBA1C0D11C7228E2004F0C8D /* Build configuration list for PBXNativeTarget "PyConJP2016" */;
 			buildPhases = (
-				14DE1E801E45FA778A833CFE /* [CP] Check Pods Manifest.lock */,
 				DBA1C0A51C7228E2004F0C8D /* Sources */,
 				DBA1C0A61C7228E2004F0C8D /* Frameworks */,
 				DBA1C0A71C7228E2004F0C8D /* Resources */,
-				A0EC586907CE24167572B517 /* [CP] Embed Pods Frameworks */,
-				44305B3CEB4EA4C3DBAA7BE1 /* [CP] Copy Pods Resources */,
 				DBEE75F11D27A53E008A9D47 /* ShellScript */,
+				DB533BD01D6F05690056C09A /* Embed Frameworks */,
+				DB533BD11D6F058D0056C09A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -541,12 +547,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBA1C0D41C7228E2004F0C8D /* Build configuration list for PBXNativeTarget "PyConJP2016Tests" */;
 			buildPhases = (
-				271C41C67B6C95998E85D776 /* [CP] Check Pods Manifest.lock */,
 				DBA1C0B91C7228E2004F0C8D /* Sources */,
 				DBA1C0BA1C7228E2004F0C8D /* Frameworks */,
 				DBA1C0BB1C7228E2004F0C8D /* Resources */,
-				6A5B2BBA62F961A03AE1D9A7 /* [CP] Embed Pods Frameworks */,
-				270A71A7107320E64310FE10 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -655,95 +658,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		14DE1E801E45FA778A833CFE /* [CP] Check Pods Manifest.lock */ = {
+		DB533BD11D6F058D0056C09A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		270A71A7107320E64310FE10 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PyConJP2016Tests/Pods-PyConJP2016Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		271C41C67B6C95998E85D776 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		44305B3CEB4EA4C3DBAA7BE1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PyConJP2016/Pods-PyConJP2016-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6A5B2BBA62F961A03AE1D9A7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PyConJP2016Tests/Pods-PyConJP2016Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A0EC586907CE24167572B517 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PyConJP2016/Pods-PyConJP2016-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		DBEE75F11D27A53E008A9D47 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -934,11 +863,14 @@
 		};
 		DBA1C0D21C7228E2004F0C8D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30241316839D846FC4C64534 /* Pods-PyConJP2016.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PyConJP2016/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -951,11 +883,14 @@
 		};
 		DBA1C0D31C7228E2004F0C8D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B4525E7CD6B481FCC38979C /* Pods-PyConJP2016.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PyConJP2016/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -968,7 +903,6 @@
 		};
 		DBA1C0D51C7228E2004F0C8D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1A81D8527364825FA466121 /* Pods-PyConJP2016Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PyConJP2016Tests/Info.plist;
@@ -981,7 +915,6 @@
 		};
 		DBA1C0D61C7228E2004F0C8D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2EB42880CF0B0E1ABE59123 /* Pods-PyConJP2016Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PyConJP2016Tests/Info.plist;

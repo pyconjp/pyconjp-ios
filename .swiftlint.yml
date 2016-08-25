@@ -17,6 +17,9 @@ excluded:
 - Pods/
 - Podfile
 - Podfile.lock
+- Carthage/
+- Carfile
+- Cartfile.resolved
 
 # 1行あたりの文字数制限を300に変更
 line_length: 300

@@ -1,0 +1,3 @@
+# PyCon JP use Library
+github "Alamofire/Alamofire" ~> 3.4
+github "realm/realm-cocoa" ~> 1.0
