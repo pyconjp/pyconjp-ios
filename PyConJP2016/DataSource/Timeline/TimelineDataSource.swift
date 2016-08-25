@@ -30,7 +30,7 @@ class TimelineDataSource: NSObject, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as? TalkTableViewCell else {
-            fatalError("Could not create ScheduleListTableViewCell")
+            fatalError("Could not create TalkTableViewCell")
         }
         cell.fillWith(timelines[indexPath.section].talks[indexPath.row])
         return cell

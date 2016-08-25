@@ -1,5 +1,5 @@
 //
-//  SchedulePageViewController.swift
+//  ConferencePageViewController.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/03/07.
@@ -8,28 +8,28 @@
 
 import UIKit
 
-class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol, ErrorAlertType {
+class ConferencePageViewController: UIPageViewController, ConferencePageViewProtocol, ErrorAlertType {
     
-    private var scheduleModelViewProtocol: ScheduleModelViewProtocol?
+    private var conferenceModelViewProtocol: ConferenceModelViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let startingViewController = self.scheduleModelController.viewControllerAtIndex(0, storyboard: self.storyboard!)!
+        let startingViewController = self.conferenceModelController.viewControllerAtIndex(0, storyboard: self.storyboard!)!
         let viewControllers = [startingViewController]
         self.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: {done in })
         
-        self.dataSource = self.scheduleModelController
+        self.dataSource = self.conferenceModelController
         
     }
     
-    private var _scheduleModelController: ScheduleModelController? = nil
+    private var _conferenceModelController: ConferenceModelController? = nil
     
-    private var scheduleModelController: ScheduleModelController {
-        if _scheduleModelController == nil {
-            _scheduleModelController = ScheduleModelController()
+    private var conferenceModelController: ConferenceModelController {
+        if _conferenceModelController == nil {
+            _conferenceModelController = ConferenceModelController()
         }
-        return _scheduleModelController!
+        return _conferenceModelController!
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,18 +37,18 @@ class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol
     }
     
     override func didMoveToParentViewController(parent: UIViewController?) {
-        let scheduleBaseViewController = parent as! ScheduleBaseViewController
-        self.delegate = scheduleBaseViewController
-        scheduleBaseViewController.schedulePageViewProtocol = self
+        let conferenceBaseViewController = parent as! ConferenceBaseViewController
+        self.delegate = conferenceBaseViewController
+        conferenceBaseViewController.conferencePageViewProtocol = self
         
         self.view.subviews.forEach {
             if let scrollView = $0 as? UIScrollView {
-                scrollView.delegate = scheduleBaseViewController
+                scrollView.delegate = conferenceBaseViewController
             }
         }
     }
     
-    // MARK: - SchedulePageViewProtocol
+    // MARK: - ConferencePageViewProtocol
     
     func fowardPage(index: Int) {
         self.movePage(index, direction: .Forward)
@@ -59,13 +59,13 @@ class SchedulePageViewController: UIPageViewController, SchedulePageViewProtocol
     }
     
     private func movePage(index: Int, direction: UIPageViewControllerNavigationDirection) {
-        let viewController = scheduleModelController.viewControllerAtIndex(index, storyboard: self.storyboard!)!
+        let viewController = conferenceModelController.viewControllerAtIndex(index, storyboard: self.storyboard!)!
         let viewControllers = [viewController]
         self.setViewControllers(viewControllers, direction: direction, animated: true, completion: {done in})
     }
     
 }
 
-protocol ScheduleModelViewProtocol {
+protocol ConferenceModelViewProtocol {
     func loadData()
 }

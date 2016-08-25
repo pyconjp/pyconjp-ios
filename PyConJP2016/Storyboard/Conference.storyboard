@@ -4,11 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Schedule-->
+        <!--Conference-->
         <scene sceneID="0d8-7H-coq">
             <objects>
-                <navigationController storyboardIdentifier="ScheduleNavigationController" id="NyO-IO-ozg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Schedule" image="Schedule" selectedImage="Schedule" id="ZuP-30-Iu1">
+                <navigationController storyboardIdentifier="ConferenceNavigationController" id="NyO-IO-ozg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Conference" image="Schedule" selectedImage="Schedule" id="ZuP-30-Iu1">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-261" y="139"/>
         </scene>
-        <!--Schedule-->
+        <!--Conference-->
         <scene sceneID="EWf-hH-bGU">
             <objects>
-                <viewController storyboardIdentifier="ScheduleBaseViewController" id="437-Ed-YlZ" customClass="ScheduleBaseViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConferenceBaseViewController" id="437-Ed-YlZ" customClass="ConferenceBaseViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JnA-Er-CiG"/>
                         <viewControllerLayoutGuide type="bottom" id="tVv-lx-jms"/>
@@ -59,7 +59,7 @@
                             <constraint firstItem="tVv-lx-jms" firstAttribute="top" secondItem="I46-EO-ChX" secondAttribute="bottom" id="zDM-To-pB1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Schedule" id="zN7-B8-vNJ">
+                    <navigationItem key="navigationItem" title="Conference" id="zN7-B8-vNJ">
                         <barButtonItem key="backBarButtonItem" title=" " id="ARZ-4x-RxF"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="419" y="139"/>
         </scene>
-        <!--Schedule List View Controller-->
+        <!--Conference List View Controller-->
         <scene sceneID="ADw-Iw-zoE">
             <objects>
-                <viewController storyboardIdentifier="ScheduleListViewController" automaticallyAdjustsScrollViewInsets="NO" id="gEP-34-GP9" customClass="ScheduleListViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConferenceListViewController" automaticallyAdjustsScrollViewInsets="NO" id="gEP-34-GP9" customClass="ConferenceListViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BKU-My-l0W"/>
                         <viewControllerLayoutGuide type="bottom" id="edm-os-Eba"/>
@@ -108,10 +108,10 @@
             </objects>
             <point key="canvasLocation" x="1149" y="835"/>
         </scene>
-        <!--Schedule Date View Controller-->
+        <!--Conference Date View Controller-->
         <scene sceneID="UZ7-vc-pIY">
             <objects>
-                <viewController storyboardIdentifier="ScheduleDateViewController" id="SkF-I0-giB" customClass="ScheduleDateViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConferenceDateViewController" id="SkF-I0-giB" customClass="ConferenceDateViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ORd-mA-7vd"/>
                         <viewControllerLayoutGuide type="bottom" id="S01-A3-v3M"/>
@@ -186,10 +186,10 @@
             </objects>
             <point key="canvasLocation" x="1149" y="-473"/>
         </scene>
-        <!--Schedule Page View Controller-->
+        <!--Conference Page View Controller-->
         <scene sceneID="Hot-Kp-tam">
             <objects>
-                <pageViewController storyboardIdentifier="SchedulePageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="zcE-YM-RUe" customClass="SchedulePageViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="ConferencePageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="zcE-YM-RUe" customClass="ConferencePageViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wTM-ML-PBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1149" y="165.5"/>

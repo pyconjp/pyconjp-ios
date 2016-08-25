@@ -1,5 +1,5 @@
 //
-//  ScheduleDateViewController.swift
+//  ConferenceDateViewController.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/03/07.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScheduleDateViewController: UIViewController, ScheduleDateViewProtocol {
+class ConferenceDateViewController: UIViewController, ConferenceDateViewProtocol {
     
     @IBOutlet weak var activeBar: UIView!
     @IBOutlet weak var day1Button: UIButton!
@@ -16,7 +16,7 @@ class ScheduleDateViewController: UIViewController, ScheduleDateViewProtocol {
     
     private var buttonOriginXArray: [CGFloat] = []
     
-    private var schedulePageViewProtocol: SchedulePageViewProtocol?
+    private var conferencePageViewProtocol: ConferencePageViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,29 +30,29 @@ class ScheduleDateViewController: UIViewController, ScheduleDateViewProtocol {
     }
     
     override func didMoveToParentViewController(parent: UIViewController?) {
-        guard let scheduleBaseViewController = parent as? ScheduleBaseViewController else { return }
-        scheduleBaseViewController.scheduleDateViewProtocol = self
-        schedulePageViewProtocol = scheduleBaseViewController.schedulePageViewProtocol
+        guard let conferenceBaseViewController = parent as? ConferenceBaseViewController else { return }
+        conferenceBaseViewController.conferenceDateViewProtocol = self
+        conferencePageViewProtocol = conferenceBaseViewController.conferencePageViewProtocol
         
     }
     
     // MARK: - Day Button
     
     @IBAction func onDay1Button(sender: UIButton) {
-        if let schedulePageViewProtocol = schedulePageViewProtocol {
-            schedulePageViewProtocol.reversePage(0)
+        if let conferencePageViewProtocol = conferencePageViewProtocol {
+            conferencePageViewProtocol.reversePage(0)
             changeActive(0)
         }
     }
     
     @IBAction func onDay2Button(sender: UIButton) {
-        if let schedulePageViewProtocol = schedulePageViewProtocol {
-            schedulePageViewProtocol.fowardPage(1)
+        if let conferencePageViewProtocol = conferencePageViewProtocol {
+            conferencePageViewProtocol.fowardPage(1)
             changeActive(1)
         }
     }
     
-    // MARK: - ScheduleDateViewProtocol
+    // MARK: - ConferenceDateViewProtocol
     
     func changeActive(index: Int) {
         
