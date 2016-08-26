@@ -32,7 +32,7 @@
 		7FB4D3091D544333005F314E /* LibraryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3081D544333005F314E /* LibraryListViewController.swift */; };
 		7FB4D3101D546269005F314E /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D30F1D546269005F314E /* CustomImageView.swift */; };
 		7FBC34CF1D40F956002919B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34CE1D40F956002919B1 /* AppDelegate.swift */; };
-		7FBC34D11D40F98D002919B1 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34D01D40F98D002919B1 /* AppConfig.swift */; };
+		7FBC34D11D40F98D002919B1 /* PCJNotificationConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34D01D40F98D002919B1 /* PCJNotificationConfig.swift */; };
 		7FFB733E1C915B6E006FB375 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFB733D1C915B6D006FB375 /* MapViewController.swift */; };
 		7FFB73401C9162C2006FB375 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFB733F1C9162C2006FB375 /* MapKit.framework */; };
 		7FFF87EE1D5AF2070093E316 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF87ED1D5AF2070093E316 /* Result.swift */; };
@@ -135,7 +135,7 @@
 		7FB4D3081D544333005F314E /* LibraryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryListViewController.swift; sourceTree = "<group>"; };
 		7FB4D30F1D546269005F314E /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		7FBC34CE1D40F956002919B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7FBC34D01D40F98D002919B1 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		7FBC34D01D40F98D002919B1 /* PCJNotificationConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJNotificationConfig.swift; sourceTree = "<group>"; };
 		7FFB733D1C915B6D006FB375 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7FFB733F1C9162C2006FB375 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7FFF87ED1D5AF2070093E316 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				7FBC34CE1D40F956002919B1 /* AppDelegate.swift */,
-				7FBC34D01D40F98D002919B1 /* AppConfig.swift */,
+				7FBC34D01D40F98D002919B1 /* PCJNotificationConfig.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -737,7 +737,7 @@
 				DBE6120C1D6DFFBF0043F2DF /* ConferenceModelController.swift in Sources */,
 				DBFE92311D6613C300327F74 /* TimelineDataSource.swift in Sources */,
 				7F2B717B1D653F49006A60BC /* TalkTableViewCell.swift in Sources */,
-				7FBC34D11D40F98D002919B1 /* AppConfig.swift in Sources */,
+				7FBC34D11D40F98D002919B1 /* PCJNotificationConfig.swift in Sources */,
 				7FB4D3091D544333005F314E /* LibraryListViewController.swift in Sources */,
 				DBFAEC551D3CF7AD00BCC880 /* NSDateExtension.swift in Sources */,
 				DBFE922E1D66136B00327F74 /* BookmarkListDataSource.swift in Sources */,

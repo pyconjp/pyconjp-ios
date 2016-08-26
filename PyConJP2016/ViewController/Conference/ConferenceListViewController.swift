@@ -30,7 +30,7 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ConferenceListViewController.refreshNotification(_:)), name: AppConfig.PCJCompleteFetchDataNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ConferenceListViewController.refreshNotification(_:)), name: PCJNotificationConfig.CompleteFetchDataNotification, object: nil)
         
         let nib  = UINib(nibName: conferenceListDataSource.reuseIdentifier, bundle:nil)
         tableView.registerNib(nib, forCellReuseIdentifier: conferenceListDataSource.reuseIdentifier)

@@ -1,5 +1,5 @@
 //
-//  AppConfig.swift
+//  PCJNotificationConfig.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/07/21.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class AppConfig {
+enum PCJNotificationConfig {
     
-    static let PCJCompleteFetchDataNotification = "PCJCompleteFetchDateNotification"
+    static let CompleteFetchDataNotification = "CompleteFetchDateNotification"
     
 }
