@@ -35,11 +35,11 @@ class FloorMapImageViewController: DetailImageViewController {
         case FirstFloorView = "FirstFloorMap"
         case SecondFloorView = "SecondFloorMap"
         case ThirdFloorView = "ThirdFloorMap"
-        case SecondFloorRoom201 = "Room201Map"
-        case SecondFloorRoom202 = "Room202Map"
-        case SecondFloorRoom203 = "Room203Map"
-        case SecondFloorRoom204 = "Room204Map"
-        case SecondFloorRoom205 = "Room205Map"
+        case Room201 = "Room201Map"
+        case Room202 = "Room202Map"
+        case Room203 = "Room203Map"
+        case Room204 = "Room204Map"
+        case Room205 = "Room205Map"
         
         var navigationItemTitle: String {
             switch self {
@@ -49,15 +49,15 @@ class FloorMapImageViewController: DetailImageViewController {
                 return "2F"
             case ThirdFloorView:
                 return "3F"
-            case SecondFloorRoom201:
+            case Room201:
                 return "Room 201"
-            case SecondFloorRoom202:
+            case Room202:
                 return "Room 202"
-            case SecondFloorRoom203:
+            case Room203:
                 return "Room 203"
-            case SecondFloorRoom204:
+            case Room204:
                 return "Room 204"
-            case SecondFloorRoom205:
+            case Room205:
                 return "Room 205"
             }
         }
