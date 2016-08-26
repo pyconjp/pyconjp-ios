@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TalksAPIType, ErrorAlertT
         getTalks { result in
             switch result {
             case .Success:
-            	NSNotificationCenter.defaultCenter().postNotificationName(AppConfig.PCJCompleteFetchDataNotification, object: nil)
+            	NSNotificationCenter.defaultCenter().postNotificationName(PCJNotificationConfig.CompleteFetchDataNotification, object: nil)
             case .Failure(let error):
                 self.showErrorAlartWith(error)
             }

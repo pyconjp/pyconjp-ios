@@ -17,7 +17,7 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BookmarkListViewController.refreshNotification(_:)), name: AppConfig.PCJCompleteFetchDataNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BookmarkListViewController.refreshNotification(_:)), name: PCJNotificationConfig.CompleteFetchDataNotification, object: nil)
         
         let nib  = UINib(nibName: bookmarkListDataSource.reuseIdentifier, bundle:nil)
         tableView.registerNib(nib, forCellReuseIdentifier: bookmarkListDataSource.reuseIdentifier)
