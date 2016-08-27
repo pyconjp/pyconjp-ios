@@ -129,7 +129,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-Dv-Jho" userLabel="Speaker View">
                                                 <rect key="frame" x="0.0" y="168" width="600" height="35"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="BpM-8a-gQL">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Speaker" translatesAutoresizingMaskIntoConstraints="NO" id="BpM-8a-gQL">
                                                         <rect key="frame" x="15" y="5" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="BpM-8a-gQL" secondAttribute="height" multiplier="1:1" id="GfL-Mk-3JJ"/>
@@ -450,7 +450,7 @@
     <resources>
         <image name="BookmarkOff" width="36" height="36"/>
         <image name="Clock" width="36" height="36"/>
-        <image name="Logo" width="60" height="60"/>
         <image name="Pin" width="36" height="36"/>
+        <image name="Speaker" width="36" height="36"/>
     </resources>
 </document>
