@@ -205,7 +205,7 @@
         <scene sceneID="KVt-gH-zny">
             <objects>
                 <navigationController storyboardIdentifier="EventsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Zi4-Qb-UC0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Events" id="ubk-Ga-9mF"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="Events" id="ubk-Ga-9mF"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wFa-RS-2lu">
@@ -222,4 +222,7 @@
             <point key="canvasLocation" x="361" y="357"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Events" width="36" height="36"/>
+    </resources>
 </document>

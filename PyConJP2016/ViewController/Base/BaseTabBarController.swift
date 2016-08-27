@@ -31,6 +31,7 @@ class BaseTabBarController: UITabBarController {
         
         let viewControllers = [eventsTabNavigationController!, conferenceTabNavigationController!, moreTabNavigationController!] as [UIViewController]
         self.setViewControllers(viewControllers, animated: false)
+        self.selectedIndex = 1
         
     }
     

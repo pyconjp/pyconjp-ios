@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "date_range.png",
+      "filename" : "record_voice_over.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "date_range2x.png",
+      "filename" : "record_voice_over2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "date_range3x.png",
+      "filename" : "record_voice_over3x.png",
       "scale" : "3x"
     }
   ],

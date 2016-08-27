@@ -8,7 +8,7 @@
         <scene sceneID="gDt-tz-pwJ">
             <objects>
                 <navigationController storyboardIdentifier="MoreNavigationController" id="vCT-82-8T9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="More" image="More" selectedImage="More" id="SUT-Im-w67"/>
+                    <tabBarItem key="tabBarItem" title="More" image="More" id="SUT-Im-w67"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N58-04-WTF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

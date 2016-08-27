@@ -8,7 +8,7 @@
         <scene sceneID="0d8-7H-coq">
             <objects>
                 <navigationController storyboardIdentifier="ConferenceNavigationController" id="NyO-IO-ozg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Conference" image="Schedule" selectedImage="Schedule" id="ZuP-30-Iu1">
+                    <tabBarItem key="tabBarItem" title="Conference" image="Conference" id="ZuP-30-Iu1">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -237,6 +237,6 @@
     </scenes>
     <resources>
         <image name="BookmarkCollections" width="36" height="36"/>
-        <image name="Schedule" width="36" height="36"/>
+        <image name="Conference" width="36" height="36"/>
     </resources>
 </document>
