@@ -81,18 +81,18 @@ class MoreListViewController: UITableViewController {
         
         var identifier: String? {
             switch self {
-            case WhatPyConJP: return "WhatPyConJPViewController"
-            case CodeOfConduct: return "CodeOfConductViewController"
-            case Summary: return "SummaryViewController"
-            case License: return "LicenseViewController"
-            default: return ""
+            case .WhatPyConJP: return "WhatPyConJPViewController"
+            case .CodeOfConduct: return "CodeOfConductViewController"
+            case .Summary: return "SummaryViewController"
+            case .License: return "LicenseViewController"
+            default: return nil
             }
         }
         
         var url: String? {
             switch self {
-            case Sponsor: return "https://pycon.jp/2016/ja/sponsors/"
-            case Repository: return "https://github.com/pyconjp/pyconjp-ios"
+            case .Sponsor: return "https://pycon.jp/2016/ja/sponsors/"
+            case .Repository: return "https://github.com/pyconjp/pyconjp-ios"
             default: return nil
             }
         }

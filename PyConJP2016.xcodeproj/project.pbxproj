@@ -56,6 +56,7 @@
 		DBA1C0E01C722E99004F0C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0DE1C722E99004F0C8D /* Main.storyboard */; };
 		DBA2534C1D7095B500FE9DC5 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA2534B1D7095B500FE9DC5 /* Events.storyboard */; };
 		DBA2534E1D71D39C00FE9DC5 /* ConferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2534D1D71D39C00FE9DC5 /* ConferenceViewController.swift */; };
+		DBA253511D71E07600FE9DC5 /* EventsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA253501D71E07600FE9DC5 /* EventsListViewController.swift */; };
 		DBB2538B1CCB700400AA17C8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */; };
 		DBC72D151D6F0B0C008DF718 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC72D121D6F0B0C008DF718 /* Alamofire.framework */; };
 		DBC72D161D6F0B0C008DF718 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBC72D121D6F0B0C008DF718 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -167,6 +168,7 @@
 		DBA1C0DE1C722E99004F0C8D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DBA2534B1D7095B500FE9DC5 /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		DBA2534D1D71D39C00FE9DC5 /* ConferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceViewController.swift; sourceTree = "<group>"; };
+		DBA253501D71E07600FE9DC5 /* EventsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsListViewController.swift; sourceTree = "<group>"; };
 		DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		DBC72D121D6F0B0C008DF718 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		DBC72D131D6F0B0C008DF718 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 			children = (
 				DBC748161C7624CB00895D4A /* Base */,
 				DBE612031D6DFFBF0043F2DF /* Conference */,
+				DBA2534F1D71E05900FE9DC5 /* Events */,
 				7F2B717D1D654D30006A60BC /* Bookmark */,
 				DBDE0E7A1C8C19CB0094BF36 /* More */,
 				DB0159CF1D4DB7B500B17018 /* WebView */,
@@ -443,11 +446,19 @@
 				DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */,
 				DBA1C0DE1C722E99004F0C8D /* Main.storyboard */,
 				DBA2534B1D7095B500FE9DC5 /* Events.storyboard */,
+				DB03ADAA1D5CD25400AB0713 /* Bookmark.storyboard */,
 				DB5D5A841C72346C00CEF0CD /* Conference.storyboard */,
 				DBDE0E7B1C8C19F50094BF36 /* More.storyboard */,
-				DB03ADAA1D5CD25400AB0713 /* Bookmark.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		DBA2534F1D71E05900FE9DC5 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				DBA253501D71E07600FE9DC5 /* EventsListViewController.swift */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 		DBC748161C7624CB00895D4A /* Base */ = {
@@ -720,6 +731,7 @@
 				DB23836E1D563BFE00DA5376 /* Room.swift in Sources */,
 				7F201B861CCDD8C200235412 /* AboutViewController.swift in Sources */,
 				7FB4D3071D5434E2005F314E /* FloorMapImageViewController.swift in Sources */,
+				DBA253511D71E07600FE9DC5 /* EventsListViewController.swift in Sources */,
 				DBEBDB481C8C89FC002B25B3 /* MoreListViewController.swift in Sources */,
 				7F1CBE9E1D52CAFA007C058D /* Level.swift in Sources */,
 				DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */,
