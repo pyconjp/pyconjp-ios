@@ -440,7 +440,7 @@ Webサイト	http://www.pycon.jp/
         <!--PyCon JPってなに？-->
         <scene sceneID="adS-bb-kCU">
             <objects>
-                <viewController storyboardIdentifier="WhatPyConJPViewController" id="pWN-DT-OFA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WhatsPyConJPViewController" id="pWN-DT-OFA" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xeB-Rm-HeV"/>
                         <viewControllerLayoutGuide type="bottom" id="3U3-DD-81f"/>

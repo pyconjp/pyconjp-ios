@@ -29,7 +29,7 @@ class MoreListViewController: UITableViewController {
         guard let sectionType = SectionType(rawValue: indexPath.section) else { return }
         let rowType = sectionType.rows[indexPath.row]
         switch rowType {
-        case .WhatPyConJP, .CodeOfConduct, .Summary, .License:
+        case .WhatsPyConJP, .CodeOfConduct, .Summary, .License:
             guard let identifier = rowType.identifier, viewController = self.storyboard?.instantiateViewControllerWithIdentifier(identifier) else { return }
             self.navigationController?.pushViewController(viewController, animated: true)
         case .Sponsor, .Repository:
@@ -56,7 +56,7 @@ class MoreListViewController: UITableViewController {
         var rows: Array<RowType> {
             switch self {
             case .About:
-                return [.WhatPyConJP, .CodeOfConduct, .Summary, .Sponsor]
+                return [.WhatsPyConJP, .CodeOfConduct, .Summary, .Sponsor]
             case .Map:
                 return [.ConferenceMap, .SprintMap]
             case .Application:
@@ -67,7 +67,7 @@ class MoreListViewController: UITableViewController {
     }
     
     private enum RowType {
-        case WhatPyConJP
+        case WhatsPyConJP
         case CodeOfConduct
         case Summary
         case Sponsor
@@ -81,7 +81,7 @@ class MoreListViewController: UITableViewController {
         
         var identifier: String? {
             switch self {
-            case .WhatPyConJP: return "WhatPyConJPViewController"
+            case .WhatsPyConJP: return "WhatsPyConJPViewController"
             case .CodeOfConduct: return "CodeOfConductViewController"
             case .Summary: return "SummaryViewController"
             case .License: return "LicenseViewController"
