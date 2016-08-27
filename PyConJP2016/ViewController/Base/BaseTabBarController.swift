@@ -12,7 +12,6 @@ class BaseTabBarController: UITabBarController {
     
     private var eventsTabNavigationController: UINavigationController?
     private var conferenceTabNavigationController: UINavigationController?
-    private var bookmarkTabNavigationController: UINavigationController?
     private var moreTabNavigationController: UINavigationController?
     
     override func viewDidLoad() {
@@ -26,15 +25,11 @@ class BaseTabBarController: UITabBarController {
         let conferenceStoryboard = UIStoryboard(name: "Conference", bundle: NSBundle.mainBundle())
         conferenceTabNavigationController = conferenceStoryboard.instantiateViewControllerWithIdentifier("ConferenceNavigationController") as? UINavigationController
         
-        //BookmarkTab
-        let bookmarkStoryboard = UIStoryboard(name: "Bookmark", bundle: NSBundle.mainBundle())
-        bookmarkTabNavigationController = bookmarkStoryboard.instantiateViewControllerWithIdentifier("BookmarkNavigationController") as? UINavigationController
-        
         //MoreTab
         let moreStoryboard = UIStoryboard(name: "More", bundle: NSBundle.mainBundle())
         moreTabNavigationController = moreStoryboard.instantiateViewControllerWithIdentifier("MoreNavigationController") as? UINavigationController
         
-        let viewControllers = [eventsTabNavigationController!, conferenceTabNavigationController!, bookmarkTabNavigationController!, moreTabNavigationController!] as [UIViewController]
+        let viewControllers = [eventsTabNavigationController!, conferenceTabNavigationController!, moreTabNavigationController!] as [UIViewController]
         self.setViewControllers(viewControllers, animated: false)
         
     }

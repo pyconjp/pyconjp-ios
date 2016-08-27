@@ -14,6 +14,10 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate {
     
     private let bookmarkListDataSource = BookmarkListDataSource()
     
+    class func build() -> BookmarkListViewController {
+        return UIStoryboard(name: "Bookmark", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("BookmarkListViewController") as! BookmarkListViewController
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

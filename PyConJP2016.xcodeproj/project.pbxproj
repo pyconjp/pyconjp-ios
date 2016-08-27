@@ -55,6 +55,7 @@
 		DBA1C0DF1C722E99004F0C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */; };
 		DBA1C0E01C722E99004F0C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0DE1C722E99004F0C8D /* Main.storyboard */; };
 		DBA2534C1D7095B500FE9DC5 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA2534B1D7095B500FE9DC5 /* Events.storyboard */; };
+		DBA2534E1D71D39C00FE9DC5 /* ConferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2534D1D71D39C00FE9DC5 /* ConferenceViewController.swift */; };
 		DBB2538B1CCB700400AA17C8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */; };
 		DBC72D151D6F0B0C008DF718 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC72D121D6F0B0C008DF718 /* Alamofire.framework */; };
 		DBC72D161D6F0B0C008DF718 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBC72D121D6F0B0C008DF718 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -165,6 +166,7 @@
 		DBA1C0DD1C722E99004F0C8D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBA1C0DE1C722E99004F0C8D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DBA2534B1D7095B500FE9DC5 /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
+		DBA2534D1D71D39C00FE9DC5 /* ConferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceViewController.swift; sourceTree = "<group>"; };
 		DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		DBC72D121D6F0B0C008DF718 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		DBC72D131D6F0B0C008DF718 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -483,6 +485,7 @@
 		DBE612031D6DFFBF0043F2DF /* Conference */ = {
 			isa = PBXGroup;
 			children = (
+				DBA2534D1D71D39C00FE9DC5 /* ConferenceViewController.swift */,
 				DBE612041D6DFFBF0043F2DF /* ConferenceBaseViewController.swift */,
 				DBE612051D6DFFBF0043F2DF /* ConferenceDateViewController.swift */,
 				DBE612061D6DFFBF0043F2DF /* ConferenceListViewController.swift */,
@@ -732,6 +735,7 @@
 				7F23AD451D656B8E0066771B /* TalkDetailAPIType.swift in Sources */,
 				DBE611F71D6DF8F10043F2DF /* ConferenceListDataSource.swift in Sources */,
 				DBB2538B1CCB700400AA17C8 /* UIColorExtension.swift in Sources */,
+				DBA2534E1D71D39C00FE9DC5 /* ConferenceViewController.swift in Sources */,
 				7FB4D3101D546269005F314E /* CustomImageView.swift in Sources */,
 				7F1CBE9F1D52CAFA007C058D /* Place.swift in Sources */,
 				7FB4D3031D542DD2005F314E /* FloorMapListViewController.swift in Sources */,

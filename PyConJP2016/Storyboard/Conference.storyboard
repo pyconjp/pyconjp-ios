@@ -17,12 +17,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="437-Ed-YlZ" kind="relationship" relationship="rootViewController" id="JnQ-wS-VH1"/>
+                        <segue destination="OJm-Vg-je0" kind="relationship" relationship="rootViewController" id="7Yn-mJ-3Me"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IXI-qV-md3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-261" y="139"/>
+            <point key="canvasLocation" x="-951" y="133"/>
         </scene>
         <!--Conference-->
         <scene sceneID="EWf-hH-bGU">
@@ -37,14 +37,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abk-T8-czR">
-                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="8PM-T4-LfR"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I46-EO-ChX">
-                                <rect key="frame" x="0.0" y="108" width="600" height="443"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="507"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -71,6 +71,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKg-3W-4gp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="419" y="139"/>
+        </scene>
+        <!--Conference-->
+        <scene sceneID="lTD-QA-VIi">
+            <objects>
+                <viewController storyboardIdentifier="ConferenceViewController" id="OJm-Vg-je0" customClass="ConferenceViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YpC-2G-3nJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="aHd-Eg-wsG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vc8-Nh-hci">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1th-4Q-nUU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="437-Ed-YlZ" kind="embed" id="X5X-om-dp9"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1th-4Q-nUU" secondAttribute="trailing" id="5vl-pA-RrA"/>
+                            <constraint firstItem="1th-4Q-nUU" firstAttribute="top" secondItem="vc8-Nh-hci" secondAttribute="top" id="PhH-As-uj4"/>
+                            <constraint firstItem="1th-4Q-nUU" firstAttribute="leading" secondItem="vc8-Nh-hci" secondAttribute="leading" id="vMh-qo-xrZ"/>
+                            <constraint firstAttribute="bottom" secondItem="1th-4Q-nUU" secondAttribute="bottom" id="vMs-VO-Jhe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Conference" id="Q68-Bc-SB0">
+                        <barButtonItem key="backBarButtonItem" title=" " id="cef-TD-d2s"/>
+                        <barButtonItem key="rightBarButtonItem" image="BookmarkCollections" id="Y4y-oa-Xtl">
+                            <connections>
+                                <action selector="onBookmark:" destination="OJm-Vg-je0" id="RDx-Dy-59A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vda-mH-n3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-261" y="139"/>
         </scene>
         <!--Conference List View Controller-->
         <scene sceneID="ADw-Iw-zoE">
@@ -196,6 +236,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BookmarkCollections" width="36" height="36"/>
         <image name="Schedule" width="36" height="36"/>
     </resources>
 </document>
