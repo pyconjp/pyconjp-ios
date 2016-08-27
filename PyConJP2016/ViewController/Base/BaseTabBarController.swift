@@ -10,12 +10,17 @@ import UIKit
 
 class BaseTabBarController: UITabBarController {
     
+    private var eventsTabNavigationController: UINavigationController?
     private var conferenceTabNavigationController: UINavigationController?
     private var bookmarkTabNavigationController: UINavigationController?
     private var moreTabNavigationController: UINavigationController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //EventsceTab
+        let eventsStoryboard = UIStoryboard(name: "Events", bundle: NSBundle.mainBundle())
+        eventsTabNavigationController = eventsStoryboard.instantiateViewControllerWithIdentifier("EventsNavigationController") as? UINavigationController
         
         //ConferenceTab
         let conferenceStoryboard = UIStoryboard(name: "Conference", bundle: NSBundle.mainBundle())
@@ -29,7 +34,7 @@ class BaseTabBarController: UITabBarController {
         let moreStoryboard = UIStoryboard(name: "More", bundle: NSBundle.mainBundle())
         moreTabNavigationController = moreStoryboard.instantiateViewControllerWithIdentifier("MoreNavigationController") as? UINavigationController
         
-        let viewControllers = [conferenceTabNavigationController!, bookmarkTabNavigationController!, moreTabNavigationController!] as [UIViewController]
+        let viewControllers = [eventsTabNavigationController!, conferenceTabNavigationController!, bookmarkTabNavigationController!, moreTabNavigationController!] as [UIViewController]
         self.setViewControllers(viewControllers, animated: false)
         
     }

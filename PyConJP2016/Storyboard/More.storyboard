@@ -15,12 +15,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="is5-HJ-jbp" kind="relationship" relationship="rootViewController" id="1HV-HJ-0uw"/>
+                        <segue destination="Vd6-Uo-obS" kind="relationship" relationship="rootViewController" id="F8k-KA-kfG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQF-EI-hOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2368" y="520"/>
+            <point key="canvasLocation" x="1706" y="520"/>
         </scene>
         <!--開催概要-->
         <scene sceneID="rCt-pi-B8i">
@@ -217,16 +217,16 @@ Webサイト	http://www.pycon.jp/
         <!--More-->
         <scene sceneID="nLO-Iz-h5u">
             <objects>
-                <tableViewController storyboardIdentifier="MoreViewController" id="is5-HJ-jbp" customClass="MoreViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MoreListViewController" id="is5-HJ-jbp" customClass="MoreListViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="a8M-T6-scV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
-                            <tableViewSection footerTitle=" " id="wH9-cs-78M">
+                            <tableViewSection id="wH9-cs-78M">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="uwO-ra-bUh" style="IBUITableViewCellStyleDefault" id="E0P-zY-b2c">
-                                        <rect key="frame" x="0.0" y="99" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E0P-zY-b2c" id="Bq4-f8-IHa">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -243,7 +243,7 @@ Webサイト	http://www.pycon.jp/
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="mBD-f5-xKD" style="IBUITableViewCellStyleDefault" id="1No-Pm-SHq">
-                                        <rect key="frame" x="0.0" y="143" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="79" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1No-Pm-SHq" id="h8E-y6-u9P">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -260,7 +260,7 @@ Webサイト	http://www.pycon.jp/
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="8dF-VI-mA2" style="IBUITableViewCellStyleDefault" id="NuU-TV-B77">
-                                        <rect key="frame" x="0.0" y="187" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="123" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NuU-TV-B77" id="ynu-m7-Znz">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -277,7 +277,7 @@ Webサイト	http://www.pycon.jp/
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="yFZ-CD-jgB" style="IBUITableViewCellStyleDefault" id="LqK-WJ-oaw">
-                                        <rect key="frame" x="0.0" y="231" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="167" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LqK-WJ-oaw" id="vWy-b1-GTK">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -295,10 +295,10 @@ Webサイト	http://www.pycon.jp/
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="会場情報" footerTitle=" " id="OVX-Ci-m6R">
+                            <tableViewSection headerTitle="会場情報" id="OVX-Ci-m6R">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="hoO-0c-K2E" style="IBUITableViewCellStyleDefault" id="eYg-QM-F1g">
-                                        <rect key="frame" x="0.0" y="341.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="261" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eYg-QM-F1g" id="uC8-jp-w8F">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -315,7 +315,7 @@ Webサイト	http://www.pycon.jp/
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="J3n-hJ-8rS" style="IBUITableViewCellStyleDefault" id="yVv-mH-j4E">
-                                        <rect key="frame" x="0.0" y="385.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="305" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yVv-mH-j4E" id="Y67-dH-LtB">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -333,10 +333,10 @@ Webサイト	http://www.pycon.jp/
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="このアプリについて" id="FgW-wC-612">
+                            <tableViewSection headerTitle="このアプリについて" footerTitle=" " id="FgW-wC-612">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="PYC-kg-am7" style="IBUITableViewCellStyleDefault" id="vk8-QR-1bo">
-                                        <rect key="frame" x="0.0" y="496" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="399" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vk8-QR-1bo" id="CaG-Ii-e66">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -353,7 +353,7 @@ Webサイト	http://www.pycon.jp/
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Mrt-oQ-gLO" style="IBUITableViewCellStyleDefault" id="dvE-FL-22b">
-                                        <rect key="frame" x="0.0" y="540" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="443" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dvE-FL-22b" id="VHc-lk-mfH">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -370,7 +370,7 @@ Webサイト	http://www.pycon.jp/
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="YPP-Wn-fR4" style="IBUITableViewCellStyleDefault" id="AIA-8U-9I1">
-                                        <rect key="frame" x="0.0" y="584" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="487" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AIA-8U-9I1" id="Mst-YC-bSU">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -401,6 +401,41 @@ Webサイト	http://www.pycon.jp/
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KET-6k-jD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3028" y="520"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="aJc-F2-JL6">
+            <objects>
+                <viewController storyboardIdentifier="MoreViewController" id="Vd6-Uo-obS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b9f-bk-DXp"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Dx-HU-FMh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zGV-yO-B3L">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCy-Jr-Ycv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="is5-HJ-jbp" kind="embed" id="uvb-Cx-b7i"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hCy-Jr-Ycv" firstAttribute="leading" secondItem="zGV-yO-B3L" secondAttribute="leading" id="St4-Ze-6W2"/>
+                            <constraint firstItem="hCy-Jr-Ycv" firstAttribute="top" secondItem="zGV-yO-B3L" secondAttribute="top" id="UXA-ts-pNZ"/>
+                            <constraint firstAttribute="bottom" secondItem="hCy-Jr-Ycv" secondAttribute="bottom" id="mez-tt-jO1"/>
+                            <constraint firstAttribute="trailing" secondItem="hCy-Jr-Ycv" secondAttribute="trailing" id="nwj-lI-TbM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="More" id="iKX-HU-Ml8">
+                        <barButtonItem key="backBarButtonItem" title=" " id="8mM-Ne-tcs"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DoL-f2-3Zc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2368" y="520"/>
         </scene>
         <!--PyCon JPってなに？-->
         <scene sceneID="adS-bb-kCU">

@@ -1,5 +1,5 @@
 //
-//  MoreViewController.swift
+//  MoreListViewController.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 3/7/16.
@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-class MoreViewController: UITableViewController {
+class MoreListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
