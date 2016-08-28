@@ -46,7 +46,6 @@
 		DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */; };
 		DB3A77AE1D5631A400C25D8D /* TalkObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A77AD1D5631A400C25D8D /* TalkObject.swift */; };
 		DB3A77B01D5631F200C25D8D /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A77AF1D5631F200C25D8D /* Talk.swift */; };
-		DB5D5A851C72346C00CEF0CD /* Conference.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5D5A841C72346C00CEF0CD /* Conference.storyboard */; };
 		DB8C1B041D5392BE00221F36 /* MapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C1B031D5392BE00221F36 /* MapListViewController.swift */; };
 		DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */; };
 		DBA1C0C21C7228E2004F0C8D /* PyConJP2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0C11C7228E2004F0C8D /* PyConJP2016Tests.swift */; };
@@ -57,6 +56,7 @@
 		DBA253581D733AC900FE9DC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA2535A1D733AC900FE9DC5 /* Main.storyboard */; };
 		DBA2536B1D73401200FE9DC5 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA2536D1D73401200FE9DC5 /* Events.storyboard */; };
 		DBA253721D73434400FE9DC5 /* Bookmark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA253741D73434400FE9DC5 /* Bookmark.storyboard */; };
+		DBA253791D7344E000FE9DC5 /* Conference.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA2537B1D7344E000FE9DC5 /* Conference.storyboard */; };
 		DBB2538B1CCB700400AA17C8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */; };
 		DBC72D151D6F0B0C008DF718 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC72D121D6F0B0C008DF718 /* Alamofire.framework */; };
 		DBC72D161D6F0B0C008DF718 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBC72D121D6F0B0C008DF718 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -152,7 +152,6 @@
 		DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkDetailViewController.swift; sourceTree = "<group>"; };
 		DB3A77AD1D5631A400C25D8D /* TalkObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkObject.swift; sourceTree = "<group>"; };
 		DB3A77AF1D5631F200C25D8D /* Talk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
-		DB5D5A841C72346C00CEF0CD /* Conference.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Conference.storyboard; sourceTree = "<group>"; };
 		DB8C1B031D5392BE00221F36 /* MapListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapListViewController.swift; sourceTree = "<group>"; };
 		DBA1C0A91C7228E2004F0C8D /* PyConJP2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PyConJP2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,6 +176,9 @@
 		DBA253731D73434400FE9DC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Bookmark.storyboard; sourceTree = "<group>"; };
 		DBA253761D73434500FE9DC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Bookmark.strings; sourceTree = "<group>"; };
 		DBA253781D73434600FE9DC5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Bookmark.strings; sourceTree = "<group>"; };
+		DBA2537A1D7344E000FE9DC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Conference.storyboard; sourceTree = "<group>"; };
+		DBA2537D1D7344E200FE9DC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Conference.strings; sourceTree = "<group>"; };
+		DBA2537F1D7344E300FE9DC5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Conference.strings; sourceTree = "<group>"; };
 		DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		DBC72D121D6F0B0C008DF718 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		DBC72D131D6F0B0C008DF718 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -455,7 +457,7 @@
 				DBA2535A1D733AC900FE9DC5 /* Main.storyboard */,
 				DBA2536D1D73401200FE9DC5 /* Events.storyboard */,
 				DBA253741D73434400FE9DC5 /* Bookmark.storyboard */,
-				DB5D5A841C72346C00CEF0CD /* Conference.storyboard */,
+				DBA2537B1D7344E000FE9DC5 /* Conference.storyboard */,
 				DBDE0E7B1C8C19F50094BF36 /* More.storyboard */,
 			);
 			path = Storyboard;
@@ -662,7 +664,7 @@
 				7F2B717C1D653F49006A60BC /* TalkTableViewCell.xib in Resources */,
 				DBA253521D733A9000FE9DC5 /* LaunchScreen.storyboard in Resources */,
 				DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */,
-				DB5D5A851C72346C00CEF0CD /* Conference.storyboard in Resources */,
+				DBA253791D7344E000FE9DC5 /* Conference.storyboard in Resources */,
 				DB0A81671D463A710048ACB4 /* DummyTalkDetail.json in Resources */,
 				DBA2536B1D73401200FE9DC5 /* Events.storyboard in Resources */,
 			);
@@ -845,6 +847,16 @@
 				DBA253781D73434600FE9DC5 /* ja */,
 			);
 			name = Bookmark.storyboard;
+			sourceTree = "<group>";
+		};
+		DBA2537B1D7344E000FE9DC5 /* Conference.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBA2537A1D7344E000FE9DC5 /* Base */,
+				DBA2537D1D7344E200FE9DC5 /* en */,
+				DBA2537F1D7344E300FE9DC5 /* ja */,
+			);
+			name = Conference.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

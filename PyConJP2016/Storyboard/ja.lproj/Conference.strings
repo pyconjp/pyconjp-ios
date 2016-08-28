@@ -1,0 +1,40 @@
+
+/**
+ ConferenceNavigationController
+ */
+
+/* Class = "UITabBarItem"; title = "Conference"; ObjectID = "ZuP-30-Iu1"; */
+"ZuP-30-Iu1.title" = "カンファレンス";
+
+
+/**
+ ConferenceViewController
+ */
+
+/* Class = "UINavigationItem"; title = "Conference"; ObjectID = "Q68-Bc-SB0"; */
+"Q68-Bc-SB0.title" = "カンファレンス";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "cef-TD-d2s"; */
+"cef-TD-d2s.title" = " ";
+
+
+/**
+ ConferenceBaseViewController
+ */
+
+/* Class = "UINavigationItem"; title = "Conference"; ObjectID = "zN7-B8-vNJ"; */
+"zN7-B8-vNJ.title" = "カンファレンス";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "ARZ-4x-RxF"; */
+"ARZ-4x-RxF.title" = " ";
+
+
+/**
+ ConferenceDateViewController
+ */
+
+/* Class = "UIButton"; normalTitle = "Day1"; ObjectID = "xEC-K7-3BF"; */
+"xEC-K7-3BF.normalTitle" = "Day1";
+
+/* Class = "UIButton"; normalTitle = "Day2"; ObjectID = "fNF-R4-aQr"; */
+"fNF-R4-aQr.normalTitle" = "Day2";
