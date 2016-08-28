@@ -52,11 +52,11 @@
 		DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */; };
 		DBA1C0C21C7228E2004F0C8D /* PyConJP2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0C11C7228E2004F0C8D /* PyConJP2016Tests.swift */; };
 		DBA1C0CD1C7228E2004F0C8D /* PyConJP2016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0CC1C7228E2004F0C8D /* PyConJP2016UITests.swift */; };
-		DBA2534C1D7095B500FE9DC5 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA2534B1D7095B500FE9DC5 /* Events.storyboard */; };
 		DBA2534E1D71D39C00FE9DC5 /* ConferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2534D1D71D39C00FE9DC5 /* ConferenceViewController.swift */; };
 		DBA253511D71E07600FE9DC5 /* EventsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA253501D71E07600FE9DC5 /* EventsListViewController.swift */; };
 		DBA253521D733A9000FE9DC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA253541D733A9000FE9DC5 /* LaunchScreen.storyboard */; };
 		DBA253581D733AC900FE9DC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA2535A1D733AC900FE9DC5 /* Main.storyboard */; };
+		DBA2536B1D73401200FE9DC5 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA2536D1D73401200FE9DC5 /* Events.storyboard */; };
 		DBB2538B1CCB700400AA17C8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */; };
 		DBC72D151D6F0B0C008DF718 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC72D121D6F0B0C008DF718 /* Alamofire.framework */; };
 		DBC72D161D6F0B0C008DF718 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBC72D121D6F0B0C008DF718 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -164,7 +164,6 @@
 		DBA1C0C81C7228E2004F0C8D /* PyConJP2016UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PyConJP2016UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA1C0CC1C7228E2004F0C8D /* PyConJP2016UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyConJP2016UITests.swift; sourceTree = "<group>"; };
 		DBA1C0CE1C7228E2004F0C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBA2534B1D7095B500FE9DC5 /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		DBA2534D1D71D39C00FE9DC5 /* ConferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceViewController.swift; sourceTree = "<group>"; };
 		DBA253501D71E07600FE9DC5 /* EventsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsListViewController.swift; sourceTree = "<group>"; };
 		DBA253551D733A9300FE9DC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -173,6 +172,9 @@
 		DBA253601D733B2200FE9DC5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		DBA253681D733C6D00FE9DC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		DBA2536A1D733C6E00FE9DC5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		DBA2536C1D73401200FE9DC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Events.storyboard; sourceTree = "<group>"; };
+		DBA2536F1D73401400FE9DC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Events.strings; sourceTree = "<group>"; };
+		DBA253711D73401500FE9DC5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Events.strings; sourceTree = "<group>"; };
 		DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		DBC72D121D6F0B0C008DF718 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		DBC72D131D6F0B0C008DF718 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -449,7 +451,7 @@
 			children = (
 				DBA253541D733A9000FE9DC5 /* LaunchScreen.storyboard */,
 				DBA2535A1D733AC900FE9DC5 /* Main.storyboard */,
-				DBA2534B1D7095B500FE9DC5 /* Events.storyboard */,
+				DBA2536D1D73401200FE9DC5 /* Events.storyboard */,
 				DB03ADAA1D5CD25400AB0713 /* Bookmark.storyboard */,
 				DB5D5A841C72346C00CEF0CD /* Conference.storyboard */,
 				DBDE0E7B1C8C19F50094BF36 /* More.storyboard */,
@@ -660,7 +662,7 @@
 				DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */,
 				DB5D5A851C72346C00CEF0CD /* Conference.storyboard in Resources */,
 				DB0A81671D463A710048ACB4 /* DummyTalkDetail.json in Resources */,
-				DBA2534C1D7095B500FE9DC5 /* Events.storyboard in Resources */,
+				DBA2536B1D73401200FE9DC5 /* Events.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,6 +823,16 @@
 				DBA2536A1D733C6E00FE9DC5 /* ja */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DBA2536D1D73401200FE9DC5 /* Events.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBA2536C1D73401200FE9DC5 /* Base */,
+				DBA2536F1D73401400FE9DC5 /* en */,
+				DBA253711D73401500FE9DC5 /* ja */,
+			);
+			name = Events.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
