@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="1706" y="520"/>
         </scene>
-        <!--開催概要-->
+        <!--Summary-->
         <scene sceneID="rCt-pi-B8i">
             <objects>
                 <viewController storyboardIdentifier="SummaryViewController" id="lNy-Ks-U3C" sceneMemberID="viewController">
@@ -97,7 +97,7 @@ Webサイト	http://www.pycon.jp/
                             <constraint firstItem="4Z9-t6-3WX" firstAttribute="width" secondItem="ody-g9-hex" secondAttribute="width" id="tgi-PR-ubc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="開催概要" id="DWt-DH-7cH">
+                    <navigationItem key="navigationItem" title="Summary" id="DWt-DH-7cH">
                         <barButtonItem key="backBarButtonItem" title=" " id="t60-rz-8NM"/>
                     </navigationItem>
                 </viewController>
@@ -171,7 +171,7 @@ Webサイト	http://www.pycon.jp/
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="アクセス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="OAa-0T-iNG">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Access" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="OAa-0T-iNG">
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -188,7 +188,7 @@ Webサイト	http://www.pycon.jp/
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="フロアマップ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="y3W-08-NDf">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Floor Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="y3W-08-NDf">
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -232,7 +232,7 @@ Webサイト	http://www.pycon.jp/
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="PyCon JPってなに？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="uwO-ra-bUh">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="What is PyCon JP?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="uwO-ra-bUh">
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -249,7 +249,7 @@ Webサイト	http://www.pycon.jp/
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="行動規範" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="mBD-f5-xKD">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Code of Conduct" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="mBD-f5-xKD">
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -266,7 +266,7 @@ Webサイト	http://www.pycon.jp/
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="開催概要" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="8dF-VI-mA2">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="8dF-VI-mA2">
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -283,7 +283,7 @@ Webサイト	http://www.pycon.jp/
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="スポンサー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="yFZ-CD-jgB">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sponsor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="yFZ-CD-jgB">
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -295,7 +295,7 @@ Webサイト	http://www.pycon.jp/
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="会場情報" id="OVX-Ci-m6R">
+                            <tableViewSection headerTitle="Venue Information" id="OVX-Ci-m6R">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="hoO-0c-K2E" style="IBUITableViewCellStyleDefault" id="eYg-QM-F1g">
                                         <rect key="frame" x="0.0" y="261" width="600" height="44"/>
@@ -304,7 +304,7 @@ Webサイト	http://www.pycon.jp/
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="チュートリアル・カンファレンス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="hoO-0c-K2E">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Tutorials・Conference" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="hoO-0c-K2E">
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -321,7 +321,7 @@ Webサイト	http://www.pycon.jp/
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="開発スプリント" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="J3n-hJ-8rS">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sprints" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="J3n-hJ-8rS">
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -333,7 +333,7 @@ Webサイト	http://www.pycon.jp/
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="このアプリについて" footerTitle=" " id="FgW-wC-612">
+                            <tableViewSection headerTitle="About Application" footerTitle=" " id="FgW-wC-612">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="PYC-kg-am7" style="IBUITableViewCellStyleDefault" id="vk8-QR-1bo">
                                         <rect key="frame" x="0.0" y="399" width="600" height="44"/>
@@ -342,7 +342,7 @@ Webサイト	http://www.pycon.jp/
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="リポジトリ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="PYC-kg-am7">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Repository" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="PYC-kg-am7">
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -359,7 +359,7 @@ Webサイト	http://www.pycon.jp/
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="ライブラリ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="Mrt-oQ-gLO">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Acknowledgments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="Mrt-oQ-gLO">
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -437,7 +437,7 @@ Webサイト	http://www.pycon.jp/
             </objects>
             <point key="canvasLocation" x="2368" y="520"/>
         </scene>
-        <!--PyCon JPってなに？-->
+        <!--What is PyCon JP?-->
         <scene sceneID="adS-bb-kCU">
             <objects>
                 <viewController storyboardIdentifier="WhatsPyConJPViewController" id="pWN-DT-OFA" sceneMemberID="viewController">
@@ -513,7 +513,7 @@ PyCon JP 2015から実施している、小学生高学年から高校生を対�
                             <constraint firstItem="Ddo-6o-1b4" firstAttribute="width" secondItem="yke-Xl-DKP" secondAttribute="width" id="wUg-Wy-9us"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="PyCon JPってなに？" id="S05-fY-dK1">
+                    <navigationItem key="navigationItem" title="What is PyCon JP?" id="S05-fY-dK1">
                         <barButtonItem key="backBarButtonItem" title=" " id="Yab-f0-fvg"/>
                     </navigationItem>
                 </viewController>
@@ -655,15 +655,15 @@ SOFTWARE.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="フロアマップ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="GEC-tJ-iYK">
-                                                    <rect key="frame" x="15" y="6" width="96" height="19.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Floor Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="GEC-tJ-iYK">
+                                                    <rect key="frame" x="15" y="6" width="72.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="受付(AM), ポスターセッション, ランチ, パーティ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" id="fEu-DR-0am">
-                                                    <rect key="frame" x="15" y="25.5" width="243" height="13.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Reception(AM), Posters, Lunch, Party" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" id="fEu-DR-0am">
+                                                    <rect key="frame" x="15" y="25.5" width="197" height="13.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -683,15 +683,15 @@ SOFTWARE.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="フロアマップ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="Y9h-GV-NfP">
-                                                    <rect key="frame" x="15" y="6" width="96" height="19.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Floor Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="Y9h-GV-NfP">
+                                                    <rect key="frame" x="15" y="6" width="72.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="受付(PM), トーク, スポンサーブース" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" id="c5a-ui-NiZ">
-                                                    <rect key="frame" x="15" y="25.5" width="181" height="13.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Reception(PM), Talks, Sponsor Booth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" id="c5a-ui-NiZ">
+                                                    <rect key="frame" x="15" y="25.5" width="195" height="13.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -796,15 +796,15 @@ SOFTWARE.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="フロアマップ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="6RA-Nf-VSl">
-                                                    <rect key="frame" x="15" y="6" width="96" height="19.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Floor Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="6RA-Nf-VSl">
+                                                    <rect key="frame" x="15" y="6" width="72.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="オープンスペース" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" id="NHd-X9-Xbg">
-                                                    <rect key="frame" x="15" y="25.5" width="88" height="13.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Open Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" id="NHd-X9-Xbg">
+                                                    <rect key="frame" x="15" y="25.5" width="64" height="13.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -890,7 +890,7 @@ SOFTWARE.</string>
             </objects>
             <point key="canvasLocation" x="3733" y="1203"/>
         </scene>
-        <!--行動規範-->
+        <!--Code of Conduct-->
         <scene sceneID="wc9-9e-cSF">
             <objects>
                 <viewController storyboardIdentifier="CodeOfConductViewController" id="TF1-u6-lV5" sceneMemberID="viewController">
@@ -956,7 +956,7 @@ SOFTWARE.</string>
                             <constraint firstItem="YCO-CS-RxL" firstAttribute="height" secondItem="cky-m7-xdl" secondAttribute="height" priority="250" id="xnd-YO-czl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="行動規範" id="E2G-cJ-ttH">
+                    <navigationItem key="navigationItem" title="Code of Conduct" id="E2G-cJ-ttH">
                         <barButtonItem key="backBarButtonItem" title=" " id="3XM-X3-b9r"/>
                     </navigationItem>
                 </viewController>
