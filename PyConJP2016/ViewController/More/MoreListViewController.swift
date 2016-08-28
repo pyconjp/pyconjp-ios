@@ -43,8 +43,8 @@ class MoreListViewController: UITableViewController {
             let mapViewController = MapViewController.build(MapViewController.Venue.Microsoft)
             self.navigationController?.pushViewController(mapViewController, animated: true)
         case .Library:
-            let libraryViewController = LibraryListViewController.build()
-            self.navigationController?.pushViewController(libraryViewController, animated: true)
+            let acknowledgmentsListViewController = AcknowledgmentsListViewController.build()
+            self.navigationController?.pushViewController(acknowledgmentsListViewController, animated: true)
         }        
     }
     

@@ -829,10 +829,10 @@ SOFTWARE.</string>
             </objects>
             <point key="canvasLocation" x="5085" y="520"/>
         </scene>
-        <!--Library List View Controller-->
+        <!--Acknowledgments List View Controller-->
         <scene sceneID="wOb-Ls-LzU">
             <objects>
-                <tableViewController storyboardIdentifier="LibraryListViewController" id="CQA-IC-GMZ" customClass="LibraryListViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AcknowledgmentsListViewController" id="CQA-IC-GMZ" customClass="AcknowledgmentsListViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="RqI-if-UhO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -29,7 +29,7 @@
 		7FB4D3031D542DD2005F314E /* FloorMapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3021D542DD2005F314E /* FloorMapListViewController.swift */; };
 		7FB4D3051D5433CA005F314E /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */; };
 		7FB4D3071D5434E2005F314E /* FloorMapImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3061D5434E2005F314E /* FloorMapImageViewController.swift */; };
-		7FB4D3091D544333005F314E /* LibraryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3081D544333005F314E /* LibraryListViewController.swift */; };
+		7FB4D3091D544333005F314E /* AcknowledgmentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3081D544333005F314E /* AcknowledgmentsListViewController.swift */; };
 		7FB4D3101D546269005F314E /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D30F1D546269005F314E /* CustomImageView.swift */; };
 		7FBC34CF1D40F956002919B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34CE1D40F956002919B1 /* AppDelegate.swift */; };
 		7FBC34D11D40F98D002919B1 /* PCJNotificationConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34D01D40F98D002919B1 /* PCJNotificationConfig.swift */; };
@@ -135,7 +135,7 @@
 		7FB4D3021D542DD2005F314E /* FloorMapListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapListViewController.swift; sourceTree = "<group>"; };
 		7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
 		7FB4D3061D5434E2005F314E /* FloorMapImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapImageViewController.swift; sourceTree = "<group>"; };
-		7FB4D3081D544333005F314E /* LibraryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryListViewController.swift; sourceTree = "<group>"; };
+		7FB4D3081D544333005F314E /* AcknowledgmentsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowledgmentsListViewController.swift; sourceTree = "<group>"; };
 		7FB4D30F1D546269005F314E /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		7FBC34CE1D40F956002919B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FBC34D01D40F98D002919B1 /* PCJNotificationConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJNotificationConfig.swift; sourceTree = "<group>"; };
@@ -490,7 +490,7 @@
 				DB8C1B031D5392BE00221F36 /* MapListViewController.swift */,
 				7FB4D3021D542DD2005F314E /* FloorMapListViewController.swift */,
 				7FB4D3061D5434E2005F314E /* FloorMapImageViewController.swift */,
-				7FB4D3081D544333005F314E /* LibraryListViewController.swift */,
+				7FB4D3081D544333005F314E /* AcknowledgmentsListViewController.swift */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -769,7 +769,7 @@
 				DBFE92311D6613C300327F74 /* TimelineDataSource.swift in Sources */,
 				7F2B717B1D653F49006A60BC /* TalkTableViewCell.swift in Sources */,
 				7FBC34D11D40F98D002919B1 /* PCJNotificationConfig.swift in Sources */,
-				7FB4D3091D544333005F314E /* LibraryListViewController.swift in Sources */,
+				7FB4D3091D544333005F314E /* AcknowledgmentsListViewController.swift in Sources */,
 				DBFAEC551D3CF7AD00BCC880 /* NSDateExtension.swift in Sources */,
 				DBFE922E1D66136B00327F74 /* BookmarkListDataSource.swift in Sources */,
 				7F1CBEA01D52CAFA007C058D /* Speaker.swift in Sources */,

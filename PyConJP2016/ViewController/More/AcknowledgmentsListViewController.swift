@@ -1,5 +1,5 @@
 //
-//  LibraryListViewController.swift
+//  AcknowledgmentsListViewController.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/08/05.
@@ -9,10 +9,10 @@
 import UIKit
 import SafariServices
 
-class LibraryListViewController: UITableViewController {
+class AcknowledgmentsListViewController: UITableViewController {
     
-    class func build() -> LibraryListViewController {
-        return UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("LibraryListViewController") as! LibraryListViewController
+    class func build() -> AcknowledgmentsListViewController {
+        return UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("AcknowledgmentsListViewController") as! AcknowledgmentsListViewController
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -26,11 +26,12 @@ class LibraryListViewController: UITableViewController {
     // MARK: - Table View Controller Delegate
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let safariViewController = SFSafariViewController(URL: NSURL(string: LibraryList(rawValue: indexPath.row)?.url ?? "")!)
+        guard let rowType = RowType(rawValue: indexPath.row) else { return }
+        let safariViewController = SFSafariViewController(URL: NSURL(string: rowType.url)!)
         self.presentViewController(safariViewController, animated: true, completion: nil)
     }
     
-    private enum LibraryList: Int {
+    private enum RowType: Int {
         case Alamofire =  0
         case RealmSwift = 1
         
