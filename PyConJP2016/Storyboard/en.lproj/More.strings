@@ -1,0 +1,224 @@
+
+/**
+ MoreNavigationController
+ */
+
+/* Class = "UITabBarItem"; title = "More"; ObjectID = "SUT-Im-w67"; */
+"SUT-Im-w67.title" = "More";
+
+
+/**
+ MoreViewController
+ */
+
+/* Class = "UINavigationItem"; title = "More"; ObjectID = "iKX-HU-Ml8"; */
+"iKX-HU-Ml8.title" = "More";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "8mM-Ne-tcs"; */
+"8mM-Ne-tcs.title" = " ";
+
+
+/**
+ MoreListViewController
+ */
+
+/* Class = "UINavigationItem"; title = "More"; ObjectID = "8fj-00-cY3"; */
+"8fj-00-cY3.title" = "More";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "atp-H1-RH7"; */
+"atp-H1-RH7.title" = " ";
+
+/* Class = "UILabel"; text = "What is PyCon JP?"; ObjectID = "uwO-ra-bUh"; */
+"uwO-ra-bUh.text" = "What is PyCon JP?";
+
+/* Class = "UILabel"; text = "Code of Conduct"; ObjectID = "mBD-f5-xKD"; */
+"mBD-f5-xKD.text" = "Code of Conduct";
+
+/* Class = "UILabel"; text = "Summary"; ObjectID = "8dF-VI-mA2"; */
+"8dF-VI-mA2.text" = "Summary";
+
+/* Class = "UILabel"; text = "Sponsor"; ObjectID = "yFZ-CD-jgB"; */
+"yFZ-CD-jgB.text" = "Sponsor";
+
+/* Class = "UITableViewSection"; headerTitle = "Venue Information"; ObjectID = "OVX-Ci-m6R"; */
+"OVX-Ci-m6R.headerTitle" = "Venue Information";
+
+/* Class = "UILabel"; text = "Tutorials・Conference"; ObjectID = "hoO-0c-K2E"; */
+"hoO-0c-K2E.text" = "Tutorials・Conference";
+
+/* Class = "UILabel"; text = "Sprints"; ObjectID = "J3n-hJ-8rS"; */
+"J3n-hJ-8rS.text" = "Sprints";
+
+/* Class = "UITableViewSection"; headerTitle = "About Application"; ObjectID = "FgW-wC-612"; */
+"FgW-wC-612.headerTitle" = "About Application";
+
+/* Class = "UILabel"; text = "Repository"; ObjectID = "PYC-kg-am7"; */
+"PYC-kg-am7.text" = "Repository";
+
+/* Class = "UILabel"; text = "Acknowledgments"; ObjectID = "Mrt-oQ-gLO"; */
+"Mrt-oQ-gLO.text" = "Acknowledgments";
+
+/* Class = "UILabel"; text = "The MIT License (MIT)"; ObjectID = "YPP-Wn-fR4"; */
+"YPP-Wn-fR4.text" = "The MIT License (MIT)";
+
+/* Class = "UITableViewSection"; footerTitle = " "; ObjectID = "FgW-wC-612"; */
+"FgW-wC-612.footerTitle" = " ";
+
+
+/**
+ WhatsPyConJPViewController
+ */
+
+/* Class = "UINavigationItem"; title = "What is PyCon JP?"; ObjectID = "S05-fY-dK1"; */
+"S05-fY-dK1.title" = "What is PyCon JP?";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "Yab-f0-fvg"; */
+"Yab-f0-fvg.title" = " ";
+
+/* Class = "UILabel"; text = "PyCon JP is a conference where Python users, or people interested in Python, gather to learn from each other and meet other members of the community. We hope that everyone joining PyCon JP will not only learn new and exciting things, but also meet new friends and strengthen the connection with the community, and thus the community itself.\n\nThis year, we chose \"Everyone's different, all are wonderful.\" as our theme. The Pycon JP staff is continuing to work hard on making a conference that will allow everyone to have a great time and unlock new possibilities through Python.\n\nWe are planning a new event such as Invitation Talks in addition to the annual events such as Tutorials, Youth Coder Workshop and Job Fair.\nThe details are below. We hope you will enjoy it!\n\n\n# Invitation Talks\nThe purpose of Invitation Talks is to invite guest speakers to share their unique perspectives and provide opportunities for participants to expand their networks. This year, we will invite professor Hironori Washizaki who is head of Global Software Engineering Laboratory, Waseda University, Japan and Mr. Seiya Tokui is the lead developer of the deep learning framework, “Chainer”.\nPlease join us and enjoy discussion with these professionals in specialized field.\n\n\n# Youth Coder Workshop\nWe started this Youth Coder Workshop from 2015. Through this session, we hope all students ranging from elementary school to high school to try and enjoy Python. This year, we will use Python to make various “Computer Maps”.\n\n\n# Tutorials\nThis year we will have courses in areas such as “Python for beginners”, “Data Analysis”, “Deep Learning” and “Documentation”. In this year, it is not required to apply to PyCon JP 2016 to attend these courses.\n\n\n# Job Fair\nEvery year, we have a theme for the panel discussion. This year, we are considering themes such as “Product management during service development” and “Diversity in a development team”. We will announce the theme as soon as possible when the details are fixed.\n\n\n# Sprint\nSprint is a software development event which is held during 9/23 - 9/24, the second half of PyCon JP 2016. The purpose of Sprint is to provide a networking opportunity for people who are interested in similar topics. It is like a hack-a-thon. Some people will suggest topics and then others will select which topics to join. Please enjoy!"; ObjectID = "Nmb-E2-P1g"; */
+"Nmb-E2-P1g.text" = "PyCon JP is a conference where Python users, or people interested in Python, gather to learn from each other and meet other members of the community. We hope that everyone joining PyCon JP will not only learn new and exciting things, but also meet new friends and strengthen the connection with the community, and thus the community itself.\n\nThis year, we chose \"Everyone's different, all are wonderful.\" as our theme. The Pycon JP staff is continuing to work hard on making a conference that will allow everyone to have a great time and unlock new possibilities through Python.\n\nWe are planning a new event such as Invitation Talks in addition to the annual events such as Tutorials, Youth Coder Workshop and Job Fair.\nThe details are below. We hope you will enjoy it!\n\n\n# Invitation Talks\nThe purpose of Invitation Talks is to invite guest speakers to share their unique perspectives and provide opportunities for participants to expand their networks. This year, we will invite professor Hironori Washizaki who is head of Global Software Engineering Laboratory, Waseda University, Japan and Mr. Seiya Tokui is the lead developer of the deep learning framework, “Chainer”.\nPlease join us and enjoy discussion with these professionals in specialized field.\n\n\n# Youth Coder Workshop\nWe started this Youth Coder Workshop from 2015. Through this session, we hope all students ranging from elementary school to high school to try and enjoy Python. This year, we will use Python to make various “Computer Maps”.\n\n\n# Tutorials\nThis year we will have courses in areas such as “Python for beginners”, “Data Analysis”, “Deep Learning” and “Documentation”. In this year, it is not required to apply to PyCon JP 2016 to attend these courses.\n\n\n# Job Fair\nEvery year, we have a theme for the panel discussion. This year, we are considering themes such as “Product management during service development” and “Diversity in a development team”. We will announce the theme as soon as possible when the details are fixed.\n\n\n# Sprint\nSprint is a software development event which is held during 9/23 - 9/24, the second half of PyCon JP 2016. The purpose of Sprint is to provide a networking opportunity for people who are interested in similar topics. It is like a hack-a-thon. Some people will suggest topics and then others will select which topics to join. Please enjoy!";
+
+
+/**
+ CodeOfConductViewController
+ */
+
+/* Class = "UINavigationItem"; title = "Code of Conduct"; ObjectID = "E2G-cJ-ttH"; */
+"E2G-cJ-ttH.title" = "Code of Conduct";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "3XM-X3-b9r"; */
+"3XM-X3-b9r.title" = " ";
+
+/* Class = "UILabel"; text = "PyCon JP is a conference organized and run by volunteers in the Japanese Python community that is dedicated to advancing and promoting the Python programming language. Through holding the PyCon JP conference, Python users can gather and exchange information with other deveopers from a wide variety of fields. It is our aim to create new relationships between the different communities and businesses using Python.\n\nHarassment includes offensive verbal comments related to gender, age, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.\n\nParticipants asked to stop any harassing behavior are expected to comply immediately.\n\nSponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualised images, activities, or other material. Booth staff (including volunteers) should not use sexualised clothing/uniforms/costumes, or otherwise create a sexualised environment.\n\nIf a participant engages in harassing behavior, the conference organisers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.\n\nIf you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff can be identified as they'll be wearing branded t-shirts.\n\nConference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.\n\nWe expect participants to follow these rules at conference and workshop venues and conference-related social events."; ObjectID = "KIm-TJ-VDS"; */
+"KIm-TJ-VDS.text" = "PyCon JP is a conference organized and run by volunteers in the Japanese Python community that is dedicated to advancing and promoting the Python programming language. Through holding the PyCon JP conference, Python users can gather and exchange information with other deveopers from a wide variety of fields. It is our aim to create new relationships between the different communities and businesses using Python.\n\nHarassment includes offensive verbal comments related to gender, age, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.\n\nParticipants asked to stop any harassing behavior are expected to comply immediately.\n\nSponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualised images, activities, or other material. Booth staff (including volunteers) should not use sexualised clothing/uniforms/costumes, or otherwise create a sexualised environment.\n\nIf a participant engages in harassing behavior, the conference organisers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.\n\nIf you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff can be identified as they'll be wearing branded t-shirts.\n\nConference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.\n\nWe expect participants to follow these rules at conference and workshop venues and conference-related social events.";
+
+
+/**
+ SummaryViewController
+ */
+
+/* Class = "UINavigationItem"; title = "Summary"; ObjectID = "DWt-DH-7cH"; */
+"DWt-DH-7cH.title" = "Summary";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "t60-rz-8NM"; */
+"t60-rz-8NM.title" = " ";
+
+/* Class = "UILabel"; text = "Tutorial: 2016-9-20 (Tue)\nConference: 2016-9-21 (Wed) - 22 (Thu)\nDevelopment Sprints: 2016-9-23 (Fri) - 24 (Sat)\nVenue: Waseda University, Nishiwaseda Campus\nTheme: Everyone's different, all are wonderful.\nParticipants (Planned): 700\n\n\n## Participation Fee    \nPatron: 20,000 JPY\nBusiness: 15,000 JPY (Early Bird 12,000 JPY)\nPersonal: 10,000 JPY (Early Bird 8,000 JPY)\nStudent: 5,000 JPY (without After-Party 2,000 JPY)\n\nOrganizers: PyCon JP Organizing Committee PyCon JP 2016 Organizing Committee\nContact: 2016@pycon.jp\n\n\n## About the Organizers\nPyCon JP 2016 is being organized by the PyCon JP Organizing Committee.\n\nChairperson: Takanori Suzuki\nWeb site: http://www.pycon.jp/\nContact: 2016@pycon.jp\nHost: PyCon JP Committee\n\nCohost: Global Software Engineering Laboratory, Waseda University"; ObjectID = "Q3V-yD-yYQ"; */
+"Q3V-yD-yYQ.text" = "Tutorial: 2016-9-20 (Tue)\nConference: 2016-9-21 (Wed) - 22 (Thu)\nDevelopment Sprints: 2016-9-23 (Fri) - 24 (Sat)\nVenue: Waseda University, Nishiwaseda Campus\nTheme: Everyone's different, all are wonderful.\nParticipants (Planned): 700\n\n\n## Participation Fee    \nPatron: 20,000 JPY\nBusiness: 15,000 JPY (Early Bird 12,000 JPY)\nPersonal: 10,000 JPY (Early Bird 8,000 JPY)\nStudent: 5,000 JPY (without After-Party 2,000 JPY)\n\nOrganizers: PyCon JP Organizing Committee PyCon JP 2016 Organizing Committee\nContact: 2016@pycon.jp\n\n\n## About the Organizers\nPyCon JP 2016 is being organized by the PyCon JP Organizing Committee.\n\nChairperson: Takanori Suzuki\nWeb site: http://www.pycon.jp/\nContact: 2016@pycon.jp\nHost: PyCon JP Committee\n\nCohost: Global Software Engineering Laboratory, Waseda University";
+
+
+/**
+ MapListViewController
+ */
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "GIt-sK-GSi"; */
+"GIt-sK-GSi.title" = " ";
+
+/* Class = "UILabel"; text = "Access"; ObjectID = "OAa-0T-iNG"; */
+"OAa-0T-iNG.text" = "Access";
+
+/* Class = "UILabel"; text = "Floor Map"; ObjectID = "y3W-08-NDf"; */
+"y3W-08-NDf.text" = "Floor Map";
+
+/* Class = "UITableViewSection"; footerTitle = " "; ObjectID = "Csj-qB-vL0"; */
+"Csj-qB-vL0.footerTitle" = " ";
+
+
+/**
+ MapViewController
+ */
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "kTE-Xg-msY"; */
+"kTE-Xg-msY.title" = " ";
+
+
+/**
+ FloorMapListViewController
+ */
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "TFI-lu-IcD"; */
+"TFI-lu-IcD.title" = " ";
+
+/* Class = "UITableViewSection"; headerTitle = "1F"; ObjectID = "FeH-ZV-7Nl"; */
+"FeH-ZV-7Nl.headerTitle" = "1F";
+
+/* Class = "UILabel"; text = "Floor Map"; ObjectID = "GEC-tJ-iYK"; */
+"GEC-tJ-iYK.text" = "Floor Map";
+
+/* Class = "UILabel"; text = "Reception(AM), Posters, Lunch, Party"; ObjectID = "fEu-DR-0am"; */
+"fEu-DR-0am.text" = "Reception(AM), Posters, Lunch, Party";
+
+/* Class = "UITableViewSection"; headerTitle = "2F"; ObjectID = "6ar-TJ-XYO"; */
+"6ar-TJ-XYO.headerTitle" = "2F";
+
+/* Class = "UILabel"; text = "Floor Map"; ObjectID = "Y9h-GV-NfP"; */
+"Y9h-GV-NfP.text" = "Floor Map";
+
+/* Class = "UILabel"; text = "Reception(PM), Talks, Sponsor Booth"; ObjectID = "c5a-ui-NiZ"; */
+"c5a-ui-NiZ.text" = "Reception(PM), Talks, Sponsor Booth";
+
+/* Class = "UILabel"; text = "   Room 201"; ObjectID = "NzV-TU-gbq"; */
+"NzV-TU-gbq.text" = "   Room 201";
+
+/* Class = "UILabel"; text = "   Room 202"; ObjectID = "4EU-5d-9Co"; */
+"4EU-5d-9Co.text" = "   Room 202";
+
+/* Class = "UILabel"; text = "   Room 203"; ObjectID = "TMU-ET-gop"; */
+"TMU-ET-gop.text" = "   Room 203";
+
+/* Class = "UILabel"; text = "   Room 204"; ObjectID = "wg7-gY-dtA"; */
+"wg7-gY-dtA.text" = "   Room 204";
+
+/* Class = "UILabel"; text = "   Room 205"; ObjectID = "DT9-CC-44y"; */
+"DT9-CC-44y.text" = "   Room 205";
+
+/* Class = "UITableViewSection"; headerTitle = "3F"; ObjectID = "Mjp-mU-cl8"; */
+"Mjp-mU-cl8.headerTitle" = "3F";
+
+/* Class = "UILabel"; text = "Floor Map"; ObjectID = "6RA-Nf-VSl"; */
+"6RA-Nf-VSl.text" = "Floor Map";
+
+/* Class = "UILabel"; text = "Open Space"; ObjectID = "NHd-X9-Xbg"; */
+"NHd-X9-Xbg.text" = "Open Space";
+
+
+/**
+ FloorMapImageViewController
+ */
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "A4B-jt-eRz"; */
+"A4B-jt-eRz.title" = " ";
+
+
+/**
+ AcknowledgmentsListViewController
+ */
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "mfA-uf-RFk"; */
+"mfA-uf-RFk.title" = " ";
+
+/* Class = "UITableViewSection"; headerTitle = "Acknowledgments 🎉"; ObjectID = "Qdc-1m-5di"; */
+"Qdc-1m-5di.headerTitle" = "Acknowledgments 🎉";
+
+/* Class = "UILabel"; text = "Alamofire"; ObjectID = "6fK-fD-RtY"; */
+"6fK-fD-RtY.text" = "Alamofire";
+
+/* Class = "UILabel"; text = "RealmSwift"; ObjectID = "uoA-BR-qTg"; */
+"uoA-BR-qTg.text" = "RealmSwift";
+
+/* Class = "UITableViewSection"; footerTitle = " "; ObjectID = "Qdc-1m-5di"; */
+"Qdc-1m-5di.footerTitle" = " ";
+
+
+/**
+ LicenseViewController
+ */
+
+/* Class = "UINavigationItem"; title = "License"; ObjectID = "9VH-RB-4Wh"; */
+"9VH-RB-4Wh.title" = "License";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "0fa-0c-Qq5"; */
+"0fa-0c-Qq5.title" = " ";
+
+/* Class = "UILabel"; text = "The MIT License (MIT)\n\nCopyright (c) 2016 PyCon JP\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."; ObjectID = "N6S-7Z-Xo2"; */
+"N6S-7Z-Xo2.text" = "The MIT License (MIT)\n\nCopyright (c) 2016 PyCon JP\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.";
