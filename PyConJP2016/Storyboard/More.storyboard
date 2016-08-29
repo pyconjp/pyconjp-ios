@@ -38,34 +38,37 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Z9-t6-3WX" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="478"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="531.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3V-yD-yYQ">
-                                                <rect key="frame" x="15" y="15" width="570" height="448"/>
-                                                <string key="text">チュートリアル	2016年9月20(火)
-カンファレンス	2016年9月21(水)、22(木・祝)
-開発スプリント	2016年9月23(金)、24(土)
-会場	早稲田大学西早稲田キャンパス
-テーマ	Everyone's different, all are wonderful.
-参加者数(予定)	700
-参加費	
-Patron 20,000円
-Business 15,000円(Early Bird 12,000円)
-Personal 10,000円(Early Bird 8,000円)
-Student 5,000円(without After-Party 2,000円)
-詳細: PyCon JP 2016 への参加登録
+                                                <rect key="frame" x="15" y="15" width="570" height="501.5"/>
+                                                <mutableString key="text">Tutorial: 2016-9-20 (Tue)
+Conference: 2016-9-21 (Wed) - 22 (Thu)
+Development Sprints: 2016-9-23 (Fri) - 24 (Sat)
+Venue: Waseda University, Nishiwaseda Campus
+Theme: Everyone's different, all are wonderful.
+Participants (Planned): 700
 
-運営	PyCon JP 実行委員会 PyCon JP 2016 運営チーム
-連絡先	2016@pycon.jp
-運営情報
-PyCon JP 2016 は PyCon JP 実行委員会 PyCon JP 2016 運営チームによって運営されています。
 
-座長	鈴木 たかのり
-Webサイト	http://www.pycon.jp/
-連絡先	2016@pycon.jp
-主催: 一般社団法人PyCon JP
+## Participation Fee    
+Patron: 20,000 JPY
+Business: 15,000 JPY (Early Bird 12,000 JPY)
+Personal: 10,000 JPY (Early Bird 8,000 JPY)
+Student: 5,000 JPY (without After-Party 2,000 JPY)
 
-共催: 早稲田大学グローバルソフトウェアエンジニアリング研究所</string>
+Organizers: PyCon JP Organizing Committee PyCon JP 2016 Organizing Committee
+Contact: 2016@pycon.jp
+
+
+## About the Organizers
+PyCon JP 2016 is being organized by the PyCon JP Organizing Committee.
+
+Chairperson: Takanori Suzuki
+Web site: http://www.pycon.jp/
+Contact: 2016@pycon.jp
+Host: PyCon JP Committee
+
+Cohost: Global Software Engineering Laboratory, Waseda University</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -453,35 +456,37 @@ Webサイト	http://www.pycon.jp/
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ddo-6o-1b4" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="890"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="907.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmb-E2-P1g">
-                                                <rect key="frame" x="15" y="15" width="570" height="860"/>
-                                                <string key="text"> PyCon JPは、Pythonユーザが集まり、PythonやPythonを使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。 PyCon JPの開催を通じて、Pythonの使い手が一堂に集まり、Pythonにまつわる様々な分野の知識や情報を交換し、新たな友達やコミュニティとのつながり、仕事やビジネスチャンスを増やせる場所とすることが目標です。
+                                                <rect key="frame" x="15" y="15" width="570" height="877.5"/>
+                                                <mutableString key="text">PyCon JP is a conference where Python users, or people interested in Python, gather to learn from each other and meet other members of the community. We hope that everyone joining PyCon JP will not only learn new and exciting things, but also meet new friends and strengthen the connection with the community, and thus the community itself.
 
-PyCon JP 2016では、「Everyone's different, all are wonderful.」をテーマに据えました。Pythonをキーワードに多様な人たちが、いろいろ楽しめて、新しい可能性が生まれるカンファレンスを目指して、スタッフ全員で企画を進めています。
+This year, we chose "Everyone's different, all are wonderful." as our theme. The Pycon JP staff is continuing to work hard on making a conference that will allow everyone to have a great time and unlock new possibilities through Python.
 
-今年は、例年好評いただいているチュートリアルやYouth Coder Workshop、ジョブフェアと言った様々なイベントに加え、招待講演などの新しい取り組みも行っていきます。詳細は下記のとおりですので、ぜひご期待ください。
+We are planning a new event such as Invitation Talks in addition to the annual events such as Tutorials, Youth Coder Workshop and Job Fair.
+The details are below. We hope you will enjoy it!
 
 
-# 招待講演
-『PyCon JP参加者と接点が少ない分野の方々を招待し、参加者と講演者とが交流できる場所を提供する』ことを目的に、招待講演を行います。今回は、早稲田大学でソフトウェア工学の研究されている鷲崎先生と、深層学習フレームワークChainerの開発者である得居さんの講演を予定しています。研究者の方と話してみたいという方は、この機会にぜひ講演を聞きに来てください。
+# Invitation Talks
+The purpose of Invitation Talks is to invite guest speakers to share their unique perspectives and provide opportunities for participants to expand their networks. This year, we will invite professor Hironori Washizaki who is head of Global Software Engineering Laboratory, Waseda University, Japan and Mr. Seiya Tokui is the lead developer of the deep learning framework, “Chainer”.
+Please join us and enjoy discussion with these professionals in specialized field.
 
 
 # Youth Coder Workshop
-PyCon JP 2015から実施している、小学生高学年から高校生を対象としたワークショップです。Pythonを使って様々な『でんのう地図』を作っていく予定です。このワークショップを通じて、便利なプログラミング言語であるPythonを体験してみてください。
+We started this Youth Coder Workshop from 2015. Through this session, we hope all students ranging from elementary school to high school to try and enjoy Python. This year, we will use Python to make various “Computer Maps”.
 
 
-# チュートリアル
-例年ご好評いただいているチュートリアルですが、今年はPython入門者向け、データ分析、ディープラーニング入門、ドキュメンテーションといった分野の講座を設定しています。また、今年はチュートリアルへの参加に、PyCon JP 2016 カンファレンスへの申し込みは必須ではありません。
+# Tutorials
+This year we will have courses in areas such as “Python for beginners”, “Data Analysis”, “Deep Learning” and “Documentation”. In this year, it is not required to apply to PyCon JP 2016 to attend these courses.
 
 
-# ジョブフェア
-毎年テーマを決めてパネルディスカッション形式で行っています。今年は、サービス開発におけるプロダクトマネジメントや開発チームの多様性などをテーマに据えて検討しております。詳細が決定次第、改めて告知をする予定です。
+# Job Fair
+Every year, we have a theme for the panel discussion. This year, we are considering themes such as “Product management during service development” and “Diversity in a development team”. We will announce the theme as soon as possible when the details are fixed.
 
 
-# スプリント
-カンファレンス後半の9/23(金),24(土)に行われる、ソフトウェア開発イベントです。開発したいテーマを提案する人と、そのテーマに興味を持った人が集まり、共通の興味をもった沢山の開発者の方と交流をする機会になりますので、ぜひご参加ください。</string>
+# Sprint
+Sprint is a software development event which is held during 9/23 - 9/24, the second half of PyCon JP 2016. The purpose of Sprint is to provide a networking opportunity for people who are interested in similar topics. It is like a hack-a-thon. Some people will suggest topics and then others will select which topics to join. Please enjoy!</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -906,25 +911,25 @@ SOFTWARE.</string>
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCO-CS-RxL" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="693"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="674.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIm-TJ-VDS">
-                                                <rect key="frame" x="15" y="15" width="570" height="663"/>
-                                                <string key="text">PyConは、Pythonユーザが集まり、PythonやPythonを使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。 PyCon JPの開催を通じて、Pythonの使い手が一堂に集まり、Pythonにまつわる様々な分野の知識や情報を交換し、新たな友達やコミュニティとのつながり、仕事やビジネスチャンスを増やせる場所とすることが目標です。
+                                                <rect key="frame" x="15" y="15" width="570" height="644.5"/>
+                                                <mutableString key="text">PyCon JP is a conference organized and run by volunteers in the Japanese Python community that is dedicated to advancing and promoting the Python programming language. Through holding the PyCon JP conference, Python users can gather and exchange information with other deveopers from a wide variety of fields. It is our aim to create new relationships between the different communities and businesses using Python.
 
-ハラスメント行為には、言葉による性別、性的指向、障碍の有無、外見、身体の大きさ、人種、宗教に関する攻撃的なコメント、公的空間での性的な映像表現、意図的な威力行為、ストーキング、つきまとい、写真撮影や録音によるいやがらせ、トークやその他の会議イベントに対して繰り返して中断しようとする行為、不適切な身体接触、そして望まれない性的な注意を引きつける行為を含みます。
+Harassment includes offensive verbal comments related to gender, age, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.
 
-参加者は、これらのハラスメント行為を止めるように求められた場合、すぐに従わなければなりません。
+Participants asked to stop any harassing behavior are expected to comply immediately.
 
-スポンサーもまた反ハラスメント行為ポリシーに従わなければなりません。特に、スポンサーは性的な関心を引き起こす映像表現、活動、あるいはその他の物品を使うべきではありません。ボランティアを含め、ブースのスタッフは、性的な関心を引き起こすような服装/制服/コスチュームを使うべきではありませんし、その他の手段で性的な関心を引き起こすような環境を作ることもすべきではありません。
+Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualised images, activities, or other material. Booth staff (including volunteers) should not use sexualised clothing/uniforms/costumes, or otherwise create a sexualised environment.
 
-参加者がハラスメント行為に属するふるまいをした場合は、会議主催者は適切と判断した範囲で、当該行為を行った者に対する警告や、参加費を返還せずに会議から追放処分とするなどを含むいかなる行動も取ります。
+If a participant engages in harassing behavior, the conference organisers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.
 
-もしあなたがハラスメントに遭った場合、他の人がハラスメントに遭っている場合、あるいは他に気になることがあった時は、すぐに会議スタッフの誰かに連絡していただくようお願いします。会議スタッフは会議のブランドを付けたTシャツを着ています。
+If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff can be identified as they'll be wearing branded t-shirts.
 
-会議スタッフは、ハラスメントを経験した人が、会議期間中安全かつ安心と感じられるように、参加者がホテル/会場の警備や近隣の警察に連絡すること、付き添い者の提供、およびその他の支援を行います。私達にとってあなたが参加しているのは大事なことなのです。
+Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
 
-私達は参加者が会議場とワークショップ会場、また会議に関連したソーシャルイベントにて、このルールに従うことを望みます。</string>
+We expect participants to follow these rules at conference and workshop venues and conference-related social events.</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
