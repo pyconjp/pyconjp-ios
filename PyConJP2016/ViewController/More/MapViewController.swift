@@ -49,43 +49,28 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         textView.setContentOffset(.zero, animated: false)
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     enum Venue {
         case Waseda
         case Microsoft
         
         var name: String {
             switch self {
-            case .Waseda:
-                return "早稲田大学西早稲田キャンパス"
-            case .Microsoft:
-                return "日本マイクロソフト株式会社"
+            case .Waseda: return NSLocalizedString("nameWaseda", tableName: "Map", comment: "")
+            case .Microsoft: return NSLocalizedString("nameMicrosoft", tableName: "Map", comment: "")
             }
         }
         
         var location: CLLocationCoordinate2D {
             switch self {
-            case .Waseda:
-                return CLLocationCoordinate2D(latitude: 35.706069, longitude: 139.706809)
-            case .Microsoft:
-                return CLLocationCoordinate2D(latitude: 35.626670, longitude: 139.740375)
+            case .Waseda: return CLLocationCoordinate2D(latitude: 35.706069, longitude: 139.706809)
+            case .Microsoft: return CLLocationCoordinate2D(latitude: 35.626670, longitude: 139.740375)
             }
         }
         
         var address: String {
             switch self {
-            case .Waseda:
-                return "〒169-8555\n東京都新宿区大久保 3-4-1\n早稲田大学西早稲田キャンパス"
-            case .Microsoft:
-                return "〒108-0075\n東京都港区港南 2-16-3\n品川グランドセントラルタワー"
+            case .Waseda: return NSLocalizedString("addressWaseda", tableName: "Map", comment: "")
+            case .Microsoft: return NSLocalizedString("addressMicrosoft", tableName: "Map", comment: "")
             }
         }
         

@@ -23,6 +23,7 @@
 		7F2B717C1D653F49006A60BC /* TalkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2B717A1D653F49006A60BC /* TalkTableViewCell.xib */; };
 		7F2B717F1D654D44006A60BC /* BookmarkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B717E1D654D44006A60BC /* BookmarkListViewController.swift */; };
 		7F52375D1D65917500C5A048 /* RealmTalksType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52375C1D65917500C5A048 /* RealmTalksType.swift */; };
+		7F63E3E51D75556A00110E9F /* Map.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F63E3E71D75556A00110E9F /* Map.strings */; };
 		7F6879031D41BE28003D5742 /* ArrayExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6879021D41BE28003D5742 /* ArrayExtention.swift */; };
 		7F6879051D420626003D5742 /* StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6879041D420626003D5742 /* StringExtention.swift */; };
 		7F7EBFE01D751EED00F1EE30 /* NSLocaleExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EBFDF1D751EED00F1EE30 /* NSLocaleExtention.swift */; };
@@ -131,6 +132,9 @@
 		7F2B717A1D653F49006A60BC /* TalkTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkTableViewCell.xib; sourceTree = "<group>"; };
 		7F2B717E1D654D44006A60BC /* BookmarkListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkListViewController.swift; sourceTree = "<group>"; };
 		7F52375C1D65917500C5A048 /* RealmTalksType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmTalksType.swift; sourceTree = "<group>"; };
+		7F63E3E61D75556A00110E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Map.strings; sourceTree = "<group>"; };
+		7F63E3E81D75557500110E9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Map.strings; sourceTree = "<group>"; };
+		7F63E3E91D75557600110E9F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Map.strings; sourceTree = "<group>"; };
 		7F6879021D41BE28003D5742 /* ArrayExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtention.swift; sourceTree = "<group>"; };
 		7F6879041D420626003D5742 /* StringExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtention.swift; sourceTree = "<group>"; };
 		7F7EBFDF1D751EED00F1EE30 /* NSLocaleExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocaleExtention.swift; sourceTree = "<group>"; };
@@ -292,6 +296,14 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
+		7F63E3E21D75551800110E9F /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				7F63E3E71D75556A00110E9F /* Map.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 		7FB4D30E1D546240005F314E /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +373,7 @@
 			children = (
 				DB0A81661D463A710048ACB4 /* DummyTalkDetail.json */,
 				DB0A81641D463A4E0048ACB4 /* DummyTalks.json */,
+				7F63E3E21D75551800110E9F /* Localizable */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -669,6 +682,7 @@
 				DBA253721D73434400FE9DC5 /* Bookmark.storyboard in Resources */,
 				DB0A81651D463A4E0048ACB4 /* DummyTalks.json in Resources */,
 				DB3EDC331D744CED0095689F /* More.storyboard in Resources */,
+				7F63E3E51D75556A00110E9F /* Map.strings in Resources */,
 				7F2B717C1D653F49006A60BC /* TalkTableViewCell.xib in Resources */,
 				DBA253521D733A9000FE9DC5 /* LaunchScreen.storyboard in Resources */,
 				DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */,
@@ -819,6 +833,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7F63E3E71D75556A00110E9F /* Map.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F63E3E61D75556A00110E9F /* Base */,
+				7F63E3E81D75557500110E9F /* en */,
+				7F63E3E91D75557600110E9F /* ja */,
+			);
+			name = Map.strings;
+			sourceTree = "<group>";
+		};
 		DB3EDC351D744CED0095689F /* More.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
