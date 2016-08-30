@@ -6,6 +6,10 @@
   Copyright © 2016 PyCon JP. All rights reserved.
 */
 
+/**
+ MapViewController
+ */
+
 "nameWaseda" = "早稲田大学西早稲田キャンパス";
 
 "addressWaseda" = "〒169-0072\n東京都新宿区大久保 3-4-1\n早稲田大学西早稲田キャンパス 63号館";

@@ -6,6 +6,10 @@
   Copyright © 2016 PyCon JP. All rights reserved.
 */
 
+/**
+ MapViewController
+ */
+
 "nameWaseda" = "Waseda University, Nishi-Waseda Campus";
 
 "addressWaseda" = "Waseda University, Nishi-Waseda Campus, Building 63\n3-4-1, Okubo, Shinjuku, Tokyo\n169-0072, Japan";

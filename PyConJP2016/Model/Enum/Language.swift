@@ -13,7 +13,7 @@ enum Language: String {
     case Ja = "ja"
     
     
-    var lang: String {
+    var localized: String {
         switch self {
         case .En: return "English"
         case .Ja: return "Japanese"

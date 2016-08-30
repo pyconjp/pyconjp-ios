@@ -55,15 +55,8 @@ class TalkObject: Object {
         return "id"
     }
     
-    var languageName: String {
-        switch language {
-        case "ja":
-            return "Japanese"
-        case "en":
-            return "English"
-        default:
-            return ""
-        }
+    var languageType: Language? {
+        return Language(rawValue: language)
     }
     
     var placeNumber: String {
