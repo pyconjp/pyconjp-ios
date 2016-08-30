@@ -178,8 +178,8 @@
 /* Class = "UILabel"; text = "Floor Map"; ObjectID = "6RA-Nf-VSl"; */
 "6RA-Nf-VSl.text" = "フロアマップ";
 
-/* Class = "UILabel"; text = "Open Space"; ObjectID = "NHd-X9-Xbg"; */
-"NHd-X9-Xbg.text" = "オープンスペース";
+/* Class = "UILabel"; text = "Beginner Session, Open Space"; ObjectID = "NHd-X9-Xbg"; */
+"NHd-X9-Xbg.text" = "ビギナーセッション, オープンスペース";
 
 
 /**

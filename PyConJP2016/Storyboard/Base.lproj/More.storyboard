@@ -42,7 +42,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3V-yD-yYQ">
                                                 <rect key="frame" x="15" y="15" width="570" height="501.5"/>
-                                                <mutableString key="text">Tutorial: 2016-9-20 (Tue)
+                                                <string key="text">Tutorial: 2016-9-20 (Tue)
 Conference: 2016-9-21 (Wed) - 22 (Thu)
 Development Sprints: 2016-9-23 (Fri) - 24 (Sat)
 Venue: Waseda University, Nishiwaseda Campus
@@ -68,7 +68,7 @@ Web site: http://www.pycon.jp/
 Contact: 2016@pycon.jp
 Host: PyCon JP Committee
 
-Cohost: Global Software Engineering Laboratory, Waseda University</mutableString>
+Cohost: Global Software Engineering Laboratory, Waseda University</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -460,7 +460,7 @@ Cohost: Global Software Engineering Laboratory, Waseda University</mutableString
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmb-E2-P1g">
                                                 <rect key="frame" x="15" y="15" width="570" height="877.5"/>
-                                                <mutableString key="text">PyCon JP is a conference where Python users, or people interested in Python, gather to learn from each other and meet other members of the community. We hope that everyone joining PyCon JP will not only learn new and exciting things, but also meet new friends and strengthen the connection with the community, and thus the community itself.
+                                                <string key="text">PyCon JP is a conference where Python users, or people interested in Python, gather to learn from each other and meet other members of the community. We hope that everyone joining PyCon JP will not only learn new and exciting things, but also meet new friends and strengthen the connection with the community, and thus the community itself.
 
 This year, we chose "Everyone's different, all are wonderful." as our theme. The Pycon JP staff is continuing to work hard on making a conference that will allow everyone to have a great time and unlock new possibilities through Python.
 
@@ -486,7 +486,7 @@ Every year, we have a theme for the panel discussion. This year, we are consider
 
 
 # Sprint
-Sprint is a software development event which is held during 9/23 - 9/24, the second half of PyCon JP 2016. The purpose of Sprint is to provide a networking opportunity for people who are interested in similar topics. It is like a hack-a-thon. Some people will suggest topics and then others will select which topics to join. Please enjoy!</mutableString>
+Sprint is a software development event which is held during 9/23 - 9/24, the second half of PyCon JP 2016. The purpose of Sprint is to provide a networking opportunity for people who are interested in similar topics. It is like a hack-a-thon. Some people will suggest topics and then others will select which topics to join. Please enjoy!</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -808,8 +808,8 @@ SOFTWARE.</string>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Open Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" id="NHd-X9-Xbg">
-                                                    <rect key="frame" x="15" y="25.5" width="64" height="13.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Beginner Session, Open Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" id="NHd-X9-Xbg">
+                                                    <rect key="frame" x="15" y="25.5" width="161.5" height="13.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -915,7 +915,7 @@ SOFTWARE.</string>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIm-TJ-VDS">
                                                 <rect key="frame" x="15" y="15" width="570" height="644.5"/>
-                                                <mutableString key="text">PyCon JP is a conference organized and run by volunteers in the Japanese Python community that is dedicated to advancing and promoting the Python programming language. Through holding the PyCon JP conference, Python users can gather and exchange information with other deveopers from a wide variety of fields. It is our aim to create new relationships between the different communities and businesses using Python.
+                                                <string key="text">PyCon JP is a conference organized and run by volunteers in the Japanese Python community that is dedicated to advancing and promoting the Python programming language. Through holding the PyCon JP conference, Python users can gather and exchange information with other deveopers from a wide variety of fields. It is our aim to create new relationships between the different communities and businesses using Python.
 
 Harassment includes offensive verbal comments related to gender, age, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.
 
@@ -929,7 +929,7 @@ If you are being harassed, notice that someone else is being harassed, or have a
 
 Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
 
-We expect participants to follow these rules at conference and workshop venues and conference-related social events.</mutableString>
+We expect participants to follow these rules at conference and workshop venues and conference-related social events.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
