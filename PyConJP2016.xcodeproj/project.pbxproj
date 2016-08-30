@@ -25,6 +25,8 @@
 		7F52375D1D65917500C5A048 /* RealmTalksType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52375C1D65917500C5A048 /* RealmTalksType.swift */; };
 		7F6879031D41BE28003D5742 /* ArrayExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6879021D41BE28003D5742 /* ArrayExtention.swift */; };
 		7F6879051D420626003D5742 /* StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6879041D420626003D5742 /* StringExtention.swift */; };
+		7F7EBFE01D751EED00F1EE30 /* NSLocaleExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EBFDF1D751EED00F1EE30 /* NSLocaleExtention.swift */; };
+		7F7EBFE21D75308400F1EE30 /* PCJConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EBFE11D75308400F1EE30 /* PCJConfig.swift */; };
 		7F8443CE1D50320400A0BCBA /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8443CD1D50320400A0BCBA /* UIViewExtention.swift */; };
 		7FB4D3031D542DD2005F314E /* FloorMapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3021D542DD2005F314E /* FloorMapListViewController.swift */; };
 		7FB4D3051D5433CA005F314E /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */; };
@@ -131,6 +133,8 @@
 		7F52375C1D65917500C5A048 /* RealmTalksType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmTalksType.swift; sourceTree = "<group>"; };
 		7F6879021D41BE28003D5742 /* ArrayExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtention.swift; sourceTree = "<group>"; };
 		7F6879041D420626003D5742 /* StringExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtention.swift; sourceTree = "<group>"; };
+		7F7EBFDF1D751EED00F1EE30 /* NSLocaleExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocaleExtention.swift; sourceTree = "<group>"; };
+		7F7EBFE11D75308400F1EE30 /* PCJConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJConfig.swift; sourceTree = "<group>"; };
 		7F8443CD1D50320400A0BCBA /* UIViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
 		7FB4D3021D542DD2005F314E /* FloorMapListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapListViewController.swift; sourceTree = "<group>"; };
 		7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +307,7 @@
 			children = (
 				7FBC34CE1D40F956002919B1 /* AppDelegate.swift */,
 				7FBC34D01D40F98D002919B1 /* PCJNotificationConfig.swift */,
+				7F7EBFE11D75308400F1EE30 /* PCJConfig.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -521,12 +526,13 @@
 		DBF32BB31CD48C4C004E7F3B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */,
 				DBF32BB41CD48C4C004E7F3B /* AppDelegateExtention.swift */,
+				DBB2538A1CCB700400AA17C8 /* UIColorExtension.swift */,
 				DBFAEC541D3CF7AD00BCC880 /* NSDateExtension.swift */,
 				7F6879021D41BE28003D5742 /* ArrayExtention.swift */,
 				7F6879041D420626003D5742 /* StringExtention.swift */,
 				7F8443CD1D50320400A0BCBA /* UIViewExtention.swift */,
+				7F7EBFDF1D751EED00F1EE30 /* NSLocaleExtention.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -756,6 +762,7 @@
 				7F1CBE9C1D52CAFA007C058D /* Language.swift in Sources */,
 				DB3A77AE1D5631A400C25D8D /* TalkObject.swift in Sources */,
 				DBF32BB51CD48C4C004E7F3B /* AppDelegateExtention.swift in Sources */,
+				7F7EBFE21D75308400F1EE30 /* PCJConfig.swift in Sources */,
 				7F23AD441D656B8E0066771B /* AlamofireType.swift in Sources */,
 				7F23AD451D656B8E0066771B /* TalkDetailAPIType.swift in Sources */,
 				DBE611F71D6DF8F10043F2DF /* ConferenceListDataSource.swift in Sources */,
@@ -774,6 +781,7 @@
 				7FB4D3091D544333005F314E /* AcknowledgmentsListViewController.swift in Sources */,
 				DBFAEC551D3CF7AD00BCC880 /* NSDateExtension.swift in Sources */,
 				DBFE922E1D66136B00327F74 /* BookmarkListDataSource.swift in Sources */,
+				7F7EBFE01D751EED00F1EE30 /* NSLocaleExtention.swift in Sources */,
 				7F1CBEA01D52CAFA007C058D /* Speaker.swift in Sources */,
 				7F1CBE9D1D52CAFA007C058D /* Category.swift in Sources */,
 			);

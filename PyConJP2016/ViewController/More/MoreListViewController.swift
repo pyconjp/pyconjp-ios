@@ -91,7 +91,7 @@ class MoreListViewController: UITableViewController {
         
         var url: String? {
             switch self {
-            case .Sponsor: return "https://pycon.jp/2016/ja/sponsors/"
+            case .Sponsor: return PCJConfig.baseURL + "sponsors/"
             case .Repository: return "https://github.com/pyconjp/pyconjp-ios"
             default: return nil
             }

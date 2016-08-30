@@ -9,7 +9,8 @@
 import UIKit
 
 extension UIColor {
-    class func hexStr(hexStr: NSString, alpha: CGFloat) -> UIColor {
+    
+    static func hexStr(hexStr: NSString, alpha: CGFloat) -> UIColor {
         let hex = hexStr.stringByReplacingOccurrencesOfString("#", withString: "")
         let scanner = NSScanner(string: hex)
         var color: UInt32 = 0
@@ -24,35 +25,35 @@ extension UIColor {
         }
     }
     
-    class func pyconJP2016RedColor() -> UIColor {
+    static func pyconJP2016RedColor() -> UIColor {
         return UIColor.hexStr("#EB6D9A", alpha: 1)
     }
     
-    class func pyconJP2016OrangeColor() -> UIColor {
+    static func pyconJP2016OrangeColor() -> UIColor {
         return UIColor.hexStr("#F19975", alpha: 1)
     }
     
-    class func pyconJP2016LightOrangeColor() -> UIColor {
+    static func pyconJP2016LightOrangeColor() -> UIColor {
         return UIColor.hexStr("#F8C058", alpha: 1)
     }
     
-    class func pyconJP2016YellowColor() -> UIColor {
+    static func pyconJP2016YellowColor() -> UIColor {
         return UIColor.hexStr("#FFE45F", alpha: 1)
     }
     
-    class func pyconJP2016LightGreenColor() -> UIColor {
+    static func pyconJP2016LightGreenColor() -> UIColor {
         return UIColor.hexStr("#A9C952", alpha: 1)
     }
     
-    class func pyconJP2016GreenColor() -> UIColor {
+    static func pyconJP2016GreenColor() -> UIColor {
         return UIColor.hexStr("#86C8A0", alpha: 1)
     }
     
-    class func pyconJP2016BlueColor() -> UIColor {
+    static func pyconJP2016BlueColor() -> UIColor {
         return UIColor.hexStr("#54C2F0", alpha: 1)
     }
     
-    class func pyconJP2016GlayColor() -> UIColor {
+    static func pyconJP2016GlayColor() -> UIColor {
         return UIColor.hexStr("#C8C8C8", alpha: 1)
     }
     

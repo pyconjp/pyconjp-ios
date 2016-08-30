@@ -9,9 +9,11 @@
 import UIKit
 
 extension String {
+    
     func timeStringByTrimingSecond() -> String {
         let dateString = "2000-01-01 " + self
         guard let date = NSDate.dateFromString(dateString) else { return self }
         return NSDate.timeFromDate(date)
     }
+    
 }
