@@ -1,0 +1,62 @@
+
+/**
+ EventsNavigationController
+ */
+
+/* Class = "UITabBarItem"; title = "Events"; ObjectID = "ubk-Ga-9mF"; */
+"ubk-Ga-9mF.title" = "イベント";
+
+
+/**
+ EventsViewController
+ */
+
+/* Class = "UINavigationItem"; title = "Events"; ObjectID = "sqm-sS-mcY"; */
+"sqm-sS-mcY.title" = "イベント";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "I00-9O-hIK"; */
+"I00-9O-hIK.title" = " ";
+
+
+/**
+ EventsListViewController
+ */
+
+/* Class = "UINavigationItem"; title = "Events"; ObjectID = "7aG-LV-Eni"; */
+"7aG-LV-Eni.title" = "イベント";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "Kkv-wF-ctk"; */
+"Kkv-wF-ctk.title" = " ";
+
+/* Class = "UITableViewSection"; headerTitle = "2016-09-20"; ObjectID = "Mlq-bJ-38u"; */
+"Mlq-bJ-38u.headerTitle" = "2016-09-20";
+
+/* Class = "UILabel"; text = "Tutorials"; ObjectID = "mWT-qI-tdB"; */
+"mWT-qI-tdB.text" = "チュートリアル";
+
+/* Class = "UITableViewSection"; headerTitle = "2016-09-21, 22"; ObjectID = "cUb-IK-K2r"; */
+"cUb-IK-K2r.headerTitle" = "2016-09-21, 22";
+
+/* Class = "UILabel"; text = "Keynote"; ObjectID = "uz8-au-Y8P"; */
+"uz8-au-Y8P.text" = "基調講演";
+
+/* Class = "UILabel"; text = "Invited Lecture"; ObjectID = "lSr-xc-KL6"; */
+"lSr-xc-KL6.text" = "招待講演";
+
+/* Class = "UILabel"; text = "Posters"; ObjectID = "p8F-rq-kYu"; */
+"p8F-rq-kYu.text" = "ポスター";
+
+/* Class = "UILabel"; text = "Job's Fear"; ObjectID = "fAP-CS-O0L"; */
+"fAP-CS-O0L.text" = "ジョブフェア";
+
+/* Class = "UILabel"; text = "Product's Fear"; ObjectID = "Ghe-7K-xXR"; */
+"Ghe-7K-xXR.text" = "プロダクトフェア";
+
+/* Class = "UITableViewSection"; headerTitle = "2016-09-23, 24"; ObjectID = "0Xw-xy-Cf4"; */
+"0Xw-xy-Cf4.headerTitle" = "2016-09-23, 24";
+
+/* Class = "UILabel"; text = "Sprints"; ObjectID = "bpj-Gt-Qme"; */
+"bpj-Gt-Qme.text" = "スプリント";
+
+/* Class = "UITableViewSection"; footerTitle = " "; ObjectID = "0Xw-xy-Cf4"; */
+"0Xw-xy-Cf4.footerTitle" = " ";

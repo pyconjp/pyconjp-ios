@@ -21,7 +21,7 @@ class TalkObject: Object {
     dynamic var periodTime = ""
     dynamic var category = ""
     dynamic var place = ""
-    dynamic var language = "ja"
+    dynamic var language = ""
     dynamic var favorited = false
     
     convenience init(dictionary: Dictionary<String, AnyObject>) {
@@ -55,15 +55,8 @@ class TalkObject: Object {
         return "id"
     }
     
-    var languageName: String {
-        switch language {
-        case "ja":
-            return "Japanese"
-        case "en":
-            return "English"
-        default:
-            return ""
-        }
+    var languageType: Language? {
+        return Language(rawValue: language)
     }
     
     var placeNumber: String {

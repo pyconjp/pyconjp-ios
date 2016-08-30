@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIViewController {
+    
     func topMostViewController() -> UIViewController {
         if let presentedViewController = self.presentedViewController {
             return presentedViewController.topMostViewController()
@@ -24,16 +25,21 @@ extension UIViewController {
             return self
         }
     }
+    
 }
 
 extension UITabBarController {
+    
     override func topMostViewController() -> UIViewController {
         return self.selectedViewController!.topMostViewController()
     }
+    
 }
 
 extension UINavigationController {
+    
     override func topMostViewController() -> UIViewController {
         return self.visibleViewController!.topMostViewController()
     }
+    
 }

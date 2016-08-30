@@ -27,7 +27,7 @@ extension AlamofireType {
     }
     
     var baseURL: String {
-        return NSProcessInfo.processInfo().environment["APIBaseURL"] ?? "https://pycon.jp/2016/ja/api/"
+        return NSProcessInfo.processInfo().environment["APIBaseURL"] ?? PCJConfig.apiURL
     }
     
     var authUser: String {

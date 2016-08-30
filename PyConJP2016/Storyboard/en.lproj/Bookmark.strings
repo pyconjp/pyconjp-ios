@@ -1,0 +1,29 @@
+
+/**
+ BookmarkNavigationController
+ */
+
+/* Class = "UITabBarItem"; title = "Bookmark"; ObjectID = "G4f-OO-Xar"; */
+"G4f-OO-Xar.title" = "Bookmark";
+
+
+/**
+ BookmarkViewController
+ */
+
+/* Class = "UINavigationItem"; title = "Bookmark"; ObjectID = "gT9-SV-IIF"; */
+"gT9-SV-IIF.title" = "Bookmark";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "mln-vy-6xh"; */
+"mln-vy-6xh.title" = " ";
+
+
+/**
+ BookmarkListViewController
+ */
+
+/* Class = "UINavigationItem"; title = "Bookmark"; ObjectID = "dBi-0j-5q3"; */
+"dBi-0j-5q3.title" = "Bookmark";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "dK4-lC-Czn"; */
+"dK4-lC-Czn.title" = " ";

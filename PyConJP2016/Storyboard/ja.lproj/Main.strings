@@ -1,0 +1,45 @@
+
+/**
+ TalkDetailViewController
+ */
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "agf-dK-8uB"; */
+"agf-dK-8uB.title" = " ";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "1cC-hE-Hba"; */
+"1cC-hE-Hba.text" = "Title";
+
+/* Class = "UILabel"; text = "day"; ObjectID = "nqD-Zb-1cG"; */
+"nqD-Zb-1cG.text" = "day";
+
+/* Class = "UILabel"; text = "time"; ObjectID = "9Hk-se-873"; */
+"9Hk-se-873.text" = "time";
+
+/* Class = "UILabel"; text = "place"; ObjectID = "Rcf-qG-0nK"; */
+"Rcf-qG-0nK.text" = "place";
+
+/* Class = "UILabel"; text = "Speaker"; ObjectID = "kzM-Hy-Nxe"; */
+"kzM-Hy-Nxe.text" = "Speaker";
+
+/* Class = "UILabel"; text = "Language: "; ObjectID = "bua-7j-fWI"; */
+"bua-7j-fWI.text" = "言語: ";
+
+/* Class = "UILabel"; text = "Audience Level: "; ObjectID = "aHk-Dp-GNG"; */
+"aHk-Dp-GNG.text" = "対象レベル: ";
+
+/* Class = "UILabel"; text = "Category: "; ObjectID = "Pbg-wa-R1a"; */
+"Pbg-wa-R1a.text" = "カテゴリ: ";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "cOD-c6-zk2"; */
+"cOD-c6-zk2.text" = "説明";
+
+/* Class = "UILabel"; text = "Abstract"; ObjectID = "wgw-0x-wge"; */
+"wgw-0x-wge.text" = "概要";
+
+
+/**
+ WebViewController
+ */
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "uSt-BB-mtx"; */
+"uSt-BB-mtx.title" = " ";

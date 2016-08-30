@@ -14,10 +14,8 @@ enum Result<T, Error: ErrorType> {
     
     var isSuccess: Bool {
         switch self {
-        case .Success:
-            return true
-        case .Failure:
-            return false
+        case .Success: return true
+        case .Failure: return false
         }
     }
     
@@ -27,19 +25,15 @@ enum Result<T, Error: ErrorType> {
     
     var value: T? {
         switch self {
-        case .Success(let value):
-            return value
-        case .Failure:
-            return nil
+        case .Success(let value): return value
+        case .Failure: return nil
         }
     }
     
     var error: Error? {
         switch self {
-        case .Success:
-            return nil
-        case .Failure(let error):
-            return error
+        case .Success: return nil
+        case .Failure(let error): return error
         }
     }
     

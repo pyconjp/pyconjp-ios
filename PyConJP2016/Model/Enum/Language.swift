@@ -9,15 +9,15 @@
 import UIKit
 
 enum Language: String {
-    case JA = "ja"
-    case EN = "en"
+    case En = "en"
+    case Ja = "ja"
     
-    var lang: String {
+    
+    var localized: String {
         switch self {
-        case .JA:
-            return "Japanese"
-        case .EN:
-            return "English"
+        case .En: return NSLocalizedString("english", tableName: "Language", comment: "")
+        case .Ja: return NSLocalizedString("japaniese", tableName: "Language", comment: "")
+            
         }
     }
 }

@@ -43,8 +43,8 @@ class MoreListViewController: UITableViewController {
             let mapViewController = MapViewController.build(MapViewController.Venue.Microsoft)
             self.navigationController?.pushViewController(mapViewController, animated: true)
         case .Library:
-            let libraryViewController = LibraryListViewController.build()
-            self.navigationController?.pushViewController(libraryViewController, animated: true)
+            let acknowledgmentsListViewController = AcknowledgmentsListViewController.build()
+            self.navigationController?.pushViewController(acknowledgmentsListViewController, animated: true)
         }        
     }
     
@@ -91,7 +91,7 @@ class MoreListViewController: UITableViewController {
         
         var url: String? {
             switch self {
-            case .Sponsor: return "https://pycon.jp/2016/ja/sponsors/"
+            case .Sponsor: return PCJConfig.baseURL + "sponsors/"
             case .Repository: return "https://github.com/pyconjp/pyconjp-ios"
             default: return nil
             }

@@ -39,7 +39,7 @@ extension Talk {
         self.periodTime = startTime.timeStringByTrimingSecond() + " ~ " + endTime.timeStringByTrimingSecond()
         self.category = category
         self.place = place
-        self.language = Language(rawValue: language) ?? .JA
+        self.language = Language(rawValue: language) ?? .En
     }
     
     init(dictionary: Dictionary<String, AnyObject>) {

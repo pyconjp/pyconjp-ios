@@ -414,6 +414,7 @@
                                 </constraints>
                                 <items>
                                     <navigationItem id="Jw9-Gk-qxr">
+                                        <barButtonItem key="backBarButtonItem" title=" " id="uSt-BB-mtx"/>
                                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="sTT-Yh-3Cc">
                                             <connections>
                                                 <action selector="onCleseButton:" destination="gmt-s7-TvW" id="DMZ-BD-Km8"/>

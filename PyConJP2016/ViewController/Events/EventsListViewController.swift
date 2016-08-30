@@ -59,13 +59,13 @@ class EventsListViewController: UITableViewController {
         
         var url: String {
             switch self {
-            case .Tutorial: return "https://pycon.jp/2016/ja/events/tutorial/"
-            case .Keynote: return "https://pycon.jp/2016/ja/keynote/"
-            case .InvitedLecture: return "https://pycon.jp/2016/ja/talks/invited-speaker/"
-            case .Posters: return "https://pycon.jp/2016/ja/schedule/posters/list/"
-            case .JobsFear: return "https://pycon.jp/2016/ja/events/jobsfair/"
-            case .ProductsFear: return "https://pycon.jp/2016/ja/productfair/"
-            case .Sprint: return "https://pycon.jp/2016/ja/events/sprint/"
+            case .Tutorial: return PCJConfig.baseURL + "events/tutorial/"
+            case .Keynote: return PCJConfig.baseURL + "keynote/"
+            case .InvitedLecture: return PCJConfig.baseURL + "talks/invited-speaker/"
+            case .Posters: return PCJConfig.baseURL + "schedule/posters/list/"
+            case .JobsFear: return PCJConfig.baseURL + "events/jobsfair/"
+            case .ProductsFear: return PCJConfig.baseURL + "productfair/"
+            case .Sprint: return PCJConfig.baseURL + "events/sprint/"
             }
         }
         

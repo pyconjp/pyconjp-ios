@@ -111,7 +111,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
             
             self.speakerNameLabel.text = talkDetail.talkObject.speakers
             
-            self.languageLabel.text = talkDetail.talkObject.languageName
+            self.languageLabel.text = talkDetail.talkObject.languageType?.localized
             self.levelLabel.text = talkDetail.level
             self.categoryLabel.text = talkDetail.talkObject.category
             
