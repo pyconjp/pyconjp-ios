@@ -47,6 +47,7 @@
 		DB1347E01CCB27D900CA0539 /* ErrorAlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */; };
 		DB23836E1D563BFE00DA5376 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB23836D1D563BFE00DA5376 /* Room.swift */; };
 		DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */; };
+		DB384C861D75ED1D00EC1B33 /* Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB384C881D75ED1D00EC1B33 /* Language.strings */; };
 		DB3A77AE1D5631A400C25D8D /* TalkObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A77AD1D5631A400C25D8D /* TalkObject.swift */; };
 		DB3A77B01D5631F200C25D8D /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A77AF1D5631F200C25D8D /* Talk.swift */; };
 		DB3EDC331D744CED0095689F /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3EDC351D744CED0095689F /* More.storyboard */; };
@@ -158,6 +159,9 @@
 		DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlertType.swift; sourceTree = "<group>"; };
 		DB23836D1D563BFE00DA5376 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkDetailViewController.swift; sourceTree = "<group>"; };
+		DB384C871D75ED1D00EC1B33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Language.strings; sourceTree = "<group>"; };
+		DB384C891D75ED2E00EC1B33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Language.strings; sourceTree = "<group>"; };
+		DB384C8A1D75ED2F00EC1B33 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Language.strings; sourceTree = "<group>"; };
 		DB3A77AD1D5631A400C25D8D /* TalkObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkObject.swift; sourceTree = "<group>"; };
 		DB3A77AF1D5631F200C25D8D /* Talk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
 		DB3EDC341D744CED0095689F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/More.storyboard; sourceTree = "<group>"; };
@@ -300,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				7F63E3E71D75556A00110E9F /* Map.strings */,
+				DB384C881D75ED1D00EC1B33 /* Language.strings */,
 			);
 			path = Localizable;
 			sourceTree = "<group>";
@@ -678,6 +683,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB384C861D75ED1D00EC1B33 /* Language.strings in Resources */,
 				DBA253581D733AC900FE9DC5 /* Main.storyboard in Resources */,
 				DBA253721D73434400FE9DC5 /* Bookmark.storyboard in Resources */,
 				DB0A81651D463A4E0048ACB4 /* DummyTalks.json in Resources */,
@@ -841,6 +847,16 @@
 				7F63E3E91D75557600110E9F /* ja */,
 			);
 			name = Map.strings;
+			sourceTree = "<group>";
+		};
+		DB384C881D75ED1D00EC1B33 /* Language.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB384C871D75ED1D00EC1B33 /* Base */,
+				DB384C891D75ED2E00EC1B33 /* en */,
+				DB384C8A1D75ED2F00EC1B33 /* ja */,
+			);
+			name = Language.strings;
 			sourceTree = "<group>";
 		};
 		DB3EDC351D744CED0095689F /* More.storyboard */ = {

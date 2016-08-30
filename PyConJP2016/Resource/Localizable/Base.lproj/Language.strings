@@ -1,0 +1,11 @@
+/* 
+  Language.strings
+  PyConJP2016
+
+  Created by Yutaro Muta on 8/31/16.
+  Copyright © 2016 PyCon JP. All rights reserved.
+*/
+
+"english" = "English";
+
+"japanese" = "Japanese";
