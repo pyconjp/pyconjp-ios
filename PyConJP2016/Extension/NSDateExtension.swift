@@ -26,12 +26,6 @@ extension NSDate {
         return Static.instance.dateFromString(string)
     }
     
-    static func timeFromDate(date: NSDate) -> String {
-        let calender = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
-        let components = calender.components([.Year, .Month, .Day, .Weekday, .Hour, .Minute], fromDate: date)
-        return String(format: "%02d", components.hour) + ":" + String(format: "%02d", components.minute)
-    }
-    
     func convertToTime() -> String {
         let calender = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
         let components = calender.components([.Year, .Month, .Day, .Weekday, .Hour, .Minute], fromDate: self)
