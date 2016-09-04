@@ -107,7 +107,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
             
             self.placeLabel.text = talkDetail.talkObject.place
             self.placeLabel.textColor = talkDetail.talkObject.room?.color ?? UIColor.blackColor()
-            self.hashTagButton.setTitle("#" + (talkDetail.talkObject.room?.hashTag ?? "pyconjp"), forState: .Normal)
+            self.hashTagButton.setTitle((talkDetail.talkObject.room?.hashTag ?? "#pyconjp"), forState: .Normal)
             
             self.speakerNameLabel.text = talkDetail.talkObject.speakers
             
@@ -150,7 +150,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     
     @IBAction func onHashTagButton(sender: UIButton) {
         
-        let hashTag = talkDetail?.talkObject.room?.hashTag ?? "pyconjp"
+        let hashTag = (talkDetail?.talkObject.room?.hashTag ?? "pyconjp").stringByReplacingOccurrencesOfString("#", withString: "")
         
         if UIApplication.sharedApplication().canOpenURL(NSURL(string: "twitter://")!) {
             let urlString = "twitter://search?query=%23" + hashTag

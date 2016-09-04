@@ -418,17 +418,17 @@
 			isa = PBXGroup;
 			children = (
 				7FBC34CD1D40F956002919B1 /* Application */,
-				DB0A81631D463A4E0048ACB4 /* Resource */,
-				7FC773BC1D126A1600F5A202 /* DataSource */,
-				DBA1C0DA1C722E77004F0C8D /* Model */,
 				DBF32BB31CD48C4C004E7F3B /* Extension */,
 				DB1347DA1CC7DECF00CA0539 /* Protocol */,
+				DBA1C0DA1C722E77004F0C8D /* Model */,
 				DB0206831D4FB8430067C94B /* Manager */,
-				DBA1C0DB1C722E82004F0C8D /* ViewController */,
 				7FB4D30E1D546240005F314E /* View */,
+				DBA1C0DB1C722E82004F0C8D /* ViewController */,
+				7FC773BC1D126A1600F5A202 /* DataSource */,
 				DBA1C0DC1C722E99004F0C8D /* Storyboard */,
-				DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */,
+				DB0A81631D463A4E0048ACB4 /* Resource */,
 				DBA1C0B81C7228E2004F0C8D /* Info.plist */,
+				DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */,
 			);
 			path = PyConJP2016;
 			sourceTree = "<group>";
