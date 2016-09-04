@@ -37,11 +37,11 @@ enum TalkRoom: String {
     
     var hashTag: String {
         switch self {
-        case .Room201: return "pyconjp_1"
-        case .Room202: return "pyconjp_2"
-        case .Room203: return "pyconjp_3"
-        case .Room204: return "pyconjp_4"
-        case .Room205: return "pyconjp_5"
+        case .Room201: return "#pyconjp_201"
+        case .Room202: return "#pyconjp_202"
+        case .Room203: return "#pyconjp_203"
+        case .Room204: return "#pyconjp_204"
+        case .Room205: return "#pyconjp_205"
         }
     }
     
