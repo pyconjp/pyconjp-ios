@@ -24,8 +24,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var hashTagButton: UIButton!
     
-    @IBOutlet weak var speakerImageView: UIImageView!
-    @IBOutlet weak var speakerNameLabel: UILabel!
+    @IBOutlet weak var speakersCollectionView: UICollectionView!
     
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
@@ -36,16 +35,25 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     @IBOutlet weak var abstractTextView: UITextView!
     
     var id: Int?
-    private var talkDetail: TalkDetail?
-    //    private let localNotificationManager = LocalNotificationManager()
-    private let refreshControl = UIRefreshControl()
-    
-    class func build() -> TalkDetailViewController {
-        return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
+    private var talkDetail: TalkDetail? {
+        didSet {
+            if let talkDetail = talkDetail {
+                speakersCollectionViewDelegate.speakers = talkDetail.speakers
+                speakersCollectionViewDataSource.speakers = talkDetail.speakers
+            } else {
+                speakersCollectionViewDelegate.speakers.removeAll()
+                speakersCollectionViewDataSource.speakers.removeAll()
+            }
+        }
     }
     
+    private let refreshControl = UIRefreshControl()
+    
+    private let speakersCollectionViewDelegate = SpeakersCollectionViewDelegate()
+    private let speakersCollectionViewDataSource = SpeakersCollectionViewDataSource()
+    
     class func build(id: Int) -> TalkDetailViewController {
-        let talkDetailViewController = TalkDetailViewController.build()
+        let talkDetailViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
         talkDetailViewController.id = id
         return talkDetailViewController
     }
@@ -53,8 +61,14 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let nib  = UINib(nibName: speakersCollectionViewDataSource.reuseIdentifier, bundle:nil)
+        speakersCollectionView.registerNib(nib, forCellWithReuseIdentifier: speakersCollectionViewDataSource.reuseIdentifier)
+        
         refreshControl.addTarget(self, action: #selector(TalkDetailViewController.refresh(_:)), forControlEvents: .ValueChanged)
         baseScrollView.addSubview(refreshControl)
+        
+        speakersCollectionView.delegate = speakersCollectionViewDelegate
+        speakersCollectionView.dataSource = speakersCollectionViewDataSource
         
         refreshControl.beginRefreshing()
         getDetail()
@@ -109,7 +123,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
             self.placeLabel.textColor = talkDetail.talkObject.room?.color ?? UIColor.blackColor()
             self.hashTagButton.setTitle((talkDetail.talkObject.room?.hashTag ?? "#pyconjp"), forState: .Normal)
             
-            self.speakerNameLabel.text = talkDetail.talkObject.speakers
+            self.speakersCollectionView.reloadData()
             
             self.languageLabel.text = talkDetail.talkObject.languageType?.localized
             self.levelLabel.text = talkDetail.level
