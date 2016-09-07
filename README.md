@@ -1,6 +1,6 @@
 ## PyCon JPのガイド用iOSアプリ
 
-|Siwft 2.x|
+|Swift 2.x|
 |:--------|
 |iOS 9.0~ |
 
