@@ -23,7 +23,7 @@ class SpeakerCollectionViewCell: UICollectionViewCell {
     func fill(speaker: Speaker) {
         
         nameLabel.text = speaker.name
-        twitterLabel.text = speaker.twitterName
+        twitterLabel.text = (speaker.twitterName != nil ? "@\(speaker.twitterName!)" : nil)
     }
     
 }

@@ -25,6 +25,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     @IBOutlet weak var hashTagButton: UIButton!
     
     @IBOutlet weak var speakersCollectionView: UICollectionView!
+    @IBOutlet weak var speakersCollectionViewHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
@@ -51,6 +52,8 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     
     private let speakersCollectionViewDelegate = SpeakersCollectionViewDelegate()
     private let speakersCollectionViewDataSource = SpeakersCollectionViewDataSource()
+    
+    private lazy var speakersCollectionViewHeight: CGFloat = self.speakersCollectionViewHeightConstraint.constant
     
     class func build(id: Int) -> TalkDetailViewController {
         let talkDetailViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
@@ -123,6 +126,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
             self.placeLabel.textColor = talkDetail.talkObject.room?.color ?? UIColor.blackColor()
             self.hashTagButton.setTitle((talkDetail.talkObject.room?.hashTag ?? "#pyconjp"), forState: .Normal)
             
+            self.speakersCollectionViewHeightConstraint.constant = talkDetail.speakers.isEmpty ? 0 : self.speakersCollectionViewHeight
             self.speakersCollectionView.reloadData()
             
             self.languageLabel.text = talkDetail.talkObject.languageType?.localized

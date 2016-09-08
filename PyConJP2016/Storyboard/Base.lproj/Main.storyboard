@@ -35,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IkL-Dy-Ecl" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="501"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cC-hE-Hba">
                                                 <rect key="frame" x="15" y="15" width="570" height="32"/>
@@ -127,13 +127,13 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-Dv-Jho" userLabel="Speaker View">
-                                                <rect key="frame" x="0.0" y="168" width="600" height="189"/>
+                                                <rect key="frame" x="0.0" y="168" width="600" height="90"/>
                                                 <subviews>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AMA-6a-pqY">
-                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="189"/>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AMA-6a-pqY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="2" minimumInteritemSpacing="2" id="ota-Ws-yUr">
-                                                            <size key="itemSize" width="100" height="125"/>
+                                                            <size key="itemSize" width="80" height="90"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -145,12 +145,13 @@
                                                 <constraints>
                                                     <constraint firstItem="AMA-6a-pqY" firstAttribute="leading" secondItem="ofa-Dv-Jho" secondAttribute="leading" id="00S-AX-8FO"/>
                                                     <constraint firstAttribute="bottom" secondItem="AMA-6a-pqY" secondAttribute="bottom" id="aO9-nX-GL6"/>
+                                                    <constraint firstAttribute="height" constant="90" id="f1M-ze-wp5"/>
                                                     <constraint firstItem="AMA-6a-pqY" firstAttribute="top" secondItem="ofa-Dv-Jho" secondAttribute="top" id="nME-Mf-ZbW"/>
                                                     <constraint firstAttribute="trailing" secondItem="AMA-6a-pqY" secondAttribute="trailing" id="re1-LJ-MJc"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7dc-HN-wnn">
-                                                <rect key="frame" x="0.0" y="367" width="600" height="90"/>
+                                                <rect key="frame" x="0.0" y="268" width="600" height="90"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqe-EW-BxS">
                                                         <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
@@ -245,7 +246,7 @@
                                                 </constraints>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oIs-bF-9kT" userLabel="Description View">
-                                                <rect key="frame" x="0.0" y="467" width="600" height="54"/>
+                                                <rect key="frame" x="0.0" y="368" width="600" height="54"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOD-c6-zk2">
                                                         <rect key="frame" x="15" y="0.0" width="95" height="21"/>
@@ -279,7 +280,7 @@
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SkO-Gq-LyM" userLabel="Abstract View">
-                                                <rect key="frame" x="0.0" y="531" width="600" height="54"/>
+                                                <rect key="frame" x="0.0" y="432" width="600" height="54"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abstract" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgw-0x-wge">
                                                         <rect key="frame" x="15" y="0.0" width="72" height="21"/>
@@ -374,6 +375,7 @@
                         <outlet property="periodTimeLabel" destination="9Hk-se-873" id="HOM-JZ-ymc"/>
                         <outlet property="placeLabel" destination="Rcf-qG-0nK" id="fQn-BR-MVd"/>
                         <outlet property="speakersCollectionView" destination="AMA-6a-pqY" id="E8X-gd-MZB"/>
+                        <outlet property="speakersCollectionViewHeightConstraint" destination="f1M-ze-wp5" id="kFN-jd-00t"/>
                         <outlet property="titleLabel" destination="1cC-hE-Hba" id="nyi-XM-FQ5"/>
                     </connections>
                 </viewController>
