@@ -54,7 +54,6 @@
 		DB43FCFA1D80650800BB45EC /* SpeakerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB43FCF91D80650800BB45EC /* SpeakerCollectionViewCell.xib */; };
 		DB43FCFC1D80656100BB45EC /* SpeakerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43FCFB1D80656100BB45EC /* SpeakerCollectionViewCell.swift */; };
 		DB43FCFF1D806AA400BB45EC /* SpeakersCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43FCFE1D806AA400BB45EC /* SpeakersCollectionViewDataSource.swift */; };
-		DB43FD021D80750900BB45EC /* SpeakersCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43FD011D80750900BB45EC /* SpeakersCollectionViewDelegate.swift */; };
 		DB8C1B041D5392BE00221F36 /* MapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C1B031D5392BE00221F36 /* MapListViewController.swift */; };
 		DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */; };
 		DBA1C0C21C7228E2004F0C8D /* PyConJP2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0C11C7228E2004F0C8D /* PyConJP2016Tests.swift */; };
@@ -174,7 +173,6 @@
 		DB43FCF91D80650800BB45EC /* SpeakerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerCollectionViewCell.xib; sourceTree = "<group>"; };
 		DB43FCFB1D80656100BB45EC /* SpeakerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB43FCFE1D806AA400BB45EC /* SpeakersCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersCollectionViewDataSource.swift; sourceTree = "<group>"; };
-		DB43FD011D80750900BB45EC /* SpeakersCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		DB8C1B031D5392BE00221F36 /* MapListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapListViewController.swift; sourceTree = "<group>"; };
 		DBA1C0A91C7228E2004F0C8D /* PyConJP2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PyConJP2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -428,14 +426,6 @@
 			path = TalkDetail;
 			sourceTree = "<group>";
 		};
-		DB43FD001D8074EE00BB45EC /* Delegate */ = {
-			isa = PBXGroup;
-			children = (
-				DB43FD011D80750900BB45EC /* SpeakersCollectionViewDelegate.swift */,
-			);
-			path = Delegate;
-			sourceTree = "<group>";
-		};
 		DBA1C0A01C7228E2004F0C8D = {
 			isa = PBXGroup;
 			children = (
@@ -467,7 +457,6 @@
 				DB0206831D4FB8430067C94B /* Manager */,
 				7FB4D30E1D546240005F314E /* View */,
 				DBA1C0DB1C722E82004F0C8D /* ViewController */,
-				DB43FD001D8074EE00BB45EC /* Delegate */,
 				7FC773BC1D126A1600F5A202 /* DataSource */,
 				DBA1C0DC1C722E99004F0C8D /* Storyboard */,
 				DB0A81631D463A4E0048ACB4 /* Resource */,
@@ -843,7 +832,6 @@
 				7FFF87EE1D5AF2070093E316 /* Result.swift in Sources */,
 				7F6879051D420626003D5742 /* StringExtention.swift in Sources */,
 				DBE6120C1D6DFFBF0043F2DF /* ConferenceModelController.swift in Sources */,
-				DB43FD021D80750900BB45EC /* SpeakersCollectionViewDelegate.swift in Sources */,
 				DBFE92311D6613C300327F74 /* TimelineDataSource.swift in Sources */,
 				7FBC34D11D40F98D002919B1 /* PCJNotificationConfig.swift in Sources */,
 				7FB4D3091D544333005F314E /* AcknowledgmentsListViewController.swift in Sources */,

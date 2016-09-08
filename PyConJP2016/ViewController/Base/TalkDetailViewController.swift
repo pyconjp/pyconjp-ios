@@ -39,10 +39,8 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     private var talkDetail: TalkDetail? {
         didSet {
             if let talkDetail = talkDetail {
-                speakersCollectionViewDelegate.speakers = talkDetail.speakers
                 speakersCollectionViewDataSource.speakers = talkDetail.speakers
             } else {
-                speakersCollectionViewDelegate.speakers.removeAll()
                 speakersCollectionViewDataSource.speakers.removeAll()
             }
         }
@@ -50,7 +48,6 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     
     private let refreshControl = UIRefreshControl()
     
-    private let speakersCollectionViewDelegate = SpeakersCollectionViewDelegate()
     private let speakersCollectionViewDataSource = SpeakersCollectionViewDataSource()
     
     private lazy var speakersCollectionViewHeight: CGFloat = self.speakersCollectionViewHeightConstraint.constant
@@ -70,7 +67,6 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
         refreshControl.addTarget(self, action: #selector(TalkDetailViewController.refresh(_:)), forControlEvents: .ValueChanged)
         baseScrollView.addSubview(refreshControl)
         
-        speakersCollectionView.delegate = speakersCollectionViewDelegate
         speakersCollectionView.dataSource = speakersCollectionViewDataSource
         
         refreshControl.beginRefreshing()
@@ -180,5 +176,20 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
             self.presentViewController(safariViewController, animated: true, completion: nil)
         }
         
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        guard let twitterName = speakersCollectionViewDataSource.speakers[indexPath.row].twitterName else { return }
+        
+        if UIApplication.sharedApplication().canOpenURL(NSURL(string: "twitter://")!) {
+            let urlString = "twitter://user?screen_name=" + twitterName
+            UIApplication.sharedApplication().openURL(NSURL(string: urlString)!)
+        } else {
+            let urlString = "https://mobile.twitter.com/" + twitterName
+            
+            let safariViewController = SFSafariViewController(URL: NSURL(string: urlString)!)
+            self.presentViewController(safariViewController, animated: true, completion: nil)
+        }
     }
 }
