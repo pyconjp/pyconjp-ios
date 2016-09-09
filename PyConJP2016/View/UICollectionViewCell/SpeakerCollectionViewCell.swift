@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class SpeakerCollectionViewCell: UICollectionViewCell {
     
@@ -15,13 +16,15 @@ class SpeakerCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var twitterLabel: UILabel!
     
     override func prepareForReuse() {
-        iconImageView.image = nil
+        iconImageView.image = UIImage(named: "Speaker")
         nameLabel.text = nil
         twitterLabel.text = nil
     }
     
     func fill(speaker: Speaker) {
-        
+        if let imageURL = speaker.imageURL, url = NSURL(string: PCJConfig.hostURL + imageURL) {
+            iconImageView.af_setImageWithURL(url)
+        }
         nameLabel.text = speaker.name
         twitterLabel.text = (speaker.twitterName != nil ? "@\(speaker.twitterName!)" : nil)
     }

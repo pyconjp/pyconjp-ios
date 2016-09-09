@@ -11,7 +11,7 @@ import UIKit
 struct Speaker {
     
     let name: String
-    let imageURL: String
+    let imageURL: String?
     let twitterName: String?
     
 }
@@ -20,7 +20,7 @@ extension Speaker {
     
     init(dictionary: [String : AnyObject]) {
         name = dictionary["name"] as? String ?? ""
-        imageURL = dictionary["image_uri"] as? String ?? ""
+        imageURL = dictionary["image_uri"] as? String
         twitterName = dictionary["twitter"] as? String
     }
         

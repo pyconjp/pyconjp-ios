@@ -54,6 +54,8 @@
 		DB43FCFA1D80650800BB45EC /* SpeakerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB43FCF91D80650800BB45EC /* SpeakerCollectionViewCell.xib */; };
 		DB43FCFC1D80656100BB45EC /* SpeakerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43FCFB1D80656100BB45EC /* SpeakerCollectionViewCell.swift */; };
 		DB43FCFF1D806AA400BB45EC /* SpeakersCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43FCFE1D806AA400BB45EC /* SpeakersCollectionViewDataSource.swift */; };
+		DB8028AE1D81D0A300A4818A /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8028AD1D81D0A300A4818A /* AlamofireImage.framework */; };
+		DB8028AF1D81D0A300A4818A /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB8028AD1D81D0A300A4818A /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB8C1B041D5392BE00221F36 /* MapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C1B031D5392BE00221F36 /* MapListViewController.swift */; };
 		DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */; };
 		DBA1C0C21C7228E2004F0C8D /* PyConJP2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0C11C7228E2004F0C8D /* PyConJP2016Tests.swift */; };
@@ -113,6 +115,7 @@
 				DBC72D181D6F0B0C008DF718 /* Realm.framework in Embed Frameworks */,
 				DBC72D161D6F0B0C008DF718 /* Alamofire.framework in Embed Frameworks */,
 				DBC72D1A1D6F0B0C008DF718 /* RealmSwift.framework in Embed Frameworks */,
+				DB8028AF1D81D0A300A4818A /* AlamofireImage.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +176,7 @@
 		DB43FCF91D80650800BB45EC /* SpeakerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerCollectionViewCell.xib; sourceTree = "<group>"; };
 		DB43FCFB1D80656100BB45EC /* SpeakerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB43FCFE1D806AA400BB45EC /* SpeakersCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		DB8028AD1D81D0A300A4818A /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		DB8C1B031D5392BE00221F36 /* MapListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapListViewController.swift; sourceTree = "<group>"; };
 		DBA1C0A91C7228E2004F0C8D /* PyConJP2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PyConJP2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -224,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBC72D171D6F0B0C008DF718 /* Realm.framework in Frameworks */,
+				DB8028AE1D81D0A300A4818A /* AlamofireImage.framework in Frameworks */,
 				7FFB73401C9162C2006FB375 /* MapKit.framework in Frameworks */,
 				DBC72D191D6F0B0C008DF718 /* RealmSwift.framework in Frameworks */,
 				DBC72D151D6F0B0C008DF718 /* Alamofire.framework in Frameworks */,
@@ -429,6 +434,7 @@
 		DBA1C0A01C7228E2004F0C8D = {
 			isa = PBXGroup;
 			children = (
+				DB8028AD1D81D0A300A4818A /* AlamofireImage.framework */,
 				DBA1C0AB1C7228E2004F0C8D /* PyConJP2016 */,
 				DBA1C0C01C7228E2004F0C8D /* PyConJP2016Tests */,
 				DBA1C0CB1C7228E2004F0C8D /* PyConJP2016UITests */,
@@ -758,6 +764,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
 			);
 			outputPaths = (
 			);

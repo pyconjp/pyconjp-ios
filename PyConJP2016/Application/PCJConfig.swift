@@ -11,7 +11,9 @@ import UIKit
 
 enum PCJConfig {
     
-    static let baseURL = "https://pycon.jp/2016/" + NSLocale.currentLanguageLocaleIdentifier() + "/"
+    static let hostURL = "https://pycon.jp"
+    
+    static let baseURL = PCJConfig.hostURL + "/2016/" + NSLocale.currentLanguageLocaleIdentifier() + "/"
     
     static let apiURL = PCJConfig.baseURL + "api/"
     
