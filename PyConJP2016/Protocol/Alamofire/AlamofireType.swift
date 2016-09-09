@@ -27,15 +27,15 @@ extension AlamofireType {
     }
     
     var baseURL: String {
-        return NSProcessInfo.processInfo().environment["APIBaseURL"] ?? PCJConfig.apiURL
+        return PCJConfig.apiURL
     }
     
     var authUser: String {
-        return NSProcessInfo.processInfo().environment["APIAuthUser"] ?? ""
+        return PCJConfig.authUser
     }
     
     var authPassword: String {
-        return NSProcessInfo.processInfo().environment["APIAuthPassword"] ?? ""
+        return PCJConfig.authPassword
     }
     
 }
