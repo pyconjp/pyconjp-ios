@@ -40,6 +40,9 @@
 /* Class = "UILabel"; text = "Sponsor"; ObjectID = "yFZ-CD-jgB"; */
 "yFZ-CD-jgB.text" = "Sponsor";
 
+/* Class = "UILabel"; text = "Staff List"; ObjectID = "fe1-28-yP9"; */
+"fe1-28-yP9.text" = "Staff List";
+
 /* Class = "UITableViewSection"; headerTitle = "Venue Information"; ObjectID = "OVX-Ci-m6R"; */
 "OVX-Ci-m6R.headerTitle" = "Venue Information";
 

@@ -40,6 +40,9 @@
 /* Class = "UILabel"; text = "Sponsor"; ObjectID = "yFZ-CD-jgB"; */
 "yFZ-CD-jgB.text" = "スポンサー";
 
+/* Class = "UILabel"; text = "Staff List"; ObjectID = "fe1-28-yP9"; */
+"fe1-28-yP9.text" = "スタッフ一覧";
+
 /* Class = "UITableViewSection"; headerTitle = "Venue Information"; ObjectID = "OVX-Ci-m6R"; */
 "OVX-Ci-m6R.headerTitle" = "会場情報";
 
