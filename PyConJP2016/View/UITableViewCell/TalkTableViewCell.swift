@@ -16,6 +16,8 @@ class TalkTableViewCell: UITableViewCell {
     @IBOutlet weak var placeView: UIView!
     @IBOutlet weak var speakerLabel: UILabel!
     
+    static let estimatedRowHeight: CGFloat = 134
+    
     func fill(talkObject: TalkObject) {
         titleLabel.text = talkObject.title
         timeLabel.text = talkObject.periodTime
