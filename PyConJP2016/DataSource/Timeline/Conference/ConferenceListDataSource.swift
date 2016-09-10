@@ -20,7 +20,6 @@ class ConferenceListDataSource: TimelineDataSource, RealmTalksType {
     }
     
     func refreshData(completionHandler: (Result<Void, NSError> -> Void)) -> Void {
-        timelines.removeAll()
         loadTalkObjects { result in
             switch result {
             case .Success(let talks):

@@ -15,8 +15,7 @@ class BookmarkListDataSource: TimelineDataSource, RealmTalksType {
     let sortProperties = [SortDescriptor(property: "date", ascending: true), SortDescriptor(property: "place", ascending: true)]
     
     func refreshData(completionHandler: (Result<Void, NSError> -> Void)) -> Void {
-        timelines.removeAll()
-        loadTalkObjects({ result in
+        loadTalkObjects { result in
             switch result {
             case .Success(let talks):
                 let keys = talks.map { $0.day }.unique()
@@ -28,7 +27,7 @@ class BookmarkListDataSource: TimelineDataSource, RealmTalksType {
             case .Failure(let error):
                 completionHandler(.Failure(error))
             }
-        })
+        }
     }
     
 }
