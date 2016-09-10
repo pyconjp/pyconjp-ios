@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vCT-82-8T9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vCT-82-8T9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
@@ -862,8 +862,25 @@ SOFTWARE.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="uoA-BR-qTg" style="IBUITableViewCellStyleDefault" id="Lf6-FA-nx1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="fa1-oM-Hf1" style="IBUITableViewCellStyleDefault" id="AI9-aK-TTv">
                                         <rect key="frame" x="0.0" y="93.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AI9-aK-TTv" id="xje-D2-S4Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="AlamofireImage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="fa1-oM-Hf1">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="uoA-BR-qTg" style="IBUITableViewCellStyleDefault" id="Lf6-FA-nx1">
+                                        <rect key="frame" x="0.0" y="137.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lf6-FA-nx1" id="dPH-xN-yhb">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -1046,6 +1063,84 @@ THE SOFTWARE.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlA-zG-knX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5085" y="1203"/>
+        </scene>
+        <!--AlamofireImage-->
+        <scene sceneID="Dva-XO-aVY">
+            <objects>
+                <viewController storyboardIdentifier="AlamofireImageLicenseViewController" id="LbX-Ev-su1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XVW-Xs-BRp"/>
+                        <viewControllerLayoutGuide type="bottom" id="vxf-ae-GQ5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cfK-O3-Lyb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nsG-h8-TEB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oDh-Rb-mwg" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="494"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e71-Xc-NNX">
+                                                <rect key="frame" x="15" y="15" width="570" height="464"/>
+                                                <string key="text">Copyright (c) 2015-2016 Alamofire Software Foundation (http://alamofire.org/)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="e71-Xc-NNX" firstAttribute="leading" secondItem="oDh-Rb-mwg" secondAttribute="leading" constant="15" id="8OB-43-cwv"/>
+                                            <constraint firstItem="e71-Xc-NNX" firstAttribute="top" secondItem="oDh-Rb-mwg" secondAttribute="top" constant="15" id="MKV-eZ-4ka"/>
+                                            <constraint firstAttribute="trailing" secondItem="e71-Xc-NNX" secondAttribute="trailing" constant="15" id="NEz-eM-5MR"/>
+                                            <constraint firstAttribute="bottom" secondItem="e71-Xc-NNX" secondAttribute="bottom" constant="15" id="O1o-43-390"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oDh-Rb-mwg" firstAttribute="top" secondItem="nsG-h8-TEB" secondAttribute="top" id="0Mq-oX-jPe"/>
+                                    <constraint firstItem="oDh-Rb-mwg" firstAttribute="leading" secondItem="nsG-h8-TEB" secondAttribute="leading" id="5ZS-fk-la1"/>
+                                    <constraint firstAttribute="bottom" secondItem="oDh-Rb-mwg" secondAttribute="bottom" id="Mhc-qc-yPY"/>
+                                    <constraint firstAttribute="trailing" secondItem="oDh-Rb-mwg" secondAttribute="trailing" id="TTf-IE-0Ph"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oDh-Rb-mwg" firstAttribute="height" secondItem="cfK-O3-Lyb" secondAttribute="height" priority="250" id="99x-J8-jY1"/>
+                            <constraint firstAttribute="bottom" secondItem="nsG-h8-TEB" secondAttribute="bottom" id="9Xk-DO-vAw"/>
+                            <constraint firstItem="oDh-Rb-mwg" firstAttribute="width" secondItem="cfK-O3-Lyb" secondAttribute="width" id="btW-YX-9bX"/>
+                            <constraint firstItem="nsG-h8-TEB" firstAttribute="leading" secondItem="cfK-O3-Lyb" secondAttribute="leading" id="c7e-7W-4Xg"/>
+                            <constraint firstItem="nsG-h8-TEB" firstAttribute="top" secondItem="cfK-O3-Lyb" secondAttribute="top" id="eDq-L0-zUv"/>
+                            <constraint firstAttribute="trailing" secondItem="nsG-h8-TEB" secondAttribute="trailing" id="wd2-Oc-8G4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="AlamofireImage" id="o2M-GQ-0W2">
+                        <barButtonItem key="backBarButtonItem" title=" " id="XCK-bS-bug"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8i3-fO-VH7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5748" y="1203"/>
         </scene>
     </scenes>
     <resources>

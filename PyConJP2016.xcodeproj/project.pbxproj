@@ -352,6 +352,7 @@
 		BB6F29A77E8682EFE6C9DA97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB8028AD1D81D0A300A4818A /* AlamofireImage.framework */,
 				7FFB733F1C9162C2006FB375 /* MapKit.framework */,
 				DBC72D121D6F0B0C008DF718 /* Alamofire.framework */,
 				DBC72D131D6F0B0C008DF718 /* Realm.framework */,
@@ -434,7 +435,6 @@
 		DBA1C0A01C7228E2004F0C8D = {
 			isa = PBXGroup;
 			children = (
-				DB8028AD1D81D0A300A4818A /* AlamofireImage.framework */,
 				DBA1C0AB1C7228E2004F0C8D /* PyConJP2016 */,
 				DBA1C0C01C7228E2004F0C8D /* PyConJP2016Tests */,
 				DBA1C0CB1C7228E2004F0C8D /* PyConJP2016UITests */,
