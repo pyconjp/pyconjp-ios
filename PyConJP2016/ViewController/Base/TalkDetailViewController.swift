@@ -12,7 +12,12 @@ import RealmSwift
 
 class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertType {
     
-    @IBOutlet weak var baseScrollView: UIScrollView!
+    @IBOutlet weak var baseScrollView: UIScrollView! {
+        didSet {
+            refreshControl.addTarget(self, action: #selector(TalkDetailViewController.refresh(_:)), forControlEvents: .ValueChanged)
+            baseScrollView.addSubview(refreshControl)
+        }
+    }
     @IBOutlet weak var bookmarkBarButtonItem: UIBarButtonItem!
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -24,7 +29,13 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var hashTagButton: UIButton!
     
-    @IBOutlet weak var speakersCollectionView: UICollectionView!
+    @IBOutlet weak var speakersCollectionView: UICollectionView! {
+        didSet {
+            let nib  = UINib(nibName: speakersCollectionViewDataSource.reuseIdentifier, bundle:nil)
+            speakersCollectionView.registerNib(nib, forCellWithReuseIdentifier: speakersCollectionViewDataSource.reuseIdentifier)
+            speakersCollectionView.dataSource = speakersCollectionViewDataSource
+        }
+    }
     @IBOutlet weak var speakersCollectionViewHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var languageLabel: UILabel!
@@ -60,14 +71,6 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let nib  = UINib(nibName: speakersCollectionViewDataSource.reuseIdentifier, bundle:nil)
-        speakersCollectionView.registerNib(nib, forCellWithReuseIdentifier: speakersCollectionViewDataSource.reuseIdentifier)
-        
-        refreshControl.addTarget(self, action: #selector(TalkDetailViewController.refresh(_:)), forControlEvents: .ValueChanged)
-        baseScrollView.addSubview(refreshControl)
-        
-        speakersCollectionView.dataSource = speakersCollectionViewDataSource
         
         refreshControl.beginRefreshing()
         getDetail()
