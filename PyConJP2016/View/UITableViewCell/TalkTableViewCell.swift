@@ -16,7 +16,7 @@ class TalkTableViewCell: UITableViewCell {
     @IBOutlet weak var placeView: UIView!
     @IBOutlet weak var speakerLabel: UILabel!
     
-    func fillWith(talkObject: TalkObject) {
+    func fill(talkObject: TalkObject) {
         titleLabel.text = talkObject.title
         timeLabel.text = talkObject.periodTime
         placeLabel.text = talkObject.place

@@ -10,31 +10,18 @@ import UIKit
 
 struct Speaker {
     
-    let id: Int
     let name: String
-    let imageURL: String
-    let twitterName: String
-    let githubName: String
+    let imageURL: String?
+    let twitterName: String?
     
 }
 
 extension Speaker {
     
     init(dictionary: [String : AnyObject]) {
-        id = dictionary["id"] as? Int ?? 0
         name = dictionary["name"] as? String ?? ""
-        imageURL = dictionary["image_url"] as? String ?? ""
-        twitterName = dictionary["twitter"] as? String ?? ""
-        githubName = dictionary["github"] as? String ?? ""
+        imageURL = dictionary["image_uri"] as? String
+        twitterName = dictionary["twitter"] as? String
     }
-    
-    init?(dictionary: [String : AnyObject]?) {
-        guard let dictionary = dictionary else { return nil }
-        id = dictionary["id"] as? Int ?? 0
-        name = dictionary["name"] as? String ?? ""
-        imageURL = dictionary["image_url"] as? String ?? ""
-        twitterName = dictionary["twitter"] as? String ?? ""
-        githubName = dictionary["github"] as? String ?? ""
-    }
-    
+        
 }

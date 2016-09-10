@@ -11,8 +11,14 @@ import UIKit
 
 enum PCJConfig {
     
-    static let baseURL = "https://pycon.jp/2016/" + NSLocale.currentLanguageLocaleIdentifier() + "/"
+    static let hostURL = NSProcessInfo.processInfo().environment["APIBaseURL"] ?? "https://pycon.jp"
+    
+    static let baseURL = PCJConfig.hostURL + "/2016/" + NSLocale.currentLanguageLocaleIdentifier() + "/"
     
     static let apiURL = PCJConfig.baseURL + "api/"
+    
+    static let authUser = NSProcessInfo.processInfo().environment["APIAuthUser"] ?? ""
+    
+    static let authPassword = NSProcessInfo.processInfo().environment["APIAuthPassword"] ?? ""
     
 }

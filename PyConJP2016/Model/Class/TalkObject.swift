@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class TalkObject: Object {
+class TalkObject: RealmSwift.Object {
     dynamic var id =  0
     dynamic var title = ""
     dynamic var descriptionText = ""
