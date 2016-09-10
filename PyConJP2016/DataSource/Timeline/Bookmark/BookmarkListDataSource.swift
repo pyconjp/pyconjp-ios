@@ -14,7 +14,7 @@ class BookmarkListDataSource: TimelineDataSource, RealmTalksType {
     let filterPredicate = NSPredicate(format: "favorited == %@", true)
     let sortProperties = [SortDescriptor(property: "date", ascending: true), SortDescriptor(property: "place", ascending: true)]
     
-    func refreshData() {
+    func refreshData(completionHandler: (Result<Void, NSError> -> Void)) -> Void {
         timelines.removeAll()
         loadTalkObjects({ result in
             switch result {
@@ -23,8 +23,10 @@ class BookmarkListDataSource: TimelineDataSource, RealmTalksType {
                 for tuple in keys.enumerate() {
                     self.timelines.append(Timeline(key: keys[tuple.index], talks: talks.filter { $0.day == keys[tuple.index]}))
                 }
+                completionHandler(.Success())
                 break
-            case .Failure: break
+            case .Failure(let error):
+                completionHandler(.Failure(error))
             }
         })
     }

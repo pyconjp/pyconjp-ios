@@ -48,10 +48,17 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate {
     }
     
     func refresh() {
-        bookmarkListDataSource.refreshData()
-        dispatch_async(dispatch_get_main_queue()) {
-            self.tableView.reloadData()
+        bookmarkListDataSource.refreshData { [weak self](result) in
+            guard let weakSelf = self else { return }
+            switch result {
+            case .Success:
+                dispatch_async(dispatch_get_main_queue()) {
+                    weakSelf.tableView.reloadData()
+                }
+            case .Failure: break
+            }
         }
+
     }
     
     // MARK: - Table View Controller Delegate

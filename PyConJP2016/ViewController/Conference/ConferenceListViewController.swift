@@ -50,6 +50,7 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
@@ -76,13 +77,20 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     }
     
     func refresh() {
-        conferenceListDataSource.refreshData()
-        dispatch_async(dispatch_get_main_queue()) {
-            self.tableView.reloadData()
-            if !self.conferenceListDataSource.timelines.isEmpty {
-                self.refreshControl.endRefreshing()
+        conferenceListDataSource.refreshData { [weak self](result) in
+            guard let weakSelf = self else { return }
+            switch result {
+            case .Success:
+                dispatch_async(dispatch_get_main_queue()) {
+                    weakSelf.tableView.reloadData()
+                    if !weakSelf.conferenceListDataSource.timelines.isEmpty {
+                        weakSelf.refreshControl.endRefreshing()
+                    }
+                }
+            case .Failure: break
             }
         }
+
     }
     
     // MARK: - Table View Controller Delegate
