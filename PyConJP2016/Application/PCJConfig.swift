@@ -13,7 +13,7 @@ enum PCJConfig {
     
     static let hostURL = NSProcessInfo.processInfo().environment["APIBaseURL"] ?? "https://pycon.jp"
     
-    static let baseURL = PCJConfig.hostURL + "/2016/" + NSLocale.currentLanguageLocaleIdentifier() + "/"
+    static let baseURL = PCJConfig.hostURL + "/2016/" + NSLocale.currentLanguageLocaleIdentifier + "/"
     
     static let apiURL = PCJConfig.baseURL + "api/"
     

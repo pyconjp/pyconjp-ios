@@ -10,7 +10,7 @@ import UIKit
 import SafariServices
 import RealmSwift
 
-class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertType {
+class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterType, ErrorAlertType {
     
     @IBOutlet weak var baseScrollView: UIScrollView! {
         didSet {
@@ -166,33 +166,12 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     }
     
     @IBAction func onHashTagButton(sender: UIButton) {
-        
         let hashTag = (talkDetail?.talkObject.room?.hashTag ?? "pyconjp").stringByReplacingOccurrencesOfString("#", withString: "")
-        
-        if UIApplication.sharedApplication().canOpenURL(NSURL(string: "twitter://")!) {
-            let urlString = "twitter://search?query=%23" + hashTag
-            UIApplication.sharedApplication().openURL(NSURL(string: urlString)!)
-        } else {
-            let urlString = "https://mobile.twitter.com/search?q=%23" + hashTag + "&s=typd"
-            
-            let safariViewController = SFSafariViewController(URL: NSURL(string: urlString)!)
-            self.presentViewController(safariViewController, animated: true, completion: nil)
-        }
-        
+        openTwitterHashTag(hashTag, from: self)
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
-        guard let twitterName = speakersCollectionViewDataSource.speakers[indexPath.row].twitterName else { return }
-        
-        if UIApplication.sharedApplication().canOpenURL(NSURL(string: "twitter://")!) {
-            let urlString = "twitter://user?screen_name=" + twitterName
-            UIApplication.sharedApplication().openURL(NSURL(string: urlString)!)
-        } else {
-            let urlString = "https://mobile.twitter.com/" + twitterName
-            
-            let safariViewController = SFSafariViewController(URL: NSURL(string: urlString)!)
-            self.presentViewController(safariViewController, animated: true, completion: nil)
-        }
+        guard let userName = speakersCollectionViewDataSource.speakers[indexPath.row].twitterName else { return }
+        openTwitterUser(userName, from: self)
     }
 }

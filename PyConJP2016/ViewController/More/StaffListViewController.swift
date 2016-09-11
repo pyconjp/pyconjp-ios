@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-class StaffListViewController: UIViewController, ErrorAlertType {
+class StaffListViewController: UIViewController, TwitterType, ErrorAlertType {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -78,9 +78,8 @@ class StaffListViewController: UIViewController, ErrorAlertType {
     }
     
     private func twitterAction(urlString: String) {
-        guard let url = NSURL(string: urlString) else { return }
-        let safariViewController = SFSafariViewController(URL: url)
-        self.presentViewController(safariViewController, animated: true, completion: nil)
+        let userName = urlString.stringByReplacingOccurrencesOfString("https://twitter.com/", withString: "")
+        openTwitterUser(userName, from: self)
     }
     
 }
