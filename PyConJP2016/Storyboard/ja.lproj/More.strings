@@ -111,6 +111,17 @@
 
 
 /**
+ StaffListViewController
+ */
+
+/* Class = "UINavigationItem"; title = "Staff List"; ObjectID = "55D-Ni-IHA"; */
+"55D-Ni-IHA.title" = "スタッフ一覧";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "Rlc-Zv-NAx"; */
+"Rlc-Zv-NAx.title" = " ";
+
+
+/**
  MapListViewController
  */
 

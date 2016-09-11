@@ -108,6 +108,44 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
             </objects>
             <point key="canvasLocation" x="5085" y="-163"/>
         </scene>
+        <!--Staff List-->
+        <scene sceneID="gag-YV-ZCa">
+            <objects>
+                <viewController storyboardIdentifier="StaffListViewController" id="J7v-p7-NqF" customClass="StaffListViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RjN-dZ-0eh"/>
+                        <viewControllerLayoutGuide type="bottom" id="8HZ-NW-7iW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6zW-N9-RFh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sfb-Yz-Y3X">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Sfb-Yz-Y3X" secondAttribute="trailing" id="NVV-Sz-BPJ"/>
+                            <constraint firstAttribute="bottom" secondItem="Sfb-Yz-Y3X" secondAttribute="bottom" id="cjh-0E-yVZ"/>
+                            <constraint firstItem="Sfb-Yz-Y3X" firstAttribute="top" secondItem="6zW-N9-RFh" secondAttribute="top" id="hNt-39-gUl"/>
+                            <constraint firstItem="Sfb-Yz-Y3X" firstAttribute="leading" secondItem="6zW-N9-RFh" secondAttribute="leading" id="rX1-SB-KPM"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Staff List" id="55D-Ni-IHA">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Rlc-Zv-NAx"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Sfb-Yz-Y3X" id="HDm-5b-GTD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EsS-0t-vEN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5748" y="-163"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="8zV-nz-tJa">
             <objects>
