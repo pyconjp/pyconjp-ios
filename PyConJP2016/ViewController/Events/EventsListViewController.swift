@@ -38,7 +38,7 @@ class EventsListViewController: UITableViewController {
             case .TutorialsDay:
                 return [.Tutorial]
             case .ConferenseDay:
-                return [.Keynote, .InvitedLecture, .Posters, .JobsFair, .ProductsFair]
+                return [.Keynote, .InvitedLecture, .Posters, .YouthCoderWorkshop, .BeginnerSession, .CommitteeMeeting, .CommunityBooth, .JobsFair, .ProductsFair, .OpenSpace]
             case .SprintsDay:
                 return [.Sprints]
             }
@@ -52,8 +52,13 @@ class EventsListViewController: UITableViewController {
         case Keynote
         case InvitedLecture
         case Posters
+        case YouthCoderWorkshop
+        case BeginnerSession
+        case CommitteeMeeting
+        case CommunityBooth
         case JobsFair
         case ProductsFair
+        case OpenSpace
         
         case Sprints
         
@@ -63,8 +68,13 @@ class EventsListViewController: UITableViewController {
             case .Keynote: return PCJConfig.baseURL + "keynote/"
             case .InvitedLecture: return PCJConfig.baseURL + "talks/invited-speaker/"
             case .Posters: return PCJConfig.baseURL + "schedule/posters/list/"
+            case .YouthCoderWorkshop: return PCJConfig.baseURL + "events/youth-ws/"
+            case .BeginnerSession: return PCJConfig.baseURL + "events/beginners/"
+            case .CommitteeMeeting: return PCJConfig.baseURL + "events/committee-meeting/"
+            case .CommunityBooth: return PCJConfig.baseURL + "events/community-booth/"
             case .JobsFair: return PCJConfig.baseURL + "events/jobsfair/"
             case .ProductsFair: return PCJConfig.baseURL + "productfair/"
+            case .OpenSpace: return PCJConfig.baseURL + "events/open-space/"
             case .Sprints: return PCJConfig.baseURL + "events/sprint/"
             }
         }
