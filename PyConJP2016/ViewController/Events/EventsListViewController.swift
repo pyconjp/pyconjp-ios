@@ -38,9 +38,9 @@ class EventsListViewController: UITableViewController {
             case .TutorialsDay:
                 return [.Tutorial]
             case .ConferenseDay:
-                return [.Keynote, .InvitedLecture, .Posters, .JobsFear, .ProductsFear]
+                return [.Keynote, .InvitedLecture, .Posters, .JobsFair, .ProductsFair]
             case .SprintsDay:
-                return [.Sprint]
+                return [.Sprints]
             }
         }
         
@@ -52,10 +52,10 @@ class EventsListViewController: UITableViewController {
         case Keynote
         case InvitedLecture
         case Posters
-        case JobsFear
-        case ProductsFear
+        case JobsFair
+        case ProductsFair
         
-        case Sprint
+        case Sprints
         
         var url: String {
             switch self {
@@ -63,9 +63,9 @@ class EventsListViewController: UITableViewController {
             case .Keynote: return PCJConfig.baseURL + "keynote/"
             case .InvitedLecture: return PCJConfig.baseURL + "talks/invited-speaker/"
             case .Posters: return PCJConfig.baseURL + "schedule/posters/list/"
-            case .JobsFear: return PCJConfig.baseURL + "events/jobsfair/"
-            case .ProductsFear: return PCJConfig.baseURL + "productfair/"
-            case .Sprint: return PCJConfig.baseURL + "events/sprint/"
+            case .JobsFair: return PCJConfig.baseURL + "events/jobsfair/"
+            case .ProductsFair: return PCJConfig.baseURL + "productfair/"
+            case .Sprints: return PCJConfig.baseURL + "events/sprint/"
             }
         }
         

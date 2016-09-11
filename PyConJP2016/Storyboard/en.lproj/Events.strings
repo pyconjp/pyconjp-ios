@@ -46,11 +46,11 @@
 /* Class = "UILabel"; text = "Posters"; ObjectID = "p8F-rq-kYu"; */
 "p8F-rq-kYu.text" = "Posters";
 
-/* Class = "UILabel"; text = "Job's Fear"; ObjectID = "fAP-CS-O0L"; */
-"fAP-CS-O0L.text" = "Job's Fear";
+/* Class = "UILabel"; text = "Job's Fair"; ObjectID = "fAP-CS-O0L"; */
+"fAP-CS-O0L.text" = "Job's Fair";
 
-/* Class = "UILabel"; text = "Product's Fear"; ObjectID = "Ghe-7K-xXR"; */
-"Ghe-7K-xXR.text" = "Product's Fear";
+/* Class = "UILabel"; text = "Product's Fair"; ObjectID = "Ghe-7K-xXR"; */
+"Ghe-7K-xXR.text" = "Product's Fair";
 
 /* Class = "UITableViewSection"; headerTitle = "2016-09-23, 24"; ObjectID = "0Xw-xy-Cf4"; */
 "0Xw-xy-Cf4.headerTitle" = "2016-09-23, 24";
