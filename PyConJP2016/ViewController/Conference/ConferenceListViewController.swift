@@ -10,7 +10,19 @@ import UIKit
 
 class ConferenceListViewController: UIViewController, UITableViewDelegate, TalksAPIType, ErrorAlertType {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            let nib  = UINib(nibName: conferenceListDataSource.reuseIdentifier, bundle:nil)
+            tableView.registerNib(nib, forCellReuseIdentifier: conferenceListDataSource.reuseIdentifier)
+            
+            refreshControl.addTarget(self, action: #selector(ConferenceListViewController.onRefresh(_:)), forControlEvents: .ValueChanged)
+            tableView.addSubview(refreshControl)
+            
+            tableView.dataSource = conferenceListDataSource
+            tableView.rowHeight = UITableViewAutomaticDimension
+            tableView.estimatedRowHeight = TalkTableViewCell.estimatedRowHeight
+        }
+    }
     
     private(set) var viewControllerIndex: Int = 0
     private(set) var pyconJPDate: PyConJPDate?
@@ -32,22 +44,13 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ConferenceListViewController.refreshNotification(_:)), name: PCJNotificationConfig.CompleteFetchDataNotification, object: nil)
         
-        let nib  = UINib(nibName: conferenceListDataSource.reuseIdentifier, bundle:nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: conferenceListDataSource.reuseIdentifier)
-        
-        refreshControl.addTarget(self, action: #selector(ConferenceListViewController.onRefresh(_:)), forControlEvents: .ValueChanged)
-        tableView.addSubview(refreshControl)
-        
-        tableView.dataSource = conferenceListDataSource
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 134
-        
         refreshControl.beginRefreshing()
         refresh()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
@@ -74,13 +77,20 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     }
     
     func refresh() {
-        conferenceListDataSource.refreshData()
-        dispatch_async(dispatch_get_main_queue()) {
-            self.tableView.reloadData()
-            if !self.conferenceListDataSource.timelines.isEmpty {
-                self.refreshControl.endRefreshing()
+        conferenceListDataSource.refreshData { [weak self](result) in
+            guard let weakSelf = self else { return }
+            switch result {
+            case .Success:
+                dispatch_async(dispatch_get_main_queue()) {
+                    weakSelf.tableView.reloadData()
+                    if !weakSelf.conferenceListDataSource.timelines.isEmpty {
+                        weakSelf.refreshControl.endRefreshing()
+                    }
+                }
+            case .Failure: break
             }
         }
+
     }
     
     // MARK: - Table View Controller Delegate

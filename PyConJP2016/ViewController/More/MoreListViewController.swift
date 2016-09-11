@@ -29,7 +29,7 @@ class MoreListViewController: UITableViewController {
         guard let sectionType = SectionType(rawValue: indexPath.section) else { return }
         let rowType = sectionType.rows[indexPath.row]
         switch rowType {
-        case .WhatsPyConJP, .CodeOfConduct, .Summary, .License:
+        case .WhatsPyConJP, .CodeOfConduct, .Summary, .License, .StaffList:
             guard let identifier = rowType.identifier, viewController = self.storyboard?.instantiateViewControllerWithIdentifier(identifier) else { return }
             self.navigationController?.pushViewController(viewController, animated: true)
         case .Sponsor, .Repository:
@@ -56,7 +56,7 @@ class MoreListViewController: UITableViewController {
         var rows: Array<RowType> {
             switch self {
             case .About:
-                return [.WhatsPyConJP, .CodeOfConduct, .Summary, .Sponsor]
+                return [.WhatsPyConJP, .CodeOfConduct, .Summary, .Sponsor, .StaffList]
             case .Map:
                 return [.ConferenceMap, .SprintMap]
             case .Application:
@@ -71,6 +71,7 @@ class MoreListViewController: UITableViewController {
         case CodeOfConduct
         case Summary
         case Sponsor
+        case StaffList
         
         case ConferenceMap
         case SprintMap
@@ -85,6 +86,7 @@ class MoreListViewController: UITableViewController {
             case .CodeOfConduct: return "CodeOfConductViewController"
             case .Summary: return "SummaryViewController"
             case .License: return "LicenseViewController"
+            case .StaffList: return "StaffListViewController"
             default: return nil
             }
         }

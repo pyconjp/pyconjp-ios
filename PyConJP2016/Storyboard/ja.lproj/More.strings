@@ -40,6 +40,9 @@
 /* Class = "UILabel"; text = "Sponsor"; ObjectID = "yFZ-CD-jgB"; */
 "yFZ-CD-jgB.text" = "スポンサー";
 
+/* Class = "UILabel"; text = "Staff List"; ObjectID = "fe1-28-yP9"; */
+"fe1-28-yP9.text" = "スタッフ一覧";
+
 /* Class = "UITableViewSection"; headerTitle = "Venue Information"; ObjectID = "OVX-Ci-m6R"; */
 "OVX-Ci-m6R.headerTitle" = "会場情報";
 
@@ -105,6 +108,17 @@
 
 /* Class = "UILabel"; text = "Tutorial: 2016-9-20 (Tue)\nConference: 2016-9-21 (Wed) - 22 (Thu)\nDevelopment Sprints: 2016-9-23 (Fri) - 24 (Sat)\nVenue: Waseda University, Nishiwaseda Campus\nTheme: Everyone's different, all are wonderful.\nParticipants (Planned): 700\n\n\n## Participation Fee    \nPatron: 20,000 JPY\nBusiness: 15,000 JPY (Early Bird 12,000 JPY)\nPersonal: 10,000 JPY (Early Bird 8,000 JPY)\nStudent: 5,000 JPY (without After-Party 2,000 JPY)\n\nOrganizers: PyCon JP Organizing Committee PyCon JP 2016 Organizing Committee\nContact: 2016@pycon.jp\n\n\n## About the Organizers\nPyCon JP 2016 is being organized by the PyCon JP Organizing Committee.\n\nChairperson: Takanori Suzuki\nWeb site: http://www.pycon.jp/\nContact: 2016@pycon.jp\nHost: PyCon JP Committee\n\nCohost: Global Software Engineering Laboratory, Waseda University"; ObjectID = "Q3V-yD-yYQ"; */
 "Q3V-yD-yYQ.text" = "チュートリアル: 2016年9月20(火)\nカンファレンス: 2016年9月21(水)、22(木・祝)\n開発スプリント: 2016年9月23(金)、24(土)\n会場: 早稲田大学西早稲田キャンパス\nテーマ: Everyone's different, all are wonderful.\n参加者数 (予定): 700\n\n\n## 参加費\nPatron: 20,000円\nBusiness: 15,000円 (Early Bird 12,000円)\nPersonal: 10,000円 (Early Bird 8,000円)\nStudent: 5,000円 (without After-Party 2,000円)\n\n運営: PyCon JP 実行委員会 PyCon JP 2016 運営チーム\n連絡先: 2016@pycon.jp\n\n\n## 運営情報\nPyCon JP 2016 は PyCon JP 実行委員会 PyCon JP 2016 運営チームによって運営されています。\n\n座長: 鈴木 たかのり\nWebサイト: http://www.pycon.jp/\n連絡先: 2016@pycon.jp\n主催: 一般社団法人PyCon JP\n\n共催: 早稲田大学グローバルソフトウェアエンジニアリング研究所";
+
+
+/**
+ StaffListViewController
+ */
+
+/* Class = "UINavigationItem"; title = "Staff List"; ObjectID = "55D-Ni-IHA"; */
+"55D-Ni-IHA.title" = "スタッフ一覧";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "Rlc-Zv-NAx"; */
+"Rlc-Zv-NAx.title" = " ";
 
 
 /**

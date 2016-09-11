@@ -108,6 +108,44 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
             </objects>
             <point key="canvasLocation" x="5085" y="-163"/>
         </scene>
+        <!--Staff List-->
+        <scene sceneID="gag-YV-ZCa">
+            <objects>
+                <viewController storyboardIdentifier="StaffListViewController" id="J7v-p7-NqF" customClass="StaffListViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RjN-dZ-0eh"/>
+                        <viewControllerLayoutGuide type="bottom" id="8HZ-NW-7iW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6zW-N9-RFh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sfb-Yz-Y3X">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Sfb-Yz-Y3X" secondAttribute="trailing" id="NVV-Sz-BPJ"/>
+                            <constraint firstAttribute="bottom" secondItem="Sfb-Yz-Y3X" secondAttribute="bottom" id="cjh-0E-yVZ"/>
+                            <constraint firstItem="Sfb-Yz-Y3X" firstAttribute="top" secondItem="6zW-N9-RFh" secondAttribute="top" id="hNt-39-gUl"/>
+                            <constraint firstItem="Sfb-Yz-Y3X" firstAttribute="leading" secondItem="6zW-N9-RFh" secondAttribute="leading" id="rX1-SB-KPM"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Staff List" id="55D-Ni-IHA">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Rlc-Zv-NAx"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Sfb-Yz-Y3X" id="HDm-5b-GTD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EsS-0t-vEN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5748" y="-163"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="8zV-nz-tJa">
             <objects>
@@ -296,12 +334,29 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="fe1-28-yP9" style="IBUITableViewCellStyleDefault" id="V3y-JB-jXI">
+                                        <rect key="frame" x="0.0" y="211" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V3y-JB-jXI" id="zHp-cl-WV4">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Staff List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="fe1-28-yP9">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Venue Information" id="OVX-Ci-m6R">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="hoO-0c-K2E" style="IBUITableViewCellStyleDefault" id="eYg-QM-F1g">
-                                        <rect key="frame" x="0.0" y="261" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="305" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eYg-QM-F1g" id="uC8-jp-w8F">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -318,7 +373,7 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="J3n-hJ-8rS" style="IBUITableViewCellStyleDefault" id="yVv-mH-j4E">
-                                        <rect key="frame" x="0.0" y="305" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="349" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yVv-mH-j4E" id="Y67-dH-LtB">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -339,7 +394,7 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                             <tableViewSection headerTitle="About Application" footerTitle=" " id="FgW-wC-612">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="PYC-kg-am7" style="IBUITableViewCellStyleDefault" id="vk8-QR-1bo">
-                                        <rect key="frame" x="0.0" y="399" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="443" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vk8-QR-1bo" id="CaG-Ii-e66">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -356,7 +411,7 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Mrt-oQ-gLO" style="IBUITableViewCellStyleDefault" id="dvE-FL-22b">
-                                        <rect key="frame" x="0.0" y="443" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="487" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dvE-FL-22b" id="VHc-lk-mfH">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -373,7 +428,7 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="YPP-Wn-fR4" style="IBUITableViewCellStyleDefault" id="AIA-8U-9I1">
-                                        <rect key="frame" x="0.0" y="487" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="531" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AIA-8U-9I1" id="Mst-YC-bSU">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>

@@ -19,8 +19,7 @@ class ConferenceListDataSource: TimelineDataSource, RealmTalksType {
         super.init()
     }
     
-    func refreshData() {
-        timelines.removeAll()
+    func refreshData(completionHandler: (Result<Void, NSError> -> Void)) -> Void {
         loadTalkObjects { result in
             switch result {
             case .Success(let talks):
@@ -28,7 +27,9 @@ class ConferenceListDataSource: TimelineDataSource, RealmTalksType {
                 for tuple in keys.enumerate() {
                     self.timelines.append(Timeline(time: keys[tuple.index], talks: talks.filter { $0.startTime == keys[tuple.index]}))
                 }
-            case .Failure: break
+                completionHandler(.Success())
+            case .Failure(let error):
+                completionHandler(.Failure(error))
             }
         }
     }

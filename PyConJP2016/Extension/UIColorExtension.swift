@@ -57,4 +57,12 @@ extension UIColor {
         return UIColor.hexStr("#C8C8C8", alpha: 1)
     }
     
+    static func twitterColor() -> UIColor {
+        return UIColor.hexStr("#55ACEE", alpha: 1)
+    }
+    
+    static func facebookColor() -> UIColor {
+        return UIColor.hexStr("#315096", alpha: 1)
+    }
+    
 }

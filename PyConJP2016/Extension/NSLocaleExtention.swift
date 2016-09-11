@@ -10,12 +10,12 @@ import UIKit
 
 extension NSLocale {
     
-    static func currentLanguageLocaleIdentifier() -> String {
+    static var currentLanguageLocaleIdentifier: String {
         return NSBundle.mainBundle().preferredLocalizations.first!
     }
     
-    static func currentLanguageLocale() -> NSLocale {
-        return NSLocale(localeIdentifier: NSLocale.currentLanguageLocaleIdentifier())
+    static var currentLanguageLocale: NSLocale {
+        return NSLocale(localeIdentifier: NSLocale.currentLanguageLocaleIdentifier)
     }
     
 }
