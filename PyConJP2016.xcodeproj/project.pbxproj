@@ -90,6 +90,7 @@
 		DBE6120D1D6DFFBF0043F2DF /* ConferencePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE612081D6DFFBF0043F2DF /* ConferencePageViewController.swift */; };
 		DBEBDB481C8C89FC002B25B3 /* MoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEBDB471C8C89FC002B25B3 /* MoreListViewController.swift */; };
 		DBF32BB51CD48C4C004E7F3B /* AppDelegateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF32BB41CD48C4C004E7F3B /* AppDelegateExtention.swift */; };
+		DBF6D89F1D870E1300F9DAE5 /* GestureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6D89E1D870E1300F9DAE5 /* GestureType.swift */; };
 		DBFAEC551D3CF7AD00BCC880 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFAEC541D3CF7AD00BCC880 /* NSDateExtension.swift */; };
 		DBFD4F291D853108003AB5AC /* TwitterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD4F281D853108003AB5AC /* TwitterType.swift */; };
 		DBFE922E1D66136B00327F74 /* BookmarkListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE922B1D66136B00327F74 /* BookmarkListDataSource.swift */; };
@@ -232,6 +233,7 @@
 		DBE612081D6DFFBF0043F2DF /* ConferencePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferencePageViewController.swift; sourceTree = "<group>"; };
 		DBEBDB471C8C89FC002B25B3 /* MoreListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreListViewController.swift; sourceTree = "<group>"; };
 		DBF32BB41CD48C4C004E7F3B /* AppDelegateExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateExtention.swift; sourceTree = "<group>"; };
+		DBF6D89E1D870E1300F9DAE5 /* GestureType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureType.swift; sourceTree = "<group>"; };
 		DBFAEC541D3CF7AD00BCC880 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 		DBFD4F281D853108003AB5AC /* TwitterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterType.swift; sourceTree = "<group>"; };
 		DBFE922B1D66136B00327F74 /* BookmarkListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkListDataSource.swift; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 				7F5237591D6590D900C5A048 /* Realm */,
 				DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */,
 				DBFD4F281D853108003AB5AC /* TwitterType.swift */,
+				DBF6D89E1D870E1300F9DAE5 /* GestureType.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -830,6 +833,7 @@
 				7F6879031D41BE28003D5742 /* ArrayExtention.swift in Sources */,
 				DBE6120A1D6DFFBF0043F2DF /* ConferenceDateViewController.swift in Sources */,
 				DBE6120B1D6DFFBF0043F2DF /* ConferenceListViewController.swift in Sources */,
+				DBF6D89F1D870E1300F9DAE5 /* GestureType.swift in Sources */,
 				DBE612091D6DFFBF0043F2DF /* ConferenceBaseViewController.swift in Sources */,
 				DB43FCFC1D80656100BB45EC /* SpeakerCollectionViewCell.swift in Sources */,
 				DB90E0A21D83FC8500F2172F /* StaffListViewController.swift in Sources */,

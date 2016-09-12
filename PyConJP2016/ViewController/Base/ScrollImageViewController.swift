@@ -13,43 +13,69 @@ class ScrollImageViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var toolBar: UIToolbar!
     
     @IBOutlet weak var baseScrollView: UIScrollView!
-    @IBOutlet weak var imageView: UIImageView! {
-        didSet {
-//            if let size = imageView.image?.size {
-//                // imageViewのサイズがscrollView内に収まるように調整
-//                let wrate = baseScrollView.frame.width / size.width
-//                let hrate = baseScrollView.frame.height / size.height
-//                let rate = min(wrate, hrate, 1)
-//                imageView.frame.size = CGSize(width: size.width * rate, height: size.height * rate)
-//                
-//                // contentSizeを画像サイズに設定
-//                baseScrollView.contentSize = imageView.frame.size
-//                // 初期表示のためcontentInsetを更新
-//                updateScrollInset()
-//            }
-        }
-    }
-
+    @IBOutlet weak var imageView: UIImageView!
+    
     class func build() -> ScrollImageViewController {
         let scrollImageViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("ScrollImageViewController") as! ScrollImageViewController
         return scrollImageViewController
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
+    override func viewDidLoad() {
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(ScrollImageViewController.doubleTap(_:)))
+        doubleTapGesture.numberOfTapsRequired = 2
+        view.addGestureRecognizer(doubleTapGesture)
+        
+        let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(ScrollImageViewController.singleTap(_:)))
+        singleTapGesture.numberOfTapsRequired = 1
+        singleTapGesture.requireGestureRecognizerToFail(doubleTapGesture)
+        view.addGestureRecognizer(singleTapGesture)
     }
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return imageView
     }
     
-    func scrollViewDidZoom(scrollView: UIScrollView) {
-        updateScrollInset()
+    func singleTap(gesture: UITapGestureRecognizer) {
+        if toolBar.hidden {
+            toolBar.hidden = false
+            UIView.animateWithDuration(0.2, animations: {
+                self.toolBar.alpha = 1
+            })
+        } else {
+            UIView.animateWithDuration(0.2, animations: {
+                self.toolBar.alpha = 0
+                }, completion: { finished in
+                    self.toolBar.hidden = true
+            })
+        }
+        
     }
     
-    private func updateScrollInset() {
-        baseScrollView.contentInset = UIEdgeInsets(
-            top: max((baseScrollView.frame.height - imageView.frame.height)/2, 0),
-            left: max((baseScrollView.frame.width - imageView.frame.width)/2, 0),
-            bottom: 0,
-            right: 0
-        )
+    //    func scrollViewDidZoom(scrollView: UIScrollView) {
+    //        updateScrollInset()
+    //    }
+    //
+    //    private func updateScrollInset() {
+    //        baseScrollView.contentInset = UIEdgeInsets(
+    //            top: max((baseScrollView.frame.height - imageView.frame.height)/2, 0),
+    //            left: max((baseScrollView.frame.width - imageView.frame.width)/2, 0),
+    //            bottom: 0,
+    //            right: 0
+    //        )
+    //    }
+    
+    func doubleTap(gesture: UITapGestureRecognizer) {
+        UIView.animateWithDuration(0.2) {
+            self.baseScrollView.zoomScale = 1
+        }
+    }
+    
+    func scrollViewWillBeginZooming(scrollView: UIScrollView, withView view: UIView?) {
+        toolBar.hidden = true
     }
     
     @IBAction func onCloseButton(sender: UIBarButtonItem) {

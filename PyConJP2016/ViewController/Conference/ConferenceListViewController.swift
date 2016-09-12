@@ -100,10 +100,9 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        let talkObject = conferenceListDataSource.timelines[indexPath.section].talks[indexPath.row]
-//        let talkDetailViewController = TalkDetailViewController.build(talkObject.id)
-//        self.navigationController?.pushViewController(talkDetailViewController, animated: true)
-        self.presentViewController(ScrollImageViewController.build(), animated: true, completion: nil)
+        let talkObject = conferenceListDataSource.timelines[indexPath.section].talks[indexPath.row]
+        let talkDetailViewController = TalkDetailViewController.build(talkObject.id)
+        self.navigationController?.pushViewController(talkDetailViewController, animated: true)
     }
     
 }

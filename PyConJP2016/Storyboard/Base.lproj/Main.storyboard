@@ -473,6 +473,11 @@
                                     <constraint firstAttribute="trailing" secondItem="XzD-9T-h16" secondAttribute="trailing" id="oDB-gb-ZEw"/>
                                     <constraint firstItem="XzD-9T-h16" firstAttribute="leading" secondItem="KM5-Ef-bYc" secondAttribute="leading" id="pya-PU-rnW"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="decelerationRate">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="HRg-2a-QnY" id="JEn-YQ-yJO"/>
                                 </connections>
@@ -506,13 +511,6 @@
                             <constraint firstAttribute="trailing" secondItem="dJ6-fC-Q2b" secondAttribute="trailing" id="yRO-lQ-pCI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="wSz-cZ-3Xs">
-                        <barButtonItem key="backBarButtonItem" title=" " id="6GE-X5-HFn"/>
-                        <barButtonItem key="rightBarButtonItem" image="BookmarkOff" id="T3I-KY-31P"/>
-                    </navigationItem>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="prefersStatusBarHidden" value="YES"/>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="baseScrollView" destination="KM5-Ef-bYc" id="Kud-dg-3jg"/>
                         <outlet property="imageView" destination="XzD-9T-h16" id="tIg-Cp-q9b"/>
