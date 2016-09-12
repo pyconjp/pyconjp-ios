@@ -53,6 +53,7 @@
 		DB43FCFA1D80650800BB45EC /* SpeakerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB43FCF91D80650800BB45EC /* SpeakerCollectionViewCell.xib */; };
 		DB43FCFC1D80656100BB45EC /* SpeakerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43FCFB1D80656100BB45EC /* SpeakerCollectionViewCell.swift */; };
 		DB43FCFF1D806AA400BB45EC /* SpeakersCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43FCFE1D806AA400BB45EC /* SpeakersCollectionViewDataSource.swift */; };
+		DB6E8B791D86E5D700E1DB54 /* ScrollImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6E8B781D86E5D700E1DB54 /* ScrollImageViewController.swift */; };
 		DB8028AE1D81D0A300A4818A /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8028AD1D81D0A300A4818A /* AlamofireImage.framework */; };
 		DB8028AF1D81D0A300A4818A /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB8028AD1D81D0A300A4818A /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB8C1B041D5392BE00221F36 /* MapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C1B031D5392BE00221F36 /* MapListViewController.swift */; };
@@ -182,6 +183,7 @@
 		DB43FCF91D80650800BB45EC /* SpeakerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerCollectionViewCell.xib; sourceTree = "<group>"; };
 		DB43FCFB1D80656100BB45EC /* SpeakerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB43FCFE1D806AA400BB45EC /* SpeakersCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		DB6E8B781D86E5D700E1DB54 /* ScrollImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollImageViewController.swift; sourceTree = "<group>"; };
 		DB8028AD1D81D0A300A4818A /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		DB8C1B031D5392BE00221F36 /* MapListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapListViewController.swift; sourceTree = "<group>"; };
 		DB90E0A11D83FC8500F2172F /* StaffListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffListViewController.swift; sourceTree = "<group>"; };
@@ -570,6 +572,7 @@
 				DBC748171C76254000895D4A /* BaseTabBarController.swift */,
 				DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */,
 				7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */,
+				DB6E8B781D86E5D700E1DB54 /* ScrollImageViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -843,6 +846,7 @@
 				DB3A77B01D5631F200C25D8D /* Talk.swift in Sources */,
 				DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */,
 				DB23836E1D563BFE00DA5376 /* Room.swift in Sources */,
+				DB6E8B791D86E5D700E1DB54 /* ScrollImageViewController.swift in Sources */,
 				7FB4D3071D5434E2005F314E /* FloorMapImageViewController.swift in Sources */,
 				DB43FCF71D8064DC00BB45EC /* TalkTableViewCell.swift in Sources */,
 				DBA253511D71E07600FE9DC5 /* EventsListViewController.swift in Sources */,
