@@ -1,5 +1,5 @@
 //
-//  FloorMapImageViewController.swift
+//  FloorMapZoomableImageViewController.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/08/05.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class FloorMapImageViewController: DetailImageViewController {
+class FloorMapZoomableImageViewController: ZoomableImageViewController {
     
     var assetCatalogType: AssetCatalogType?
     
-    func build(assetCatalogType: AssetCatalogType) -> FloorMapImageViewController {
-        let floorMapImageViewController = UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("FloorMapImageViewController") as! FloorMapImageViewController
+    func build(assetCatalogType: AssetCatalogType) -> FloorMapZoomableImageViewController {
+        let floorMapImageViewController = UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("FloorMapZoomableImageViewController") as! FloorMapZoomableImageViewController
         floorMapImageViewController.assetCatalogType = assetCatalogType
         return floorMapImageViewController
     }
@@ -23,7 +23,7 @@ class FloorMapImageViewController: DetailImageViewController {
         
         guard let assetCatalogType = assetCatalogType else { return }
         self.navigationItem.title = assetCatalogType.navigationItemTitle
-        customImageView?.image = UIImage(named: assetCatalogType.rawValue)
+        imageView?.image = UIImage(named: assetCatalogType.rawValue)
     }
     
     override func didReceiveMemoryWarning() {

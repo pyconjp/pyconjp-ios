@@ -28,7 +28,7 @@
 		7F8443CE1D50320400A0BCBA /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8443CD1D50320400A0BCBA /* UIViewExtention.swift */; };
 		7FB4D3031D542DD2005F314E /* FloorMapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3021D542DD2005F314E /* FloorMapListViewController.swift */; };
 		7FB4D3051D5433CA005F314E /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */; };
-		7FB4D3071D5434E2005F314E /* FloorMapImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3061D5434E2005F314E /* FloorMapImageViewController.swift */; };
+		7FB4D3071D5434E2005F314E /* FloorMapZoomableImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3061D5434E2005F314E /* FloorMapZoomableImageViewController.swift */; };
 		7FB4D3091D544333005F314E /* AcknowledgmentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3081D544333005F314E /* AcknowledgmentsListViewController.swift */; };
 		7FB4D3101D546269005F314E /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D30F1D546269005F314E /* CustomImageView.swift */; };
 		7FBC34CF1D40F956002919B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34CE1D40F956002919B1 /* AppDelegate.swift */; };
@@ -53,7 +53,7 @@
 		DB43FCFA1D80650800BB45EC /* SpeakerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB43FCF91D80650800BB45EC /* SpeakerCollectionViewCell.xib */; };
 		DB43FCFC1D80656100BB45EC /* SpeakerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43FCFB1D80656100BB45EC /* SpeakerCollectionViewCell.swift */; };
 		DB43FCFF1D806AA400BB45EC /* SpeakersCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43FCFE1D806AA400BB45EC /* SpeakersCollectionViewDataSource.swift */; };
-		DB6E8B791D86E5D700E1DB54 /* ScrollImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6E8B781D86E5D700E1DB54 /* ScrollImageViewController.swift */; };
+		DB6E8B791D86E5D700E1DB54 /* ZoomableImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6E8B781D86E5D700E1DB54 /* ZoomableImageViewController.swift */; };
 		DB8028AE1D81D0A300A4818A /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8028AD1D81D0A300A4818A /* AlamofireImage.framework */; };
 		DB8028AF1D81D0A300A4818A /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB8028AD1D81D0A300A4818A /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB8C1B041D5392BE00221F36 /* MapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C1B031D5392BE00221F36 /* MapListViewController.swift */; };
@@ -155,7 +155,7 @@
 		7F8443CD1D50320400A0BCBA /* UIViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
 		7FB4D3021D542DD2005F314E /* FloorMapListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapListViewController.swift; sourceTree = "<group>"; };
 		7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
-		7FB4D3061D5434E2005F314E /* FloorMapImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapImageViewController.swift; sourceTree = "<group>"; };
+		7FB4D3061D5434E2005F314E /* FloorMapZoomableImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapZoomableImageViewController.swift; sourceTree = "<group>"; };
 		7FB4D3081D544333005F314E /* AcknowledgmentsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowledgmentsListViewController.swift; sourceTree = "<group>"; };
 		7FB4D30F1D546269005F314E /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		7FBC34CE1D40F956002919B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 		DB43FCF91D80650800BB45EC /* SpeakerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerCollectionViewCell.xib; sourceTree = "<group>"; };
 		DB43FCFB1D80656100BB45EC /* SpeakerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB43FCFE1D806AA400BB45EC /* SpeakersCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersCollectionViewDataSource.swift; sourceTree = "<group>"; };
-		DB6E8B781D86E5D700E1DB54 /* ScrollImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollImageViewController.swift; sourceTree = "<group>"; };
+		DB6E8B781D86E5D700E1DB54 /* ZoomableImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomableImageViewController.swift; sourceTree = "<group>"; };
 		DB8028AD1D81D0A300A4818A /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		DB8C1B031D5392BE00221F36 /* MapListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapListViewController.swift; sourceTree = "<group>"; };
 		DB90E0A11D83FC8500F2172F /* StaffListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffListViewController.swift; sourceTree = "<group>"; };
@@ -575,7 +575,7 @@
 				DBC748171C76254000895D4A /* BaseTabBarController.swift */,
 				DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */,
 				7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */,
-				DB6E8B781D86E5D700E1DB54 /* ScrollImageViewController.swift */,
+				DB6E8B781D86E5D700E1DB54 /* ZoomableImageViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -588,7 +588,7 @@
 				7FFB733D1C915B6D006FB375 /* MapViewController.swift */,
 				DB8C1B031D5392BE00221F36 /* MapListViewController.swift */,
 				7FB4D3021D542DD2005F314E /* FloorMapListViewController.swift */,
-				7FB4D3061D5434E2005F314E /* FloorMapImageViewController.swift */,
+				7FB4D3061D5434E2005F314E /* FloorMapZoomableImageViewController.swift */,
 				7FB4D3081D544333005F314E /* AcknowledgmentsListViewController.swift */,
 			);
 			path = More;
@@ -850,8 +850,8 @@
 				DB3A77B01D5631F200C25D8D /* Talk.swift in Sources */,
 				DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */,
 				DB23836E1D563BFE00DA5376 /* Room.swift in Sources */,
-				DB6E8B791D86E5D700E1DB54 /* ScrollImageViewController.swift in Sources */,
-				7FB4D3071D5434E2005F314E /* FloorMapImageViewController.swift in Sources */,
+				DB6E8B791D86E5D700E1DB54 /* ZoomableImageViewController.swift in Sources */,
+				7FB4D3071D5434E2005F314E /* FloorMapZoomableImageViewController.swift in Sources */,
 				DB43FCF71D8064DC00BB45EC /* TalkTableViewCell.swift in Sources */,
 				DBA253511D71E07600FE9DC5 /* EventsListViewController.swift in Sources */,
 				DBEBDB481C8C89FC002B25B3 /* MoreListViewController.swift in Sources */,

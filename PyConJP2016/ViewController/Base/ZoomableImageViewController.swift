@@ -1,5 +1,5 @@
 //
-//  ScrollImageViewController.swift
+//  ZoomableImageViewController.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 9/12/16.
@@ -8,16 +8,15 @@
 
 import UIKit
 
-class ScrollImageViewController: UIViewController, UIScrollViewDelegate {
+class ZoomableImageViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var toolBar: UIToolbar!
     
     @IBOutlet weak var baseScrollView: UIScrollView!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView?
     
-    class func build() -> ScrollImageViewController {
-        let scrollImageViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("ScrollImageViewController") as! ScrollImageViewController
-        return scrollImageViewController
+    class func build() -> ZoomableImageViewController {
+        return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("ZoomableImageViewController") as! ZoomableImageViewController
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -25,11 +24,11 @@ class ScrollImageViewController: UIViewController, UIScrollViewDelegate {
     }
     
     override func viewDidLoad() {
-        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(ScrollImageViewController.doubleTap(_:)))
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(ZoomableImageViewController.doubleTap(_:)))
         doubleTapGesture.numberOfTapsRequired = 2
         view.addGestureRecognizer(doubleTapGesture)
         
-        let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(ScrollImageViewController.singleTap(_:)))
+        let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(ZoomableImageViewController.singleTap(_:)))
         singleTapGesture.numberOfTapsRequired = 1
         singleTapGesture.requireGestureRecognizerToFail(doubleTapGesture)
         view.addGestureRecognizer(singleTapGesture)

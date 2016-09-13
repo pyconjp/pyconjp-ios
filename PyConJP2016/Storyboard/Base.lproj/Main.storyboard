@@ -448,10 +448,10 @@
             </objects>
             <point key="canvasLocation" x="1486" y="423"/>
         </scene>
-        <!--Scroll Image View Controller-->
+        <!--Zoomable Image View Controller-->
         <scene sceneID="8NT-7C-hPW">
             <objects>
-                <viewController storyboardIdentifier="ScrollImageViewController" modalTransitionStyle="crossDissolve" id="HRg-2a-QnY" customClass="ScrollImageViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ZoomableImageViewController" modalTransitionStyle="crossDissolve" id="HRg-2a-QnY" customClass="ZoomableImageViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q4U-lE-Yhv"/>
                         <viewControllerLayoutGuide type="bottom" id="5mS-w1-xf7"/>
@@ -463,7 +463,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="KM5-Ef-bYc">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Room204Map" translatesAutoresizingMaskIntoConstraints="NO" id="XzD-9T-h16">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XzD-9T-h16">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
                                 </subviews>
@@ -526,6 +526,5 @@
         <image name="BookmarkOff" width="36" height="36"/>
         <image name="Clock" width="36" height="36"/>
         <image name="Pin" width="36" height="36"/>
-        <image name="Room204Map" width="291" height="291"/>
     </resources>
 </document>
