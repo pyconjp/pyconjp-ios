@@ -23,6 +23,10 @@ class ZoomableImageViewController: UIViewController, UIScrollViewDelegate {
         return true
     }
     
+    override func preferredStatusBarUpdateAnimation() -> UIStatusBarAnimation {
+        return .Slide
+    }
+    
     override func viewDidLoad() {
         let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(ZoomableImageViewController.doubleTap(_:)))
         doubleTapGesture.numberOfTapsRequired = 2
