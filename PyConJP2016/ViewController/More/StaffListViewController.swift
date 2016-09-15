@@ -62,8 +62,8 @@ class StaffListViewController: UIViewController, TwitterType, ErrorAlertType {
                 }
             case .Failure(let error):
                 dispatch_async(dispatch_get_main_queue(), {
-                    self.refreshControl.endRefreshing()
                     self.showErrorAlartWith(error, parent: self)
+                    self.refreshControl.endRefreshing()
                 })
             }
         }

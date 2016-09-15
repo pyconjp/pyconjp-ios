@@ -27,6 +27,7 @@ class StaffListDataSource: NSObject, UITableViewDataSource, StaffListAPIType {
             guard let weakSelf = self else { return }
             switch result {
             case .Success(let staffs):
+                weakSelf.teams.removeAll()
                 let teamNames = staffs.map({ $0.team }).unique()
                 for tuple in teamNames.enumerate() {
                     weakSelf.teams.append(Team(name: teamNames[tuple.index], staffs: staffs.filter({ $0.team == teamNames[tuple.index] })))
