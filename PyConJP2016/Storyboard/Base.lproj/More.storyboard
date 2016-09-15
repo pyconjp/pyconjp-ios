@@ -1229,7 +1229,7 @@ THE SOFTWARE.</string>
                                 </connections>
                             </scrollView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xom-51-Gi3">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="MQr-xy-iCo"/>
                                 </constraints>
@@ -1246,7 +1246,7 @@ THE SOFTWARE.</string>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Xom-51-Gi3" firstAttribute="top" secondItem="LSb-QY-qaR" secondAttribute="top" id="2uz-b0-Tio"/>
+                            <constraint firstItem="Xom-51-Gi3" firstAttribute="top" secondItem="1bz-eG-anY" secondAttribute="bottom" id="4la-8O-1ax"/>
                             <constraint firstItem="g8d-9r-04f" firstAttribute="top" secondItem="LSb-QY-qaR" secondAttribute="top" id="E9h-jX-QQ6"/>
                             <constraint firstAttribute="bottom" secondItem="g8d-9r-04f" secondAttribute="bottom" id="Fvz-ba-NqS"/>
                             <constraint firstAttribute="trailing" secondItem="Xom-51-Gi3" secondAttribute="trailing" id="LkA-FB-tg8"/>

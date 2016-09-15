@@ -12,7 +12,7 @@ class ZoomableImageViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var toolBar: UIToolbar!
     
-    @IBOutlet weak var baseScrollView: UIScrollView!
+    @IBOutlet weak var baseScrollView: UIScrollView?
     @IBOutlet weak var imageView: UIImageView?
     
     class func build() -> ZoomableImageViewController {
@@ -20,11 +20,15 @@ class ZoomableImageViewController: UIViewController, UIScrollViewDelegate {
     }
     
     override func prefersStatusBarHidden() -> Bool {
-        return true
+        return toolBar.hidden
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
     
     override func preferredStatusBarUpdateAnimation() -> UIStatusBarAnimation {
-        return .Slide
+        return .Fade
     }
     
     override func viewDidLoad() {
@@ -43,42 +47,19 @@ class ZoomableImageViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func singleTap(gesture: UITapGestureRecognizer) {
-        if toolBar.hidden {
-            toolBar.hidden = false
-            UIView.animateWithDuration(0.2, animations: {
-                self.toolBar.alpha = 1
-            })
-        } else {
-            UIView.animateWithDuration(0.2, animations: {
-                self.toolBar.alpha = 0
-                }, completion: { finished in
-                    self.toolBar.hidden = true
-            })
-        }
-        
+        toolBar.hidden = !toolBar.hidden
+        self.setNeedsStatusBarAppearanceUpdate()
     }
-    
-    //    func scrollViewDidZoom(scrollView: UIScrollView) {
-    //        updateScrollInset()
-    //    }
-    //
-    //    private func updateScrollInset() {
-    //        baseScrollView.contentInset = UIEdgeInsets(
-    //            top: max((baseScrollView.frame.height - imageView.frame.height)/2, 0),
-    //            left: max((baseScrollView.frame.width - imageView.frame.width)/2, 0),
-    //            bottom: 0,
-    //            right: 0
-    //        )
-    //    }
     
     func doubleTap(gesture: UITapGestureRecognizer) {
         UIView.animateWithDuration(0.2) {
-            self.baseScrollView.zoomScale = 1
+            self.baseScrollView?.zoomScale = 1
         }
     }
     
     func scrollViewWillBeginZooming(scrollView: UIScrollView, withView view: UIView?) {
         toolBar.hidden = true
+        self.setNeedsStatusBarAppearanceUpdate()
     }
     
     @IBAction func onCloseButton(sender: UIBarButtonItem) {
