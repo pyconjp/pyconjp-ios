@@ -15,16 +15,14 @@ class ZoomableImageViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var baseScrollView: UIScrollView?
     @IBOutlet weak var imageView: UIImageView?
     
+    private var isCompletedLayoutSubviews = false
+    
     class func build() -> ZoomableImageViewController {
         return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("ZoomableImageViewController") as! ZoomableImageViewController
     }
     
     override func prefersStatusBarHidden() -> Bool {
-        return toolBar.hidden
-    }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+        return isCompletedLayoutSubviews
     }
     
     override func preferredStatusBarUpdateAnimation() -> UIStatusBarAnimation {
@@ -42,24 +40,46 @@ class ZoomableImageViewController: UIViewController, UIScrollViewDelegate {
         view.addGestureRecognizer(singleTapGesture)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        isCompletedLayoutSubviews = true
+        self.setNeedsStatusBarAppearanceUpdate()
+        toggleToolBarHiddenWithAnimation(false)
+    }
+    
+    private func toggleToolBarHiddenWithAnimation(toHidden: Bool) {
+        if toHidden {
+            UIView.animateWithDuration(0.2, animations: {
+                self.toolBar.alpha = 0
+                }, completion: { finished in
+                    self.toolBar.hidden = true
+            })
+        } else {
+            toolBar.hidden = false
+            UIView.animateWithDuration(0.2, animations: {
+                self.toolBar.alpha = 1
+            })
+        }
+    }
+    
+    // MARK: - Scroll View Delegate
+    
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return imageView
     }
     
+    func scrollViewWillBeginZooming(scrollView: UIScrollView, withView view: UIView?) {
+        toolBar.hidden = true
+    }
+    
     func singleTap(gesture: UITapGestureRecognizer) {
-        toolBar.hidden = !toolBar.hidden
-        self.setNeedsStatusBarAppearanceUpdate()
+        toggleToolBarHiddenWithAnimation(!toolBar.hidden)
     }
     
     func doubleTap(gesture: UITapGestureRecognizer) {
         UIView.animateWithDuration(0.2) {
             self.baseScrollView?.zoomScale = 1
         }
-    }
-    
-    func scrollViewWillBeginZooming(scrollView: UIScrollView, withView view: UIView?) {
-        toolBar.hidden = true
-        self.setNeedsStatusBarAppearanceUpdate()
     }
     
     @IBAction func onCloseButton(sender: UIBarButtonItem) {
