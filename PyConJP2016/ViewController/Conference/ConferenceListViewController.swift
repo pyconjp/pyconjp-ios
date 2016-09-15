@@ -31,6 +31,10 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     
     private let refreshControl = UIRefreshControl()
     
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
     class func build(index: Int, storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ConferenceListViewController {
         let conferenceListViewController = storyboard.instantiateViewControllerWithIdentifier("ConferenceListViewController") as! ConferenceListViewController
         conferenceListViewController.viewControllerIndex = index
@@ -87,7 +91,11 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
                         weakSelf.refreshControl.endRefreshing()
                     }
                 }
-            case .Failure: break
+            case .Failure(let error):
+                dispatch_async(dispatch_get_main_queue()) {
+                    weakSelf.showErrorAlartWith(error, parent: weakSelf)
+                    weakSelf.refreshControl.endRefreshing()
+                }
             }
         }
 

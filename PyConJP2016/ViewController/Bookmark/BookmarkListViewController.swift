@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookmarkListViewController: UIViewController, UITableViewDelegate {
+class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAlertType {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -21,6 +21,10 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate {
     }
     
     private let bookmarkListDataSource = BookmarkListDataSource()
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
     
     class func build() -> BookmarkListViewController {
         return UIStoryboard(name: "Bookmark", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("BookmarkListViewController") as! BookmarkListViewController
@@ -55,7 +59,10 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate {
                 dispatch_async(dispatch_get_main_queue()) {
                     weakSelf.tableView.reloadData()
                 }
-            case .Failure: break
+            case .Failure(let error):
+                dispatch_async(dispatch_get_main_queue()) {
+                    weakSelf.showErrorAlartWith(error, parent: weakSelf)
+                }
             }
         }
 

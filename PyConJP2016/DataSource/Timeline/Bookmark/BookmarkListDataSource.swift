@@ -15,15 +15,16 @@ class BookmarkListDataSource: TimelineDataSource, RealmTalksType {
     let sortProperties = [SortDescriptor(property: "date", ascending: true), SortDescriptor(property: "place", ascending: true)]
     
     func refreshData(completionHandler: (Result<Void, NSError> -> Void)) -> Void {
-        loadTalkObjects { result in
+        loadTalkObjects { [weak self](result) in
+            guard let weakSelf = self else { return }
             switch result {
             case .Success(let talks):
+                weakSelf.timelines.removeAll()
                 let keys = talks.map { $0.day }.unique()
                 for tuple in keys.enumerate() {
-                    self.timelines.append(Timeline(key: keys[tuple.index], talks: talks.filter { $0.day == keys[tuple.index]}))
+                    weakSelf.timelines.append(Timeline(key: keys[tuple.index], talks: talks.filter { $0.day == keys[tuple.index]}))
                 }
                 completionHandler(.Success())
-                break
             case .Failure(let error):
                 completionHandler(.Failure(error))
             }
