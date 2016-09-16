@@ -661,10 +661,10 @@ SOFTWARE.</string>
             </objects>
             <point key="canvasLocation" x="4417" y="1203"/>
         </scene>
-        <!--Floor Map Image View Controller-->
+        <!--View Controller-->
         <scene sceneID="6Ii-Zy-gol">
             <objects>
-                <viewController storyboardIdentifier="FloorMapImageViewController" id="I1j-01-9tu" customClass="FloorMapImageViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FloorMapDetailImageViewController" id="I1j-01-9tu" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0ux-8A-k32"/>
                         <viewControllerLayoutGuide type="bottom" id="l6n-u0-h7y"/>
@@ -689,13 +689,10 @@ SOFTWARE.</string>
                     <navigationItem key="navigationItem" id="egh-V6-iG5">
                         <barButtonItem key="backBarButtonItem" title=" " id="A4B-jt-eRz"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="customImageView" destination="ftN-Rj-gZe" id="UEr-Q5-F9N"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oy6-3q-Nqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5742" y="520"/>
+            <point key="canvasLocation" x="6392" y="520"/>
         </scene>
         <!--Floor Map List View Controller-->
         <scene sceneID="QRH-qA-cqo">
@@ -1196,6 +1193,82 @@ THE SOFTWARE.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8i3-fO-VH7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5748" y="1203"/>
+        </scene>
+        <!--Floor Map Zoomable Image View Controller-->
+        <scene sceneID="1Fp-ed-o1Y">
+            <objects>
+                <viewController storyboardIdentifier="FloorMapZoomableImageViewController" modalTransitionStyle="crossDissolve" id="hhW-At-Wtj" customClass="FloorMapZoomableImageViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1bz-eG-anY"/>
+                        <viewControllerLayoutGuide type="bottom" id="kj1-u9-9DP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LSb-QY-qaR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="2.5" translatesAutoresizingMaskIntoConstraints="NO" id="g8d-9r-04f">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nJq-te-IHj">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="nJq-te-IHj" secondAttribute="bottom" id="BOQ-5y-Six"/>
+                                    <constraint firstItem="nJq-te-IHj" firstAttribute="top" secondItem="g8d-9r-04f" secondAttribute="top" id="M6b-uL-HED"/>
+                                    <constraint firstItem="nJq-te-IHj" firstAttribute="leading" secondItem="g8d-9r-04f" secondAttribute="leading" id="i7x-d1-tNs"/>
+                                    <constraint firstAttribute="trailing" secondItem="nJq-te-IHj" secondAttribute="trailing" id="rjB-2Z-vSX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="decelerationRate">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="hhW-At-Wtj" id="VLa-2w-reU"/>
+                                </connections>
+                            </scrollView>
+                            <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.0" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xom-51-Gi3">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="MQr-xy-iCo"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="stop" id="4XM-P3-vpc">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="onCloseButton:" destination="hhW-At-Wtj" id="bcb-ny-Vbl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xom-51-Gi3" firstAttribute="top" secondItem="1bz-eG-anY" secondAttribute="bottom" id="4la-8O-1ax"/>
+                            <constraint firstItem="g8d-9r-04f" firstAttribute="top" secondItem="LSb-QY-qaR" secondAttribute="top" id="E9h-jX-QQ6"/>
+                            <constraint firstAttribute="bottom" secondItem="g8d-9r-04f" secondAttribute="bottom" id="Fvz-ba-NqS"/>
+                            <constraint firstAttribute="trailing" secondItem="Xom-51-Gi3" secondAttribute="trailing" id="LkA-FB-tg8"/>
+                            <constraint firstItem="g8d-9r-04f" firstAttribute="leading" secondItem="LSb-QY-qaR" secondAttribute="leading" id="aGQ-Ym-jPY"/>
+                            <constraint firstItem="nJq-te-IHj" firstAttribute="width" secondItem="LSb-QY-qaR" secondAttribute="width" priority="750" id="bYp-Zv-RnS"/>
+                            <constraint firstItem="Xom-51-Gi3" firstAttribute="leading" secondItem="LSb-QY-qaR" secondAttribute="leading" id="cdm-aH-EhB"/>
+                            <constraint firstItem="nJq-te-IHj" firstAttribute="height" secondItem="LSb-QY-qaR" secondAttribute="height" priority="750" id="ceR-bV-oDd"/>
+                            <constraint firstAttribute="trailing" secondItem="g8d-9r-04f" secondAttribute="trailing" id="tej-q3-FZD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pi4-gC-oTz">
+                        <barButtonItem key="backBarButtonItem" title=" " id="gLg-c0-exZ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="baseScrollView" destination="g8d-9r-04f" id="p6x-w4-zf0"/>
+                        <outlet property="imageView" destination="nJq-te-IHj" id="Kye-OF-De0"/>
+                        <outlet property="toolBar" destination="Xom-51-Gi3" id="uoi-hh-2rE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ucW-TQ-iOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5748" y="520"/>
         </scene>
     </scenes>
     <resources>

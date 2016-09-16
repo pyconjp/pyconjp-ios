@@ -26,9 +26,9 @@ class FloorMapListViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         guard let sectionType = SectionType(rawValue: indexPath.section) else { return }
-        let floorMapImageViewController = UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("FloorMapImageViewController") as! FloorMapImageViewController
-        floorMapImageViewController.assetCatalogType = sectionType.rows[indexPath.row]
-        self.navigationController?.pushViewController(floorMapImageViewController, animated: true)
+        let floorMapZoomableImageViewController = UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("FloorMapZoomableImageViewController") as! FloorMapZoomableImageViewController
+        floorMapZoomableImageViewController.assetCatalogType = sectionType.rows[indexPath.row]
+        self.presentViewController(floorMapZoomableImageViewController, animated: true, completion: nil)
     }
     
     private enum SectionType: Int {
@@ -36,7 +36,7 @@ class FloorMapListViewController: UITableViewController {
         case SecondFloor
         case ThirdFloor
         
-        var rows: Array<FloorMapImageViewController.AssetCatalogType> {
+        var rows: Array<FloorMapZoomableImageViewController.AssetCatalogType> {
             switch self {
             case .FirstFloor:
                 return [.FirstFloorView]

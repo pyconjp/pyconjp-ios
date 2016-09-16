@@ -197,7 +197,18 @@
 
 
 /**
- FloorMapImageViewController
+ FloorMapZoomableImageViewController
+ */
+
+/* Class = "UITabBarItem"; title = ""; ObjectID = "pi4-gC-oTz"; */
+"pi4-gC-oTz.title" = "";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "gLg-c0-exZ"; */
+"gLg-c0-exZ.title" = " ";
+
+
+/**
+ FloorMapDetailImageViewController
  */
 
 /* Class = "UIBarButtonItem"; title = " "; ObjectID = "A4B-jt-eRz"; */
