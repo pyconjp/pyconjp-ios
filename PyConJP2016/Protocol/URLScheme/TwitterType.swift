@@ -1,5 +1,5 @@
 //
-//  TwitterType.swift
+//  TwitterURLSchemeType.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 9/11/16.
@@ -9,14 +9,14 @@
 import UIKit
 import SafariServices
 
-protocol TwitterType {
+protocol TwitterURLSchemeType {
     
     func openTwitterUser(userName: String, from viewController: UIViewController) -> Void
     func openTwitterHashTag(hashTag: String, from viewController: UIViewController) -> Void
 
 }
 
-extension TwitterType {
+extension TwitterURLSchemeType {
     
     private var urlScheme: NSURL {
         return NSURL(string: "twitter://")!
@@ -24,7 +24,7 @@ extension TwitterType {
     
 }
 
-extension TwitterType {
+extension TwitterURLSchemeType {
     
     func openTwitterUser(userName: String, from viewController: UIViewController) -> Void {
         if UIApplication.sharedApplication().canOpenURL(urlScheme) {
