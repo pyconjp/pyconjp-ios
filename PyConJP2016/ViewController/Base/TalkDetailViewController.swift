@@ -10,7 +10,7 @@ import UIKit
 import SafariServices
 import RealmSwift
 
-class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterType, ErrorAlertType {
+class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLSchemeType, ErrorAlertType {
     
     @IBOutlet weak var baseScrollView: UIScrollView! {
         didSet {

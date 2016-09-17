@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-class StaffListViewController: UIViewController, TwitterType, ErrorAlertType {
+class StaffListViewController: UIViewController, TwitterURLSchemeType, ErrorAlertType {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {

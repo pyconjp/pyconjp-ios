@@ -21,4 +21,6 @@ enum PCJConfig {
     
     static let authPassword = NSProcessInfo.processInfo().environment["APIAuthPassword"] ?? ""
     
+    static let mailAddress = "symposion@pycon.jp"
+    
 }

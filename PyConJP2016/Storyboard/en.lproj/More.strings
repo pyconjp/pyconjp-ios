@@ -64,6 +64,9 @@
 /* Class = "UILabel"; text = "The MIT License (MIT)"; ObjectID = "YPP-Wn-fR4"; */
 "YPP-Wn-fR4.text" = "The MIT License (MIT)";
 
+/* Class = "UILabel"; text = "Feedback (Open Mail)"; ObjectID = "TPw-fl-DhO"; */
+"TPw-fl-DhO.text" = "Feedback (Open Mail)";
+
 /* Class = "UITableViewSection"; footerTitle = " "; ObjectID = "FgW-wC-612"; */
 "FgW-wC-612.footerTitle" = " ";
 

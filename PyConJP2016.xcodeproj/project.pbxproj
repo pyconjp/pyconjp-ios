@@ -91,8 +91,9 @@
 		DBEBDB481C8C89FC002B25B3 /* MoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEBDB471C8C89FC002B25B3 /* MoreListViewController.swift */; };
 		DBF32BB51CD48C4C004E7F3B /* AppDelegateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF32BB41CD48C4C004E7F3B /* AppDelegateExtention.swift */; };
 		DBF6D89F1D870E1300F9DAE5 /* GestureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6D89E1D870E1300F9DAE5 /* GestureType.swift */; };
+		DBF78FCD1D8CF52B00EA66E4 /* TwitterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF78FCC1D8CF52B00EA66E4 /* TwitterType.swift */; };
+		DBF78FCF1D8CF56600EA66E4 /* MailURLSchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF78FCE1D8CF56600EA66E4 /* MailURLSchemeType.swift */; };
 		DBFAEC551D3CF7AD00BCC880 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFAEC541D3CF7AD00BCC880 /* NSDateExtension.swift */; };
-		DBFD4F291D853108003AB5AC /* TwitterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD4F281D853108003AB5AC /* TwitterType.swift */; };
 		DBFE922E1D66136B00327F74 /* BookmarkListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE922B1D66136B00327F74 /* BookmarkListDataSource.swift */; };
 		DBFE92311D6613C300327F74 /* TimelineDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE92301D6613C300327F74 /* TimelineDataSource.swift */; };
 /* End PBXBuildFile section */
@@ -234,8 +235,9 @@
 		DBEBDB471C8C89FC002B25B3 /* MoreListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreListViewController.swift; sourceTree = "<group>"; };
 		DBF32BB41CD48C4C004E7F3B /* AppDelegateExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateExtention.swift; sourceTree = "<group>"; };
 		DBF6D89E1D870E1300F9DAE5 /* GestureType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureType.swift; sourceTree = "<group>"; };
+		DBF78FCC1D8CF52B00EA66E4 /* TwitterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterType.swift; sourceTree = "<group>"; };
+		DBF78FCE1D8CF56600EA66E4 /* MailURLSchemeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailURLSchemeType.swift; sourceTree = "<group>"; };
 		DBFAEC541D3CF7AD00BCC880 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
-		DBFD4F281D853108003AB5AC /* TwitterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterType.swift; sourceTree = "<group>"; };
 		DBFE922B1D66136B00327F74 /* BookmarkListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkListDataSource.swift; sourceTree = "<group>"; };
 		DBFE92301D6613C300327F74 /* TimelineDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -423,8 +425,8 @@
 			children = (
 				7F23AD401D656B8E0066771B /* Alamofire */,
 				7F5237591D6590D900C5A048 /* Realm */,
+				DBF78FCB1D8CF52B00EA66E4 /* URLScheme */,
 				DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */,
-				DBFD4F281D853108003AB5AC /* TwitterType.swift */,
 				DBF6D89E1D870E1300F9DAE5 /* GestureType.swift */,
 			);
 			path = Protocol;
@@ -629,6 +631,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		DBF78FCB1D8CF52B00EA66E4 /* URLScheme */ = {
+			isa = PBXGroup;
+			children = (
+				DBF78FCC1D8CF52B00EA66E4 /* TwitterType.swift */,
+				DBF78FCE1D8CF56600EA66E4 /* MailURLSchemeType.swift */,
+			);
+			path = URLScheme;
+			sourceTree = "<group>";
+		};
 		DBFE92291D66136B00327F74 /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
@@ -829,6 +840,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBE6120D1D6DFFBF0043F2DF /* ConferencePageViewController.swift in Sources */,
+				DBF78FCD1D8CF52B00EA66E4 /* TwitterType.swift in Sources */,
 				DB0206891D4FB8430067C94B /* ReceiveLocalNotificationManager.swift in Sources */,
 				7F6879031D41BE28003D5742 /* ArrayExtention.swift in Sources */,
 				DBE6120A1D6DFFBF0043F2DF /* ConferenceDateViewController.swift in Sources */,
@@ -858,8 +870,8 @@
 				7F1CBE9E1D52CAFA007C058D /* Level.swift in Sources */,
 				DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */,
 				7FBC34CF1D40F956002919B1 /* AppDelegate.swift in Sources */,
+				DBF78FCF1D8CF56600EA66E4 /* MailURLSchemeType.swift in Sources */,
 				7F1CBEA11D52CAFA007C058D /* TalkDetail.swift in Sources */,
-				DBFD4F291D853108003AB5AC /* TwitterType.swift in Sources */,
 				7F8443CE1D50320400A0BCBA /* UIViewExtention.swift in Sources */,
 				DB90E0A51D84022500F2172F /* StaffListDataSource.swift in Sources */,
 				7F1CBEA21D52CAFA007C058D /* Timeline.swift in Sources */,

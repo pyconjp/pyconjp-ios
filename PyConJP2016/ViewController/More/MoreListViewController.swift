@@ -21,6 +21,7 @@ class MoreListViewController: UITableViewController {
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
+        
     }
     
     // MARK: - Table View Controller Delegate
@@ -34,7 +35,7 @@ class MoreListViewController: UITableViewController {
             self.navigationController?.pushViewController(viewController, animated: true)
         case .Sponsor, .Repository:
             guard let url = rowType.url else { return }
-            let safariViewController = SFSafariViewController(URL: NSURL(string: url)!)
+            let safariViewController = SFSafariViewController(URL: url)
             self.presentViewController(safariViewController, animated: true, completion: nil)
         case .ConferenceMap:
             let mapListViewController = MapListViewController.build()
@@ -45,7 +46,11 @@ class MoreListViewController: UITableViewController {
         case .Library:
             let acknowledgmentsListViewController = AcknowledgmentsListViewController.build()
             self.navigationController?.pushViewController(acknowledgmentsListViewController, animated: true)
-        }        
+        case .Feedback:
+            guard let urlSheme = rowType.urlSheme else { return }
+            UIApplication.sharedApplication().openURL(urlSheme)
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
     }
     
     private enum SectionType: Int {
@@ -60,13 +65,13 @@ class MoreListViewController: UITableViewController {
             case .Map:
                 return [.ConferenceMap, .SprintMap]
             case .Application:
-                return [.Repository, .Library, .License]
+                return [.Repository, .Library, .License, .Feedback]
             }
         }
     
     }
     
-    private enum RowType {
+    private enum RowType: MailURLSchemeType {
         case WhatsPyConJP
         case CodeOfConduct
         case Summary
@@ -79,6 +84,7 @@ class MoreListViewController: UITableViewController {
         case Repository
         case Library
         case License
+        case Feedback
         
         var identifier: String? {
             switch self {
@@ -91,10 +97,17 @@ class MoreListViewController: UITableViewController {
             }
         }
         
-        var url: String? {
+        var url: NSURL? {
             switch self {
-            case .Sponsor: return PCJConfig.baseURL + "sponsors/"
-            case .Repository: return "https://github.com/pyconjp/pyconjp-ios"
+            case .Sponsor: return NSURL(string: PCJConfig.baseURL + "sponsors/")
+            case .Repository: return NSURL(string: "https://github.com/pyconjp/pyconjp-ios")
+            default: return nil
+            }
+        }
+        
+        var urlSheme: NSURL? {
+            switch self {
+            case .Feedback: return mailURLScheme(PCJConfig.mailAddress, subject: "Feedback for PyCon JP 2016 App", body: "iOS version:\nDevice Model:\nReply-to:\n\nFeedback:")
             default: return nil
             }
         }
