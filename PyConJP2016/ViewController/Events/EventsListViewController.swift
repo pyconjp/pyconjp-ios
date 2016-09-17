@@ -38,7 +38,7 @@ class EventsListViewController: UITableViewController {
             case .TutorialsDay:
                 return [.Tutorial]
             case .ConferenseDay:
-                return [.Keynote, .InvitedLecture, .Posters, .YouthCoderWorkshop, .BeginnerSession, .CommitteeMeeting, .CommunityBooth, .JobsFair, .ProductsFair, .OpenSpace]
+                return [.Keynote, .InvitedLecture, .Posters, .LightningTalks, .YouthCoderWorkshop, .BeginnerSession, .CommitteeMeeting, .CommunityBooth, .JobFair, .ProductFair, .OpenSpace]
             case .SprintsDay:
                 return [.Sprints]
             }
@@ -52,12 +52,13 @@ class EventsListViewController: UITableViewController {
         case Keynote
         case InvitedLecture
         case Posters
+        case LightningTalks
         case YouthCoderWorkshop
         case BeginnerSession
         case CommitteeMeeting
         case CommunityBooth
-        case JobsFair
-        case ProductsFair
+        case JobFair
+        case ProductFair
         case OpenSpace
         
         case Sprints
@@ -68,12 +69,13 @@ class EventsListViewController: UITableViewController {
             case .Keynote: return PCJConfig.baseURL + "keynote/"
             case .InvitedLecture: return PCJConfig.baseURL + "talks/invited-speaker/"
             case .Posters: return PCJConfig.baseURL + "schedule/posters/list/"
+            case .LightningTalks: return PCJConfig.baseURL + "events/lightning-talks/"
             case .YouthCoderWorkshop: return PCJConfig.baseURL + "events/youth-ws/"
             case .BeginnerSession: return PCJConfig.baseURL + "events/beginners/"
             case .CommitteeMeeting: return PCJConfig.baseURL + "events/committee-meeting/"
             case .CommunityBooth: return PCJConfig.baseURL + "events/community-booth/"
-            case .JobsFair: return PCJConfig.baseURL + "events/jobsfair/"
-            case .ProductsFair: return PCJConfig.baseURL + "productfair/"
+            case .JobFair: return PCJConfig.baseURL + "events/jobsfair/"
+            case .ProductFair: return PCJConfig.baseURL + "productfair/"
             case .OpenSpace: return PCJConfig.baseURL + "events/open-space/"
             case .Sprints: return PCJConfig.baseURL + "events/sprint/"
             }

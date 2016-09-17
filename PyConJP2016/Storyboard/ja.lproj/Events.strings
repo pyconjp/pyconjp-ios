@@ -46,6 +46,9 @@
 /* Class = "UILabel"; text = "Posters"; ObjectID = "p8F-rq-kYu"; */
 "p8F-rq-kYu.text" = "ポスター";
 
+/* Class = "UILabel"; text = "Lightning Talks (LT)"; ObjectID = "Kbz-tb-yub"; */
+"Kbz-tb-yub.text" = "ライトニングトーク (LT)";
+
 /* Class = "UILabel"; text = "Youth Coder Workshop"; ObjectID = "E2E-7G-ZvB"; */
 "E2E-7G-ZvB.text" = "Youth Coder Workshop";
 
@@ -58,10 +61,10 @@
 /* Class = "UILabel"; text = "Community Booth"; ObjectID = "2yN-XB-dji"; */
 "2yN-XB-dji.text" = "コミュニティブース";
 
-/* Class = "UILabel"; text = "Job's Fair"; ObjectID = "fAP-CS-O0L"; */
+/* Class = "UILabel"; text = "Job Fair"; ObjectID = "fAP-CS-O0L"; */
 "fAP-CS-O0L.text" = "ジョブフェア";
 
-/* Class = "UILabel"; text = "Product's Fair"; ObjectID = "Ghe-7K-xXR"; */
+/* Class = "UILabel"; text = "Product Fair"; ObjectID = "Ghe-7K-xXR"; */
 "Ghe-7K-xXR.text" = "プロダクトフェア";
 
 /* Class = "UILabel"; text = "Open Space"; ObjectID = "R88-P3-OMK"; */
