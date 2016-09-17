@@ -167,11 +167,11 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLS
     
     @IBAction func onHashTagButton(sender: UIButton) {
         let hashTag = (talkDetail?.talkObject.room?.hashTag ?? "pyconjp").stringByReplacingOccurrencesOfString("#", withString: "")
-        openTwitterHashTag(hashTag, from: self)
+        openTwitterHashTag(hashTag, from: self, alertBefore: true)
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         guard let userName = speakersCollectionViewDataSource.speakers[indexPath.row].twitterName else { return }
-        openTwitterUser(userName, from: self)
+        openTwitterUser(userName, from: self, alertBefore: true)
     }
 }
