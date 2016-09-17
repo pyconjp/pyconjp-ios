@@ -33,7 +33,7 @@ class MoreListViewController: UITableViewController {
         case .WhatsPyConJP, .CodeOfConduct, .Summary, .License, .StaffList:
             guard let identifier = rowType.identifier, viewController = self.storyboard?.instantiateViewControllerWithIdentifier(identifier) else { return }
             self.navigationController?.pushViewController(viewController, animated: true)
-        case .Sponsor, .Questionnaire, .Repository:
+        case .ParticipantsInformation, .Sponsor, .Questionnaire, .Repository:
             guard let url = rowType.url else { return }
             let safariViewController = SFSafariViewController(URL: url)
             self.presentViewController(safariViewController, animated: true, completion: nil)
@@ -61,7 +61,7 @@ class MoreListViewController: UITableViewController {
         var rows: Array<RowType> {
             switch self {
             case .About:
-                return [.WhatsPyConJP, .CodeOfConduct, .Summary, .Sponsor, .StaffList, .Questionnaire]
+                return [.ParticipantsInformation, .WhatsPyConJP, .CodeOfConduct, .Summary, .Sponsor, .StaffList, .Questionnaire]
             case .Map:
                 return [.ConferenceMap, .SprintMap]
             case .Application:
@@ -72,6 +72,7 @@ class MoreListViewController: UITableViewController {
     }
     
     private enum RowType: MailURLSchemeType {
+        case ParticipantsInformation
         case WhatsPyConJP
         case CodeOfConduct
         case Summary
@@ -100,6 +101,7 @@ class MoreListViewController: UITableViewController {
         
         var url: NSURL? {
             switch self {
+            case .ParticipantsInformation: return NSURL(string: PCJConfig.baseURL + "participants/")
             case .Sponsor: return NSURL(string: PCJConfig.baseURL + "sponsors/")
             case .Questionnaire: return NSURL(string: "https://docs.google.com/forms/d/e/1FAIpQLSefOgaVN8_cwUAcW-NmTaBNoNG8K47vursedtxkE_cbv_E37A/viewform")
             case .Repository: return NSURL(string: "https://github.com/pyconjp/pyconjp-ios")

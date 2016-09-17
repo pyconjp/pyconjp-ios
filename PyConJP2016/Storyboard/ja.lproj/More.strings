@@ -28,6 +28,9 @@
 /* Class = "UIBarButtonItem"; title = " "; ObjectID = "atp-H1-RH7"; */
 "atp-H1-RH7.title" = " ";
 
+/* Class = "UILabel"; text = "Participants Information"; ObjectID = "AUO-Ab-Rn1"; */
+"AUO-Ab-Rn1.text" = "参加の手引き";
+
 /* Class = "UILabel"; text = "What is PyCon JP?"; ObjectID = "uwO-ra-bUh"; */
 "uwO-ra-bUh.text" = "PyCon JPってなに？";
 

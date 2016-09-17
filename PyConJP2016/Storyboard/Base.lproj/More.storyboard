@@ -266,8 +266,25 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                         <sections>
                             <tableViewSection id="wH9-cs-78M">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="uwO-ra-bUh" style="IBUITableViewCellStyleDefault" id="E0P-zY-b2c">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="AUO-Ab-Rn1" style="IBUITableViewCellStyleDefault" id="G0q-UW-QYs">
                                         <rect key="frame" x="0.0" y="35" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G0q-UW-QYs" id="6Ug-pY-guO">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Participants Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="AUO-Ab-Rn1">
+                                                    <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="uwO-ra-bUh" style="IBUITableViewCellStyleDefault" id="E0P-zY-b2c">
+                                        <rect key="frame" x="0.0" y="79" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E0P-zY-b2c" id="Bq4-f8-IHa">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -284,7 +301,7 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="mBD-f5-xKD" style="IBUITableViewCellStyleDefault" id="1No-Pm-SHq">
-                                        <rect key="frame" x="0.0" y="79" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="123" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1No-Pm-SHq" id="h8E-y6-u9P">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -301,7 +318,7 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="8dF-VI-mA2" style="IBUITableViewCellStyleDefault" id="NuU-TV-B77">
-                                        <rect key="frame" x="0.0" y="123" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="167" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NuU-TV-B77" id="ynu-m7-Znz">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -318,7 +335,7 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="yFZ-CD-jgB" style="IBUITableViewCellStyleDefault" id="LqK-WJ-oaw">
-                                        <rect key="frame" x="0.0" y="167" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="211" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LqK-WJ-oaw" id="vWy-b1-GTK">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -335,7 +352,7 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="fe1-28-yP9" style="IBUITableViewCellStyleDefault" id="V3y-JB-jXI">
-                                        <rect key="frame" x="0.0" y="211" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="255" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V3y-JB-jXI" id="zHp-cl-WV4">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -352,7 +369,7 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Ksi-rC-XC6" style="IBUITableViewCellStyleDefault" id="77F-c4-r88">
-                                        <rect key="frame" x="0.0" y="255" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="299" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="77F-c4-r88" id="hip-Vk-jmJ">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -373,7 +390,7 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                             <tableViewSection headerTitle="Venue Information" id="OVX-Ci-m6R">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="hoO-0c-K2E" style="IBUITableViewCellStyleDefault" id="eYg-QM-F1g">
-                                        <rect key="frame" x="0.0" y="349" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="393" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eYg-QM-F1g" id="uC8-jp-w8F">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -390,7 +407,7 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="J3n-hJ-8rS" style="IBUITableViewCellStyleDefault" id="yVv-mH-j4E">
-                                        <rect key="frame" x="0.0" y="393" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="437" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yVv-mH-j4E" id="Y67-dH-LtB">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -411,7 +428,7 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                             <tableViewSection headerTitle="About Application" footerTitle=" " id="FgW-wC-612">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="PYC-kg-am7" style="IBUITableViewCellStyleDefault" id="vk8-QR-1bo">
-                                        <rect key="frame" x="0.0" y="487" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="531" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vk8-QR-1bo" id="CaG-Ii-e66">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -428,7 +445,7 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Mrt-oQ-gLO" style="IBUITableViewCellStyleDefault" id="dvE-FL-22b">
-                                        <rect key="frame" x="0.0" y="531" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="575" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dvE-FL-22b" id="VHc-lk-mfH">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -445,7 +462,7 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="YPP-Wn-fR4" style="IBUITableViewCellStyleDefault" id="AIA-8U-9I1">
-                                        <rect key="frame" x="0.0" y="575" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="619" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AIA-8U-9I1" id="Mst-YC-bSU">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
@@ -462,7 +479,7 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="TPw-fl-DhO" style="IBUITableViewCellStyleDefault" id="bf0-aB-xvq">
-                                        <rect key="frame" x="0.0" y="619" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="663" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bf0-aB-xvq" id="M0R-SB-CL4">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
