@@ -46,6 +46,9 @@
 /* Class = "UILabel"; text = "Posters"; ObjectID = "p8F-rq-kYu"; */
 "p8F-rq-kYu.text" = "Posters";
 
+/* Class = "UILabel"; text = "Lightning Talks (LT)"; ObjectID = "Kbz-tb-yub"; */
+"Kbz-tb-yub.text" = "Lightning Talks (LT)";
+
 /* Class = "UILabel"; text = "Youth Coder Workshop"; ObjectID = "E2E-7G-ZvB"; */
 "E2E-7G-ZvB.text" = "Youth Coder Workshop";
 
@@ -58,11 +61,11 @@
 /* Class = "UILabel"; text = "Community Booth"; ObjectID = "2yN-XB-dji"; */
 "2yN-XB-dji.text" = "Community Booth";
 
-/* Class = "UILabel"; text = "Job's Fair"; ObjectID = "fAP-CS-O0L"; */
-"fAP-CS-O0L.text" = "Job's Fair";
+/* Class = "UILabel"; text = "Job Fair"; ObjectID = "fAP-CS-O0L"; */
+"fAP-CS-O0L.text" = "Job Fair";
 
-/* Class = "UILabel"; text = "Product's Fair"; ObjectID = "Ghe-7K-xXR"; */
-"Ghe-7K-xXR.text" = "Product's Fair";
+/* Class = "UILabel"; text = "Product Fair"; ObjectID = "Ghe-7K-xXR"; */
+"Ghe-7K-xXR.text" = "Product Fair";
 
 /* Class = "UILabel"; text = "Open Space"; ObjectID = "R88-P3-OMK"; */
 "R88-P3-OMK.text" = "Open Space";
