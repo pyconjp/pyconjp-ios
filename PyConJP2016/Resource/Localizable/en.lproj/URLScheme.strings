@@ -10,6 +10,6 @@
  TwitterURLSchemeType
  */
 
-"twitterAlertTitle" = "Launch Twitter App";
+"TwitterAlertTitle" = "Launch Twitter App";
 
-"twitterAlertMessage" = "Try to open %@";
+"TwitterAlertMessage" = "Try to open %@";
