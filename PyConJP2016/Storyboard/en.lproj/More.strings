@@ -43,6 +43,9 @@
 /* Class = "UILabel"; text = "Staff List"; ObjectID = "fe1-28-yP9"; */
 "fe1-28-yP9.text" = "Staff List";
 
+/* Class = "UILabel"; text = "Questionnaire"; ObjectID = "Ksi-rC-XC6"; */
+"Ksi-rC-XC6.text" = "Questionnaire";
+
 /* Class = "UITableViewSection"; headerTitle = "Venue Information"; ObjectID = "OVX-Ci-m6R"; */
 "OVX-Ci-m6R.headerTitle" = "Venue Information";
 
