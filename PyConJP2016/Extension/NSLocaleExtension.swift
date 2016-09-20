@@ -1,5 +1,5 @@
 //
-//  NSLocaleExtention.swift
+//  NSLocaleExtension.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 8/16/2016.
