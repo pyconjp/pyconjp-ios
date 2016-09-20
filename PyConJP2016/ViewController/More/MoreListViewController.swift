@@ -68,7 +68,7 @@ class MoreListViewController: UITableViewController {
                 return [.Repository, .Library, .License, .Feedback]
             }
         }
-    
+        
     }
     
     private enum RowType: MailURLSchemeType {
@@ -111,7 +111,9 @@ class MoreListViewController: UITableViewController {
         
         var urlSheme: NSURL? {
             switch self {
-            case .Feedback: return mailURLScheme(PCJConfig.mailAddress, subject: "Feedback for PyCon JP 2016 App", body: "iOS version:\nDevice Model:\nReply-to:\n\nFeedback:")
+            case .Feedback: return mailURLScheme(PCJConfig.mailAddress,
+                                                 subject: "Feedback for PyCon JP 2016 App",
+                                                 body: String(format: "iOS version: %@\nDevice Model: %@\nReply-to:\n\nFeedback:", arguments: [UIDevice.currentDevice().systemVersion, UIDevice.currentDevice().modelType]))
             default: return nil
             }
         }

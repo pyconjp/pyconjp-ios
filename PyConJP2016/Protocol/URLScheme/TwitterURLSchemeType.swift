@@ -22,10 +22,6 @@ extension TwitterURLSchemeType {
         return NSURL(string: "twitter://")!
     }
     
-}
-
-extension TwitterURLSchemeType {
-    
     private func openTwitterAppWithAlert(targetName: String, url: NSURL, from viewController: UIViewController) {
         let alertController = UIAlertController(title: NSLocalizedString("TwitterAlertTitle", tableName: "URLScheme", comment: ""),
                                                 message: String(format: NSLocalizedString("TwitterAlertMessage", tableName: "URLScheme", comment: ""), arguments: [targetName]),
