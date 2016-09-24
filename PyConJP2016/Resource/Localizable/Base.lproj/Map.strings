@@ -10,10 +10,10 @@
  MapViewController
  */
 
-"nameWaseda" = "Waseda University, Nishi-Waseda Campus";
+"NameWaseda" = "Waseda University, Nishi-Waseda Campus";
 
-"addressWaseda" = "Waseda University, Nishi-Waseda Campus, Building 63\n3-4-1, Okubo, Shinjuku, Tokyo\n169-0072, Japan";
+"AddressWaseda" = "Waseda University, Nishi-Waseda Campus, Building 63\n3-4-1, Okubo, Shinjuku, Tokyo\n169-0072, Japan";
 
-"nameMicrosoft" = "Microsoft Japan Co., Ltd.";
+"NameMicrosoft" = "Microsoft Japan Co., Ltd.";
 
-"addressMicrosoft" = "Microsoft Japan Co., Ltd.\nShinagawa Grand Central Tower, 2-16-3 Konan, Minato, Tokyo\n108-0075, Japan";
+"AddressMicrosoft" = "Microsoft Japan Co., Ltd.\nShinagawa Grand Central Tower, 2-16-3 Konan, Minato, Tokyo\n108-0075, Japan";

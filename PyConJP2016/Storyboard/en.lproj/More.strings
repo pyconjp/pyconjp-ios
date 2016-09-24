@@ -28,6 +28,9 @@
 /* Class = "UIBarButtonItem"; title = " "; ObjectID = "atp-H1-RH7"; */
 "atp-H1-RH7.title" = " ";
 
+/* Class = "UILabel"; text = "Participants Information"; ObjectID = "AUO-Ab-Rn1"; */
+"AUO-Ab-Rn1.text" = "Participants Information";
+
 /* Class = "UILabel"; text = "What is PyCon JP?"; ObjectID = "uwO-ra-bUh"; */
 "uwO-ra-bUh.text" = "What is PyCon JP?";
 
@@ -39,6 +42,12 @@
 
 /* Class = "UILabel"; text = "Sponsor"; ObjectID = "yFZ-CD-jgB"; */
 "yFZ-CD-jgB.text" = "Sponsor";
+
+/* Class = "UILabel"; text = "Staff List"; ObjectID = "fe1-28-yP9"; */
+"fe1-28-yP9.text" = "Staff List";
+
+/* Class = "UILabel"; text = "Survey"; ObjectID = "Ksi-rC-XC6"; */
+"Ksi-rC-XC6.text" = "Survey";
 
 /* Class = "UITableViewSection"; headerTitle = "Venue Information"; ObjectID = "OVX-Ci-m6R"; */
 "OVX-Ci-m6R.headerTitle" = "Venue Information";
@@ -60,6 +69,9 @@
 
 /* Class = "UILabel"; text = "The MIT License (MIT)"; ObjectID = "YPP-Wn-fR4"; */
 "YPP-Wn-fR4.text" = "The MIT License (MIT)";
+
+/* Class = "UILabel"; text = "Feedback (Open Mail)"; ObjectID = "TPw-fl-DhO"; */
+"TPw-fl-DhO.text" = "Feedback (Open Mail)";
 
 /* Class = "UITableViewSection"; footerTitle = " "; ObjectID = "FgW-wC-612"; */
 "FgW-wC-612.footerTitle" = " ";
@@ -105,6 +117,17 @@
 
 /* Class = "UILabel"; text = "Tutorial: 2016-9-20 (Tue)\nConference: 2016-9-21 (Wed) - 22 (Thu)\nDevelopment Sprints: 2016-9-23 (Fri) - 24 (Sat)\nVenue: Waseda University, Nishiwaseda Campus\nTheme: Everyone's different, all are wonderful.\nParticipants (Planned): 700\n\n\n## Participation Fee    \nPatron: 20,000 JPY\nBusiness: 15,000 JPY (Early Bird 12,000 JPY)\nPersonal: 10,000 JPY (Early Bird 8,000 JPY)\nStudent: 5,000 JPY (without After-Party 2,000 JPY)\n\nOrganizers: PyCon JP Organizing Committee PyCon JP 2016 Organizing Committee\nContact: 2016@pycon.jp\n\n\n## About the Organizers\nPyCon JP 2016 is being organized by the PyCon JP Organizing Committee.\n\nChairperson: Takanori Suzuki\nWeb site: http://www.pycon.jp/\nContact: 2016@pycon.jp\nHost: PyCon JP Committee\n\nCohost: Global Software Engineering Laboratory, Waseda University"; ObjectID = "Q3V-yD-yYQ"; */
 "Q3V-yD-yYQ.text" = "Tutorial: 2016-9-20 (Tue)\nConference: 2016-9-21 (Wed) - 22 (Thu)\nDevelopment Sprints: 2016-9-23 (Fri) - 24 (Sat)\nVenue: Waseda University, Nishiwaseda Campus\nTheme: Everyone's different, all are wonderful.\nParticipants (Planned): 700\n\n\n## Participation Fee    \nPatron: 20,000 JPY\nBusiness: 15,000 JPY (Early Bird 12,000 JPY)\nPersonal: 10,000 JPY (Early Bird 8,000 JPY)\nStudent: 5,000 JPY (without After-Party 2,000 JPY)\n\nOrganizers: PyCon JP Organizing Committee PyCon JP 2016 Organizing Committee\nContact: 2016@pycon.jp\n\n\n## About the Organizers\nPyCon JP 2016 is being organized by the PyCon JP Organizing Committee.\n\nChairperson: Takanori Suzuki\nWeb site: http://www.pycon.jp/\nContact: 2016@pycon.jp\nHost: PyCon JP Committee\n\nCohost: Global Software Engineering Laboratory, Waseda University";
+
+
+/**
+ StaffListViewController
+ */
+
+/* Class = "UINavigationItem"; title = "Staff List"; ObjectID = "55D-Ni-IHA"; */
+"55D-Ni-IHA.title" = "Staff List";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "Rlc-Zv-NAx"; */
+"Rlc-Zv-NAx.title" = " ";
 
 
 /**
@@ -183,7 +206,18 @@
 
 
 /**
- FloorMapImageViewController
+ FloorMapZoomableImageViewController
+ */
+
+/* Class = "UITabBarItem"; title = ""; ObjectID = "pi4-gC-oTz"; */
+"pi4-gC-oTz.title" = "";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "gLg-c0-exZ"; */
+"gLg-c0-exZ.title" = " ";
+
+
+/**
+ FloorMapDetailImageViewController
  */
 
 /* Class = "UIBarButtonItem"; title = " "; ObjectID = "A4B-jt-eRz"; */
@@ -205,6 +239,9 @@
 
 /* Class = "UILabel"; text = "Alamofire"; ObjectID = "6fK-fD-RtY"; */
 "6fK-fD-RtY.text" = "Alamofire";
+
+/* Class = "UILabel"; text = "AlamofireImage"; ObjectID = "fa1-oM-Hf1"; */
+"fa1-oM-Hf1.text" = "AlamofireImage";
 
 /* Class = "UILabel"; text = "RealmSwift"; ObjectID = "uoA-BR-qTg"; */
 "uoA-BR-qTg.text" = "RealmSwift";
@@ -239,3 +276,17 @@
 
 /* Class = "UITextView"; text = "Copyright (c) 2014-2016 Alamofire Software Foundation (http://alamofire.org/)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE."; ObjectID = "Ppm-xZ-M3e"; */
 "Ppm-xZ-M3e.text" = "Copyright (c) 2014-2016 Alamofire Software Foundation (http://alamofire.org/)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.";
+
+
+/**
+ AlamofireImageLicenseViewController
+ */
+
+/* Class = "UINavigationItem"; title = "AlamofireImage"; ObjectID = "o2M-GQ-0W2"; */
+"o2M-GQ-0W2.title" = "AlamofireImage";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "XCK-bS-bug"; */
+"XCK-bS-bug.title" = " ";
+
+/* Class = "UITextView"; text = "Copyright (c) 2015-2016 Alamofire Software Foundation (http://alamofire.org/)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE."; ObjectID = "e71-Xc-NNX"; */
+"e71-Xc-NNX.text" = "Copyright (c) 2015-2016 Alamofire Software Foundation (http://alamofire.org/)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.";

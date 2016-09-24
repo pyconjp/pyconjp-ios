@@ -15,12 +15,9 @@
 		7F1CBEA11D52CAFA007C058D /* TalkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1CBE991D52CAFA007C058D /* TalkDetail.swift */; };
 		7F1CBEA21D52CAFA007C058D /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1CBE9A1D52CAFA007C058D /* Timeline.swift */; };
 		7F1CBEA41D52CB3C007C058D /* PyConJPDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1CBEA31D52CB3C007C058D /* PyConJPDate.swift */; };
-		7F201B861CCDD8C200235412 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F201B851CCDD8C200235412 /* AboutViewController.swift */; };
 		7F23AD441D656B8E0066771B /* AlamofireType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23AD411D656B8E0066771B /* AlamofireType.swift */; };
 		7F23AD451D656B8E0066771B /* TalkDetailAPIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23AD421D656B8E0066771B /* TalkDetailAPIType.swift */; };
 		7F23AD461D656B8E0066771B /* TalksAPIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23AD431D656B8E0066771B /* TalksAPIType.swift */; };
-		7F2B717B1D653F49006A60BC /* TalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B71791D653F49006A60BC /* TalkTableViewCell.swift */; };
-		7F2B717C1D653F49006A60BC /* TalkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2B717A1D653F49006A60BC /* TalkTableViewCell.xib */; };
 		7F2B717F1D654D44006A60BC /* BookmarkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B717E1D654D44006A60BC /* BookmarkListViewController.swift */; };
 		7F52375D1D65917500C5A048 /* RealmTalksType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52375C1D65917500C5A048 /* RealmTalksType.swift */; };
 		7F63E3E51D75556A00110E9F /* Map.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F63E3E71D75556A00110E9F /* Map.strings */; };
@@ -31,7 +28,7 @@
 		7F8443CE1D50320400A0BCBA /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8443CD1D50320400A0BCBA /* UIViewExtention.swift */; };
 		7FB4D3031D542DD2005F314E /* FloorMapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3021D542DD2005F314E /* FloorMapListViewController.swift */; };
 		7FB4D3051D5433CA005F314E /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */; };
-		7FB4D3071D5434E2005F314E /* FloorMapImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3061D5434E2005F314E /* FloorMapImageViewController.swift */; };
+		7FB4D3071D5434E2005F314E /* FloorMapZoomableImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3061D5434E2005F314E /* FloorMapZoomableImageViewController.swift */; };
 		7FB4D3091D544333005F314E /* AcknowledgmentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D3081D544333005F314E /* AcknowledgmentsListViewController.swift */; };
 		7FB4D3101D546269005F314E /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4D30F1D546269005F314E /* CustomImageView.swift */; };
 		7FBC34CF1D40F956002919B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC34CE1D40F956002919B1 /* AppDelegate.swift */; };
@@ -51,7 +48,24 @@
 		DB3A77AE1D5631A400C25D8D /* TalkObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A77AD1D5631A400C25D8D /* TalkObject.swift */; };
 		DB3A77B01D5631F200C25D8D /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A77AF1D5631F200C25D8D /* Talk.swift */; };
 		DB3EDC331D744CED0095689F /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3EDC351D744CED0095689F /* More.storyboard */; };
+		DB43FCF71D8064DC00BB45EC /* TalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43FCF51D8064DC00BB45EC /* TalkTableViewCell.swift */; };
+		DB43FCF81D8064DC00BB45EC /* TalkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB43FCF61D8064DC00BB45EC /* TalkTableViewCell.xib */; };
+		DB43FCFA1D80650800BB45EC /* SpeakerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB43FCF91D80650800BB45EC /* SpeakerCollectionViewCell.xib */; };
+		DB43FCFC1D80656100BB45EC /* SpeakerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43FCFB1D80656100BB45EC /* SpeakerCollectionViewCell.swift */; };
+		DB43FCFF1D806AA400BB45EC /* SpeakersCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43FCFE1D806AA400BB45EC /* SpeakersCollectionViewDataSource.swift */; };
+		DB47C0271D8D887000756532 /* URLScheme.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB47C0291D8D887000756532 /* URLScheme.strings */; };
+		DB47C0301D8D8D2D00756532 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB47C0321D8D8D2D00756532 /* Localizable.strings */; };
+		DB6E8B791D86E5D700E1DB54 /* ZoomableImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6E8B781D86E5D700E1DB54 /* ZoomableImageViewController.swift */; };
+		DB8028AE1D81D0A300A4818A /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8028AD1D81D0A300A4818A /* AlamofireImage.framework */; };
+		DB8028AF1D81D0A300A4818A /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB8028AD1D81D0A300A4818A /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB8C1B041D5392BE00221F36 /* MapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C1B031D5392BE00221F36 /* MapListViewController.swift */; };
+		DB90E0A21D83FC8500F2172F /* StaffListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB90E0A11D83FC8500F2172F /* StaffListViewController.swift */; };
+		DB90E0A51D84022500F2172F /* StaffListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB90E0A41D84022500F2172F /* StaffListDataSource.swift */; };
+		DB90E0A71D8402EF00F2172F /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB90E0A61D8402EF00F2172F /* Staff.swift */; };
+		DB90E0A91D8404D200F2172F /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB90E0A81D8404D200F2172F /* Team.swift */; };
+		DB90E0AB1D84070A00F2172F /* StaffListAPIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB90E0AA1D84070A00F2172F /* StaffListAPIType.swift */; };
+		DB90E0AE1D8410A700F2172F /* StaffTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB90E0AC1D8410A700F2172F /* StaffTableViewCell.swift */; };
+		DB90E0AF1D8410A700F2172F /* StaffTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB90E0AD1D8410A700F2172F /* StaffTableViewCell.xib */; };
 		DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */; };
 		DBA1C0C21C7228E2004F0C8D /* PyConJP2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0C11C7228E2004F0C8D /* PyConJP2016Tests.swift */; };
 		DBA1C0CD1C7228E2004F0C8D /* PyConJP2016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA1C0CC1C7228E2004F0C8D /* PyConJP2016UITests.swift */; };
@@ -78,6 +92,9 @@
 		DBE6120D1D6DFFBF0043F2DF /* ConferencePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE612081D6DFFBF0043F2DF /* ConferencePageViewController.swift */; };
 		DBEBDB481C8C89FC002B25B3 /* MoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEBDB471C8C89FC002B25B3 /* MoreListViewController.swift */; };
 		DBF32BB51CD48C4C004E7F3B /* AppDelegateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF32BB41CD48C4C004E7F3B /* AppDelegateExtention.swift */; };
+		DBF6D89F1D870E1300F9DAE5 /* GestureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6D89E1D870E1300F9DAE5 /* GestureType.swift */; };
+		DBF78FCD1D8CF52B00EA66E4 /* TwitterURLSchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF78FCC1D8CF52B00EA66E4 /* TwitterURLSchemeType.swift */; };
+		DBF78FCF1D8CF56600EA66E4 /* MailURLSchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF78FCE1D8CF56600EA66E4 /* MailURLSchemeType.swift */; };
 		DBFAEC551D3CF7AD00BCC880 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFAEC541D3CF7AD00BCC880 /* NSDateExtension.swift */; };
 		DBFE922E1D66136B00327F74 /* BookmarkListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE922B1D66136B00327F74 /* BookmarkListDataSource.swift */; };
 		DBFE92311D6613C300327F74 /* TimelineDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE92301D6613C300327F74 /* TimelineDataSource.swift */; };
@@ -110,6 +127,7 @@
 				DBC72D181D6F0B0C008DF718 /* Realm.framework in Embed Frameworks */,
 				DBC72D161D6F0B0C008DF718 /* Alamofire.framework in Embed Frameworks */,
 				DBC72D1A1D6F0B0C008DF718 /* RealmSwift.framework in Embed Frameworks */,
+				DB8028AF1D81D0A300A4818A /* AlamofireImage.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,12 +143,9 @@
 		7F1CBE991D52CAFA007C058D /* TalkDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkDetail.swift; sourceTree = "<group>"; };
 		7F1CBE9A1D52CAFA007C058D /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		7F1CBEA31D52CB3C007C058D /* PyConJPDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PyConJPDate.swift; sourceTree = "<group>"; };
-		7F201B851CCDD8C200235412 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		7F23AD411D656B8E0066771B /* AlamofireType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireType.swift; sourceTree = "<group>"; };
 		7F23AD421D656B8E0066771B /* TalkDetailAPIType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkDetailAPIType.swift; sourceTree = "<group>"; };
 		7F23AD431D656B8E0066771B /* TalksAPIType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksAPIType.swift; sourceTree = "<group>"; };
-		7F2B71791D653F49006A60BC /* TalkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkTableViewCell.swift; sourceTree = "<group>"; };
-		7F2B717A1D653F49006A60BC /* TalkTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkTableViewCell.xib; sourceTree = "<group>"; };
 		7F2B717E1D654D44006A60BC /* BookmarkListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkListViewController.swift; sourceTree = "<group>"; };
 		7F52375C1D65917500C5A048 /* RealmTalksType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmTalksType.swift; sourceTree = "<group>"; };
 		7F63E3E61D75556A00110E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Map.strings; sourceTree = "<group>"; };
@@ -143,7 +158,7 @@
 		7F8443CD1D50320400A0BCBA /* UIViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
 		7FB4D3021D542DD2005F314E /* FloorMapListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapListViewController.swift; sourceTree = "<group>"; };
 		7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
-		7FB4D3061D5434E2005F314E /* FloorMapImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapImageViewController.swift; sourceTree = "<group>"; };
+		7FB4D3061D5434E2005F314E /* FloorMapZoomableImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapZoomableImageViewController.swift; sourceTree = "<group>"; };
 		7FB4D3081D544333005F314E /* AcknowledgmentsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowledgmentsListViewController.swift; sourceTree = "<group>"; };
 		7FB4D30F1D546269005F314E /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		7FBC34CE1D40F956002919B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -167,7 +182,27 @@
 		DB3EDC341D744CED0095689F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/More.storyboard; sourceTree = "<group>"; };
 		DB3EDC371D744CEF0095689F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/More.strings; sourceTree = "<group>"; };
 		DB3EDC391D744CF00095689F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/More.strings; sourceTree = "<group>"; };
+		DB43FCF51D8064DC00BB45EC /* TalkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkTableViewCell.swift; sourceTree = "<group>"; };
+		DB43FCF61D8064DC00BB45EC /* TalkTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkTableViewCell.xib; sourceTree = "<group>"; };
+		DB43FCF91D80650800BB45EC /* SpeakerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerCollectionViewCell.xib; sourceTree = "<group>"; };
+		DB43FCFB1D80656100BB45EC /* SpeakerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerCollectionViewCell.swift; sourceTree = "<group>"; };
+		DB43FCFE1D806AA400BB45EC /* SpeakersCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		DB47C02B1D8D887200756532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/URLScheme.strings; sourceTree = "<group>"; };
+		DB47C02C1D8D889E00756532 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/URLScheme.strings; sourceTree = "<group>"; };
+		DB47C02D1D8D889F00756532 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/URLScheme.strings; sourceTree = "<group>"; };
+		DB47C0311D8D8D2D00756532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DB47C0331D8D8D3500756532 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DB47C0341D8D8D3700756532 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DB6E8B781D86E5D700E1DB54 /* ZoomableImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomableImageViewController.swift; sourceTree = "<group>"; };
+		DB8028AD1D81D0A300A4818A /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		DB8C1B031D5392BE00221F36 /* MapListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapListViewController.swift; sourceTree = "<group>"; };
+		DB90E0A11D83FC8500F2172F /* StaffListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffListViewController.swift; sourceTree = "<group>"; };
+		DB90E0A41D84022500F2172F /* StaffListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffListDataSource.swift; sourceTree = "<group>"; };
+		DB90E0A61D8402EF00F2172F /* Staff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
+		DB90E0A81D8404D200F2172F /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		DB90E0AA1D84070A00F2172F /* StaffListAPIType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffListAPIType.swift; sourceTree = "<group>"; };
+		DB90E0AC1D8410A700F2172F /* StaffTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffTableViewCell.swift; sourceTree = "<group>"; };
+		DB90E0AD1D8410A700F2172F /* StaffTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StaffTableViewCell.xib; sourceTree = "<group>"; };
 		DBA1C0A91C7228E2004F0C8D /* PyConJP2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PyConJP2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA1C0B31C7228E2004F0C8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBA1C0B81C7228E2004F0C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -207,6 +242,9 @@
 		DBE612081D6DFFBF0043F2DF /* ConferencePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferencePageViewController.swift; sourceTree = "<group>"; };
 		DBEBDB471C8C89FC002B25B3 /* MoreListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreListViewController.swift; sourceTree = "<group>"; };
 		DBF32BB41CD48C4C004E7F3B /* AppDelegateExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateExtention.swift; sourceTree = "<group>"; };
+		DBF6D89E1D870E1300F9DAE5 /* GestureType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureType.swift; sourceTree = "<group>"; };
+		DBF78FCC1D8CF52B00EA66E4 /* TwitterURLSchemeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterURLSchemeType.swift; sourceTree = "<group>"; };
+		DBF78FCE1D8CF56600EA66E4 /* MailURLSchemeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailURLSchemeType.swift; sourceTree = "<group>"; };
 		DBFAEC541D3CF7AD00BCC880 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 		DBFE922B1D66136B00327F74 /* BookmarkListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkListDataSource.swift; sourceTree = "<group>"; };
 		DBFE92301D6613C300327F74 /* TimelineDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineDataSource.swift; sourceTree = "<group>"; };
@@ -218,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBC72D171D6F0B0C008DF718 /* Realm.framework in Frameworks */,
+				DB8028AE1D81D0A300A4818A /* AlamofireImage.framework in Frameworks */,
 				7FFB73401C9162C2006FB375 /* MapKit.framework in Frameworks */,
 				DBC72D191D6F0B0C008DF718 /* RealmSwift.framework in Frameworks */,
 				DBC72D151D6F0B0C008DF718 /* Alamofire.framework in Frameworks */,
@@ -270,6 +309,8 @@
 				7F1CBE981D52CAFA007C058D /* Speaker.swift */,
 				7F1CBE991D52CAFA007C058D /* TalkDetail.swift */,
 				7F1CBE9A1D52CAFA007C058D /* Timeline.swift */,
+				DB90E0A61D8402EF00F2172F /* Staff.swift */,
+				DB90E0A81D8404D200F2172F /* Team.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -280,6 +321,7 @@
 				7F23AD411D656B8E0066771B /* AlamofireType.swift */,
 				7F23AD421D656B8E0066771B /* TalkDetailAPIType.swift */,
 				7F23AD431D656B8E0066771B /* TalksAPIType.swift */,
+				DB90E0AA1D84070A00F2172F /* StaffListAPIType.swift */,
 			);
 			path = Alamofire;
 			sourceTree = "<group>";
@@ -303,8 +345,10 @@
 		7F63E3E21D75551800110E9F /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
+				DB47C0321D8D8D2D00756532 /* Localizable.strings */,
 				7F63E3E71D75556A00110E9F /* Map.strings */,
 				DB384C881D75ED1D00EC1B33 /* Language.strings */,
+				DB47C0291D8D887000756532 /* URLScheme.strings */,
 			);
 			path = Localizable;
 			sourceTree = "<group>";
@@ -312,8 +356,8 @@
 		7FB4D30E1D546240005F314E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7F2B71791D653F49006A60BC /* TalkTableViewCell.swift */,
-				7F2B717A1D653F49006A60BC /* TalkTableViewCell.xib */,
+				DB43FCF31D8064DC00BB45EC /* UICollectionViewCell */,
+				DB43FCF41D8064DC00BB45EC /* UITableViewCell */,
 				7FB4D30F1D546269005F314E /* CustomImageView.swift */,
 			);
 			path = View;
@@ -332,7 +376,9 @@
 		7FC773BC1D126A1600F5A202 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				DB43FCFD1D806A4600BB45EC /* TalkDetail */,
 				DBFE92291D66136B00327F74 /* Timeline */,
+				DB90E0A31D84020300F2172F /* More */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -340,6 +386,7 @@
 		BB6F29A77E8682EFE6C9DA97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB8028AD1D81D0A300A4818A /* AlamofireImage.framework */,
 				7FFB733F1C9162C2006FB375 /* MapKit.framework */,
 				DBC72D121D6F0B0C008DF718 /* Alamofire.framework */,
 				DBC72D131D6F0B0C008DF718 /* Realm.framework */,
@@ -388,9 +435,47 @@
 			children = (
 				7F23AD401D656B8E0066771B /* Alamofire */,
 				7F5237591D6590D900C5A048 /* Realm */,
+				DBF78FCB1D8CF52B00EA66E4 /* URLScheme */,
 				DB1347DF1CCB27D900CA0539 /* ErrorAlertType.swift */,
+				DBF6D89E1D870E1300F9DAE5 /* GestureType.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		DB43FCF31D8064DC00BB45EC /* UICollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DB43FCF91D80650800BB45EC /* SpeakerCollectionViewCell.xib */,
+				DB43FCFB1D80656100BB45EC /* SpeakerCollectionViewCell.swift */,
+			);
+			path = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
+		DB43FCF41D8064DC00BB45EC /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DB43FCF51D8064DC00BB45EC /* TalkTableViewCell.swift */,
+				DB43FCF61D8064DC00BB45EC /* TalkTableViewCell.xib */,
+				DB90E0AC1D8410A700F2172F /* StaffTableViewCell.swift */,
+				DB90E0AD1D8410A700F2172F /* StaffTableViewCell.xib */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		DB43FCFD1D806A4600BB45EC /* TalkDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DB43FCFE1D806AA400BB45EC /* SpeakersCollectionViewDataSource.swift */,
+			);
+			path = TalkDetail;
+			sourceTree = "<group>";
+		};
+		DB90E0A31D84020300F2172F /* More */ = {
+			isa = PBXGroup;
+			children = (
+				DB90E0A41D84022500F2172F /* StaffListDataSource.swift */,
+			);
+			path = More;
 			sourceTree = "<group>";
 		};
 		DBA1C0A01C7228E2004F0C8D = {
@@ -502,6 +587,7 @@
 				DBC748171C76254000895D4A /* BaseTabBarController.swift */,
 				DB3146B61C7C7C6600AA7333 /* TalkDetailViewController.swift */,
 				7FB4D3041D5433CA005F314E /* DetailImageViewController.swift */,
+				DB6E8B781D86E5D700E1DB54 /* ZoomableImageViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -510,11 +596,11 @@
 			isa = PBXGroup;
 			children = (
 				DBEBDB471C8C89FC002B25B3 /* MoreListViewController.swift */,
-				7F201B851CCDD8C200235412 /* AboutViewController.swift */,
+				DB90E0A11D83FC8500F2172F /* StaffListViewController.swift */,
 				7FFB733D1C915B6D006FB375 /* MapViewController.swift */,
 				DB8C1B031D5392BE00221F36 /* MapListViewController.swift */,
 				7FB4D3021D542DD2005F314E /* FloorMapListViewController.swift */,
-				7FB4D3061D5434E2005F314E /* FloorMapImageViewController.swift */,
+				7FB4D3061D5434E2005F314E /* FloorMapZoomableImageViewController.swift */,
 				7FB4D3081D544333005F314E /* AcknowledgmentsListViewController.swift */,
 			);
 			path = More;
@@ -553,6 +639,15 @@
 				7F7EBFDF1D751EED00F1EE30 /* NSLocaleExtention.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		DBF78FCB1D8CF52B00EA66E4 /* URLScheme */ = {
+			isa = PBXGroup;
+			children = (
+				DBF78FCC1D8CF52B00EA66E4 /* TwitterURLSchemeType.swift */,
+				DBF78FCE1D8CF56600EA66E4 /* MailURLSchemeType.swift */,
+			);
+			path = URLScheme;
 			sourceTree = "<group>";
 		};
 		DBFE92291D66136B00327F74 /* Timeline */ = {
@@ -683,16 +778,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB47C0271D8D887000756532 /* URLScheme.strings in Resources */,
 				DB384C861D75ED1D00EC1B33 /* Language.strings in Resources */,
 				DBA253581D733AC900FE9DC5 /* Main.storyboard in Resources */,
 				DBA253721D73434400FE9DC5 /* Bookmark.storyboard in Resources */,
+				DB43FCF81D8064DC00BB45EC /* TalkTableViewCell.xib in Resources */,
 				DB0A81651D463A4E0048ACB4 /* DummyTalks.json in Resources */,
 				DB3EDC331D744CED0095689F /* More.storyboard in Resources */,
+				DB90E0AF1D8410A700F2172F /* StaffTableViewCell.xib in Resources */,
 				7F63E3E51D75556A00110E9F /* Map.strings in Resources */,
-				7F2B717C1D653F49006A60BC /* TalkTableViewCell.xib in Resources */,
 				DBA253521D733A9000FE9DC5 /* LaunchScreen.storyboard in Resources */,
+				DB43FCFA1D80650800BB45EC /* SpeakerCollectionViewCell.xib in Resources */,
 				DBA1C0B41C7228E2004F0C8D /* Assets.xcassets in Resources */,
 				DBA253791D7344E000FE9DC5 /* Conference.storyboard in Resources */,
+				DB47C0301D8D8D2D00756532 /* Localizable.strings in Resources */,
 				DB0A81671D463A710048ACB4 /* DummyTalkDetail.json in Resources */,
 				DBA2536B1D73401200FE9DC5 /* Events.storyboard in Resources */,
 			);
@@ -724,6 +823,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
 			);
 			outputPaths = (
 			);
@@ -752,15 +852,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBE6120D1D6DFFBF0043F2DF /* ConferencePageViewController.swift in Sources */,
+				DBF78FCD1D8CF52B00EA66E4 /* TwitterURLSchemeType.swift in Sources */,
 				DB0206891D4FB8430067C94B /* ReceiveLocalNotificationManager.swift in Sources */,
 				7F6879031D41BE28003D5742 /* ArrayExtention.swift in Sources */,
 				DBE6120A1D6DFFBF0043F2DF /* ConferenceDateViewController.swift in Sources */,
 				DBE6120B1D6DFFBF0043F2DF /* ConferenceListViewController.swift in Sources */,
+				DBF6D89F1D870E1300F9DAE5 /* GestureType.swift in Sources */,
 				DBE612091D6DFFBF0043F2DF /* ConferenceBaseViewController.swift in Sources */,
+				DB43FCFC1D80656100BB45EC /* SpeakerCollectionViewCell.swift in Sources */,
+				DB90E0A21D83FC8500F2172F /* StaffListViewController.swift in Sources */,
 				DB8C1B041D5392BE00221F36 /* MapListViewController.swift in Sources */,
+				DB90E0A91D8404D200F2172F /* Team.swift in Sources */,
 				7F23AD461D656B8E0066771B /* TalksAPIType.swift in Sources */,
 				DB0206881D4FB8430067C94B /* LocalNotificationManager.swift in Sources */,
 				DB0159D31D4DB7B500B17018 /* PCJWKWebViewController.swift in Sources */,
+				DB90E0AB1D84070A00F2172F /* StaffListAPIType.swift in Sources */,
 				7F1CBEA41D52CB3C007C058D /* PyConJPDate.swift in Sources */,
 				7F52375D1D65917500C5A048 /* RealmTalksType.swift in Sources */,
 				7FB4D3051D5433CA005F314E /* DetailImageViewController.swift in Sources */,
@@ -768,21 +874,26 @@
 				DB3A77B01D5631F200C25D8D /* Talk.swift in Sources */,
 				DB3146B71C7C7C6600AA7333 /* TalkDetailViewController.swift in Sources */,
 				DB23836E1D563BFE00DA5376 /* Room.swift in Sources */,
-				7F201B861CCDD8C200235412 /* AboutViewController.swift in Sources */,
-				7FB4D3071D5434E2005F314E /* FloorMapImageViewController.swift in Sources */,
+				DB6E8B791D86E5D700E1DB54 /* ZoomableImageViewController.swift in Sources */,
+				7FB4D3071D5434E2005F314E /* FloorMapZoomableImageViewController.swift in Sources */,
+				DB43FCF71D8064DC00BB45EC /* TalkTableViewCell.swift in Sources */,
 				DBA253511D71E07600FE9DC5 /* EventsListViewController.swift in Sources */,
 				DBEBDB481C8C89FC002B25B3 /* MoreListViewController.swift in Sources */,
 				7F1CBE9E1D52CAFA007C058D /* Level.swift in Sources */,
 				DBC748181C76254000895D4A /* BaseTabBarController.swift in Sources */,
 				7FBC34CF1D40F956002919B1 /* AppDelegate.swift in Sources */,
+				DBF78FCF1D8CF56600EA66E4 /* MailURLSchemeType.swift in Sources */,
 				7F1CBEA11D52CAFA007C058D /* TalkDetail.swift in Sources */,
 				7F8443CE1D50320400A0BCBA /* UIViewExtention.swift in Sources */,
+				DB90E0A51D84022500F2172F /* StaffListDataSource.swift in Sources */,
 				7F1CBEA21D52CAFA007C058D /* Timeline.swift in Sources */,
 				7FFB733E1C915B6E006FB375 /* MapViewController.swift in Sources */,
 				7F1CBE9C1D52CAFA007C058D /* Language.swift in Sources */,
 				DB3A77AE1D5631A400C25D8D /* TalkObject.swift in Sources */,
 				DBF32BB51CD48C4C004E7F3B /* AppDelegateExtention.swift in Sources */,
+				DB43FCFF1D806AA400BB45EC /* SpeakersCollectionViewDataSource.swift in Sources */,
 				7F7EBFE21D75308400F1EE30 /* PCJConfig.swift in Sources */,
+				DB90E0AE1D8410A700F2172F /* StaffTableViewCell.swift in Sources */,
 				7F23AD441D656B8E0066771B /* AlamofireType.swift in Sources */,
 				7F23AD451D656B8E0066771B /* TalkDetailAPIType.swift in Sources */,
 				DBE611F71D6DF8F10043F2DF /* ConferenceListDataSource.swift in Sources */,
@@ -794,9 +905,9 @@
 				DB1347E01CCB27D900CA0539 /* ErrorAlertType.swift in Sources */,
 				7FFF87EE1D5AF2070093E316 /* Result.swift in Sources */,
 				7F6879051D420626003D5742 /* StringExtention.swift in Sources */,
+				DB90E0A71D8402EF00F2172F /* Staff.swift in Sources */,
 				DBE6120C1D6DFFBF0043F2DF /* ConferenceModelController.swift in Sources */,
 				DBFE92311D6613C300327F74 /* TimelineDataSource.swift in Sources */,
-				7F2B717B1D653F49006A60BC /* TalkTableViewCell.swift in Sources */,
 				7FBC34D11D40F98D002919B1 /* PCJNotificationConfig.swift in Sources */,
 				7FB4D3091D544333005F314E /* AcknowledgmentsListViewController.swift in Sources */,
 				DBFAEC551D3CF7AD00BCC880 /* NSDateExtension.swift in Sources */,
@@ -867,6 +978,26 @@
 				DB3EDC391D744CF00095689F /* ja */,
 			);
 			name = More.storyboard;
+			sourceTree = "<group>";
+		};
+		DB47C0291D8D887000756532 /* URLScheme.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB47C02B1D8D887200756532 /* Base */,
+				DB47C02C1D8D889E00756532 /* en */,
+				DB47C02D1D8D889F00756532 /* ja */,
+			);
+			name = URLScheme.strings;
+			sourceTree = "<group>";
+		};
+		DB47C0321D8D8D2D00756532 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB47C0311D8D8D2D00756532 /* Base */,
+				DB47C0331D8D8D3500756532 /* en */,
+				DB47C0341D8D8D3700756532 /* ja */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		DBA253541D733A9000FE9DC5 /* LaunchScreen.storyboard */ = {

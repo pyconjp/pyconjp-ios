@@ -21,6 +21,7 @@ class MoreListViewController: UITableViewController {
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
+        
     }
     
     // MARK: - Table View Controller Delegate
@@ -29,12 +30,12 @@ class MoreListViewController: UITableViewController {
         guard let sectionType = SectionType(rawValue: indexPath.section) else { return }
         let rowType = sectionType.rows[indexPath.row]
         switch rowType {
-        case .WhatsPyConJP, .CodeOfConduct, .Summary, .License:
+        case .WhatsPyConJP, .CodeOfConduct, .Summary, .License, .StaffList:
             guard let identifier = rowType.identifier, viewController = self.storyboard?.instantiateViewControllerWithIdentifier(identifier) else { return }
             self.navigationController?.pushViewController(viewController, animated: true)
-        case .Sponsor, .Repository:
+        case .ParticipantsInformation, .Sponsor, .Questionnaire, .Repository:
             guard let url = rowType.url else { return }
-            let safariViewController = SFSafariViewController(URL: NSURL(string: url)!)
+            let safariViewController = SFSafariViewController(URL: url)
             self.presentViewController(safariViewController, animated: true, completion: nil)
         case .ConferenceMap:
             let mapListViewController = MapListViewController.build()
@@ -45,7 +46,11 @@ class MoreListViewController: UITableViewController {
         case .Library:
             let acknowledgmentsListViewController = AcknowledgmentsListViewController.build()
             self.navigationController?.pushViewController(acknowledgmentsListViewController, animated: true)
-        }        
+        case .Feedback:
+            guard let urlSheme = rowType.urlSheme else { return }
+            UIApplication.sharedApplication().openURL(urlSheme)
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
     }
     
     private enum SectionType: Int {
@@ -56,21 +61,24 @@ class MoreListViewController: UITableViewController {
         var rows: Array<RowType> {
             switch self {
             case .About:
-                return [.WhatsPyConJP, .CodeOfConduct, .Summary, .Sponsor]
+                return [.ParticipantsInformation, .WhatsPyConJP, .CodeOfConduct, .Summary, .Sponsor, .StaffList, .Questionnaire]
             case .Map:
                 return [.ConferenceMap, .SprintMap]
             case .Application:
-                return [.Repository, .Library, .License]
+                return [.Repository, .Library, .License, .Feedback]
             }
         }
     
     }
     
-    private enum RowType {
+    private enum RowType: MailURLSchemeType {
+        case ParticipantsInformation
         case WhatsPyConJP
         case CodeOfConduct
         case Summary
         case Sponsor
+        case StaffList
+        case Questionnaire
         
         case ConferenceMap
         case SprintMap
@@ -78,6 +86,7 @@ class MoreListViewController: UITableViewController {
         case Repository
         case Library
         case License
+        case Feedback
         
         var identifier: String? {
             switch self {
@@ -85,14 +94,24 @@ class MoreListViewController: UITableViewController {
             case .CodeOfConduct: return "CodeOfConductViewController"
             case .Summary: return "SummaryViewController"
             case .License: return "LicenseViewController"
+            case .StaffList: return "StaffListViewController"
             default: return nil
             }
         }
         
-        var url: String? {
+        var url: NSURL? {
             switch self {
-            case .Sponsor: return PCJConfig.baseURL + "sponsors/"
-            case .Repository: return "https://github.com/pyconjp/pyconjp-ios"
+            case .ParticipantsInformation: return NSURL(string: PCJConfig.baseURL + "participants/")
+            case .Sponsor: return NSURL(string: PCJConfig.baseURL + "sponsors/")
+            case .Questionnaire: return NSURL(string: "https://docs.google.com/forms/d/e/1FAIpQLSefOgaVN8_cwUAcW-NmTaBNoNG8K47vursedtxkE_cbv_E37A/viewform")
+            case .Repository: return NSURL(string: "https://github.com/pyconjp/pyconjp-ios")
+            default: return nil
+            }
+        }
+        
+        var urlSheme: NSURL? {
+            switch self {
+            case .Feedback: return mailURLScheme(PCJConfig.mailAddress, subject: "Feedback for PyCon JP 2016 App", body: "iOS version:\nDevice Model:\nReply-to:\n\nFeedback:")
             default: return nil
             }
         }

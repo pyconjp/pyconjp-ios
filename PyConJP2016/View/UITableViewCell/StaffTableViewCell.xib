@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StaffTableViewCell" rowHeight="100" id="KGk-i7-Jjw" customClass="StaffTableViewCell" customModule="PyConJP2016" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="kjl-Wm-A9e">
+                        <rect key="frame" x="10" y="10" width="300" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="role" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="lLw-pL-KMw">
+                        <rect key="frame" x="10" y="36" width="300" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yLV-sJ-VVt">
+                        <rect key="frame" x="10" y="60" width="300" height="35"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTv-jU-JTd">
+                                <rect key="frame" x="0.0" y="0.0" width="140" height="35"/>
+                                <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onFacebookButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9Fw-CW-0vb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Af-6K-Qzq">
+                                <rect key="frame" x="160" y="0.0" width="140" height="35"/>
+                                <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Twitter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onTwitterButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="QDw-HC-bdR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="Sap-oq-fBn"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yLV-sJ-VVt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="1S5-gC-F8U"/>
+                    <constraint firstItem="kjl-Wm-A9e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="1mz-nc-WIi"/>
+                    <constraint firstItem="kjl-Wm-A9e" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="90w-u5-H0J"/>
+                    <constraint firstItem="yLV-sJ-VVt" firstAttribute="top" relation="lessThanOrEqual" secondItem="lLw-pL-KMw" secondAttribute="bottom" constant="8" id="Ay0-5E-eOp"/>
+                    <constraint firstAttribute="bottom" secondItem="yLV-sJ-VVt" secondAttribute="bottom" constant="5" id="H3o-Fz-bgB"/>
+                    <constraint firstAttribute="trailing" secondItem="lLw-pL-KMw" secondAttribute="trailing" constant="10" id="Q9N-Qn-tJ7"/>
+                    <constraint firstAttribute="trailing" secondItem="yLV-sJ-VVt" secondAttribute="trailing" constant="10" id="fw4-fX-mq4"/>
+                    <constraint firstAttribute="trailing" secondItem="kjl-Wm-A9e" secondAttribute="trailing" constant="10" id="m9D-EE-8OF"/>
+                    <constraint firstItem="lLw-pL-KMw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="uWe-kw-1Of"/>
+                    <constraint firstItem="lLw-pL-KMw" firstAttribute="top" secondItem="kjl-Wm-A9e" secondAttribute="bottom" constant="5" id="wHy-bx-ufg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="facebookButton" destination="yTv-jU-JTd" id="qHu-S6-yew"/>
+                <outlet property="nameLabel" destination="kjl-Wm-A9e" id="Pqm-rK-AYE"/>
+                <outlet property="roleLabel" destination="lLw-pL-KMw" id="Ek5-Ob-vGn"/>
+                <outlet property="twitterButton" destination="2Af-6K-Qzq" id="JGf-Nh-agp"/>
+            </connections>
+            <point key="canvasLocation" x="410" y="299"/>
+        </tableViewCell>
+    </objects>
+</document>

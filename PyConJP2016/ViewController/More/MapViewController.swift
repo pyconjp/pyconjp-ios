@@ -55,8 +55,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         var name: String {
             switch self {
-            case .Waseda: return NSLocalizedString("nameWaseda", tableName: "Map", comment: "")
-            case .Microsoft: return NSLocalizedString("nameMicrosoft", tableName: "Map", comment: "")
+            case .Waseda: return NSLocalizedString("NameWaseda", tableName: "Map", comment: "")
+            case .Microsoft: return NSLocalizedString("NameMicrosoft", tableName: "Map", comment: "")
             }
         }
         
@@ -69,8 +69,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         var address: String {
             switch self {
-            case .Waseda: return NSLocalizedString("addressWaseda", tableName: "Map", comment: "")
-            case .Microsoft: return NSLocalizedString("addressMicrosoft", tableName: "Map", comment: "")
+            case .Waseda: return NSLocalizedString("AddressWaseda", tableName: "Map", comment: "")
+            case .Microsoft: return NSLocalizedString("AddressMicrosoft", tableName: "Map", comment: "")
             }
         }
         

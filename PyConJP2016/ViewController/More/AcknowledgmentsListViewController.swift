@@ -28,7 +28,7 @@ class AcknowledgmentsListViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         guard let rowType = RowType(rawValue: indexPath.row) else { return }
         switch rowType {
-        case .Alamofire:
+        case .Alamofire, .AlamofireImage:
             guard let identifier = rowType.identifier else { return }
             let licenseViewController = UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier(identifier)
             self.navigationController?.pushViewController(licenseViewController, animated: true)
@@ -41,11 +41,13 @@ class AcknowledgmentsListViewController: UITableViewController {
     
     private enum RowType: Int {
         case Alamofire =  0
-        case RealmSwift = 1
+        case AlamofireImage = 1
+        case RealmSwift = 2
         
         var identifier: String? {
             switch self {
             case .Alamofire: return "AlamofireLicenseViewController"
+            case .AlamofireImage: return  "AlamofireImageLicenseViewController"
             default: return nil
             }
         }

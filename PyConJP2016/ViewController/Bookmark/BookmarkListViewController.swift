@@ -8,11 +8,23 @@
 
 import UIKit
 
-class BookmarkListViewController: UIViewController, UITableViewDelegate {
+class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAlertType {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            let nib  = UINib(nibName: bookmarkListDataSource.reuseIdentifier, bundle:nil)
+            tableView.registerNib(nib, forCellReuseIdentifier: bookmarkListDataSource.reuseIdentifier)
+            tableView.dataSource = bookmarkListDataSource
+            tableView.rowHeight = UITableViewAutomaticDimension
+            tableView.estimatedRowHeight = TalkTableViewCell.estimatedRowHeight
+        }
+    }
     
     private let bookmarkListDataSource = BookmarkListDataSource()
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
     
     class func build() -> BookmarkListViewController {
         return UIStoryboard(name: "Bookmark", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("BookmarkListViewController") as! BookmarkListViewController
@@ -23,12 +35,6 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BookmarkListViewController.refreshNotification(_:)), name: PCJNotificationConfig.CompleteFetchDataNotification, object: nil)
         
-        let nib  = UINib(nibName: bookmarkListDataSource.reuseIdentifier, bundle:nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: bookmarkListDataSource.reuseIdentifier)
-        
-        tableView.dataSource = bookmarkListDataSource
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 134
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -46,10 +52,20 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate {
     }
     
     func refresh() {
-        bookmarkListDataSource.refreshData()
-        dispatch_async(dispatch_get_main_queue()) {
-            self.tableView.reloadData()
+        bookmarkListDataSource.refreshData { [weak self](result) in
+            guard let weakSelf = self else { return }
+            switch result {
+            case .Success:
+                dispatch_async(dispatch_get_main_queue()) {
+                    weakSelf.tableView.reloadData()
+                }
+            case .Failure(let error):
+                dispatch_async(dispatch_get_main_queue()) {
+                    weakSelf.showErrorAlartWith(error, parent: weakSelf)
+                }
+            }
         }
+
     }
     
     // MARK: - Table View Controller Delegate

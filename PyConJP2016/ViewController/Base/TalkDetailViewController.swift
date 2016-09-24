@@ -10,9 +10,14 @@ import UIKit
 import SafariServices
 import RealmSwift
 
-class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertType {
+class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLSchemeType, ErrorAlertType {
     
-    @IBOutlet weak var baseScrollView: UIScrollView!
+    @IBOutlet weak var baseScrollView: UIScrollView! {
+        didSet {
+            refreshControl.addTarget(self, action: #selector(TalkDetailViewController.refresh(_:)), forControlEvents: .ValueChanged)
+            baseScrollView.addSubview(refreshControl)
+        }
+    }
     @IBOutlet weak var bookmarkBarButtonItem: UIBarButtonItem!
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -24,8 +29,14 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var hashTagButton: UIButton!
     
-    @IBOutlet weak var speakerImageView: UIImageView!
-    @IBOutlet weak var speakerNameLabel: UILabel!
+    @IBOutlet weak var speakersCollectionView: UICollectionView! {
+        didSet {
+            let nib  = UINib(nibName: speakersCollectionViewDataSource.reuseIdentifier, bundle:nil)
+            speakersCollectionView.registerNib(nib, forCellWithReuseIdentifier: speakersCollectionViewDataSource.reuseIdentifier)
+            speakersCollectionView.dataSource = speakersCollectionViewDataSource
+        }
+    }
+    @IBOutlet weak var speakersCollectionViewHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
@@ -36,25 +47,30 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     @IBOutlet weak var abstractTextView: UITextView!
     
     var id: Int?
-    private var talkDetail: TalkDetail?
-    //    private let localNotificationManager = LocalNotificationManager()
-    private let refreshControl = UIRefreshControl()
-    
-    class func build() -> TalkDetailViewController {
-        return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
+    private var talkDetail: TalkDetail? {
+        didSet {
+            if let talkDetail = talkDetail {
+                speakersCollectionViewDataSource.speakers = talkDetail.speakers
+            } else {
+                speakersCollectionViewDataSource.speakers.removeAll()
+            }
+        }
     }
     
+    private let refreshControl = UIRefreshControl()
+    
+    private let speakersCollectionViewDataSource = SpeakersCollectionViewDataSource()
+    
+    private lazy var speakersCollectionViewHeight: CGFloat = self.speakersCollectionViewHeightConstraint.constant
+    
     class func build(id: Int) -> TalkDetailViewController {
-        let talkDetailViewController = TalkDetailViewController.build()
+        let talkDetailViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
         talkDetailViewController.id = id
         return talkDetailViewController
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        refreshControl.addTarget(self, action: #selector(TalkDetailViewController.refresh(_:)), forControlEvents: .ValueChanged)
-        baseScrollView.addSubview(refreshControl)
         
         refreshControl.beginRefreshing()
         getDetail()
@@ -109,7 +125,8 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
             self.placeLabel.textColor = talkDetail.talkObject.room?.color ?? UIColor.blackColor()
             self.hashTagButton.setTitle((talkDetail.talkObject.room?.hashTag ?? "#pyconjp"), forState: .Normal)
             
-            self.speakerNameLabel.text = talkDetail.talkObject.speakers
+            self.speakersCollectionViewHeightConstraint.constant = talkDetail.speakers.isEmpty ? 0 : self.speakersCollectionViewHeight
+            self.speakersCollectionView.reloadData()
             
             self.languageLabel.text = talkDetail.talkObject.languageType?.localized
             self.levelLabel.text = talkDetail.level
@@ -149,18 +166,12 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, ErrorAlertT
     }
     
     @IBAction func onHashTagButton(sender: UIButton) {
-        
         let hashTag = (talkDetail?.talkObject.room?.hashTag ?? "pyconjp").stringByReplacingOccurrencesOfString("#", withString: "")
-        
-        if UIApplication.sharedApplication().canOpenURL(NSURL(string: "twitter://")!) {
-            let urlString = "twitter://search?query=%23" + hashTag
-            UIApplication.sharedApplication().openURL(NSURL(string: urlString)!)
-        } else {
-            let urlString = "https://mobile.twitter.com/search?q=%23" + hashTag + "&s=typd"
-            
-            let safariViewController = SFSafariViewController(URL: NSURL(string: urlString)!)
-            self.presentViewController(safariViewController, animated: true, completion: nil)
-        }
-        
+        openTwitterHashTag(hashTag, from: self)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        guard let userName = speakersCollectionViewDataSource.speakers[indexPath.row].twitterName else { return }
+        openTwitterUser(userName, from: self)
     }
 }

@@ -19,16 +19,19 @@ class ConferenceListDataSource: TimelineDataSource, RealmTalksType {
         super.init()
     }
     
-    func refreshData() {
-        timelines.removeAll()
-        loadTalkObjects { result in
+    func refreshData(completionHandler: (Result<Void, NSError> -> Void)) -> Void {
+        loadTalkObjects { [weak self](result) in
+            guard let weakSelf = self else { return }
             switch result {
             case .Success(let talks):
+                weakSelf.timelines.removeAll()
                 let keys = talks.map { $0.startTime }.unique()
                 for tuple in keys.enumerate() {
-                    self.timelines.append(Timeline(time: keys[tuple.index], talks: talks.filter { $0.startTime == keys[tuple.index]}))
+                    weakSelf.timelines.append(Timeline(time: keys[tuple.index], talks: talks.filter { $0.startTime == keys[tuple.index]}))
                 }
-            case .Failure: break
+                completionHandler(.Success())
+            case .Failure(let error):
+                completionHandler(.Failure(error))
             }
         }
     }
