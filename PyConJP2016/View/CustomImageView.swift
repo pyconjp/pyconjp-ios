@@ -37,15 +37,15 @@ class CustomImageView: UIImageView {
     
     func handleGesture(_ gesture: UIGestureRecognizer) {
         if let doubleTapGesture = gesture as? UITapGestureRecognizer {
-            doubleTap(doubleTapGesture)
+            doubleTap(gesture: doubleTapGesture)
         } else if let pinchGesture = gesture as? UIPinchGestureRecognizer {
-            pinch(pinchGesture)
+            pinch(gesture: pinchGesture)
         } else if let panGesture = gesture as? UIPanGestureRecognizer {
-            pan(panGesture)
+            pan(gesture: panGesture)
         }
     }
     
-    func doubleTap(_ gesture: UITapGestureRecognizer) {
+    func doubleTap(gesture: UITapGestureRecognizer) {
         if gestureEnabled {
             beforePoint = CGPoint(x: 0.0, y: 0.0)
             currentScale = 1.0
@@ -55,7 +55,7 @@ class CustomImageView: UIImageView {
         }
     }
     
-    fileprivate func pinch(_ gesture: UIPinchGestureRecognizer) {
+    fileprivate func pinch(gesture: UIPinchGestureRecognizer) {
         if gestureEnabled {
             var scale = gesture.scale
             if currentScale > 1.0 {
@@ -83,7 +83,7 @@ class CustomImageView: UIImageView {
         }
     }
     
-    fileprivate func pan(_ gesture: UIPanGestureRecognizer) {
+    fileprivate func pan(gesture: UIPanGestureRecognizer) {
         if currentScale == 1.0 { return }
         if let gestureView = gesture.view, gestureEnabled {
             

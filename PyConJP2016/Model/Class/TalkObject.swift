@@ -32,7 +32,7 @@ class TalkObject: RealmSwift.Object {
         speakers = (dictionary["speakers"] as? [String] ?? []).enumerated().reduce("") {
             $0 + $1.element + ((dictionary["speakers"] as? [String] ?? []).count - 1 == $1.offset ? "" : ", ")
         }
-        date = Date.dateFromString((dictionary["day"] as? String ?? "") + " " + (dictionary["start"] as? String ?? ""))
+        date = Date.date(from: (dictionary["day"] as? String ?? "") + " " + (dictionary["start"] as? String ?? ""))
         day = dictionary["day"] as? String ?? ""
         startTime = dictionary["start"] as? String ?? ""
         endTime = dictionary["end"] as? String ?? ""

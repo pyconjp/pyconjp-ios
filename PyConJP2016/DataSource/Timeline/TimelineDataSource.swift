@@ -32,7 +32,7 @@ class TimelineDataSource: NSObject, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? TalkTableViewCell else {
             fatalError("Could not create TalkTableViewCell")
         }
-        cell.fill(timelines[(indexPath as NSIndexPath).section].talks[(indexPath as NSIndexPath).row])
+        cell.fill(talkObject: timelines[(indexPath as NSIndexPath).section].talks[(indexPath as NSIndexPath).row])
         return cell
     }
 }

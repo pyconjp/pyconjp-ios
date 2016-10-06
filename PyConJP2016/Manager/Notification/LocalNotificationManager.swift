@@ -10,7 +10,7 @@ import UIKit
 
 class LocalNotificationManager: NSObject {
     
-    func makeNotification(_ talkDetail: TalkDetail) -> Bool {
+    func makeNotification(talkDetail: TalkDetail) -> Bool {
         
         guard let date = talkDetail.talkObject.date else { return false }
         
@@ -18,14 +18,14 @@ class LocalNotificationManager: NSObject {
         let fireDate = (calendar as NSCalendar?)?.date(byAdding: .minute, value: -10, to: date as Date, options: NSCalendar.Options())
         
         if fireDate!.timeIntervalSinceNow > 0 {
-            self.schedule(talkDetail)
+            self.schedule(talkDetail: talkDetail)
             return true
         } else {
             return false
         }
     }
     
-    fileprivate func schedule(_ talkDetail: TalkDetail) {
+    fileprivate func schedule(talkDetail: TalkDetail) {
         
         guard let date = talkDetail.talkObject.date else { return }
         
@@ -43,7 +43,7 @@ class LocalNotificationManager: NSObject {
         
     }
     
-    func cancelSchedule(_ talkDetail: TalkDetail) {
+    func cancelSchedule(talkDetail: TalkDetail) {
         if let localNotifications = UIApplication.shared.scheduledLocalNotifications {
             localNotifications.forEach({ (notification) -> () in
                 if let userInfo = notification.userInfo {

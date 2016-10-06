@@ -57,7 +57,7 @@ class StaffListDataSource: NSObject, UITableViewDataSource, StaffListAPIType {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? StaffTableViewCell else {
             fatalError("Could not create StaffTableViewCell")
         }
-        cell.fill(teams[(indexPath as NSIndexPath).section].staffs[(indexPath as NSIndexPath).row],
+        cell.fill(staff: teams[(indexPath as NSIndexPath).section].staffs[(indexPath as NSIndexPath).row],
                   onFacebookButton: facebookAction(teams[(indexPath as NSIndexPath).section].staffs[(indexPath as NSIndexPath).row].facebook),
                   onTwitterButton: twitterAction(teams[(indexPath as NSIndexPath).section].staffs[(indexPath as NSIndexPath).row].twitter))
         return cell

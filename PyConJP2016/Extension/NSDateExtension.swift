@@ -16,7 +16,7 @@ extension Date {
         return dateFormatter
     }()
     
-    static func dateFromString(_ string: String) -> Date? {
+    static func date(from string: String) -> Date? {
         return dateFormatterInstance.date(from: string)
     }
     

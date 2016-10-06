@@ -11,8 +11,8 @@ import RealmSwift
 
 protocol TalksAPIType: AlamofireType {
     func getTalks(successClosure success: @escaping () -> Void, failClosure fail: @escaping (Error) -> Void) -> Void
-    func getTalks(_ completionHandler: @escaping ((Result<Void>) -> Void)) -> Void
-    func getTalksFromLocalDummyJson(_ completionHandler: ((Result<Void>) -> Void)) -> Void
+    func getTalks(completionHandler: @escaping ((Result<Void>) -> Void)) -> Void
+    func getTalksFromLocalDummyJson(completionHandler: ((Result<Void>) -> Void)) -> Void
 }
 
 extension TalksAPIType {
@@ -49,7 +49,7 @@ extension TalksAPIType {
         })
     }
     
-    func getTalks(_ completionHandler: @escaping ((Result<Void>) -> Void)) -> Void {
+    func getTalks(completionHandler: @escaping ((Result<Void>) -> Void)) -> Void {
         get() { result in
             switch result {
             case .success(let value):
@@ -75,7 +75,7 @@ extension TalksAPIType {
         }
     }
     
-    func getTalksFromLocalDummyJson(_ completionHandler: ((Result<Void>) -> Void)) -> Void {
+    func getTalksFromLocalDummyJson(completionHandler: ((Result<Void>) -> Void)) -> Void {
         let path = Bundle.main.path(forResource: "DummyTalks", ofType: "json")
         let fileHandle = FileHandle(forReadingAtPath: path!)
         let data = fileHandle?.readDataToEndOfFile()

@@ -21,7 +21,7 @@ class SpeakerCollectionViewCell: UICollectionViewCell {
         twitterLabel.text = nil
     }
     
-    func fill(_ speaker: Speaker) {
+    func fill(speaker: Speaker) {
         if let imageURL = speaker.imageURL, let url = URL(string: PCJConfig.hostURL + imageURL) {
             iconImageView.af_setImage(withURL: url)
         }

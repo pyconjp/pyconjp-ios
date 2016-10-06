@@ -22,7 +22,7 @@ extension String {
     
     func timeStringByTrimingSecond() -> String {
         let dateString = "2000-01-01 " + self
-        guard let date = Date.dateFromString(dateString) else { return self }
+        guard let date = Date.date(from: dateString) else { return self }
         return date.convertToTime()
     }
     

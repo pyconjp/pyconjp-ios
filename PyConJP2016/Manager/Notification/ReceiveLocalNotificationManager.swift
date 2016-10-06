@@ -17,13 +17,13 @@ class ReceiveLocalNotificationManager: NSObject {
             let alertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "閉じる", style: .default, handler: nil))
             alertController.addAction(UIAlertAction(title: "詳細へ", style: .default, handler: {(action) -> Void in
-                appDelegate.openTalkDetailViewController(id)
+                appDelegate.openTalkDetailViewController(id: id)
             }))
             if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-                appDelegate.showAlert(alertController)
+                appDelegate.showAlert(alertController: alertController)
             }
         case "Talk" where application.applicationState == .inactive:
-            appDelegate.openTalkDetailViewController(id)
+            appDelegate.openTalkDetailViewController(id: id)
         case "Information":
             break
         default:

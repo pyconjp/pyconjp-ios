@@ -20,7 +20,7 @@ class SpeakersCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SpeakerCollectionViewCell
-        cell.fill(speakers[(indexPath as NSIndexPath).row])
+        cell.fill(speaker: speakers[(indexPath as NSIndexPath).row])
         return cell
     }
 }

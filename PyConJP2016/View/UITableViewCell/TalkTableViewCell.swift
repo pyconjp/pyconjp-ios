@@ -18,7 +18,15 @@ class TalkTableViewCell: UITableViewCell {
     
     static let estimatedRowHeight: CGFloat = 134
     
-    func fill(_ talkObject: TalkObject) {
+    override func prepareForReuse() {
+        titleLabel.text = nil
+        timeLabel.text = nil
+        placeLabel.text = nil
+        speakerLabel.text = nil
+        placeView.backgroundColor = UIColor.darkGray
+    }
+    
+    func fill(talkObject: TalkObject) {
         titleLabel.text = talkObject.title
         timeLabel.text = talkObject.periodTime
         placeLabel.text = talkObject.place
@@ -26,14 +34,6 @@ class TalkTableViewCell: UITableViewCell {
         if let room = talkObject.room {
             placeView.backgroundColor = room.color
         }
-    }
-    
-    override func prepareForReuse() {
-        titleLabel.text = nil
-        timeLabel.text = nil
-        placeLabel.text = nil
-        speakerLabel.text = nil
-        placeView.backgroundColor = UIColor.darkGray
     }
     
 }

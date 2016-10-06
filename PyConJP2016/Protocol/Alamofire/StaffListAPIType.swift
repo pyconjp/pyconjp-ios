@@ -9,7 +9,7 @@
 import UIKit
 
 protocol StaffListAPIType: AlamofireType {
-    func getStaffs(_ completionHandler: @escaping ((Result<Array<Staff>>) -> Void)) -> Void
+    func getStaffs(completionHandler: @escaping ((Result<Array<Staff>>) -> Void)) -> Void
 }
 
 extension StaffListAPIType {
@@ -26,7 +26,7 @@ extension StaffListAPIType {
 
 extension StaffListAPIType {
     
-    func getStaffs(_ completionHandler: @escaping ((Result<Array<Staff>>) -> Void)) -> Void {
+    func getStaffs(completionHandler: @escaping ((Result<Array<Staff>>) -> Void)) -> Void {
         get() { result in
             switch result {
             case .success(let value):

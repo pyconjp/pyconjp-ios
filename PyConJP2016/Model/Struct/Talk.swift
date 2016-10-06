@@ -32,7 +32,7 @@ extension Talk {
         self.title = title
         self.description = description
         self.speakers = speakers
-        self.date = Date.dateFromString(day + " " + startTime)
+        self.date = Date.date(from: day + " " + startTime)
         self.day = day
         self.startTime = startTime
         self.endTime = endTime

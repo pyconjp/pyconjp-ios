@@ -15,8 +15,8 @@ protocol AlamofireType {
     var authUser: String { get }
     var authPassword: String { get }
     
-    func get(_ parameter: Dictionary<String, AnyObject>?, successClosure success: @escaping (Dictionary<String, AnyObject>) -> Void, failClosure fail: @escaping (Error) -> Void) -> Void
-    func get(_ parameter: Dictionary<String, AnyObject>?, completionHandler: @escaping ((Result<Dictionary<String, AnyObject>>) -> Void)) -> Void
+    func get(parameter: Dictionary<String, AnyObject>?, successClosure success: @escaping (Dictionary<String, AnyObject>) -> Void, failClosure fail: @escaping (Error) -> Void) -> Void
+    func get(parameter: Dictionary<String, AnyObject>?, completionHandler: @escaping ((Result<Dictionary<String, AnyObject>>) -> Void)) -> Void
 }
 
 extension AlamofireType {
@@ -37,7 +37,7 @@ extension AlamofireType {
 
 extension AlamofireType {
     
-    func get(_ parameter: Dictionary<String, AnyObject>? = nil, successClosure success: @escaping (Dictionary<String, AnyObject>) -> Void, failClosure fail: @escaping (Error) -> Void) -> Void {
+    func get(parameter: Dictionary<String, AnyObject>? = nil, successClosure success: @escaping (Dictionary<String, AnyObject>) -> Void, failClosure fail: @escaping (Error) -> Void) -> Void {
         let url = baseURL + path
         let responseClosure = { (response: DataResponse<Any>) in
             switch response.result {
@@ -53,7 +53,7 @@ extension AlamofireType {
         Alamofire.request(url, method: .get, parameters: parameter).authenticate(user: authUser, password: authPassword).responseJSON(completionHandler: responseClosure)
     }
     
-    func get(_ parameter: Dictionary<String, AnyObject>? = nil, completionHandler: @escaping ((Result<Dictionary<String, AnyObject>>) -> Void)) -> Void {
+    func get(parameter: Dictionary<String, AnyObject>? = nil, completionHandler: @escaping ((Result<Dictionary<String, AnyObject>>) -> Void)) -> Void {
         let url = baseURL + path
         let responseClosure = { (response: DataResponse<Any>) in
             switch response.result {

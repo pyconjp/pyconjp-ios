@@ -13,8 +13,8 @@ protocol TalkDetailAPIType: AlamofireType {
     var id: Int? { get set }
     
     func getTalkDetail(successClosure success: @escaping (TalkDetail) -> Void, failClosure fail: @escaping (Error) -> Void) -> Void
-    func getTalkDetail(_ completionHandler: @escaping ((Result<TalkDetail>) -> Void)) -> Void
-    func getTalkDetailFromLocalDummyJson(_ completionHandler: ((Result<TalkDetail>) -> Void)) -> Void
+    func getTalkDetail(completionHandler: @escaping ((Result<TalkDetail>) -> Void)) -> Void
+    func getTalkDetailFromLocalDummyJson(completionHandler: ((Result<TalkDetail>) -> Void)) -> Void
 }
 
 extension TalkDetailAPIType {
@@ -37,7 +37,7 @@ extension TalkDetailAPIType {
         })
     }
     
-    func getTalkDetail(_ completionHandler: @escaping ((Result<TalkDetail>) -> Void)) -> Void {
+    func getTalkDetail(completionHandler: @escaping ((Result<TalkDetail>) -> Void)) -> Void {
         get() { result in
             switch result {
             case .success(let value):
@@ -49,7 +49,7 @@ extension TalkDetailAPIType {
         }
     }
     
-    func getTalkDetailFromLocalDummyJson(_ completionHandler: ((Result<TalkDetail>) -> Void)) -> Void {
+    func getTalkDetailFromLocalDummyJson(completionHandler: ((Result<TalkDetail>) -> Void)) -> Void {
         let path = Bundle.main.path(forResource: "DummyTalkDetail", ofType: "json")
         let fileHandle = FileHandle(forReadingAtPath: path!)
         let data = fileHandle?.readDataToEndOfFile()
