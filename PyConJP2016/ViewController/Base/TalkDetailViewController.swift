@@ -63,7 +63,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLS
     
     fileprivate lazy var speakersCollectionViewHeight: CGFloat = self.speakersCollectionViewHeightConstraint.constant
     
-    class func build(_ id: Int) -> TalkDetailViewController {
+    class func build(id: Int) -> TalkDetailViewController {
         let talkDetailViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TalkDetailViewController") as! TalkDetailViewController
         talkDetailViewController.id = id
         return talkDetailViewController
@@ -85,7 +85,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLS
             let realm = try Realm()
             if let talkObject = realm.object(ofType: TalkObject.self, forPrimaryKey: id as AnyObject) {
                 talkDetail.talkObject.favorited = talkObject.favorited
-                toggleBookmarkBarButtonItem(talkDetail.talkObject.favorited)
+                toggleBookmarkBarButtonItem(isFavorite: talkDetail.talkObject.favorited)
             }
         } catch {
             
@@ -135,12 +135,12 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLS
             self.descriptionTextView.text = talkDetail.talkObject.descriptionText
             self.abstractTextView.text = talkDetail.abstract
             
-            self.toggleBookmarkBarButtonItem(talkDetail.talkObject.favorited)
+            self.toggleBookmarkBarButtonItem(isFavorite: talkDetail.talkObject.favorited)
         }
         
     }
     
-    func toggleBookmarkBarButtonItem(_ isFavorite: Bool) {
+    func toggleBookmarkBarButtonItem(isFavorite: Bool) {
         let image = isFavorite ? UIImage(named: "BookmarkOn") : UIImage(named: "BookmarkOff")
         DispatchQueue.main.async {
             self.bookmarkBarButtonItem.image = image
@@ -159,7 +159,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLS
             try realm.write({
                 realm.create(TalkObject.self, value: ["id": talkDetail.talkObject.id, "favorited": talkDetail.talkObject.favorited], update: true)
             })
-            toggleBookmarkBarButtonItem(talkDetail.talkObject.favorited)
+            toggleBookmarkBarButtonItem(isFavorite: talkDetail.talkObject.favorited)
         } catch {
             
         }

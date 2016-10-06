@@ -41,7 +41,7 @@ class MoreListViewController: UITableViewController {
             let mapListViewController = MapListViewController.build()
             self.navigationController?.pushViewController(mapListViewController, animated: true)
         case .sprintMap:
-            let mapViewController = MapViewController.build(MapViewController.Venue.microsoft)
+            let mapViewController = MapViewController.build(venue: MapViewController.Venue.microsoft)
             self.navigationController?.pushViewController(mapViewController, animated: true)
         case .library:
             let acknowledgmentsListViewController = AcknowledgmentsListViewController.build()

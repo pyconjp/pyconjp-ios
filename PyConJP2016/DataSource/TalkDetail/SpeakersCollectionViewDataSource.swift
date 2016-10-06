@@ -14,6 +14,8 @@ class SpeakersCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     var speakers: [Speaker] = []
     
+    // MARK: - Collection View DataSource
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return speakers.count
     }

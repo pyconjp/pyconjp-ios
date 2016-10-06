@@ -27,7 +27,7 @@ class MapListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch TableViewCell(rawValue: (indexPath as NSIndexPath).row) ?? .access {
         case .access:
-            let mapViewController = MapViewController.build(MapViewController.Venue.waseda)
+            let mapViewController = MapViewController.build(venue: MapViewController.Venue.waseda)
             self.navigationController?.pushViewController(mapViewController, animated: true)
         case .floor:
             let floorListViewController = self.storyboard?.instantiateViewController(withIdentifier: "FloorMapListViewController")

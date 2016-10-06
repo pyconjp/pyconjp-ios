@@ -40,21 +40,21 @@ class ConferenceDateViewController: UIViewController, ConferenceDateViewProtocol
     
     @IBAction func onDay1Button(_ sender: UIButton) {
         if let conferencePageViewProtocol = conferencePageViewProtocol {
-            conferencePageViewProtocol.reversePage(0)
-            changeActive(0)
+            conferencePageViewProtocol.reversePage(index: 0)
+            changeActive(index: 0)
         }
     }
     
     @IBAction func onDay2Button(_ sender: UIButton) {
         if let conferencePageViewProtocol = conferencePageViewProtocol {
-            conferencePageViewProtocol.fowardPage(1)
-            changeActive(1)
+            conferencePageViewProtocol.fowardPage(index: 1)
+            changeActive(index: 1)
         }
     }
     
     // MARK: - ConferenceDateViewProtocol
     
-    func changeActive(_ index: Int) {
+    func changeActive(index: Int) {
         
         func changeActiveButton(_ button: UIButton) {
             button.isEnabled = false

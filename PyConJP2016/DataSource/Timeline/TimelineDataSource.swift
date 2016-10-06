@@ -14,7 +14,7 @@ class TimelineDataSource: NSObject, UITableViewDataSource {
     
     var timelines: [Timeline] = []
     
-    // MARK: - Table View Controller Data Source
+    // MARK: - Table View Data Source
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return timelines.count

@@ -15,7 +15,7 @@ class ConferencePageViewController: UIPageViewController, ConferencePageViewProt
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let startingViewController = self.conferenceModelController.viewControllerAtIndex(0, storyboard: self.storyboard!)!
+        let startingViewController = self.conferenceModelController.viewController(index: 0, storyboard: self.storyboard!)!
         let viewControllers = [startingViewController]
         self.setViewControllers(viewControllers, direction: .forward, animated: false, completion: {done in })
         
@@ -50,16 +50,16 @@ class ConferencePageViewController: UIPageViewController, ConferencePageViewProt
     
     // MARK: - ConferencePageViewProtocol
     
-    func fowardPage(_ index: Int) {
-        self.movePage(index, direction: .forward)
+    func fowardPage(index: Int) {
+        self.movePage(index: index, direction: .forward)
     }
     
-    func reversePage(_ index: Int) {
-        self.movePage(index, direction: .reverse)
+    func reversePage(index: Int) {
+        self.movePage(index: index, direction: .reverse)
     }
     
-    fileprivate func movePage(_ index: Int, direction: UIPageViewControllerNavigationDirection) {
-        let viewController = conferenceModelController.viewControllerAtIndex(index, storyboard: self.storyboard!)!
+    fileprivate func movePage(index: Int, direction: UIPageViewControllerNavigationDirection) {
+        let viewController = conferenceModelController.viewController(index: index, storyboard: self.storyboard!)!
         let viewControllers = [viewController]
         self.setViewControllers(viewControllers, direction: direction, animated: true, completion: {done in})
     }

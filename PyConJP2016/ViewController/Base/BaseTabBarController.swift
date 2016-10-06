@@ -17,15 +17,15 @@ class BaseTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //EventsceTab
+        // EventsceTab
         let eventsStoryboard = UIStoryboard(name: "Events", bundle: Bundle.main)
         eventsTabNavigationController = eventsStoryboard.instantiateViewController(withIdentifier: "EventsNavigationController") as? UINavigationController
         
-        //ConferenceTab
+        // ConferenceTab
         let conferenceStoryboard = UIStoryboard(name: "Conference", bundle: Bundle.main)
         conferenceTabNavigationController = conferenceStoryboard.instantiateViewController(withIdentifier: "ConferenceNavigationController") as? UINavigationController
         
-        //MoreTab
+        // MoreTab
         let moreStoryboard = UIStoryboard(name: "More", bundle: Bundle.main)
         moreTabNavigationController = moreStoryboard.instantiateViewController(withIdentifier: "MoreNavigationController") as? UINavigationController
         

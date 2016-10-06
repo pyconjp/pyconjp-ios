@@ -16,7 +16,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     fileprivate var venue: Venue?
     
-    class func build(_ venue: Venue) -> MapViewController {
+    class func build(venue: Venue) -> MapViewController {
         let mapViewController = UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
         mapViewController.venue = venue
         return mapViewController

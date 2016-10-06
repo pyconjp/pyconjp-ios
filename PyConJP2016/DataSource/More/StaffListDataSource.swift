@@ -22,7 +22,7 @@ class StaffListDataSource: NSObject, UITableViewDataSource, StaffListAPIType {
         self.twitterAction = twitterAction
     }
     
-    func refreshData(_ completionHandler: @escaping ((Result<Void>) -> Void)) -> Void {
+    func refreshData(completionHandler: @escaping ((Result<Void>) -> Void)) -> Void {
         getStaffs { [weak self](result) in
             guard let weakSelf = self else { return }
             switch result {

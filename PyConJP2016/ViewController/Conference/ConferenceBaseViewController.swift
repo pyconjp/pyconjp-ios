@@ -25,7 +25,7 @@ class ConferenceBaseViewController: UIViewController, UIPageViewControllerDelega
     fileprivate var displayIndex: Int = 0 {
         didSet {
             if let conferenceDateViewProtocol = conferenceDateViewProtocol {
-                conferenceDateViewProtocol.changeActive(displayIndex)
+                conferenceDateViewProtocol.changeActive(index: displayIndex)
             }
         }
     }
@@ -75,10 +75,10 @@ class ConferenceBaseViewController: UIViewController, UIPageViewControllerDelega
 }
 
 protocol ConferencePageViewProtocol {
-    func fowardPage(_ index: Int)
-    func reversePage(_ index: Int)
+    func fowardPage(index: Int)
+    func reversePage(index: Int)
 }
 
 protocol ConferenceDateViewProtocol {
-    func changeActive(_ index: Int)
+    func changeActive(index: Int)
 }

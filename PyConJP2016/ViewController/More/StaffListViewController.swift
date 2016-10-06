@@ -24,7 +24,7 @@ class StaffListViewController: UIViewController, TwitterURLSchemeType, ErrorAler
         }
     }
 
-    fileprivate lazy var staffListDataSource: StaffListDataSource = StaffListDataSource(facebookAction: { (url) -> (() -> Void) in { self.facebookAction(url) } }, twitterAction: { (url) -> (() -> Void) in { self.twitterAction(url) } })
+    fileprivate lazy var staffListDataSource: StaffListDataSource = StaffListDataSource(facebookAction: { (url) -> (() -> Void) in { self.facebookAction(urlString: url) } }, twitterAction: { (url) -> (() -> Void) in { self.twitterAction(urlString: url) } })
     
     fileprivate let refreshControl = UIRefreshControl()
     
@@ -71,13 +71,13 @@ class StaffListViewController: UIViewController, TwitterURLSchemeType, ErrorAler
     
     // MARK: - StaffTableViewCell Button Action
     
-    fileprivate func facebookAction(_ urlString: String) {
+    fileprivate func facebookAction(urlString: String) {
         guard let url = URL(string: urlString) else { return }
         let safariViewController = SFSafariViewController(url: url)
         self.present(safariViewController, animated: true, completion: nil)
     }
     
-    fileprivate func twitterAction(_ urlString: String) {
+    fileprivate func twitterAction(urlString: String) {
         let userName = urlString.replacingOccurrences(of: "https://twitter.com/", with: "")
         openTwitterUser(userName, from: self)
     }

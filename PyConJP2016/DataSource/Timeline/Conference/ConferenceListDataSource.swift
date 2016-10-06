@@ -19,7 +19,7 @@ class ConferenceListDataSource: TimelineDataSource, RealmTalksType {
         super.init()
     }
     
-    func refreshData(_ completionHandler: @escaping ((Result<Void>) -> Void)) -> Void {
+    func refreshData(completionHandler: @escaping ((Result<Void>) -> Void)) -> Void {
         loadTalkObjects { [weak self](result) in
             guard let weakSelf = self else { return }
             switch result {

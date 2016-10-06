@@ -109,7 +109,7 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let talkObject = conferenceListDataSource.timelines[(indexPath as NSIndexPath).section].talks[(indexPath as NSIndexPath).row]
-        let talkDetailViewController = TalkDetailViewController.build(talkObject.id)
+        let talkDetailViewController = TalkDetailViewController.build(id: talkObject.id)
         self.navigationController?.pushViewController(talkDetailViewController, animated: true)
     }
     

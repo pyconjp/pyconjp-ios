@@ -15,7 +15,7 @@ extension AppDelegate {
     }
     
     func openTalkDetailViewController(id: Int) {
-        let talkDetailViewController = TalkDetailViewController.build(id)
+        let talkDetailViewController = TalkDetailViewController.build(id: id)
         self.window?.rootViewController?.presentedViewController?.navigationController?.pushViewController(talkDetailViewController, animated: true)
     }
     

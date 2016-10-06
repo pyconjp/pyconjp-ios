@@ -14,7 +14,7 @@ class BookmarkListDataSource: TimelineDataSource, RealmTalksType {
     let filterPredicate = NSPredicate(format: "favorited == %@", true as CVarArg)
     let sortProperties = [SortDescriptor(property: "date", ascending: true), SortDescriptor(property: "place", ascending: true)]
     
-    func refreshData(_ completionHandler: @escaping ((Result<Void>) -> Void)) -> Void {
+    func refreshData(completionHandler: @escaping ((Result<Void>) -> Void)) -> Void {
         loadTalkObjects { [weak self](result) in
             guard let weakSelf = self else { return }
             switch result {

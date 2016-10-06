@@ -16,7 +16,7 @@ class ConferenceModelController: NSObject, UIPageViewControllerDataSource {
         super.init()
     }
     
-    func viewControllerAtIndex(_ index: Int, storyboard: UIStoryboard) -> ConferenceListViewController? {
+    func viewController(index: Int, storyboard: UIStoryboard) -> ConferenceListViewController? {
         
         if self.days.isEmpty || index >= days.count {
             return nil
@@ -27,7 +27,7 @@ class ConferenceModelController: NSObject, UIPageViewControllerDataSource {
         
     }
     
-    func indexOfViewController(_ viewController: UIViewController) -> Int {
+    func indexOfViewController(viewController: UIViewController) -> Int {
         guard let viewController = viewController as? ConferenceListViewController, let pyconJPDate = viewController.pyconJPDate else { return NSNotFound }
         return days.index(of: pyconJPDate) ?? NSNotFound
     }
@@ -35,17 +35,17 @@ class ConferenceModelController: NSObject, UIPageViewControllerDataSource {
     // MARK: - Page View Controller Data Source
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        var index = self.indexOfViewController(viewController)
+        var index = self.indexOfViewController(viewController: viewController)
         if (index == 0) || (index == NSNotFound) {
             return nil
         }
         
         index -= 1
-        return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
+        return self.viewController(index: index, storyboard: viewController.storyboard!)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        var index = self.indexOfViewController(viewController)
+        var index = self.indexOfViewController(viewController: viewController)
         if index == NSNotFound {
             return nil
         }
@@ -55,6 +55,6 @@ class ConferenceModelController: NSObject, UIPageViewControllerDataSource {
             return nil
         }
         
-        return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
+        return self.viewController(index: index, storyboard: viewController.storyboard!)
     }
 }
