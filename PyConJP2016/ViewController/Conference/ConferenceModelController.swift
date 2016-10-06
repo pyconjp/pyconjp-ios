@@ -10,13 +10,13 @@ import UIKit
 
 class ConferenceModelController: NSObject, UIPageViewControllerDataSource {
     
-    private let days: Array<PyConJPDate> = PyConJPDate.confarenceDate()
+    fileprivate let days: Array<PyConJPDate> = PyConJPDate.confarenceDate()
     
     override init() {
         super.init()
     }
     
-    func viewControllerAtIndex(index: Int, storyboard: UIStoryboard) -> ConferenceListViewController? {
+    func viewControllerAtIndex(_ index: Int, storyboard: UIStoryboard) -> ConferenceListViewController? {
         
         if self.days.isEmpty || index >= days.count {
             return nil
@@ -27,14 +27,14 @@ class ConferenceModelController: NSObject, UIPageViewControllerDataSource {
         
     }
     
-    func indexOfViewController(viewController: UIViewController) -> Int {
-        guard let viewController = viewController as? ConferenceListViewController, pyconJPDate = viewController.pyconJPDate else { return NSNotFound }
-        return days.indexOf(pyconJPDate) ?? NSNotFound
+    func indexOfViewController(_ viewController: UIViewController) -> Int {
+        guard let viewController = viewController as? ConferenceListViewController, let pyconJPDate = viewController.pyconJPDate else { return NSNotFound }
+        return days.index(of: pyconJPDate) ?? NSNotFound
     }
     
     // MARK: - Page View Controller Data Source
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         var index = self.indexOfViewController(viewController)
         if (index == 0) || (index == NSNotFound) {
             return nil
@@ -44,7 +44,7 @@ class ConferenceModelController: NSObject, UIPageViewControllerDataSource {
         return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         var index = self.indexOfViewController(viewController)
         if index == NSNotFound {
             return nil

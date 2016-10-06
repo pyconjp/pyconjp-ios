@@ -14,10 +14,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var mapView: MKMapView!
     
-    private var venue: Venue?
+    fileprivate var venue: Venue?
     
-    class func build(venue: Venue) -> MapViewController {
-        let mapViewController = UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController
+    class func build(_ venue: Venue) -> MapViewController {
+        let mapViewController = UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
         mapViewController.venue = venue
         return mapViewController
     }
@@ -29,7 +29,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         textView.text = venue.address
         
-        mapView.setCenterCoordinate(venue.location, animated: true)
+        mapView.setCenter(venue.location, animated: true)
         
         var region: MKCoordinateRegion = mapView.region
         region.center = venue.location
@@ -50,27 +50,27 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     enum Venue {
-        case Waseda
-        case Microsoft
+        case waseda
+        case microsoft
         
         var name: String {
             switch self {
-            case .Waseda: return NSLocalizedString("NameWaseda", tableName: "Map", comment: "")
-            case .Microsoft: return NSLocalizedString("NameMicrosoft", tableName: "Map", comment: "")
+            case .waseda: return NSLocalizedString("NameWaseda", tableName: "Map", comment: "")
+            case .microsoft: return NSLocalizedString("NameMicrosoft", tableName: "Map", comment: "")
             }
         }
         
         var location: CLLocationCoordinate2D {
             switch self {
-            case .Waseda: return CLLocationCoordinate2D(latitude: 35.706069, longitude: 139.706809)
-            case .Microsoft: return CLLocationCoordinate2D(latitude: 35.626670, longitude: 139.740375)
+            case .waseda: return CLLocationCoordinate2D(latitude: 35.706069, longitude: 139.706809)
+            case .microsoft: return CLLocationCoordinate2D(latitude: 35.626670, longitude: 139.740375)
             }
         }
         
         var address: String {
             switch self {
-            case .Waseda: return NSLocalizedString("AddressWaseda", tableName: "Map", comment: "")
-            case .Microsoft: return NSLocalizedString("AddressMicrosoft", tableName: "Map", comment: "")
+            case .waseda: return NSLocalizedString("AddressWaseda", tableName: "Map", comment: "")
+            case .microsoft: return NSLocalizedString("AddressMicrosoft", tableName: "Map", comment: "")
             }
         }
         

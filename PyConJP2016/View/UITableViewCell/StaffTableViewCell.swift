@@ -17,10 +17,10 @@ class StaffTableViewCell: UITableViewCell {
     
     static let estimatedRowHeight: CGFloat = 100
     
-    private var facebookAction: (() -> Void)?
-    private var twitterAction: (() -> Void)?
+    fileprivate var facebookAction: (() -> Void)?
+    fileprivate var twitterAction: (() -> Void)?
     
-    func fill(staff: Staff, onFacebookButton: (() -> Void), onTwitterButton: (() -> Void)) {
+    func fill(_ staff: Staff, onFacebookButton: @escaping (() -> Void), onTwitterButton: @escaping (() -> Void)) {
         nameLabel.text = staff.name
         roleLabel.text = staff.role
         toggleFacebookButton(!staff.facebook.isEmpty)
@@ -36,22 +36,22 @@ class StaffTableViewCell: UITableViewCell {
         toggleTwitterButton(false)
     }
     
-    private func toggleFacebookButton(enabled: Bool) {
-        facebookButton.enabled = enabled
+    fileprivate func toggleFacebookButton(_ enabled: Bool) {
+        facebookButton.isEnabled = enabled
         facebookButton.backgroundColor = enabled ? UIColor.facebookColor() : UIColor.pyconJP2016GlayColor()
     }
     
-    private func toggleTwitterButton(enabled: Bool) {
-        twitterButton.enabled = enabled
+    fileprivate func toggleTwitterButton(_ enabled: Bool) {
+        twitterButton.isEnabled = enabled
         twitterButton.backgroundColor = enabled ? UIColor.twitterColor() : UIColor.pyconJP2016GlayColor()
     }
     
-    @IBAction func onFacebookButton(sender: UIButton) {
+    @IBAction func onFacebookButton(_ sender: UIButton) {
         guard let facebookAction = facebookAction else { return }
         facebookAction()
     }
     
-    @IBAction func onTwitterButton(sender: UIButton) {
+    @IBAction func onTwitterButton(_ sender: UIButton) {
         guard let twitterAction = twitterAction else { return }
         twitterAction()
     }

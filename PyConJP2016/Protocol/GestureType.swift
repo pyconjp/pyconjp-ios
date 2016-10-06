@@ -9,20 +9,20 @@
 import UIKit
 
 protocol GestureType {
-    func handleGesture(gesture: UIGestureRecognizer)
-    func singleTap(gesture: UITapGestureRecognizer)
-    func doubleTap(gesture: UITapGestureRecognizer)
-    func pinch(gesture: UIPinchGestureRecognizer)
-    func pan(gesture: UIPanGestureRecognizer)
-    func longPress(gesture: UILongPressGestureRecognizer)
+    func handleGesture(_ gesture: UIGestureRecognizer)
+    func singleTap(_ gesture: UITapGestureRecognizer)
+    func doubleTap(_ gesture: UITapGestureRecognizer)
+    func pinch(_ gesture: UIPinchGestureRecognizer)
+    func pan(_ gesture: UIPanGestureRecognizer)
+    func longPress(_ gesture: UILongPressGestureRecognizer)
 }
 
 extension GestureType {
 
-    func handleGesture(gesture: UIGestureRecognizer) {
-        if let singleTapGesture = gesture as? UITapGestureRecognizer where singleTapGesture.numberOfTapsRequired == 1 {
+    func handleGesture(_ gesture: UIGestureRecognizer) {
+        if let singleTapGesture = gesture as? UITapGestureRecognizer, singleTapGesture.numberOfTapsRequired == 1 {
             singleTap(singleTapGesture)
-        } else if let doubleTapGesture = gesture as? UITapGestureRecognizer where doubleTapGesture.numberOfTapsRequired == 2 {
+        } else if let doubleTapGesture = gesture as? UITapGestureRecognizer, doubleTapGesture.numberOfTapsRequired == 2 {
             doubleTap(doubleTapGesture)
         } else if let pinchGesture = gesture as? UIPinchGestureRecognizer {
             pinch(pinchGesture)
@@ -33,14 +33,14 @@ extension GestureType {
         }
     }
     
-    func singleTap(gesture: UITapGestureRecognizer) {}
+    func singleTap(_ gesture: UITapGestureRecognizer) {}
 
-    func doubleTap(gesture: UITapGestureRecognizer) {}
+    func doubleTap(_ gesture: UITapGestureRecognizer) {}
 
-    func pinch(gesture: UIPinchGestureRecognizer) {}
+    func pinch(_ gesture: UIPinchGestureRecognizer) {}
 
-    func pan(gesture: UIPanGestureRecognizer) {}
+    func pan(_ gesture: UIPanGestureRecognizer) {}
 
-    func longPress(gesture: UILongPressGestureRecognizer) {}
+    func longPress(_ gesture: UILongPressGestureRecognizer) {}
 
 }

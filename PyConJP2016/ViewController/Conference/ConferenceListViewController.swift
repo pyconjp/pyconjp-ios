@@ -13,9 +13,9 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             let nib  = UINib(nibName: conferenceListDataSource.reuseIdentifier, bundle:nil)
-            tableView.registerNib(nib, forCellReuseIdentifier: conferenceListDataSource.reuseIdentifier)
+            tableView.register(nib, forCellReuseIdentifier: conferenceListDataSource.reuseIdentifier)
             
-            refreshControl.addTarget(self, action: #selector(ConferenceListViewController.onRefresh(_:)), forControlEvents: .ValueChanged)
+            refreshControl.addTarget(self, action: #selector(ConferenceListViewController.onRefresh(_:)), for: .valueChanged)
             tableView.addSubview(refreshControl)
             
             tableView.dataSource = conferenceListDataSource
@@ -24,19 +24,19 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
         }
     }
     
-    private(set) var viewControllerIndex: Int = 0
-    private(set) var pyconJPDate: PyConJPDate?
+    fileprivate(set) var viewControllerIndex: Int = 0
+    fileprivate(set) var pyconJPDate: PyConJPDate?
     
-    private lazy var conferenceListDataSource: ConferenceListDataSource = ConferenceListDataSource(day: self.pyconJPDate?.rawValue)
+    fileprivate lazy var conferenceListDataSource: ConferenceListDataSource = ConferenceListDataSource(day: self.pyconJPDate?.rawValue)
     
-    private let refreshControl = UIRefreshControl()
+    fileprivate let refreshControl = UIRefreshControl()
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
-    class func build(index: Int, storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ConferenceListViewController {
-        let conferenceListViewController = storyboard.instantiateViewControllerWithIdentifier("ConferenceListViewController") as! ConferenceListViewController
+    class func build(_ index: Int, storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ConferenceListViewController {
+        let conferenceListViewController = storyboard.instantiateViewController(withIdentifier: "ConferenceListViewController") as! ConferenceListViewController
         conferenceListViewController.viewControllerIndex = index
         conferenceListViewController.pyconJPDate = pyconJPDate
         
@@ -46,37 +46,37 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ConferenceListViewController.refreshNotification(_:)), name: PCJNotificationConfig.CompleteFetchDataNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ConferenceListViewController.refreshNotification(_:)), name: NSNotification.Name(rawValue: PCJNotificationConfig.CompleteFetchDataNotification), object: nil)
         
         refreshControl.beginRefreshing()
         refresh()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
         
     }
     
-    func onRefresh(sender: UIRefreshControl) {
+    func onRefresh(_ sender: UIRefreshControl) {
         conferenceListDataSource.timelines.removeAll()
         tableView.reloadData()
         getTalks { [weak self](result) in
             guard let weakSelf = self else { return }
             switch result {
-            case .Success:
+            case .success:
                 weakSelf.refresh()
-            case .Failure(let error):
+            case .failure(let error):
                 weakSelf.refreshControl.endRefreshing()
                 weakSelf.showErrorAlartWith(error, parent: weakSelf)
             }
         }
     }
     
-    func refreshNotification(notification: NSNotification) {
+    func refreshNotification(_ notification: Notification) {
         refresh()
     }
     
@@ -84,15 +84,15 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
         conferenceListDataSource.refreshData { [weak self](result) in
             guard let weakSelf = self else { return }
             switch result {
-            case .Success:
-                dispatch_async(dispatch_get_main_queue()) {
+            case .success:
+                DispatchQueue.main.async {
                     weakSelf.tableView.reloadData()
                     if !weakSelf.conferenceListDataSource.timelines.isEmpty {
                         weakSelf.refreshControl.endRefreshing()
                     }
                 }
-            case .Failure(let error):
-                dispatch_async(dispatch_get_main_queue()) {
+            case .failure(let error):
+                DispatchQueue.main.async {
                     weakSelf.showErrorAlartWith(error, parent: weakSelf)
                     weakSelf.refreshControl.endRefreshing()
                 }
@@ -103,12 +103,12 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     
     // MARK: - Table View Controller Delegate
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let talkObject = conferenceListDataSource.timelines[indexPath.section].talks[indexPath.row]
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let talkObject = conferenceListDataSource.timelines[(indexPath as NSIndexPath).section].talks[(indexPath as NSIndexPath).row]
         let talkDetailViewController = TalkDetailViewController.build(talkObject.id)
         self.navigationController?.pushViewController(talkDetailViewController, animated: true)
     }

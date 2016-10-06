@@ -13,10 +13,10 @@ class PCJWKWebViewController: UIViewController, WKNavigationDelegate, WKUIDelega
     
     @IBOutlet weak var webContentView: UIView!
     
-    private var url: String = ""
+    fileprivate var url: String = ""
     
-    class func build(url: String) -> PCJWKWebViewController {
-        let pcjWKWebViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("PCJWKWebViewController") as! PCJWKWebViewController
+    class func build(_ url: String) -> PCJWKWebViewController {
+        let pcjWKWebViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PCJWKWebViewController") as! PCJWKWebViewController
         pcjWKWebViewController.url = url
         return pcjWKWebViewController
     }
@@ -31,12 +31,12 @@ class PCJWKWebViewController: UIViewController, WKNavigationDelegate, WKUIDelega
         webContentView.addSubview(webView)
         
         let noLayoutFormatOptions = NSLayoutFormatOptions(rawValue: 0)
-        webContentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[webView]|", options: noLayoutFormatOptions, metrics: nil, views: ["webView": webView]))
+        webContentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[webView]|", options: noLayoutFormatOptions, metrics: nil, views: ["webView": webView]))
         
-        webContentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[webView]|", options: noLayoutFormatOptions, metrics: nil, views: ["webView": webView]))
+        webContentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[webView]|", options: noLayoutFormatOptions, metrics: nil, views: ["webView": webView]))
         
-        let request = NSURLRequest(URL: NSURL(string: url)!)
-        webView.loadRequest(request)
+        let request = URLRequest(url: URL(string: url)!)
+        webView.load(request)
         
         
     }
@@ -46,23 +46,23 @@ class PCJWKWebViewController: UIViewController, WKNavigationDelegate, WKUIDelega
         // Dispose of any resources that can be recreated.
     }
     
-    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
     }
     
-    func webView(webView: WKWebView, createWebViewWithConfiguration configuration: WKWebViewConfiguration, forNavigationAction navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-        guard let url = navigationAction.request.URL else {
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        guard let url = navigationAction.request.url else {
             return nil
         }
-        guard let targetFrame = navigationAction.targetFrame where targetFrame.mainFrame else {
-            webView.loadRequest(NSURLRequest.init(URL: url))
+        guard let targetFrame = navigationAction.targetFrame, targetFrame.isMainFrame else {
+            webView.load(URLRequest.init(url: url))
             return nil
         }
         
         return nil
     }
     
-    @IBAction func onCleseButton(sender: UIBarButtonItem) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func onCleseButton(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

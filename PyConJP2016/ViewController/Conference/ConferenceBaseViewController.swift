@@ -16,13 +16,13 @@ class ConferenceBaseViewController: UIViewController, UIPageViewControllerDelega
     var conferenceDateViewProtocol: ConferenceDateViewProtocol?
     var conferencePageViewProtocol: ConferencePageViewProtocol?
     
-    private var offsetToChange: CGFloat = 0.0 {
+    fileprivate var offsetToChange: CGFloat = 0.0 {
         didSet {
             
         }
     }
     
-    private var displayIndex: Int = 0 {
+    fileprivate var displayIndex: Int = 0 {
         didSet {
             if let conferenceDateViewProtocol = conferenceDateViewProtocol {
                 conferenceDateViewProtocol.changeActive(displayIndex)
@@ -33,22 +33,22 @@ class ConferenceBaseViewController: UIViewController, UIPageViewControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let conferenceStoryboard = UIStoryboard(name: "Conference", bundle: NSBundle.mainBundle())
-        let conferencePageViewController = conferenceStoryboard.instantiateViewControllerWithIdentifier("ConferencePageViewController")
+        let conferenceStoryboard = UIStoryboard(name: "Conference", bundle: Bundle.main)
+        let conferencePageViewController = conferenceStoryboard.instantiateViewController(withIdentifier: "ConferencePageViewController")
         conferencePageViewController.view.frame = pageContainerView.bounds
         self.addChildViewController(conferencePageViewController)
         pageContainerView.addSubview(conferencePageViewController.view)
-        conferencePageViewController.didMoveToParentViewController(self)
+        conferencePageViewController.didMove(toParentViewController: self)
         
-        let conferenceDateViewController = conferenceStoryboard.instantiateViewControllerWithIdentifier("ConferenceDateViewController")
+        let conferenceDateViewController = conferenceStoryboard.instantiateViewController(withIdentifier: "ConferenceDateViewController")
         conferenceDateViewController.view.frame = barContainerView.bounds
         self.addChildViewController(conferenceDateViewController)
         barContainerView.addSubview(conferenceDateViewController.view)
-        conferenceDateViewController.didMoveToParentViewController(self)
+        conferenceDateViewController.didMove(toParentViewController: self)
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         //        offsetToChange = 0.0
     }
     
@@ -56,7 +56,7 @@ class ConferenceBaseViewController: UIViewController, UIPageViewControllerDelega
         super.didReceiveMemoryWarning()
     }
     
-    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         let displayViewController = pageViewController.viewControllers?.last as! ConferenceListViewController
         displayIndex = displayViewController.viewControllerIndex
         //        if 1 - barContainerView.frame.origin.x < 1 {
@@ -66,7 +66,7 @@ class ConferenceBaseViewController: UIViewController, UIPageViewControllerDelega
         //        }
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.x - pageContainerView.frame.size.width != 0 {
             offsetToChange = scrollView.contentOffset.x - pageContainerView.frame.size.width
         }
@@ -75,10 +75,10 @@ class ConferenceBaseViewController: UIViewController, UIPageViewControllerDelega
 }
 
 protocol ConferencePageViewProtocol {
-    func fowardPage(index: Int)
-    func reversePage(index: Int)
+    func fowardPage(_ index: Int)
+    func reversePage(_ index: Int)
 }
 
 protocol ConferenceDateViewProtocol {
-    func changeActive(index: Int)
+    func changeActive(_ index: Int)
 }

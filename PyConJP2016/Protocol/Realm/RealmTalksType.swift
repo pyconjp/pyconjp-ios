@@ -13,18 +13,18 @@ protocol RealmTalksType {
     var filterPredicate: NSPredicate { get }
     var sortProperties: Array<SortDescriptor> { get }
     
-    func loadTalkObjects(completionHandler: (Result<Array<TalkObject>, NSError> -> Void)) -> Void
+    func loadTalkObjects(_ completionHandler: ((Result<Array<TalkObject>>) -> Void)) -> Void
 }
 
 extension RealmTalksType {
     
-    func loadTalkObjects(completionHandler: (Result<Array<TalkObject>, NSError> -> Void)) -> Void {
+    func loadTalkObjects(_ completionHandler: ((Result<Array<TalkObject>>) -> Void)) -> Void {
         do {
             let realm = try Realm()
-            let talks = realm.objects(TalkObject).filter(filterPredicate).sorted(sortProperties).map { $0 }
-            completionHandler(.Success(talks))
+            let talks = Array(realm.objects(TalkObject.self).filter(filterPredicate).sorted(by: sortProperties))
+            completionHandler(.success(talks))
         } catch let error as NSError {
-            completionHandler(.Failure(error))
+            completionHandler(.failure(error))
         }
     }
 

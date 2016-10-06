@@ -11,39 +11,39 @@ import UIKit
 class FloorMapListViewController: UITableViewController {
     
     class func build() -> FloorMapListViewController {
-        return UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("FloorMapListViewController") as! FloorMapListViewController
+        return UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "FloorMapListViewController") as! FloorMapListViewController
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
     // MARK: - Table View Controller Delegate
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        guard let sectionType = SectionType(rawValue: indexPath.section) else { return }
-        let floorMapZoomableImageViewController = UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("FloorMapZoomableImageViewController") as! FloorMapZoomableImageViewController
-        floorMapZoomableImageViewController.assetCatalogType = sectionType.rows[indexPath.row]
-        self.presentViewController(floorMapZoomableImageViewController, animated: true, completion: nil)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let sectionType = SectionType(rawValue: (indexPath as NSIndexPath).section) else { return }
+        let floorMapZoomableImageViewController = UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "FloorMapZoomableImageViewController") as! FloorMapZoomableImageViewController
+        floorMapZoomableImageViewController.assetCatalogType = sectionType.rows[(indexPath as NSIndexPath).row]
+        self.present(floorMapZoomableImageViewController, animated: true, completion: nil)
     }
     
-    private enum SectionType: Int {
-        case FirstFloor
-        case SecondFloor
-        case ThirdFloor
+    fileprivate enum SectionType: Int {
+        case firstFloor
+        case secondFloor
+        case thirdFloor
         
         var rows: Array<FloorMapZoomableImageViewController.AssetCatalogType> {
             switch self {
-            case .FirstFloor:
-                return [.FirstFloorView]
-            case .SecondFloor:
-                return [.SecondFloorView, .Room201, .Room202, .Room203, .Room204, .Room205]
-            case .ThirdFloor:
-                return [.ThirdFloorView]
+            case .firstFloor:
+                return [.firstFloorView]
+            case .secondFloor:
+                return [.secondFloorView, .room201, .room202, .room203, .room204, .room205]
+            case .thirdFloor:
+                return [.thirdFloorView]
             }
         }
         

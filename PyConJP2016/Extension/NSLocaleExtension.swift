@@ -8,14 +8,14 @@
 
 import UIKit
 
-extension NSLocale {
+extension Locale {
     
     static var currentLanguageLocaleIdentifier: String {
-        return NSBundle.mainBundle().preferredLocalizations.first!
+        return Bundle.main.preferredLocalizations.first!
     }
     
-    static var currentLanguageLocale: NSLocale {
-        return NSLocale(localeIdentifier: NSLocale.currentLanguageLocaleIdentifier)
+    static var currentLanguageLocale: Locale {
+        return Locale(identifier: Locale.currentLanguageLocaleIdentifier)
     }
     
 }

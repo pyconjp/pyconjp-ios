@@ -14,13 +14,13 @@ class SpeakersCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     var speakers: [Speaker] = []
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return speakers.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! SpeakerCollectionViewCell
-        cell.fill(speakers[indexPath.row])
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SpeakerCollectionViewCell
+        cell.fill(speakers[(indexPath as NSIndexPath).row])
         return cell
     }
 }

@@ -18,7 +18,7 @@ class TalkTableViewCell: UITableViewCell {
     
     static let estimatedRowHeight: CGFloat = 134
     
-    func fill(talkObject: TalkObject) {
+    func fill(_ talkObject: TalkObject) {
         titleLabel.text = talkObject.title
         timeLabel.text = talkObject.periodTime
         placeLabel.text = talkObject.place
@@ -33,7 +33,7 @@ class TalkTableViewCell: UITableViewCell {
         timeLabel.text = nil
         placeLabel.text = nil
         speakerLabel.text = nil
-        placeView.backgroundColor = UIColor.darkGrayColor()
+        placeView.backgroundColor = UIColor.darkGray
     }
     
 }

@@ -12,9 +12,9 @@ import RealmSwift
 protocol TalkDetailAPIType: AlamofireType {
     var id: Int? { get set }
     
-    func getTalkDetail(successClosure success: (TalkDetail) -> Void, failClosure fail: (NSError) -> Void) -> Void
-    func getTalkDetail(completionHandler: (Result<TalkDetail, NSError> -> Void)) -> Void
-    func getTalkDetailFromLocalDummyJson(completionHandler: (Result<TalkDetail, NSError> -> Void)) -> Void
+    func getTalkDetail(successClosure success: @escaping (TalkDetail) -> Void, failClosure fail: @escaping (Error) -> Void) -> Void
+    func getTalkDetail(_ completionHandler: @escaping ((Result<TalkDetail>) -> Void)) -> Void
+    func getTalkDetailFromLocalDummyJson(_ completionHandler: ((Result<TalkDetail>) -> Void)) -> Void
 }
 
 extension TalkDetailAPIType {
@@ -28,7 +28,7 @@ extension TalkDetailAPIType {
 
 extension TalkDetailAPIType {
     
-    func getTalkDetail(successClosure success: (TalkDetail) -> Void, failClosure fail: (NSError) -> Void) -> Void {
+    func getTalkDetail(successClosure success: @escaping (TalkDetail) -> Void, failClosure fail: @escaping (Error) -> Void) -> Void {
         get(successClosure: { dictionary in
             let talkDetail = TalkDetail(dictionary: dictionary)
             success(talkDetail)
@@ -37,26 +37,26 @@ extension TalkDetailAPIType {
         })
     }
     
-    func getTalkDetail(completionHandler: (Result<TalkDetail, NSError> -> Void)) -> Void {
+    func getTalkDetail(_ completionHandler: @escaping ((Result<TalkDetail>) -> Void)) -> Void {
         get() { result in
             switch result {
-            case .Success(let value):
+            case .success(let value):
                 let talkDetail = TalkDetail(dictionary: value)
-                completionHandler(.Success(talkDetail))
-            case .Failure(let error):
-                completionHandler(.Failure(error))
+                completionHandler(.success(talkDetail))
+            case .failure(let error):
+                completionHandler(.failure(error))
             }
         }
     }
     
-    func getTalkDetailFromLocalDummyJson(completionHandler: (Result<TalkDetail, NSError> -> Void)) -> Void {
-        let path = NSBundle.mainBundle().pathForResource("DummyTalkDetail", ofType: "json")
-        let fileHandle = NSFileHandle(forReadingAtPath: path!)
+    func getTalkDetailFromLocalDummyJson(_ completionHandler: ((Result<TalkDetail>) -> Void)) -> Void {
+        let path = Bundle.main.path(forResource: "DummyTalkDetail", ofType: "json")
+        let fileHandle = FileHandle(forReadingAtPath: path!)
         let data = fileHandle?.readDataToEndOfFile()
-        let dictionary = try! NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as! Dictionary<String, AnyObject>
+        let dictionary = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! Dictionary<String, AnyObject>
         
         let talkDetail = TalkDetail(dictionary: dictionary)
-        completionHandler(.Success(talkDetail))
+        completionHandler(.success(talkDetail))
         
     }
     

@@ -16,23 +16,23 @@ class TimelineDataSource: NSObject, UITableViewDataSource {
     
     // MARK: - Table View Controller Data Source
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return timelines.count
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return timelines[section].key
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return timelines[section].talks.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as? TalkTableViewCell else {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? TalkTableViewCell else {
             fatalError("Could not create TalkTableViewCell")
         }
-        cell.fill(timelines[indexPath.section].talks[indexPath.row])
+        cell.fill(timelines[(indexPath as NSIndexPath).section].talks[(indexPath as NSIndexPath).row])
         return cell
     }
 }

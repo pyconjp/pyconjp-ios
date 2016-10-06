@@ -12,8 +12,8 @@ class FloorMapZoomableImageViewController: ZoomableImageViewController {
     
     var assetCatalogType: AssetCatalogType?
     
-    func build(assetCatalogType: AssetCatalogType) -> FloorMapZoomableImageViewController {
-        let floorMapImageViewController = UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("FloorMapZoomableImageViewController") as! FloorMapZoomableImageViewController
+    func build(_ assetCatalogType: AssetCatalogType) -> FloorMapZoomableImageViewController {
+        let floorMapImageViewController = UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "FloorMapZoomableImageViewController") as! FloorMapZoomableImageViewController
         floorMapImageViewController.assetCatalogType = assetCatalogType
         return floorMapImageViewController
     }
@@ -32,32 +32,32 @@ class FloorMapZoomableImageViewController: ZoomableImageViewController {
     }
     
     enum AssetCatalogType: String {
-        case FirstFloorView = "FirstFloorMap"
-        case SecondFloorView = "SecondFloorMap"
-        case ThirdFloorView = "ThirdFloorMap"
-        case Room201 = "Room201Map"
-        case Room202 = "Room202Map"
-        case Room203 = "Room203Map"
-        case Room204 = "Room204Map"
-        case Room205 = "Room205Map"
+        case firstFloorView = "FirstFloorMap"
+        case secondFloorView = "SecondFloorMap"
+        case thirdFloorView = "ThirdFloorMap"
+        case room201 = "Room201Map"
+        case room202 = "Room202Map"
+        case room203 = "Room203Map"
+        case room204 = "Room204Map"
+        case room205 = "Room205Map"
         
         var navigationItemTitle: String {
             switch self {
-            case .FirstFloorView:
+            case .firstFloorView:
                 return "1F"
-            case SecondFloorView:
+            case .secondFloorView:
                 return "2F"
-            case ThirdFloorView:
+            case .thirdFloorView:
                 return "3F"
-            case Room201:
+            case .room201:
                 return "Room 201"
-            case Room202:
+            case .room202:
                 return "Room 202"
-            case Room203:
+            case .room203:
                 return "Room 203"
-            case Room204:
+            case .room204:
                 return "Room 204"
-            case Room205:
+            case .room205:
                 return "Room 205"
             }
         }

@@ -14,7 +14,7 @@ class TalkObject: RealmSwift.Object {
     dynamic var title = ""
     dynamic var descriptionText = ""
     dynamic var speakers = ""
-    dynamic var date: NSDate?
+    dynamic var date: Date?
     dynamic var day = ""
     dynamic var startTime = ""
     dynamic var endTime = ""
@@ -29,10 +29,10 @@ class TalkObject: RealmSwift.Object {
         id = dictionary["id"] as? Int ?? 0
         title =  dictionary["title"] as? String ?? ""
         descriptionText = dictionary["description"] as? String ?? ""
-        speakers = (dictionary["speakers"] as? [String] ?? []).enumerate().reduce("") {
-            $0 + $1.element + ((dictionary["speakers"] as? [String] ?? []).count - 1 == $1.index ? "" : ", ")
+        speakers = (dictionary["speakers"] as? [String] ?? []).enumerated().reduce("") {
+            $0 + $1.element + ((dictionary["speakers"] as? [String] ?? []).count - 1 == $1.offset ? "" : ", ")
         }
-        date = NSDate.dateFromString((dictionary["day"] as? String ?? "") + " " + (dictionary["start"] as? String ?? ""))
+        date = Date.dateFromString((dictionary["day"] as? String ?? "") + " " + (dictionary["start"] as? String ?? ""))
         day = dictionary["day"] as? String ?? ""
         startTime = dictionary["start"] as? String ?? ""
         endTime = dictionary["end"] as? String ?? ""
@@ -43,7 +43,7 @@ class TalkObject: RealmSwift.Object {
         
         do {
             let realm = try Realm()
-            if let localTalkObject = (realm.objects(TalkObject).filter("id == %@", id).map { $0 }).first {
+            if let localTalkObject = (realm.objects(TalkObject.self).filter("id == %@", id).map { $0 }).first {
                 favorited = localTalkObject.favorited
             }
         } catch {
@@ -60,7 +60,7 @@ class TalkObject: RealmSwift.Object {
     }
     
     var placeNumber: String {
-        return self.place.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet).last ?? ""
+        return self.place.components(separatedBy: CharacterSet.decimalDigits.inverted).last ?? ""
     }
     
     var room: TalkRoom? {

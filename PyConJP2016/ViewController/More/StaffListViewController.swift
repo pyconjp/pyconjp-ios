@@ -14,9 +14,9 @@ class StaffListViewController: UIViewController, TwitterURLSchemeType, ErrorAler
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             let nib  = UINib(nibName: staffListDataSource.reuseIdentifier, bundle:nil)
-            tableView.registerNib(nib, forCellReuseIdentifier: staffListDataSource.reuseIdentifier)
+            tableView.register(nib, forCellReuseIdentifier: staffListDataSource.reuseIdentifier)
             
-            refreshControl.addTarget(self, action: #selector(StaffListViewController.onRefresh(_:)), forControlEvents: .ValueChanged)
+            refreshControl.addTarget(self, action: #selector(StaffListViewController.onRefresh(_:)), for: .valueChanged)
             tableView.addSubview(refreshControl)
             
             tableView.dataSource = staffListDataSource
@@ -24,12 +24,12 @@ class StaffListViewController: UIViewController, TwitterURLSchemeType, ErrorAler
         }
     }
 
-    private lazy var staffListDataSource: StaffListDataSource = StaffListDataSource(facebookAction: { (url) -> (() -> Void) in { self.facebookAction(url) } }, twitterAction: { (url) -> (() -> Void) in { self.twitterAction(url) } })
+    fileprivate lazy var staffListDataSource: StaffListDataSource = StaffListDataSource(facebookAction: { (url) -> (() -> Void) in { self.facebookAction(url) } }, twitterAction: { (url) -> (() -> Void) in { self.twitterAction(url) } })
     
-    private let refreshControl = UIRefreshControl()
+    fileprivate let refreshControl = UIRefreshControl()
     
     static func build() -> StaffListViewController {
-        return UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("StaffListViewController") as! StaffListViewController
+        return UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "StaffListViewController") as! StaffListViewController
     }
     
     override func viewDidLoad() {
@@ -39,29 +39,29 @@ class StaffListViewController: UIViewController, TwitterURLSchemeType, ErrorAler
         refresh()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
         
     }
     
-    func onRefresh(sender: UIRefreshControl) {
+    func onRefresh(_ sender: UIRefreshControl) {
         refresh()
     }
     
     func refresh() {
         staffListDataSource.refreshData { result in
             switch result {
-            case .Success:
-                dispatch_async(dispatch_get_main_queue()) {
+            case .success:
+                DispatchQueue.main.async {
                     self.tableView.reloadData()
                     self.refreshControl.endRefreshing()
                 }
-            case .Failure(let error):
-                dispatch_async(dispatch_get_main_queue(), {
+            case .failure(let error):
+                DispatchQueue.main.async(execute: {
                     self.showErrorAlartWith(error, parent: self)
                     self.refreshControl.endRefreshing()
                 })
@@ -71,14 +71,14 @@ class StaffListViewController: UIViewController, TwitterURLSchemeType, ErrorAler
     
     // MARK: - StaffTableViewCell Button Action
     
-    private func facebookAction(urlString: String) {
-        guard let url = NSURL(string: urlString) else { return }
-        let safariViewController = SFSafariViewController(URL: url)
-        self.presentViewController(safariViewController, animated: true, completion: nil)
+    fileprivate func facebookAction(_ urlString: String) {
+        guard let url = URL(string: urlString) else { return }
+        let safariViewController = SFSafariViewController(url: url)
+        self.present(safariViewController, animated: true, completion: nil)
     }
     
-    private func twitterAction(urlString: String) {
-        let userName = urlString.stringByReplacingOccurrencesOfString("https://twitter.com/", withString: "")
+    fileprivate func twitterAction(_ urlString: String) {
+        let userName = urlString.replacingOccurrences(of: "https://twitter.com/", with: "")
         openTwitterUser(userName, from: self)
     }
     

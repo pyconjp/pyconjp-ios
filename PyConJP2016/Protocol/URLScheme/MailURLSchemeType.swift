@@ -10,29 +10,29 @@ import UIKit
 
 protocol MailURLSchemeType {
     
-    func mailURLScheme(to: String, subject: String, body: String) -> NSURL?
-    func openMail(to: String, subject: String, body: String)
+    func mailURLScheme(_ to: String, subject: String, body: String) -> URL?
+    func openMail(_ to: String, subject: String, body: String)
 
 }
 
 extension MailURLSchemeType {
     
-    private var urlScheme: NSURL {
-        return NSURL(string: "mailto://")!
+    fileprivate var urlScheme: URL {
+        return URL(string: "mailto://")!
     }
     
 }
 
 extension MailURLSchemeType {
     
-    func mailURLScheme(to: String, subject: String, body: String) -> NSURL? {
-        if !UIApplication.sharedApplication().canOpenURL(urlScheme) { return nil }
-        return NSURL(string: String(format: "mailto:%@?subject=%@&body=%@", arguments: [to, subject.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet())!, body.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet())!]))
+    func mailURLScheme(_ to: String, subject: String, body: String) -> URL? {
+        if !UIApplication.shared.canOpenURL(urlScheme) { return nil }
+        return URL(string: String(format: "mailto:%@?subject=%@&body=%@", arguments: [to, subject.addingPercentEncoding(withAllowedCharacters: CharacterSet.alphanumerics)!, body.addingPercentEncoding(withAllowedCharacters: CharacterSet.alphanumerics)!]))
     }
     
-    func openMail(to: String, subject: String, body: String) {
+    func openMail(_ to: String, subject: String, body: String) {
         guard let url =  mailURLScheme(to, subject: subject, body: body) else { return }
-        UIApplication.sharedApplication().openURL(url)
+        UIApplication.shared.openURL(url)
     }
     
 }

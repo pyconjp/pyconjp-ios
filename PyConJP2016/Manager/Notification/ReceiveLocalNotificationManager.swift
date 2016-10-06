@@ -10,19 +10,19 @@ import UIKit
 
 class ReceiveLocalNotificationManager: NSObject {
     
-    func application(application: UIApplication, didReceiveLocalNotification userInfo: [NSObject : AnyObject]) {
-        guard let type = userInfo["type"] as? String, id = userInfo["id"] as? Int, appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else { return }
+    func application(_ application: UIApplication, didReceiveLocalNotification userInfo: [AnyHashable: Any]) {
+        guard let type = userInfo["type"] as? String, let id = userInfo["id"] as? Int, let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         switch type {
-        case "Talk" where application.applicationState == .Active:
-            let alertController = UIAlertController(title: "", message: "", preferredStyle: .Alert)
-            alertController.addAction(UIAlertAction(title: "閉じる", style: .Default, handler: nil))
-            alertController.addAction(UIAlertAction(title: "詳細へ", style: .Default, handler: {(action) -> Void in
+        case "Talk" where application.applicationState == .active:
+            let alertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "閉じる", style: .default, handler: nil))
+            alertController.addAction(UIAlertAction(title: "詳細へ", style: .default, handler: {(action) -> Void in
                 appDelegate.openTalkDetailViewController(id)
             }))
-            if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
                 appDelegate.showAlert(alertController)
             }
-        case "Talk" where application.applicationState == .Inactive:
+        case "Talk" where application.applicationState == .inactive:
             appDelegate.openTalkDetailViewController(id)
         case "Information":
             break

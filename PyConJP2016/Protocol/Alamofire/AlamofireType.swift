@@ -10,21 +10,16 @@ import UIKit
 import Alamofire
 
 protocol AlamofireType {
-    var alamofireManager: Alamofire.Manager { get }
     var baseURL: String { get }
     var path: String { get }
     var authUser: String { get }
     var authPassword: String { get }
     
-    func get(parameter: Dictionary<String, AnyObject>?, successClosure success: (Dictionary<String, AnyObject>) -> Void, failClosure fail: (NSError) -> Void) -> Void
-    func get(parameter: Dictionary<String, AnyObject>?, completionHandler: (Result<Dictionary<String, AnyObject>, NSError> -> Void)) -> Void
+    func get(_ parameter: Dictionary<String, AnyObject>?, successClosure success: @escaping (Dictionary<String, AnyObject>) -> Void, failClosure fail: @escaping (Error) -> Void) -> Void
+    func get(_ parameter: Dictionary<String, AnyObject>?, completionHandler: @escaping ((Result<Dictionary<String, AnyObject>>) -> Void)) -> Void
 }
 
 extension AlamofireType {
-    
-    var alamofireManager: Alamofire.Manager {
-        return Alamofire.Manager.sharedInstance
-    }
     
     var baseURL: String {
         return PCJConfig.apiURL
@@ -42,36 +37,36 @@ extension AlamofireType {
 
 extension AlamofireType {
     
-    func get(parameter: Dictionary<String, AnyObject>? = nil, successClosure success: (Dictionary<String, AnyObject>) -> Void, failClosure fail: (NSError) -> Void) -> Void {
+    func get(_ parameter: Dictionary<String, AnyObject>? = nil, successClosure success: @escaping (Dictionary<String, AnyObject>) -> Void, failClosure fail: @escaping (Error) -> Void) -> Void {
         let url = baseURL + path
-        let responseClosure = { (response: Response<AnyObject, NSError>) in
+        let responseClosure = { (response: DataResponse<Any>) in
             switch response.result {
-            case .Success:
-                if let responseDicsionary = response.result.value as? Dictionary<String, AnyObject> {
+            case .success(let value):
+                if let responseDicsionary = value as? Dictionary<String, AnyObject> {
                     success(responseDicsionary)
                 }
-            case .Failure(let error):
+            case .failure(let error):
                 fail(error)
             }
         }
         
-        alamofireManager.request(.GET, url, parameters: parameter).authenticate(user: authUser, password: authPassword).responseJSON(completionHandler: responseClosure)
+        Alamofire.request(url, method: .get, parameters: parameter).authenticate(user: authUser, password: authPassword).responseJSON(completionHandler: responseClosure)
     }
     
-    func get(parameter: Dictionary<String, AnyObject>? = nil, completionHandler: (Result<Dictionary<String, AnyObject>, NSError> -> Void)) -> Void {
+    func get(_ parameter: Dictionary<String, AnyObject>? = nil, completionHandler: @escaping ((Result<Dictionary<String, AnyObject>>) -> Void)) -> Void {
         let url = baseURL + path
-        let responseClosure = { (response: Response<AnyObject, NSError>) in
+        let responseClosure = { (response: DataResponse<Any>) in
             switch response.result {
-            case .Success:
-                if let responseDicsionary = response.result.value as? Dictionary<String, AnyObject> {
-                    completionHandler(.Success(responseDicsionary))
+            case .success(let value):
+                if let responseDicsionary = value as? Dictionary<String, AnyObject> {
+                    completionHandler(.success(responseDicsionary))
                 }
-            case .Failure(let error):
-                completionHandler(.Failure(error))
+            case .failure(let error):
+                completionHandler(.failure(error))
             }
         }
         
-        alamofireManager.request(.GET, url, parameters: parameter).authenticate(user: authUser, password: authPassword).responseJSON(completionHandler: responseClosure)
+        Alamofire.request(url, method: .get, parameters: parameter).authenticate(user: authUser, password: authPassword).responseJSON(completionHandler: responseClosure)
     }
     
 }

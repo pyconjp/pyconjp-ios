@@ -10,22 +10,22 @@ import UIKit
 
 class ConferencePageViewController: UIPageViewController, ConferencePageViewProtocol, ErrorAlertType {
     
-    private var conferenceModelViewProtocol: ConferenceModelViewProtocol?
+    fileprivate var conferenceModelViewProtocol: ConferenceModelViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let startingViewController = self.conferenceModelController.viewControllerAtIndex(0, storyboard: self.storyboard!)!
         let viewControllers = [startingViewController]
-        self.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: {done in })
+        self.setViewControllers(viewControllers, direction: .forward, animated: false, completion: {done in })
         
         self.dataSource = self.conferenceModelController
         
     }
     
-    private var _conferenceModelController: ConferenceModelController? = nil
+    fileprivate var _conferenceModelController: ConferenceModelController? = nil
     
-    private var conferenceModelController: ConferenceModelController {
+    fileprivate var conferenceModelController: ConferenceModelController {
         if _conferenceModelController == nil {
             _conferenceModelController = ConferenceModelController()
         }
@@ -36,7 +36,7 @@ class ConferencePageViewController: UIPageViewController, ConferencePageViewProt
         super.didReceiveMemoryWarning()
     }
     
-    override func didMoveToParentViewController(parent: UIViewController?) {
+    override func didMove(toParentViewController parent: UIViewController?) {
         let conferenceBaseViewController = parent as! ConferenceBaseViewController
         self.delegate = conferenceBaseViewController
         conferenceBaseViewController.conferencePageViewProtocol = self
@@ -50,15 +50,15 @@ class ConferencePageViewController: UIPageViewController, ConferencePageViewProt
     
     // MARK: - ConferencePageViewProtocol
     
-    func fowardPage(index: Int) {
-        self.movePage(index, direction: .Forward)
+    func fowardPage(_ index: Int) {
+        self.movePage(index, direction: .forward)
     }
     
-    func reversePage(index: Int) {
-        self.movePage(index, direction: .Reverse)
+    func reversePage(_ index: Int) {
+        self.movePage(index, direction: .reverse)
     }
     
-    private func movePage(index: Int, direction: UIPageViewControllerNavigationDirection) {
+    fileprivate func movePage(_ index: Int, direction: UIPageViewControllerNavigationDirection) {
         let viewController = conferenceModelController.viewControllerAtIndex(index, storyboard: self.storyboard!)!
         let viewControllers = [viewController]
         self.setViewControllers(viewControllers, direction: direction, animated: true, completion: {done in})
