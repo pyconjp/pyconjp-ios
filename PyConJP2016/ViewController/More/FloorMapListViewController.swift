@@ -26,8 +26,7 @@ class FloorMapListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let sectionType = SectionType(rawValue: (indexPath as NSIndexPath).section) else { return }
-        let floorMapZoomableImageViewController = UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "FloorMapZoomableImageViewController") as! FloorMapZoomableImageViewController
-        floorMapZoomableImageViewController.assetCatalogType = sectionType.rows[(indexPath as NSIndexPath).row]
+        let floorMapZoomableImageViewController = FloorMapZoomableImageViewController.build(assetCatalog: sectionType.rows[(indexPath as NSIndexPath).row])
         self.present(floorMapZoomableImageViewController, animated: true, completion: nil)
     }
     
@@ -36,7 +35,7 @@ class FloorMapListViewController: UITableViewController {
         case secondFloor
         case thirdFloor
         
-        var rows: Array<FloorMapZoomableImageViewController.AssetCatalogType> {
+        var rows: Array<FloorMapZoomableImageViewController.AssetCatalog> {
             switch self {
             case .firstFloor:
                 return [.firstFloorView]

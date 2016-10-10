@@ -16,7 +16,7 @@ class SpeakerCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var twitterLabel: UILabel!
     
     override func prepareForReuse() {
-        iconImageView.image = UIImage(named: "Speaker")
+        iconImageView.image = #imageLiteral(resourceName: "Speaker")
         nameLabel.text = nil
         twitterLabel.text = nil
     }

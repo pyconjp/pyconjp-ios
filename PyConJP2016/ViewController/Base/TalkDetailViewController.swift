@@ -141,7 +141,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLS
     }
     
     func toggleBookmarkBarButtonItem(isFavorite: Bool) {
-        let image = isFavorite ? UIImage(named: "BookmarkOn") : UIImage(named: "BookmarkOff")
+        let image = isFavorite ? #imageLiteral(resourceName: "BookmarkOn") : #imageLiteral(resourceName: "BookmarkOff")
         DispatchQueue.main.async {
             self.bookmarkBarButtonItem.image = image
         }
