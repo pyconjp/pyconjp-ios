@@ -64,7 +64,7 @@ class ConferenceDateViewController: UIViewController, ConferenceDateViewProtocol
         
         func changeUnactiveButton(_ button: UIButton) {
             button.isEnabled = true
-            button.backgroundColor = .pyconJP2016GlayColor()
+            button.backgroundColor = UIColor.PyConJP2016.gray
             button.setTitleColor(.white, for: UIControlState())
         }
         

@@ -39,12 +39,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TalksAPIType, ErrorAlertT
             }
         }
         
-        UINavigationBar.appearance().barTintColor = .pyconJP2016RedColor()
+        UINavigationBar.appearance().barTintColor = UIColor.PyConJP2016.red
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
-        UITabBar.appearance().tintColor = UIColor.pyconJP2016BlueColor()
-        UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont.boldSystemFont(ofSize: 10), NSForegroundColorAttributeName: UIColor.pyconJP2016BlueColor()], for: .selected)
+        UITabBar.appearance().tintColor = UIColor.PyConJP2016.blue
+        UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont.boldSystemFont(ofSize: 10), NSForegroundColorAttributeName: UIColor.PyConJP2016.blue], for: .selected)
         
         return true
     }

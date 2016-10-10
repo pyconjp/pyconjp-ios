@@ -38,12 +38,12 @@ class StaffTableViewCell: UITableViewCell {
     
     fileprivate func toggleFacebookButton(enabled: Bool) {
         facebookButton.isEnabled = enabled
-        facebookButton.backgroundColor = enabled ? UIColor.facebookColor() : UIColor.pyconJP2016GlayColor()
+        facebookButton.backgroundColor = enabled ? UIColor.facebook : UIColor.PyConJP2016.gray
     }
     
     fileprivate func toggleTwitterButton(enabled: Bool) {
         twitterButton.isEnabled = enabled
-        twitterButton.backgroundColor = enabled ? UIColor.twitterColor() : UIColor.pyconJP2016GlayColor()
+        twitterButton.backgroundColor = enabled ? UIColor.twitter : UIColor.PyConJP2016.gray
     }
     
     @IBAction func onFacebookButton(_ sender: UIButton) {

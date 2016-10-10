@@ -25,44 +25,32 @@ extension UIColor {
         }
     }
     
-    static func pyconJP2016RedColor() -> UIColor {
-        return UIColor.hexStr("#EB6D9A", alpha: 1)
+}
+
+extension UIColor {
+    
+    struct PyConJP2016 {
+        
+        static var red: UIColor { return #colorLiteral(red: 0.9215686275, green: 0.4274509804, blue: 0.6039215686, alpha: 1) }
+        
+        static var orange: UIColor { return #colorLiteral(red: 0.9450980392, green: 0.6, blue: 0.4588235294, alpha: 1) }
+        
+        static var lightOrange: UIColor { return #colorLiteral(red: 0.9725490196, green: 0.7529411765, blue: 0.3450980392, alpha: 1) }
+        
+        static var yellow: UIColor { return #colorLiteral(red: 1, green: 0.8941176471, blue: 0.3725490196, alpha: 1) }
+        
+        static var lightGreen: UIColor { return #colorLiteral(red: 0.662745098, green: 0.7882352941, blue: 0.3215686275, alpha: 1) }
+        
+        static var green: UIColor { return #colorLiteral(red: 0.5254901961, green: 0.7843137255, blue: 0.6274509804, alpha: 1) }
+        
+        static var blue: UIColor { return #colorLiteral(red: 0.5254901961, green: 0.7843137255, blue: 0.6274509804, alpha: 1) }
+        
+        static var gray: UIColor { return #colorLiteral(red: 0.7843137255, green: 0.7843137255, blue: 0.7843137255, alpha: 1) }
+
     }
     
-    static func pyconJP2016OrangeColor() -> UIColor {
-        return UIColor.hexStr("#F19975", alpha: 1)
-    }
+    static var twitter: UIColor { return #colorLiteral(red: 0.3333333333, green: 0.6745098039, blue: 0.9333333333, alpha: 1) }
     
-    static func pyconJP2016LightOrangeColor() -> UIColor {
-        return UIColor.hexStr("#F8C058", alpha: 1)
-    }
-    
-    static func pyconJP2016YellowColor() -> UIColor {
-        return UIColor.hexStr("#FFE45F", alpha: 1)
-    }
-    
-    static func pyconJP2016LightGreenColor() -> UIColor {
-        return UIColor.hexStr("#A9C952", alpha: 1)
-    }
-    
-    static func pyconJP2016GreenColor() -> UIColor {
-        return UIColor.hexStr("#86C8A0", alpha: 1)
-    }
-    
-    static func pyconJP2016BlueColor() -> UIColor {
-        return UIColor.hexStr("#54C2F0", alpha: 1)
-    }
-    
-    static func pyconJP2016GlayColor() -> UIColor {
-        return UIColor.hexStr("#C8C8C8", alpha: 1)
-    }
-    
-    static func twitterColor() -> UIColor {
-        return UIColor.hexStr("#55ACEE", alpha: 1)
-    }
-    
-    static func facebookColor() -> UIColor {
-        return UIColor.hexStr("#315096", alpha: 1)
-    }
+    static var facebook: UIColor { return #colorLiteral(red: 0.1921568627, green: 0.3137254902, blue: 0.5882352941, alpha: 1) }
     
 }
