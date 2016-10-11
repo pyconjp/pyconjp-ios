@@ -1,5 +1,5 @@
 //
-//  StaffListAPIType.swift
+//  StaffListAPIProtocol.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 9/10/16.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol StaffListAPIType: AlamofireType {
+protocol StaffListAPIProtocol: AlamofireProtocol {
     func getStaffs(completionHandler: @escaping ((Result<Array<Staff>>) -> Void)) -> Void
 }
 
-extension StaffListAPIType {
+extension StaffListAPIProtocol {
     
     var baseURL: String {
         return "https://pyconjp.github.io/"
@@ -24,7 +24,7 @@ extension StaffListAPIType {
     
 }
 
-extension StaffListAPIType {
+extension StaffListAPIProtocol {
     
     func getStaffs(completionHandler: @escaping ((Result<Array<Staff>>) -> Void)) -> Void {
         get() { result in

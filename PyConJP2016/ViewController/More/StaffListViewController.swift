@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-class StaffListViewController: UIViewController, TwitterURLSchemeType, ErrorAlertType {
+class StaffListViewController: UIViewController, TwitterURLSchemeProtocol, ErrorAlertProtocol {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -62,7 +62,7 @@ class StaffListViewController: UIViewController, TwitterURLSchemeType, ErrorAler
                 }
             case .failure(let error):
                 DispatchQueue.main.async(execute: {
-                    self.showErrorAlartWith(error, parent: self)
+                    self.showErrorAlart(with: error, parent: self)
                     self.refreshControl.endRefreshing()
                 })
             }
@@ -79,7 +79,7 @@ class StaffListViewController: UIViewController, TwitterURLSchemeType, ErrorAler
     
     fileprivate func twitterAction(urlString: String) {
         let userName = urlString.replacingOccurrences(of: "https://twitter.com/", with: "")
-        openTwitterUser(userName, from: self)
+        openTwitter(userName: userName, from: self)
     }
     
 }

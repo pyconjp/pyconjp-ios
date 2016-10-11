@@ -1,5 +1,5 @@
 //
-//  TalkDetailAPIType.swift
+//  TalkDetailAPIProtocol.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 7/25/16.
@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-protocol TalkDetailAPIType: AlamofireType {
+protocol TalkDetailAPIProtocol: AlamofireProtocol {
     var id: Int? { get set }
     
     func getTalkDetail(successClosure success: @escaping (TalkDetail) -> Void, failClosure fail: @escaping (Error) -> Void) -> Void
@@ -17,7 +17,7 @@ protocol TalkDetailAPIType: AlamofireType {
     func getTalkDetailFromLocalDummyJson(completionHandler: ((Result<TalkDetail>) -> Void)) -> Void
 }
 
-extension TalkDetailAPIType {
+extension TalkDetailAPIProtocol {
     
     var path: String {
         guard let id = id else { return "" }
@@ -26,7 +26,7 @@ extension TalkDetailAPIType {
     
 }
 
-extension TalkDetailAPIType {
+extension TalkDetailAPIProtocol {
     
     func getTalkDetail(successClosure success: @escaping (TalkDetail) -> Void, failClosure fail: @escaping (Error) -> Void) -> Void {
         get(successClosure: { dictionary in

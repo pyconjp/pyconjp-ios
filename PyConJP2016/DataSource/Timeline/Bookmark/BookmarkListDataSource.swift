@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class BookmarkListDataSource: TimelineDataSource, RealmTalksType {
+class BookmarkListDataSource: TimelineDataSource, RealmTalksProtocol {
     
     let filterPredicate = NSPredicate(format: "favorited == %@", true as CVarArg)
     let sortProperties = [SortDescriptor(property: "date", ascending: true), SortDescriptor(property: "place", ascending: true)]

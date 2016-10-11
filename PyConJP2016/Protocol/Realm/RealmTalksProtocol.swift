@@ -1,5 +1,5 @@
 //
-//  RealmTalksType.swift
+//  RealmTalksProtocol.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 2016/08/18.
@@ -9,14 +9,14 @@
 import UIKit
 import RealmSwift
 
-protocol RealmTalksType {
+protocol RealmTalksProtocol {
     var filterPredicate: NSPredicate { get }
     var sortProperties: Array<SortDescriptor> { get }
     
     func loadTalkObjects(_ completionHandler: ((Result<Array<TalkObject>>) -> Void)) -> Void
 }
 
-extension RealmTalksType {
+extension RealmTalksProtocol {
     
     func loadTalkObjects(_ completionHandler: ((Result<Array<TalkObject>>) -> Void)) -> Void {
         do {

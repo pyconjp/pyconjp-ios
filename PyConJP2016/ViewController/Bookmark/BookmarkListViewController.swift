@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAlertType {
+class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAlertProtocol {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -61,7 +61,7 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAl
                 }
             case .failure(let error):
                 DispatchQueue.main.async {
-                    weakSelf.showErrorAlartWith(error, parent: weakSelf)
+                    weakSelf.showErrorAlart(with: error, parent: weakSelf)
                 }
             }
         }

@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ConferenceListDataSource: TimelineDataSource, RealmTalksType {
+class ConferenceListDataSource: TimelineDataSource, RealmTalksProtocol {
     
     let filterPredicate: NSPredicate
     let sortProperties = [SortDescriptor(property: "date", ascending: true), SortDescriptor(property: "place", ascending: true)]

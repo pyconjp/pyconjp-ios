@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, TalksAPIType, ErrorAlertType {
+class AppDelegate: UIResponder, UIApplicationDelegate, TalksAPIProtocol, ErrorAlertProtocol {
     
     var window: UIWindow?
     
@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TalksAPIType, ErrorAlertT
             case .success:
             	NotificationCenter.default.post(name: Notification.Name(rawValue: PCJNotificationConfig.CompleteFetchDataNotification), object: nil)
             case .failure(let error):
-                self.showErrorAlartWith(error)
+                self.showErrorAlart(with: error)
             }
         }
         

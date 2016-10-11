@@ -1,5 +1,5 @@
 //
-//  AlamofireType.swift
+//  AlamofireProtocol.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 4/21/16.
@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-protocol AlamofireType {
+protocol AlamofireProtocol {
     var baseURL: String { get }
     var path: String { get }
     var authUser: String { get }
@@ -19,7 +19,7 @@ protocol AlamofireType {
     func get(parameter: Dictionary<String, AnyObject>?, completionHandler: @escaping ((Result<Dictionary<String, AnyObject>>) -> Void)) -> Void
 }
 
-extension AlamofireType {
+extension AlamofireProtocol {
     
     var baseURL: String {
         return PCJConfig.apiURL
@@ -35,7 +35,7 @@ extension AlamofireType {
     
 }
 
-extension AlamofireType {
+extension AlamofireProtocol {
     
     func get(parameter: Dictionary<String, AnyObject>? = nil, successClosure success: @escaping (Dictionary<String, AnyObject>) -> Void, failClosure fail: @escaping (Error) -> Void) -> Void {
         let url = baseURL + path

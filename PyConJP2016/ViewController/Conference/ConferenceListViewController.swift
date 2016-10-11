@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConferenceListViewController: UIViewController, UITableViewDelegate, TalksAPIType, ErrorAlertType {
+class ConferenceListViewController: UIViewController, UITableViewDelegate, TalksAPIProtocol, ErrorAlertProtocol {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -71,7 +71,7 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
                 weakSelf.refresh()
             case .failure(let error):
                 weakSelf.refreshControl.endRefreshing()
-                weakSelf.showErrorAlartWith(error, parent: weakSelf)
+                weakSelf.showErrorAlart(with: error, parent: weakSelf)
             }
         }
     }
@@ -93,7 +93,7 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
                 }
             case .failure(let error):
                 DispatchQueue.main.async {
-                    weakSelf.showErrorAlartWith(error, parent: weakSelf)
+                    weakSelf.showErrorAlart(with: error, parent: weakSelf)
                     weakSelf.refreshControl.endRefreshing()
                 }
             }

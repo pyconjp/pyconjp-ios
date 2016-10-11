@@ -71,7 +71,7 @@ class MoreListViewController: UITableViewController {
         
     }
     
-    fileprivate enum RowType: MailURLSchemeType {
+    fileprivate enum RowType: MailURLSchemeProtocol {
         case participantsInformation
         case whatsPyConJP
         case codeOfConduct
@@ -111,7 +111,7 @@ class MoreListViewController: UITableViewController {
         
         var urlSheme: URL? {
             switch self {
-            case .feedback: return mailURLScheme(PCJConfig.mailAddress,
+            case .feedback: return mailURLScheme(to: PCJConfig.mailAddress,
                                                  subject: "Feedback for PyCon JP 2016 App",
                                                  body: String(format: "iOS version: %@\nDevice Model: %@\nReply-to:\n\nFeedback:", arguments: [UIDevice.current.systemVersion, UIDevice.current.modelType]))
             default: return nil

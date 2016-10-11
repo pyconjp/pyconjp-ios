@@ -10,7 +10,7 @@ import UIKit
 import SafariServices
 import RealmSwift
 
-class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLSchemeType, ErrorAlertType {
+class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, TwitterURLSchemeProtocol, ErrorAlertProtocol {
     
     @IBOutlet weak var baseScrollView: UIScrollView! {
         didSet {
@@ -108,7 +108,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLS
                 weakSelf.refreshControl.endRefreshing()
             case .failure(let error):
                 weakSelf.refreshControl.endRefreshing()
-                weakSelf.showErrorAlartWith(error, parent: weakSelf)
+                weakSelf.showErrorAlart(with: error, parent: weakSelf)
             }
         }
     }
@@ -167,11 +167,11 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLS
     
     @IBAction func onHashTagButton(_ sender: UIButton) {
         let hashTag = (talkDetail?.talkObject.room?.hashTag ?? "pyconjp").replacingOccurrences(of: "#", with: "")
-        openTwitterHashTag(hashTag, from: self)
+        openTwitter(hashTag: hashTag, from: self)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: IndexPath) {
         guard let userName = speakersCollectionViewDataSource.speakers[(indexPath as NSIndexPath).row].twitterName else { return }
-        openTwitterUser(userName, from: self)
+        openTwitter(userName: userName, from: self)
     }
 }

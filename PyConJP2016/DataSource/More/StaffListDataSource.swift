@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StaffListDataSource: NSObject, UITableViewDataSource, StaffListAPIType {
+class StaffListDataSource: NSObject, UITableViewDataSource, StaffListAPIProtocol {
     
     let reuseIdentifier = "StaffTableViewCell"
     

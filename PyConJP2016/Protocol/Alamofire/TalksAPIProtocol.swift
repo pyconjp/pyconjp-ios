@@ -1,5 +1,5 @@
 //
-//  TalksAPIType.swift
+//  TalksAPIProtocol.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 4/23/16.
@@ -9,13 +9,13 @@
 import UIKit
 import RealmSwift
 
-protocol TalksAPIType: AlamofireType {
+protocol TalksAPIProtocol: AlamofireProtocol {
     func getTalks(successClosure success: @escaping () -> Void, failClosure fail: @escaping (Error) -> Void) -> Void
     func getTalks(completionHandler: @escaping ((Result<Void>) -> Void)) -> Void
     func getTalksFromLocalDummyJson(completionHandler: ((Result<Void>) -> Void)) -> Void
 }
 
-extension TalksAPIType {
+extension TalksAPIProtocol {
     
     var path: String {
         return "talks/list/"
@@ -23,7 +23,7 @@ extension TalksAPIType {
     
 }
 
-extension TalksAPIType {
+extension TalksAPIProtocol {
     
     func getTalks(successClosure success: @escaping () -> Void, failClosure fail: @escaping (Error) -> Void) -> Void {
         get(successClosure: { dictionary in

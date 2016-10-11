@@ -1,5 +1,5 @@
 //
-//  TwitterURLSchemeType.swift
+//  TwitterURLSchemeProtocol.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 9/11/16.
@@ -9,20 +9,20 @@
 import UIKit
 import SafariServices
 
-protocol TwitterURLSchemeType {
+protocol TwitterURLSchemeProtocol {
     
-    func openTwitterUser(_ userName: String, from viewController: UIViewController, alertBefore: Bool) -> Void
-    func openTwitterHashTag(_ hashTag: String, from viewController: UIViewController, alertBefore: Bool) -> Void
+    func openTwitter(userName: String, from viewController: UIViewController, alertBefore: Bool) -> Void
+    func openTwitter(hashTag: String, from viewController: UIViewController, alertBefore: Bool) -> Void
 
 }
 
-extension TwitterURLSchemeType {
+extension TwitterURLSchemeProtocol {
     
     fileprivate var urlScheme: URL {
         return URL(string: "twitter://")!
     }
     
-    fileprivate func openTwitterAppWithAlert(_ targetName: String, url: URL, from viewController: UIViewController) {
+    fileprivate func openTwitterAppWithAlert(targetName: String, url: URL, from viewController: UIViewController) {
         let alertController = UIAlertController(title: NSLocalizedString("TwitterAlertTitle", tableName: "URLScheme", comment: ""),
                                                 message: String(format: NSLocalizedString("TwitterAlertMessage", tableName: "URLScheme", comment: ""), arguments: [targetName]),
                                                 preferredStyle: .alert)
@@ -35,13 +35,13 @@ extension TwitterURLSchemeType {
     
 }
 
-extension TwitterURLSchemeType {
+extension TwitterURLSchemeProtocol {
     
-    func openTwitterUser(_ userName: String, from viewController: UIViewController, alertBefore: Bool = false) -> Void {
+    func openTwitter(userName: String, from viewController: UIViewController, alertBefore: Bool = false) -> Void {
         if UIApplication.shared.canOpenURL(urlScheme) {
             guard let url = URL(string: "twitter://user?screen_name=" + userName) else { return }
             if alertBefore {
-                openTwitterAppWithAlert("@\(userName)", url: url, from: viewController)
+                openTwitterAppWithAlert(targetName: "@\(userName)", url: url, from: viewController)
             } else {
                 UIApplication.shared.openURL(url)
             }
@@ -52,11 +52,11 @@ extension TwitterURLSchemeType {
         }
     }
     
-    func openTwitterHashTag(_ hashTag: String, from viewController: UIViewController, alertBefore: Bool = false) -> Void {
+    func openTwitter(hashTag: String, from viewController: UIViewController, alertBefore: Bool = false) -> Void {
         if UIApplication.shared.canOpenURL(urlScheme) {
             guard let url = URL(string: "twitter://search?query=%23" + hashTag) else { return }
             if alertBefore {
-                openTwitterAppWithAlert("#\(hashTag)", url: url, from: viewController)
+                openTwitterAppWithAlert(targetName: "#\(hashTag)", url: url, from: viewController)
             } else {
                 UIApplication.shared.openURL(url)
             }

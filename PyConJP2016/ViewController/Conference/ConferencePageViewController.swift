@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConferencePageViewController: UIPageViewController, ConferencePageViewProtocol, ErrorAlertType {
+class ConferencePageViewController: UIPageViewController, ConferencePageViewProtocol, ErrorAlertProtocol {
     
     fileprivate var conferenceModelViewProtocol: ConferenceModelViewProtocol?
     
