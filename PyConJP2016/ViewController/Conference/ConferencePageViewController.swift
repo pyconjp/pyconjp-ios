@@ -10,7 +10,7 @@ import UIKit
 
 class ConferencePageViewController: UIPageViewController, ConferencePageViewProtocol, ErrorAlertProtocol {
     
-    fileprivate var conferenceModelViewProtocol: ConferenceModelViewProtocol?
+    private var conferenceModelViewProtocol: ConferenceModelViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +23,9 @@ class ConferencePageViewController: UIPageViewController, ConferencePageViewProt
         
     }
     
-    fileprivate var _conferenceModelController: ConferenceModelController? = nil
+    private var _conferenceModelController: ConferenceModelController? = nil
     
-    fileprivate var conferenceModelController: ConferenceModelController {
+    private var conferenceModelController: ConferenceModelController {
         if _conferenceModelController == nil {
             _conferenceModelController = ConferenceModelController()
         }
@@ -58,7 +58,7 @@ class ConferencePageViewController: UIPageViewController, ConferencePageViewProt
         self.movePage(index: index, direction: .reverse)
     }
     
-    fileprivate func movePage(index: Int, direction: UIPageViewControllerNavigationDirection) {
+    private func movePage(index: Int, direction: UIPageViewControllerNavigationDirection) {
         let viewController = conferenceModelController.viewController(index: index, storyboard: self.storyboard!)!
         let viewControllers = [viewController]
         self.setViewControllers(viewControllers, direction: direction, animated: true, completion: {done in})

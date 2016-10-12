@@ -35,7 +35,7 @@ class MapListViewController: UITableViewController {
         }
     }
     
-    fileprivate enum TableViewCell: Int {
+    private enum TableViewCell: Int {
         case access =  0
         case floor = 1
     }

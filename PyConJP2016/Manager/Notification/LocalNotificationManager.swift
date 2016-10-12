@@ -25,7 +25,7 @@ class LocalNotificationManager: NSObject {
         }
     }
     
-    fileprivate func schedule(talkDetail: TalkDetail) {
+    private func schedule(talkDetail: TalkDetail) {
         
         guard let date = talkDetail.talkObject.date else { return }
         

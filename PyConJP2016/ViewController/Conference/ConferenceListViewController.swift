@@ -24,12 +24,12 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
         }
     }
     
-    fileprivate(set) var viewControllerIndex: Int = 0
-    fileprivate(set) var pyconJPDate: PyConJPDate?
+    private(set) var viewControllerIndex: Int = 0
+    private(set) var pyconJPDate: PyConJPDate?
     
-    fileprivate lazy var conferenceListDataSource: ConferenceListDataSource = ConferenceListDataSource(day: self.pyconJPDate?.rawValue)
+    private lazy var conferenceListDataSource: ConferenceListDataSource = ConferenceListDataSource(day: self.pyconJPDate?.rawValue)
     
-    fileprivate let refreshControl = UIRefreshControl()
+    private let refreshControl = UIRefreshControl()
     
     deinit {
         NotificationCenter.default.removeObserver(self)

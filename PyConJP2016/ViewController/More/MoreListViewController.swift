@@ -53,7 +53,7 @@ class MoreListViewController: UITableViewController {
         }
     }
     
-    fileprivate enum SectionType: Int {
+    private enum SectionType: Int {
         case about
         case map
         case application
@@ -71,7 +71,7 @@ class MoreListViewController: UITableViewController {
         
     }
     
-    fileprivate enum RowType: MailURLSchemeProtocol {
+    private enum RowType: MailURLSchemeProtocol {
         case participantsInformation
         case whatsPyConJP
         case codeOfConduct

@@ -17,13 +17,9 @@ protocol MailURLSchemeProtocol {
 
 extension MailURLSchemeProtocol {
     
-    fileprivate var urlScheme: URL {
+    private var urlScheme: URL {
         return URL(string: "mailto://")!
     }
-    
-}
-
-extension MailURLSchemeProtocol {
     
     func mailURLScheme(to address: String, subject: String, body: String) -> URL? {
         if !UIApplication.shared.canOpenURL(urlScheme) { return nil }

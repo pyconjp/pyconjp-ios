@@ -14,7 +14,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var mapView: MKMapView!
     
-    fileprivate var venue: Venue?
+    private var venue: Venue?
     
     class func build(venue: Venue) -> MapViewController {
         let mapViewController = UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "MapViewController") as! MapViewController

@@ -15,7 +15,7 @@ class ZoomableImageViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var baseScrollView: UIScrollView?
     @IBOutlet weak var imageView: UIImageView?
     
-    fileprivate var isCompletedLayoutSubviews = false
+    private var isCompletedLayoutSubviews = false
     
     class func build() -> ZoomableImageViewController {
         return UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ZoomableImageViewController") as! ZoomableImageViewController
@@ -47,7 +47,7 @@ class ZoomableImageViewController: UIViewController, UIScrollViewDelegate {
         toggleToolBarHiddenWithAnimation(false)
     }
     
-    fileprivate func toggleToolBarHiddenWithAnimation(_ toHidden: Bool) {
+    private func toggleToolBarHiddenWithAnimation(_ toHidden: Bool) {
         if toHidden {
             UIView.animate(withDuration: 0.2, animations: {
                 self.toolBar.alpha = 0

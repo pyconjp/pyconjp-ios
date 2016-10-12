@@ -13,16 +13,16 @@ protocol TwitterURLSchemeProtocol {
     
     func openTwitter(userName: String, from viewController: UIViewController, alertBefore: Bool) -> Void
     func openTwitter(hashTag: String, from viewController: UIViewController, alertBefore: Bool) -> Void
-
+    
 }
 
 extension TwitterURLSchemeProtocol {
     
-    fileprivate var urlScheme: URL {
+    private var urlScheme: URL {
         return URL(string: "twitter://")!
     }
     
-    fileprivate func openTwitterAppWithAlert(targetName: String, url: URL, from viewController: UIViewController) {
+    private func openTwitterAppWithAlert(targetName: String, url: URL, from viewController: UIViewController) {
         let alertController = UIAlertController(title: NSLocalizedString("TwitterAlertTitle", tableName: "URLScheme", comment: ""),
                                                 message: String(format: NSLocalizedString("TwitterAlertMessage", tableName: "URLScheme", comment: ""), arguments: [targetName]),
                                                 preferredStyle: .alert)
@@ -32,10 +32,6 @@ extension TwitterURLSchemeProtocol {
         alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
         viewController.present(alertController, animated: true, completion: nil)
     }
-    
-}
-
-extension TwitterURLSchemeProtocol {
     
     func openTwitter(userName: String, from viewController: UIViewController, alertBefore: Bool = false) -> Void {
         if UIApplication.shared.canOpenURL(urlScheme) {

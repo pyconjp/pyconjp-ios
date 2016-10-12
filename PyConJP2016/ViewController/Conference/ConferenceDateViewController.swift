@@ -14,9 +14,9 @@ class ConferenceDateViewController: UIViewController, ConferenceDateViewProtocol
     @IBOutlet weak var day1Button: UIButton!
     @IBOutlet weak var day2Button: UIButton!
     
-    fileprivate var buttonOriginXArray: [CGFloat] = []
+    private var buttonOriginXArray: [CGFloat] = []
     
-    fileprivate var conferencePageViewProtocol: ConferencePageViewProtocol?
+    private var conferencePageViewProtocol: ConferencePageViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()

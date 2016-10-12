@@ -39,7 +39,7 @@ class AcknowledgmentsListViewController: UITableViewController {
         }
     }
     
-    fileprivate enum RowType: Int {
+    private enum RowType: Int {
         case alamofire =  0
         case alamofireImage = 1
         case realmSwift = 2

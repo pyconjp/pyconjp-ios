@@ -28,7 +28,7 @@ class EventsListViewController: UITableViewController {
         self.present(safariViewController, animated: true, completion: nil)
     }
     
-    fileprivate enum SectionType: Int {
+    private enum SectionType: Int {
         case tutorialsDay
         case conferenseDay
         case sprintsDay
@@ -46,7 +46,7 @@ class EventsListViewController: UITableViewController {
         
     }
     
-    fileprivate enum RowType {
+    private enum RowType {
         case tutorial
         
         case keynote

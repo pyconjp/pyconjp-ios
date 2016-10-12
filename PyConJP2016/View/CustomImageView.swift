@@ -13,8 +13,8 @@ class CustomImageView: UIImageView {
     //* Gesture Enabled Whether or not */
     var gestureEnabled = true
     
-    fileprivate var beforePoint = CGPoint(x: 0.0, y: 0.0)
-    fileprivate var currentScale: CGFloat = 1.0
+    private var beforePoint = CGPoint(x: 0.0, y: 0.0)
+    private var currentScale: CGFloat = 1.0
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -55,7 +55,7 @@ class CustomImageView: UIImageView {
         }
     }
     
-    fileprivate func pinch(gesture: UIPinchGestureRecognizer) {
+    private func pinch(gesture: UIPinchGestureRecognizer) {
         if gestureEnabled {
             var scale = gesture.scale
             if currentScale > 1.0 {
@@ -83,7 +83,7 @@ class CustomImageView: UIImageView {
         }
     }
     
-    fileprivate func pan(gesture: UIPanGestureRecognizer) {
+    private func pan(gesture: UIPanGestureRecognizer) {
         if currentScale == 1.0 { return }
         if let gestureView = gesture.view, gestureEnabled {
             

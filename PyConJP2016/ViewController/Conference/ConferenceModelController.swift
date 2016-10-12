@@ -10,7 +10,7 @@ import UIKit
 
 class ConferenceModelController: NSObject, UIPageViewControllerDataSource {
     
-    fileprivate let days: Array<PyConJPDate> = PyConJPDate.confarenceDate()
+    private let days: Array<PyConJPDate> = PyConJPDate.confarenceDate()
     
     override init() {
         super.init()

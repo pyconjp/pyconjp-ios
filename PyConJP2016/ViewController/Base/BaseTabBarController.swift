@@ -10,9 +10,9 @@ import UIKit
 
 class BaseTabBarController: UITabBarController {
     
-    fileprivate var eventsTabNavigationController: UINavigationController?
-    fileprivate var conferenceTabNavigationController: UINavigationController?
-    fileprivate var moreTabNavigationController: UINavigationController?
+    private var eventsTabNavigationController: UINavigationController?
+    private var conferenceTabNavigationController: UINavigationController?
+    private var moreTabNavigationController: UINavigationController?
     
     override func viewDidLoad() {
         super.viewDidLoad()

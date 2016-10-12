@@ -13,7 +13,7 @@ class PCJWKWebViewController: UIViewController, WKNavigationDelegate, WKUIDelega
     
     @IBOutlet weak var webContentView: UIView!
     
-    fileprivate var url: String = ""
+    private var url: String = ""
     
     class func build(url: String) -> PCJWKWebViewController {
         let pcjWKWebViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PCJWKWebViewController") as! PCJWKWebViewController

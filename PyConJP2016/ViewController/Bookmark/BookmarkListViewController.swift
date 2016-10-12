@@ -20,7 +20,7 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAl
         }
     }
     
-    fileprivate let bookmarkListDataSource = BookmarkListDataSource()
+    private let bookmarkListDataSource = BookmarkListDataSource()
     
     deinit {
         NotificationCenter.default.removeObserver(self)

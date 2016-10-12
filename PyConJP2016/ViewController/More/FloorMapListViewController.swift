@@ -30,7 +30,7 @@ class FloorMapListViewController: UITableViewController {
         self.present(floorMapZoomableImageViewController, animated: true, completion: nil)
     }
     
-    fileprivate enum SectionType: Int {
+    private enum SectionType: Int {
         case firstFloor
         case secondFloor
         case thirdFloor

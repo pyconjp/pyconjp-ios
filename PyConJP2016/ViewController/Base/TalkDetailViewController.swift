@@ -47,7 +47,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
     @IBOutlet weak var abstractTextView: UITextView!
     
     var id: Int?
-    fileprivate var talkDetail: TalkDetail? {
+    private var talkDetail: TalkDetail? {
         didSet {
             if let talkDetail = talkDetail {
                 speakersCollectionViewDataSource.speakers = talkDetail.speakers
@@ -57,11 +57,11 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
         }
     }
     
-    fileprivate let refreshControl = UIRefreshControl()
+    private let refreshControl = UIRefreshControl()
     
-    fileprivate let speakersCollectionViewDataSource = SpeakersCollectionViewDataSource()
+    private let speakersCollectionViewDataSource = SpeakersCollectionViewDataSource()
     
-    fileprivate lazy var speakersCollectionViewHeight: CGFloat = self.speakersCollectionViewHeightConstraint.constant
+    private lazy var speakersCollectionViewHeight: CGFloat = self.speakersCollectionViewHeightConstraint.constant
     
     class func build(id: Int) -> TalkDetailViewController {
         let talkDetailViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TalkDetailViewController") as! TalkDetailViewController
@@ -98,7 +98,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
         getDetail()
     }
     
-    fileprivate func getDetail() {
+    private func getDetail() {
         getTalkDetail { [weak self](result) in
             guard let weakSelf = self else { return }
             switch result {
@@ -113,7 +113,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
         }
     }
     
-    fileprivate func fillData() {
+    private func fillData() {
         guard let talkDetail = talkDetail else { return }
         DispatchQueue.main.async {
             self.titleLabel.text = talkDetail.talkObject.title

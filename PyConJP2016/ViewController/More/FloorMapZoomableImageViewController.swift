@@ -10,7 +10,7 @@ import UIKit
 
 class FloorMapZoomableImageViewController: ZoomableImageViewController {
     
-    fileprivate var assetCatalog: AssetCatalog?
+    private var assetCatalog: AssetCatalog?
     
     static func build(assetCatalog: AssetCatalog) -> FloorMapZoomableImageViewController {
         let floorMapImageViewController = UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "FloorMapZoomableImageViewController") as! FloorMapZoomableImageViewController

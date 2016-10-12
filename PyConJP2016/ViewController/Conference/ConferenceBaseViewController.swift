@@ -16,13 +16,13 @@ class ConferenceBaseViewController: UIViewController, UIPageViewControllerDelega
     var conferenceDateViewProtocol: ConferenceDateViewProtocol?
     var conferencePageViewProtocol: ConferencePageViewProtocol?
     
-    fileprivate var offsetToChange: CGFloat = 0.0 {
+    private var offsetToChange: CGFloat = 0.0 {
         didSet {
             
         }
     }
     
-    fileprivate var displayIndex: Int = 0 {
+    private var displayIndex: Int = 0 {
         didSet {
             if let conferenceDateViewProtocol = conferenceDateViewProtocol {
                 conferenceDateViewProtocol.changeActive(index: displayIndex)

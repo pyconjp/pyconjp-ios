@@ -17,8 +17,8 @@ class StaffTableViewCell: UITableViewCell {
     
     static let estimatedRowHeight: CGFloat = 100
     
-    fileprivate var facebookAction: (() -> Void)?
-    fileprivate var twitterAction: (() -> Void)?
+    private var facebookAction: (() -> Void)?
+    private var twitterAction: (() -> Void)?
     
     override func prepareForReuse() {
         nameLabel.text = nil
@@ -36,12 +36,12 @@ class StaffTableViewCell: UITableViewCell {
         twitterAction = onTwitterButton
     }
     
-    fileprivate func toggleFacebookButton(enabled: Bool) {
+    private func toggleFacebookButton(enabled: Bool) {
         facebookButton.isEnabled = enabled
         facebookButton.backgroundColor = enabled ? UIColor.facebook : UIColor.PyConJP2016.gray
     }
     
-    fileprivate func toggleTwitterButton(enabled: Bool) {
+    private func toggleTwitterButton(enabled: Bool) {
         twitterButton.isEnabled = enabled
         twitterButton.backgroundColor = enabled ? UIColor.twitter : UIColor.PyConJP2016.gray
     }
