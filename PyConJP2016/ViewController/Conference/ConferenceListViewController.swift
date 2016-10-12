@@ -35,7 +35,7 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
         NotificationCenter.default.removeObserver(self)
     }
     
-    class func build(_ index: Int, storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ConferenceListViewController {
+    class func build(at index: Int, storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ConferenceListViewController {
         let conferenceListViewController = storyboard.instantiateViewController(withIdentifier: "ConferenceListViewController") as! ConferenceListViewController
         conferenceListViewController.viewControllerIndex = index
         conferenceListViewController.pyconJPDate = pyconJPDate

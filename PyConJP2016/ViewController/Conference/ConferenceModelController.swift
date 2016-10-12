@@ -22,7 +22,7 @@ class ConferenceModelController: NSObject, UIPageViewControllerDataSource {
             return nil
         }
         
-        let conferenceListViewController = ConferenceListViewController.build(index, storyboard: storyboard, pyconJPDate: days[index])
+        let conferenceListViewController = ConferenceListViewController.build(at: index, storyboard: storyboard, pyconJPDate: days[index])
         return conferenceListViewController
         
     }
