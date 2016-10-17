@@ -8,16 +8,16 @@
 
 import UIKit
 
-class ConferencePageViewController: UIPageViewController, ConferencePageViewProtocol, ErrorAlertType {
+class ConferencePageViewController: UIPageViewController, ConferencePageViewProtocol, ErrorAlertProtocol {
     
     private var conferenceModelViewProtocol: ConferenceModelViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let startingViewController = self.conferenceModelController.viewControllerAtIndex(0, storyboard: self.storyboard!)!
+        let startingViewController = self.conferenceModelController.viewController(index: 0, storyboard: self.storyboard!)!
         let viewControllers = [startingViewController]
-        self.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: {done in })
+        self.setViewControllers(viewControllers, direction: .forward, animated: false, completion: {done in })
         
         self.dataSource = self.conferenceModelController
         
@@ -36,7 +36,7 @@ class ConferencePageViewController: UIPageViewController, ConferencePageViewProt
         super.didReceiveMemoryWarning()
     }
     
-    override func didMoveToParentViewController(parent: UIViewController?) {
+    override func didMove(toParentViewController parent: UIViewController?) {
         let conferenceBaseViewController = parent as! ConferenceBaseViewController
         self.delegate = conferenceBaseViewController
         conferenceBaseViewController.conferencePageViewProtocol = self
@@ -51,15 +51,15 @@ class ConferencePageViewController: UIPageViewController, ConferencePageViewProt
     // MARK: - ConferencePageViewProtocol
     
     func fowardPage(index: Int) {
-        self.movePage(index, direction: .Forward)
+        self.movePage(index: index, direction: .forward)
     }
     
     func reversePage(index: Int) {
-        self.movePage(index, direction: .Reverse)
+        self.movePage(index: index, direction: .reverse)
     }
     
     private func movePage(index: Int, direction: UIPageViewControllerNavigationDirection) {
-        let viewController = conferenceModelController.viewControllerAtIndex(index, storyboard: self.storyboard!)!
+        let viewController = conferenceModelController.viewController(index: index, storyboard: self.storyboard!)!
         let viewControllers = [viewController]
         self.setViewControllers(viewControllers, direction: direction, animated: true, completion: {done in})
     }

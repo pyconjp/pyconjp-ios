@@ -14,11 +14,11 @@ class LocalNotificationManager: NSObject {
         
         guard let date = talkDetail.talkObject.date else { return false }
         
-        let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)
-        let fireDate = calendar?.dateByAddingUnit(.Minute, value: -10, toDate: date, options: NSCalendarOptions())
+        let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
+        let fireDate = (calendar as NSCalendar?)?.date(byAdding: .minute, value: -10, to: date as Date, options: NSCalendar.Options())
         
         if fireDate!.timeIntervalSinceNow > 0 {
-            self.schedule(talkDetail)
+            self.schedule(talkDetail: talkDetail)
             return true
         } else {
             return false
@@ -29,26 +29,26 @@ class LocalNotificationManager: NSObject {
         
         guard let date = talkDetail.talkObject.date else { return }
         
-        let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)
-        let fireDate =  calendar?.dateByAddingUnit(.Minute, value: -10, toDate: date, options: NSCalendarOptions())
-        let userInfo = ["type": "Talk", "id": talkDetail.talkObject.id] as [NSObject : AnyObject]
+        let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
+        let fireDate =  (calendar as NSCalendar?)?.date(byAdding: .minute, value: -10, to: date as Date, options: NSCalendar.Options())
+        let userInfo = ["type": "Talk", "id": talkDetail.talkObject.id] as [AnyHashable: Any]
         
         let notificaiton = UILocalNotification()
         notificaiton.fireDate = fireDate
-        notificaiton.timeZone = NSTimeZone.systemTimeZone()
+        notificaiton.timeZone = TimeZone.current
         notificaiton.alertBody = "10分後に \" \(talkDetail.talkObject.title) \" が開始します。 \(talkDetail.talkObject.place)"
         notificaiton.userInfo = userInfo
         
-        UIApplication.sharedApplication().scheduleLocalNotification(notificaiton)
+        UIApplication.shared.scheduleLocalNotification(notificaiton)
         
     }
     
     func cancelSchedule(talkDetail: TalkDetail) {
-        if let localNotifications = UIApplication.sharedApplication().scheduledLocalNotifications {
+        if let localNotifications = UIApplication.shared.scheduledLocalNotifications {
             localNotifications.forEach({ (notification) -> () in
                 if let userInfo = notification.userInfo {
                     if userInfo["id"] as! Int == talkDetail.talkObject.id {
-                        UIApplication.sharedApplication().cancelLocalNotification(notification)
+                        UIApplication.shared.cancelLocalNotification(notification)
                     }
                 }
             })

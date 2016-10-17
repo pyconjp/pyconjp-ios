@@ -27,11 +27,11 @@ enum TalkRoom: String {
     
     var color: UIColor {
         switch self {
-        case .Room201: return UIColor.pyconJP2016OrangeColor()
-        case .Room202: return UIColor.pyconJP2016LightOrangeColor()
-        case .Room203: return UIColor.pyconJP2016YellowColor()
-        case .Room204: return UIColor.pyconJP2016LightGreenColor()
-        case .Room205: return UIColor.pyconJP2016GreenColor()
+        case .Room201: return UIColor.PyConJP2016.orange
+        case .Room202: return UIColor.PyConJP2016.lightOrange
+        case .Room203: return UIColor.PyConJP2016.yellow
+        case .Room204: return UIColor.PyConJP2016.lightGreen
+        case .Room205: return UIColor.PyConJP2016.green
         }
     }
     

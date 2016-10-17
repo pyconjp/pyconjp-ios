@@ -16,36 +16,36 @@ class ConferenceModelController: NSObject, UIPageViewControllerDataSource {
         super.init()
     }
     
-    func viewControllerAtIndex(index: Int, storyboard: UIStoryboard) -> ConferenceListViewController? {
+    func viewController(index: Int, storyboard: UIStoryboard) -> ConferenceListViewController? {
         
         if self.days.isEmpty || index >= days.count {
             return nil
         }
         
-        let conferenceListViewController = ConferenceListViewController.build(index, storyboard: storyboard, pyconJPDate: days[index])
+        let conferenceListViewController = ConferenceListViewController.build(at: index, storyboard: storyboard, pyconJPDate: days[index])
         return conferenceListViewController
         
     }
     
     func indexOfViewController(viewController: UIViewController) -> Int {
-        guard let viewController = viewController as? ConferenceListViewController, pyconJPDate = viewController.pyconJPDate else { return NSNotFound }
-        return days.indexOf(pyconJPDate) ?? NSNotFound
+        guard let viewController = viewController as? ConferenceListViewController, let pyconJPDate = viewController.pyconJPDate else { return NSNotFound }
+        return days.index(of: pyconJPDate) ?? NSNotFound
     }
     
     // MARK: - Page View Controller Data Source
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        var index = self.indexOfViewController(viewController)
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        var index = self.indexOfViewController(viewController: viewController)
         if (index == 0) || (index == NSNotFound) {
             return nil
         }
         
         index -= 1
-        return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
+        return self.viewController(index: index, storyboard: viewController.storyboard!)
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        var index = self.indexOfViewController(viewController)
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        var index = self.indexOfViewController(viewController: viewController)
         if index == NSNotFound {
             return nil
         }
@@ -55,6 +55,6 @@ class ConferenceModelController: NSObject, UIPageViewControllerDataSource {
             return nil
         }
         
-        return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
+        return self.viewController(index: index, storyboard: viewController.storyboard!)
     }
 }

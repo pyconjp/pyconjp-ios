@@ -12,49 +12,49 @@ import SafariServices
 class AcknowledgmentsListViewController: UITableViewController {
     
     class func build() -> AcknowledgmentsListViewController {
-        return UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("AcknowledgmentsListViewController") as! AcknowledgmentsListViewController
+        return UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "AcknowledgmentsListViewController") as! AcknowledgmentsListViewController
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
     // MARK: - Table View Controller Delegate
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        guard let rowType = RowType(rawValue: indexPath.row) else { return }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let rowType = RowType(rawValue: (indexPath as NSIndexPath).row) else { return }
         switch rowType {
-        case .Alamofire, .AlamofireImage:
+        case .alamofire, .alamofireImage:
             guard let identifier = rowType.identifier else { return }
-            let licenseViewController = UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier(identifier)
+            let licenseViewController = UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: identifier)
             self.navigationController?.pushViewController(licenseViewController, animated: true)
-        case .RealmSwift:
+        case .realmSwift:
             guard let url = rowType.url else { return }
-            let safariViewController = SFSafariViewController(URL: NSURL(string: url)!)
-            self.presentViewController(safariViewController, animated: true, completion: nil)
+            let safariViewController = SFSafariViewController(url: URL(string: url)!)
+            self.present(safariViewController, animated: true, completion: nil)
         }
     }
     
     private enum RowType: Int {
-        case Alamofire =  0
-        case AlamofireImage = 1
-        case RealmSwift = 2
+        case alamofire =  0
+        case alamofireImage = 1
+        case realmSwift = 2
         
         var identifier: String? {
             switch self {
-            case .Alamofire: return "AlamofireLicenseViewController"
-            case .AlamofireImage: return  "AlamofireImageLicenseViewController"
+            case .alamofire: return "AlamofireLicenseViewController"
+            case .alamofireImage: return  "AlamofireImageLicenseViewController"
             default: return nil
             }
         }
         
         var url: String? {
             switch self {
-            case .RealmSwift: return "https://realm.io/products/swift/"
+            case .realmSwift: return "https://realm.io/products/swift/"
             default: return nil
             }
         }

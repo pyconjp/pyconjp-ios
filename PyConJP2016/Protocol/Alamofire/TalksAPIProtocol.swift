@@ -1,5 +1,5 @@
 //
-//  TalksAPIType.swift
+//  TalksAPIProtocol.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 4/23/16.
@@ -9,13 +9,13 @@
 import UIKit
 import RealmSwift
 
-protocol TalksAPIType: AlamofireType {
-    func getTalks(successClosure success: () -> Void, failClosure fail: (NSError) -> Void) -> Void
-    func getTalks(completionHandler: (Result<Void, NSError> -> Void)) -> Void
-    func getTalksFromLocalDummyJson(completionHandler: (Result<Void, NSError> -> Void)) -> Void
+protocol TalksAPIProtocol: AlamofireProtocol {
+    func getTalks(successClosure success: @escaping () -> Void, failClosure fail: @escaping (Error) -> Void) -> Void
+    func getTalks(completionHandler: @escaping ((Result<Void>) -> Void)) -> Void
+    func getTalksFromLocalDummyJson(completionHandler: ((Result<Void>) -> Void)) -> Void
 }
 
-extension TalksAPIType {
+extension TalksAPIProtocol {
     
     var path: String {
         return "talks/list/"
@@ -23,9 +23,9 @@ extension TalksAPIType {
     
 }
 
-extension TalksAPIType {
+extension TalksAPIProtocol {
     
-    func getTalks(successClosure success: () -> Void, failClosure fail: (NSError) -> Void) -> Void {
+    func getTalks(successClosure success: @escaping () -> Void, failClosure fail: @escaping (Error) -> Void) -> Void {
         get(successClosure: { dictionary in
             let presentations = dictionary["presentations"] as? Array<Dictionary<String, AnyObject>> ?? [Dictionary<String, AnyObject>]()
             
@@ -33,53 +33,53 @@ extension TalksAPIType {
                 let apiTalks = presentations.map({ TalkObject(dictionary: $0) })
                 
                 let realm = try Realm()
-                let rejectedLocalTalks = realm.objects(TalkObject).filter("NOT(id IN %@)", apiTalks.map({ $0.id }))
+                let rejectedLocalTalks = realm.objects(TalkObject.self).filter("NOT(id IN %@)", apiTalks.map({ $0.id }))
                 try realm.write({
                     realm.delete(rejectedLocalTalks)
                     realm.add(apiTalks, update: true)
                 })
                 
                 success()
-            } catch let error as NSError {
+            } catch let error {
                 fail(error)
             }
             
-            }, failClosure: { error in
+            }, failureClosure: { error in
                 fail(error)
         })
     }
     
-    func getTalks(completionHandler: (Result<Void, NSError> -> Void)) -> Void {
+    func getTalks(completionHandler: @escaping ((Result<Void>) -> Void)) -> Void {
         get() { result in
             switch result {
-            case .Success(let value):
+            case .success(let value):
                 let presentations = value["presentations"] as? Array<Dictionary<String, AnyObject>> ?? [Dictionary<String, AnyObject>]()
                 
                 do {
                     let apiTalks = presentations.map({ TalkObject(dictionary: $0) })
                     
                     let realm = try Realm()
-                    let rejectedLocalTalks = realm.objects(TalkObject).filter("NOT(id IN %@)", apiTalks.map({ $0.id }))
+                    let rejectedLocalTalks = realm.objects(TalkObject.self).filter("NOT(id IN %@)", apiTalks.map({ $0.id }))
                     try realm.write({
                         realm.delete(rejectedLocalTalks)
                         realm.add(apiTalks, update: true)
                     })
                     
-                    completionHandler(.Success())
+                    completionHandler(.success())
                 } catch let error as NSError {
-                    completionHandler(.Failure(error))
+                    completionHandler(.failure(error))
                 }
-            case .Failure(let error):
-                completionHandler(.Failure(error))
+            case .failure(let error):
+                completionHandler(.failure(error))
             }
         }
     }
     
-    func getTalksFromLocalDummyJson(completionHandler: (Result<Void, NSError> -> Void)) -> Void {
-        let path = NSBundle.mainBundle().pathForResource("DummyTalks", ofType: "json")
-        let fileHandle = NSFileHandle(forReadingAtPath: path!)
+    func getTalksFromLocalDummyJson(completionHandler: ((Result<Void>) -> Void)) -> Void {
+        let path = Bundle.main.path(forResource: "DummyTalks", ofType: "json")
+        let fileHandle = FileHandle(forReadingAtPath: path!)
         let data = fileHandle?.readDataToEndOfFile()
-        let dictionary = try! NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as! Dictionary<String, AnyObject>
+        let dictionary = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! Dictionary<String, AnyObject>
         let presentations = dictionary["presentations"] as? Array<Dictionary<String, AnyObject>> ?? [Dictionary<String, AnyObject>]()
         
         do {
@@ -91,9 +91,9 @@ extension TalksAPIType {
                 })
             })
             
-            completionHandler(.Success())
+            completionHandler(.success())
         } catch let error as NSError {
-            completionHandler(.Failure(error))
+            completionHandler(.failure(error))
         }
         
     }

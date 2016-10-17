@@ -8,28 +8,22 @@
 
 import UIKit
 
-extension NSDate {
+extension Date {
     
-    static func dateFromString(string: String) -> NSDate? {
-        
-        struct Static {
-            static var onceToken: dispatch_once_t = 0
-            static var instance: NSDateFormatter! = nil
-        }
-        
-        dispatch_once(&Static.onceToken) { 
-            let formatter = NSDateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-            Static.instance = formatter
-        }
-        
-        return Static.instance.dateFromString(string)
+    static private let dateFormatterInstance: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return dateFormatter
+    }()
+    
+    static func date(from string: String) -> Date? {
+        return dateFormatterInstance.date(from: string)
     }
     
     func convertToTime() -> String {
-        let calender = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
-        let components = calender.components([.Year, .Month, .Day, .Weekday, .Hour, .Minute], fromDate: self)
-        return String(format: "%02d", components.hour) + ":" + String(format: "%02d", components.minute)
+        let calender = Calendar(identifier: Calendar.Identifier.gregorian)
+        let components = (calender as NSCalendar).components([.year, .month, .day, .weekday, .hour, .minute], from: self)
+        return String(format: "%02d", components.hour!) + ":" + String(format: "%02d", components.minute!)
     }
     
 }

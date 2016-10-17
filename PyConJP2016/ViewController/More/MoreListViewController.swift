@@ -15,105 +15,105 @@ class MoreListViewController: UITableViewController {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
         
     }
     
     // MARK: - Table View Controller Delegate
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        guard let sectionType = SectionType(rawValue: indexPath.section) else { return }
-        let rowType = sectionType.rows[indexPath.row]
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let sectionType = SectionType(rawValue: (indexPath as NSIndexPath).section) else { return }
+        let rowType = sectionType.rows[(indexPath as NSIndexPath).row]
         switch rowType {
-        case .WhatsPyConJP, .CodeOfConduct, .Summary, .License, .StaffList:
-            guard let identifier = rowType.identifier, viewController = self.storyboard?.instantiateViewControllerWithIdentifier(identifier) else { return }
+        case .whatsPyConJP, .codeOfConduct, .summary, .license, .staffList:
+            guard let identifier = rowType.identifier, let viewController = self.storyboard?.instantiateViewController(withIdentifier: identifier) else { return }
             self.navigationController?.pushViewController(viewController, animated: true)
-        case .ParticipantsInformation, .Sponsor, .Questionnaire, .Repository:
+        case .participantsInformation, .sponsor, .questionnaire, .repository:
             guard let url = rowType.url else { return }
-            let safariViewController = SFSafariViewController(URL: url)
-            self.presentViewController(safariViewController, animated: true, completion: nil)
-        case .ConferenceMap:
+            let safariViewController = SFSafariViewController(url: url)
+            self.present(safariViewController, animated: true, completion: nil)
+        case .conferenceMap:
             let mapListViewController = MapListViewController.build()
             self.navigationController?.pushViewController(mapListViewController, animated: true)
-        case .SprintMap:
-            let mapViewController = MapViewController.build(MapViewController.Venue.Microsoft)
+        case .sprintMap:
+            let mapViewController = MapViewController.build(venue: MapViewController.Venue.microsoft)
             self.navigationController?.pushViewController(mapViewController, animated: true)
-        case .Library:
+        case .library:
             let acknowledgmentsListViewController = AcknowledgmentsListViewController.build()
             self.navigationController?.pushViewController(acknowledgmentsListViewController, animated: true)
-        case .Feedback:
+        case .feedback:
             guard let urlSheme = rowType.urlSheme else { return }
-            UIApplication.sharedApplication().openURL(urlSheme)
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            UIApplication.shared.openURL(urlSheme)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
     private enum SectionType: Int {
-        case About
-        case Map
-        case Application
+        case about
+        case map
+        case application
         
         var rows: Array<RowType> {
             switch self {
-            case .About:
-                return [.ParticipantsInformation, .WhatsPyConJP, .CodeOfConduct, .Summary, .Sponsor, .StaffList, .Questionnaire]
-            case .Map:
-                return [.ConferenceMap, .SprintMap]
-            case .Application:
-                return [.Repository, .Library, .License, .Feedback]
+            case .about:
+                return [.participantsInformation, .whatsPyConJP, .codeOfConduct, .summary, .sponsor, .staffList, .questionnaire]
+            case .map:
+                return [.conferenceMap, .sprintMap]
+            case .application:
+                return [.repository, .library, .license, .feedback]
             }
         }
         
     }
     
-    private enum RowType: MailURLSchemeType {
-        case ParticipantsInformation
-        case WhatsPyConJP
-        case CodeOfConduct
-        case Summary
-        case Sponsor
-        case StaffList
-        case Questionnaire
+    private enum RowType: MailURLSchemeProtocol {
+        case participantsInformation
+        case whatsPyConJP
+        case codeOfConduct
+        case summary
+        case sponsor
+        case staffList
+        case questionnaire
         
-        case ConferenceMap
-        case SprintMap
+        case conferenceMap
+        case sprintMap
         
-        case Repository
-        case Library
-        case License
-        case Feedback
+        case repository
+        case library
+        case license
+        case feedback
         
         var identifier: String? {
             switch self {
-            case .WhatsPyConJP: return "WhatsPyConJPViewController"
-            case .CodeOfConduct: return "CodeOfConductViewController"
-            case .Summary: return "SummaryViewController"
-            case .License: return "LicenseViewController"
-            case .StaffList: return "StaffListViewController"
+            case .whatsPyConJP: return "WhatsPyConJPViewController"
+            case .codeOfConduct: return "CodeOfConductViewController"
+            case .summary: return "SummaryViewController"
+            case .license: return "LicenseViewController"
+            case .staffList: return "StaffListViewController"
             default: return nil
             }
         }
         
-        var url: NSURL? {
+        var url: URL? {
             switch self {
-            case .ParticipantsInformation: return NSURL(string: PCJConfig.baseURL + "participants/")
-            case .Sponsor: return NSURL(string: PCJConfig.baseURL + "sponsors/")
-            case .Questionnaire: return NSURL(string: "https://docs.google.com/forms/d/e/1FAIpQLSefOgaVN8_cwUAcW-NmTaBNoNG8K47vursedtxkE_cbv_E37A/viewform")
-            case .Repository: return NSURL(string: "https://github.com/pyconjp/pyconjp-ios")
+            case .participantsInformation: return URL(string: PCJConfig.baseURL + "participants/")
+            case .sponsor: return URL(string: PCJConfig.baseURL + "sponsors/")
+            case .questionnaire: return URL(string: "https://docs.google.com/forms/d/e/1FAIpQLSefOgaVN8_cwUAcW-NmTaBNoNG8K47vursedtxkE_cbv_E37A/viewform")
+            case .repository: return URL(string: "https://github.com/pyconjp/pyconjp-ios")
             default: return nil
             }
         }
         
-        var urlSheme: NSURL? {
+        var urlSheme: URL? {
             switch self {
-            case .Feedback: return mailURLScheme(PCJConfig.mailAddress,
+            case .feedback: return mailURLScheme(to: PCJConfig.mailAddress,
                                                  subject: "Feedback for PyCon JP 2016 App",
-                                                 body: String(format: "iOS version: %@\nDevice Model: %@\nReply-to:\n\nFeedback:", arguments: [UIDevice.currentDevice().systemVersion, UIDevice.currentDevice().modelType]))
+                                                 body: String(format: "iOS version: %@\nDevice Model: %@\nReply-to:\n\nFeedback:", arguments: [UIDevice.current.systemVersion, UIDevice.current.modelType]))
             default: return nil
             }
         }

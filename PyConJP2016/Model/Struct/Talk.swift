@@ -14,7 +14,7 @@ struct Talk {
     let title: String
     let description: String
     let speakers: [String]?
-    let date: NSDate?
+    let date: Date?
     let day: String
     let startTime: String
     let endTime: String
@@ -32,11 +32,11 @@ extension Talk {
         self.title = title
         self.description = description
         self.speakers = speakers
-        self.date = NSDate.dateFromString(day + " " + startTime)
+        self.date = Date.date(from: day + " " + startTime)
         self.day = day
         self.startTime = startTime
         self.endTime = endTime
-        self.periodTime = startTime.timeStringByTrimingSecond() + " ~ " + endTime.timeStringByTrimingSecond()
+        self.periodTime = startTime.timeStringByTrimmingSecond() + " ~ " + endTime.timeStringByTrimmingSecond()
         self.category = category
         self.place = place
         self.language = Language(rawValue: language) ?? .En

@@ -20,38 +20,38 @@ class StaffTableViewCell: UITableViewCell {
     private var facebookAction: (() -> Void)?
     private var twitterAction: (() -> Void)?
     
-    func fill(staff: Staff, onFacebookButton: (() -> Void), onTwitterButton: (() -> Void)) {
+    override func prepareForReuse() {
+        nameLabel.text = nil
+        roleLabel.text = nil
+        toggleFacebookButton(enabled: false)
+        toggleTwitterButton(enabled: false)
+    }
+    
+    func fill(staff: Staff, onFacebookButton: @escaping (() -> Void), onTwitterButton: @escaping (() -> Void)) {
         nameLabel.text = staff.name
         roleLabel.text = staff.role
-        toggleFacebookButton(!staff.facebook.isEmpty)
-        toggleTwitterButton(!staff.twitter.isEmpty)
+        toggleFacebookButton(enabled: !staff.facebook.isEmpty)
+        toggleTwitterButton(enabled: !staff.twitter.isEmpty)
         facebookAction = onFacebookButton
         twitterAction = onTwitterButton
     }
     
-    override func prepareForReuse() {
-        nameLabel.text = nil
-        roleLabel.text = nil
-        toggleFacebookButton(false)
-        toggleTwitterButton(false)
-    }
-    
     private func toggleFacebookButton(enabled: Bool) {
-        facebookButton.enabled = enabled
-        facebookButton.backgroundColor = enabled ? UIColor.facebookColor() : UIColor.pyconJP2016GlayColor()
+        facebookButton.isEnabled = enabled
+        facebookButton.backgroundColor = enabled ? UIColor.facebook : UIColor.PyConJP2016.gray
     }
     
     private func toggleTwitterButton(enabled: Bool) {
-        twitterButton.enabled = enabled
-        twitterButton.backgroundColor = enabled ? UIColor.twitterColor() : UIColor.pyconJP2016GlayColor()
+        twitterButton.isEnabled = enabled
+        twitterButton.backgroundColor = enabled ? UIColor.twitter : UIColor.PyConJP2016.gray
     }
     
-    @IBAction func onFacebookButton(sender: UIButton) {
+    @IBAction func onFacebookButton(_ sender: UIButton) {
         guard let facebookAction = facebookAction else { return }
         facebookAction()
     }
     
-    @IBAction func onTwitterButton(sender: UIButton) {
+    @IBAction func onTwitterButton(_ sender: UIButton) {
         guard let twitterAction = twitterAction else { return }
         twitterAction()
     }

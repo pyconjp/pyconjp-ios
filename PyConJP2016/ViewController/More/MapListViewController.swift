@@ -11,33 +11,33 @@ import UIKit
 class MapListViewController: UITableViewController {
     
     class func build() -> MapListViewController {
-        return UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("MapListViewController") as! MapListViewController
+        return UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "MapListViewController") as! MapListViewController
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
     // MARK: - Table View Controller Delegate
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        switch TableViewCell(rawValue: indexPath.row) ?? .Access {
-        case .Access:
-            let mapViewController = MapViewController.build(MapViewController.Venue.Waseda)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch TableViewCell(rawValue: (indexPath as NSIndexPath).row) ?? .access {
+        case .access:
+            let mapViewController = MapViewController.build(venue: MapViewController.Venue.waseda)
             self.navigationController?.pushViewController(mapViewController, animated: true)
-        case .Floor:
-            let floorListViewController = self.storyboard?.instantiateViewControllerWithIdentifier("FloorMapListViewController")
+        case .floor:
+            let floorListViewController = self.storyboard?.instantiateViewController(withIdentifier: "FloorMapListViewController")
             self.navigationController?.pushViewController(floorListViewController!, animated: true)
         }
     }
     
     private enum TableViewCell: Int {
-        case Access =  0
-        case Floor = 1
+        case access =  0
+        case floor = 1
     }
     
 }

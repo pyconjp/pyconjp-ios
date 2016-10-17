@@ -23,13 +23,13 @@ class ConferenceDateViewController: UIViewController, ConferenceDateViewProtocol
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         if buttonOriginXArray.isEmpty {
             view.subviews.filter({ $0 is UIButton }).forEach({ buttonOriginXArray.append($0.frame.origin.x) })
         }
     }
     
-    override func didMoveToParentViewController(parent: UIViewController?) {
+    override func didMove(toParentViewController parent: UIViewController?) {
         guard let conferenceBaseViewController = parent as? ConferenceBaseViewController else { return }
         conferenceBaseViewController.conferenceDateViewProtocol = self
         conferencePageViewProtocol = conferenceBaseViewController.conferencePageViewProtocol
@@ -38,17 +38,17 @@ class ConferenceDateViewController: UIViewController, ConferenceDateViewProtocol
     
     // MARK: - Day Button
     
-    @IBAction func onDay1Button(sender: UIButton) {
+    @IBAction func onDay1Button(_ sender: UIButton) {
         if let conferencePageViewProtocol = conferencePageViewProtocol {
-            conferencePageViewProtocol.reversePage(0)
-            changeActive(0)
+            conferencePageViewProtocol.reversePage(index: 0)
+            changeActive(index: 0)
         }
     }
     
-    @IBAction func onDay2Button(sender: UIButton) {
+    @IBAction func onDay2Button(_ sender: UIButton) {
         if let conferencePageViewProtocol = conferencePageViewProtocol {
-            conferencePageViewProtocol.fowardPage(1)
-            changeActive(1)
+            conferencePageViewProtocol.fowardPage(index: 1)
+            changeActive(index: 1)
         }
     }
     
@@ -56,19 +56,19 @@ class ConferenceDateViewController: UIViewController, ConferenceDateViewProtocol
     
     func changeActive(index: Int) {
         
-        func changeActiveButton(button: UIButton) {
-            button.enabled = false
-            button.backgroundColor = .whiteColor()
-            button.setTitleColor(.blackColor(), forState: .Normal)
+        func changeActiveButton(_ button: UIButton) {
+            button.isEnabled = false
+            button.backgroundColor = .white
+            button.setTitleColor(.black, for: UIControlState())
         }
         
-        func changeUnactiveButton(button: UIButton) {
-            button.enabled = true
-            button.backgroundColor = .pyconJP2016GlayColor()
-            button.setTitleColor(.whiteColor(), forState: .Normal)
+        func changeUnactiveButton(_ button: UIButton) {
+            button.isEnabled = true
+            button.backgroundColor = UIColor.PyConJP2016.gray
+            button.setTitleColor(.white, for: UIControlState())
         }
         
-        UIView.animateWithDuration(0.3, animations: { () -> Void in
+        UIView.animate(withDuration: 0.3, animations: { () -> Void in
             self.activeBar.frame.origin.x = self.buttonOriginXArray[index]
             switch index {
             case 0:

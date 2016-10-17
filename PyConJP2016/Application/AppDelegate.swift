@@ -10,11 +10,11 @@ import UIKit
 import RealmSwift
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, TalksAPIType, ErrorAlertType {
+class AppDelegate: UIResponder, UIApplicationDelegate, TalksAPIProtocol, ErrorAlertProtocol {
     
     var window: UIWindow?
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //        let settings = UIUserNotificationSettings(forTypes: [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound], categories: nil)
         //        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
         //
@@ -32,46 +32,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TalksAPIType, ErrorAlertT
         
         getTalks { result in
             switch result {
-            case .Success:
-            	NSNotificationCenter.defaultCenter().postNotificationName(PCJNotificationConfig.CompleteFetchDataNotification, object: nil)
-            case .Failure(let error):
-                self.showErrorAlartWith(error)
+            case .success:
+            	NotificationCenter.default.post(name: Notification.Name(rawValue: PCJNotificationConfig.CompleteFetchDataNotification), object: nil)
+            case .failure(let error):
+                self.showErrorAlart(with: error)
             }
         }
         
-        UINavigationBar.appearance().barTintColor = .pyconJP2016RedColor()
-        UINavigationBar.appearance().tintColor = .whiteColor()
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        UINavigationBar.appearance().barTintColor = UIColor.PyConJP2016.red
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
-        UITabBar.appearance().tintColor = UIColor.pyconJP2016BlueColor()
-        UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont.boldSystemFontOfSize(10), NSForegroundColorAttributeName: UIColor.pyconJP2016BlueColor()], forState: .Selected)
+        UITabBar.appearance().tintColor = UIColor.PyConJP2016.blue
+        UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont.boldSystemFont(ofSize: 10), NSForegroundColorAttributeName: UIColor.PyConJP2016.blue], for: .selected)
         
         return true
     }
     
-    func applicationWillResignActive(application: UIApplication) {
+    func applicationWillResignActive(_ application: UIApplication) {
     }
     
-    func applicationDidEnterBackground(application: UIApplication) {
+    func applicationDidEnterBackground(_ application: UIApplication) {
     }
     
-    func applicationWillEnterForeground(application: UIApplication) {
+    func applicationWillEnterForeground(_ application: UIApplication) {
     }
     
-    func applicationDidBecomeActive(application: UIApplication) {
-        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        UIApplication.shared.applicationIconBadgeNumber = 0
     }
     
-    func applicationWillTerminate(application: UIApplication) {
+    func applicationWillTerminate(_ application: UIApplication) {
     }
     
-    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
         if let userInfo = notification.userInfo {
             let receiveLocalNotificationManager = ReceiveLocalNotificationManager()
             receiveLocalNotificationManager.application(application, didReceiveLocalNotification: userInfo)
         }
         
-        UIApplication.sharedApplication().cancelLocalNotification(notification)
+        UIApplication.shared.cancelLocalNotification(notification)
     }
     
 }

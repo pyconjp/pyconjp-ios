@@ -10,11 +10,11 @@ import UIKit
 import SafariServices
 import RealmSwift
 
-class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLSchemeType, ErrorAlertType {
+class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, TwitterURLSchemeProtocol, ErrorAlertProtocol {
     
     @IBOutlet weak var baseScrollView: UIScrollView! {
         didSet {
-            refreshControl.addTarget(self, action: #selector(TalkDetailViewController.refresh(_:)), forControlEvents: .ValueChanged)
+            refreshControl.addTarget(self, action: #selector(TalkDetailViewController.refresh(_:)), for: .valueChanged)
             baseScrollView.addSubview(refreshControl)
         }
     }
@@ -32,7 +32,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLS
     @IBOutlet weak var speakersCollectionView: UICollectionView! {
         didSet {
             let nib  = UINib(nibName: speakersCollectionViewDataSource.reuseIdentifier, bundle:nil)
-            speakersCollectionView.registerNib(nib, forCellWithReuseIdentifier: speakersCollectionViewDataSource.reuseIdentifier)
+            speakersCollectionView.register(nib, forCellWithReuseIdentifier: speakersCollectionViewDataSource.reuseIdentifier)
             speakersCollectionView.dataSource = speakersCollectionViewDataSource
         }
     }
@@ -64,7 +64,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLS
     private lazy var speakersCollectionViewHeight: CGFloat = self.speakersCollectionViewHeightConstraint.constant
     
     class func build(id: Int) -> TalkDetailViewController {
-        let talkDetailViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("TalkDetailViewController") as! TalkDetailViewController
+        let talkDetailViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TalkDetailViewController") as! TalkDetailViewController
         talkDetailViewController.id = id
         return talkDetailViewController
     }
@@ -77,15 +77,15 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLS
         
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         guard let talkDetail = talkDetail else { return }
         do {
             let realm = try Realm()
-            if let talkObject = realm.objectForPrimaryKey(TalkObject.self, key: id) {
+            if let talkObject = realm.object(ofType: TalkObject.self, forPrimaryKey: id as AnyObject) {
                 talkDetail.talkObject.favorited = talkObject.favorited
-                toggleBookmarkBarButtonItem(talkDetail.talkObject.favorited)
+                toggleBookmarkBarButtonItem(isFavorite: talkDetail.talkObject.favorited)
             }
         } catch {
             
@@ -93,7 +93,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLS
         
     }
     
-    func refresh(refreshControl: UIRefreshControl) {
+    func refresh(_ refreshControl: UIRefreshControl) {
         talkDetail = nil
         getDetail()
     }
@@ -102,28 +102,28 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLS
         getTalkDetail { [weak self](result) in
             guard let weakSelf = self else { return }
             switch result {
-            case .Success(let talkDetail):
+            case .success(let talkDetail):
                 weakSelf.talkDetail = talkDetail
                 weakSelf.fillData()
                 weakSelf.refreshControl.endRefreshing()
-            case .Failure(let error):
+            case .failure(let error):
                 weakSelf.refreshControl.endRefreshing()
-                weakSelf.showErrorAlartWith(error, parent: weakSelf)
+                weakSelf.showErrorAlart(with: error, parent: weakSelf)
             }
         }
     }
     
     private func fillData() {
         guard let talkDetail = talkDetail else { return }
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             self.titleLabel.text = talkDetail.talkObject.title
             
             self.dayLabel.text = talkDetail.talkObject.day
             self.periodTimeLabel.text = talkDetail.talkObject.periodTime
             
             self.placeLabel.text = talkDetail.talkObject.place
-            self.placeLabel.textColor = talkDetail.talkObject.room?.color ?? UIColor.blackColor()
-            self.hashTagButton.setTitle((talkDetail.talkObject.room?.hashTag ?? "#pyconjp"), forState: .Normal)
+            self.placeLabel.textColor = talkDetail.talkObject.room?.color ?? UIColor.black
+            self.hashTagButton.setTitle((talkDetail.talkObject.room?.hashTag ?? "#pyconjp"), for: UIControlState())
             
             self.speakersCollectionViewHeightConstraint.constant = talkDetail.speakers.isEmpty ? 0 : self.speakersCollectionViewHeight
             self.speakersCollectionView.reloadData()
@@ -135,14 +135,14 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLS
             self.descriptionTextView.text = talkDetail.talkObject.descriptionText
             self.abstractTextView.text = talkDetail.abstract
             
-            self.toggleBookmarkBarButtonItem(talkDetail.talkObject.favorited)
+            self.toggleBookmarkBarButtonItem(isFavorite: talkDetail.talkObject.favorited)
         }
         
     }
     
     func toggleBookmarkBarButtonItem(isFavorite: Bool) {
-        let image = isFavorite ? UIImage(named: "BookmarkOn") : UIImage(named: "BookmarkOff")
-        dispatch_async(dispatch_get_main_queue()) {
+        let image = isFavorite ? #imageLiteral(resourceName: "BookmarkOn") : #imageLiteral(resourceName: "BookmarkOff")
+        DispatchQueue.main.async {
             self.bookmarkBarButtonItem.image = image
         }
     }
@@ -151,7 +151,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLS
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func onBookmarkBarButton(sender: UIBarButtonItem) {
+    @IBAction func onBookmarkBarButton(_ sender: UIBarButtonItem) {
         guard let talkDetail = talkDetail else { return }
         do {
             talkDetail.talkObject.favorited = !talkDetail.talkObject.favorited
@@ -159,19 +159,19 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIType, TwitterURLS
             try realm.write({
                 realm.create(TalkObject.self, value: ["id": talkDetail.talkObject.id, "favorited": talkDetail.talkObject.favorited], update: true)
             })
-            toggleBookmarkBarButtonItem(talkDetail.talkObject.favorited)
+            toggleBookmarkBarButtonItem(isFavorite: talkDetail.talkObject.favorited)
         } catch {
             
         }
     }
     
-    @IBAction func onHashTagButton(sender: UIButton) {
-        let hashTag = (talkDetail?.talkObject.room?.hashTag ?? "pyconjp").stringByReplacingOccurrencesOfString("#", withString: "")
-        openTwitterHashTag(hashTag, from: self)
+    @IBAction func onHashTagButton(_ sender: UIButton) {
+        let hashTag = (talkDetail?.talkObject.room?.hashTag ?? "pyconjp").replacingOccurrences(of: "#", with: "")
+        openTwitter(hashTag: hashTag, from: self)
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        guard let userName = speakersCollectionViewDataSource.speakers[indexPath.row].twitterName else { return }
-        openTwitterUser(userName, from: self)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: IndexPath) {
+        guard let userName = speakersCollectionViewDataSource.speakers[(indexPath as NSIndexPath).row].twitterName else { return }
+        openTwitter(userName: userName, from: self)
     }
 }

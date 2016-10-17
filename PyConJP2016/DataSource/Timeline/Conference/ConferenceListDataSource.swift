@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ConferenceListDataSource: TimelineDataSource, RealmTalksType {
+class ConferenceListDataSource: TimelineDataSource, RealmTalksProtocol {
     
     let filterPredicate: NSPredicate
     let sortProperties = [SortDescriptor(property: "date", ascending: true), SortDescriptor(property: "place", ascending: true)]
@@ -19,19 +19,19 @@ class ConferenceListDataSource: TimelineDataSource, RealmTalksType {
         super.init()
     }
     
-    func refreshData(completionHandler: (Result<Void, NSError> -> Void)) -> Void {
+    func refreshData(completionHandler: @escaping ((Result<Void>) -> Void)) -> Void {
         loadTalkObjects { [weak self](result) in
             guard let weakSelf = self else { return }
             switch result {
-            case .Success(let talks):
+            case .success(let talks):
                 weakSelf.timelines.removeAll()
                 let keys = talks.map { $0.startTime }.unique()
-                for tuple in keys.enumerate() {
-                    weakSelf.timelines.append(Timeline(time: keys[tuple.index], talks: talks.filter { $0.startTime == keys[tuple.index]}))
+                for tuple in keys.enumerated() {
+                    weakSelf.timelines.append(Timeline(time: keys[tuple.offset], talks: talks.filter { $0.startTime == keys[tuple.offset]}))
                 }
-                completionHandler(.Success())
-            case .Failure(let error):
-                completionHandler(.Failure(error))
+                completionHandler(.success())
+            case .failure(let error):
+                completionHandler(.failure(error))
             }
         }
     }

@@ -11,11 +11,11 @@ import UIKit
 extension AppDelegate {
     
     func showAlert(alertController: UIAlertController) {
-        self.window?.rootViewController?.presentingViewController?.presentViewController(alertController, animated: true, completion: nil)
+        self.window?.rootViewController?.presentingViewController?.present(alertController, animated: true, completion: nil)
     }
     
     func openTalkDetailViewController(id: Int) {
-        let talkDetailViewController = TalkDetailViewController.build(id)
+        let talkDetailViewController = TalkDetailViewController.build(id: id)
         self.window?.rootViewController?.presentedViewController?.navigationController?.pushViewController(talkDetailViewController, animated: true)
     }
     

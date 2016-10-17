@@ -12,7 +12,6 @@ enum Language: String {
     case En = "en"
     case Ja = "ja"
     
-    
     var localized: String {
         switch self {
         case .En: return NSLocalizedString("English", tableName: "Language", comment: "")

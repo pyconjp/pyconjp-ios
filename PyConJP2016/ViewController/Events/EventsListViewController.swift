@@ -11,73 +11,73 @@ import SafariServices
 
 class EventsListViewController: UITableViewController {
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
     // MARK: - Table View Controller Delegate
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        guard let sectionType = SectionType(rawValue: indexPath.section) else { return }
-        let rowType = sectionType.rows[indexPath.row]
-        let safariViewController = SFSafariViewController(URL: NSURL(string: rowType.url)!)
-        self.presentViewController(safariViewController, animated: true, completion: nil)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let sectionType = SectionType(rawValue: (indexPath as NSIndexPath).section) else { return }
+        let rowType = sectionType.rows[(indexPath as NSIndexPath).row]
+        let safariViewController = SFSafariViewController(url: URL(string: rowType.url)!)
+        self.present(safariViewController, animated: true, completion: nil)
     }
     
     private enum SectionType: Int {
-        case TutorialsDay
-        case ConferenseDay
-        case SprintsDay
+        case tutorialsDay
+        case conferenseDay
+        case sprintsDay
         
         var rows: Array<RowType> {
             switch self {
-            case .TutorialsDay:
-                return [.Tutorial]
-            case .ConferenseDay:
-                return [.Keynote, .InvitedLecture, .Posters, .LightningTalks, .YouthCoderWorkshop, .BeginnerSession, .CommitteeMeeting, .CommunityBooth, .JobFair, .ProductFair, .OpenSpace]
-            case .SprintsDay:
-                return [.Sprints]
+            case .tutorialsDay:
+                return [.tutorial]
+            case .conferenseDay:
+                return [.keynote, .invitedLecture, .posters, .lightningTalks, .youthCoderWorkshop, .beginnerSession, .committeeMeeting, .communityBooth, .jobFair, .productFair, .openSpace]
+            case .sprintsDay:
+                return [.sprints]
             }
         }
         
     }
     
     private enum RowType {
-        case Tutorial
+        case tutorial
         
-        case Keynote
-        case InvitedLecture
-        case Posters
-        case LightningTalks
-        case YouthCoderWorkshop
-        case BeginnerSession
-        case CommitteeMeeting
-        case CommunityBooth
-        case JobFair
-        case ProductFair
-        case OpenSpace
+        case keynote
+        case invitedLecture
+        case posters
+        case lightningTalks
+        case youthCoderWorkshop
+        case beginnerSession
+        case committeeMeeting
+        case communityBooth
+        case jobFair
+        case productFair
+        case openSpace
         
-        case Sprints
+        case sprints
         
         var url: String {
             switch self {
-            case .Tutorial: return PCJConfig.baseURL + "events/tutorial/"
-            case .Keynote: return PCJConfig.baseURL + "keynote/"
-            case .InvitedLecture: return PCJConfig.baseURL + "talks/invited-speaker/"
-            case .Posters: return PCJConfig.baseURL + "schedule/posters/list/"
-            case .LightningTalks: return PCJConfig.baseURL + "events/lightning-talks/"
-            case .YouthCoderWorkshop: return PCJConfig.baseURL + "events/youth-ws/"
-            case .BeginnerSession: return PCJConfig.baseURL + "events/beginners/"
-            case .CommitteeMeeting: return PCJConfig.baseURL + "events/committee-meeting/"
-            case .CommunityBooth: return PCJConfig.baseURL + "events/community-booth/"
-            case .JobFair: return PCJConfig.baseURL + "events/jobsfair/"
-            case .ProductFair: return PCJConfig.baseURL + "productfair/"
-            case .OpenSpace: return PCJConfig.baseURL + "events/open-space/"
-            case .Sprints: return PCJConfig.baseURL + "events/sprint/"
+            case .tutorial: return PCJConfig.baseURL + "events/tutorial/"
+            case .keynote: return PCJConfig.baseURL + "keynote/"
+            case .invitedLecture: return PCJConfig.baseURL + "talks/invited-speaker/"
+            case .posters: return PCJConfig.baseURL + "schedule/posters/list/"
+            case .lightningTalks: return PCJConfig.baseURL + "events/lightning-talks/"
+            case .youthCoderWorkshop: return PCJConfig.baseURL + "events/youth-ws/"
+            case .beginnerSession: return PCJConfig.baseURL + "events/beginners/"
+            case .committeeMeeting: return PCJConfig.baseURL + "events/committee-meeting/"
+            case .communityBooth: return PCJConfig.baseURL + "events/community-booth/"
+            case .jobFair: return PCJConfig.baseURL + "events/jobsfair/"
+            case .productFair: return PCJConfig.baseURL + "productfair/"
+            case .openSpace: return PCJConfig.baseURL + "events/open-space/"
+            case .sprints: return PCJConfig.baseURL + "events/sprint/"
             }
         }
         

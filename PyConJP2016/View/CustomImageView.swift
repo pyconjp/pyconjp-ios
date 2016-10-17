@@ -19,7 +19,7 @@ class CustomImageView: UIImageView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        self.userInteractionEnabled = true
+        self.isUserInteractionEnabled = true
         
         //        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(CustomImageView.handleGesture(_:)))
         //        doubleTapGesture.numberOfTapsRequired = 2
@@ -35,13 +35,13 @@ class CustomImageView: UIImageView {
         //        self.addGestureRecognizer(panGesture)
     }
     
-    func handleGesture(gesture: UIGestureRecognizer) {
+    func handleGesture(_ gesture: UIGestureRecognizer) {
         if let doubleTapGesture = gesture as? UITapGestureRecognizer {
-            doubleTap(doubleTapGesture)
+            doubleTap(gesture: doubleTapGesture)
         } else if let pinchGesture = gesture as? UIPinchGestureRecognizer {
-            pinch(pinchGesture)
+            pinch(gesture: pinchGesture)
         } else if let panGesture = gesture as? UIPanGestureRecognizer {
-            pan(panGesture)
+            pan(gesture: panGesture)
         }
     }
     
@@ -49,8 +49,8 @@ class CustomImageView: UIImageView {
         if gestureEnabled {
             beforePoint = CGPoint(x: 0.0, y: 0.0)
             currentScale = 1.0
-            UIView.animateWithDuration(0.2, animations: { [weak self]() in
-                self?.transform = CGAffineTransformIdentity
+            UIView.animate(withDuration: 0.2, animations: { [weak self]() in
+                self?.transform = CGAffineTransform.identity
                 })
         }
     }
@@ -63,16 +63,16 @@ class CustomImageView: UIImageView {
             }
             
             switch gesture.state {
-            case .Changed:
-                let scaleTransform = CGAffineTransformMakeScale(scale, scale)
-                let transitionTransform = CGAffineTransformMakeTranslation(beforePoint.x, beforePoint.y)
-                transform = CGAffineTransformConcat(scaleTransform, transitionTransform)
-            case .Ended, .Cancelled:
+            case .changed:
+                let scaleTransform = CGAffineTransform(scaleX: scale, y: scale)
+                let transitionTransform = CGAffineTransform(translationX: beforePoint.x, y: beforePoint.y)
+                transform = scaleTransform.concatenating(transitionTransform)
+            case .ended, .cancelled:
                 if scale <= 1.0 {
                     beforePoint = CGPoint(x: 0.0, y: 0.0)
                     currentScale = 1.0
-                    UIView.animateWithDuration(0.1, animations: { [weak self]() in
-                        self?.transform = CGAffineTransformIdentity
+                    UIView.animate(withDuration: 0.1, animations: { [weak self]() in
+                        self?.transform = CGAffineTransform.identity
                         })
                 } else {
                     currentScale = scale
@@ -85,20 +85,20 @@ class CustomImageView: UIImageView {
     
     private func pan(gesture: UIPanGestureRecognizer) {
         if currentScale == 1.0 { return }
-        if let gestureView = gesture.view where gestureEnabled {
+        if let gestureView = gesture.view, gestureEnabled {
             
-            var translation = gesture.translationInView(gestureView)
+            var translation = gesture.translation(in: gestureView)
             
             if abs(beforePoint.x) > 0.0 || abs(beforePoint.y) > 0.0 {
                 translation = CGPoint(x: beforePoint.x + translation.x, y: beforePoint.y + translation.y)
             }
             
             switch gesture.state {
-            case .Changed:
-                let scaleTransform = CGAffineTransformMakeScale(currentScale, currentScale)
-                let translationTransform = CGAffineTransformMakeTranslation(translation.x, translation.y)
-                transform = CGAffineTransformConcat(scaleTransform, translationTransform)
-            case .Ended, .Cancelled:
+            case .changed:
+                let scaleTransform = CGAffineTransform(scaleX: currentScale, y: currentScale)
+                let translationTransform = CGAffineTransform(translationX: translation.x, y: translation.y)
+                transform = scaleTransform.concatenating(translationTransform)
+            case .ended, .cancelled:
                 beforePoint = translation
             default:
                 break

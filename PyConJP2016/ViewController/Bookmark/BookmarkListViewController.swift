@@ -8,12 +8,12 @@
 
 import UIKit
 
-class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAlertType {
+class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAlertProtocol {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             let nib  = UINib(nibName: bookmarkListDataSource.reuseIdentifier, bundle:nil)
-            tableView.registerNib(nib, forCellReuseIdentifier: bookmarkListDataSource.reuseIdentifier)
+            tableView.register(nib, forCellReuseIdentifier: bookmarkListDataSource.reuseIdentifier)
             tableView.dataSource = bookmarkListDataSource
             tableView.rowHeight = UITableViewAutomaticDimension
             tableView.estimatedRowHeight = TalkTableViewCell.estimatedRowHeight
@@ -23,31 +23,31 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAl
     private let bookmarkListDataSource = BookmarkListDataSource()
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
     class func build() -> BookmarkListViewController {
-        return UIStoryboard(name: "Bookmark", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("BookmarkListViewController") as! BookmarkListViewController
+        return UIStoryboard(name: "Bookmark", bundle: Bundle.main).instantiateViewController(withIdentifier: "BookmarkListViewController") as! BookmarkListViewController
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BookmarkListViewController.refreshNotification(_:)), name: PCJNotificationConfig.CompleteFetchDataNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BookmarkListViewController.refreshNotification(_:)), name: NSNotification.Name(rawValue: PCJNotificationConfig.CompleteFetchDataNotification), object: nil)
         
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
         
         refresh()
     }
     
-    func refreshNotification(notification: NSNotification) {
+    func refreshNotification(_ notification: Notification) {
         refresh()
     }
     
@@ -55,13 +55,13 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAl
         bookmarkListDataSource.refreshData { [weak self](result) in
             guard let weakSelf = self else { return }
             switch result {
-            case .Success:
-                dispatch_async(dispatch_get_main_queue()) {
+            case .success:
+                DispatchQueue.main.async {
                     weakSelf.tableView.reloadData()
                 }
-            case .Failure(let error):
-                dispatch_async(dispatch_get_main_queue()) {
-                    weakSelf.showErrorAlartWith(error, parent: weakSelf)
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    weakSelf.showErrorAlart(with: error, parent: weakSelf)
                 }
             }
         }
@@ -70,13 +70,13 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAl
     
     // MARK: - Table View Controller Delegate
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let talkObject = bookmarkListDataSource.timelines[indexPath.section].talks[indexPath.row]
-        let talkDetailViewController = TalkDetailViewController.build(talkObject.id)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let talkObject = bookmarkListDataSource.timelines[(indexPath as NSIndexPath).section].talks[(indexPath as NSIndexPath).row]
+        let talkDetailViewController = TalkDetailViewController.build(id: talkObject.id)
         self.navigationController?.pushViewController(talkDetailViewController, animated: true)
     }
     

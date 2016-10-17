@@ -8,14 +8,14 @@
 
 import Foundation
 
-enum Result<T, Error: ErrorType> {
-    case Success(T)
-    case Failure(Error)
+enum Result<Value> {
+    case success(Value)
+    case failure(Error)
     
     var isSuccess: Bool {
         switch self {
-        case .Success: return true
-        case .Failure: return false
+        case .success: return true
+        case .failure: return false
         }
     }
     
@@ -23,17 +23,17 @@ enum Result<T, Error: ErrorType> {
         return !isSuccess
     }
     
-    var value: T? {
+    var value: Value? {
         switch self {
-        case .Success(let value): return value
-        case .Failure: return nil
+        case .success(let value): return value
+        case .failure: return nil
         }
     }
     
     var error: Error? {
         switch self {
-        case .Success: return nil
-        case .Failure(let error): return error
+        case .success: return nil
+        case .failure(let error): return error
         }
     }
     

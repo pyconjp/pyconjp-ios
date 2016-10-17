@@ -1,5 +1,5 @@
 //
-//  GestureType.swift
+//  GestureProtocol.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 9/13/16.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-protocol GestureType {
-    func handleGesture(gesture: UIGestureRecognizer)
+protocol GestureProtocol {
+    func handle(gesture: UIGestureRecognizer)
     func singleTap(gesture: UITapGestureRecognizer)
     func doubleTap(gesture: UITapGestureRecognizer)
     func pinch(gesture: UIPinchGestureRecognizer)
@@ -17,19 +17,19 @@ protocol GestureType {
     func longPress(gesture: UILongPressGestureRecognizer)
 }
 
-extension GestureType {
+extension GestureProtocol {
 
-    func handleGesture(gesture: UIGestureRecognizer) {
-        if let singleTapGesture = gesture as? UITapGestureRecognizer where singleTapGesture.numberOfTapsRequired == 1 {
-            singleTap(singleTapGesture)
-        } else if let doubleTapGesture = gesture as? UITapGestureRecognizer where doubleTapGesture.numberOfTapsRequired == 2 {
-            doubleTap(doubleTapGesture)
+    func handle(gesture: UIGestureRecognizer) {
+        if let singleTapGesture = gesture as? UITapGestureRecognizer, singleTapGesture.numberOfTapsRequired == 1 {
+            singleTap(gesture: singleTapGesture)
+        } else if let doubleTapGesture = gesture as? UITapGestureRecognizer, doubleTapGesture.numberOfTapsRequired == 2 {
+            doubleTap(gesture: doubleTapGesture)
         } else if let pinchGesture = gesture as? UIPinchGestureRecognizer {
-            pinch(pinchGesture)
+            pinch(gesture: pinchGesture)
         } else if let panGesture = gesture as? UIPanGestureRecognizer {
-            pan(panGesture)
+            pan(gesture: panGesture)
         } else if let longPressGesture = gesture as? UILongPressGestureRecognizer {
-            longPress(longPressGesture)
+            longPress(gesture: longPressGesture)
         }
     }
     

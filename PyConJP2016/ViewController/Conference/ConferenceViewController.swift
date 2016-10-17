@@ -10,7 +10,7 @@ import UIKit
 
 class ConferenceViewController: UIViewController {
     
-    @IBAction func onBookmark(sender: UIBarButtonItem) {
+    @IBAction func onBookmark(_ sender: UIBarButtonItem) {
         let bookmarkListViewController = BookmarkListViewController.build()
         self.navigationController?.pushViewController(bookmarkListViewController, animated: true)
     }

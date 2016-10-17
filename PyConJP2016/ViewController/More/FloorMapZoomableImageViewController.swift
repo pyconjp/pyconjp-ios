@@ -10,55 +10,54 @@ import UIKit
 
 class FloorMapZoomableImageViewController: ZoomableImageViewController {
     
-    var assetCatalogType: AssetCatalogType?
+    private var assetCatalog: AssetCatalog?
     
-    func build(assetCatalogType: AssetCatalogType) -> FloorMapZoomableImageViewController {
-        let floorMapImageViewController = UIStoryboard(name: "More", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("FloorMapZoomableImageViewController") as! FloorMapZoomableImageViewController
-        floorMapImageViewController.assetCatalogType = assetCatalogType
+    static func build(assetCatalog: AssetCatalog) -> FloorMapZoomableImageViewController {
+        let floorMapImageViewController = UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "FloorMapZoomableImageViewController") as! FloorMapZoomableImageViewController
+        floorMapImageViewController.assetCatalog = assetCatalog
         return floorMapImageViewController
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let assetCatalogType = assetCatalogType else { return }
-        self.navigationItem.title = assetCatalogType.navigationItemTitle
-        imageView?.image = UIImage(named: assetCatalogType.rawValue)
+        guard let assetCatalog = assetCatalog else { return }
+        imageView?.image = assetCatalog.image
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    enum AssetCatalogType: String {
-        case FirstFloorView = "FirstFloorMap"
-        case SecondFloorView = "SecondFloorMap"
-        case ThirdFloorView = "ThirdFloorMap"
-        case Room201 = "Room201Map"
-        case Room202 = "Room202Map"
-        case Room203 = "Room203Map"
-        case Room204 = "Room204Map"
-        case Room205 = "Room205Map"
+    enum AssetCatalog {
+        case firstFloorView
+        case secondFloorView
+        case thirdFloorView
+        case room201
+        case room202
+        case room203
+        case room204
+        case room205
         
-        var navigationItemTitle: String {
+        var title: String {
             switch self {
-            case .FirstFloorView:
-                return "1F"
-            case SecondFloorView:
-                return "2F"
-            case ThirdFloorView:
-                return "3F"
-            case Room201:
-                return "Room 201"
-            case Room202:
-                return "Room 202"
-            case Room203:
-                return "Room 203"
-            case Room204:
-                return "Room 204"
-            case Room205:
-                return "Room 205"
+            case .firstFloorView: return "1F"
+            case .secondFloorView: return "2F"
+            case .thirdFloorView: return "3F"
+            case .room201: return "Room 201"
+            case .room202: return "Room 202"
+            case .room203: return "Room 203"
+            case .room204: return "Room 204"
+            case .room205: return "Room 205"
+            }
+        }
+        
+        var image: UIImage {
+            switch self {
+            case .firstFloorView: return #imageLiteral(resourceName: "FirstFloorMap")
+            case .secondFloorView: return #imageLiteral(resourceName: "SecondFloorMap")
+            case .thirdFloorView: return #imageLiteral(resourceName: "ThirdFloorMap")
+            case .room201: return #imageLiteral(resourceName: "Room201Map")
+            case .room202: return #imageLiteral(resourceName: "Room202Map")
+            case .room203: return #imageLiteral(resourceName: "Room203Map")
+            case .room204: return #imageLiteral(resourceName: "Room204Map")
+            case .room205: return #imageLiteral(resourceName: "Room205Map")
             }
         }
         
