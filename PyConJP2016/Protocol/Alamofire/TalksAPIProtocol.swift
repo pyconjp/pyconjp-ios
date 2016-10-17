@@ -44,7 +44,7 @@ extension TalksAPIProtocol {
                 fail(error)
             }
             
-            }, failClosure: { error in
+            }, failureClosure: { error in
                 fail(error)
         })
     }

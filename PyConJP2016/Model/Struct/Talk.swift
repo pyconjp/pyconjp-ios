@@ -36,7 +36,7 @@ extension Talk {
         self.day = day
         self.startTime = startTime
         self.endTime = endTime
-        self.periodTime = startTime.timeStringByTrimingSecond() + " ~ " + endTime.timeStringByTrimingSecond()
+        self.periodTime = startTime.timeStringByTrimmingSecond() + " ~ " + endTime.timeStringByTrimmingSecond()
         self.category = category
         self.place = place
         self.language = Language(rawValue: language) ?? .En

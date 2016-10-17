@@ -15,7 +15,7 @@ protocol AlamofireProtocol {
     var authUser: String { get }
     var authPassword: String { get }
     
-    func get(parameter: Dictionary<String, AnyObject>?, successClosure success: @escaping (Dictionary<String, AnyObject>) -> Void, failClosure fail: @escaping (Error) -> Void) -> Void
+    func get(parameter: Dictionary<String, AnyObject>?, successClosure success: @escaping (Dictionary<String, AnyObject>) -> Void, failureClosure fail: @escaping (Error) -> Void) -> Void
     func get(parameter: Dictionary<String, AnyObject>?, completionHandler: @escaping ((Result<Dictionary<String, AnyObject>>) -> Void)) -> Void
 }
 
@@ -37,7 +37,7 @@ extension AlamofireProtocol {
 
 extension AlamofireProtocol {
     
-    func get(parameter: Dictionary<String, AnyObject>? = nil, successClosure success: @escaping (Dictionary<String, AnyObject>) -> Void, failClosure fail: @escaping (Error) -> Void) -> Void {
+    func get(parameter: Dictionary<String, AnyObject>? = nil, successClosure success: @escaping (Dictionary<String, AnyObject>) -> Void, failureClosure fail: @escaping (Error) -> Void) -> Void {
         let url = baseURL + path
         let responseClosure = { (response: DataResponse<Any>) in
             switch response.result {

@@ -36,7 +36,7 @@ class TalkObject: RealmSwift.Object {
         day = dictionary["day"] as? String ?? ""
         startTime = dictionary["start"] as? String ?? ""
         endTime = dictionary["end"] as? String ?? ""
-        periodTime = (dictionary["start"] as? String ?? "").timeStringByTrimingSecond() + " ~ " + (dictionary["end"] as? String ?? "").timeStringByTrimingSecond()
+        periodTime = (dictionary["start"] as? String ?? "").timeStringByTrimmingSecond() + " ~ " + (dictionary["end"] as? String ?? "").timeStringByTrimmingSecond()
         category = dictionary["category"] as? String ?? ""
         place = dictionary["rooms"] as? String ?? ""
         language = dictionary["language"] as? String ?? ""

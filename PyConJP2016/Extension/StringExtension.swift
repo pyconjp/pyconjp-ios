@@ -20,7 +20,7 @@ extension String {
         return String.dateFormatterInstance.date(from: self)
     }
     
-    func timeStringByTrimingSecond() -> String {
+    func timeStringByTrimmingSecond() -> String {
         let dateString = "2000-01-01 " + self
         guard let date = Date.date(from: dateString) else { return self }
         return date.convertToTime()

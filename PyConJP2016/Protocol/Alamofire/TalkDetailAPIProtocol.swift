@@ -32,7 +32,7 @@ extension TalkDetailAPIProtocol {
         get(successClosure: { dictionary in
             let talkDetail = TalkDetail(dictionary: dictionary)
             success(talkDetail)
-            }, failClosure: { error in
+            }, failureClosure: { error in
                 fail(error)
         })
     }
