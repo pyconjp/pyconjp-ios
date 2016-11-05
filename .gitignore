@@ -1,9 +1,9 @@
-##Xcode
-#BuildFile
+# Xcode
+## BuildFile
 build/
 DerivedData
 
-#PrivateSetting
+## PrivateSetting
 *.pbxuser
 *mode1v3
 *mode2v3
@@ -12,28 +12,34 @@ DerivedData
 *xcuserstate
 *xccheckout
 
-#DefaultSetting
+## DefaultSetting
 !default.pbxuser
 !default.mode1v3
 !default.mode2v3
 !default.perspectivev3
 
-#CustomScheme
-PyConJP2016.xcodeproj/xcuserdata
-PyConJP2016.xcworkspace/xcuserdata
+## CustomScheme
+*.xcodeproj/xcuserdata
+*.xcworkspace/xcuserdata
 
-#Bundler
+## Bundler
+.bundle/*
 Gemfile.lock
+vendor/*
 
-##cocoaPods
+## CocoaPods
 Pods/*
 Podfile.lock
 !default.xcworkspace
 *.xcworkspace
 
-#Carthage
+## Carthage
 Carthage/*
 Cartfile.resolved
+
+## fastlane
+fastlane/*
+!fastlane/Fastfile
 
 ##AppCode
 .idea

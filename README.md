@@ -13,6 +13,14 @@ https://github.com/realm/SwiftLint
 $brew install swiftlint
 ```
 
+## fastlane
+
+```sh
+$gem install bundler
+$bundle install --path vendor/bundle
+$bundle exec fastlane init
+```
+
 ## ライブラリはCarthageで管理しています   
 https://github.com/Carthage/Carthage
 
