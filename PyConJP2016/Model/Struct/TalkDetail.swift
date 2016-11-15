@@ -19,9 +19,9 @@ struct TalkDetail {
 
 extension TalkDetail {
     
-    init(dictionary: Dictionary<String, AnyObject>) {
+    init(dictionary: Dictionary<String, Any>) {
         self.init(talkObject: TalkObject(dictionary: dictionary),
-                  speakers: (dictionary["speaker_infomations"] as? [Dictionary<String, AnyObject>] ?? []).map({ Speaker.init(dictionary: $0) }),
+                  speakers: (dictionary["speaker_infomations"] as? [Dictionary<String, Any>] ?? []).map({ Speaker.init(dictionary: $0) }),
                   abstract: dictionary["abstract"] as? String ?? "",
                   level: dictionary["level"] as? String ?? "")
     }

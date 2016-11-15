@@ -53,7 +53,7 @@ extension TalkDetailAPIProtocol {
         let path = Bundle.main.path(forResource: "DummyTalkDetail", ofType: "json")
         let fileHandle = FileHandle(forReadingAtPath: path!)
         let data = fileHandle?.readDataToEndOfFile()
-        let dictionary = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! Dictionary<String, AnyObject>
+        let dictionary = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! Dictionary<String, Any>
         
         let talkDetail = TalkDetail(dictionary: dictionary)
         completionHandler(.success(talkDetail))

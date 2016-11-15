@@ -24,7 +24,7 @@ class TalkObject: RealmSwift.Object {
     dynamic var language = ""
     dynamic var favorited = false
     
-    convenience init(dictionary: Dictionary<String, AnyObject>) {
+    convenience init(dictionary: Dictionary<String, Any>) {
         self.init()
         id = dictionary["id"] as? Int ?? 0
         title =  dictionary["title"] as? String ?? ""

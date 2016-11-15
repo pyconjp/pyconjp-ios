@@ -15,8 +15,8 @@ protocol AlamofireProtocol {
     var authUser: String { get }
     var authPassword: String { get }
     
-    func get(parameter: Dictionary<String, AnyObject>?, successClosure success: @escaping (Dictionary<String, AnyObject>) -> Void, failureClosure fail: @escaping (Error) -> Void) -> Void
-    func get(parameter: Dictionary<String, AnyObject>?, completionHandler: @escaping ((Result<Dictionary<String, AnyObject>>) -> Void)) -> Void
+    func get(parameter: Dictionary<String, Any>?, successClosure success: @escaping (Dictionary<String, Any>) -> Void, failureClosure fail: @escaping (Error) -> Void) -> Void
+    func get(parameter: Dictionary<String, Any>?, completionHandler: @escaping ((Result<Dictionary<String, Any>>) -> Void)) -> Void
 }
 
 extension AlamofireProtocol {
@@ -37,12 +37,12 @@ extension AlamofireProtocol {
 
 extension AlamofireProtocol {
     
-    func get(parameter: Dictionary<String, AnyObject>? = nil, successClosure success: @escaping (Dictionary<String, AnyObject>) -> Void, failureClosure fail: @escaping (Error) -> Void) -> Void {
+    func get(parameter: Dictionary<String, Any>? = nil, successClosure success: @escaping (Dictionary<String, Any>) -> Void, failureClosure fail: @escaping (Error) -> Void) -> Void {
         let url = baseURL + path
         let responseClosure = { (response: DataResponse<Any>) in
             switch response.result {
             case .success(let value):
-                if let responseDicsionary = value as? Dictionary<String, AnyObject> {
+                if let responseDicsionary = value as? Dictionary<String, Any> {
                     success(responseDicsionary)
                 }
             case .failure(let error):
@@ -53,12 +53,12 @@ extension AlamofireProtocol {
         Alamofire.request(url, method: .get, parameters: parameter).authenticate(user: authUser, password: authPassword).responseJSON(completionHandler: responseClosure)
     }
     
-    func get(parameter: Dictionary<String, AnyObject>? = nil, completionHandler: @escaping ((Result<Dictionary<String, AnyObject>>) -> Void)) -> Void {
+    func get(parameter: Dictionary<String, Any>? = nil, completionHandler: @escaping ((Result<Dictionary<String, Any>>) -> Void)) -> Void {
         let url = baseURL + path
         let responseClosure = { (response: DataResponse<Any>) in
             switch response.result {
             case .success(let value):
-                if let responseDicsionary = value as? Dictionary<String, AnyObject> {
+                if let responseDicsionary = value as? Dictionary<String, Any> {
                     completionHandler(.success(responseDicsionary))
                 }
             case .failure(let error):
