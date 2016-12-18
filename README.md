@@ -1,4 +1,4 @@
-![](PyConJP2016/Assets.xcassets/App/Image/Launch.imageset/launch@2x.png)
+![](PyCon-JP/Assets.xcassets/App/Image/Launch.imageset/launch@2x.png)
 
 # PyCon JP Official Guile App [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/pyconjp/pyconjp-ios/develop/LICENSE) 
 

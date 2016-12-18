@@ -38,7 +38,6 @@ class PCJWKWebViewController: UIViewController, WKNavigationDelegate, WKUIDelega
         let request = URLRequest(url: URL(string: url)!)
         webView.load(request)
         
-        
     }
     
     override func didReceiveMemoryWarning() {

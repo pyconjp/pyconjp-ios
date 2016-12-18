@@ -43,7 +43,7 @@ extension UIColor {
         
         static var green: UIColor { return #colorLiteral(red: 0.5254901961, green: 0.7843137255, blue: 0.6274509804, alpha: 1) }
         
-        static var blue: UIColor { return #colorLiteral(red: 0.5254901961, green: 0.7843137255, blue: 0.6274509804, alpha: 1) }
+        static var blue: UIColor { return #colorLiteral(red: 0.3294117647, green: 0.7607843137, blue: 0.9411764706, alpha: 1) }
         
         static var gray: UIColor { return #colorLiteral(red: 0.7843137255, green: 0.7843137255, blue: 0.7843137255, alpha: 1) }
 
