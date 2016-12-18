@@ -14,6 +14,7 @@ protocol RealmTalksProtocol {
     var sortProperties: Array<SortDescriptor> { get }
     
     func loadTalkObjects(_ completionHandler: ((Result<Array<TalkObject>>) -> Void)) -> Void
+    func getTalksFromLocalDummyJson(completionHandler: ((Result<Void>) -> Void)) -> Void
 }
 
 extension RealmTalksProtocol {
@@ -28,4 +29,31 @@ extension RealmTalksProtocol {
         }
     }
 
+}
+
+extension RealmTalksProtocol {
+    
+    func getTalksFromLocalDummyJson(completionHandler: ((Result<Void>) -> Void)) -> Void {
+        let path = Bundle.main.path(forResource: "DummyTalks", ofType: "json")
+        let fileHandle = FileHandle(forReadingAtPath: path!)
+        let data = fileHandle?.readDataToEndOfFile()
+        let dictionary = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! Dictionary<String, AnyObject>
+        let presentations = dictionary["presentations"] as? Array<Dictionary<String, AnyObject>> ?? [Dictionary<String, AnyObject>]()
+        
+        do {
+            let realm = try Realm()
+            try realm.write({
+                presentations.forEach({
+                    let talkObject = TalkObject(dictionary: $0)
+                    realm.add(talkObject, update: true)
+                })
+            })
+            
+            completionHandler(.success())
+        } catch let error as NSError {
+            completionHandler(.failure(error))
+        }
+        
+    }
+    
 }

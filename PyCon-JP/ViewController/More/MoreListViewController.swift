@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebAPIFramework
 import SafariServices
 
 class MoreListViewController: UITableViewController {
@@ -101,8 +102,8 @@ class MoreListViewController: UITableViewController {
         
         var url: URL? {
             switch self {
-            case .participantsInformation: return URL(string: PCJConfig.baseURL + "participants/")
-            case .sponsor: return URL(string: PCJConfig.baseURL + "sponsors/")
+            case .participantsInformation: return URL(string: WebConfig.baseURL + "participants/")
+            case .sponsor: return URL(string: WebConfig.baseURL + "sponsors/")
             case .questionnaire: return URL(string: "https://docs.google.com/forms/d/e/1FAIpQLSefOgaVN8_cwUAcW-NmTaBNoNG8K47vursedtxkE_cbv_E37A/viewform")
             case .repository: return URL(string: "https://github.com/pyconjp/pyconjp-ios")
             default: return nil

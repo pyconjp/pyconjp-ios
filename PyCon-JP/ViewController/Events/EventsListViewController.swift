@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebAPIFramework
 import SafariServices
 
 class EventsListViewController: UITableViewController {
@@ -65,19 +66,19 @@ class EventsListViewController: UITableViewController {
         
         var url: String {
             switch self {
-            case .tutorial: return PCJConfig.baseURL + "events/tutorial/"
-            case .keynote: return PCJConfig.baseURL + "keynote/"
-            case .invitedLecture: return PCJConfig.baseURL + "talks/invited-speaker/"
-            case .posters: return PCJConfig.baseURL + "schedule/posters/list/"
-            case .lightningTalks: return PCJConfig.baseURL + "events/lightning-talks/"
-            case .youthCoderWorkshop: return PCJConfig.baseURL + "events/youth-ws/"
-            case .beginnerSession: return PCJConfig.baseURL + "events/beginners/"
-            case .committeeMeeting: return PCJConfig.baseURL + "events/committee-meeting/"
-            case .communityBooth: return PCJConfig.baseURL + "events/community-booth/"
-            case .jobFair: return PCJConfig.baseURL + "events/jobsfair/"
-            case .productFair: return PCJConfig.baseURL + "productfair/"
-            case .openSpace: return PCJConfig.baseURL + "events/open-space/"
-            case .sprints: return PCJConfig.baseURL + "events/sprint/"
+            case .tutorial: return WebConfig.baseURL + "events/tutorial/"
+            case .keynote: return WebConfig.baseURL + "keynote/"
+            case .invitedLecture: return WebConfig.baseURL + "talks/invited-speaker/"
+            case .posters: return WebConfig.baseURL + "schedule/posters/list/"
+            case .lightningTalks: return WebConfig.baseURL + "events/lightning-talks/"
+            case .youthCoderWorkshop: return WebConfig.baseURL + "events/youth-ws/"
+            case .beginnerSession: return WebConfig.baseURL + "events/beginners/"
+            case .committeeMeeting: return WebConfig.baseURL + "events/committee-meeting/"
+            case .communityBooth: return WebConfig.baseURL + "events/community-booth/"
+            case .jobFair: return WebConfig.baseURL + "events/jobsfair/"
+            case .productFair: return WebConfig.baseURL + "productfair/"
+            case .openSpace: return WebConfig.baseURL + "events/open-space/"
+            case .sprints: return WebConfig.baseURL + "events/sprint/"
             }
         }
         

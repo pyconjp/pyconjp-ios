@@ -48,6 +48,16 @@
                ReferencedContainer = "container:PyCon-JP.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DB77FD511E06720D00504869"
+               BuildableName = "WebAPIFrameworkTests.xctest"
+               BlueprintName = "WebAPIFrameworkTests"
+               ReferencedContainer = "container:PyCon-JP.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

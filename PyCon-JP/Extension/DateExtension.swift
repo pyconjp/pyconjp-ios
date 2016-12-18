@@ -1,5 +1,5 @@
 //
-//  NSDateExtension.swift
+//  DateExtension.swift
 //  PyConJP2016
 //
 //  Created by Yutaro Muta on 7/18/16.

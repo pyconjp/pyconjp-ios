@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebAPIFramework
 import AlamofireImage
 
 class SpeakerCollectionViewCell: UICollectionViewCell {
@@ -22,7 +23,7 @@ class SpeakerCollectionViewCell: UICollectionViewCell {
     }
     
     func fill(speaker: Speaker) {
-        if let imageURL = speaker.imageURL, let url = URL(string: PCJConfig.hostURL + imageURL) {
+        if let imageURL = speaker.imageURL, let url = URL(string: WebConfig.hostURL + imageURL) {
             iconImageView.af_setImage(withURL: url)
         }
         nameLabel.text = speaker.name
