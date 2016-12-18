@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebAPIFramework
 
 protocol StaffListAPIProtocol: AlamofireProtocol {
     func getStaffs(completionHandler: @escaping ((Result<Array<Staff>>) -> Void)) -> Void
