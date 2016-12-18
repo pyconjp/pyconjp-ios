@@ -8,7 +8,6 @@
 
 import UIKit
 import WebAPIFramework
-import RealmSwift
 
 protocol TalkDetailAPIProtocol: AlamofireProtocol {
     var id: Int? { get set }

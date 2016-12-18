@@ -19,8 +19,7 @@
 		DB77FCE81E06696700504869 /* TimelineDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77FC591E06696600504869 /* TimelineDataSource.swift */; };
 		DB77FCE91E06696700504869 /* AppDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77FC5C1E06696600504869 /* AppDelegateExtension.swift */; };
 		DB77FCEA1E06696700504869 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77FC5D1E06696600504869 /* ArrayExtension.swift */; };
-		DB77FCEB1E06696700504869 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77FC5E1E06696600504869 /* NSDateExtension.swift */; };
-		DB77FCEC1E06696700504869 /* NSLocaleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77FC5F1E06696600504869 /* NSLocaleExtension.swift */; };
+		DB77FCEB1E06696700504869 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77FC5E1E06696600504869 /* DateExtension.swift */; };
 		DB77FCED1E06696700504869 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77FC601E06696600504869 /* StringExtension.swift */; };
 		DB77FCEE1E06696700504869 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77FC611E06696600504869 /* UIColorExtension.swift */; };
 		DB77FCEF1E06696700504869 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77FC621E06696600504869 /* UIDeviceExtension.swift */; };
@@ -188,8 +187,7 @@
 		DB77FC591E06696600504869 /* TimelineDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineDataSource.swift; sourceTree = "<group>"; };
 		DB77FC5C1E06696600504869 /* AppDelegateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateExtension.swift; sourceTree = "<group>"; };
 		DB77FC5D1E06696600504869 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
-		DB77FC5E1E06696600504869 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
-		DB77FC5F1E06696600504869 /* NSLocaleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocaleExtension.swift; sourceTree = "<group>"; };
+		DB77FC5E1E06696600504869 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		DB77FC601E06696600504869 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		DB77FC611E06696600504869 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		DB77FC621E06696600504869 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
@@ -455,8 +453,7 @@
 			children = (
 				DB77FC5C1E06696600504869 /* AppDelegateExtension.swift */,
 				DB77FC5D1E06696600504869 /* ArrayExtension.swift */,
-				DB77FC5E1E06696600504869 /* NSDateExtension.swift */,
-				DB77FC5F1E06696600504869 /* NSLocaleExtension.swift */,
+				DB77FC5E1E06696600504869 /* DateExtension.swift */,
 				DB77FC601E06696600504869 /* StringExtension.swift */,
 				DB77FC611E06696600504869 /* UIColorExtension.swift */,
 				DB77FC621E06696600504869 /* UIDeviceExtension.swift */,
@@ -1126,8 +1123,7 @@
 				DB77FCFE1E06696700504869 /* Talk.swift in Sources */,
 				DB77FD081E06696700504869 /* RealmTalksProtocol.swift in Sources */,
 				DB77FD2D1E06696700504869 /* ConferencePageViewController.swift in Sources */,
-				DB77FCEC1E06696700504869 /* NSLocaleExtension.swift in Sources */,
-				DB77FCEB1E06696700504869 /* NSDateExtension.swift in Sources */,
+				DB77FCEB1E06696700504869 /* DateExtension.swift in Sources */,
 				DB77FD1D1E06696700504869 /* CustomImageView.swift in Sources */,
 				DB77FD321E06696700504869 /* FloorMapZoomableImageViewController.swift in Sources */,
 				DB77FD1E1E06696700504869 /* SpeakerCollectionViewCell.swift in Sources */,
