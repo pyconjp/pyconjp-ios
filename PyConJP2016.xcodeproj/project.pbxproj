@@ -738,7 +738,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "Yutaro Muta";
+				ORGANIZATIONNAME = "PyCon JP";
 				TargetAttributes = {
 					DBA1C0A81C7228E2004F0C8D = {
 						CreatedOnToolsVersion = 7.2;
