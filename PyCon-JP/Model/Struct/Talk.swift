@@ -42,7 +42,7 @@ extension Talk {
         self.language = Language(rawValue: language) ?? .En
     }
     
-    init(dictionary: Dictionary<String, AnyObject>) {
+    init(dictionary: [String: Any]) {
         self.init(id: dictionary["id"] as? Int ?? 0,
                   title: dictionary["title"] as? String ?? "",
                   description: dictionary["description"] as? String ?? "",

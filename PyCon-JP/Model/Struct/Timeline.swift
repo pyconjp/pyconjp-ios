@@ -11,13 +11,13 @@ import UIKit
 struct Timeline {
     
     let key: String
-    var talks: Array<TalkObject>
+    var talks: [TalkObject]
     
 }
 
 extension Timeline {
     
-    init(time: String, talks: Array<TalkObject>) {
+    init(time: String, talks: [TalkObject]) {
         self.key = time.timeStringByTrimmingSecond()
         self.talks = talks
     }

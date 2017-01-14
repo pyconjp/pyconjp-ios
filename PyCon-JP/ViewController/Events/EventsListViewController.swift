@@ -34,7 +34,7 @@ class EventsListViewController: UITableViewController {
         case conferenseDay
         case sprintsDay
         
-        var rows: Array<RowType> {
+        var rows: [RowType] {
             switch self {
             case .tutorialsDay:
                 return [.tutorial]

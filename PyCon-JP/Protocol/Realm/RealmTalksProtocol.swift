@@ -11,15 +11,15 @@ import RealmSwift
 
 protocol RealmTalksProtocol {
     var filterPredicate: NSPredicate { get }
-    var sortProperties: Array<SortDescriptor> { get }
+    var sortProperties: [SortDescriptor] { get }
     
-    func loadTalkObjects(_ completionHandler: ((Result<Array<TalkObject>>) -> Void)) -> Void
+    func loadTalkObjects(_ completionHandler: ((Result<[TalkObject]>) -> Void)) -> Void
     func getTalksFromLocalDummyJson(completionHandler: ((Result<Void>) -> Void)) -> Void
 }
 
 extension RealmTalksProtocol {
     
-    func loadTalkObjects(_ completionHandler: ((Result<Array<TalkObject>>) -> Void)) -> Void {
+    func loadTalkObjects(_ completionHandler: ((Result<[TalkObject]>) -> Void)) -> Void {
         do {
             let realm = try Realm()
             let talks = Array(realm.objects(TalkObject.self).filter(filterPredicate).sorted(by: sortProperties))
@@ -37,8 +37,8 @@ extension RealmTalksProtocol {
         let path = Bundle.main.path(forResource: "DummyTalks", ofType: "json")
         let fileHandle = FileHandle(forReadingAtPath: path!)
         let data = fileHandle?.readDataToEndOfFile()
-        let dictionary = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! Dictionary<String, AnyObject>
-        let presentations = dictionary["presentations"] as? Array<Dictionary<String, AnyObject>> ?? [Dictionary<String, AnyObject>]()
+        let dictionary = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: Any]
+        let presentations = dictionary["presentations"] as? [[String: Any]] ?? [[String: Any]]()
         
         do {
             let realm = try Realm()

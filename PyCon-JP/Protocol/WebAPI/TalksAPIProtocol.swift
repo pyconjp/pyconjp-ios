@@ -28,7 +28,7 @@ extension TalksAPIProtocol {
         get() { result in
             switch result {
             case .success(let value):
-                let presentations = value["presentations"] as? Array<Dictionary<String, AnyObject>> ?? [Dictionary<String, AnyObject>]()
+                let presentations = value["presentations"] as? [[String: Any]] ?? [[String: Any]]()
                 
                 do {
                     let apiTalks = presentations.map({ TalkObject(dictionary: $0) })

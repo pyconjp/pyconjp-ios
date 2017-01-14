@@ -11,7 +11,7 @@ import UIKit
 struct TalkDetail {
     
     var talkObject: TalkObject
-    let speakers: Array<Speaker>
+    let speakers: [Speaker]
     let abstract: String
     let level: String
     
@@ -19,9 +19,9 @@ struct TalkDetail {
 
 extension TalkDetail {
     
-    init(dictionary: Dictionary<String, Any>) {
+    init(dictionary: [String: Any]) {
         self.init(talkObject: TalkObject(dictionary: dictionary),
-                  speakers: (dictionary["speaker_infomations"] as? [Dictionary<String, Any>] ?? []).map({ Speaker.init(dictionary: $0) }),
+                  speakers: (dictionary["speaker_infomations"] as? [[String: Any]] ?? []).map({ Speaker.init(dictionary: $0) }),
                   abstract: dictionary["abstract"] as? String ?? "",
                   level: dictionary["level"] as? String ?? "")
     }

@@ -17,12 +17,12 @@ struct Level {
 
 extension Level {
     
-    init(dictionary: [String : AnyObject]) {
+    init(dictionary: [String : Any]) {
         id = dictionary["id"] as? Int ?? 0
         name = dictionary["name"] as? String ?? ""
     }
     
-    init?(dictionary: [String : AnyObject]?) {
+    init?(dictionary: [String : Any]?) {
         guard let dictionary = dictionary else { return nil }
         id = dictionary["id"] as? Int ?? 0
         name = dictionary["name"] as? String ?? ""

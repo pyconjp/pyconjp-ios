@@ -83,7 +83,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
         guard let talkDetail = talkDetail else { return }
         do {
             let realm = try Realm()
-            if let talkObject = realm.object(ofType: TalkObject.self, forPrimaryKey: id as AnyObject) {
+            if let talkObject = realm.object(ofType: TalkObject.self, forPrimaryKey: talkDetail.talkObject.id) {
                 talkDetail.talkObject.favorited = talkObject.favorited
                 toggleBookmarkBarButtonItem(isFavorite: talkDetail.talkObject.favorited)
             }

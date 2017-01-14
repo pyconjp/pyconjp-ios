@@ -10,7 +10,7 @@ import UIKit
 import WebAPIFramework
 
 protocol StaffListAPIProtocol: AlamofireProtocol {
-    func getStaffs(completionHandler: @escaping ((Result<Array<Staff>>) -> Void)) -> Void
+    func getStaffs(completionHandler: @escaping ((Result<[Staff]>) -> Void)) -> Void
 }
 
 extension StaffListAPIProtocol {
@@ -27,11 +27,11 @@ extension StaffListAPIProtocol {
 
 extension StaffListAPIProtocol {
     
-    func getStaffs(completionHandler: @escaping ((Result<Array<Staff>>) -> Void)) -> Void {
+    func getStaffs(completionHandler: @escaping ((Result<[Staff]>) -> Void)) -> Void {
         get() { result in
             switch result {
             case .success(let value):
-                let staffList = value["staffList"] as? Array<Dictionary<String, AnyObject>> ?? []
+                let staffList = value["staffList"] as? [[String: Any]] ?? []
                 completionHandler(.success(staffList.map({ Staff(dictionary: $0) })))
             case .failure(let error):
                 completionHandler(.failure(error))

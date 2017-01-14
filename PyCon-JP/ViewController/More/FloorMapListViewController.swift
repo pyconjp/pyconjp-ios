@@ -35,7 +35,7 @@ class FloorMapListViewController: UITableViewController {
         case secondFloor
         case thirdFloor
         
-        var rows: Array<FloorMapZoomableImageViewController.AssetCatalog> {
+        var rows: [FloorMapZoomableImageViewController.AssetCatalog] {
             switch self {
             case .firstFloor:
                 return [.firstFloorView]

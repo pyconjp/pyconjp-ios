@@ -59,7 +59,7 @@ class MoreListViewController: UITableViewController {
         case map
         case application
         
-        var rows: Array<RowType> {
+        var rows: [RowType] {
             switch self {
             case .about:
                 return [.participantsInformation, .whatsPyConJP, .codeOfConduct, .summary, .sponsor, .staffList, .questionnaire]

@@ -15,7 +15,7 @@ public protocol AlamofireProtocol {
     var authUser: String { get }
     var authPassword: String { get }
     
-    func get(parameter: Dictionary<String, Any>?, completionHandler: @escaping ((Result<Dictionary<String, Any>>) -> Void)) -> Void
+    func get(parameter: [String: Any]?, completionHandler: @escaping ((Result<[String: Any]>) -> Void)) -> Void
 }
 
 public extension AlamofireProtocol {
@@ -36,12 +36,12 @@ public extension AlamofireProtocol {
 
 public extension AlamofireProtocol {
     
-    func get(parameter: Dictionary<String, Any>? = nil, completionHandler: @escaping ((Result<Dictionary<String, Any>>) -> Void)) -> Void {
+    func get(parameter: [String: Any]? = nil, completionHandler: @escaping ((Result<[String: Any]>) -> Void)) -> Void {
         let url = baseURL + path
         let responseClosure = { (response: DataResponse<Any>) in
             switch response.result {
             case .success(let value):
-                if let responseDicsionary = value as? Dictionary<String, Any> {
+                if let responseDicsionary = value as? [String: Any] {
                     completionHandler(.success(responseDicsionary))
                 }
             case .failure(let error):

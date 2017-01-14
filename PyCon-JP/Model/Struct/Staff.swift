@@ -20,7 +20,7 @@ struct Staff {
 
 extension Staff {
     
-    init(dictionary: Dictionary<String, AnyObject>) {
+    init(dictionary: [String: Any]) {
         self.init(team: dictionary["team"] as? String ?? "",
                   name: dictionary["name"] as? String ?? "",
                   role: dictionary["title"] as? String ?? "",
