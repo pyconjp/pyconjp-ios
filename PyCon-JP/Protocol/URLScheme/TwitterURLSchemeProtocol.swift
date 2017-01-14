@@ -11,8 +11,8 @@ import SafariServices
 
 protocol TwitterURLSchemeProtocol {
     
-    func openTwitter(userName: String, from viewController: UIViewController, alertBefore: Bool) -> Void
-    func openTwitter(hashTag: String, from viewController: UIViewController, alertBefore: Bool) -> Void
+    func openTwitter(userName: String, from viewController: UIViewController, alertBefore: Bool)
+    func openTwitter(hashTag: String, from viewController: UIViewController, alertBefore: Bool)
     
 }
 
@@ -26,14 +26,14 @@ extension TwitterURLSchemeProtocol {
         let alertController = UIAlertController(title: NSLocalizedString("TwitterAlertTitle", tableName: "URLScheme", comment: ""),
                                                 message: String(format: NSLocalizedString("TwitterAlertMessage", tableName: "URLScheme", comment: ""), arguments: [targetName]),
                                                 preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: NSLocalizedString("Open", comment: ""), style: .default, handler: { action in
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("Open", comment: ""), style: .default, handler: { _ in
             UIApplication.shared.openURL(url)
         }))
         alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
         viewController.present(alertController, animated: true, completion: nil)
     }
     
-    func openTwitter(userName: String, from viewController: UIViewController, alertBefore: Bool = false) -> Void {
+    func openTwitter(userName: String, from viewController: UIViewController, alertBefore: Bool = false) {
         if UIApplication.shared.canOpenURL(urlScheme) {
             guard let url = URL(string: "twitter://user?screen_name=" + userName) else { return }
             if alertBefore {
@@ -48,7 +48,7 @@ extension TwitterURLSchemeProtocol {
         }
     }
     
-    func openTwitter(hashTag: String, from viewController: UIViewController, alertBefore: Bool = false) -> Void {
+    func openTwitter(hashTag: String, from viewController: UIViewController, alertBefore: Bool = false) {
         if UIApplication.shared.canOpenURL(urlScheme) {
             guard let url = URL(string: "twitter://search?query=%23" + hashTag) else { return }
             if alertBefore {

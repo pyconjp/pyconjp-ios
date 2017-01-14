@@ -12,7 +12,7 @@ import WebAPIFramework
 protocol TalkDetailAPIProtocol: AlamofireProtocol {
     var id: Int? { get set }
     
-    func getTalkDetail(completionHandler: @escaping ((Result<TalkDetail>) -> Void)) -> Void
+    func getTalkDetail(completionHandler: @escaping ((Result<TalkDetail>) -> Void))
 }
 
 extension TalkDetailAPIProtocol {
@@ -26,8 +26,8 @@ extension TalkDetailAPIProtocol {
 
 extension TalkDetailAPIProtocol {
     
-    func getTalkDetail(completionHandler: @escaping ((Result<TalkDetail>) -> Void)) -> Void {
-        get() { result in
+    func getTalkDetail(completionHandler: @escaping ((Result<TalkDetail>) -> Void)) {
+        get { result in
             switch result {
             case .success(let value):
                 let talkDetail = TalkDetail(dictionary: value)

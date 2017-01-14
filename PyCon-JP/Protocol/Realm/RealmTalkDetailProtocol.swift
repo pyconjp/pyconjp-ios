@@ -9,12 +9,12 @@
 import UIKit
 
 protocol RealmTalkDetailProtocol {
-    func getTalksFromLocalDummyJson(completionHandler: ((Result<Void>) -> Void)) -> Void
+    func getTalksFromLocalDummyJson(completionHandler: ((Result<Void>) -> Void))
 }
 
 extension RealmTalkDetailProtocol {
     
-    func getTalkDetailFromLocalDummyJson(completionHandler: ((Result<TalkDetail>) -> Void)) -> Void {
+    func getTalkDetailFromLocalDummyJson(completionHandler: ((Result<TalkDetail>) -> Void)) {
         let path = Bundle.main.path(forResource: "DummyTalkDetail", ofType: "json")
         let fileHandle = FileHandle(forReadingAtPath: path!)
         let data = fileHandle?.readDataToEndOfFile()

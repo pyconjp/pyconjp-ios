@@ -15,7 +15,7 @@ public protocol AlamofireProtocol {
     var authUser: String { get }
     var authPassword: String { get }
     
-    func get(parameter: [String: Any]?, completionHandler: @escaping ((Result<[String: Any]>) -> Void)) -> Void
+    func get(parameter: [String: Any]?, completionHandler: @escaping ((Result<[String: Any]>) -> Void))
 }
 
 public extension AlamofireProtocol {
@@ -36,7 +36,7 @@ public extension AlamofireProtocol {
 
 public extension AlamofireProtocol {
     
-    func get(parameter: [String: Any]? = nil, completionHandler: @escaping ((Result<[String: Any]>) -> Void)) -> Void {
+    func get(parameter: [String: Any]? = nil, completionHandler: @escaping ((Result<[String: Any]>) -> Void)) {
         let url = baseURL + path
         let responseClosure = { (response: DataResponse<Any>) in
             switch response.result {

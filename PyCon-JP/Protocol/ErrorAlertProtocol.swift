@@ -9,12 +9,12 @@
 import UIKit
 
 protocol ErrorAlertProtocol {
-    func showErrorAlart(with error: Error, parent viewController: UIViewController?) -> Void
+    func showErrorAlart(with error: Error, parent viewController: UIViewController?)
 }
 
 extension ErrorAlertProtocol {
     
-    func showErrorAlart(with error: Error, parent viewController: UIViewController? = nil) -> Void {
+    func showErrorAlart(with error: Error, parent viewController: UIViewController? = nil) {
         
         let rootViewController = viewController != nil ? viewController! : UIApplication.shared.keyWindow!.rootViewController!
         

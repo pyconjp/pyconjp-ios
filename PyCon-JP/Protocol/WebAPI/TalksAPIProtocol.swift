@@ -11,7 +11,7 @@ import WebAPIFramework
 import RealmSwift
 
 protocol TalksAPIProtocol: AlamofireProtocol {
-    func getTalks(completionHandler: @escaping ((Result<Void>) -> Void)) -> Void
+    func getTalks(completionHandler: @escaping ((Result<Void>) -> Void))
 }
 
 extension TalksAPIProtocol {
@@ -24,8 +24,8 @@ extension TalksAPIProtocol {
 
 extension TalksAPIProtocol {
     
-    func getTalks(completionHandler: @escaping ((Result<Void>) -> Void)) -> Void {
-        get() { result in
+    func getTalks(completionHandler: @escaping ((Result<Void>) -> Void)) {
+        get { result in
             switch result {
             case .success(let value):
                 let presentations = value["presentations"] as? [[String: Any]] ?? [[String: Any]]()

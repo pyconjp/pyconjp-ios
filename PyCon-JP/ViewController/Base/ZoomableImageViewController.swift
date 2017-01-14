@@ -51,7 +51,7 @@ class ZoomableImageViewController: UIViewController, UIScrollViewDelegate {
         if toHidden {
             UIView.animate(withDuration: 0.2, animations: {
                 self.toolBar.alpha = 0
-                }, completion: { finished in
+                }, completion: { _ in
                     self.toolBar.isHidden = true
             })
         } else {

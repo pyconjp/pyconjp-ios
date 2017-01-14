@@ -17,13 +17,13 @@ class ConferencePageViewController: UIPageViewController, ConferencePageViewProt
         
         let startingViewController = self.conferenceModelController.viewController(index: 0, storyboard: self.storyboard!)!
         let viewControllers = [startingViewController]
-        self.setViewControllers(viewControllers, direction: .forward, animated: false, completion: {done in })
+        self.setViewControllers(viewControllers, direction: .forward, animated: false)
         
         self.dataSource = self.conferenceModelController
         
     }
     
-    private var _conferenceModelController: ConferenceModelController? = nil
+    private var _conferenceModelController: ConferenceModelController?
     
     private var conferenceModelController: ConferenceModelController {
         if _conferenceModelController == nil {
@@ -61,7 +61,7 @@ class ConferencePageViewController: UIPageViewController, ConferencePageViewProt
     private func movePage(index: Int, direction: UIPageViewControllerNavigationDirection) {
         let viewController = conferenceModelController.viewController(index: index, storyboard: self.storyboard!)!
         let viewControllers = [viewController]
-        self.setViewControllers(viewControllers, direction: direction, animated: true, completion: {done in})
+        self.setViewControllers(viewControllers, direction: direction, animated: true)
     }
     
 }

@@ -13,13 +13,13 @@ protocol RealmTalksProtocol {
     var filterPredicate: NSPredicate { get }
     var sortProperties: [SortDescriptor] { get }
     
-    func loadTalkObjects(_ completionHandler: ((Result<[TalkObject]>) -> Void)) -> Void
-    func getTalksFromLocalDummyJson(completionHandler: ((Result<Void>) -> Void)) -> Void
+    func loadTalkObjects(_ completionHandler: ((Result<[TalkObject]>) -> Void))
+    func getTalksFromLocalDummyJson(completionHandler: ((Result<Void>) -> Void))
 }
 
 extension RealmTalksProtocol {
     
-    func loadTalkObjects(_ completionHandler: ((Result<[TalkObject]>) -> Void)) -> Void {
+    func loadTalkObjects(_ completionHandler: ((Result<[TalkObject]>) -> Void)) {
         do {
             let realm = try Realm()
             let talks = Array(realm.objects(TalkObject.self).filter(filterPredicate).sorted(by: sortProperties))
@@ -33,7 +33,7 @@ extension RealmTalksProtocol {
 
 extension RealmTalksProtocol {
     
-    func getTalksFromLocalDummyJson(completionHandler: ((Result<Void>) -> Void)) -> Void {
+    func getTalksFromLocalDummyJson(completionHandler: ((Result<Void>) -> Void)) {
         let path = Bundle.main.path(forResource: "DummyTalks", ofType: "json")
         let fileHandle = FileHandle(forReadingAtPath: path!)
         let data = fileHandle?.readDataToEndOfFile()
