@@ -1,15 +1,15 @@
 //
-//  PyConJP2016Tests.swift
-//  PyConJP2016Tests
+//  PyConJPTests.swift
+//  PyConJPTests
 //
 //  Created by Yutaro Muta on 2016/02/16.
 //  Copyright © 2016 PyCon JP. All rights reserved.
 //
 
 import XCTest
-@testable import PyConJP2016
+@testable import PyConJP
 
-class PyConJP2016Tests: XCTestCase {
+class PyConJPTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

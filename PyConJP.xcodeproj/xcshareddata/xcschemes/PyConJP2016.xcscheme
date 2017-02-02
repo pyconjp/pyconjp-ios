@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DBA1C0A81C7228E2004F0C8D"
-               BuildableName = "PyCon-JP.app"
-               BlueprintName = "PyCon-JP"
-               ReferencedContainer = "container:PyCon-JP.xcodeproj">
+               BuildableName = "PyConJP.app"
+               BlueprintName = "PyConJP"
+               ReferencedContainer = "container:PyConJP.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DBA1C0BC1C7228E2004F0C8D"
-               BuildableName = "PyCon-JPTests.xctest"
-               BlueprintName = "PyCon-JPTests"
-               ReferencedContainer = "container:PyCon-JP.xcodeproj">
+               BuildableName = "PyConJPTests.xctest"
+               BlueprintName = "PyConJPTests"
+               ReferencedContainer = "container:PyConJP.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DBA1C0C71C7228E2004F0C8D"
-               BuildableName = "PyCon-JPUITests.xctest"
-               BlueprintName = "PyCon-JPUITests"
-               ReferencedContainer = "container:PyCon-JP.xcodeproj">
+               BuildableName = "PyConJPUITests.xctest"
+               BlueprintName = "PyConJPUITests"
+               ReferencedContainer = "container:PyConJP.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -55,7 +55,7 @@
                BlueprintIdentifier = "DB77FD511E06720D00504869"
                BuildableName = "WebAPIFrameworkTests.xctest"
                BlueprintName = "WebAPIFrameworkTests"
-               ReferencedContainer = "container:PyCon-JP.xcodeproj">
+               ReferencedContainer = "container:PyConJP.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DBA1C0A81C7228E2004F0C8D"
-            BuildableName = "PyCon-JP.app"
-            BlueprintName = "PyCon-JP"
-            ReferencedContainer = "container:PyCon-JP.xcodeproj">
+            BuildableName = "PyConJP.app"
+            BlueprintName = "PyConJP"
+            ReferencedContainer = "container:PyConJP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -86,9 +86,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DBA1C0A81C7228E2004F0C8D"
-            BuildableName = "PyCon-JP.app"
-            BlueprintName = "PyCon-JP"
-            ReferencedContainer = "container:PyCon-JP.xcodeproj">
+            BuildableName = "PyConJP.app"
+            BlueprintName = "PyConJP"
+            ReferencedContainer = "container:PyConJP.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -105,9 +105,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DBA1C0A81C7228E2004F0C8D"
-            BuildableName = "PyCon-JP.app"
-            BlueprintName = "PyCon-JP"
-            ReferencedContainer = "container:PyCon-JP.xcodeproj">
+            BuildableName = "PyConJP.app"
+            BlueprintName = "PyConJP"
+            ReferencedContainer = "container:PyConJP.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

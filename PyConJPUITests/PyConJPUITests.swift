@@ -1,6 +1,6 @@
 //
-//  PyConJP2016UITests.swift
-//  PyConJP2016UITests
+//  PyConJPUITests.swift
+//  PyConJPUITests
 //
 //  Created by Yutaro Muta on 2016/02/16.
 //  Copyright © 2016 PyCon JP. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class PyConJP2016UITests: XCTestCase {
+class PyConJPUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
