@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SpeakerCollectionViewCell" customModule="PyConJP2016" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="gfA-OK-4iy">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="70"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Speaker" translatesAutoresizingMaskIntoConstraints="NO" id="dFk-rh-5jt">
+                            <rect key="frame" x="0.0" y="10" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="dFk-rh-5jt" secondAttribute="height" multiplier="1:1" id="ElZ-Ah-jbj"/>
+                                <constraint firstAttribute="width" constant="50" id="XKX-sw-hvB"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="OlG-DL-vAR">
+                            <rect key="frame" x="53" y="18" width="97" height="34"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speaker" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="WUS-tz-R9W">
+                                    <rect key="frame" x="0.0" y="0.0" width="56" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@Twitter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="xgm-YF-3nR">
+                                    <rect key="frame" x="0.0" y="18" width="54" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" red="0.33333333333333331" green="0.67450980392156867" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gfA-OK-4iy" secondAttribute="trailing" id="LBX-ob-2FK"/>
+                <constraint firstAttribute="bottom" secondItem="gfA-OK-4iy" secondAttribute="bottom" id="RCA-0P-JxF"/>
+                <constraint firstItem="gfA-OK-4iy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nTM-d0-xYV"/>
+                <constraint firstItem="gfA-OK-4iy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xr5-yJ-cFi"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconImageView" destination="dFk-rh-5jt" id="AF0-dV-Y3d"/>
+                <outlet property="nameLabel" destination="WUS-tz-R9W" id="Ixu-03-rZ5"/>
+                <outlet property="twitterLabel" destination="xgm-YF-3nR" id="EJ8-7a-8gh"/>
+            </connections>
+            <point key="canvasLocation" x="358.5" y="328"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Speaker" width="36" height="36"/>
+    </resources>
+</document>

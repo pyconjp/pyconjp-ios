@@ -1,42 +1,66 @@
-##Xcode
-#BuildFile
+# Xcode
+## Build generated
 build/
-DerivedData
+DerivedData/
 
-#PrivateSetting
+## Various settings
+xcuserdata/
+
+## Private setting
 *.pbxuser
 *mode1v3
 *mode2v3
 *perspectivev3
-*moved-aside
-*xcuserstate
-*xccheckout
 
-#DefaultSetting
+## Default setting
 !default.pbxuser
 !default.mode1v3
 !default.mode2v3
 !default.perspectivev3
 
-#CustomScheme
-PyConJP2016.xcodeproj/xcuserdata
-PyConJP2016.xcworkspace/xcuserdata
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
 
-#Bundler
+## CustomScheme
+*.xcodeproj/xcuserdata
+*.xcworkspace/xcuserdata
+
+# Bundler
+.bundle
 Gemfile.lock
+vendor
 
-##cocoaPods
+# CocoaPods
 Pods/*
 Podfile.lock
 !default.xcworkspace
 *.xcworkspace
 
-#Carthage
+# Carthage
 Carthage/*
 Cartfile.resolved
 
-##AppCode
-.idea
+# fastlane
+fastlane/*
+!fastlane/Fastfile
 
-##OSX
+# AppCode
+## User-specific stuff:
+.idea/workspace.xml
+.idea/tasks.xml
+
+## Sensitive or high-churn files:
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
