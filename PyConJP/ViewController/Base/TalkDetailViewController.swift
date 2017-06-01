@@ -100,15 +100,17 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
     
     private func getDetail() {
         getTalkDetail { [weak self](result) in
-            guard let weakSelf = self else { return }
             switch result {
             case .success(let talkDetail):
-                weakSelf.talkDetail = talkDetail
-                weakSelf.fillData()
-                weakSelf.refreshControl.endRefreshing()
+                self?.talkDetail = talkDetail
+                self?.fillData()
+                self?.refreshControl.endRefreshing()
             case .failure(let error):
-                weakSelf.refreshControl.endRefreshing()
-                weakSelf.showErrorAlart(with: error, parent: weakSelf)
+                self?.refreshControl.endRefreshing()
+                guard let weakSelf = self else { return }
+                DispatchQueue.main.async {
+                    self?.showErrorAlart(with: error, parent: weakSelf)
+                }
             }
         }
     }
