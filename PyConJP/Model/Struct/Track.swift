@@ -13,11 +13,11 @@ struct Track {
     let talks: [TalkObject]
     
     var start: Date? {
-        return talks.min(by: { $0.0.startDate < $0.1.startDate })?.startDate
+        return talks.flatMap({ $0.startDate }).min()
     }
     
     var end: Date? {
-        return talks.max(by: { $0.0.startDate < $0.1.startDate })?.startDate
+        return talks.flatMap({ $0.endDate }).max()
     }
     
 }
