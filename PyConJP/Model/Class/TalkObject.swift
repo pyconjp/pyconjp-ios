@@ -22,9 +22,9 @@ final class TalkObject: RealmSwift.Object {
     dynamic var category: String = ""
     dynamic var place: String = ""
     dynamic var language: String = ""
-    dynamic var favorited: Bool = false
+    dynamic var isFavorite: Bool = false
     
-    convenience init(id: Int, title: String, descriptionText: String, speakers: String, startDate: Date, endDate: Date, day: String, startTime: String, endTime: String, category: String, place: String, language: String, favorited: Bool) {
+    convenience init(id: Int, title: String, descriptionText: String, speakers: String, startDate: Date, endDate: Date, day: String, startTime: String, endTime: String, category: String, place: String, language: String, isFavorite: Bool) {
         self.init()
         self.id = id
         self.title =  title
@@ -38,7 +38,7 @@ final class TalkObject: RealmSwift.Object {
         self.category = category
         self.place = place
         self.language = language
-        self.favorited = favorited
+        self.isFavorite = isFavorite
     }
     
     convenience init?(dictionary: [String: Any]) {
@@ -61,7 +61,7 @@ final class TalkObject: RealmSwift.Object {
         let isFavorite: Bool = {
             let realm = try? Realm()
             guard let localTalkObject = (realm?.objects(TalkObject.self).filter("id == %@", id).map { $0 })?.first else { return false }
-            return localTalkObject.favorited
+            return localTalkObject.isFavorite
         }()
         
         self.init(id: id,
@@ -76,7 +76,7 @@ final class TalkObject: RealmSwift.Object {
                   category: category,
                   place: place,
                   language: language,
-                  favorited: isFavorite)
+                  isFavorite: isFavorite)
     }
     
     override static func primaryKey() -> String? {
