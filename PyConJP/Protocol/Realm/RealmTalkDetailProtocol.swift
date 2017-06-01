@@ -21,7 +21,7 @@ extension RealmTalkDetailProtocol {
         let dictionary = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: Any]
         
         let talkDetail = TalkDetail(dictionary: dictionary)
-        completionHandler(.success(talkDetail))
+        completionHandler(.success(talkDetail!))
         
     }
     

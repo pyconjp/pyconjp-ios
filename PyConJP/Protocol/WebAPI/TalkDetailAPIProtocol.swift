@@ -30,7 +30,10 @@ extension TalkDetailAPIProtocol {
         get { result in
             switch result {
             case .success(let value):
-                let talkDetail = TalkDetail(dictionary: value)
+                guard let talkDetail = TalkDetail(dictionary: value) else {
+                    completionHandler(.failure(APIError.failureParse))
+                    return
+                }
                 completionHandler(.success(talkDetail))
             case .failure(let error):
                 completionHandler(.failure(error))

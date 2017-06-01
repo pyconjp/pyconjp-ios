@@ -12,7 +12,7 @@ import RealmSwift
 class ConferenceListDataSource: TimelineDataSource, RealmTalksProtocol {
     
     let filterPredicate: NSPredicate
-    let sortProperties = [SortDescriptor(property: "date", ascending: true), SortDescriptor(property: "place", ascending: true)]
+    let sortProperties = [SortDescriptor(keyPath: "startDate", ascending: true), SortDescriptor(keyPath: "place", ascending: true)]
     
     init(day: String?) {
         self.filterPredicate = NSPredicate(format: "day == %@", day ?? "")
