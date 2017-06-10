@@ -12,11 +12,15 @@ struct Timetable {
     
     let tracks: [Track]
     
+    var rooms: [Room] {
+        return tracks.map({ $0.room })
+    }
+    
     var start: Date? {
         return tracks.flatMap({ $0.start }).min()
     }
     
-    var end : Date? {
+    var end: Date? {
         return tracks.flatMap({ $0.end }).max()
     }
     
@@ -26,8 +30,10 @@ struct Timetable {
         return end.timeIntervalSince(start) / 60
     }
     
-    //        init(talks: [TalkObject]) {
-    ////            let hoge = TalkRoom.
-    //        }
+    init(talks: [TalkObject]) {
+        self.tracks = Room.rooms.map { room -> Track in
+            Track(room: room, talks: talks.filter({ $0.room == room }))
+        }
+    }
     
 }

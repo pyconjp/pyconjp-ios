@@ -32,7 +32,7 @@ class LocalNotificationManager: NSObject {
         let notificaiton = UILocalNotification()
         notificaiton.fireDate = fireDate
         notificaiton.timeZone = TimeZone.current
-        notificaiton.alertBody = "10分後に \" \(talkDetail.talkObject.title) \" が開始します。 \(talkDetail.talkObject.place)"
+        notificaiton.alertBody = "10分後に \" \(talkDetail.talkObject.title) \" が開始します。 \(talkDetail.talkObject.room?.description ?? "")"
         notificaiton.userInfo = userInfo
         
         UIApplication.shared.scheduleLocalNotification(notificaiton)

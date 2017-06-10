@@ -123,14 +123,14 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
             self.dayLabel.text = talkDetail.talkObject.day
             self.periodTimeLabel.text = talkDetail.talkObject.periodTime
             
-            self.placeLabel.text = talkDetail.talkObject.place
+            self.placeLabel.text = talkDetail.talkObject.room?.description
             self.placeLabel.textColor = talkDetail.talkObject.room?.color ?? UIColor.black
             self.hashTagButton.setTitle((talkDetail.talkObject.room?.hashTag ?? "#pyconjp"), for: UIControlState())
             
             self.speakersCollectionViewHeightConstraint.constant = talkDetail.speakers.isEmpty ? 0 : self.speakersCollectionViewHeight
             self.speakersCollectionView.reloadData()
             
-            self.languageLabel.text = talkDetail.talkObject.languageType?.localized
+            self.languageLabel.text = talkDetail.talkObject.language?.localized
             self.levelLabel.text = talkDetail.level
             self.categoryLabel.text = talkDetail.talkObject.category
             

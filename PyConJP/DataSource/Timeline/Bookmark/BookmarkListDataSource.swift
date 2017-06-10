@@ -12,7 +12,7 @@ import RealmSwift
 class BookmarkListDataSource: TimelineDataSource, RealmTalksProtocol {
     
     let filterPredicate = NSPredicate(format: "favorited == %@", true as CVarArg)
-    let sortProperties = [SortDescriptor(keyPath: "startDate", ascending: true), SortDescriptor(keyPath: "place", ascending: true)]
+    let sortProperties = [SortDescriptor(keyPath: "startDate", ascending: true), SortDescriptor(keyPath: "roomString", ascending: true)]
     
     func refreshData(completionHandler: @escaping ((Result<Void>) -> Void)) {
         loadTalkObjects { [weak self](result) in

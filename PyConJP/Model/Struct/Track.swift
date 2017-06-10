@@ -9,6 +9,7 @@
 import Foundation
 
 struct Track {
+    
     let room: Room
     let talks: [TalkObject]
     

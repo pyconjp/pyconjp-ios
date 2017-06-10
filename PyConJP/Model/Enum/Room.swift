@@ -15,6 +15,10 @@ enum Room: CustomStringConvertible {
     case room204
     case room205
     
+    static var rooms: [Room] {
+        return [.room201, .room202, .room203, .room204, .room205]
+    }
+    
     var description: String {
         switch self {
         case .room201: return "Room 201"

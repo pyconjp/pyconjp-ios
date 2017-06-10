@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 
 final class TalkObject: RealmSwift.Object {
+    
     dynamic var id: Int = 0
     dynamic var title: String = ""
     dynamic var descriptionText: String = ""
@@ -20,11 +21,11 @@ final class TalkObject: RealmSwift.Object {
     dynamic var startTime: String = ""
     dynamic var endTime: String = ""
     dynamic var category: String = ""
-    dynamic var place: String = ""
-    dynamic var language: String = ""
+    dynamic var roomString: String = ""
+    dynamic var languageString: String = ""
     dynamic var isFavorite: Bool = false
     
-    convenience init(id: Int, title: String, descriptionText: String, speakers: String, startDate: Date, endDate: Date, day: String, startTime: String, endTime: String, category: String, place: String, language: String, isFavorite: Bool) {
+    convenience init(id: Int, title: String, descriptionText: String, speakers: String, startDate: Date, endDate: Date, day: String, startTime: String, endTime: String, category: String, roomString: String, languageString: String, isFavorite: Bool) {
         self.init()
         self.id = id
         self.title =  title
@@ -36,8 +37,8 @@ final class TalkObject: RealmSwift.Object {
         self.startTime = startTime
         self.endTime = endTime
         self.category = category
-        self.place = place
-        self.language = language
+        self.roomString = roomString
+        self.languageString = languageString
         self.isFavorite = isFavorite
     }
     
@@ -51,7 +52,7 @@ final class TalkObject: RealmSwift.Object {
             let endTime = dictionary["end"] as? String,
             let endDate = Date.date(from: day + " " + endTime),
             let category = dictionary["category"] as? String,
-            let place = dictionary["rooms"] as? String,
+            let roomString = dictionary["rooms"] as? String,
             let language = dictionary["language"] as? String else { return nil }
         
         let speakers = (dictionary["speakers"] as? [String] ?? []).enumerated().reduce("") {
@@ -74,11 +75,35 @@ final class TalkObject: RealmSwift.Object {
                   startTime: startTime,
                   endTime: endTime,
                   category: category,
-                  place: place,
-                  language: language,
+                  roomString: roomString,
+                  languageString: language,
                   isFavorite: isFavorite)
     }
     
+    convenience init(_ talk: Talk) {
+        let speakersString = talk.speakers.enumerated().reduce("") {
+            $0 + $1.element + (talk.speakers.count - 1 == $1.offset ? "" : ", ")
+        }
+        let isFavorite: Bool = {
+            let realm = try? Realm()
+            guard let localTalkObject = (realm?.objects(TalkObject.self).filter("id == %@", talk.id).map { $0 })?.first else { return false }
+            return localTalkObject.isFavorite
+        }()
+        self.init(id: talk.id,
+                  title: talk.title,
+                  descriptionText: talk.description,
+                  speakers: speakersString,
+                  startDate: talk.startDate,
+                  endDate: talk.endDate,
+                  day: talk.day,
+                  startTime: talk.startTime,
+                  endTime: talk.endTime,
+                  category: talk.category,
+                  roomString: talk.room.description,
+                  languageString: talk.language.description,
+                  isFavorite: isFavorite)
+    }
+
     override static func primaryKey() -> String? {
         return "id"
     }
@@ -87,16 +112,16 @@ final class TalkObject: RealmSwift.Object {
         return startTime.timeStringByTrimmingSecond() + " ~ " + endTime.timeStringByTrimmingSecond()
     }
     
-    var languageType: Language? {
-        return Language(rawValue: language)
+    var language: Language? {
+        return Language(languageString)
     }
     
     var placeNumber: String {
-        return self.place.components(separatedBy: CharacterSet.decimalDigits.inverted).last ?? ""
+        return self.roomString.components(separatedBy: CharacterSet.decimalDigits.inverted).last ?? ""
     }
     
     var room: Room? {
-        return Room(place)
+        return Room(roomString)
     }
     
 }
