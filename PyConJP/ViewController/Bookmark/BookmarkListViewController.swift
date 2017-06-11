@@ -53,15 +53,15 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAl
     
     func refresh() {
         bookmarkListDataSource.refreshData { [weak self](result) in
-            guard let weakSelf = self else { return }
             switch result {
             case .success:
                 DispatchQueue.main.async {
-                    weakSelf.tableView.reloadData()
+                    self?.tableView.reloadData()
                 }
             case .failure(let error):
+                 guard let weakSelf = self else { return }
                 DispatchQueue.main.async {
-                    weakSelf.showErrorAlart(with: error, parent: weakSelf)
+                    self?.showErrorAlart(with: error, parent: weakSelf)
                 }
             }
         }

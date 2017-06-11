@@ -29,7 +29,7 @@ class TalkTableViewCell: UITableViewCell {
     func fill(talkObject: TalkObject) {
         titleLabel.text = talkObject.title
         timeLabel.text = talkObject.periodTime
-        placeLabel.text = talkObject.place
+        placeLabel.text = talkObject.room?.description
         speakerLabel.text = talkObject.speakers
         if let room = talkObject.room {
             placeView.backgroundColor = room.color

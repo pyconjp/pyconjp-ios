@@ -84,8 +84,8 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
         do {
             let realm = try Realm()
             if let talkObject = realm.object(ofType: TalkObject.self, forPrimaryKey: talkDetail.talkObject.id) {
-                talkDetail.talkObject.favorited = talkObject.favorited
-                toggleBookmarkBarButtonItem(isFavorite: talkDetail.talkObject.favorited)
+                talkDetail.talkObject.isFavorite = talkObject.isFavorite
+                toggleBookmarkBarButtonItem(talkDetail.talkObject.isFavorite)
             }
         } catch {
             
@@ -100,15 +100,17 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
     
     private func getDetail() {
         getTalkDetail { [weak self](result) in
-            guard let weakSelf = self else { return }
             switch result {
             case .success(let talkDetail):
-                weakSelf.talkDetail = talkDetail
-                weakSelf.fillData()
-                weakSelf.refreshControl.endRefreshing()
+                self?.talkDetail = talkDetail
+                self?.fillData()
+                self?.refreshControl.endRefreshing()
             case .failure(let error):
-                weakSelf.refreshControl.endRefreshing()
-                weakSelf.showErrorAlart(with: error, parent: weakSelf)
+                self?.refreshControl.endRefreshing()
+                guard let weakSelf = self else { return }
+                DispatchQueue.main.async {
+                    self?.showErrorAlart(with: error, parent: weakSelf)
+                }
             }
         }
     }
@@ -121,26 +123,26 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
             self.dayLabel.text = talkDetail.talkObject.day
             self.periodTimeLabel.text = talkDetail.talkObject.periodTime
             
-            self.placeLabel.text = talkDetail.talkObject.place
+            self.placeLabel.text = talkDetail.talkObject.room?.description
             self.placeLabel.textColor = talkDetail.talkObject.room?.color ?? UIColor.black
             self.hashTagButton.setTitle((talkDetail.talkObject.room?.hashTag ?? "#pyconjp"), for: UIControlState())
             
             self.speakersCollectionViewHeightConstraint.constant = talkDetail.speakers.isEmpty ? 0 : self.speakersCollectionViewHeight
             self.speakersCollectionView.reloadData()
             
-            self.languageLabel.text = talkDetail.talkObject.languageType?.localized
+            self.languageLabel.text = talkDetail.talkObject.language?.localized
             self.levelLabel.text = talkDetail.level
             self.categoryLabel.text = talkDetail.talkObject.category
             
             self.descriptionTextView.text = talkDetail.talkObject.descriptionText
             self.abstractTextView.text = talkDetail.abstract
             
-            self.toggleBookmarkBarButtonItem(isFavorite: talkDetail.talkObject.favorited)
+            self.toggleBookmarkBarButtonItem(talkDetail.talkObject.isFavorite)
         }
         
     }
     
-    func toggleBookmarkBarButtonItem(isFavorite: Bool) {
+    func toggleBookmarkBarButtonItem(_ isFavorite: Bool) {
         let image = isFavorite ? #imageLiteral(resourceName: "BookmarkOn") : #imageLiteral(resourceName: "BookmarkOff")
         DispatchQueue.main.async {
             self.bookmarkBarButtonItem.image = image
@@ -154,12 +156,12 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
     @IBAction func onBookmarkBarButton(_ sender: UIBarButtonItem) {
         guard let talkDetail = talkDetail else { return }
         do {
-            talkDetail.talkObject.favorited = !talkDetail.talkObject.favorited
+            talkDetail.talkObject.isFavorite = !talkDetail.talkObject.isFavorite
             let realm = try Realm()
             try realm.write({
-                realm.create(TalkObject.self, value: ["id": talkDetail.talkObject.id, "favorited": talkDetail.talkObject.favorited], update: true)
+                realm.create(TalkObject.self, value: ["id": talkDetail.talkObject.id, "isFavorite": talkDetail.talkObject.isFavorite], update: true)
             })
-            toggleBookmarkBarButtonItem(isFavorite: talkDetail.talkObject.favorited)
+            toggleBookmarkBarButtonItem(talkDetail.talkObject.isFavorite)
         } catch {
             
         }

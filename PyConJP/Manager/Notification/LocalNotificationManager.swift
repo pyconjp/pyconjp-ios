@@ -12,10 +12,8 @@ class LocalNotificationManager: NSObject {
     
     func makeNotification(talkDetail: TalkDetail) -> Bool {
         
-        guard let date = talkDetail.talkObject.date else { return false }
-        
         let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
-        let fireDate = (calendar as NSCalendar?)?.date(byAdding: .minute, value: -10, to: date as Date, options: NSCalendar.Options())
+        let fireDate = (calendar as NSCalendar?)?.date(byAdding: .minute, value: -10, to: talkDetail.talkObject.startDate, options: NSCalendar.Options())
         
         if fireDate!.timeIntervalSinceNow > 0 {
             self.schedule(talkDetail: talkDetail)
@@ -27,16 +25,14 @@ class LocalNotificationManager: NSObject {
     
     private func schedule(talkDetail: TalkDetail) {
         
-        guard let date = talkDetail.talkObject.date else { return }
-        
         let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
-        let fireDate =  (calendar as NSCalendar?)?.date(byAdding: .minute, value: -10, to: date as Date, options: NSCalendar.Options())
+        let fireDate =  (calendar as NSCalendar?)?.date(byAdding: .minute, value: -10, to: talkDetail.talkObject.startDate, options: NSCalendar.Options())
         let userInfo = ["type": "Talk", "id": talkDetail.talkObject.id] as [AnyHashable: Any]
         
         let notificaiton = UILocalNotification()
         notificaiton.fireDate = fireDate
         notificaiton.timeZone = TimeZone.current
-        notificaiton.alertBody = "10分後に \" \(talkDetail.talkObject.title) \" が開始します。 \(talkDetail.talkObject.place)"
+        notificaiton.alertBody = "10分後に \" \(talkDetail.talkObject.title) \" が開始します。 \(talkDetail.talkObject.room?.description ?? "")"
         notificaiton.userInfo = userInfo
         
         UIApplication.shared.scheduleLocalNotification(notificaiton)

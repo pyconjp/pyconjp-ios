@@ -19,11 +19,14 @@ struct TalkDetail {
 
 extension TalkDetail {
     
-    init(dictionary: [String: Any]) {
-        self.init(talkObject: TalkObject(dictionary: dictionary),
-                  speakers: (dictionary["speaker_infomations"] as? [[String: Any]] ?? []).map({ Speaker.init(dictionary: $0) }),
-                  abstract: dictionary["abstract"] as? String ?? "",
-                  level: dictionary["level"] as? String ?? "")
+    init?(dictionary: [String: Any]) {
+        guard let talkObject = TalkObject(dictionary: dictionary),
+            let abstract = dictionary["abstract"] as? String,
+            let level = dictionary["level"] as? String else { return nil }
+        self.init(talkObject: talkObject,
+                  speakers: (dictionary["speaker_infomations"] as? [[String: Any]] ?? []).map({ Speaker(dictionary: $0) }),
+                  abstract: abstract,
+                  level: level)
     }
 
 }

@@ -31,7 +31,7 @@ extension TalksAPIProtocol {
                 let presentations = value["presentations"] as? [[String: Any]] ?? [[String: Any]]()
                 
                 do {
-                    let apiTalks = presentations.map({ TalkObject(dictionary: $0) })
+                    let apiTalks = presentations.flatMap({ TalkObject(dictionary: $0) })
                     
                     let realm = try Realm()
                     let rejectedLocalTalks = realm.objects(TalkObject.self).filter("NOT(id IN %@)", apiTalks.map({ $0.id }))

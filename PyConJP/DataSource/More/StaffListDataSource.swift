@@ -24,13 +24,12 @@ class StaffListDataSource: NSObject, UITableViewDataSource, StaffListAPIProtocol
     
     func refreshData(completionHandler: @escaping ((Result<Void>) -> Void)) {
         getStaffs { [weak self](result) in
-            guard let weakSelf = self else { return }
             switch result {
             case .success(let staffs):
-                weakSelf.teams.removeAll()
+                self?.teams.removeAll()
                 let teamNames = staffs.map({ $0.team }).unique()
                 for tuple in teamNames.enumerated() {
-                    weakSelf.teams.append(Team(name: teamNames[tuple.offset], staffs: staffs.filter({ $0.team == teamNames[tuple.offset] })))
+                    self?.teams.append(Team(name: teamNames[tuple.offset], staffs: staffs.filter({ $0.team == teamNames[tuple.offset] })))
                 }
                 completionHandler(.success())
             case .failure(let error):

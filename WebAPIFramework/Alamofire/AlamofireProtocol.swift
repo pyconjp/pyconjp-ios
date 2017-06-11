@@ -41,9 +41,11 @@ public extension AlamofireProtocol {
         let responseClosure = { (response: DataResponse<Any>) in
             switch response.result {
             case .success(let value):
-                if let responseDicsionary = value as? [String: Any] {
-                    completionHandler(.success(responseDicsionary))
+                guard let responseDicsionary = value as? [String: Any] else {
+                    completionHandler(.failure(APIError.failureParse))
+                    return
                 }
+                completionHandler(.success(responseDicsionary))
             case .failure(let error):
                 completionHandler(.failure(error))
             }

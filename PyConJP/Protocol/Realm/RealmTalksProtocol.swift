@@ -45,7 +45,7 @@ extension RealmTalksProtocol {
             try realm.write({
                 presentations.forEach({
                     let talkObject = TalkObject(dictionary: $0)
-                    realm.add(talkObject, update: true)
+                    realm.add(talkObject!, update: true)
                 })
             })
             

@@ -65,13 +65,15 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
         conferenceListDataSource.timelines.removeAll()
         tableView.reloadData()
         getTalks { [weak self](result) in
-            guard let weakSelf = self else { return }
             switch result {
             case .success:
-                weakSelf.refresh()
+                self?.refresh()
             case .failure(let error):
-                weakSelf.refreshControl.endRefreshing()
-                weakSelf.showErrorAlart(with: error, parent: weakSelf)
+                self?.refreshControl.endRefreshing()
+                guard let weakSelf = self else { return }
+                DispatchQueue.main.async {
+                    self?.showErrorAlart(with: error, parent: weakSelf)
+                }
             }
         }
     }
@@ -82,19 +84,19 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     
     func refresh() {
         conferenceListDataSource.refreshData { [weak self](result) in
-            guard let weakSelf = self else { return }
             switch result {
             case .success:
                 DispatchQueue.main.async {
-                    weakSelf.tableView.reloadData()
-                    if !weakSelf.conferenceListDataSource.timelines.isEmpty {
-                        weakSelf.refreshControl.endRefreshing()
-                    }
+                    self?.tableView.reloadData()
+//                    if !(self?.conferenceListDataSource.timelines.isEmpty ?? false) {
+                        self?.refreshControl.endRefreshing()
+//                    }
                 }
             case .failure(let error):
+                self?.refreshControl.endRefreshing()
+                guard let weakSelf = self else { return }
                 DispatchQueue.main.async {
-                    weakSelf.showErrorAlart(with: error, parent: weakSelf)
-                    weakSelf.refreshControl.endRefreshing()
+                    self?.showErrorAlart(with: error, parent: weakSelf)
                 }
             }
         }

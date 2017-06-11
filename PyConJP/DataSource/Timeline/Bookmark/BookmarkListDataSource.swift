@@ -12,17 +12,16 @@ import RealmSwift
 class BookmarkListDataSource: TimelineDataSource, RealmTalksProtocol {
     
     let filterPredicate = NSPredicate(format: "favorited == %@", true as CVarArg)
-    let sortProperties = [SortDescriptor(property: "date", ascending: true), SortDescriptor(property: "place", ascending: true)]
+    let sortProperties = [SortDescriptor(keyPath: "startDate", ascending: true), SortDescriptor(keyPath: "roomString", ascending: true)]
     
     func refreshData(completionHandler: @escaping ((Result<Void>) -> Void)) {
         loadTalkObjects { [weak self](result) in
-            guard let weakSelf = self else { return }
             switch result {
             case .success(let talks):
-                weakSelf.timelines.removeAll()
+                self?.timelines.removeAll()
                 let keys = talks.map { $0.day }.unique()
                 for tuple in keys.enumerated() {
-                    weakSelf.timelines.append(Timeline(key: keys[tuple.offset], talks: talks.filter { $0.day == keys[tuple.offset]}))
+                    self?.timelines.append(Timeline(key: keys[tuple.offset], talks: talks.filter { $0.day == keys[tuple.offset]}))
                 }
                 completionHandler(.success())
             case .failure(let error):
