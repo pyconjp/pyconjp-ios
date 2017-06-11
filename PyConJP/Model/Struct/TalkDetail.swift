@@ -29,4 +29,9 @@ extension TalkDetail {
                   level: level)
     }
 
+    init?(object: Any) {
+        guard let dictionary = object as? [String: Any] else { return nil}
+        self.init(dictionary: dictionary)
+    }
+    
 }

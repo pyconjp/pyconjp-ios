@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import APIKit
 
-class ConferenceListViewController: UIViewController, UITableViewDelegate, TalksAPIProtocol, ErrorAlertProtocol {
+class ConferenceListViewController: UIViewController, ErrorAlertProtocol {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -27,7 +28,7 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     private(set) var viewControllerIndex: Int = 0
     private(set) var pyconJPDate: PyConJPDate?
     
-    private lazy var conferenceListDataSource: ConferenceListDataSource = ConferenceListDataSource(day: self.pyconJPDate?.rawValue)
+    fileprivate lazy var conferenceListDataSource: ConferenceListDataSource = ConferenceListDataSource(day: self.pyconJPDate?.rawValue)
     
     private let refreshControl = UIRefreshControl()
     
@@ -64,7 +65,7 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     func onRefresh(_ sender: UIRefreshControl) {
         conferenceListDataSource.timelines.removeAll()
         tableView.reloadData()
-        getTalks { [weak self](result) in
+        conferenceListDataSource.loadTalksFromAPI { [weak self](result) in
             switch result {
             case .success:
                 self?.refresh()
@@ -103,7 +104,9 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
 
     }
     
-    // MARK: - Table View Controller Delegate
+}
+
+extension ConferenceListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30

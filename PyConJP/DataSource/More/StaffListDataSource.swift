@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import APIKit
+import Result
 
-class StaffListDataSource: NSObject, UITableViewDataSource, StaffListAPIProtocol {
+class StaffListDataSource: NSObject {
     
     let reuseIdentifier = "StaffTableViewCell"
     
@@ -22,8 +24,9 @@ class StaffListDataSource: NSObject, UITableViewDataSource, StaffListAPIProtocol
         self.twitterAction = twitterAction
     }
     
-    func refreshData(completionHandler: @escaping ((Result<Void>) -> Void)) {
-        getStaffs { [weak self](result) in
+    func refreshData(completionHandler: @escaping ((Result<Void, SessionTaskError>) -> Void)) {
+        let request = StaffListAPIRequest()
+        Session.send(request) { [weak self](result) in
             switch result {
             case .success(let staffs):
                 self?.teams.removeAll()
@@ -38,7 +41,10 @@ class StaffListDataSource: NSObject, UITableViewDataSource, StaffListAPIProtocol
         }
     }
     
+}
     // MARK: - Table View Controller Data Source
+
+extension StaffListDataSource: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return teams.count

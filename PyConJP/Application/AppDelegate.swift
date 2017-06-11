@@ -7,35 +7,20 @@
 //
 
 import UIKit
-import RealmSwift
+import APIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, TalksAPIProtocol, ErrorAlertProtocol {
+class AppDelegate: UIResponder, UIApplicationDelegate, ErrorAlertProtocol {
     
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        //        let settings = UIUserNotificationSettings(forTypes: [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound], categories: nil)
-        //        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
-        //
-        //        if let _ = launchOptions![UIApplicationLaunchOptionsURLKey] as? [NSObject : AnyObject] {
-        //            if let osVersion = Float64(UIDevice.currentDevice().systemVersion) {
-        //                if osVersion >= 9.0 {
-        //                }
-        //            }
-        //        }
-        //        if let launchOptions = launchOptions {
-        //            if let localNotification = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification {
-        //                self.application(application, didReceiveLocalNotification: localNotification)
-        //            }
-        //        }
-        
-        getTalks { result in
+        TalksAPI().getTalks { [weak self](result) in
             switch result {
             case .success:
-            	NotificationCenter.default.post(name: Notification.Name(rawValue: PCJNotificationConfig.CompleteFetchDataNotification), object: nil)
+                NotificationCenter.default.post(name: Notification.Name(rawValue: PCJNotificationConfig.CompleteFetchDataNotification), object: nil)
             case .failure(let error):
-                self.showErrorAlart(with: error)
+                self?.showErrorAlart(with: error)
             }
         }
         
