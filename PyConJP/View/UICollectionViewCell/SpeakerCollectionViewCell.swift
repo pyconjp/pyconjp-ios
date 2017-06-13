@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 import WebAPIFramework
 
 class SpeakerCollectionViewCell: UICollectionViewCell {

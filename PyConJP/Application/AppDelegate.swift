@@ -15,14 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ErrorAlertProtocol {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        TalksAPI().getTalks { [weak self](result) in
-            switch result {
-            case .success:
-                NotificationCenter.default.post(name: Notification.Name(rawValue: PCJNotificationConfig.CompleteFetchDataNotification), object: nil)
-            case .failure(let error):
-                self?.showErrorAlart(with: error)
-            }
-        }
+        
+        getTalksFromAPI()
         
         UINavigationBar.appearance().barTintColor = UIColor.PyConJP2016.red
         UINavigationBar.appearance().tintColor = .white
@@ -57,6 +51,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ErrorAlertProtocol {
         }
         
         UIApplication.shared.cancelLocalNotification(notification)
+    }
+    
+}
+
+extension AppDelegate: RealmSaveTalksProtocol {
+    
+    fileprivate func getTalksFromAPI() {
+        let request = TalksAPIRequest()
+        Session.send(request) { [weak self](result) in
+            switch result {
+            case .success(let talks):
+                try? self?.save(talks: talks)
+                NotificationCenter.default.post(name: Notification.Name(rawValue: PCJNotificationConfig.completeFetchDataNotification), object: nil)
+            case .failure(let error):
+                self?.showErrorAlart(with: error)
+            }
+        }
     }
     
 }

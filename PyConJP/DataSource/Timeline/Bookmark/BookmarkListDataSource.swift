@@ -10,13 +10,13 @@ import UIKit
 import Result
 import RealmSwift
 
-class BookmarkListDataSource: TimelineDataSource, RealmTalksProtocol {
+class BookmarkListDataSource: TimelineDataSource, RealmLoadTalksProtocol {
     
     let filterPredicate = NSPredicate(format: "favorited == %@", true as CVarArg)
     let sortProperties = [SortDescriptor(keyPath: "startDate", ascending: true), SortDescriptor(keyPath: "roomString", ascending: true)]
     
     func refreshData(completionHandler: @escaping ((Result<Void, NSError>) -> Void)) {
-        loadTalkObjects { [weak self](result) in
+        loadTalks { [weak self](result) in
             switch result {
             case .success(let talks):
                 self?.timelines.removeAll()

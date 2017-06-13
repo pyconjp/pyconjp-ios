@@ -10,6 +10,6 @@ import UIKit
 
 enum PCJNotificationConfig {
     
-    static let CompleteFetchDataNotification = "CompleteFetchDateNotification"
+    static let completeFetchDataNotification = "CompleteFetchDateNotification"
     
 }

@@ -8,6 +8,8 @@
 
 import Foundation
 import APIKit
+import Result
+import RealmSwift
 import WebAPIFramework
 
 struct TalksAPIRequest: PyConJPRequest {

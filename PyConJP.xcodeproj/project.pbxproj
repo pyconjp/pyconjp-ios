@@ -43,8 +43,7 @@
 		DB05D1B61E43FBCB00781BF7 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D12F1E43FBCB00781BF7 /* Timeline.swift */; };
 		DB05D1B71E43FBCB00781BF7 /* ErrorAlertProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1311E43FBCB00781BF7 /* ErrorAlertProtocol.swift */; };
 		DB05D1B81E43FBCB00781BF7 /* GestureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1321E43FBCB00781BF7 /* GestureProtocol.swift */; };
-		DB05D1B91E43FBCB00781BF7 /* RealmTalkDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1341E43FBCB00781BF7 /* RealmTalkDetailProtocol.swift */; };
-		DB05D1BA1E43FBCB00781BF7 /* RealmTalksProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1351E43FBCB00781BF7 /* RealmTalksProtocol.swift */; };
+		DB05D1BA1E43FBCB00781BF7 /* RealmLoadTalksProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1351E43FBCB00781BF7 /* RealmLoadTalksProtocol.swift */; };
 		DB05D1BB1E43FBCB00781BF7 /* MailURLSchemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1371E43FBCB00781BF7 /* MailURLSchemeProtocol.swift */; };
 		DB05D1BC1E43FBCB00781BF7 /* TwitterURLSchemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1381E43FBCB00781BF7 /* TwitterURLSchemeProtocol.swift */; };
 		DB05D1C01E43FBCB00781BF7 /* DummyTalkDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = DB05D13E1E43FBCB00781BF7 /* DummyTalkDetail.json */; };
@@ -108,6 +107,9 @@
 		DB77FD6D1E067A0F00504869 /* WebConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77FD6C1E067A0F00504869 /* WebConfig.swift */; };
 		DB77FD6F1E067BD000504869 /* LocaleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77FD6E1E067BD000504869 /* LocaleExtension.swift */; };
 		DB7EAADB1EEEF76A00FEF504 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7EAADA1EEEF76A00FEF504 /* UIImageViewExtension.swift */; };
+		DB7EAADD1EEFA86B00FEF504 /* RealmSaveTalksProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7EAADC1EEFA86B00FEF504 /* RealmSaveTalksProtocol.swift */; };
+		DB7EAAE01EF04D2800FEF504 /* DummyTalkDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7EAADF1EF04D2800FEF504 /* DummyTalkDetailProtocol.swift */; };
+		DB7EAAE21EF04DAC00FEF504 /* DummyTalksProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7EAAE11EF04DAC00FEF504 /* DummyTalksProtocol.swift */; };
 		DBB4AECA1EED91DD0097CF99 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB4AEC81EED91DD0097CF99 /* APIKit.framework */; };
 		DBB4AECB1EED91DD0097CF99 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB4AEC91EED91DD0097CF99 /* Result.framework */; };
 		DBB4AECC1EED922D0097CF99 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB4AEC81EED91DD0097CF99 /* APIKit.framework */; };
@@ -115,7 +117,6 @@
 		DBB4AED01EED93F60097CF99 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4AECF1EED93F60097CF99 /* APIError.swift */; };
 		DBB4AED31EED95950097CF99 /* PyConJPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4AED21EED95950097CF99 /* PyConJPRequest.swift */; };
 		DBB4AED61EED964B0097CF99 /* TalksAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4AED51EED964B0097CF99 /* TalksAPIRequest.swift */; };
-		DBB4AED81EED9DC90097CF99 /* TalksAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4AED71EED9DC90097CF99 /* TalksAPI.swift */; };
 		DBB4AEDC1EEDA8830097CF99 /* StaffListAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4AEDB1EEDA8830097CF99 /* StaffListAPIRequest.swift */; };
 		DBB4AEDE1EEDAAF00097CF99 /* TalkDetailAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4AEDD1EEDAAF00097CF99 /* TalkDetailAPIRequest.swift */; };
 		DBDA6FB91EEEB75E008FE17B /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDA6FB81EEEB75E008FE17B /* Kingfisher.framework */; };
@@ -208,8 +209,7 @@
 		DB05D12F1E43FBCB00781BF7 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		DB05D1311E43FBCB00781BF7 /* ErrorAlertProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlertProtocol.swift; sourceTree = "<group>"; };
 		DB05D1321E43FBCB00781BF7 /* GestureProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureProtocol.swift; sourceTree = "<group>"; };
-		DB05D1341E43FBCB00781BF7 /* RealmTalkDetailProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmTalkDetailProtocol.swift; sourceTree = "<group>"; };
-		DB05D1351E43FBCB00781BF7 /* RealmTalksProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmTalksProtocol.swift; sourceTree = "<group>"; };
+		DB05D1351E43FBCB00781BF7 /* RealmLoadTalksProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmLoadTalksProtocol.swift; sourceTree = "<group>"; };
 		DB05D1371E43FBCB00781BF7 /* MailURLSchemeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailURLSchemeProtocol.swift; sourceTree = "<group>"; };
 		DB05D1381E43FBCB00781BF7 /* TwitterURLSchemeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterURLSchemeProtocol.swift; sourceTree = "<group>"; };
 		DB05D13E1E43FBCB00781BF7 /* DummyTalkDetail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DummyTalkDetail.json; sourceTree = "<group>"; };
@@ -291,6 +291,9 @@
 		DB77FD6C1E067A0F00504869 /* WebConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebConfig.swift; sourceTree = "<group>"; };
 		DB77FD6E1E067BD000504869 /* LocaleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleExtension.swift; sourceTree = "<group>"; };
 		DB7EAADA1EEEF76A00FEF504 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		DB7EAADC1EEFA86B00FEF504 /* RealmSaveTalksProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmSaveTalksProtocol.swift; sourceTree = "<group>"; };
+		DB7EAADF1EF04D2800FEF504 /* DummyTalkDetailProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyTalkDetailProtocol.swift; sourceTree = "<group>"; };
+		DB7EAAE11EF04DAC00FEF504 /* DummyTalksProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyTalksProtocol.swift; sourceTree = "<group>"; };
 		DBA1C0A91C7228E2004F0C8D /* PyConJP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PyConJP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA1C0BD1C7228E2004F0C8D /* PyConJPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PyConJPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA1C0C81C7228E2004F0C8D /* PyConJPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PyConJPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -299,7 +302,6 @@
 		DBB4AECF1EED93F60097CF99 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		DBB4AED21EED95950097CF99 /* PyConJPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PyConJPRequest.swift; sourceTree = "<group>"; };
 		DBB4AED51EED964B0097CF99 /* TalksAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksAPIRequest.swift; sourceTree = "<group>"; };
-		DBB4AED71EED9DC90097CF99 /* TalksAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksAPI.swift; sourceTree = "<group>"; };
 		DBB4AEDB1EEDA8830097CF99 /* StaffListAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffListAPIRequest.swift; sourceTree = "<group>"; };
 		DBB4AEDD1EEDAAF00097CF99 /* TalkDetailAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkDetailAPIRequest.swift; sourceTree = "<group>"; };
 		DBC72D131D6F0B0C008DF718 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -547,6 +549,7 @@
 				DB05D1331E43FBCB00781BF7 /* Realm */,
 				DB05D1361E43FBCB00781BF7 /* URLScheme */,
 				DB10DE9F1EDFDF7600DAED31 /* UI */,
+				DB7EAADE1EF04D2800FEF504 /* DummyJSON */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -554,8 +557,8 @@
 		DB05D1331E43FBCB00781BF7 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
-				DB05D1341E43FBCB00781BF7 /* RealmTalkDetailProtocol.swift */,
-				DB05D1351E43FBCB00781BF7 /* RealmTalksProtocol.swift */,
+				DB05D1351E43FBCB00781BF7 /* RealmLoadTalksProtocol.swift */,
+				DB7EAADC1EEFA86B00FEF504 /* RealmSaveTalksProtocol.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -779,6 +782,15 @@
 			path = WebAPIFrameworkTests;
 			sourceTree = "<group>";
 		};
+		DB7EAADE1EF04D2800FEF504 /* DummyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				DB7EAADF1EF04D2800FEF504 /* DummyTalkDetailProtocol.swift */,
+				DB7EAAE11EF04DAC00FEF504 /* DummyTalksProtocol.swift */,
+			);
+			path = DummyJSON;
+			sourceTree = "<group>";
+		};
 		DBA1C0A01C7228E2004F0C8D = {
 			isa = PBXGroup;
 			children = (
@@ -824,7 +836,6 @@
 			isa = PBXGroup;
 			children = (
 				DBB4AED51EED964B0097CF99 /* TalksAPIRequest.swift */,
-				DBB4AED71EED9DC90097CF99 /* TalksAPI.swift */,
 				DBB4AEDB1EEDA8830097CF99 /* StaffListAPIRequest.swift */,
 				DBB4AEDD1EEDAAF00097CF99 /* TalkDetailAPIRequest.swift */,
 			);
@@ -1121,6 +1132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB7EAAE21EF04DAC00FEF504 /* DummyTalksProtocol.swift in Sources */,
 				DB05D1E51E43FBCB00781BF7 /* EventsListViewController.swift in Sources */,
 				DBB4AEDE1EEDAAF00097CF99 /* TalkDetailAPIRequest.swift in Sources */,
 				DB05D1A81E43FBCB00781BF7 /* ReceiveLocalNotificationManager.swift in Sources */,
@@ -1129,6 +1141,7 @@
 				DB05D1AD1E43FBCB00781BF7 /* Room.swift in Sources */,
 				DB05D1DD1E43FBCB00781BF7 /* ZoomableImageViewController.swift in Sources */,
 				DB05D1B51E43FBCB00781BF7 /* Team.swift in Sources */,
+				DB7EAAE01EF04D2800FEF504 /* DummyTalkDetailProtocol.swift in Sources */,
 				DB05D1B31E43FBCB00781BF7 /* Talk.swift in Sources */,
 				DB05D1DE1E43FBCB00781BF7 /* BookmarkListViewController.swift in Sources */,
 				DB05D1A41E43FBCB00781BF7 /* UIColorExtension.swift in Sources */,
@@ -1150,7 +1163,7 @@
 				DB05D1A71E43FBCB00781BF7 /* LocalNotificationManager.swift in Sources */,
 				DB05D1A61E43FBCB00781BF7 /* UIViewExtension.swift in Sources */,
 				DB10DE981EDFDED600DAED31 /* Track.swift in Sources */,
-				DB05D1BA1E43FBCB00781BF7 /* RealmTalksProtocol.swift in Sources */,
+				DB05D1BA1E43FBCB00781BF7 /* RealmLoadTalksProtocol.swift in Sources */,
 				DB05D1BB1E43FBCB00781BF7 /* MailURLSchemeProtocol.swift in Sources */,
 				DB05D19E1E43FBCB00781BF7 /* ConferenceListDataSource.swift in Sources */,
 				DB05D1B01E43FBCB00781BF7 /* Place.swift in Sources */,
@@ -1161,12 +1174,11 @@
 				DB05D1B71E43FBCB00781BF7 /* ErrorAlertProtocol.swift in Sources */,
 				DB05D1AB1E43FBCB00781BF7 /* PyConJPDate.swift in Sources */,
 				DB05D1A01E43FBCB00781BF7 /* AppDelegateExtension.swift in Sources */,
+				DB7EAADD1EEFA86B00FEF504 /* RealmSaveTalksProtocol.swift in Sources */,
 				DB05D1EA1E43FBCB00781BF7 /* MapViewController.swift in Sources */,
-				DBB4AED81EED9DC90097CF99 /* TalksAPI.swift in Sources */,
 				DB10DE961EDFDEC400DAED31 /* Timetable.swift in Sources */,
 				DB05D19D1E43FBCB00781BF7 /* BookmarkListDataSource.swift in Sources */,
 				DB05D1E21E43FBCB00781BF7 /* ConferenceModelController.swift in Sources */,
-				DB05D1B91E43FBCB00781BF7 /* RealmTalkDetailProtocol.swift in Sources */,
 				DB05D19C1E43FBCB00781BF7 /* SpeakersCollectionViewDataSource.swift in Sources */,
 				DB05D1E71E43FBCB00781BF7 /* FloorMapListViewController.swift in Sources */,
 				DB05D1D41E43FBCB00781BF7 /* SpeakerCollectionViewCell.swift in Sources */,

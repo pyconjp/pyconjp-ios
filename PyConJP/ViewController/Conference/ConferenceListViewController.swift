@@ -47,7 +47,7 @@ class ConferenceListViewController: UIViewController, ErrorAlertProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(ConferenceListViewController.refreshNotification(_:)), name: NSNotification.Name(rawValue: PCJNotificationConfig.CompleteFetchDataNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ConferenceListViewController.refreshNotification(_:)), name: NSNotification.Name(rawValue: PCJNotificationConfig.completeFetchDataNotification), object: nil)
         
         refreshControl.beginRefreshing()
         refresh()
@@ -65,7 +65,7 @@ class ConferenceListViewController: UIViewController, ErrorAlertProtocol {
     func onRefresh(_ sender: UIRefreshControl) {
         conferenceListDataSource.timelines.removeAll()
         tableView.reloadData()
-        conferenceListDataSource.loadTalksFromAPI { [weak self](result) in
+        conferenceListDataSource.getTalksFromAPI { [weak self](result) in
             switch result {
             case .success:
                 self?.refresh()

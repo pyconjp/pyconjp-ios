@@ -11,7 +11,7 @@ import APIKit
 import Result
 import RealmSwift
 
-class ConferenceListDataSource: TimelineDataSource, RealmTalksProtocol {
+class ConferenceListDataSource: TimelineDataSource, RealmLoadTalksProtocol, RealmSaveTalksProtocol {
     
     let filterPredicate: NSPredicate
     let sortProperties = [SortDescriptor(keyPath: "startDate", ascending: true), SortDescriptor(keyPath: "roomString", ascending: true)]
@@ -21,20 +21,21 @@ class ConferenceListDataSource: TimelineDataSource, RealmTalksProtocol {
         super.init()
     }
     
-    func loadTalksFromAPI(completionHandler: @escaping ((Result<Void, SessionTaskError>) -> Void)) {
-        TalksAPI().getTalks { result in
+    func getTalksFromAPI(completionHandler: @escaping ((Result<Void, SessionTaskError>) -> Void)) {
+        let request = TalksAPIRequest()
+        Session.send(request) { [weak self](result) in
             switch result {
-            case .success:
+            case .success(let talks):
+                try? self?.save(talks: talks)
                 completionHandler(.success())
             case .failure(let error):
                 completionHandler(.failure(error))
             }
         }
-
     }
     
     func refreshData(completionHandler: @escaping ((Result<Void, NSError>) -> Void)) {
-        loadTalkObjects { [weak self](result) in
+        loadTalks { [weak self](result) in
             switch result {
             case .success(let talks):
                 self?.timelines.removeAll()

@@ -1,21 +1,23 @@
 //
-//  RealmTalkDetailProtocol.swift
+//  DummyTalkDetailProtocol.swift
 //  PyCon-JP
 //
 //  Created by Yutaro Muta on 2016/12/18.
 //  Copyright © 2016 PyCon JP. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import Result
 
-protocol RealmTalkDetailProtocol {
-    func getTalksFromLocalDummyJson(completionHandler: ((Result<TalkDetail, NSError>) -> Void))
+protocol DummyTalkDetailProtocol {
+    
+    func getTalksFromLocalDummyJSON(completionHandler: ((Result<TalkDetail, NSError>) -> Void))
+    
 }
 
-extension RealmTalkDetailProtocol {
+extension DummyTalkDetailProtocol {
     
-    func getTalkDetailFromLocalDummyJson(completionHandler: ((Result<TalkDetail, NSError>) -> Void)) {
+    func getTalkDetailFromLocalDummyJSON(completionHandler: ((Result<TalkDetail, NSError>) -> Void)) {
         let path = Bundle.main.path(forResource: "DummyTalkDetail", ofType: "json")
         let fileHandle = FileHandle(forReadingAtPath: path!)
         let data = fileHandle?.readDataToEndOfFile()
