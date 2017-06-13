@@ -1,12 +1,12 @@
 //
 //  PCJConfig.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 8/30/2016.
 //  Copyright © 2016 PyCon JP. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 enum PCJConfig {
     

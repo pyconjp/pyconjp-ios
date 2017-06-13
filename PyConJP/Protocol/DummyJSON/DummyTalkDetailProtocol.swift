@@ -1,6 +1,6 @@
 //
 //  DummyTalkDetailProtocol.swift
-//  PyCon-JP
+//  PyConJP
 //
 //  Created by Yutaro Muta on 2016/12/18.
 //  Copyright © 2016 PyCon JP. All rights reserved.

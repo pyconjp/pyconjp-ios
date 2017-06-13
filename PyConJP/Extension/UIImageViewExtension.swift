@@ -29,10 +29,6 @@ extension UIImageView {
         )
     }
     
-}
-
-extension UIImageView {
-    
     /// Used to wrap all `UIView` animation transition options alongside a duration.
     enum ImageTransition {
         case noTransition

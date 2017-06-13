@@ -1,12 +1,12 @@
 //
 //  TalkObject.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 7/11/16.
 //  Copyright © 2016 PyCon JP. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import APIKit
 import RealmSwift
 

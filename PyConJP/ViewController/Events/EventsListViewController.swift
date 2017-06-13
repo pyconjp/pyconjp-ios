@@ -1,14 +1,14 @@
 //
 //  EventsListViewController.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 8/27/16.
 //  Copyright © 2016 PyCon JP. All rights reserved.
 //
 
 import UIKit
-import WebAPIFramework
 import SafariServices
+import WebAPIFramework
 
 class EventsListViewController: UITableViewController {
     
