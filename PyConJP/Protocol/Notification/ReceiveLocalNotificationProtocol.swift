@@ -1,5 +1,5 @@
 //
-//  ReceiveLocalNotificationManager.swift
+//  ReceiveLocalNotificationProtocol.swift
 //  PyConJP
 //
 //  Created by Yutaro Muta on 2016/03/15.
@@ -8,10 +8,15 @@
 
 import UIKit
 
-class ReceiveLocalNotificationManager: NSObject {
+protocol ReceiveLocalNotificationProtocol {}
+
+extension ReceiveLocalNotificationProtocol {
     
-    func application(_ application: UIApplication, didReceiveLocalNotification userInfo: [AnyHashable: Any]) {
-        guard let type = userInfo["type"] as? String, let id = userInfo["id"] as? Int, let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+    func handle(_ application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        guard let type = notification.userInfo?["type"] as? String,
+            let id = notification.userInfo?["id"] as? Int,
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
         switch type {
         case "Talk" where application.applicationState == .active:
             let alertController = UIAlertController(title: "", message: "", preferredStyle: .alert)

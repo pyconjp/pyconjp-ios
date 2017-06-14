@@ -26,8 +26,6 @@
 		DB05D1A41E43FBCB00781BF7 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1171E43FBCB00781BF7 /* UIColorExtension.swift */; };
 		DB05D1A51E43FBCB00781BF7 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1181E43FBCB00781BF7 /* UIDeviceExtension.swift */; };
 		DB05D1A61E43FBCB00781BF7 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1191E43FBCB00781BF7 /* UIViewExtension.swift */; };
-		DB05D1A71E43FBCB00781BF7 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D11C1E43FBCB00781BF7 /* LocalNotificationManager.swift */; };
-		DB05D1A81E43FBCB00781BF7 /* ReceiveLocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D11D1E43FBCB00781BF7 /* ReceiveLocalNotificationManager.swift */; };
 		DB05D1A91E43FBCB00781BF7 /* TalkObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1201E43FBCB00781BF7 /* TalkObject.swift */; };
 		DB05D1AA1E43FBCB00781BF7 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1221E43FBCB00781BF7 /* Language.swift */; };
 		DB05D1AB1E43FBCB00781BF7 /* PyConJPDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1231E43FBCB00781BF7 /* PyConJPDate.swift */; };
@@ -110,6 +108,8 @@
 		DB7EAADD1EEFA86B00FEF504 /* RealmSaveTalksProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7EAADC1EEFA86B00FEF504 /* RealmSaveTalksProtocol.swift */; };
 		DB7EAAE01EF04D2800FEF504 /* DummyTalkDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7EAADF1EF04D2800FEF504 /* DummyTalkDetailProtocol.swift */; };
 		DB7EAAE21EF04DAC00FEF504 /* DummyTalksProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7EAAE11EF04DAC00FEF504 /* DummyTalksProtocol.swift */; };
+		DBA8722F1EF1A40E0001F8A3 /* LocalNotificationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8722D1EF1A40E0001F8A3 /* LocalNotificationProtocol.swift */; };
+		DBA872301EF1A40E0001F8A3 /* ReceiveLocalNotificationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8722E1EF1A40E0001F8A3 /* ReceiveLocalNotificationProtocol.swift */; };
 		DBB4AECA1EED91DD0097CF99 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB4AEC81EED91DD0097CF99 /* APIKit.framework */; };
 		DBB4AECB1EED91DD0097CF99 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB4AEC91EED91DD0097CF99 /* Result.framework */; };
 		DBB4AECC1EED922D0097CF99 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB4AEC81EED91DD0097CF99 /* APIKit.framework */; };
@@ -192,8 +192,6 @@
 		DB05D1171E43FBCB00781BF7 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		DB05D1181E43FBCB00781BF7 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		DB05D1191E43FBCB00781BF7 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		DB05D11C1E43FBCB00781BF7 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
-		DB05D11D1E43FBCB00781BF7 /* ReceiveLocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveLocalNotificationManager.swift; sourceTree = "<group>"; };
 		DB05D1201E43FBCB00781BF7 /* TalkObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkObject.swift; sourceTree = "<group>"; };
 		DB05D1221E43FBCB00781BF7 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		DB05D1231E43FBCB00781BF7 /* PyConJPDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PyConJPDate.swift; sourceTree = "<group>"; };
@@ -297,6 +295,8 @@
 		DBA1C0A91C7228E2004F0C8D /* PyConJP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PyConJP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA1C0BD1C7228E2004F0C8D /* PyConJPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PyConJPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA1C0C81C7228E2004F0C8D /* PyConJPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PyConJPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA8722D1EF1A40E0001F8A3 /* LocalNotificationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationProtocol.swift; sourceTree = "<group>"; };
+		DBA8722E1EF1A40E0001F8A3 /* ReceiveLocalNotificationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveLocalNotificationProtocol.swift; sourceTree = "<group>"; };
 		DBB4AEC81EED91DD0097CF99 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		DBB4AEC91EED91DD0097CF99 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		DBB4AECF1EED93F60097CF99 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -379,7 +379,6 @@
 				DB05D1061E43FBCB00781BF7 /* DataSource */,
 				DB05D1111E43FBCB00781BF7 /* Delegate */,
 				DB05D1121E43FBCB00781BF7 /* Extension */,
-				DB05D11A1E43FBCB00781BF7 /* Manager */,
 				DB05D11E1E43FBCB00781BF7 /* Model */,
 				DBB4AED41EED963D0097CF99 /* APIRequest */,
 				DB05D1301E43FBCB00781BF7 /* Protocol */,
@@ -477,23 +476,6 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		DB05D11A1E43FBCB00781BF7 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				DB05D11B1E43FBCB00781BF7 /* Notification */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		DB05D11B1E43FBCB00781BF7 /* Notification */ = {
-			isa = PBXGroup;
-			children = (
-				DB05D11C1E43FBCB00781BF7 /* LocalNotificationManager.swift */,
-				DB05D11D1E43FBCB00781BF7 /* ReceiveLocalNotificationManager.swift */,
-			);
-			path = Notification;
-			sourceTree = "<group>";
-		};
 		DB05D11E1E43FBCB00781BF7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -549,6 +531,7 @@
 				DB05D1331E43FBCB00781BF7 /* Realm */,
 				DB05D1361E43FBCB00781BF7 /* URLScheme */,
 				DB10DE9F1EDFDF7600DAED31 /* UI */,
+				DBA8722C1EF1A40E0001F8A3 /* Notification */,
 				DB7EAADE1EF04D2800FEF504 /* DummyJSON */,
 			);
 			path = Protocol;
@@ -814,6 +797,15 @@
 				DB77FD521E06720D00504869 /* WebAPIFrameworkTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DBA8722C1EF1A40E0001F8A3 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				DBA8722D1EF1A40E0001F8A3 /* LocalNotificationProtocol.swift */,
+				DBA8722E1EF1A40E0001F8A3 /* ReceiveLocalNotificationProtocol.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		DBB4AECE1EED93F60097CF99 /* Error */ = {
@@ -1134,8 +1126,8 @@
 			files = (
 				DB7EAAE21EF04DAC00FEF504 /* DummyTalksProtocol.swift in Sources */,
 				DB05D1E51E43FBCB00781BF7 /* EventsListViewController.swift in Sources */,
+				DBA872301EF1A40E0001F8A3 /* ReceiveLocalNotificationProtocol.swift in Sources */,
 				DBB4AEDE1EEDAAF00097CF99 /* TalkDetailAPIRequest.swift in Sources */,
-				DB05D1A81E43FBCB00781BF7 /* ReceiveLocalNotificationManager.swift in Sources */,
 				DB05D1E01E43FBCB00781BF7 /* ConferenceDateViewController.swift in Sources */,
 				DB05D1E41E43FBCB00781BF7 /* ConferenceViewController.swift in Sources */,
 				DB05D1AD1E43FBCB00781BF7 /* Room.swift in Sources */,
@@ -1160,7 +1152,6 @@
 				DB10DEA71EDFE62A00DAED31 /* RealmError.swift in Sources */,
 				DB05D1A31E43FBCB00781BF7 /* StringExtension.swift in Sources */,
 				DB05D1981E43FBCB00781BF7 /* PCJConfig.swift in Sources */,
-				DB05D1A71E43FBCB00781BF7 /* LocalNotificationManager.swift in Sources */,
 				DB05D1A61E43FBCB00781BF7 /* UIViewExtension.swift in Sources */,
 				DB10DE981EDFDED600DAED31 /* Track.swift in Sources */,
 				DB05D1BA1E43FBCB00781BF7 /* RealmLoadTalksProtocol.swift in Sources */,
@@ -1186,6 +1177,7 @@
 				DB05D1ED1E43FBCB00781BF7 /* PCJWKWebViewController.swift in Sources */,
 				DB05D1D81E43FBCB00781BF7 /* TalkTableViewCell.swift in Sources */,
 				DB05D1D61E43FBCB00781BF7 /* StaffTableViewCell.swift in Sources */,
+				DBA8722F1EF1A40E0001F8A3 /* LocalNotificationProtocol.swift in Sources */,
 				DB05D1DA1E43FBCB00781BF7 /* BaseTabBarController.swift in Sources */,
 				DB05D1AA1E43FBCB00781BF7 /* Language.swift in Sources */,
 				DB05D1DF1E43FBCB00781BF7 /* ConferenceBaseViewController.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 import APIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, ErrorAlertProtocol {
+class AppDelegate: UIResponder, UIApplicationDelegate, ReceiveLocalNotificationProtocol, ErrorAlertProtocol {
     
     var window: UIWindow?
     
@@ -45,11 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ErrorAlertProtocol {
     }
     
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
-        if let userInfo = notification.userInfo {
-            let receiveLocalNotificationManager = ReceiveLocalNotificationManager()
-            receiveLocalNotificationManager.application(application, didReceiveLocalNotification: userInfo)
-        }
-        
+        handle(application, didReceiveLocalNotification: notification)        
         UIApplication.shared.cancelLocalNotification(notification)
     }
     

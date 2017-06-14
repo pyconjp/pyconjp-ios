@@ -1,5 +1,5 @@
 //
-//  LocalNotificationManager.swift
+//  LocalNotificationProtocol.swift
 //  PyConJP
 //
 //  Created by Yutaro Muta on 3/13/16.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class LocalNotificationManager: NSObject {
+protocol LocalNotificationProtocol {}
+
+extension LocalNotificationProtocol {
     
     func makeNotification(talkDetail: TalkDetail) -> Bool {
         
