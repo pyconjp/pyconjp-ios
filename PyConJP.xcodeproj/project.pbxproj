@@ -110,6 +110,7 @@
 		DB7EAAE21EF04DAC00FEF504 /* DummyTalksProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7EAAE11EF04DAC00FEF504 /* DummyTalksProtocol.swift */; };
 		DBA8722F1EF1A40E0001F8A3 /* LocalNotificationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8722D1EF1A40E0001F8A3 /* LocalNotificationProtocol.swift */; };
 		DBA872301EF1A40E0001F8A3 /* ReceiveLocalNotificationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8722E1EF1A40E0001F8A3 /* ReceiveLocalNotificationProtocol.swift */; };
+		DBA872321EF1A4990001F8A3 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA872311EF1A4990001F8A3 /* NotificationType.swift */; };
 		DBB4AECA1EED91DD0097CF99 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB4AEC81EED91DD0097CF99 /* APIKit.framework */; };
 		DBB4AECB1EED91DD0097CF99 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB4AEC91EED91DD0097CF99 /* Result.framework */; };
 		DBB4AECC1EED922D0097CF99 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB4AEC81EED91DD0097CF99 /* APIKit.framework */; };
@@ -297,6 +298,7 @@
 		DBA1C0C81C7228E2004F0C8D /* PyConJPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PyConJPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA8722D1EF1A40E0001F8A3 /* LocalNotificationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationProtocol.swift; sourceTree = "<group>"; };
 		DBA8722E1EF1A40E0001F8A3 /* ReceiveLocalNotificationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveLocalNotificationProtocol.swift; sourceTree = "<group>"; };
+		DBA872311EF1A4990001F8A3 /* NotificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
 		DBB4AEC81EED91DD0097CF99 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		DBB4AEC91EED91DD0097CF99 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		DBB4AECF1EED93F60097CF99 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -500,6 +502,7 @@
 				DB05D1221E43FBCB00781BF7 /* Language.swift */,
 				DB05D1231E43FBCB00781BF7 /* PyConJPDate.swift */,
 				DB05D1251E43FBCB00781BF7 /* Room.swift */,
+				DBA872311EF1A4990001F8A3 /* NotificationType.swift */,
 				DB10DE991EDFDEF600DAED31 /* Error */,
 			);
 			path = Enum;
@@ -1177,6 +1180,7 @@
 				DB05D1ED1E43FBCB00781BF7 /* PCJWKWebViewController.swift in Sources */,
 				DB05D1D81E43FBCB00781BF7 /* TalkTableViewCell.swift in Sources */,
 				DB05D1D61E43FBCB00781BF7 /* StaffTableViewCell.swift in Sources */,
+				DBA872321EF1A4990001F8A3 /* NotificationType.swift in Sources */,
 				DBA8722F1EF1A40E0001F8A3 /* LocalNotificationProtocol.swift in Sources */,
 				DB05D1DA1E43FBCB00781BF7 /* BaseTabBarController.swift in Sources */,
 				DB05D1AA1E43FBCB00781BF7 /* Language.swift in Sources */,

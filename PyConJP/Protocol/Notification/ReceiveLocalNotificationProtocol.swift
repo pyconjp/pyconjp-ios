@@ -15,10 +15,12 @@ extension ReceiveLocalNotificationProtocol {
     func handle(_ application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         guard let type = notification.userInfo?["type"] as? String,
             let id = notification.userInfo?["id"] as? Int,
-            let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+            let notificationType = NotificationType(type) else { return }
         
-        switch type {
-        case "Talk" where application.applicationState == .active:
+        switch notificationType {
+        case .information:break
+        case .talk where application.applicationState == .active:
             let alertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "閉じる", style: .default, handler: nil))
             alertController.addAction(UIAlertAction(title: "詳細へ", style: .default, handler: { _ -> Void in
@@ -27,10 +29,8 @@ extension ReceiveLocalNotificationProtocol {
             if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
                 appDelegate.showAlert(alertController: alertController)
             }
-        case "Talk" where application.applicationState == .inactive:
+        case .talk where application.applicationState == .inactive:
             appDelegate.openTalkDetailViewController(id: id)
-        case "Information":
-            break
         default:
             break
         }

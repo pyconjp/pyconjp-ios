@@ -24,7 +24,7 @@ extension LocalNotificationProtocol {
     
     private func schedule(talkDetail: TalkDetail, at date: Date) {
         
-        let userInfo = ["type": "Talk", "id": talkDetail.talkObject.id] as [AnyHashable: Any]
+        let userInfo = ["type": NotificationType.talk.description, "id": talkDetail.talkObject.id] as [AnyHashable: Any]
         
         let notificaiton = UILocalNotification()
         notificaiton.fireDate = date
