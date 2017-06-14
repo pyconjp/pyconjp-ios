@@ -1,6 +1,6 @@
 //
 //  BookmarkListViewController.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 2016/08/18.
 //  Copyright © 2016 PyCon JP. All rights reserved.
@@ -33,7 +33,7 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(BookmarkListViewController.refreshNotification(_:)), name: NSNotification.Name(rawValue: PCJNotificationConfig.CompleteFetchDataNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BookmarkListViewController.refreshNotification(_:)), name: NSNotification.Name(rawValue: PCJNotificationConfig.completeFetchDataNotification), object: nil)
         
     }
     

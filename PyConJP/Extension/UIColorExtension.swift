@@ -1,6 +1,6 @@
 //
 //  UIColorExtension.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 4/23/16.
 //  Copyright © 2016 PyCon JP. All rights reserved.

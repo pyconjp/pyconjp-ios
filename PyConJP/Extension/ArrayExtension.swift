@@ -1,12 +1,12 @@
 //
 //  ArrayExtension.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 2016/07/22.
 //  Copyright © 2016 PyCon JP. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 extension Array where Element: Hashable {
     

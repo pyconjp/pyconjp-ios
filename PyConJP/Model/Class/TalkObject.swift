@@ -1,12 +1,13 @@
 //
 //  TalkObject.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 7/11/16.
 //  Copyright © 2016 PyCon JP. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import APIKit
 import RealmSwift
 
 final class TalkObject: RealmSwift.Object {
@@ -78,6 +79,13 @@ final class TalkObject: RealmSwift.Object {
                   roomString: roomString,
                   languageString: language,
                   isFavorite: isFavorite)
+    }
+    
+    convenience init?(object: Any) {
+        guard let dictionary = object as? [String: Any] else {
+            return nil
+        }
+        self.init(dictionary: dictionary)
     }
     
     convenience init(_ talk: Talk) {

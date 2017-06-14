@@ -1,6 +1,6 @@
 //
 //  TalkDetailViewController.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 2016/02/23.
 //  Copyright © 2016 PyCon JP. All rights reserved.
@@ -8,9 +8,10 @@
 
 import UIKit
 import SafariServices
+import APIKit
 import RealmSwift
 
-class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, TwitterURLSchemeProtocol, ErrorAlertProtocol {
+class TalkDetailViewController: UIViewController, TwitterURLSchemeProtocol, ErrorAlertProtocol {
     
     @IBOutlet weak var baseScrollView: UIScrollView! {
         didSet {
@@ -49,11 +50,11 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
     var id: Int?
     private var talkDetail: TalkDetail? {
         didSet {
-            if let talkDetail = talkDetail {
-                speakersCollectionViewDataSource.speakers = talkDetail.speakers
-            } else {
+            guard let talkDetail = talkDetail else {
                 speakersCollectionViewDataSource.speakers.removeAll()
+                return
             }
+            speakersCollectionViewDataSource.speakers = talkDetail.speakers
         }
     }
     
@@ -99,7 +100,9 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
     }
     
     private func getDetail() {
-        getTalkDetail { [weak self](result) in
+        guard let id = id else { return }
+        let request = TalkDetailAPIRequest(id: id)
+        Session.send(request) { [weak self](result) in
             switch result {
             case .success(let talkDetail):
                 self?.talkDetail = talkDetail

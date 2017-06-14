@@ -1,12 +1,12 @@
 //
 //  PyConJPDate.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 2016/08/04.
 //  Copyright © 2016 PyCon JP. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 enum PyConJPDate: String {
     case Tutorials = "2016-09-20"

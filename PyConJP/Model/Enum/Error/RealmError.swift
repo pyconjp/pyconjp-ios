@@ -8,4 +8,7 @@
 
 import Foundation
 
-enum RealmError {}
+enum RealmError: Error {
+    case failureLoad
+    case failureSave
+}

@@ -1,14 +1,15 @@
 //
 //  ConferenceListViewController.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 2016/03/07.
 //  Copyright © 2016 PyCon JP. All rights reserved.
 //
 
 import UIKit
+import APIKit
 
-class ConferenceListViewController: UIViewController, UITableViewDelegate, TalksAPIProtocol, ErrorAlertProtocol {
+class ConferenceListViewController: UIViewController, ErrorAlertProtocol {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -27,7 +28,7 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     private(set) var viewControllerIndex: Int = 0
     private(set) var pyconJPDate: PyConJPDate?
     
-    private lazy var conferenceListDataSource: ConferenceListDataSource = ConferenceListDataSource(day: self.pyconJPDate?.rawValue)
+    fileprivate lazy var conferenceListDataSource: ConferenceListDataSource = ConferenceListDataSource(day: self.pyconJPDate?.rawValue)
     
     private let refreshControl = UIRefreshControl()
     
@@ -46,7 +47,7 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(ConferenceListViewController.refreshNotification(_:)), name: NSNotification.Name(rawValue: PCJNotificationConfig.CompleteFetchDataNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ConferenceListViewController.refreshNotification(_:)), name: NSNotification.Name(rawValue: PCJNotificationConfig.completeFetchDataNotification), object: nil)
         
         refreshControl.beginRefreshing()
         refresh()
@@ -64,7 +65,7 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     func onRefresh(_ sender: UIRefreshControl) {
         conferenceListDataSource.timelines.removeAll()
         tableView.reloadData()
-        getTalks { [weak self](result) in
+        conferenceListDataSource.getTalksFromAPI { [weak self](result) in
             switch result {
             case .success:
                 self?.refresh()
@@ -103,7 +104,9 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
 
     }
     
-    // MARK: - Table View Controller Delegate
+}
+
+extension ConferenceListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30

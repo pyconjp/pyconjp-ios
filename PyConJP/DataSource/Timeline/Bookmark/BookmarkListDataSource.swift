@@ -1,21 +1,22 @@
 //
 //  BookmarkListDataSource.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 2016/08/18.
 //  Copyright © 2016 PyCon JP. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import Result
 import RealmSwift
 
-class BookmarkListDataSource: TimelineDataSource, RealmTalksProtocol {
+class BookmarkListDataSource: TimelineDataSource, RealmLoadTalksProtocol {
     
     let filterPredicate = NSPredicate(format: "favorited == %@", true as CVarArg)
     let sortProperties = [SortDescriptor(keyPath: "startDate", ascending: true), SortDescriptor(keyPath: "roomString", ascending: true)]
     
-    func refreshData(completionHandler: @escaping ((Result<Void>) -> Void)) {
-        loadTalkObjects { [weak self](result) in
+    func refreshData(completionHandler: @escaping ((Result<Void, NSError>) -> Void)) {
+        loadTalks { [weak self](result) in
             switch result {
             case .success(let talks):
                 self?.timelines.removeAll()

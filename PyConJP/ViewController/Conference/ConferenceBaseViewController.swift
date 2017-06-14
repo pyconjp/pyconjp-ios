@@ -1,6 +1,6 @@
 //
 //  ConferenceBaseViewController.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 2016/03/07.
 //  Copyright © 2016 PyCon JP. All rights reserved.

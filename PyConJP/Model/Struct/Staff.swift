@@ -1,12 +1,12 @@
 //
 //  Staff.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 9/10/16.
 //  Copyright © 2016 PyCon JP. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 struct Staff {
     
@@ -20,12 +20,22 @@ struct Staff {
 
 extension Staff {
     
-    init(dictionary: [String: Any]) {
-        self.init(team: dictionary["team"] as? String ?? "",
-                  name: dictionary["name"] as? String ?? "",
-                  role: dictionary["title"] as? String ?? "",
+    init?(dictionary: [String: Any]) {
+        guard let team = dictionary["team"] as? String,
+        let name = dictionary["name"] as? String,
+        let role = dictionary["title"] as? String else {
+            return nil
+        }
+        self.init(team: team,
+                  name: name,
+                  role: role,
                   twitter: dictionary["twitter"] as? String ?? "",
                   facebook: dictionary["facebook"] as? String ?? "")
+    }
+    
+    init?(object: Any) {
+        guard let dictionary = object as? [String: Any] else { return nil }
+        self.init(dictionary: dictionary)
     }
     
 }
