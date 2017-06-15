@@ -1,5 +1,5 @@
 //
-//  LocalNotificationManager.swift
+//  LocalNotificationProtocol.swift
 //  PyConJP
 //
 //  Created by Yutaro Muta on 3/13/16.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class LocalNotificationManager: NSObject {
+protocol LocalNotificationProtocol {}
+
+extension LocalNotificationProtocol {
     
     func makeNotification(talkDetail: TalkDetail) -> Bool {
         
@@ -22,7 +24,7 @@ class LocalNotificationManager: NSObject {
     
     private func schedule(talkDetail: TalkDetail, at date: Date) {
         
-        let userInfo = ["type": "Talk", "id": talkDetail.talkObject.id] as [AnyHashable: Any]
+        let userInfo = ["type": NotificationType.talk.description, "id": talkDetail.talkObject.id] as [AnyHashable: Any]
         
         let notificaiton = UILocalNotification()
         notificaiton.fireDate = date
