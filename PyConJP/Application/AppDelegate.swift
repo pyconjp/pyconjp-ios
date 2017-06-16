@@ -51,14 +51,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ReceiveLocalNotificationP
     
 }
 
-extension AppDelegate: RealmSaveTalksProtocol {
+extension AppDelegate {
     
     fileprivate func getTalksFromAPI() {
         let request = TalksAPIRequest()
         Session.send(request) { [weak self](result) in
             switch result {
             case .success(let talks):
-                try? self?.save(talks: talks)
+                try? SaveTalksRequest().save(talks: talks)
                 NotificationCenter.default.post(name: Notification.Name(rawValue: PCJNotificationConfig.completeFetchDataNotification), object: nil)
             case .failure(let error):
                 self?.showErrorAlart(with: error)
