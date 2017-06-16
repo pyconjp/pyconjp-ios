@@ -111,15 +111,18 @@
 		DBA8722F1EF1A40E0001F8A3 /* LocalNotificationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8722D1EF1A40E0001F8A3 /* LocalNotificationProtocol.swift */; };
 		DBA872301EF1A40E0001F8A3 /* ReceiveLocalNotificationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8722E1EF1A40E0001F8A3 /* ReceiveLocalNotificationProtocol.swift */; };
 		DBA872321EF1A4990001F8A3 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA872311EF1A4990001F8A3 /* NotificationType.swift */; };
+		DBA872371EF2E0E90001F8A3 /* StaffListAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA872341EF2E0E90001F8A3 /* StaffListAPIRequest.swift */; };
+		DBA872381EF2E0E90001F8A3 /* TalkDetailAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA872351EF2E0E90001F8A3 /* TalkDetailAPIRequest.swift */; };
+		DBA872391EF2E0E90001F8A3 /* TalksAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA872361EF2E0E90001F8A3 /* TalksAPIRequest.swift */; };
+		DBA8723C1EF2E14B0001F8A3 /* SaveTalksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8723B1EF2E14B0001F8A3 /* SaveTalksRequest.swift */; };
+		DBA8723E1EF2E5320001F8A3 /* LoadFavoriteTalksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8723D1EF2E5320001F8A3 /* LoadFavoriteTalksRequest.swift */; };
+		DBA872401EF2E7410001F8A3 /* LoadTalksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8723F1EF2E7410001F8A3 /* LoadTalksRequest.swift */; };
 		DBB4AECA1EED91DD0097CF99 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB4AEC81EED91DD0097CF99 /* APIKit.framework */; };
 		DBB4AECB1EED91DD0097CF99 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB4AEC91EED91DD0097CF99 /* Result.framework */; };
 		DBB4AECC1EED922D0097CF99 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB4AEC81EED91DD0097CF99 /* APIKit.framework */; };
 		DBB4AECD1EED922D0097CF99 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB4AEC91EED91DD0097CF99 /* Result.framework */; };
 		DBB4AED01EED93F60097CF99 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4AECF1EED93F60097CF99 /* APIError.swift */; };
 		DBB4AED31EED95950097CF99 /* PyConJPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4AED21EED95950097CF99 /* PyConJPRequest.swift */; };
-		DBB4AED61EED964B0097CF99 /* TalksAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4AED51EED964B0097CF99 /* TalksAPIRequest.swift */; };
-		DBB4AEDC1EEDA8830097CF99 /* StaffListAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4AEDB1EEDA8830097CF99 /* StaffListAPIRequest.swift */; };
-		DBB4AEDE1EEDAAF00097CF99 /* TalkDetailAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4AEDD1EEDAAF00097CF99 /* TalkDetailAPIRequest.swift */; };
 		DBDA6FB91EEEB75E008FE17B /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDA6FB81EEEB75E008FE17B /* Kingfisher.framework */; };
 /* End PBXBuildFile section */
 
@@ -299,13 +302,16 @@
 		DBA8722D1EF1A40E0001F8A3 /* LocalNotificationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationProtocol.swift; sourceTree = "<group>"; };
 		DBA8722E1EF1A40E0001F8A3 /* ReceiveLocalNotificationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveLocalNotificationProtocol.swift; sourceTree = "<group>"; };
 		DBA872311EF1A4990001F8A3 /* NotificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
+		DBA872341EF2E0E90001F8A3 /* StaffListAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffListAPIRequest.swift; sourceTree = "<group>"; };
+		DBA872351EF2E0E90001F8A3 /* TalkDetailAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkDetailAPIRequest.swift; sourceTree = "<group>"; };
+		DBA872361EF2E0E90001F8A3 /* TalksAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksAPIRequest.swift; sourceTree = "<group>"; };
+		DBA8723B1EF2E14B0001F8A3 /* SaveTalksRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveTalksRequest.swift; sourceTree = "<group>"; };
+		DBA8723D1EF2E5320001F8A3 /* LoadFavoriteTalksRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadFavoriteTalksRequest.swift; sourceTree = "<group>"; };
+		DBA8723F1EF2E7410001F8A3 /* LoadTalksRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadTalksRequest.swift; sourceTree = "<group>"; };
 		DBB4AEC81EED91DD0097CF99 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		DBB4AEC91EED91DD0097CF99 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		DBB4AECF1EED93F60097CF99 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		DBB4AED21EED95950097CF99 /* PyConJPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PyConJPRequest.swift; sourceTree = "<group>"; };
-		DBB4AED51EED964B0097CF99 /* TalksAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksAPIRequest.swift; sourceTree = "<group>"; };
-		DBB4AEDB1EEDA8830097CF99 /* StaffListAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffListAPIRequest.swift; sourceTree = "<group>"; };
-		DBB4AEDD1EEDAAF00097CF99 /* TalkDetailAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkDetailAPIRequest.swift; sourceTree = "<group>"; };
 		DBC72D131D6F0B0C008DF718 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		DBC72D141D6F0B0C008DF718 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		DBDA6FB81EEEB75E008FE17B /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -382,7 +388,6 @@
 				DB05D1111E43FBCB00781BF7 /* Delegate */,
 				DB05D1121E43FBCB00781BF7 /* Extension */,
 				DB05D11E1E43FBCB00781BF7 /* Model */,
-				DBB4AED41EED963D0097CF99 /* APIRequest */,
 				DB05D1301E43FBCB00781BF7 /* Protocol */,
 				DB05D13D1E43FBCB00781BF7 /* Resource */,
 				DB05D1511E43FBCB00781BF7 /* Storyboard */,
@@ -484,6 +489,8 @@
 				DB05D11F1E43FBCB00781BF7 /* Class */,
 				DB05D1211E43FBCB00781BF7 /* Enum */,
 				DB05D1261E43FBCB00781BF7 /* Struct */,
+				DBA872331EF2E0E90001F8A3 /* APIRequest */,
+				DBA8723A1EF2E1050001F8A3 /* Realm */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -811,6 +818,26 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		DBA872331EF2E0E90001F8A3 /* APIRequest */ = {
+			isa = PBXGroup;
+			children = (
+				DBA872341EF2E0E90001F8A3 /* StaffListAPIRequest.swift */,
+				DBA872351EF2E0E90001F8A3 /* TalkDetailAPIRequest.swift */,
+				DBA872361EF2E0E90001F8A3 /* TalksAPIRequest.swift */,
+			);
+			path = APIRequest;
+			sourceTree = "<group>";
+		};
+		DBA8723A1EF2E1050001F8A3 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				DBA8723D1EF2E5320001F8A3 /* LoadFavoriteTalksRequest.swift */,
+				DBA8723F1EF2E7410001F8A3 /* LoadTalksRequest.swift */,
+				DBA8723B1EF2E14B0001F8A3 /* SaveTalksRequest.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		DBB4AECE1EED93F60097CF99 /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -825,16 +852,6 @@
 				DBB4AED21EED95950097CF99 /* PyConJPRequest.swift */,
 			);
 			path = APIKit;
-			sourceTree = "<group>";
-		};
-		DBB4AED41EED963D0097CF99 /* APIRequest */ = {
-			isa = PBXGroup;
-			children = (
-				DBB4AED51EED964B0097CF99 /* TalksAPIRequest.swift */,
-				DBB4AEDB1EEDA8830097CF99 /* StaffListAPIRequest.swift */,
-				DBB4AEDD1EEDAAF00097CF99 /* TalkDetailAPIRequest.swift */,
-			);
-			path = APIRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1130,7 +1147,6 @@
 				DB7EAAE21EF04DAC00FEF504 /* DummyTalksProtocol.swift in Sources */,
 				DB05D1E51E43FBCB00781BF7 /* EventsListViewController.swift in Sources */,
 				DBA872301EF1A40E0001F8A3 /* ReceiveLocalNotificationProtocol.swift in Sources */,
-				DBB4AEDE1EEDAAF00097CF99 /* TalkDetailAPIRequest.swift in Sources */,
 				DB05D1E01E43FBCB00781BF7 /* ConferenceDateViewController.swift in Sources */,
 				DB05D1E41E43FBCB00781BF7 /* ConferenceViewController.swift in Sources */,
 				DB05D1AD1E43FBCB00781BF7 /* Room.swift in Sources */,
@@ -1141,11 +1157,15 @@
 				DB05D1DE1E43FBCB00781BF7 /* BookmarkListViewController.swift in Sources */,
 				DB05D1A41E43FBCB00781BF7 /* UIColorExtension.swift in Sources */,
 				DB05D1971E43FBCB00781BF7 /* AppDelegate.swift in Sources */,
+				DBA872401EF2E7410001F8A3 /* LoadTalksRequest.swift in Sources */,
+				DBA872391EF2E0E90001F8A3 /* TalksAPIRequest.swift in Sources */,
+				DBA872381EF2E0E90001F8A3 /* TalkDetailAPIRequest.swift in Sources */,
 				DB10DEA11EDFDF8200DAED31 /* NibInstantitable.swift in Sources */,
-				DBB4AEDC1EEDA8830097CF99 /* StaffListAPIRequest.swift in Sources */,
 				DB05D1BC1E43FBCB00781BF7 /* TwitterURLSchemeProtocol.swift in Sources */,
 				DB05D1991E43FBCB00781BF7 /* PCJNotificationConfig.swift in Sources */,
 				DB10DEA31EDFDF9900DAED31 /* StoryboardIdentifiable.swift in Sources */,
+				DBA8723E1EF2E5320001F8A3 /* LoadFavoriteTalksRequest.swift in Sources */,
+				DBA872371EF2E0E90001F8A3 /* StaffListAPIRequest.swift in Sources */,
 				DB7EAADB1EEEF76A00FEF504 /* UIImageViewExtension.swift in Sources */,
 				DB05D1E11E43FBCB00781BF7 /* ConferenceListViewController.swift in Sources */,
 				DB10DE9D1EDFDF3B00DAED31 /* UIStoryboardExtension.swift in Sources */,
@@ -1160,6 +1180,7 @@
 				DB05D1BA1E43FBCB00781BF7 /* RealmLoadTalksProtocol.swift in Sources */,
 				DB05D1BB1E43FBCB00781BF7 /* MailURLSchemeProtocol.swift in Sources */,
 				DB05D19E1E43FBCB00781BF7 /* ConferenceListDataSource.swift in Sources */,
+				DBA8723C1EF2E14B0001F8A3 /* SaveTalksRequest.swift in Sources */,
 				DB05D1B01E43FBCB00781BF7 /* Place.swift in Sources */,
 				DB05D1E91E43FBCB00781BF7 /* MapListViewController.swift in Sources */,
 				DB05D1A51E43FBCB00781BF7 /* UIDeviceExtension.swift in Sources */,
@@ -1193,7 +1214,6 @@
 				DB05D1AF1E43FBCB00781BF7 /* Level.swift in Sources */,
 				DB05D1A11E43FBCB00781BF7 /* ArrayExtension.swift in Sources */,
 				DB05D1D31E43FBCB00781BF7 /* CustomImageView.swift in Sources */,
-				DBB4AED61EED964B0097CF99 /* TalksAPIRequest.swift in Sources */,
 				DB05D19B1E43FBCB00781BF7 /* StaffListDataSource.swift in Sources */,
 				DB05D1B61E43FBCB00781BF7 /* Timeline.swift in Sources */,
 				DB05D1AE1E43FBCB00781BF7 /* Category.swift in Sources */,

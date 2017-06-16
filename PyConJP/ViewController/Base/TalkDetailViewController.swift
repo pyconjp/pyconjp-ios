@@ -159,14 +159,10 @@ class TalkDetailViewController: UIViewController, TwitterURLSchemeProtocol, Erro
     @IBAction func onBookmarkBarButton(_ sender: UIBarButtonItem) {
         guard let talkDetail = talkDetail else { return }
         do {
-            talkDetail.talkObject.isFavorite = !talkDetail.talkObject.isFavorite
-            let realm = try Realm()
-            try realm.write({
-                realm.create(TalkObject.self, value: ["id": talkDetail.talkObject.id, "isFavorite": talkDetail.talkObject.isFavorite], update: true)
-            })
+            try talkDetail.talkObject.invertFavorite()
             toggleBookmarkBarButtonItem(talkDetail.talkObject.isFavorite)
         } catch {
-            
+            self.showErrorAlart(with: error)
         }
     }
     

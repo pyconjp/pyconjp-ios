@@ -132,4 +132,16 @@ final class TalkObject: RealmSwift.Object {
         return Room(roomString)
     }
     
+    func invertFavorite() throws {
+        do {
+            self.isFavorite = !self.isFavorite
+            let realm = try Realm()
+            try realm.write({
+                realm.create(TalkObject.self, value: ["id": self.id, "isFavorite": self.isFavorite], update: true)
+            })
+        } catch {
+            throw error
+        }
+    }
+    
 }

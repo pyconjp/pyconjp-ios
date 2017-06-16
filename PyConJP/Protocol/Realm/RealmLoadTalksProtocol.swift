@@ -7,25 +7,23 @@
 //
 
 import Foundation
-import Result
 import RealmSwift
 
 protocol RealmLoadTalksProtocol {
     var filterPredicate: NSPredicate { get }
     var sortProperties: [SortDescriptor] { get }
     
-    func loadTalks(completionHandler: ((Result<[TalkObject], NSError>) -> Void))
+    func load() throws -> [TalkObject]
 }
 
 extension RealmLoadTalksProtocol {
     
-    func loadTalks(completionHandler: ((Result<[TalkObject], NSError>) -> Void)) {
+    func load() throws -> [TalkObject] {
         do {
             let realm = try Realm()
-            let talks = Array(realm.objects(TalkObject.self).filter(filterPredicate).sorted(by: sortProperties))
-            completionHandler(.success(talks))
-        } catch let error as NSError {
-            completionHandler(.failure(error))
+            return Array(realm.objects(TalkObject.self).filter(filterPredicate).sorted(by: sortProperties))
+        } catch {
+            throw error
         }
     }
 
