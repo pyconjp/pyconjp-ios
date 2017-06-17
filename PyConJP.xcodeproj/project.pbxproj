@@ -97,6 +97,7 @@
 		DB10DEA11EDFDF8200DAED31 /* NibInstantitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB10DEA01EDFDF8200DAED31 /* NibInstantitable.swift */; };
 		DB10DEA31EDFDF9900DAED31 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB10DEA21EDFDF9900DAED31 /* StoryboardIdentifiable.swift */; };
 		DB10DEA71EDFE62A00DAED31 /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB10DEA61EDFE62A00DAED31 /* RealmError.swift */; };
+		DB4BC68F1EF5098D00650964 /* SpreadsheetView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4BC68E1EF5098D00650964 /* SpreadsheetView.framework */; };
 		DB77FD531E06720D00504869 /* WebAPIFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB77FD4A1E06720C00504869 /* WebAPIFramework.framework */; };
 		DB77FD5A1E06720D00504869 /* WebAPIFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77FD591E06720D00504869 /* WebAPIFrameworkTests.swift */; };
 		DB77FD5C1E06720D00504869 /* WebAPIFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = DB77FD4C1E06720C00504869 /* WebAPIFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -284,6 +285,7 @@
 		DB10DEA01EDFDF8200DAED31 /* NibInstantitable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibInstantitable.swift; sourceTree = "<group>"; };
 		DB10DEA21EDFDF9900DAED31 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		DB10DEA61EDFE62A00DAED31 /* RealmError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
+		DB4BC68E1EF5098D00650964 /* SpreadsheetView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpreadsheetView.framework; path = Carthage/Build/iOS/SpreadsheetView.framework; sourceTree = "<group>"; };
 		DB77FD4A1E06720C00504869 /* WebAPIFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebAPIFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB77FD4C1E06720C00504869 /* WebAPIFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebAPIFramework.h; sourceTree = "<group>"; };
 		DB77FD4D1E06720C00504869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -340,10 +342,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBB4AECA1EED91DD0097CF99 /* APIKit.framework in Frameworks */,
+				DBB4AECB1EED91DD0097CF99 /* Result.framework in Frameworks */,
 				DBDA6FB91EEEB75E008FE17B /* Kingfisher.framework in Frameworks */,
 				DB05D0FE1E43FB6200781BF7 /* Realm.framework in Frameworks */,
 				DB05D0FF1E43FB6200781BF7 /* RealmSwift.framework in Frameworks */,
-				DBB4AECB1EED91DD0097CF99 /* Result.framework in Frameworks */,
+				DB4BC68F1EF5098D00650964 /* SpreadsheetView.framework in Frameworks */,
 				DB77FD5F1E06720D00504869 /* WebAPIFramework.framework in Frameworks */,
 				7FFB73401C9162C2006FB375 /* MapKit.framework in Frameworks */,
 			);
@@ -369,6 +372,7 @@
 		BB6F29A77E8682EFE6C9DA97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB4BC68E1EF5098D00650964 /* SpreadsheetView.framework */,
 				DBB4AEC81EED91DD0097CF99 /* APIKit.framework */,
 				DBB4AEC91EED91DD0097CF99 /* Result.framework */,
 				DBDA6FB81EEEB75E008FE17B /* Kingfisher.framework */,
@@ -1096,6 +1100,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SpreadsheetView.framework",
 			);
 			name = "Run Script for Carthage";
 			outputPaths = (
