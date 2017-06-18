@@ -40,8 +40,20 @@ extension ConferenceTimetableViewController: SpreadsheetViewDataSource {
     }
 
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, cellForItemAt indexPath: IndexPath) -> Cell? {
-        let cell = spreadsheetView.dequeueReusableCell(withReuseIdentifier: TimetableSpreadsheetViewCell.nibName, for: indexPath)
+        let cell = spreadsheetView.dequeueReusableCell(withReuseIdentifier: TimetableCell.nibName, for: indexPath)
         return cell
+    }
+    
+//    func mergedCells(in spreadsheetView: SpreadsheetView) -> [CellRange] {
+//        <#code#>
+//    }
+    
+    func frozenColumns(in spreadsheetView: SpreadsheetView) -> Int {
+        return 1
+    }
+    
+    func frozenRows(in spreadsheetView: SpreadsheetView) -> Int {
+        return 1
     }
     
 }

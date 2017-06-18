@@ -1,5 +1,5 @@
 //
-//  TimetableSpreadsheetViewCell.swift
+//  TimetableCell.swift
 //  PyConJP
 //
 //  Created by Yutaro Muta on 2017/06/17.
@@ -9,6 +9,6 @@
 import UIKit
 import SpreadsheetView
 
-final class TimetableSpreadsheetViewCell: Cell, NibInstantitable {
+final class TimetableCell: Cell, NibInstantitable {
     
 }

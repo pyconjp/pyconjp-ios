@@ -34,11 +34,21 @@ final class ConferenceTimetableDataStore {
     }
     
     func widthForColumn(_ column: Int) -> CGFloat {
-        return 0.0
+        switch column {
+        case 0:
+            return 30
+        default:
+            return 100
+        }
     }
     
     func heightForRow(_ row: Int) -> CGFloat {
-        return 0.0
+        switch row {
+        case 0:
+            return 44
+        default:
+            return 2
+        }
     }
     
 }
