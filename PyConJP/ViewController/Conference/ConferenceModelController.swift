@@ -16,19 +16,21 @@ class ConferenceModelController: NSObject, UIPageViewControllerDataSource {
         super.init()
     }
     
-    func viewController(index: Int, storyboard: UIStoryboard) -> ConferenceListViewController? {
+    func viewController(index: Int, storyboard: UIStoryboard) -> ConferenceTimetableViewController? {
         
         if self.days.isEmpty || index >= days.count {
             return nil
         }
         
-        let conferenceListViewController = ConferenceListViewController.build(at: index, storyboard: storyboard, pyconJPDate: days[index])
-        return conferenceListViewController
-        
+//        let conferenceListViewController = ConferenceListViewController.build(at: index, storyboard: storyboard, pyconJPDate: days[index])
+//        return conferenceListViewController
+        let conferenceTimetableViewController = ConferenceTimetableViewController.build(days[index])
+        return conferenceTimetableViewController
     }
     
     func indexOfViewController(viewController: UIViewController) -> Int {
-        guard let viewController = viewController as? ConferenceListViewController, let pyconJPDate = viewController.pyconJPDate else { return NSNotFound }
+        guard let viewController = viewController as? ConferenceTimetableViewController,
+            let pyconJPDate = viewController.dataStore?.pyconJPDate else { return NSNotFound }
         return days.index(of: pyconJPDate) ?? NSNotFound
     }
     

@@ -91,7 +91,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1th-4Q-nUU">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
-                                    <segue destination="437-Ed-YlZ" kind="embed" id="X5X-om-dp9"/>
+                                    <segue destination="437-Ed-YlZ" kind="embed" id="fxb-2a-hLl"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -250,7 +250,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4m-Wb-Odp" customClass="SpreadsheetView" customModule="PyConJP" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4m-Wb-Odp" customClass="SpreadsheetView" customModule="SpreadsheetView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>

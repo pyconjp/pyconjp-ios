@@ -11,11 +11,19 @@ import SpreadsheetView
 
 final class ConferenceTimetableViewController: UIViewController, StoryboardIdentifiable {
     
-    fileprivate var dataStore: ConferenceTimetableDataStore?
+    @IBOutlet weak var timetableView: SpreadsheetView! {
+        didSet {
+            timetableView.dataSource = self
+            timetableView.register(TimetableCell.nib, forCellWithReuseIdentifier: TimetableCell.nibName)
+            timetableView.register(TimetableRoomCell.nib, forCellWithReuseIdentifier: TimetableRoomCell.nibName)
+            timetableView.register(TimetableTimeAxisCell.nib, forCellWithReuseIdentifier: TimetableTimeAxisCell.nibName)
+        }
+    }
+    fileprivate(set) var dataStore: ConferenceTimetableDataStore?
     
     static func build(_ pyconJPDate: PyConJPDate) -> ConferenceTimetableViewController {
         let viewController: ConferenceTimetableViewController = UIStoryboard(storyboard: .conference).instantiateViewController()
-        viewController.dataStore = ConferenceTimetableDataStore(day: pyconJPDate.description)
+        viewController.dataStore = ConferenceTimetableDataStore(pyconJPDate: pyconJPDate)
         return viewController
     }
 
@@ -24,28 +32,33 @@ final class ConferenceTimetableViewController: UIViewController, StoryboardIdent
 extension ConferenceTimetableViewController: SpreadsheetViewDataSource {
     
     func numberOfColumns(in spreadsheetView: SpreadsheetView) -> Int {
-        return 0
+        return dataStore?.numberOfColumns() ?? 0    // 横
     }
     
     func numberOfRows(in spreadsheetView: SpreadsheetView) -> Int {
-        return 0
+        return dataStore?.numberOfRows() ?? 0   // 縦
     }
     
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, widthForColumn column: Int) -> CGFloat {
-        return 0
+        return dataStore?.widthForColumn(column) ?? 0.0
     }
     
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, heightForRow row: Int) -> CGFloat {
-        return 0
+        return dataStore?.heightForRow(row) ?? 0.0
     }
 
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, cellForItemAt indexPath: IndexPath) -> Cell? {
-        let cell = spreadsheetView.dequeueReusableCell(withReuseIdentifier: TimetableCell.nibName, for: indexPath)
+        guard let cellIdentifier = dataStore?.cellIdentifier(indexPath) else { return nil }
+        let cell = spreadsheetView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
         return cell
     }
     
 //    func mergedCells(in spreadsheetView: SpreadsheetView) -> [CellRange] {
-//        <#code#>
+//        var mergedCells = [CellRange]()
+//        for row in 0..<24 {
+//            mergedCells.append(CellRange(from: (60 * row + 1, 0), to: (60 * (row + 1), 0)))
+//        }
+//        return mergedCells
 //    }
     
     func frozenColumns(in spreadsheetView: SpreadsheetView) -> Int {
