@@ -13,7 +13,6 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TimetableTimeAxisCell" customModule="PyConJP" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="99" height="216"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.33333333329999998" green="0.67450980390000004" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-104.5" y="-108"/>
         </view>

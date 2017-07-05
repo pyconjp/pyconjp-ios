@@ -30,6 +30,18 @@ struct Timetable {
         return end.timeIntervalSince(start) / 60
     }
     
+    var minutesLength: Int {
+        return Int(timeLength ?? 0)
+    }
+    
+    var hours: Int {
+        return minutesLength / 60
+    }
+    
+    var fractionMinutes: Int {
+        return minutesLength % 60
+    }
+    
     init(talks: [TalkObject]) {
         self.tracks = Room.rooms.map { room -> Track in
             Track(room: room, talks: talks.filter({ $0.room == room }))

@@ -11,4 +11,7 @@ import SpreadsheetView
 
 final class TimetableCell: Cell, NibInstantitable {
     
+    static let width: CGFloat = 130.0
+    static let height: CGFloat = 2.0
+    
 }

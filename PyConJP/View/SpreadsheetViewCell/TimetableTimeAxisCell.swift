@@ -10,5 +10,8 @@ import UIKit
 import SpreadsheetView
 
 final class TimetableTimeAxisCell: Cell, NibInstantitable {
+    
+    static let width: CGFloat = 30.0
+    static let height: CGFloat = 2.0
 
 }

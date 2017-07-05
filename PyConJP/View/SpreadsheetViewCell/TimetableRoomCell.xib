@@ -13,8 +13,24 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TimetableRoomCell" customModule="PyConJP" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.94509803920000002" green="0.59999999999999998" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jt5-GC-OLx">
+                    <rect key="frame" x="10" y="10" width="355" height="130"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="jt5-GC-OLx" secondAttribute="bottom" constant="10" id="KX3-ac-jsA"/>
+                <constraint firstItem="jt5-GC-OLx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Xqg-0K-Q8a"/>
+                <constraint firstItem="jt5-GC-OLx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="wEv-s0-efV"/>
+                <constraint firstAttribute="trailing" secondItem="jt5-GC-OLx" secondAttribute="trailing" constant="10" id="zEI-C4-BHe"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="roomLabel" destination="jt5-GC-OLx" id="neg-jC-whB"/>
+            </connections>
             <point key="canvasLocation" x="33.5" y="-141"/>
         </view>
     </objects>

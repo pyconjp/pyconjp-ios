@@ -11,7 +11,7 @@ import UIKit
 
 final class ConferenceTimetableDataStore {
     
-    var timetable: Timetable
+    private(set) var timetable: Timetable
     let pyconJPDate: PyConJPDate
     
     private let loadTalksRequest: LoadTalksRequest
@@ -27,40 +27,40 @@ final class ConferenceTimetableDataStore {
         }
     }
     
+    func room(_ indexPath: IndexPath) -> Room {
+        return timetable.rooms[indexPath.column - 1]
+    }
+    
     func numberOfColumns() -> Int {
         return Section.numberOfColumns(timetable.rooms.count)
     }
     
     func numberOfRows() -> Int {
-        return Section.numberOfRows(Int(timetable.timeLength ?? 0.0))
+        return Section.numberOfRows(timetable.minutesLength)
     }
     
     func cellIdentifier(_ indexPath: IndexPath) -> String? {
-        guard let section = Section(indexPath: indexPath) else { return nil }
-        return section.cellIdentifier
+        return Section(indexPath: indexPath).cellIdentifier
     }
     
     func widthForColumn(_ column: Int) -> CGFloat {
-        guard let section = Section(indexPath: IndexPath(row: 0, column: column)) else { return 0.0 }
-//        return section.widthForColumn
-        return CGFloat(10 * column)
+        return Section(indexPath: IndexPath(row: 0, column: column)).widthForColumn
     }
     
     func heightForRow(_ row: Int) -> CGFloat {
-        guard let section = Section(indexPath: IndexPath(row: row, column: 0)) else { return 0.0 }
-//        return section.heightForRow
-        return CGFloat(row)
+        return Section(indexPath: IndexPath(row: row, column: 0)).heightForRow
     }
     
     enum Section {
+        case corner
         case rowHeader
         case columnHeader
         case timetable
         
-        init?(indexPath: IndexPath) {
+        init(indexPath: IndexPath) {
             switch (indexPath.row, indexPath.column) {
             case (0, 0):
-                return nil
+                self = .corner
             case (0, _):
                 self = .rowHeader
             case (_, 0):
@@ -70,8 +70,10 @@ final class ConferenceTimetableDataStore {
             }
         }
         
-        var cellIdentifier: String {
+        var cellIdentifier: String? {
             switch self {
+            case .corner:
+                return nil
             case .rowHeader:
                 return TimetableRoomCell.nibName
             case .columnHeader:
@@ -83,23 +85,27 @@ final class ConferenceTimetableDataStore {
         
         var widthForColumn: CGFloat {
             switch self {
+            case .corner:
+                return 30.0
             case .rowHeader:
-                return 130
+                return TimetableRoomCell.width
             case .columnHeader:
-                return 200
+                return TimetableTimeAxisCell.width
             case .timetable:
-                return 130
+                return TimetableCell.width
             }
         }
         
         var heightForRow: CGFloat {
             switch self {
-            case .rowHeader:
+            case .corner:
                 return 44
+            case .rowHeader:
+                return TimetableRoomCell.height
             case .columnHeader:
-                return 2
+                return TimetableTimeAxisCell.height
             case .timetable:
-                return 2
+                return TimetableCell.height
             }
         }
         
