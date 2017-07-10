@@ -36,7 +36,7 @@ final class ConferenceTimetableDataStore {
     }
     
     func numberOfRows() -> Int {
-        return Section.numberOfRows(timetable.minutesLength)
+        return Section.numberOfRows(timetable.minutesDuration)
     }
     
     func cellIdentifier(_ indexPath: IndexPath) -> String? {

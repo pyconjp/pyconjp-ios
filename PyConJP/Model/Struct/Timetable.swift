@@ -24,22 +24,22 @@ struct Timetable {
         return tracks.flatMap({ $0.end }).max()
     }
     
-    var timeLength: Double? {
+    var duration: Double? {
         guard let start = start,
             let end = end else { return nil }
-        return end.timeIntervalSince(start) / 60
+        return end.timeIntervalSince(start)
     }
     
-    var minutesLength: Int {
-        return Int(timeLength ?? 0)
+    var minutesDuration: Int {
+        return Int((duration ?? 0) / 60)
     }
     
     var hours: Int {
-        return minutesLength / 60
+        return minutesDuration / 60
     }
     
     var fractionMinutes: Int {
-        return minutesLength % 60
+        return minutesDuration % 60
     }
     
     init(talks: [TalkObject]) {

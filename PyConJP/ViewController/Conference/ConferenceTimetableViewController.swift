@@ -72,7 +72,18 @@ extension ConferenceTimetableViewController: SpreadsheetViewDataSource {
             mergedCells.append(CellRange(from: (60 * row + 1, 0), to: (60 * (row + 1), 0)))
         }
         mergedCells.append(CellRange(from: (row: 60 * (dataStore?.timetable.hours ?? 0) + 1, column: 0),
-                           to: (row: 60 * (dataStore?.timetable.hours ?? 0) + (dataStore?.timetable.fractionMinutes ?? 0), column: 0)))
+                                     to: (row: 60 * (dataStore?.timetable.hours ?? 0) + (dataStore?.timetable.fractionMinutes ?? 0), column: 0)))
+        
+        // Talks
+        guard let start = dataStore?.timetable.start else { return mergedCells }
+        dataStore?.timetable.tracks.enumerated().forEach({ column, track in
+            track.talks.forEach({ talk in
+                let startTime = Int(talk.startDate.timeIntervalSince(start) / 60)
+                mergedCells.append(CellRange(from: (row: startTime + 1, column: column + 1),
+                                             to: (row: startTime + talk.minutesDuration, column: column + 1)))
+            })
+        })
+        
         return mergedCells
     }
     
