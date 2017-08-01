@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -13,9 +14,60 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TimetableCell" customModule="PyConJP" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="406" height="305"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="h9r-em-u0R">
+                    <rect key="frame" x="10" y="10" width="386" height="59.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFI-Yw-uop">
+                            <rect key="frame" x="0.0" y="0.0" width="31" height="17"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cmF-G5-OHo">
+                            <rect key="frame" x="0.0" y="22" width="87.5" height="18"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="my2-om-VVH">
+                                    <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="18" id="ttX-fR-5kP"/>
+                                        <constraint firstAttribute="width" secondItem="my2-om-VVH" secondAttribute="height" multiplier="1:1" id="zrh-jP-QT1"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00 ~ 11:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="rPO-6d-0p5">
+                                    <rect key="frame" x="23" y="0.0" width="64.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Speaker" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etJ-Jd-Ekf">
+                            <rect key="frame" x="0.0" y="45" width="46.5" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="h9r-em-u0R" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="1oe-pS-SyN"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="h9r-em-u0R" secondAttribute="bottom" constant="10" id="7eM-wY-hPY"/>
+                <constraint firstAttribute="trailing" secondItem="h9r-em-u0R" secondAttribute="trailing" constant="10" id="Ahe-IU-KLg"/>
+                <constraint firstItem="h9r-em-u0R" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="iTf-Ql-DaG"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="speakerLabel" destination="etJ-Jd-Ekf" id="oD4-t0-Yfe"/>
+                <outlet property="timeLabel" destination="rPO-6d-0p5" id="DBW-DV-17x"/>
+                <outlet property="titleLabel" destination="xFI-Yw-uop" id="dHw-iU-vcz"/>
+            </connections>
             <point key="canvasLocation" x="49" y="-63.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Clock" width="36" height="36"/>
+    </resources>
 </document>

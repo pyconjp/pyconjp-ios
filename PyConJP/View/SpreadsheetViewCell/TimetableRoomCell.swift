@@ -16,6 +16,11 @@ final class TimetableRoomCell: Cell, NibInstantitable {
     static let width: CGFloat = 130.0
     static let height: CGFloat  = 44.0
     
+    override func prepareForReuse() {
+        roomLabel.text = nil
+        backgroundColor = nil
+    }
+    
     func fill(_ room: Room) {
         roomLabel.text = room.description
         backgroundColor = room.color

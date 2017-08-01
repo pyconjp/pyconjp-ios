@@ -13,7 +13,25 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TimetableTimeAxisCell" customModule="PyConJP" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="99" height="216"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeY-L8-VTp">
+                    <rect key="frame" x="0.0" y="0.0" width="99" height="216"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="eeY-L8-VTp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KCu-Ss-Key"/>
+                <constraint firstItem="eeY-L8-VTp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bXk-gX-2mx"/>
+                <constraint firstAttribute="trailing" secondItem="eeY-L8-VTp" secondAttribute="trailing" id="u8z-jI-xOx"/>
+                <constraint firstAttribute="bottom" secondItem="eeY-L8-VTp" secondAttribute="bottom" id="x16-xV-XsU"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="timeLabel" destination="eeY-L8-VTp" id="EZ2-qZ-cA0"/>
+            </connections>
             <point key="canvasLocation" x="-104.5" y="-108"/>
         </view>
     </objects>

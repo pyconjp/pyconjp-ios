@@ -11,7 +11,18 @@ import SpreadsheetView
 
 final class TimetableTimeAxisCell: Cell, NibInstantitable {
     
-    static let width: CGFloat = 30.0
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    static let width: CGFloat = 44.0
     static let height: CGFloat = 2.0
-
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        timeLabel.text = nil
+    }
+    
+    func fill(_ hour: String) {
+        timeLabel.text = hour
+    }
+    
 }

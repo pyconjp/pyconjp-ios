@@ -53,12 +53,16 @@ extension ConferenceTimetableViewController: SpreadsheetViewDataSource {
         let cell = spreadsheetView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
         switch (section, cell) {
         case (.rowHeader, let roomCell as TimetableRoomCell):
-            guard let room = dataStore?.room(indexPath) else { return cell }
+            guard let room = dataStore?.room(indexPath) else { return nil }
             roomCell.fill(room)
             return cell
         case (.columnHeader, let timeCell as TimetableTimeAxisCell):
+            guard let hourClock = dataStore?.hourClock(indexPath) else { return nil }
+            timeCell.fill(hourClock)
             return timeCell
         case (.timetable, let timetableCell as TimetableCell):
+            guard let talkObject = dataStore?.talk(indexPath) else { return nil }
+            timetableCell.fill(talkObject)
             return timetableCell
         default:
             return nil
@@ -88,11 +92,11 @@ extension ConferenceTimetableViewController: SpreadsheetViewDataSource {
     }
     
     func frozenColumns(in spreadsheetView: SpreadsheetView) -> Int {
-        return 1
+        return dataStore?.frozenColumns() ?? 0
     }
     
     func frozenRows(in spreadsheetView: SpreadsheetView) -> Int {
-        return 1
+        return dataStore?.frozenRows() ?? 0
     }
     
 }

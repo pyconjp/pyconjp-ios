@@ -28,7 +28,18 @@ final class ConferenceTimetableDataStore {
     }
     
     func room(_ indexPath: IndexPath) -> Room {
-        return timetable.rooms[indexPath.column - 1]
+        return timetable.rooms[indexPath.column - Section.frozenColumns]
+    }
+    
+    func hourClock(_ indexPath: IndexPath) -> String {
+        return timetable.start?.calculate(minute: indexPath.row)?.hourClock ?? ""
+    }
+    
+    func talk(_ indexPath: IndexPath) -> TalkObject? {
+        guard let date = timetable.start?.calculate(minute: indexPath.row) else { return nil }
+        return timetable.tracks[indexPath.column - Section.frozenColumns].talks.filter({ talkObject in
+            return talkObject.startDate < date && date < talkObject.endDate
+        }).first
     }
     
     func numberOfColumns() -> Int {
@@ -49,6 +60,14 @@ final class ConferenceTimetableDataStore {
     
     func heightForRow(_ row: Int) -> CGFloat {
         return Section(indexPath: IndexPath(row: row, column: 0)).heightForRow
+    }
+    
+    func frozenColumns() -> Int {
+        return Section.frozenColumns
+    }
+    
+    func frozenRows() -> Int {
+        return Section.frozenRows
     }
     
     enum Section {
@@ -86,7 +105,7 @@ final class ConferenceTimetableDataStore {
         var widthForColumn: CGFloat {
             switch self {
             case .corner:
-                return 30.0
+                return TimetableTimeAxisCell.width
             case .rowHeader:
                 return TimetableRoomCell.width
             case .columnHeader:
@@ -99,7 +118,7 @@ final class ConferenceTimetableDataStore {
         var heightForRow: CGFloat {
             switch self {
             case .corner:
-                return 44
+                return TimetableRoomCell.height
             case .rowHeader:
                 return TimetableRoomCell.height
             case .columnHeader:
@@ -109,12 +128,20 @@ final class ConferenceTimetableDataStore {
             }
         }
         
+        static var frozenColumns: Int {
+            return 1
+        }
+        
+        static var frozenRows: Int {
+            return 1
+        }
+        
         static func numberOfColumns(_ count: Int) -> Int {
-            return count + 1
+            return count + frozenColumns
         }
         
         static func numberOfRows(_ length: Int) -> Int {
-            return length + 1
+            return length + frozenRows
         }
     }
     
