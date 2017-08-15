@@ -23,7 +23,7 @@ struct Timetable {
     var end: Date? {
         return tracks.flatMap({ $0.end }).max()
     }
-    
+
     var duration: Double? {
         guard let start = start,
             let end = end else { return nil }
@@ -33,13 +33,15 @@ struct Timetable {
     var minutesDuration: Int {
         return Int((duration ?? 0) / 60)
     }
-    
+
     var hours: Int {
         return minutesDuration / 60
     }
     
-    var fractionMinutes: Int {
-        return minutesDuration % 60
+    var hourDuration: [Int] {
+        guard let startHourClock = start?.components.hour,
+            let endHourClock = end?.components.hour else { return [] }
+        return Array(startHourClock...endHourClock)
     }
     
     init(talks: [TalkObject]) {

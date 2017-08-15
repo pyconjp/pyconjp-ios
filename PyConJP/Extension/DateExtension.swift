@@ -47,4 +47,19 @@ extension Date {
         
     }
     
+    func update(year: Int? = nil, month: Int? = nil, day: Int? = nil, hour: Int? = nil, minute: Int? = nil, second: Int? = nil) -> Date? {
+        
+        var components = self.components
+        components.year = year ?? components.year
+        components.month = month ?? components.month
+        components.day = day ?? components.day
+        components.hour = hour ?? components.hour
+        components.minute = minute ?? components.minute
+        components.second = second ?? components.second
+        
+        let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
+        return calendar.date(from: components)
+        
+    }
+    
 }

@@ -14,9 +14,11 @@ final class ConferenceTimetableViewController: UIViewController, StoryboardIdent
     @IBOutlet weak var timetableView: SpreadsheetView! {
         didSet {
             timetableView.dataSource = self
+            timetableView.delegate = self
             timetableView.register(TimetableCell.nib, forCellWithReuseIdentifier: TimetableCell.nibName)
             timetableView.register(TimetableRoomCell.nib, forCellWithReuseIdentifier: TimetableRoomCell.nibName)
             timetableView.register(TimetableTimeAxisCell.nib, forCellWithReuseIdentifier: TimetableTimeAxisCell.nibName)
+            timetableView.gridStyle = .none
         }
     }
     fileprivate(set) var dataStore: ConferenceTimetableDataStore?
@@ -72,14 +74,13 @@ extension ConferenceTimetableViewController: SpreadsheetViewDataSource {
     func mergedCells(in spreadsheetView: SpreadsheetView) -> [CellRange] {
         var mergedCells = [CellRange]()
         // TimeAxis
-        for row in 0..<(dataStore?.timetable.hours ?? 0) {
-            mergedCells.append(CellRange(from: (60 * row + 1, 0), to: (60 * (row + 1), 0)))
+        guard let hourDuration = dataStore?.timetable.hourDuration else { return mergedCells }
+        for hour in hourDuration.enumerated() {
+            mergedCells.append(CellRange(from: (row: 60 * hour.offset + 1, column: 0),
+                                         to: (row: 60 * (hour.offset + 1), column: 0)))
         }
-        mergedCells.append(CellRange(from: (row: 60 * (dataStore?.timetable.hours ?? 0) + 1, column: 0),
-                                     to: (row: 60 * (dataStore?.timetable.hours ?? 0) + (dataStore?.timetable.fractionMinutes ?? 0), column: 0)))
-        
         // Talks
-        guard let start = dataStore?.timetable.start else { return mergedCells }
+        guard let start = dataStore?.start else { return mergedCells }
         dataStore?.timetable.tracks.enumerated().forEach({ column, track in
             track.talks.forEach({ talk in
                 let startTime = Int(talk.startDate.timeIntervalSince(start) / 60)
@@ -97,6 +98,22 @@ extension ConferenceTimetableViewController: SpreadsheetViewDataSource {
     
     func frozenRows(in spreadsheetView: SpreadsheetView) -> Int {
         return dataStore?.frozenRows() ?? 0
+    }
+    
+}
+
+extension ConferenceTimetableViewController: SpreadsheetViewDelegate {
+    
+    func spreadsheetView(_ spreadsheetView: SpreadsheetView, didSelectItemAt indexPath: IndexPath) {
+        let section = ConferenceTimetableDataStore.Section(indexPath: indexPath)
+        switch section {
+        case .corner, .rowHeader, .columnHeader:
+            break
+        case .timetable:
+            guard let talkObject = dataStore?.talk(indexPath) else { return }
+            let talkDetailViewController = TalkDetailViewController.build(id: talkObject.id)
+            navigationController?.pushViewController(talkDetailViewController, animated: true)
+        }
     }
     
 }

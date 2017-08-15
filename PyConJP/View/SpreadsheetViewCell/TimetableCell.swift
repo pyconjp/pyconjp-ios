@@ -18,6 +18,11 @@ final class TimetableCell: Cell, NibInstantitable {
     static let width: CGFloat = 130.0
     static let height: CGFloat = 2.0
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        gridlines = Gridlines.all(.solid(width: 1.0, color: .gray))
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         titleLabel.text = nil

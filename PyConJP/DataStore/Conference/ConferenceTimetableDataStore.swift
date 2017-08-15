@@ -27,6 +27,16 @@ final class ConferenceTimetableDataStore {
         }
     }
     
+    var start: Date? {
+        guard let start = timetable.start else { return nil }
+        return start.calculate(minute: -(start.components.minute ?? 0), second: -(start.components.second ?? 0))
+    }
+    
+    var end: Date? {
+        guard let end = timetable.end else { return nil }
+        return end.update(minute: 59, second: 59)
+    }
+    
     func room(_ indexPath: IndexPath) -> Room {
         return timetable.rooms[indexPath.column - Section.frozenColumns]
     }
@@ -36,7 +46,7 @@ final class ConferenceTimetableDataStore {
     }
     
     func talk(_ indexPath: IndexPath) -> TalkObject? {
-        guard let date = timetable.start?.calculate(minute: indexPath.row) else { return nil }
+        guard let date = start?.calculate(minute: indexPath.row) else { return nil }
         return timetable.tracks[indexPath.column - Section.frozenColumns].talks.filter({ talkObject in
             return talkObject.startDate < date && date < talkObject.endDate
         }).first
@@ -47,7 +57,7 @@ final class ConferenceTimetableDataStore {
     }
     
     func numberOfRows() -> Int {
-        return Section.numberOfRows(timetable.minutesDuration)
+        return Section.numberOfRows(timetable.hourDuration.count * 60)
     }
     
     func cellIdentifier(_ indexPath: IndexPath) -> String? {
