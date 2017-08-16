@@ -37,12 +37,20 @@ final class ConferenceTimetableDataStore {
         return end.update(minute: 59, second: 59)
     }
     
+    var frozenColumns: Int {
+        return Section.frozenColumns
+    }
+    
+    var frozenRows: Int {
+        return Section.frozenRows
+    }
+    
     func room(_ indexPath: IndexPath) -> Room {
         return timetable.rooms[indexPath.column - Section.frozenColumns]
     }
     
-    func hourClock(_ indexPath: IndexPath) -> String {
-        return timetable.start?.calculate(minute: indexPath.row)?.hourClock ?? ""
+    func hourClock(_ indexPath: IndexPath) -> String? {
+        return start?.calculate(minute: indexPath.row)?.hourClock
     }
     
     func talk(_ indexPath: IndexPath) -> TalkObject? {
@@ -72,12 +80,12 @@ final class ConferenceTimetableDataStore {
         return Section(indexPath: IndexPath(row: row, column: 0)).heightForRow
     }
     
-    func frozenColumns() -> Int {
-        return Section.frozenColumns
-    }
-    
-    func frozenRows() -> Int {
-        return Section.frozenRows
+    func reloadTimetable() {
+        do {
+            self.timetable = Timetable(talks: try loadTalksRequest.load())
+        } catch {
+            return
+        }
     }
     
     enum Section {

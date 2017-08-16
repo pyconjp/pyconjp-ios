@@ -28,12 +28,14 @@ final class TimetableCell: Cell, NibInstantitable {
         titleLabel.text = nil
         timeLabel.text = nil
         speakerLabel.text = nil
+        self.backgroundColor = nil
     }
     
     func fill(_ talkObject: TalkObject) {
         titleLabel.text = talkObject.title
         timeLabel.text = talkObject.periodTime
         speakerLabel.text = talkObject.speakers
+        self.backgroundColor = talkObject.isFavorite ? UIColor.favorite : UIColor.gray
     }
     
 }

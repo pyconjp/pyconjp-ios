@@ -28,6 +28,12 @@ final class ConferenceTimetableViewController: UIViewController, StoryboardIdent
         viewController.dataStore = ConferenceTimetableDataStore(pyconJPDate: pyconJPDate)
         return viewController
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        dataStore?.reloadTimetable()
+        timetableView.reloadData()
+    }
 
 }
 
@@ -93,11 +99,11 @@ extension ConferenceTimetableViewController: SpreadsheetViewDataSource {
     }
     
     func frozenColumns(in spreadsheetView: SpreadsheetView) -> Int {
-        return dataStore?.frozenColumns() ?? 0
+        return dataStore?.frozenColumns ?? 0
     }
     
     func frozenRows(in spreadsheetView: SpreadsheetView) -> Int {
-        return dataStore?.frozenRows() ?? 0
+        return dataStore?.frozenRows ?? 0
     }
     
 }

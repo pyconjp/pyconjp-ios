@@ -53,4 +53,6 @@ extension UIColor {
     
     static var facebook: UIColor { return #colorLiteral(red: 0.1921568627, green: 0.3137254902, blue: 0.5882352941, alpha: 1) }
     
+    static var favorite: UIColor { return #colorLiteral(red: 1, green: 0.8941176471, blue: 0.3725490196, alpha: 1) }
+    
 }
