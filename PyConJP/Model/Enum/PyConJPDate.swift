@@ -8,13 +8,22 @@
 
 import Foundation
 
-enum PyConJPDate: String {
-    case Tutorials = "2016-09-20"
-    case Confarence1 = "2016-09-21"
-    case Confarence2 = "2016-09-22"
-    case Sprints = "2016-09-23"
+enum PyConJPDate: CustomStringConvertible {
+    case tutorials
+    case confarence1
+    case confarence2
+    case sprints
+    
+    var description: String {
+        switch self {
+        case .tutorials: return "2016-09-20"
+        case .confarence1: return "2016-09-21"
+        case .confarence2: return "2016-09-22"
+        case .sprints: return "2016-09-23"
+        }
+    }
     
     static func confarenceDate() -> [PyConJPDate] {
-        return [Confarence1, Confarence2]
+        return [confarence1, confarence2]
     }
 }

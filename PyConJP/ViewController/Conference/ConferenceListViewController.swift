@@ -28,7 +28,7 @@ class ConferenceListViewController: UIViewController, ErrorAlertProtocol {
     private(set) var viewControllerIndex: Int = 0
     private(set) var pyconJPDate: PyConJPDate?
     
-    fileprivate lazy var conferenceListDataSource: ConferenceListDataSource = ConferenceListDataSource(day: self.pyconJPDate?.rawValue)
+    fileprivate lazy var conferenceListDataSource: ConferenceListDataSource = ConferenceListDataSource(day: self.pyconJPDate?.description)
     
     private let refreshControl = UIRefreshControl()
     

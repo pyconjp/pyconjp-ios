@@ -14,11 +14,6 @@
 		DB05D1981E43FBCB00781BF7 /* PCJConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1031E43FBCB00781BF7 /* PCJConfig.swift */; };
 		DB05D1991E43FBCB00781BF7 /* PCJNotificationConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1041E43FBCB00781BF7 /* PCJNotificationConfig.swift */; };
 		DB05D19A1E43FBCB00781BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB05D1051E43FBCB00781BF7 /* Assets.xcassets */; };
-		DB05D19B1E43FBCB00781BF7 /* StaffListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1081E43FBCB00781BF7 /* StaffListDataSource.swift */; };
-		DB05D19C1E43FBCB00781BF7 /* SpeakersCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D10A1E43FBCB00781BF7 /* SpeakersCollectionViewDataSource.swift */; };
-		DB05D19D1E43FBCB00781BF7 /* BookmarkListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D10D1E43FBCB00781BF7 /* BookmarkListDataSource.swift */; };
-		DB05D19E1E43FBCB00781BF7 /* ConferenceListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D10F1E43FBCB00781BF7 /* ConferenceListDataSource.swift */; };
-		DB05D19F1E43FBCB00781BF7 /* TimelineDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1101E43FBCB00781BF7 /* TimelineDataSource.swift */; };
 		DB05D1A01E43FBCB00781BF7 /* AppDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1131E43FBCB00781BF7 /* AppDelegateExtension.swift */; };
 		DB05D1A11E43FBCB00781BF7 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1141E43FBCB00781BF7 /* ArrayExtension.swift */; };
 		DB05D1A21E43FBCB00781BF7 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1151E43FBCB00781BF7 /* DateExtension.swift */; };
@@ -97,6 +92,20 @@
 		DB10DEA11EDFDF8200DAED31 /* NibInstantitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB10DEA01EDFDF8200DAED31 /* NibInstantitable.swift */; };
 		DB10DEA31EDFDF9900DAED31 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB10DEA21EDFDF9900DAED31 /* StoryboardIdentifiable.swift */; };
 		DB10DEA71EDFE62A00DAED31 /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB10DEA61EDFE62A00DAED31 /* RealmError.swift */; };
+		DB4BC68F1EF5098D00650964 /* SpreadsheetView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4BC68E1EF5098D00650964 /* SpreadsheetView.framework */; };
+		DB4BC6911EF522CD00650964 /* ConferenceTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BC6901EF522CD00650964 /* ConferenceTimetableViewController.swift */; };
+		DB4BC6941EF525CD00650964 /* TimetableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BC6931EF525CD00650964 /* TimetableCell.swift */; };
+		DB4BC6A11EF5916D00650964 /* StaffListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BC6981EF5916D00650964 /* StaffListDataSource.swift */; };
+		DB4BC6A21EF5916D00650964 /* SpeakersCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BC69A1EF5916D00650964 /* SpeakersCollectionViewDataSource.swift */; };
+		DB4BC6A31EF5916D00650964 /* BookmarkListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BC69D1EF5916D00650964 /* BookmarkListDataSource.swift */; };
+		DB4BC6A41EF5916D00650964 /* ConferenceListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BC69F1EF5916D00650964 /* ConferenceListDataSource.swift */; };
+		DB4BC6A51EF5916D00650964 /* TimelineDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BC6A01EF5916D00650964 /* TimelineDataSource.swift */; };
+		DB4BC6A81EF5926600650964 /* ConferenceTimetableDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BC6A71EF5926600650964 /* ConferenceTimetableDataStore.swift */; };
+		DB4BC6AA1EF6705500650964 /* TimetableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB4BC6A91EF6705500650964 /* TimetableCell.xib */; };
+		DB4BC6AC1EF670B600650964 /* TimetableRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BC6AB1EF670B600650964 /* TimetableRoomCell.swift */; };
+		DB4BC6AE1EF6711500650964 /* TimetableRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB4BC6AD1EF6711500650964 /* TimetableRoomCell.xib */; };
+		DB4BC6B01EF671D800650964 /* TimetableTimeAxisCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BC6AF1EF671D800650964 /* TimetableTimeAxisCell.swift */; };
+		DB4BC6B21EF6720700650964 /* TimetableTimeAxisCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB4BC6B11EF6720700650964 /* TimetableTimeAxisCell.xib */; };
 		DB77FD531E06720D00504869 /* WebAPIFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB77FD4A1E06720C00504869 /* WebAPIFramework.framework */; };
 		DB77FD5A1E06720D00504869 /* WebAPIFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77FD591E06720D00504869 /* WebAPIFrameworkTests.swift */; };
 		DB77FD5C1E06720D00504869 /* WebAPIFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = DB77FD4C1E06720C00504869 /* WebAPIFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -184,11 +193,6 @@
 		DB05D1031E43FBCB00781BF7 /* PCJConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJConfig.swift; sourceTree = "<group>"; };
 		DB05D1041E43FBCB00781BF7 /* PCJNotificationConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCJNotificationConfig.swift; sourceTree = "<group>"; };
 		DB05D1051E43FBCB00781BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DB05D1081E43FBCB00781BF7 /* StaffListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffListDataSource.swift; sourceTree = "<group>"; };
-		DB05D10A1E43FBCB00781BF7 /* SpeakersCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersCollectionViewDataSource.swift; sourceTree = "<group>"; };
-		DB05D10D1E43FBCB00781BF7 /* BookmarkListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkListDataSource.swift; sourceTree = "<group>"; };
-		DB05D10F1E43FBCB00781BF7 /* ConferenceListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceListDataSource.swift; sourceTree = "<group>"; };
-		DB05D1101E43FBCB00781BF7 /* TimelineDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineDataSource.swift; sourceTree = "<group>"; };
 		DB05D1131E43FBCB00781BF7 /* AppDelegateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateExtension.swift; sourceTree = "<group>"; };
 		DB05D1141E43FBCB00781BF7 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		DB05D1151E43FBCB00781BF7 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -284,6 +288,20 @@
 		DB10DEA01EDFDF8200DAED31 /* NibInstantitable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibInstantitable.swift; sourceTree = "<group>"; };
 		DB10DEA21EDFDF9900DAED31 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		DB10DEA61EDFE62A00DAED31 /* RealmError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
+		DB4BC68E1EF5098D00650964 /* SpreadsheetView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpreadsheetView.framework; path = Carthage/Build/iOS/SpreadsheetView.framework; sourceTree = "<group>"; };
+		DB4BC6901EF522CD00650964 /* ConferenceTimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceTimetableViewController.swift; sourceTree = "<group>"; };
+		DB4BC6931EF525CD00650964 /* TimetableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableCell.swift; sourceTree = "<group>"; };
+		DB4BC6981EF5916D00650964 /* StaffListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffListDataSource.swift; sourceTree = "<group>"; };
+		DB4BC69A1EF5916D00650964 /* SpeakersCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		DB4BC69D1EF5916D00650964 /* BookmarkListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkListDataSource.swift; sourceTree = "<group>"; };
+		DB4BC69F1EF5916D00650964 /* ConferenceListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceListDataSource.swift; sourceTree = "<group>"; };
+		DB4BC6A01EF5916D00650964 /* TimelineDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineDataSource.swift; sourceTree = "<group>"; };
+		DB4BC6A71EF5926600650964 /* ConferenceTimetableDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceTimetableDataStore.swift; sourceTree = "<group>"; };
+		DB4BC6A91EF6705500650964 /* TimetableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimetableCell.xib; sourceTree = "<group>"; };
+		DB4BC6AB1EF670B600650964 /* TimetableRoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableRoomCell.swift; sourceTree = "<group>"; };
+		DB4BC6AD1EF6711500650964 /* TimetableRoomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimetableRoomCell.xib; sourceTree = "<group>"; };
+		DB4BC6AF1EF671D800650964 /* TimetableTimeAxisCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableTimeAxisCell.swift; sourceTree = "<group>"; };
+		DB4BC6B11EF6720700650964 /* TimetableTimeAxisCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimetableTimeAxisCell.xib; sourceTree = "<group>"; };
 		DB77FD4A1E06720C00504869 /* WebAPIFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebAPIFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB77FD4C1E06720C00504869 /* WebAPIFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebAPIFramework.h; sourceTree = "<group>"; };
 		DB77FD4D1E06720C00504869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -340,10 +358,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBB4AECA1EED91DD0097CF99 /* APIKit.framework in Frameworks */,
+				DBB4AECB1EED91DD0097CF99 /* Result.framework in Frameworks */,
 				DBDA6FB91EEEB75E008FE17B /* Kingfisher.framework in Frameworks */,
 				DB05D0FE1E43FB6200781BF7 /* Realm.framework in Frameworks */,
 				DB05D0FF1E43FB6200781BF7 /* RealmSwift.framework in Frameworks */,
-				DBB4AECB1EED91DD0097CF99 /* Result.framework in Frameworks */,
+				DB4BC68F1EF5098D00650964 /* SpreadsheetView.framework in Frameworks */,
 				DB77FD5F1E06720D00504869 /* WebAPIFramework.framework in Frameworks */,
 				7FFB73401C9162C2006FB375 /* MapKit.framework in Frameworks */,
 			);
@@ -369,6 +388,7 @@
 		BB6F29A77E8682EFE6C9DA97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB4BC68E1EF5098D00650964 /* SpreadsheetView.framework */,
 				DBB4AEC81EED91DD0097CF99 /* APIKit.framework */,
 				DBB4AEC91EED91DD0097CF99 /* Result.framework */,
 				DBDA6FB81EEEB75E008FE17B /* Kingfisher.framework */,
@@ -384,7 +404,7 @@
 			children = (
 				DB05D1011E43FBCB00781BF7 /* Application */,
 				DB05D1051E43FBCB00781BF7 /* Assets.xcassets */,
-				DB05D1061E43FBCB00781BF7 /* DataSource */,
+				DB4BC6951EF5916D00650964 /* DataStore */,
 				DB05D1111E43FBCB00781BF7 /* Delegate */,
 				DB05D1121E43FBCB00781BF7 /* Extension */,
 				DB05D11E1E43FBCB00781BF7 /* Model */,
@@ -406,58 +426,6 @@
 				DB05D1041E43FBCB00781BF7 /* PCJNotificationConfig.swift */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		DB05D1061E43FBCB00781BF7 /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				DB05D1071E43FBCB00781BF7 /* More */,
-				DB05D1091E43FBCB00781BF7 /* TalkDetail */,
-				DB05D10B1E43FBCB00781BF7 /* Timeline */,
-			);
-			path = DataSource;
-			sourceTree = "<group>";
-		};
-		DB05D1071E43FBCB00781BF7 /* More */ = {
-			isa = PBXGroup;
-			children = (
-				DB05D1081E43FBCB00781BF7 /* StaffListDataSource.swift */,
-			);
-			path = More;
-			sourceTree = "<group>";
-		};
-		DB05D1091E43FBCB00781BF7 /* TalkDetail */ = {
-			isa = PBXGroup;
-			children = (
-				DB05D10A1E43FBCB00781BF7 /* SpeakersCollectionViewDataSource.swift */,
-			);
-			path = TalkDetail;
-			sourceTree = "<group>";
-		};
-		DB05D10B1E43FBCB00781BF7 /* Timeline */ = {
-			isa = PBXGroup;
-			children = (
-				DB05D10C1E43FBCB00781BF7 /* Bookmark */,
-				DB05D10E1E43FBCB00781BF7 /* Conference */,
-				DB05D1101E43FBCB00781BF7 /* TimelineDataSource.swift */,
-			);
-			path = Timeline;
-			sourceTree = "<group>";
-		};
-		DB05D10C1E43FBCB00781BF7 /* Bookmark */ = {
-			isa = PBXGroup;
-			children = (
-				DB05D10D1E43FBCB00781BF7 /* BookmarkListDataSource.swift */,
-			);
-			path = Bookmark;
-			sourceTree = "<group>";
-		};
-		DB05D10E1E43FBCB00781BF7 /* Conference */ = {
-			isa = PBXGroup;
-			children = (
-				DB05D10F1E43FBCB00781BF7 /* ConferenceListDataSource.swift */,
-			);
-			path = Conference;
 			sourceTree = "<group>";
 		};
 		DB05D1111E43FBCB00781BF7 /* Delegate */ = {
@@ -617,8 +585,9 @@
 			isa = PBXGroup;
 			children = (
 				DB05D1731E43FBCB00781BF7 /* CustomImageView.swift */,
-				DB05D1741E43FBCB00781BF7 /* UICollectionViewCell */,
 				DB05D1771E43FBCB00781BF7 /* UITableViewCell */,
+				DB05D1741E43FBCB00781BF7 /* UICollectionViewCell */,
+				DB4BC6921EF5257200650964 /* SpreadsheetViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -684,6 +653,7 @@
 				DB05D1881E43FBCB00781BF7 /* ConferenceModelController.swift */,
 				DB05D1891E43FBCB00781BF7 /* ConferencePageViewController.swift */,
 				DB05D18A1E43FBCB00781BF7 /* ConferenceViewController.swift */,
+				DB4BC6901EF522CD00650964 /* ConferenceTimetableViewController.swift */,
 			);
 			path = Conference;
 			sourceTree = "<group>";
@@ -751,6 +721,88 @@
 				DB10DEA21EDFDF9900DAED31 /* StoryboardIdentifiable.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		DB4BC6921EF5257200650964 /* SpreadsheetViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DB4BC6931EF525CD00650964 /* TimetableCell.swift */,
+				DB4BC6A91EF6705500650964 /* TimetableCell.xib */,
+				DB4BC6AB1EF670B600650964 /* TimetableRoomCell.swift */,
+				DB4BC6AD1EF6711500650964 /* TimetableRoomCell.xib */,
+				DB4BC6AF1EF671D800650964 /* TimetableTimeAxisCell.swift */,
+				DB4BC6B11EF6720700650964 /* TimetableTimeAxisCell.xib */,
+			);
+			path = SpreadsheetViewCell;
+			sourceTree = "<group>";
+		};
+		DB4BC6951EF5916D00650964 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				DB4BC6A61EF5925800650964 /* Conference */,
+				DB4BC6961EF5916D00650964 /* DataSource */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		DB4BC6961EF5916D00650964 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				DB4BC6971EF5916D00650964 /* More */,
+				DB4BC6991EF5916D00650964 /* TalkDetail */,
+				DB4BC69B1EF5916D00650964 /* Timeline */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		DB4BC6971EF5916D00650964 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				DB4BC6981EF5916D00650964 /* StaffListDataSource.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		DB4BC6991EF5916D00650964 /* TalkDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DB4BC69A1EF5916D00650964 /* SpeakersCollectionViewDataSource.swift */,
+			);
+			path = TalkDetail;
+			sourceTree = "<group>";
+		};
+		DB4BC69B1EF5916D00650964 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				DB4BC69C1EF5916D00650964 /* Bookmark */,
+				DB4BC69E1EF5916D00650964 /* Conference */,
+				DB4BC6A01EF5916D00650964 /* TimelineDataSource.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		DB4BC69C1EF5916D00650964 /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				DB4BC69D1EF5916D00650964 /* BookmarkListDataSource.swift */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		DB4BC69E1EF5916D00650964 /* Conference */ = {
+			isa = PBXGroup;
+			children = (
+				DB4BC69F1EF5916D00650964 /* ConferenceListDataSource.swift */,
+			);
+			path = Conference;
+			sourceTree = "<group>";
+		};
+		DB4BC6A61EF5925800650964 /* Conference */ = {
+			isa = PBXGroup;
+			children = (
+				DB4BC6A71EF5926600650964 /* ConferenceTimetableDataStore.swift */,
+			);
+			path = Conference;
 			sourceTree = "<group>";
 		};
 		DB77FD4B1E06720C00504869 /* WebAPIFramework */ = {
@@ -1044,6 +1096,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB05D1C31E43FBCB00781BF7 /* Localizable.strings in Resources */,
+				DB4BC6B21EF6720700650964 /* TimetableTimeAxisCell.xib in Resources */,
 				DB05D19A1E43FBCB00781BF7 /* Assets.xcassets in Resources */,
 				DB05D1CC1E43FBCB00781BF7 /* Bookmark.strings in Resources */,
 				DB05D1D01E43FBCB00781BF7 /* Main.strings in Resources */,
@@ -1053,6 +1106,7 @@
 				DB05D1C51E43FBCB00781BF7 /* URLScheme.strings in Resources */,
 				DB05D1CE1E43FBCB00781BF7 /* Events.strings in Resources */,
 				DB05D1CB1E43FBCB00781BF7 /* More.storyboard in Resources */,
+				DB4BC6AE1EF6711500650964 /* TimetableRoomCell.xib in Resources */,
 				DB05D1D71E43FBCB00781BF7 /* StaffTableViewCell.xib in Resources */,
 				DB05D1C61E43FBCB00781BF7 /* Bookmark.storyboard in Resources */,
 				DB05D1C21E43FBCB00781BF7 /* Language.strings in Resources */,
@@ -1065,6 +1119,7 @@
 				DB05D1C81E43FBCB00781BF7 /* Events.storyboard in Resources */,
 				DB05D1D11E43FBCB00781BF7 /* More.strings in Resources */,
 				DB05D1C01E43FBCB00781BF7 /* DummyTalkDetail.json in Resources */,
+				DB4BC6AA1EF6705500650964 /* TimetableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1096,6 +1151,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SpreadsheetView.framework",
 			);
 			name = "Run Script for Carthage";
 			outputPaths = (
@@ -1145,6 +1201,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB7EAAE21EF04DAC00FEF504 /* DummyTalksProtocol.swift in Sources */,
+				DB4BC6A81EF5926600650964 /* ConferenceTimetableDataStore.swift in Sources */,
+				DB4BC6A51EF5916D00650964 /* TimelineDataSource.swift in Sources */,
 				DB05D1E51E43FBCB00781BF7 /* EventsListViewController.swift in Sources */,
 				DBA872301EF1A40E0001F8A3 /* ReceiveLocalNotificationProtocol.swift in Sources */,
 				DB05D1E01E43FBCB00781BF7 /* ConferenceDateViewController.swift in Sources */,
@@ -1164,6 +1222,7 @@
 				DB05D1BC1E43FBCB00781BF7 /* TwitterURLSchemeProtocol.swift in Sources */,
 				DB05D1991E43FBCB00781BF7 /* PCJNotificationConfig.swift in Sources */,
 				DB10DEA31EDFDF9900DAED31 /* StoryboardIdentifiable.swift in Sources */,
+				DB4BC6AC1EF670B600650964 /* TimetableRoomCell.swift in Sources */,
 				DBA8723E1EF2E5320001F8A3 /* LoadFavoriteTalksRequest.swift in Sources */,
 				DBA872371EF2E0E90001F8A3 /* StaffListAPIRequest.swift in Sources */,
 				DB7EAADB1EEEF76A00FEF504 /* UIImageViewExtension.swift in Sources */,
@@ -1172,15 +1231,18 @@
 				DB05D1B41E43FBCB00781BF7 /* TalkDetail.swift in Sources */,
 				DB05D1E31E43FBCB00781BF7 /* ConferencePageViewController.swift in Sources */,
 				DB05D1DB1E43FBCB00781BF7 /* DetailImageViewController.swift in Sources */,
+				DB4BC6A11EF5916D00650964 /* StaffListDataSource.swift in Sources */,
 				DB10DEA71EDFE62A00DAED31 /* RealmError.swift in Sources */,
 				DB05D1A31E43FBCB00781BF7 /* StringExtension.swift in Sources */,
 				DB05D1981E43FBCB00781BF7 /* PCJConfig.swift in Sources */,
 				DB05D1A61E43FBCB00781BF7 /* UIViewExtension.swift in Sources */,
 				DB10DE981EDFDED600DAED31 /* Track.swift in Sources */,
+				DB4BC6A31EF5916D00650964 /* BookmarkListDataSource.swift in Sources */,
 				DB05D1BA1E43FBCB00781BF7 /* RealmLoadTalksProtocol.swift in Sources */,
 				DB05D1BB1E43FBCB00781BF7 /* MailURLSchemeProtocol.swift in Sources */,
-				DB05D19E1E43FBCB00781BF7 /* ConferenceListDataSource.swift in Sources */,
 				DBA8723C1EF2E14B0001F8A3 /* SaveTalksRequest.swift in Sources */,
+				DB4BC6941EF525CD00650964 /* TimetableCell.swift in Sources */,
+				DB4BC6911EF522CD00650964 /* ConferenceTimetableViewController.swift in Sources */,
 				DB05D1B01E43FBCB00781BF7 /* Place.swift in Sources */,
 				DB05D1E91E43FBCB00781BF7 /* MapListViewController.swift in Sources */,
 				DB05D1A51E43FBCB00781BF7 /* UIDeviceExtension.swift in Sources */,
@@ -1192,32 +1254,31 @@
 				DB7EAADD1EEFA86B00FEF504 /* RealmSaveTalksProtocol.swift in Sources */,
 				DB05D1EA1E43FBCB00781BF7 /* MapViewController.swift in Sources */,
 				DB10DE961EDFDEC400DAED31 /* Timetable.swift in Sources */,
-				DB05D19D1E43FBCB00781BF7 /* BookmarkListDataSource.swift in Sources */,
 				DB05D1E21E43FBCB00781BF7 /* ConferenceModelController.swift in Sources */,
-				DB05D19C1E43FBCB00781BF7 /* SpeakersCollectionViewDataSource.swift in Sources */,
 				DB05D1E71E43FBCB00781BF7 /* FloorMapListViewController.swift in Sources */,
 				DB05D1D41E43FBCB00781BF7 /* SpeakerCollectionViewCell.swift in Sources */,
 				DB05D1EB1E43FBCB00781BF7 /* MoreListViewController.swift in Sources */,
 				DB05D1ED1E43FBCB00781BF7 /* PCJWKWebViewController.swift in Sources */,
 				DB05D1D81E43FBCB00781BF7 /* TalkTableViewCell.swift in Sources */,
+				DB4BC6A41EF5916D00650964 /* ConferenceListDataSource.swift in Sources */,
 				DB05D1D61E43FBCB00781BF7 /* StaffTableViewCell.swift in Sources */,
 				DBA872321EF1A4990001F8A3 /* NotificationType.swift in Sources */,
 				DBA8722F1EF1A40E0001F8A3 /* LocalNotificationProtocol.swift in Sources */,
 				DB05D1DA1E43FBCB00781BF7 /* BaseTabBarController.swift in Sources */,
 				DB05D1AA1E43FBCB00781BF7 /* Language.swift in Sources */,
 				DB05D1DF1E43FBCB00781BF7 /* ConferenceBaseViewController.swift in Sources */,
+				DB4BC6A21EF5916D00650964 /* SpeakersCollectionViewDataSource.swift in Sources */,
 				DB05D1E61E43FBCB00781BF7 /* AcknowledgmentsListViewController.swift in Sources */,
 				DB05D1DC1E43FBCB00781BF7 /* TalkDetailViewController.swift in Sources */,
 				DB05D1EC1E43FBCB00781BF7 /* StaffListViewController.swift in Sources */,
 				DB05D1A21E43FBCB00781BF7 /* DateExtension.swift in Sources */,
+				DB4BC6B01EF671D800650964 /* TimetableTimeAxisCell.swift in Sources */,
 				DB05D1A91E43FBCB00781BF7 /* TalkObject.swift in Sources */,
 				DB05D1AF1E43FBCB00781BF7 /* Level.swift in Sources */,
 				DB05D1A11E43FBCB00781BF7 /* ArrayExtension.swift in Sources */,
 				DB05D1D31E43FBCB00781BF7 /* CustomImageView.swift in Sources */,
-				DB05D19B1E43FBCB00781BF7 /* StaffListDataSource.swift in Sources */,
 				DB05D1B61E43FBCB00781BF7 /* Timeline.swift in Sources */,
 				DB05D1AE1E43FBCB00781BF7 /* Category.swift in Sources */,
-				DB05D19F1E43FBCB00781BF7 /* TimelineDataSource.swift in Sources */,
 				DB05D1B11E43FBCB00781BF7 /* Speaker.swift in Sources */,
 				DB05D1B21E43FBCB00781BF7 /* Staff.swift in Sources */,
 			);

@@ -8,24 +8,24 @@
 
 import UIKit
 
-class ConferencePageViewController: UIPageViewController, ConferencePageViewProtocol, ErrorAlertProtocol {
+class ConferencePageViewController: UIPageViewController, ErrorAlertProtocol {
     
     private var conferenceModelViewProtocol: ConferenceModelViewProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let startingViewController = self.conferenceModelController.viewController(index: 0, storyboard: self.storyboard!)!
+        guard let startingViewController = conferenceModelController.viewController(index: 0) else { return }
         let viewControllers = [startingViewController]
         self.setViewControllers(viewControllers, direction: .forward, animated: false)
         
-        self.dataSource = self.conferenceModelController
+//        self.dataSource = self.conferenceModelController
         
     }
     
     private var _conferenceModelController: ConferenceModelController?
     
-    private var conferenceModelController: ConferenceModelController {
+    fileprivate var conferenceModelController: ConferenceModelController {
         if _conferenceModelController == nil {
             _conferenceModelController = ConferenceModelController()
         }
@@ -37,31 +37,33 @@ class ConferencePageViewController: UIPageViewController, ConferencePageViewProt
     }
     
     override func didMove(toParentViewController parent: UIViewController?) {
-        let conferenceBaseViewController = parent as! ConferenceBaseViewController
-        self.delegate = conferenceBaseViewController
+        guard let conferenceBaseViewController = parent as? ConferenceBaseViewController else { return }
+//        self.delegate = conferenceBaseViewController
         conferenceBaseViewController.conferencePageViewProtocol = self
         
-        self.view.subviews.forEach {
-            if let scrollView = $0 as? UIScrollView {
-                scrollView.delegate = conferenceBaseViewController
-            }
-        }
+//        self.view.subviews.forEach {
+//            if let scrollView = $0 as? UIScrollView {
+//                scrollView.delegate = conferenceBaseViewController
+//            }
+//        }
     }
     
-    // MARK: - ConferencePageViewProtocol
+}
+
+extension ConferencePageViewController: ConferencePageViewProtocol {
     
     func fowardPage(index: Int) {
-        self.movePage(index: index, direction: .forward)
+        movePage(index: index, direction: .forward)
     }
     
     func reversePage(index: Int) {
-        self.movePage(index: index, direction: .reverse)
+        movePage(index: index, direction: .reverse)
     }
     
     private func movePage(index: Int, direction: UIPageViewControllerNavigationDirection) {
-        let viewController = conferenceModelController.viewController(index: index, storyboard: self.storyboard!)!
+        guard let viewController = conferenceModelController.viewController(index: index) else { return }
         let viewControllers = [viewController]
-        self.setViewControllers(viewControllers, direction: direction, animated: true)
+        setViewControllers(viewControllers, direction: direction, animated: true)
     }
     
 }

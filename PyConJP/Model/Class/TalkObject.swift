@@ -120,6 +120,10 @@ final class TalkObject: RealmSwift.Object {
         return startTime.timeStringByTrimmingSecond() + " ~ " + endTime.timeStringByTrimmingSecond()
     }
     
+    var minutesDuration: Int {
+        return Int(endDate.timeIntervalSince(startDate) / 60)
+    }
+    
     var language: Language? {
         return Language(languageString)
     }
