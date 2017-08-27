@@ -16,10 +16,10 @@ enum PyConJPDate: CustomStringConvertible {
     
     var description: String {
         switch self {
-        case .tutorials: return "2016-09-20"
-        case .confarence1: return "2016-09-21"
-        case .confarence2: return "2016-09-22"
-        case .sprints: return "2016-09-23"
+        case .tutorials: return "2017-09-07"
+        case .confarence1: return "2017-09-08"
+        case .confarence2: return "2017-09-09"
+        case .sprints: return "2017-09-10"
         }
     }
     

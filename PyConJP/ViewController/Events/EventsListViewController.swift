@@ -29,17 +29,38 @@ class EventsListViewController: UITableViewController {
         self.present(safariViewController, animated: true, completion: nil)
     }
     
-    private enum SectionType: Int {
+    private enum SectionType: Int, CustomStringConvertible {
         case tutorialsDay
         case conferenseDay
         case sprintsDay
         
+        var description: String {
+            switch self {
+            case .tutorialsDay:
+                return ""
+            case .conferenseDay:
+                return ""
+            case .sprintsDay:
+                return ""
+            }
+        }
+        
+//        var rows: [RowType] {
+//            switch self {
+//            case .tutorialsDay:
+//                return [.tutorial]
+//            case .conferenseDay:
+//                return [.keynote, .invitedLecture, .posters, .lightningTalks, .youthCoderWorkshop, .beginnerSession, .committeeMeeting, .communityBooth, .jobFair, .productFair, .openSpace]
+//            case .sprintsDay:
+//                return [.sprints]
+//            }
+//        }
         var rows: [RowType] {
             switch self {
             case .tutorialsDay:
                 return [.tutorial]
             case .conferenseDay:
-                return [.keynote, .invitedLecture, .posters, .lightningTalks, .youthCoderWorkshop, .beginnerSession, .committeeMeeting, .communityBooth, .jobFair, .productFair, .openSpace]
+                return [.keynote, .posters, .lightningTalks, .youthCoderWorkshop, .committeeMeeting, .communityBooth, .jobFair, .openSpace]
             case .sprintsDay:
                 return [.sprints]
             }
@@ -47,38 +68,81 @@ class EventsListViewController: UITableViewController {
         
     }
     
-    private enum RowType {
+    private enum RowType: CustomStringConvertible {
         case tutorial
         
         case keynote
-        case invitedLecture
+//        case invitedLecture
         case posters
         case lightningTalks
         case youthCoderWorkshop
-        case beginnerSession
+//        case beginnerSession
         case committeeMeeting
         case communityBooth
         case jobFair
-        case productFair
+//        case productFair
         case openSpace
+        case mediaMeeting
         
         case sprints
         
+        var description: String {
+            switch self {
+            case .tutorial:
+                return WebConfig.baseURL + "events/tutorial/"
+            case .keynote:
+                return WebConfig.baseURL + "talks/keynote/"
+            case .posters:
+                return WebConfig.baseURL + "schedule/posters/list/"
+            case .lightningTalks:
+                return WebConfig.baseURL + "events/lightning-talks/"
+            case .youthCoderWorkshop:
+                return WebConfig.baseURL + "events/youth-ws/"
+            case .committeeMeeting:
+                return WebConfig.baseURL + "events/committee-meeting/"
+            case .communityBooth:
+                return WebConfig.baseURL + "events/community/"
+            case .jobFair:
+                return WebConfig.baseURL + "events/jobsfair/"
+            case .openSpace:
+                return WebConfig.baseURL + "events/open-space/"
+            case .mediaMeeting:
+                return WebConfig.baseURL + "events/media-meeting/"
+            case .sprints:
+                return WebConfig.baseURL + "events/sprint/"
+            }
+        }
+        
         var url: String {
             switch self {
-            case .tutorial: return WebConfig.baseURL + "events/tutorial/"
-            case .keynote: return WebConfig.baseURL + "keynote/"
-            case .invitedLecture: return WebConfig.baseURL + "talks/invited-speaker/"
-            case .posters: return WebConfig.baseURL + "schedule/posters/list/"
-            case .lightningTalks: return WebConfig.baseURL + "events/lightning-talks/"
-            case .youthCoderWorkshop: return WebConfig.baseURL + "events/youth-ws/"
-            case .beginnerSession: return WebConfig.baseURL + "events/beginners/"
-            case .committeeMeeting: return WebConfig.baseURL + "events/committee-meeting/"
-            case .communityBooth: return WebConfig.baseURL + "events/community-booth/"
-            case .jobFair: return WebConfig.baseURL + "events/jobsfair/"
-            case .productFair: return WebConfig.baseURL + "productfair/"
-            case .openSpace: return WebConfig.baseURL + "events/open-space/"
-            case .sprints: return WebConfig.baseURL + "events/sprint/"
+            case .tutorial:
+                return WebConfig.baseURL + "events/tutorial/"
+            case .keynote:
+                return WebConfig.baseURL + "talks/keynote/"
+//            case .invitedLecture: 
+//                return WebConfig.baseURL + "talks/invited-speaker/"
+            case .posters:
+                return WebConfig.baseURL + "schedule/posters/list/"
+            case .lightningTalks: 
+                return WebConfig.baseURL + "events/lightning-talks/"
+            case .youthCoderWorkshop:
+                return WebConfig.baseURL + "events/youth-ws/"
+//            case .beginnerSession: 
+//                return WebConfig.baseURL + "events/beginners/"
+            case .committeeMeeting:
+                return WebConfig.baseURL + "events/committee-meeting/"
+            case .communityBooth:
+                return WebConfig.baseURL + "events/community/"
+            case .jobFair:
+                return WebConfig.baseURL + "events/jobsfair/"
+//            case .productFair: 
+//                return WebConfig.baseURL + "productfair/"
+            case .openSpace:
+                return WebConfig.baseURL + "events/open-space/"
+            case .mediaMeeting:
+                return WebConfig.baseURL + "events/media-meeting/"
+            case .sprints:
+                return WebConfig.baseURL + "events/sprint/"
             }
         }
         
