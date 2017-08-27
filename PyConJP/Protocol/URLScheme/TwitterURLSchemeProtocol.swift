@@ -23,13 +23,13 @@ extension TwitterURLSchemeProtocol {
     }
     
     private func openTwitterAppWithAlert(targetName: String, url: URL, from viewController: UIViewController) {
-        let alertController = UIAlertController(title: NSLocalizedString("TwitterAlertTitle", tableName: "URLScheme", comment: ""),
-                                                message: String(format: NSLocalizedString("TwitterAlertMessage", tableName: "URLScheme", comment: ""), arguments: [targetName]),
+        let alertController = UIAlertController(title: NSLocalizedString("twitterAlertTitle", tableName: "URLScheme", comment: ""),
+                                                message: String(format: NSLocalizedString("twitterAlertMessage", tableName: "URLScheme", comment: ""), arguments: [targetName]),
                                                 preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: NSLocalizedString("Open", comment: ""), style: .default, handler: { _ in
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("open", comment: ""), style: .default, handler: { _ in
             UIApplication.shared.openURL(url)
         }))
-        alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil))
         viewController.present(alertController, animated: true, completion: nil)
     }
     

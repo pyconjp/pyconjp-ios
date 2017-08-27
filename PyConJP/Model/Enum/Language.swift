@@ -24,9 +24,9 @@ enum Language: CustomStringConvertible {
     var localized: String {
         switch self {
         case .en:
-            return NSLocalizedString("English", tableName: "Language", comment: "")
+            return NSLocalizedString("english", tableName: "Language", comment: "")
         case .ja:
-            return NSLocalizedString("Japanese", tableName: "Language", comment: "")
+            return NSLocalizedString("japanese", tableName: "Language", comment: "")
             
         }
     }
