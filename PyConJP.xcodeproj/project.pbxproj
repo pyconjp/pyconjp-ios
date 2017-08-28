@@ -51,12 +51,6 @@
 		DB05D1C91E43FBCB00781BF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB05D1581E43FBCB00781BF7 /* LaunchScreen.storyboard */; };
 		DB05D1CA1E43FBCB00781BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB05D15A1E43FBCB00781BF7 /* Main.storyboard */; };
 		DB05D1CB1E43FBCB00781BF7 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB05D15C1E43FBCB00781BF7 /* More.storyboard */; };
-		DB05D1CC1E43FBCB00781BF7 /* Bookmark.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB05D15E1E43FBCB00781BF7 /* Bookmark.strings */; };
-		DB05D1CD1E43FBCB00781BF7 /* Conference.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB05D1601E43FBCB00781BF7 /* Conference.strings */; };
-		DB05D1CE1E43FBCB00781BF7 /* Events.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB05D1621E43FBCB00781BF7 /* Events.strings */; };
-		DB05D1CF1E43FBCB00781BF7 /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB05D1641E43FBCB00781BF7 /* LaunchScreen.strings */; };
-		DB05D1D01E43FBCB00781BF7 /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB05D1661E43FBCB00781BF7 /* Main.strings */; };
-		DB05D1D11E43FBCB00781BF7 /* More.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB05D1681E43FBCB00781BF7 /* More.strings */; };
 		DB05D1D31E43FBCB00781BF7 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1731E43FBCB00781BF7 /* CustomImageView.swift */; };
 		DB05D1D41E43FBCB00781BF7 /* SpeakerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1751E43FBCB00781BF7 /* SpeakerCollectionViewCell.swift */; };
 		DB05D1D51E43FBCB00781BF7 /* SpeakerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB05D1761E43FBCB00781BF7 /* SpeakerCollectionViewCell.xib */; };
@@ -239,18 +233,6 @@
 		DB05D1591E43FBCB00781BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB05D15B1E43FBCB00781BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB05D15D1E43FBCB00781BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/More.storyboard; sourceTree = "<group>"; };
-		DB05D15F1E43FBCB00781BF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Bookmark.strings; sourceTree = "<group>"; };
-		DB05D1611E43FBCB00781BF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Conference.strings; sourceTree = "<group>"; };
-		DB05D1631E43FBCB00781BF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Events.strings; sourceTree = "<group>"; };
-		DB05D1651E43FBCB00781BF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		DB05D1671E43FBCB00781BF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		DB05D1691E43FBCB00781BF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/More.strings; sourceTree = "<group>"; };
-		DB05D16A1E43FBCB00781BF7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Bookmark.strings; sourceTree = "<group>"; };
-		DB05D16B1E43FBCB00781BF7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Conference.strings; sourceTree = "<group>"; };
-		DB05D16C1E43FBCB00781BF7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Events.strings; sourceTree = "<group>"; };
-		DB05D16D1E43FBCB00781BF7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		DB05D16E1E43FBCB00781BF7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
-		DB05D16F1E43FBCB00781BF7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/More.strings; sourceTree = "<group>"; };
 		DB05D1711E43FBCB00781BF7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB05D1731E43FBCB00781BF7 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		DB05D1751E43FBCB00781BF7 /* SpeakerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -306,6 +288,18 @@
 		DB51C21A1F5322D20016C952 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/EventList.strings; sourceTree = "<group>"; };
 		DB51C21C1F5322D30016C952 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/EventList.strings; sourceTree = "<group>"; };
 		DB51C21D1F5322D40016C952 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/EventList.strings; sourceTree = "<group>"; };
+		DB51C22D1F53B9700016C952 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Bookmark.strings; sourceTree = "<group>"; };
+		DB51C22E1F53B9730016C952 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Bookmark.strings; sourceTree = "<group>"; };
+		DB51C22F1F53B9790016C952 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Conference.strings; sourceTree = "<group>"; };
+		DB51C2301F53B97B0016C952 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Conference.strings; sourceTree = "<group>"; };
+		DB51C2311F53B9800016C952 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Events.strings; sourceTree = "<group>"; };
+		DB51C2321F53B9810016C952 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Events.strings; sourceTree = "<group>"; };
+		DB51C2331F53B9850016C952 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		DB51C2341F53B9870016C952 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		DB51C2351F53B98B0016C952 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		DB51C2361F53B98D0016C952 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		DB51C2371F53B9910016C952 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/More.strings; sourceTree = "<group>"; };
+		DB51C2381F53B9950016C952 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/More.strings; sourceTree = "<group>"; };
 		DB77FD4A1E06720C00504869 /* WebAPIFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebAPIFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB77FD4C1E06720C00504869 /* WebAPIFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebAPIFramework.h; sourceTree = "<group>"; };
 		DB77FD4D1E06720C00504869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -568,12 +562,6 @@
 				DB05D1581E43FBCB00781BF7 /* LaunchScreen.storyboard */,
 				DB05D15A1E43FBCB00781BF7 /* Main.storyboard */,
 				DB05D15C1E43FBCB00781BF7 /* More.storyboard */,
-				DB05D15E1E43FBCB00781BF7 /* Bookmark.strings */,
-				DB05D1601E43FBCB00781BF7 /* Conference.strings */,
-				DB05D1621E43FBCB00781BF7 /* Events.strings */,
-				DB05D1641E43FBCB00781BF7 /* LaunchScreen.strings */,
-				DB05D1661E43FBCB00781BF7 /* Main.strings */,
-				DB05D1681E43FBCB00781BF7 /* More.strings */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -1104,13 +1092,10 @@
 				DB51C2191F5322D20016C952 /* EventList.strings in Resources */,
 				DB4BC6B21EF6720700650964 /* TimetableTimeAxisCell.xib in Resources */,
 				DB05D19A1E43FBCB00781BF7 /* Assets.xcassets in Resources */,
-				DB05D1CC1E43FBCB00781BF7 /* Bookmark.strings in Resources */,
-				DB05D1D01E43FBCB00781BF7 /* Main.strings in Resources */,
 				DB05D1C91E43FBCB00781BF7 /* LaunchScreen.storyboard in Resources */,
 				DB05D1D91E43FBCB00781BF7 /* TalkTableViewCell.xib in Resources */,
 				DB05D1C71E43FBCB00781BF7 /* Conference.storyboard in Resources */,
 				DB05D1C51E43FBCB00781BF7 /* URLScheme.strings in Resources */,
-				DB05D1CE1E43FBCB00781BF7 /* Events.strings in Resources */,
 				DB05D1CB1E43FBCB00781BF7 /* More.storyboard in Resources */,
 				DB4BC6AE1EF6711500650964 /* TimetableRoomCell.xib in Resources */,
 				DB05D1D71E43FBCB00781BF7 /* StaffTableViewCell.xib in Resources */,
@@ -1119,11 +1104,8 @@
 				DB05D1C11E43FBCB00781BF7 /* DummyTalks.json in Resources */,
 				DB05D1CA1E43FBCB00781BF7 /* Main.storyboard in Resources */,
 				DB05D1D51E43FBCB00781BF7 /* SpeakerCollectionViewCell.xib in Resources */,
-				DB05D1CF1E43FBCB00781BF7 /* LaunchScreen.strings in Resources */,
-				DB05D1CD1E43FBCB00781BF7 /* Conference.strings in Resources */,
 				DB05D1C41E43FBCB00781BF7 /* Map.strings in Resources */,
 				DB05D1C81E43FBCB00781BF7 /* Events.storyboard in Resources */,
-				DB05D1D11E43FBCB00781BF7 /* More.strings in Resources */,
 				DB05D1C01E43FBCB00781BF7 /* DummyTalkDetail.json in Resources */,
 				DB4BC6AA1EF6705500650964 /* TimetableCell.xib in Resources */,
 			);
@@ -1381,6 +1363,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DB05D1531E43FBCB00781BF7 /* Base */,
+				DB51C22D1F53B9700016C952 /* en */,
+				DB51C22E1F53B9730016C952 /* ja */,
 			);
 			name = Bookmark.storyboard;
 			sourceTree = "<group>";
@@ -1389,6 +1373,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DB05D1551E43FBCB00781BF7 /* Base */,
+				DB51C22F1F53B9790016C952 /* en */,
+				DB51C2301F53B97B0016C952 /* ja */,
 			);
 			name = Conference.storyboard;
 			sourceTree = "<group>";
@@ -1397,6 +1383,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DB05D1571E43FBCB00781BF7 /* Base */,
+				DB51C2311F53B9800016C952 /* en */,
+				DB51C2321F53B9810016C952 /* ja */,
 			);
 			name = Events.storyboard;
 			sourceTree = "<group>";
@@ -1405,6 +1393,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DB05D1591E43FBCB00781BF7 /* Base */,
+				DB51C2331F53B9850016C952 /* en */,
+				DB51C2341F53B9870016C952 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1413,6 +1403,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DB05D15B1E43FBCB00781BF7 /* Base */,
+				DB51C2351F53B98B0016C952 /* en */,
+				DB51C2361F53B98D0016C952 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1421,62 +1413,10 @@
 			isa = PBXVariantGroup;
 			children = (
 				DB05D15D1E43FBCB00781BF7 /* Base */,
+				DB51C2371F53B9910016C952 /* en */,
+				DB51C2381F53B9950016C952 /* ja */,
 			);
 			name = More.storyboard;
-			sourceTree = "<group>";
-		};
-		DB05D15E1E43FBCB00781BF7 /* Bookmark.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB05D15F1E43FBCB00781BF7 /* en */,
-				DB05D16A1E43FBCB00781BF7 /* ja */,
-			);
-			name = Bookmark.strings;
-			sourceTree = "<group>";
-		};
-		DB05D1601E43FBCB00781BF7 /* Conference.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB05D1611E43FBCB00781BF7 /* en */,
-				DB05D16B1E43FBCB00781BF7 /* ja */,
-			);
-			name = Conference.strings;
-			sourceTree = "<group>";
-		};
-		DB05D1621E43FBCB00781BF7 /* Events.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB05D1631E43FBCB00781BF7 /* en */,
-				DB05D16C1E43FBCB00781BF7 /* ja */,
-			);
-			name = Events.strings;
-			sourceTree = "<group>";
-		};
-		DB05D1641E43FBCB00781BF7 /* LaunchScreen.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB05D1651E43FBCB00781BF7 /* en */,
-				DB05D16D1E43FBCB00781BF7 /* ja */,
-			);
-			name = LaunchScreen.strings;
-			sourceTree = "<group>";
-		};
-		DB05D1661E43FBCB00781BF7 /* Main.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB05D1671E43FBCB00781BF7 /* en */,
-				DB05D16E1E43FBCB00781BF7 /* ja */,
-			);
-			name = Main.strings;
-			sourceTree = "<group>";
-		};
-		DB05D1681E43FBCB00781BF7 /* More.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB05D1691E43FBCB00781BF7 /* en */,
-				DB05D16F1E43FBCB00781BF7 /* ja */,
-			);
-			name = More.strings;
 			sourceTree = "<group>";
 		};
 		DB51C21B1F5322D20016C952 /* EventList.strings */ = {
