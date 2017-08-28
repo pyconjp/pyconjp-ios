@@ -101,6 +101,7 @@
 		DB4BC6B01EF671D800650964 /* TimetableTimeAxisCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BC6AF1EF671D800650964 /* TimetableTimeAxisCell.swift */; };
 		DB4BC6B21EF6720700650964 /* TimetableTimeAxisCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB4BC6B11EF6720700650964 /* TimetableTimeAxisCell.xib */; };
 		DB51C2191F5322D20016C952 /* EventList.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB51C21B1F5322D20016C952 /* EventList.strings */; };
+		DB51C23B1F53FC040016C952 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB51C23A1F53FC040016C952 /* Settings.bundle */; };
 		DB77FD531E06720D00504869 /* WebAPIFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB77FD4A1E06720C00504869 /* WebAPIFramework.framework */; };
 		DB77FD5A1E06720D00504869 /* WebAPIFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77FD591E06720D00504869 /* WebAPIFrameworkTests.swift */; };
 		DB77FD5C1E06720D00504869 /* WebAPIFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = DB77FD4C1E06720C00504869 /* WebAPIFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -300,6 +301,7 @@
 		DB51C2361F53B98D0016C952 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		DB51C2371F53B9910016C952 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/More.strings; sourceTree = "<group>"; };
 		DB51C2381F53B9950016C952 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/More.strings; sourceTree = "<group>"; };
+		DB51C23A1F53FC040016C952 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		DB77FD4A1E06720C00504869 /* WebAPIFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebAPIFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB77FD4C1E06720C00504869 /* WebAPIFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebAPIFramework.h; sourceTree = "<group>"; };
 		DB77FD4D1E06720C00504869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -537,6 +539,7 @@
 				DB05D13E1E43FBCB00781BF7 /* DummyTalkDetail.json */,
 				DB05D13F1E43FBCB00781BF7 /* DummyTalks.json */,
 				DB05D1401E43FBCB00781BF7 /* Localizable */,
+				DB51C23A1F53FC040016C952 /* Settings.bundle */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -960,6 +963,7 @@
 				DB533BD01D6F05690056C09A /* Embed Frameworks */,
 				DBEE75F11D27A53E008A9D47 /* Run Script for SwiftLint */,
 				DB533BD11D6F058D0056C09A /* Run Script for Carthage */,
+				DB51C2391F53FB520016C952 /* Run Script for LicensePlist */,
 			);
 			buildRules = (
 			);
@@ -1101,6 +1105,7 @@
 				DB05D1D71E43FBCB00781BF7 /* StaffTableViewCell.xib in Resources */,
 				DB05D1C61E43FBCB00781BF7 /* Bookmark.storyboard in Resources */,
 				DB05D1C21E43FBCB00781BF7 /* Language.strings in Resources */,
+				DB51C23B1F53FC040016C952 /* Settings.bundle in Resources */,
 				DB05D1C11E43FBCB00781BF7 /* DummyTalks.json in Resources */,
 				DB05D1CA1E43FBCB00781BF7 /* Main.storyboard in Resources */,
 				DB05D1D51E43FBCB00781BF7 /* SpeakerCollectionViewCell.xib in Resources */,
@@ -1128,6 +1133,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		DB51C2391F53FB520016C952 /* Run Script for LicensePlist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script for LicensePlist";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\ncd $SRCROOT\n/usr/local/bin/license-plist --output-path $PRODUCT_NAME/Resource/Settings.bundle\nfi";
+		};
 		DB533BD11D6F058D0056C09A /* Run Script for Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
