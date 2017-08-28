@@ -172,7 +172,7 @@ class TalkDetailViewController: UIViewController, TwitterURLSchemeProtocol, Erro
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: IndexPath) {
-        guard let userName = speakersCollectionViewDataSource.speakers[(indexPath as NSIndexPath).row].twitterName else { return }
+        guard let userName = speakersCollectionViewDataSource.speakers[indexPath.row].twitterName else { return }
         openTwitter(userName: userName, from: self)
     }
 }

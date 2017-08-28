@@ -70,7 +70,6 @@
 		DB05D1E31E43FBCB00781BF7 /* ConferencePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1891E43FBCB00781BF7 /* ConferencePageViewController.swift */; };
 		DB05D1E41E43FBCB00781BF7 /* ConferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D18A1E43FBCB00781BF7 /* ConferenceViewController.swift */; };
 		DB05D1E51E43FBCB00781BF7 /* EventsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D18C1E43FBCB00781BF7 /* EventsListViewController.swift */; };
-		DB05D1E61E43FBCB00781BF7 /* AcknowledgmentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D18E1E43FBCB00781BF7 /* AcknowledgmentsListViewController.swift */; };
 		DB05D1E71E43FBCB00781BF7 /* FloorMapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D18F1E43FBCB00781BF7 /* FloorMapListViewController.swift */; };
 		DB05D1E81E43FBCB00781BF7 /* FloorMapZoomableImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1901E43FBCB00781BF7 /* FloorMapZoomableImageViewController.swift */; };
 		DB05D1E91E43FBCB00781BF7 /* MapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05D1911E43FBCB00781BF7 /* MapListViewController.swift */; };
@@ -254,7 +253,6 @@
 		DB05D1891E43FBCB00781BF7 /* ConferencePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferencePageViewController.swift; sourceTree = "<group>"; };
 		DB05D18A1E43FBCB00781BF7 /* ConferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceViewController.swift; sourceTree = "<group>"; };
 		DB05D18C1E43FBCB00781BF7 /* EventsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsListViewController.swift; sourceTree = "<group>"; };
-		DB05D18E1E43FBCB00781BF7 /* AcknowledgmentsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowledgmentsListViewController.swift; sourceTree = "<group>"; };
 		DB05D18F1E43FBCB00781BF7 /* FloorMapListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapListViewController.swift; sourceTree = "<group>"; };
 		DB05D1901E43FBCB00781BF7 /* FloorMapZoomableImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapZoomableImageViewController.swift; sourceTree = "<group>"; };
 		DB05D1911E43FBCB00781BF7 /* MapListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapListViewController.swift; sourceTree = "<group>"; };
@@ -665,7 +663,6 @@
 		DB05D18D1E43FBCB00781BF7 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				DB05D18E1E43FBCB00781BF7 /* AcknowledgmentsListViewController.swift */,
 				DB05D18F1E43FBCB00781BF7 /* FloorMapListViewController.swift */,
 				DB05D1901E43FBCB00781BF7 /* FloorMapZoomableImageViewController.swift */,
 				DB05D1911E43FBCB00781BF7 /* MapListViewController.swift */,
@@ -1275,7 +1272,6 @@
 				DB05D1AA1E43FBCB00781BF7 /* Language.swift in Sources */,
 				DB05D1DF1E43FBCB00781BF7 /* ConferenceBaseViewController.swift in Sources */,
 				DB4BC6A21EF5916D00650964 /* SpeakersCollectionViewDataSource.swift in Sources */,
-				DB05D1E61E43FBCB00781BF7 /* AcknowledgmentsListViewController.swift in Sources */,
 				DB05D1DC1E43FBCB00781BF7 /* TalkDetailViewController.swift in Sources */,
 				DB05D1EC1E43FBCB00781BF7 /* StaffListViewController.swift in Sources */,
 				DB05D1A21E43FBCB00781BF7 /* DateExtension.swift in Sources */,

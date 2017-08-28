@@ -12,7 +12,7 @@ import WebAPIFramework
 
 class EventsListViewController: UITableViewController {
 
-    private let sections: [Section] = [.tutorialsDay, .conferenseDay, .sprintsDay]
+    private let sections: [Section] = Section.sections
     
     // MARK: - Table View Controller DataSource
     
@@ -42,10 +42,12 @@ class EventsListViewController: UITableViewController {
         self.present(safariViewController, animated: true, completion: nil)
     }
     
-     enum Section {
+     private enum Section {
         case tutorialsDay
         case conferenseDay
         case sprintsDay
+        
+        static let sections: [Section] = [.tutorialsDay, .conferenseDay, .sprintsDay]
         
         var headerTitle: String {
             switch self {
@@ -71,7 +73,7 @@ class EventsListViewController: UITableViewController {
         
     }
     
-    enum Row {
+    private enum Row {
         case tutorials
         
         case keynote

@@ -25,7 +25,7 @@ class MapListViewController: UITableViewController {
     // MARK: - Table View Controller Delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch TableViewCell(rawValue: (indexPath as NSIndexPath).row) ?? .access {
+        switch TableViewCell(rawValue: indexPath.row) ?? .access {
         case .access:
             let mapViewController = MapViewController.build(venue: MapViewController.Venue.waseda)
             self.navigationController?.pushViewController(mapViewController, animated: true)

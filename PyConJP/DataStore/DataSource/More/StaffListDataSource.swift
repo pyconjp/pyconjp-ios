@@ -62,9 +62,9 @@ extension StaffListDataSource: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? StaffTableViewCell else {
             fatalError("Could not create StaffTableViewCell")
         }
-        cell.fill(staff: teams[(indexPath as NSIndexPath).section].staffs[(indexPath as NSIndexPath).row],
-                  onFacebookButton: facebookAction(teams[(indexPath as NSIndexPath).section].staffs[(indexPath as NSIndexPath).row].facebook),
-                  onTwitterButton: twitterAction(teams[(indexPath as NSIndexPath).section].staffs[(indexPath as NSIndexPath).row].twitter))
+        cell.fill(staff: teams[indexPath.section].staffs[indexPath.row],
+                  onFacebookButton: facebookAction(teams[indexPath.section].staffs[indexPath.row].facebook),
+                  onTwitterButton: twitterAction(teams[indexPath.section].staffs[indexPath.row].twitter))
         return cell
     }
 }
