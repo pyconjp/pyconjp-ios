@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConferenceDateViewController: UIViewController, ConferenceDateViewProtocol {
+class ConferenceDateViewController: UIViewController, StoryboardIdentifiable, ConferenceDateViewProtocol {
     
     @IBOutlet weak var activeBar: UIView!
     @IBOutlet weak var day1Button: UIButton!
@@ -18,9 +18,9 @@ class ConferenceDateViewController: UIViewController, ConferenceDateViewProtocol
     
     private var conferencePageViewProtocol: ConferencePageViewProtocol?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    static func build() -> ConferenceDateViewController {
+        let conferenceDateViewController: ConferenceDateViewController = UIStoryboard(storyboard: .conference).instantiateViewController()
+        return conferenceDateViewController
     }
     
     override func viewDidAppear(_ animated: Bool) {

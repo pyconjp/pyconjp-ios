@@ -36,7 +36,7 @@ class ConferenceListViewController: UIViewController, ErrorAlertProtocol {
         NotificationCenter.default.removeObserver(self)
     }
     
-    class func build(at index: Int, storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ConferenceListViewController {
+    static func build(at index: Int, storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ConferenceListViewController {
         let conferenceListViewController = storyboard.instantiateViewController(withIdentifier: "ConferenceListViewController") as! ConferenceListViewController
         conferenceListViewController.viewControllerIndex = index
         conferenceListViewController.pyconJPDate = pyconJPDate

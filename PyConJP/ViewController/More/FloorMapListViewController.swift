@@ -8,12 +8,13 @@
 
 import UIKit
 
-class FloorMapListViewController: UITableViewController {
+class FloorMapListViewController: UITableViewController, StoryboardIdentifiable {
     
     private let sections: [Section] = Section.sections
     
-    class func build() -> FloorMapListViewController {
-        return UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "FloorMapListViewController") as! FloorMapListViewController
+    static func build() -> FloorMapListViewController {
+        let floorMapListViewController: FloorMapListViewController = UIStoryboard(storyboard: .more).instantiateViewController()
+        return floorMapListViewController
     }
     
     // MARK: - Table View Controller Delegate

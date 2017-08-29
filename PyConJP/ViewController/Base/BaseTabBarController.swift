@@ -18,15 +18,15 @@ class BaseTabBarController: UITabBarController {
         super.viewDidLoad()
         
         // EventsceTab
-        let eventsStoryboard = UIStoryboard(name: "Events", bundle: Bundle.main)
+        let eventsStoryboard = UIStoryboard(storyboard: .events)
         eventsTabNavigationController = eventsStoryboard.instantiateViewController(withIdentifier: "EventsNavigationController") as? UINavigationController
         
         // ConferenceTab
-        let conferenceStoryboard = UIStoryboard(name: "Conference", bundle: Bundle.main)
+        let conferenceStoryboard = UIStoryboard(storyboard: .conference)
         conferenceTabNavigationController = conferenceStoryboard.instantiateViewController(withIdentifier: "ConferenceNavigationController") as? UINavigationController
         
         // MoreTab
-        let moreStoryboard = UIStoryboard(name: "More", bundle: Bundle.main)
+        let moreStoryboard = UIStoryboard(storyboard: .more)
         moreTabNavigationController = moreStoryboard.instantiateViewController(withIdentifier: "MoreNavigationController") as? UINavigationController
         
         let viewControllers = [eventsTabNavigationController!, conferenceTabNavigationController!, moreTabNavigationController!] as [UIViewController]

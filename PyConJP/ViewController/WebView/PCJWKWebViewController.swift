@@ -9,14 +9,14 @@
 import UIKit
 import WebKit
 
-class PCJWKWebViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
+class PCJWKWebViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, StoryboardIdentifiable {
     
     @IBOutlet weak var webContentView: UIView!
     
     private var url: String = ""
     
-    class func build(url: String) -> PCJWKWebViewController {
-        let pcjWKWebViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PCJWKWebViewController") as! PCJWKWebViewController
+    static func build(url: String) -> PCJWKWebViewController {
+        let pcjWKWebViewController: PCJWKWebViewController = UIStoryboard(storyboard: .main).instantiateViewController()
         pcjWKWebViewController.url = url
         return pcjWKWebViewController
     }

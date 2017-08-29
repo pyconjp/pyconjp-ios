@@ -8,9 +8,14 @@
 
 import UIKit
 
-class ConferencePageViewController: UIPageViewController, ErrorAlertProtocol {
+class ConferencePageViewController: UIPageViewController, StoryboardIdentifiable, ErrorAlertProtocol {
     
     private var conferenceModelViewProtocol: ConferenceModelViewProtocol?
+    
+    static func build() -> ConferencePageViewController {
+        let conferencePageViewController: ConferencePageViewController = UIStoryboard(storyboard: .conference).instantiateViewController()
+        return conferencePageViewController
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

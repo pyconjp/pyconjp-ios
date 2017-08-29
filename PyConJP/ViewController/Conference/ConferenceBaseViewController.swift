@@ -15,12 +15,6 @@ class ConferenceBaseViewController: UIViewController, UIPageViewControllerDelega
     
     var conferenceDateViewProtocol: ConferenceDateViewProtocol?
     var conferencePageViewProtocol: ConferencePageViewProtocol?
-//    
-//    private var offsetToChange: CGFloat = 0.0 {
-//        didSet {
-//            
-//        }
-//    }
     
     private var displayIndex: Int = 0 {
         didSet {
@@ -33,14 +27,13 @@ class ConferenceBaseViewController: UIViewController, UIPageViewControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let conferenceStoryboard = UIStoryboard(name: "Conference", bundle: Bundle.main)
-        let conferencePageViewController = conferenceStoryboard.instantiateViewController(withIdentifier: "ConferencePageViewController")
+        let conferencePageViewController = ConferencePageViewController.build()
         conferencePageViewController.view.frame = pageContainerView.bounds
         self.addChildViewController(conferencePageViewController)
         pageContainerView.addSubview(conferencePageViewController.view)
         conferencePageViewController.didMove(toParentViewController: self)
         
-        let conferenceDateViewController = conferenceStoryboard.instantiateViewController(withIdentifier: "ConferenceDateViewController")
+        let conferenceDateViewController = ConferenceDateViewController.build()
         conferenceDateViewController.view.frame = barContainerView.bounds
         self.addChildViewController(conferenceDateViewController)
         barContainerView.addSubview(conferenceDateViewController.view)

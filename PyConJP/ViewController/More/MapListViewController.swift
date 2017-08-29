@@ -8,10 +8,11 @@
 
 import UIKit
 
-class MapListViewController: UITableViewController {
+class MapListViewController: UITableViewController, StoryboardIdentifiable {
     
-    class func build() -> MapListViewController {
-        return UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "MapListViewController") as! MapListViewController
+    static func build() -> MapListViewController {
+        let mapListViewController: MapListViewController = UIStoryboard(storyboard: .more).instantiateViewController()
+        return mapListViewController
     }
     
     override func viewWillAppear(_ animated: Bool) {

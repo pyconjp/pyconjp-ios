@@ -9,15 +9,15 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, StoryboardIdentifiable {
     
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var mapView: MKMapView!
     
     private var venue: Venue?
     
-    class func build(venue: Venue) -> MapViewController {
-        let mapViewController = UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+    static func build(venue: Venue) -> MapViewController {
+        let mapViewController: MapViewController = UIStoryboard(storyboard: .more).instantiateViewController()
         mapViewController.venue = venue
         return mapViewController
     }

@@ -13,7 +13,7 @@ class FloorMapZoomableImageViewController: ZoomableImageViewController {
     private var assetCatalog: AssetCatalog?
     
     static func build(assetCatalog: AssetCatalog) -> FloorMapZoomableImageViewController {
-        let floorMapImageViewController = UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "FloorMapZoomableImageViewController") as! FloorMapZoomableImageViewController
+        let floorMapImageViewController: FloorMapZoomableImageViewController = UIStoryboard(storyboard: .more).instantiateViewController()
         floorMapImageViewController.assetCatalog = assetCatalog
         return floorMapImageViewController
     }

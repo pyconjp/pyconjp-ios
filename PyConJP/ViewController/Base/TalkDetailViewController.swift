@@ -11,7 +11,7 @@ import SafariServices
 import APIKit
 import RealmSwift
 
-class TalkDetailViewController: UIViewController, TwitterURLSchemeProtocol, ErrorAlertProtocol {
+class TalkDetailViewController: UIViewController, StoryboardIdentifiable, TwitterURLSchemeProtocol, ErrorAlertProtocol {
     
     @IBOutlet weak var baseScrollView: UIScrollView! {
         didSet {
@@ -64,8 +64,8 @@ class TalkDetailViewController: UIViewController, TwitterURLSchemeProtocol, Erro
     
     private lazy var speakersCollectionViewHeight: CGFloat = self.speakersCollectionViewHeightConstraint.constant
     
-    class func build(id: Int) -> TalkDetailViewController {
-        let talkDetailViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TalkDetailViewController") as! TalkDetailViewController
+    static func build(id: Int) -> TalkDetailViewController {
+        let talkDetailViewController: TalkDetailViewController = UIStoryboard(storyboard: .main).instantiateViewController()
         talkDetailViewController.id = id
         return talkDetailViewController
     }
