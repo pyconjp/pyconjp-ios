@@ -10,19 +10,18 @@ import UIKit
 
 class FloorMapZoomableImageViewController: ZoomableImageViewController {
     
-    private var assetCatalog: AssetCatalog?
+    private var assetCatalog: AssetCatalog? {
+        didSet {
+            DispatchQueue.main.async {
+                self.imageView?.image = self.assetCatalog?.image
+            }
+        }
+    }
     
     static func build(assetCatalog: AssetCatalog) -> FloorMapZoomableImageViewController {
         let floorMapImageViewController: FloorMapZoomableImageViewController = UIStoryboard(storyboard: .more).instantiateViewController()
         floorMapImageViewController.assetCatalog = assetCatalog
         return floorMapImageViewController
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        guard let assetCatalog = assetCatalog else { return }
-        imageView?.image = assetCatalog.image
     }
     
     enum AssetCatalog {

@@ -15,14 +15,6 @@ class MapListViewController: UITableViewController, StoryboardIdentifiable {
         return mapListViewController
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
-    }
-    
     // MARK: - Table View Controller Delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
