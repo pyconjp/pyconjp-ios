@@ -85,6 +85,7 @@
 		DB10DEA11EDFDF8200DAED31 /* NibInstantitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB10DEA01EDFDF8200DAED31 /* NibInstantitable.swift */; };
 		DB10DEA31EDFDF9900DAED31 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB10DEA21EDFDF9900DAED31 /* StoryboardIdentifiable.swift */; };
 		DB10DEA71EDFE62A00DAED31 /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB10DEA61EDFE62A00DAED31 /* RealmError.swift */; };
+		DB28C1921F59AFB2003BEFE0 /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB28C1911F59AFB2003BEFE0 /* GitHubRequest.swift */; };
 		DB4BC68F1EF5098D00650964 /* SpreadsheetView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4BC68E1EF5098D00650964 /* SpreadsheetView.framework */; };
 		DB4BC6911EF522CD00650964 /* ConferenceTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BC6901EF522CD00650964 /* ConferenceTimetableViewController.swift */; };
 		DB4BC6941EF525CD00650964 /* TimetableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BC6931EF525CD00650964 /* TimetableCell.swift */; };
@@ -270,6 +271,7 @@
 		DB10DEA01EDFDF8200DAED31 /* NibInstantitable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibInstantitable.swift; sourceTree = "<group>"; };
 		DB10DEA21EDFDF9900DAED31 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		DB10DEA61EDFE62A00DAED31 /* RealmError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
+		DB28C1911F59AFB2003BEFE0 /* GitHubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
 		DB4BC68E1EF5098D00650964 /* SpreadsheetView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpreadsheetView.framework; path = Carthage/Build/iOS/SpreadsheetView.framework; sourceTree = "<group>"; };
 		DB4BC6901EF522CD00650964 /* ConferenceTimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceTimetableViewController.swift; sourceTree = "<group>"; };
 		DB4BC6931EF525CD00650964 /* TimetableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableCell.swift; sourceTree = "<group>"; };
@@ -895,6 +897,7 @@
 			isa = PBXGroup;
 			children = (
 				DBB4AED21EED95950097CF99 /* PyConJPRequest.swift */,
+				DB28C1911F59AFB2003BEFE0 /* GitHubRequest.swift */,
 			);
 			path = APIKit;
 			sourceTree = "<group>";
@@ -1185,6 +1188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB28C1921F59AFB2003BEFE0 /* GitHubRequest.swift in Sources */,
 				DB77FD6D1E067A0F00504869 /* WebConfig.swift in Sources */,
 				DBB4AED31EED95950097CF99 /* PyConJPRequest.swift in Sources */,
 				DB77FD6F1E067BD000504869 /* LocaleExtension.swift in Sources */,
