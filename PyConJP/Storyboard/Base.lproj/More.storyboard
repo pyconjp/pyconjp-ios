@@ -42,37 +42,33 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Z9-t6-3WX" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="585"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="495.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3V-yD-yYQ">
-                                                <rect key="frame" x="15" y="15" width="345" height="555"/>
-                                                <string key="text">Tutorial: 2016-9-20 (Tue)
-Conference: 2016-9-21 (Wed) - 22 (Thu)
-Development Sprints: 2016-9-23 (Fri) - 24 (Sat)
+                                                <rect key="frame" x="15" y="15" width="345" height="465.5"/>
+                                                <mutableString key="text">Tutorial: 2017-9-7 (Thu)
+Conference: 2017-9-8 (Fri) - 9 (Sta)
+Development Sprints: 2017-9-10 (Sun)
+
 Venue: Waseda University, Nishiwaseda Campus
-Theme: Everyone's different, all are wonderful.
+
+Theme: Output &amp; Follow
+
 Participants (Planned): 700
 
-
-## Participation Fee    
-Patron: 20,000 JPY
-Business: 15,000 JPY (Early Bird 12,000 JPY)
-Personal: 10,000 JPY (Early Bird 8,000 JPY)
-Student: 5,000 JPY (without After-Party 2,000 JPY)
-
-Organizers: PyCon JP Organizing Committee PyCon JP 2016 Organizing Committee
-Contact: 2016@pycon.jp
+Organizers: PyCon JP Organizing Committee PyCon JP 2017 Organizing Committee
+Contact: 2017@pycon.jp
 
 
 ## About the Organizers
-PyCon JP 2016 is being organized by the PyCon JP Organizing Committee.
+PyCon JP 2017 is being organized by the PyCon JP Organizing Committee.
 
-Chairperson: Takanori Suzuki
+Chairperson: Shunsuke Yoshida
 Web site: http://www.pycon.jp/
-Contact: 2016@pycon.jp
+Contact: 2017@pycon.jp
 Host: PyCon JP Committee
 
-Cohost: Global Software Engineering Laboratory, Waseda University</string>
+Cohost: Global Software Engineering Laboratory, Waseda University</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -555,31 +551,31 @@ Cohost: Global Software Engineering Laboratory, Waseda University</string>
                                                 <rect key="frame" x="15" y="15" width="345" height="1199.5"/>
                                                 <mutableString key="text">PyCon JP is a conference where Python users, or people interested in Python, gather to learn from each other and meet other members of the community. We hope that everyone joining PyCon JP will not only learn new and exciting things, but also meet new friends and strengthen the connection with the community, and thus the community itself.
 
-This year, we chose "Everyone's different, all are wonderful." as our theme. The Pycon JP staff is continuing to work hard on making a conference that will allow everyone to have a great time and unlock new possibilities through Python.
+
+Theme for PyCon JP 2017
+Output &amp; Follow
+
+Background of the new Theme - “Output &amp; Follow”
+We, PyCon JP 2017 staff, had been discussing the theme of PyCon JP 2017 since November 2016.
+The PyCon JP 2017 staff organization selected a new chairperson, and accepted many new staff members to organize this year’s PyCon JP. At the beginning, we discussed "Stakeholder model", "Value analysis model" and "Value designed model". These models were examined during the PyConJP 2016 general staff meeting. With that examination, we solicited opinions regarding to the new theme for PyCon JP 2017 from all new staff members.
+
+We also reconfirmed the concepts and themes up to PyCon JP 2017 and studied what kind of concept is good. Staff members also submitted new theme proposals and voted on them.
+
+However, the theme we selected was actually not the one with the most votes.
+
+The reason for this is as follows. There were many concept drafts with a large number of votes, such as “dialogue among participants”, “spreading”, “connecting”. The “Output &amp; Follow” theme resonates with all of these concept drafts and is concrete, so we decided that it would be the most appropriate selection.
+
+How to use the theme of PyCon JP 2017
+Based on this theme, all the staff will do talk and plan selection.
+PyCon JP is a conference where Python users, or people interested in Python, gather to learn from each other and meet other members of the community.
+We hope that everyone joining PyCon JP will not only learn new and exciting things, but also meet new friends and strengthen the connection with the community, and thus the community itself.
+Actually creating PyCon JP 2017 is not only the staff but also the "Output &amp; Follow" of the speaker, the sponsor, each participant, and others.
+
+Thank you for your cooperation.
+
 
 We are planning a new event such as Invitation Talks in addition to the annual events such as Tutorials, Youth Coder Workshop and Job Fair.
-The details are below. We hope you will enjoy it!
-
-
-# Invitation Talks
-The purpose of Invitation Talks is to invite guest speakers to share their unique perspectives and provide opportunities for participants to expand their networks. This year, we will invite professor Hironori Washizaki who is head of Global Software Engineering Laboratory, Waseda University, Japan and Mr. Seiya Tokui is the lead developer of the deep learning framework, “Chainer”.
-Please join us and enjoy discussion with these professionals in specialized field.
-
-
-# Youth Coder Workshop
-We started this Youth Coder Workshop from 2015. Through this session, we hope all students ranging from elementary school to high school to try and enjoy Python. This year, we will use Python to make various “Computer Maps”.
-
-
-# Tutorials
-This year we will have courses in areas such as “Python for beginners”, “Data Analysis”, “Deep Learning” and “Documentation”. In this year, it is not required to apply to PyCon JP 2016 to attend these courses.
-
-
-# Job Fair
-Every year, we have a theme for the panel discussion. This year, we are considering themes such as “Product management during service development” and “Diversity in a development team”. We will announce the theme as soon as possible when the details are fixed.
-
-
-# Sprint
-Sprint is a software development event which is held during 9/23 - 9/24, the second half of PyCon JP 2016. The purpose of Sprint is to provide a networking opportunity for people who are interested in similar topics. It is like a hack-a-thon. Some people will suggest topics and then others will select which topics to join. Please enjoy!</mutableString>
+The details are below. We hope you will enjoy it!</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
