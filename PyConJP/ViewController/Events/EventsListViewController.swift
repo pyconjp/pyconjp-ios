@@ -134,7 +134,7 @@ class EventsListViewController: UITableViewController {
             case .jobFair:
                 return WebConfig.baseURL + "events/jobsfair/"
             case .openSpace:
-                return WebConfig.baseURL + "events/open-space/"
+                return WebConfig.baseURL + "events/openspace/"
             case .mediaMeeting:
                 return WebConfig.baseURL + "events/media-meeting/"
             case .sprints:

@@ -22,7 +22,7 @@ extension MailURLSchemeProtocol {
     }
     
     func mailURLScheme(to address: String, subject: String, body: String) -> URL? {
-        if !UIApplication.shared.canOpenURL(urlScheme) { return nil }
+        guard UIApplication.shared.canOpenURL(urlScheme) else { return nil }
         return URL(string: String(format: "mailto:%@?subject=%@&body=%@", arguments: [address, subject.addingPercentEncoding(withAllowedCharacters: CharacterSet.alphanumerics)!, body.addingPercentEncoding(withAllowedCharacters: CharacterSet.alphanumerics)!]))
     }
     

@@ -99,7 +99,7 @@ class MoreListViewController: UITableViewController {
         var urlSheme: URL? {
             switch self {
             case .feedback: return mailURLScheme(to: PCJConfig.mailAddress,
-                                                 subject: "Feedback for PyCon JP 2016 App",
+                                                 subject: "Feedback for PyCon JP 2017 App",
                                                  body: String(format: "iOS version: %@\nDevice Model: %@\nReply-to:\n\nFeedback:", arguments: [UIDevice.current.systemVersion, UIDevice.current.modelType]))
             default: return nil
             }
