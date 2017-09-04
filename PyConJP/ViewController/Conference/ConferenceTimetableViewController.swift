@@ -29,8 +29,23 @@ final class ConferenceTimetableViewController: UIViewController, StoryboardIdent
         return viewController
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(BookmarkListViewController.refreshNotification(_:)), name: NSNotification.Name(rawValue: PCJNotificationConfig.completeFetchDataNotification), object: nil)
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        refresh()
+    }
+    
+    func refreshNotification(_ notification: Notification) {
+        refresh()
+    }
+    
+    private func refresh() {
         dataStore?.reloadTimetable()
         timetableView.reloadData()
     }
