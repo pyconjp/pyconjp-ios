@@ -189,12 +189,6 @@
 /* Class = "UILabel"; text = "   Room 203"; ObjectID = "TMU-ET-gop"; */
 "TMU-ET-gop.text" = "   Room 203";
 
-/* Class = "UILabel"; text = "   Room 204"; ObjectID = "wg7-gY-dtA"; */
-"wg7-gY-dtA.text" = "   Room 204";
-
-/* Class = "UILabel"; text = "   Room 205"; ObjectID = "DT9-CC-44y"; */
-"DT9-CC-44y.text" = "   Room 205";
-
 /* Class = "UITableViewSection"; headerTitle = "3F"; ObjectID = "Mjp-mU-cl8"; */
 "Mjp-mU-cl8.headerTitle" = "3F";
 

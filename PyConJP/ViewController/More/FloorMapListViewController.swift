@@ -37,7 +37,7 @@ class FloorMapListViewController: UITableViewController, StoryboardIdentifiable 
             case .firstFloor:
                 return [.firstFloorView]
             case .secondFloor:
-                return [.secondFloorView, .room201, .room202, .room203, .room204, .room205]
+                return [.secondFloorView, .room201, .room202, .room203]
             case .thirdFloor:
                 return [.thirdFloorView]
             }

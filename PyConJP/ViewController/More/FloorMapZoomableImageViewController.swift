@@ -31,8 +31,6 @@ class FloorMapZoomableImageViewController: ZoomableImageViewController {
         case room201
         case room202
         case room203
-        case room204
-        case room205
         
         var title: String {
             switch self {
@@ -42,8 +40,6 @@ class FloorMapZoomableImageViewController: ZoomableImageViewController {
             case .room201: return "Room 201"
             case .room202: return "Room 202"
             case .room203: return "Room 203"
-            case .room204: return "Room 204"
-            case .room205: return "Room 205"
             }
         }
         
@@ -55,8 +51,6 @@ class FloorMapZoomableImageViewController: ZoomableImageViewController {
             case .room201: return #imageLiteral(resourceName: "Room201Map")
             case .room202: return #imageLiteral(resourceName: "Room202Map")
             case .room203: return #imageLiteral(resourceName: "Room203Map")
-            case .room204: return #imageLiteral(resourceName: "Room204Map")
-            case .room205: return #imageLiteral(resourceName: "Room205Map")
             }
         }
         
