@@ -13,7 +13,7 @@ final class TimetableRoomCell: Cell, NibInstantitable {
     
     @IBOutlet weak var roomLabel: UILabel!
     
-    static let width: CGFloat = 130.0
+    static let width: CGFloat = 200.0
     static let height: CGFloat  = 44.0
     
     override func awakeFromNib() {
