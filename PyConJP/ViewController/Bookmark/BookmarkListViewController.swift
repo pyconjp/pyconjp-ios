@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAlertProtocol {
+class BookmarkListViewController: UIViewController, UITableViewDelegate, StoryboardIdentifiable, ErrorAlertProtocol {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -26,8 +26,9 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAl
         NotificationCenter.default.removeObserver(self)
     }
     
-    class func build() -> BookmarkListViewController {
-        return UIStoryboard(name: "Bookmark", bundle: Bundle.main).instantiateViewController(withIdentifier: "BookmarkListViewController") as! BookmarkListViewController
+    static func build() -> BookmarkListViewController {
+        let bookmarkListViewController: BookmarkListViewController = UIStoryboard(storyboard: .bookmark).instantiateViewController()
+        return bookmarkListViewController
     }
     
     override func viewDidLoad() {
@@ -75,7 +76,7 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAl
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let talkObject = bookmarkListDataSource.timelines[(indexPath as NSIndexPath).section].talks[(indexPath as NSIndexPath).row]
+        let talkObject = bookmarkListDataSource.timelines[indexPath.section].talks[indexPath.row]
         let talkDetailViewController = TalkDetailViewController.build(id: talkObject.id)
         self.navigationController?.pushViewController(talkDetailViewController, animated: true)
     }

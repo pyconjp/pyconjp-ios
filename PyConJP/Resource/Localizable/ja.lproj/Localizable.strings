@@ -10,6 +10,6 @@
  AlertController
  */
 
-"Cancel" = "キャンセル";
+"cancel" = "キャンセル";
 
-"Open" = "開く";
+"open" = "開く";

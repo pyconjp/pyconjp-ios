@@ -8,39 +8,36 @@
 
 import UIKit
 
-class FloorMapListViewController: UITableViewController {
+class FloorMapListViewController: UITableViewController, StoryboardIdentifiable {
     
-    class func build() -> FloorMapListViewController {
-        return UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "FloorMapListViewController") as! FloorMapListViewController
-    }
+    private let sections: [Section] = Section.sections
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
+    static func build() -> FloorMapListViewController {
+        let floorMapListViewController: FloorMapListViewController = UIStoryboard(storyboard: .more).instantiateViewController()
+        return floorMapListViewController
     }
     
     // MARK: - Table View Controller Delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let sectionType = SectionType(rawValue: (indexPath as NSIndexPath).section) else { return }
-        let floorMapZoomableImageViewController = FloorMapZoomableImageViewController.build(assetCatalog: sectionType.rows[(indexPath as NSIndexPath).row])
+        
+        let floorMapZoomableImageViewController = FloorMapZoomableImageViewController.build(assetCatalog: sections[indexPath.section].rows[indexPath.row])
         self.present(floorMapZoomableImageViewController, animated: true, completion: nil)
     }
     
-    private enum SectionType: Int {
+    private enum Section: Int {
         case firstFloor
         case secondFloor
         case thirdFloor
+        
+        static let sections: [Section] = [.firstFloor, .secondFloor, .thirdFloor]
         
         var rows: [FloorMapZoomableImageViewController.AssetCatalog] {
             switch self {
             case .firstFloor:
                 return [.firstFloorView]
             case .secondFloor:
-                return [.secondFloorView, .room201, .room202, .room203, .room204, .room205]
+                return [.secondFloorView, .room201, .room202, .room203]
             case .thirdFloor:
                 return [.thirdFloorView]
             }

@@ -6,6 +6,6 @@
   Copyright © 2016 PyCon JP. All rights reserved.
 */
 
-"English" = "英語";
+"english" = "英語";
 
-"Japanese" = "日本語";
+"japanese" = "日本語";

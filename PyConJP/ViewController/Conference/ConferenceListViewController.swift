@@ -36,7 +36,7 @@ class ConferenceListViewController: UIViewController, ErrorAlertProtocol {
         NotificationCenter.default.removeObserver(self)
     }
     
-    class func build(at index: Int, storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ConferenceListViewController {
+    static func build(at index: Int, storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ConferenceListViewController {
         let conferenceListViewController = storyboard.instantiateViewController(withIdentifier: "ConferenceListViewController") as! ConferenceListViewController
         conferenceListViewController.viewControllerIndex = index
         conferenceListViewController.pyconJPDate = pyconJPDate
@@ -113,7 +113,7 @@ extension ConferenceListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let talkObject = conferenceListDataSource.timelines[(indexPath as NSIndexPath).section].talks[(indexPath as NSIndexPath).row]
+        let talkObject = conferenceListDataSource.timelines[indexPath.section].talks[indexPath.row]
         let talkDetailViewController = TalkDetailViewController.build(id: talkObject.id)
         self.navigationController?.pushViewController(talkDetailViewController, animated: true)
     }

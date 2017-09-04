@@ -169,7 +169,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDU-mH-Qbt">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="3"/>
-                                        <color key="backgroundColor" red="0.32941176470588235" green="0.76078431372549016" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.8862745098" green="0.66666666669999997" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
                                 <constraints>

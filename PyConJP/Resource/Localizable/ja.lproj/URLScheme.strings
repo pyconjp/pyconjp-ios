@@ -10,6 +10,6 @@
  TwitterURLSchemeType
  */
 
-"TwitterAlertTitle" = "Twiiterアプリを起動";
+"twitterAlertTitle" = "Twiiterアプリを起動";
 
-"TwitterAlertMessage" = "%@ を開きます";
+"twitterAlertMessage" = "%@ を開きます";

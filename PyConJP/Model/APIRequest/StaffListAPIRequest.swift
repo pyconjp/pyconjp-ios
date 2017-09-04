@@ -8,19 +8,16 @@
 
 import Foundation
 import APIKit
+import WebAPIFramework
 
-struct StaffListAPIRequest: Request {
+struct StaffListAPIRequest: GitHubRequest {
     
     var method: HTTPMethod {
         return .get
     }
     
-    var baseURL: URL {
-        return URL(string: "https://pyconjp.github.io/")!
-    }
-    
     var path: String {
-        return "pyconjp-android/stafflist.json"
+        return "stafflist.json"
     }
     
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> [Staff] {

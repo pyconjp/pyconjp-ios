@@ -15,7 +15,7 @@ final class TimetableCell: Cell, NibInstantitable {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var speakerLabel: UILabel!
     
-    static let width: CGFloat = 130.0
+    static let width: CGFloat = 200.0
     static let height: CGFloat = 2.0
     
     override func awakeFromNib() {
@@ -35,7 +35,7 @@ final class TimetableCell: Cell, NibInstantitable {
         titleLabel.text = talkObject.title
         timeLabel.text = talkObject.periodTime
         speakerLabel.text = talkObject.speakers
-        self.backgroundColor = talkObject.isFavorite ? UIColor.favorite : UIColor.gray
+        self.backgroundColor = talkObject.isFavorite ? UIColor.PyConJP2017.favorite : nil
     }
     
 }

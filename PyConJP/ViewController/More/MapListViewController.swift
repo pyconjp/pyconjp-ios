@@ -8,24 +8,17 @@
 
 import UIKit
 
-class MapListViewController: UITableViewController {
+class MapListViewController: UITableViewController, StoryboardIdentifiable {
     
-    class func build() -> MapListViewController {
-        return UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "MapListViewController") as! MapListViewController
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
+    static func build() -> MapListViewController {
+        let mapListViewController: MapListViewController = UIStoryboard(storyboard: .more).instantiateViewController()
+        return mapListViewController
     }
     
     // MARK: - Table View Controller Delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch TableViewCell(rawValue: (indexPath as NSIndexPath).row) ?? .access {
+        switch TableViewCell(rawValue: indexPath.row) ?? .access {
         case .access:
             let mapViewController = MapViewController.build(venue: MapViewController.Venue.waseda)
             self.navigationController?.pushViewController(mapViewController, animated: true)

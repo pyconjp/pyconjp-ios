@@ -12,7 +12,7 @@ public enum WebConfig {
     
     public static let hostURL = ProcessInfo.processInfo.environment["APIBaseURL"] ?? "https://pycon.jp"
     
-    public static let baseURL = WebConfig.hostURL + "/2016/" + Locale.currentLanguageLocaleIdentifier + "/"
+    public static let baseURL = WebConfig.hostURL + "/2017/" + Locale.currentLanguageLocaleIdentifier + "/"
     
     static let apiURL = WebConfig.baseURL + "api/"
     

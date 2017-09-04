@@ -1,0 +1,23 @@
+/* 
+  EventList.strings
+  PyConJP
+
+  Created by Yutaro Muta on 2017/08/28.
+  Copyright © 2017 PyCon JP. All rights reserved.
+*/
+
+/**
+ EventsListViewController Section Row
+ */
+
+"tutorials" = "チュートリアル";
+"keynote" = "基調講演";
+"posters" = "ポスター";
+"lightningTalks" = "ライトニングトーク (LT)";
+"youthCoderWorkshop" = "Youth Coder Workshop";
+"committeeMeeting" = "Committee Meeting";
+"communityBooth" = "Community Booth";
+"jobFair" = "ジョブフェア";
+"openSpace" = "オープンスペース";
+"mediaMeeting" = "メディア会議";
+"sprints" = "スプリント";

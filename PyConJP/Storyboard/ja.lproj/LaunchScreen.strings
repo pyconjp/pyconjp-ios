@@ -2,9 +2,3 @@
 /**
  LaunchScreenViewController
  */
-
-/* Class = "UILabel"; text = "PyCon JP 2016"; ObjectID = "ObB-2M-pkz"; */
-"ObB-2M-pkz.text" = "PyCon JP 2016";
-
-/* Class = "UILabel"; text = "Everyone's different, all are wonderful"; ObjectID = "RlI-CY-PXI"; */
-"RlI-CY-PXI.text" = "Everyone's different, all are wonderful";

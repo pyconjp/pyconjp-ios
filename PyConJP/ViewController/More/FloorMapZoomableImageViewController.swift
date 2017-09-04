@@ -10,19 +10,18 @@ import UIKit
 
 class FloorMapZoomableImageViewController: ZoomableImageViewController {
     
-    private var assetCatalog: AssetCatalog?
-    
-    static func build(assetCatalog: AssetCatalog) -> FloorMapZoomableImageViewController {
-        let floorMapImageViewController = UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "FloorMapZoomableImageViewController") as! FloorMapZoomableImageViewController
-        floorMapImageViewController.assetCatalog = assetCatalog
-        return floorMapImageViewController
+    private var assetCatalog: AssetCatalog? {
+        didSet {
+            DispatchQueue.main.async {
+                self.imageView?.image = self.assetCatalog?.image
+            }
+        }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        guard let assetCatalog = assetCatalog else { return }
-        imageView?.image = assetCatalog.image
+    static func build(assetCatalog: AssetCatalog) -> FloorMapZoomableImageViewController {
+        let floorMapImageViewController: FloorMapZoomableImageViewController = UIStoryboard(storyboard: .more).instantiateViewController()
+        floorMapImageViewController.assetCatalog = assetCatalog
+        return floorMapImageViewController
     }
     
     enum AssetCatalog {
@@ -32,8 +31,6 @@ class FloorMapZoomableImageViewController: ZoomableImageViewController {
         case room201
         case room202
         case room203
-        case room204
-        case room205
         
         var title: String {
             switch self {
@@ -43,8 +40,6 @@ class FloorMapZoomableImageViewController: ZoomableImageViewController {
             case .room201: return "Room 201"
             case .room202: return "Room 202"
             case .room203: return "Room 203"
-            case .room204: return "Room 204"
-            case .room205: return "Room 205"
             }
         }
         
@@ -56,8 +51,6 @@ class FloorMapZoomableImageViewController: ZoomableImageViewController {
             case .room201: return #imageLiteral(resourceName: "Room201Map")
             case .room202: return #imageLiteral(resourceName: "Room202Map")
             case .room203: return #imageLiteral(resourceName: "Room203Map")
-            case .room204: return #imageLiteral(resourceName: "Room204Map")
-            case .room205: return #imageLiteral(resourceName: "Room205Map")
             }
         }
         

@@ -8,6 +8,7 @@
 
 import UIKit
 import APIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, ReceiveLocalNotificationProtocol, ErrorAlertProtocol {
@@ -18,30 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ReceiveLocalNotificationP
         
         getTalksFromAPI()
         
-        UINavigationBar.appearance().barTintColor = UIColor.PyConJP2016.red
+        UINavigationBar.appearance().barTintColor = UIColor.PyConJP2017.navy
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
-        UITabBar.appearance().tintColor = UIColor.PyConJP2016.blue
-        UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont.boldSystemFont(ofSize: 10), NSForegroundColorAttributeName: UIColor.PyConJP2016.blue], for: .selected)
+        UITabBar.appearance().tintColor = UIColor.PyConJP2017.yellow
+        UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont.boldSystemFont(ofSize: 10), NSForegroundColorAttributeName: UIColor.PyConJP2017.yellow], for: .selected)
+        
+        let configuration = Realm.Configuration(schemaVersion: 1, deleteRealmIfMigrationNeeded: true)
+        Realm.Configuration.defaultConfiguration = configuration
         
         return true
-    }
-    
-    func applicationWillResignActive(_ application: UIApplication) {
-    }
-    
-    func applicationDidEnterBackground(_ application: UIApplication) {
-    }
-    
-    func applicationWillEnterForeground(_ application: UIApplication) {
-    }
-    
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        UIApplication.shared.applicationIconBadgeNumber = 0
-    }
-    
-    func applicationWillTerminate(_ application: UIApplication) {
     }
     
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
