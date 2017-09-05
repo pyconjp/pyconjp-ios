@@ -22,7 +22,7 @@ class MoreListViewController: UITableViewController {
         case .whatsPyConJP, .codeOfConduct, .summary, .license, .staffList:
             guard let identifier = row.identifier, let viewController = self.storyboard?.instantiateViewController(withIdentifier: identifier) else { return }
             self.navigationController?.pushViewController(viewController, animated: true)
-        case .participantsInformation, .sponsor, .questionnaire, .repository:
+        case .participantsInformation, .sponsor, .repository:
             guard let url = row.url else { return }
             let safariViewController = SFSafariViewController(url: url)
             self.present(safariViewController, animated: true, completion: nil)
@@ -49,7 +49,7 @@ class MoreListViewController: UITableViewController {
         var rows: [Row] {
             switch self {
             case .about:
-                return [.participantsInformation, .whatsPyConJP, .codeOfConduct, .summary, .sponsor, .staffList, .questionnaire]
+                return [.participantsInformation, .whatsPyConJP, .codeOfConduct, .summary, .sponsor, .staffList]
             case .venue:
                 return [.conferenceMap, .sprintMap]
             case .application:
@@ -66,7 +66,6 @@ class MoreListViewController: UITableViewController {
         case summary
         case sponsor
         case staffList
-        case questionnaire
         
         case conferenceMap
         case sprintMap
@@ -90,7 +89,6 @@ class MoreListViewController: UITableViewController {
             switch self {
             case .participantsInformation: return URL(string: WebConfig.baseURL + "participants/")
             case .sponsor: return URL(string: WebConfig.baseURL + "sponsors/")
-            case .questionnaire: return URL(string: "https://docs.google.com/forms/d/e/1FAIpQLSefOgaVN8_cwUAcW-NmTaBNoNG8K47vursedtxkE_cbv_E37A/viewform")
             case .repository: return URL(string: "https://github.com/pyconjp/pyconjp-ios")
             default: return nil
             }
