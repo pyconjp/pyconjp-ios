@@ -85,6 +85,11 @@
 		DB10DEA11EDFDF8200DAED31 /* NibInstantitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB10DEA01EDFDF8200DAED31 /* NibInstantitable.swift */; };
 		DB10DEA31EDFDF9900DAED31 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB10DEA21EDFDF9900DAED31 /* StoryboardIdentifiable.swift */; };
 		DB10DEA71EDFE62A00DAED31 /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB10DEA61EDFE62A00DAED31 /* RealmError.swift */; };
+		DB1140B51F5EAC8F0046442E /* StaffListAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1140B11F5EAC8F0046442E /* StaffListAPIRequest.swift */; };
+		DB1140B61F5EAC8F0046442E /* TalkDetailAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1140B31F5EAC8F0046442E /* TalkDetailAPIRequest.swift */; };
+		DB1140B71F5EAC8F0046442E /* TalksAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1140B41F5EAC8F0046442E /* TalksAPIRequest.swift */; };
+		DB1140B91F5EACDE0046442E /* SurveyURLAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1140B81F5EACDE0046442E /* SurveyURLAPIRequest.swift */; };
+		DB1140BC1F604A860046442E /* MoreList.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB1140BE1F604A860046442E /* MoreList.strings */; };
 		DB28C1921F59AFB2003BEFE0 /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB28C1911F59AFB2003BEFE0 /* GitHubRequest.swift */; };
 		DB4BC68F1EF5098D00650964 /* SpreadsheetView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4BC68E1EF5098D00650964 /* SpreadsheetView.framework */; };
 		DB4BC6911EF522CD00650964 /* ConferenceTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BC6901EF522CD00650964 /* ConferenceTimetableViewController.swift */; };
@@ -116,9 +121,6 @@
 		DBA8722F1EF1A40E0001F8A3 /* LocalNotificationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8722D1EF1A40E0001F8A3 /* LocalNotificationProtocol.swift */; };
 		DBA872301EF1A40E0001F8A3 /* ReceiveLocalNotificationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8722E1EF1A40E0001F8A3 /* ReceiveLocalNotificationProtocol.swift */; };
 		DBA872321EF1A4990001F8A3 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA872311EF1A4990001F8A3 /* NotificationType.swift */; };
-		DBA872371EF2E0E90001F8A3 /* StaffListAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA872341EF2E0E90001F8A3 /* StaffListAPIRequest.swift */; };
-		DBA872381EF2E0E90001F8A3 /* TalkDetailAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA872351EF2E0E90001F8A3 /* TalkDetailAPIRequest.swift */; };
-		DBA872391EF2E0E90001F8A3 /* TalksAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA872361EF2E0E90001F8A3 /* TalksAPIRequest.swift */; };
 		DBA8723C1EF2E14B0001F8A3 /* SaveTalksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8723B1EF2E14B0001F8A3 /* SaveTalksRequest.swift */; };
 		DBA8723E1EF2E5320001F8A3 /* LoadFavoriteTalksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8723D1EF2E5320001F8A3 /* LoadFavoriteTalksRequest.swift */; };
 		DBA872401EF2E7410001F8A3 /* LoadTalksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8723F1EF2E7410001F8A3 /* LoadTalksRequest.swift */; };
@@ -271,6 +273,13 @@
 		DB10DEA01EDFDF8200DAED31 /* NibInstantitable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibInstantitable.swift; sourceTree = "<group>"; };
 		DB10DEA21EDFDF9900DAED31 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		DB10DEA61EDFE62A00DAED31 /* RealmError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
+		DB1140B11F5EAC8F0046442E /* StaffListAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffListAPIRequest.swift; sourceTree = "<group>"; };
+		DB1140B31F5EAC8F0046442E /* TalkDetailAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkDetailAPIRequest.swift; sourceTree = "<group>"; };
+		DB1140B41F5EAC8F0046442E /* TalksAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksAPIRequest.swift; sourceTree = "<group>"; };
+		DB1140B81F5EACDE0046442E /* SurveyURLAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyURLAPIRequest.swift; sourceTree = "<group>"; };
+		DB1140BD1F604A860046442E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/MoreList.strings; sourceTree = "<group>"; };
+		DB1140BF1F604C620046442E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MoreList.strings; sourceTree = "<group>"; };
+		DB1140C01F604C630046442E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MoreList.strings; sourceTree = "<group>"; };
 		DB28C1911F59AFB2003BEFE0 /* GitHubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
 		DB4BC68E1EF5098D00650964 /* SpreadsheetView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpreadsheetView.framework; path = Carthage/Build/iOS/SpreadsheetView.framework; sourceTree = "<group>"; };
 		DB4BC6901EF522CD00650964 /* ConferenceTimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceTimetableViewController.swift; sourceTree = "<group>"; };
@@ -320,9 +329,6 @@
 		DBA8722D1EF1A40E0001F8A3 /* LocalNotificationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationProtocol.swift; sourceTree = "<group>"; };
 		DBA8722E1EF1A40E0001F8A3 /* ReceiveLocalNotificationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveLocalNotificationProtocol.swift; sourceTree = "<group>"; };
 		DBA872311EF1A4990001F8A3 /* NotificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
-		DBA872341EF2E0E90001F8A3 /* StaffListAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffListAPIRequest.swift; sourceTree = "<group>"; };
-		DBA872351EF2E0E90001F8A3 /* TalkDetailAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkDetailAPIRequest.swift; sourceTree = "<group>"; };
-		DBA872361EF2E0E90001F8A3 /* TalksAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalksAPIRequest.swift; sourceTree = "<group>"; };
 		DBA8723B1EF2E14B0001F8A3 /* SaveTalksRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveTalksRequest.swift; sourceTree = "<group>"; };
 		DBA8723D1EF2E5320001F8A3 /* LoadFavoriteTalksRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadFavoriteTalksRequest.swift; sourceTree = "<group>"; };
 		DBA8723F1EF2E7410001F8A3 /* LoadTalksRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadTalksRequest.swift; sourceTree = "<group>"; };
@@ -552,6 +558,7 @@
 				DB05D1451E43FBCB00781BF7 /* Map.strings */,
 				DB05D1471E43FBCB00781BF7 /* URLScheme.strings */,
 				DB51C21B1F5322D20016C952 /* EventList.strings */,
+				DB1140BE1F604A860046442E /* MoreList.strings */,
 			);
 			path = Localizable;
 			sourceTree = "<group>";
@@ -718,6 +725,24 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		DB1140B01F5EAC8F0046442E /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				DB1140B11F5EAC8F0046442E /* StaffListAPIRequest.swift */,
+				DB1140B81F5EACDE0046442E /* SurveyURLAPIRequest.swift */,
+			);
+			path = GitHub;
+			sourceTree = "<group>";
+		};
+		DB1140B21F5EAC8F0046442E /* PyConJP */ = {
+			isa = PBXGroup;
+			children = (
+				DB1140B31F5EAC8F0046442E /* TalkDetailAPIRequest.swift */,
+				DB1140B41F5EAC8F0046442E /* TalksAPIRequest.swift */,
+			);
+			path = PyConJP;
+			sourceTree = "<group>";
+		};
 		DB4BC6921EF5257200650964 /* SpreadsheetViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -868,9 +893,8 @@
 		DBA872331EF2E0E90001F8A3 /* APIRequest */ = {
 			isa = PBXGroup;
 			children = (
-				DBA872341EF2E0E90001F8A3 /* StaffListAPIRequest.swift */,
-				DBA872351EF2E0E90001F8A3 /* TalkDetailAPIRequest.swift */,
-				DBA872361EF2E0E90001F8A3 /* TalksAPIRequest.swift */,
+				DB1140B21F5EAC8F0046442E /* PyConJP */,
+				DB1140B01F5EAC8F0046442E /* GitHub */,
 			);
 			path = APIRequest;
 			sourceTree = "<group>";
@@ -1109,6 +1133,7 @@
 				DB05D1C11E43FBCB00781BF7 /* DummyTalks.json in Resources */,
 				DB05D1CA1E43FBCB00781BF7 /* Main.storyboard in Resources */,
 				DB05D1D51E43FBCB00781BF7 /* SpeakerCollectionViewCell.xib in Resources */,
+				DB1140BC1F604A860046442E /* MoreList.strings in Resources */,
 				DB05D1C41E43FBCB00781BF7 /* Map.strings in Resources */,
 				DB05D1C81E43FBCB00781BF7 /* Events.storyboard in Resources */,
 				DB05D1C01E43FBCB00781BF7 /* DummyTalkDetail.json in Resources */,
@@ -1211,6 +1236,7 @@
 				DB7EAAE21EF04DAC00FEF504 /* DummyTalksProtocol.swift in Sources */,
 				DB4BC6A81EF5926600650964 /* ConferenceTimetableDataStore.swift in Sources */,
 				DB4BC6A51EF5916D00650964 /* TimelineDataSource.swift in Sources */,
+				DB1140B91F5EACDE0046442E /* SurveyURLAPIRequest.swift in Sources */,
 				DB05D1E51E43FBCB00781BF7 /* EventsListViewController.swift in Sources */,
 				DBA872301EF1A40E0001F8A3 /* ReceiveLocalNotificationProtocol.swift in Sources */,
 				DB05D1E01E43FBCB00781BF7 /* ConferenceDateViewController.swift in Sources */,
@@ -1224,15 +1250,12 @@
 				DB05D1A41E43FBCB00781BF7 /* UIColorExtension.swift in Sources */,
 				DB05D1971E43FBCB00781BF7 /* AppDelegate.swift in Sources */,
 				DBA872401EF2E7410001F8A3 /* LoadTalksRequest.swift in Sources */,
-				DBA872391EF2E0E90001F8A3 /* TalksAPIRequest.swift in Sources */,
-				DBA872381EF2E0E90001F8A3 /* TalkDetailAPIRequest.swift in Sources */,
 				DB10DEA11EDFDF8200DAED31 /* NibInstantitable.swift in Sources */,
 				DB05D1BC1E43FBCB00781BF7 /* TwitterURLSchemeProtocol.swift in Sources */,
 				DB05D1991E43FBCB00781BF7 /* PCJNotificationConfig.swift in Sources */,
 				DB10DEA31EDFDF9900DAED31 /* StoryboardIdentifiable.swift in Sources */,
 				DB4BC6AC1EF670B600650964 /* TimetableRoomCell.swift in Sources */,
 				DBA8723E1EF2E5320001F8A3 /* LoadFavoriteTalksRequest.swift in Sources */,
-				DBA872371EF2E0E90001F8A3 /* StaffListAPIRequest.swift in Sources */,
 				DB7EAADB1EEEF76A00FEF504 /* UIImageViewExtension.swift in Sources */,
 				DB05D1E11E43FBCB00781BF7 /* ConferenceListViewController.swift in Sources */,
 				DB10DE9D1EDFDF3B00DAED31 /* UIStoryboardExtension.swift in Sources */,
@@ -1283,11 +1306,14 @@
 				DB05D1A91E43FBCB00781BF7 /* TalkObject.swift in Sources */,
 				DB05D1AF1E43FBCB00781BF7 /* Level.swift in Sources */,
 				DB05D1A11E43FBCB00781BF7 /* ArrayExtension.swift in Sources */,
+				DB1140B71F5EAC8F0046442E /* TalksAPIRequest.swift in Sources */,
 				DB05D1D31E43FBCB00781BF7 /* CustomImageView.swift in Sources */,
 				DB05D1B61E43FBCB00781BF7 /* Timeline.swift in Sources */,
 				DB05D1AE1E43FBCB00781BF7 /* Category.swift in Sources */,
 				DB05D1B11E43FBCB00781BF7 /* Speaker.swift in Sources */,
+				DB1140B51F5EAC8F0046442E /* StaffListAPIRequest.swift in Sources */,
 				DB05D1B21E43FBCB00781BF7 /* Staff.swift in Sources */,
+				DB1140B61F5EAC8F0046442E /* TalkDetailAPIRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1436,6 +1462,16 @@
 				DB51C2381F53B9950016C952 /* ja */,
 			);
 			name = More.storyboard;
+			sourceTree = "<group>";
+		};
+		DB1140BE1F604A860046442E /* MoreList.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB1140BD1F604A860046442E /* Base */,
+				DB1140BF1F604C620046442E /* en */,
+				DB1140C01F604C630046442E /* ja */,
+			);
+			name = MoreList.strings;
 			sourceTree = "<group>";
 		};
 		DB51C21B1F5322D20016C952 /* EventList.strings */ = {
