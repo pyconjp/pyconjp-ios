@@ -1,6 +1,6 @@
 //
 //  SpeakerCollectionViewCell.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 9/8/16.
 //  Copyright © 2016 PyCon JP. All rights reserved.
@@ -8,7 +8,6 @@
 
 import UIKit
 import WebAPIFramework
-import AlamofireImage
 
 class SpeakerCollectionViewCell: UICollectionViewCell {
     
@@ -23,9 +22,8 @@ class SpeakerCollectionViewCell: UICollectionViewCell {
     }
     
     func fill(speaker: Speaker) {
-        if let imageURL = speaker.imageURL, let url = URL(string: WebConfig.hostURL + imageURL) {
-            iconImageView.af_setImage(withURL: url)
-        }
+        iconImageView.setImage(withURL: URL(string: WebConfig.hostURL + (speaker.imageURL ?? "")),
+                               imageTrainsition: UIImageView.ImageTransition.crossDissolve(0.3))
         nameLabel.text = speaker.name
         twitterLabel.text = (speaker.twitterName != nil ? "@\(speaker.twitterName!)" : nil)
     }

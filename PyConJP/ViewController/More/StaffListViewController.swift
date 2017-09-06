@@ -1,6 +1,6 @@
 //
 //  StaffListViewController.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 9/10/16.
 //  Copyright © 2016 PyCon JP. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-class StaffListViewController: UIViewController, TwitterURLSchemeProtocol, ErrorAlertProtocol {
+class StaffListViewController: UIViewController, StoryboardIdentifiable, TwitterURLSchemeProtocol, ErrorAlertProtocol {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -29,7 +29,8 @@ class StaffListViewController: UIViewController, TwitterURLSchemeProtocol, Error
     private let refreshControl = UIRefreshControl()
     
     static func build() -> StaffListViewController {
-        return UIStoryboard(name: "More", bundle: Bundle.main).instantiateViewController(withIdentifier: "StaffListViewController") as! StaffListViewController
+        let staffListViewController: StaffListViewController = UIStoryboard(storyboard: .more).instantiateViewController()
+        return staffListViewController
     }
     
     override func viewDidLoad() {

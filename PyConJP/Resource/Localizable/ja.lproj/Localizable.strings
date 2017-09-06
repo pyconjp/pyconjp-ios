@@ -1,6 +1,6 @@
 /* 
   Localizable.strings
-  PyConJP2016
+  PyConJP
 
   Created by Yutaro Muta on 9/17/16.
   Copyright © 2016 PyCon JP. All rights reserved.
@@ -10,6 +10,6 @@
  AlertController
  */
 
-"Cancel" = "キャンセル";
+"cancel" = "キャンセル";
 
-"Open" = "開く";
+"open" = "開く";

@@ -1,6 +1,6 @@
 /* 
   Map.strings
-  PyConJP2016
+  PyConJP
 
   Created by Yutaro Muta on 8/30/2016.
   Copyright © 2016 PyCon JP. All rights reserved.
@@ -10,10 +10,10 @@
  MapViewController
  */
 
-"NameWaseda" = "Waseda University, Nishi-Waseda Campus";
+"nameWaseda" = "Waseda University, Nishi-Waseda Campus";
 
-"AddressWaseda" = "Waseda University, Nishi-Waseda Campus, Building 63\n3-4-1, Okubo, Shinjuku, Tokyo\n169-0072, Japan";
+"addressWaseda" = "Waseda University, Nishi-Waseda Campus, Building 63\n3-4-1, Okubo, Shinjuku, Tokyo\n169-0072, Japan";
 
-"NameMicrosoft" = "Microsoft Japan Co., Ltd.";
+"nameMicrosoft" = "Microsoft Japan Co., Ltd.";
 
-"AddressMicrosoft" = "Microsoft Japan Co., Ltd.\nShinagawa Grand Central Tower, 2-16-3 Konan, Minato, Tokyo\n108-0075, Japan";
+"addressMicrosoft" = "Microsoft Japan Co., Ltd.\nShinagawa Grand Central Tower, 2-16-3 Konan, Minato, Tokyo\n108-0075, Japan";

@@ -1,6 +1,6 @@
 /* 
   URLScheme.strings
-  PyConJP2016
+  PyConJP
 
   Created by Yutaro Muta on 9/17/16.
   Copyright © 2016 PyCon JP. All rights reserved.
@@ -10,6 +10,6 @@
  TwitterURLSchemeType
  */
 
-"TwitterAlertTitle" = "Twiiterアプリを起動";
+"twitterAlertTitle" = "Twiiterアプリを起動";
 
-"TwitterAlertMessage" = "%@ を開きます";
+"twitterAlertMessage" = "%@ を開きます";

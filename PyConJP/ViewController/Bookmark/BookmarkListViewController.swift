@@ -1,6 +1,6 @@
 //
 //  BookmarkListViewController.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 2016/08/18.
 //  Copyright © 2016 PyCon JP. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAlertProtocol {
+class BookmarkListViewController: UIViewController, UITableViewDelegate, StoryboardIdentifiable, ErrorAlertProtocol {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -26,14 +26,15 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAl
         NotificationCenter.default.removeObserver(self)
     }
     
-    class func build() -> BookmarkListViewController {
-        return UIStoryboard(name: "Bookmark", bundle: Bundle.main).instantiateViewController(withIdentifier: "BookmarkListViewController") as! BookmarkListViewController
+    static func build() -> BookmarkListViewController {
+        let bookmarkListViewController: BookmarkListViewController = UIStoryboard(storyboard: .bookmark).instantiateViewController()
+        return bookmarkListViewController
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(BookmarkListViewController.refreshNotification(_:)), name: NSNotification.Name(rawValue: PCJNotificationConfig.CompleteFetchDataNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BookmarkListViewController.refreshNotification(_:)), name: NSNotification.Name(rawValue: PCJNotificationConfig.completeFetchDataNotification), object: nil)
         
     }
     
@@ -53,15 +54,15 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAl
     
     func refresh() {
         bookmarkListDataSource.refreshData { [weak self](result) in
-            guard let weakSelf = self else { return }
             switch result {
             case .success:
                 DispatchQueue.main.async {
-                    weakSelf.tableView.reloadData()
+                    self?.tableView.reloadData()
                 }
             case .failure(let error):
+                 guard let weakSelf = self else { return }
                 DispatchQueue.main.async {
-                    weakSelf.showErrorAlart(with: error, parent: weakSelf)
+                    self?.showErrorAlart(with: error, parent: weakSelf)
                 }
             }
         }
@@ -75,7 +76,7 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate, ErrorAl
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let talkObject = bookmarkListDataSource.timelines[(indexPath as NSIndexPath).section].talks[(indexPath as NSIndexPath).row]
+        let talkObject = bookmarkListDataSource.timelines[indexPath.section].talks[indexPath.row]
         let talkDetailViewController = TalkDetailViewController.build(id: talkObject.id)
         self.navigationController?.pushViewController(talkDetailViewController, animated: true)
     }

@@ -1,6 +1,6 @@
 //
 //  ConferenceDateViewController.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 2016/03/07.
 //  Copyright © 2016 PyCon JP. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConferenceDateViewController: UIViewController, ConferenceDateViewProtocol {
+class ConferenceDateViewController: UIViewController, StoryboardIdentifiable, ConferenceDateViewProtocol {
     
     @IBOutlet weak var activeBar: UIView!
     @IBOutlet weak var day1Button: UIButton!
@@ -18,9 +18,9 @@ class ConferenceDateViewController: UIViewController, ConferenceDateViewProtocol
     
     private var conferencePageViewProtocol: ConferencePageViewProtocol?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    static func build() -> ConferenceDateViewController {
+        let conferenceDateViewController: ConferenceDateViewController = UIStoryboard(storyboard: .conference).instantiateViewController()
+        return conferenceDateViewController
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,7 +64,7 @@ class ConferenceDateViewController: UIViewController, ConferenceDateViewProtocol
         
         func changeUnactiveButton(_ button: UIButton) {
             button.isEnabled = true
-            button.backgroundColor = UIColor.PyConJP2016.gray
+            button.backgroundColor = UIColor.PyConJP2017.gray
             button.setTitleColor(.white, for: UIControlState())
         }
         

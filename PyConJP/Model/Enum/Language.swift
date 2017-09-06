@@ -1,22 +1,44 @@
 //
 //  Language.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 7/11/16.
 //  Copyright © 2016 PyCon JP. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-enum Language: String {
-    case En = "en"
-    case Ja = "ja"
+enum Language: CustomStringConvertible {
+    case en
+    case ja
+    
+    var description: String {
+        switch self {
+        case .en:
+            return "en"
+        case .ja:
+            return "ja"
+        }
+    }
     
     var localized: String {
         switch self {
-        case .En: return NSLocalizedString("English", tableName: "Language", comment: "")
-        case .Ja: return NSLocalizedString("Japanese", tableName: "Language", comment: "")
+        case .en:
+            return NSLocalizedString("english", tableName: "Language", comment: "")
+        case .ja:
+            return NSLocalizedString("japanese", tableName: "Language", comment: "")
             
+        }
+    }
+    
+    init?(_ string: String) {
+        switch string {
+        case Language.en.description:
+            self = .en
+        case Language.ja.description:
+            self = .ja
+        default:
+            return nil
         }
     }
 }

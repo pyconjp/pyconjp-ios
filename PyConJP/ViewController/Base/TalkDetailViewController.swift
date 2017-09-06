@@ -1,6 +1,6 @@
 //
 //  TalkDetailViewController.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 2016/02/23.
 //  Copyright © 2016 PyCon JP. All rights reserved.
@@ -8,9 +8,10 @@
 
 import UIKit
 import SafariServices
+import APIKit
 import RealmSwift
 
-class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, TwitterURLSchemeProtocol, ErrorAlertProtocol {
+class TalkDetailViewController: UIViewController, StoryboardIdentifiable, TwitterURLSchemeProtocol, ErrorAlertProtocol {
     
     @IBOutlet weak var baseScrollView: UIScrollView! {
         didSet {
@@ -49,11 +50,11 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
     var id: Int?
     private var talkDetail: TalkDetail? {
         didSet {
-            if let talkDetail = talkDetail {
-                speakersCollectionViewDataSource.speakers = talkDetail.speakers
-            } else {
+            guard let talkDetail = talkDetail else {
                 speakersCollectionViewDataSource.speakers.removeAll()
+                return
             }
+            speakersCollectionViewDataSource.speakers = talkDetail.speakers
         }
     }
     
@@ -63,8 +64,8 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
     
     private lazy var speakersCollectionViewHeight: CGFloat = self.speakersCollectionViewHeightConstraint.constant
     
-    class func build(id: Int) -> TalkDetailViewController {
-        let talkDetailViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TalkDetailViewController") as! TalkDetailViewController
+    static func build(id: Int) -> TalkDetailViewController {
+        let talkDetailViewController: TalkDetailViewController = UIStoryboard(storyboard: .main).instantiateViewController()
         talkDetailViewController.id = id
         return talkDetailViewController
     }
@@ -84,8 +85,8 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
         do {
             let realm = try Realm()
             if let talkObject = realm.object(ofType: TalkObject.self, forPrimaryKey: talkDetail.talkObject.id) {
-                talkDetail.talkObject.favorited = talkObject.favorited
-                toggleBookmarkBarButtonItem(isFavorite: talkDetail.talkObject.favorited)
+                talkDetail.talkObject.isFavorite = talkObject.isFavorite
+                toggleBookmarkBarButtonItem(talkDetail.talkObject.isFavorite)
             }
         } catch {
             
@@ -99,16 +100,20 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
     }
     
     private func getDetail() {
-        getTalkDetail { [weak self](result) in
-            guard let weakSelf = self else { return }
+        guard let id = id else { return }
+        let request = TalkDetailAPIRequest(id: id)
+        Session.send(request) { [weak self](result) in
             switch result {
             case .success(let talkDetail):
-                weakSelf.talkDetail = talkDetail
-                weakSelf.fillData()
-                weakSelf.refreshControl.endRefreshing()
+                self?.talkDetail = talkDetail
+                self?.fillData()
+                self?.refreshControl.endRefreshing()
             case .failure(let error):
-                weakSelf.refreshControl.endRefreshing()
-                weakSelf.showErrorAlart(with: error, parent: weakSelf)
+                self?.refreshControl.endRefreshing()
+                guard let weakSelf = self else { return }
+                DispatchQueue.main.async {
+                    self?.showErrorAlart(with: error, parent: weakSelf)
+                }
             }
         }
     }
@@ -121,26 +126,26 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
             self.dayLabel.text = talkDetail.talkObject.day
             self.periodTimeLabel.text = talkDetail.talkObject.periodTime
             
-            self.placeLabel.text = talkDetail.talkObject.place
+            self.placeLabel.text = talkDetail.talkObject.room?.description
             self.placeLabel.textColor = talkDetail.talkObject.room?.color ?? UIColor.black
             self.hashTagButton.setTitle((talkDetail.talkObject.room?.hashTag ?? "#pyconjp"), for: UIControlState())
             
             self.speakersCollectionViewHeightConstraint.constant = talkDetail.speakers.isEmpty ? 0 : self.speakersCollectionViewHeight
             self.speakersCollectionView.reloadData()
             
-            self.languageLabel.text = talkDetail.talkObject.languageType?.localized
+            self.languageLabel.text = talkDetail.talkObject.language?.localized
             self.levelLabel.text = talkDetail.level
             self.categoryLabel.text = talkDetail.talkObject.category
             
             self.descriptionTextView.text = talkDetail.talkObject.descriptionText
             self.abstractTextView.text = talkDetail.abstract
             
-            self.toggleBookmarkBarButtonItem(isFavorite: talkDetail.talkObject.favorited)
+            self.toggleBookmarkBarButtonItem(talkDetail.talkObject.isFavorite)
         }
         
     }
     
-    func toggleBookmarkBarButtonItem(isFavorite: Bool) {
+    func toggleBookmarkBarButtonItem(_ isFavorite: Bool) {
         let image = isFavorite ? #imageLiteral(resourceName: "BookmarkOn") : #imageLiteral(resourceName: "BookmarkOff")
         DispatchQueue.main.async {
             self.bookmarkBarButtonItem.image = image
@@ -154,14 +159,10 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
     @IBAction func onBookmarkBarButton(_ sender: UIBarButtonItem) {
         guard let talkDetail = talkDetail else { return }
         do {
-            talkDetail.talkObject.favorited = !talkDetail.talkObject.favorited
-            let realm = try Realm()
-            try realm.write({
-                realm.create(TalkObject.self, value: ["id": talkDetail.talkObject.id, "favorited": talkDetail.talkObject.favorited], update: true)
-            })
-            toggleBookmarkBarButtonItem(isFavorite: talkDetail.talkObject.favorited)
+            try talkDetail.talkObject.invertFavorite()
+            toggleBookmarkBarButtonItem(talkDetail.talkObject.isFavorite)
         } catch {
-            
+            self.showErrorAlart(with: error)
         }
     }
     
@@ -171,7 +172,7 @@ class TalkDetailViewController: UIViewController, TalkDetailAPIProtocol, Twitter
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: IndexPath) {
-        guard let userName = speakersCollectionViewDataSource.speakers[(indexPath as NSIndexPath).row].twitterName else { return }
+        guard let userName = speakersCollectionViewDataSource.speakers[indexPath.row].twitterName else { return }
         openTwitter(userName: userName, from: self)
     }
 }

@@ -1,14 +1,15 @@
 //
 //  ConferenceListViewController.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 2016/03/07.
 //  Copyright © 2016 PyCon JP. All rights reserved.
 //
 
 import UIKit
+import APIKit
 
-class ConferenceListViewController: UIViewController, UITableViewDelegate, TalksAPIProtocol, ErrorAlertProtocol {
+class ConferenceListViewController: UIViewController, ErrorAlertProtocol {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -27,7 +28,7 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     private(set) var viewControllerIndex: Int = 0
     private(set) var pyconJPDate: PyConJPDate?
     
-    private lazy var conferenceListDataSource: ConferenceListDataSource = ConferenceListDataSource(day: self.pyconJPDate?.rawValue)
+    fileprivate lazy var conferenceListDataSource: ConferenceListDataSource = ConferenceListDataSource(day: self.pyconJPDate?.description)
     
     private let refreshControl = UIRefreshControl()
     
@@ -35,7 +36,7 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
         NotificationCenter.default.removeObserver(self)
     }
     
-    class func build(at index: Int, storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ConferenceListViewController {
+    static func build(at index: Int, storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ConferenceListViewController {
         let conferenceListViewController = storyboard.instantiateViewController(withIdentifier: "ConferenceListViewController") as! ConferenceListViewController
         conferenceListViewController.viewControllerIndex = index
         conferenceListViewController.pyconJPDate = pyconJPDate
@@ -46,7 +47,7 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(ConferenceListViewController.refreshNotification(_:)), name: NSNotification.Name(rawValue: PCJNotificationConfig.CompleteFetchDataNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ConferenceListViewController.refreshNotification(_:)), name: NSNotification.Name(rawValue: PCJNotificationConfig.completeFetchDataNotification), object: nil)
         
         refreshControl.beginRefreshing()
         refresh()
@@ -64,14 +65,16 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     func onRefresh(_ sender: UIRefreshControl) {
         conferenceListDataSource.timelines.removeAll()
         tableView.reloadData()
-        getTalks { [weak self](result) in
-            guard let weakSelf = self else { return }
+        conferenceListDataSource.getTalksFromAPI { [weak self](result) in
             switch result {
             case .success:
-                weakSelf.refresh()
+                self?.refresh()
             case .failure(let error):
-                weakSelf.refreshControl.endRefreshing()
-                weakSelf.showErrorAlart(with: error, parent: weakSelf)
+                self?.refreshControl.endRefreshing()
+                guard let weakSelf = self else { return }
+                DispatchQueue.main.async {
+                    self?.showErrorAlart(with: error, parent: weakSelf)
+                }
             }
         }
     }
@@ -82,33 +85,35 @@ class ConferenceListViewController: UIViewController, UITableViewDelegate, Talks
     
     func refresh() {
         conferenceListDataSource.refreshData { [weak self](result) in
-            guard let weakSelf = self else { return }
             switch result {
             case .success:
                 DispatchQueue.main.async {
-                    weakSelf.tableView.reloadData()
-                    if !weakSelf.conferenceListDataSource.timelines.isEmpty {
-                        weakSelf.refreshControl.endRefreshing()
-                    }
+                    self?.tableView.reloadData()
+//                    if !(self?.conferenceListDataSource.timelines.isEmpty ?? false) {
+                        self?.refreshControl.endRefreshing()
+//                    }
                 }
             case .failure(let error):
+                self?.refreshControl.endRefreshing()
+                guard let weakSelf = self else { return }
                 DispatchQueue.main.async {
-                    weakSelf.showErrorAlart(with: error, parent: weakSelf)
-                    weakSelf.refreshControl.endRefreshing()
+                    self?.showErrorAlart(with: error, parent: weakSelf)
                 }
             }
         }
 
     }
     
-    // MARK: - Table View Controller Delegate
+}
+
+extension ConferenceListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let talkObject = conferenceListDataSource.timelines[(indexPath as NSIndexPath).section].talks[(indexPath as NSIndexPath).row]
+        let talkObject = conferenceListDataSource.timelines[indexPath.section].talks[indexPath.row]
         let talkDetailViewController = TalkDetailViewController.build(id: talkObject.id)
         self.navigationController?.pushViewController(talkDetailViewController, animated: true)
     }

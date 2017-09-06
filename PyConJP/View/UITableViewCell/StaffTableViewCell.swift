@@ -1,6 +1,6 @@
 //
 //  StaffTableViewCell.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 9/10/16.
 //  Copyright © 2016 PyCon JP. All rights reserved.
@@ -38,12 +38,12 @@ class StaffTableViewCell: UITableViewCell {
     
     private func toggleFacebookButton(enabled: Bool) {
         facebookButton.isEnabled = enabled
-        facebookButton.backgroundColor = enabled ? UIColor.facebook : UIColor.PyConJP2016.gray
+        facebookButton.backgroundColor = enabled ? UIColor.facebook : UIColor.PyConJP2017.gray
     }
     
     private func toggleTwitterButton(enabled: Bool) {
         twitterButton.isEnabled = enabled
-        twitterButton.backgroundColor = enabled ? UIColor.twitter : UIColor.PyConJP2016.gray
+        twitterButton.backgroundColor = enabled ? UIColor.twitter : UIColor.PyConJP2017.gray
     }
     
     @IBAction func onFacebookButton(_ sender: UIButton) {

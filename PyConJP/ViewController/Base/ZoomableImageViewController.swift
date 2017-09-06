@@ -1,6 +1,6 @@
 //
 //  ZoomableImageViewController.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 9/12/16.
 //  Copyright © 2016 PyCon JP. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZoomableImageViewController: UIViewController, UIScrollViewDelegate {
+class ZoomableImageViewController: UIViewController, UIScrollViewDelegate, StoryboardIdentifiable {
     
     @IBOutlet weak var toolBar: UIToolbar!
     
@@ -17,8 +17,9 @@ class ZoomableImageViewController: UIViewController, UIScrollViewDelegate {
     
     private var isCompletedLayoutSubviews = false
     
-    class func build() -> ZoomableImageViewController {
-        return UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ZoomableImageViewController") as! ZoomableImageViewController
+    static func build() -> ZoomableImageViewController {
+        let zoomableImageViewController: ZoomableImageViewController = UIStoryboard(storyboard: .main).instantiateViewController()
+        return zoomableImageViewController
     }
     
     override var prefersStatusBarHidden: Bool {

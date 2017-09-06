@@ -1,4 +1,6 @@
 # PyCon JP use Library
-github "Alamofire/Alamofire" ~> 4.0
-github "Alamofire/AlamofireImage" ~> 3.0
+github "ishkawa/APIKit" ~> 3.0
+github "antitypical/Result" ~> 3.0
+github "onevcat/Kingfisher" ~> 3.0
 github "realm/realm-cocoa" ~> 2.0
+github "kishikawakatsumi/SpreadsheetView"

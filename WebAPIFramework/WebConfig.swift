@@ -1,18 +1,18 @@
 //
 //  PCJConfig.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 8/30/2016.
 //  Copyright © 2016 PyCon JP. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public enum WebConfig {
     
     public static let hostURL = ProcessInfo.processInfo.environment["APIBaseURL"] ?? "https://pycon.jp"
     
-    public static let baseURL = WebConfig.hostURL + "/2016/" + Locale.currentLanguageLocaleIdentifier + "/"
+    public static let baseURL = WebConfig.hostURL + "/2017/" + Locale.currentLanguageLocaleIdentifier + "/"
     
     static let apiURL = WebConfig.baseURL + "api/"
     

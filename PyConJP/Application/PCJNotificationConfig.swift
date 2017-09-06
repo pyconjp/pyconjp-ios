@@ -1,15 +1,15 @@
 //
 //  PCJNotificationConfig.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 2016/07/21.
 //  Copyright © 2016 PyCon JP. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 enum PCJNotificationConfig {
     
-    static let CompleteFetchDataNotification = "CompleteFetchDateNotification"
+    static let completeFetchDataNotification = "CompleteFetchDateNotification"
     
 }

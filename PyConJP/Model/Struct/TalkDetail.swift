@@ -1,12 +1,12 @@
 //
 //  TalkDetail.swift
-//  PyConJP2016
+//  PyConJP
 //
 //  Created by Yutaro Muta on 2016/02/22.
 //  Copyright © 2016 PyCon JP. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 struct TalkDetail {
     
@@ -19,11 +19,19 @@ struct TalkDetail {
 
 extension TalkDetail {
     
-    init(dictionary: [String: Any]) {
-        self.init(talkObject: TalkObject(dictionary: dictionary),
-                  speakers: (dictionary["speaker_infomations"] as? [[String: Any]] ?? []).map({ Speaker.init(dictionary: $0) }),
-                  abstract: dictionary["abstract"] as? String ?? "",
-                  level: dictionary["level"] as? String ?? "")
+    init?(dictionary: [String: Any]) {
+        guard let talkObject = TalkObject(dictionary: dictionary),
+            let abstract = dictionary["abstract"] as? String,
+            let level = dictionary["level"] as? String else { return nil }
+        self.init(talkObject: talkObject,
+                  speakers: (dictionary["speaker_infomations"] as? [[String: Any]] ?? []).map({ Speaker(dictionary: $0) }),
+                  abstract: abstract,
+                  level: level)
     }
 
+    init?(object: Any) {
+        guard let dictionary = object as? [String: Any] else { return nil}
+        self.init(dictionary: dictionary)
+    }
+    
 }
