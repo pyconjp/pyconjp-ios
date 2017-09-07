@@ -90,6 +90,7 @@
 		DB1140B71F5EAC8F0046442E /* TalksAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1140B41F5EAC8F0046442E /* TalksAPIRequest.swift */; };
 		DB1140B91F5EACDE0046442E /* SurveyURLAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1140B81F5EACDE0046442E /* SurveyURLAPIRequest.swift */; };
 		DB1140BC1F604A860046442E /* MoreList.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB1140BE1F604A860046442E /* MoreList.strings */; };
+		DB1140C51F60506D0046442E /* MoreListDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1140C41F60506D0046442E /* MoreListDataStore.swift */; };
 		DB28C1921F59AFB2003BEFE0 /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB28C1911F59AFB2003BEFE0 /* GitHubRequest.swift */; };
 		DB4BC68F1EF5098D00650964 /* SpreadsheetView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4BC68E1EF5098D00650964 /* SpreadsheetView.framework */; };
 		DB4BC6911EF522CD00650964 /* ConferenceTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4BC6901EF522CD00650964 /* ConferenceTimetableViewController.swift */; };
@@ -280,6 +281,7 @@
 		DB1140BD1F604A860046442E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/MoreList.strings; sourceTree = "<group>"; };
 		DB1140BF1F604C620046442E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MoreList.strings; sourceTree = "<group>"; };
 		DB1140C01F604C630046442E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MoreList.strings; sourceTree = "<group>"; };
+		DB1140C41F60506D0046442E /* MoreListDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreListDataStore.swift; sourceTree = "<group>"; };
 		DB28C1911F59AFB2003BEFE0 /* GitHubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
 		DB4BC68E1EF5098D00650964 /* SpreadsheetView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpreadsheetView.framework; path = Carthage/Build/iOS/SpreadsheetView.framework; sourceTree = "<group>"; };
 		DB4BC6901EF522CD00650964 /* ConferenceTimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceTimetableViewController.swift; sourceTree = "<group>"; };
@@ -743,6 +745,14 @@
 			path = PyConJP;
 			sourceTree = "<group>";
 		};
+		DB1140C11F6050360046442E /* More */ = {
+			isa = PBXGroup;
+			children = (
+				DB1140C41F60506D0046442E /* MoreListDataStore.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
 		DB4BC6921EF5257200650964 /* SpreadsheetViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -760,6 +770,7 @@
 			isa = PBXGroup;
 			children = (
 				DB4BC6A61EF5925800650964 /* Conference */,
+				DB1140C11F6050360046442E /* More */,
 				DB4BC6961EF5916D00650964 /* DataSource */,
 			);
 			path = DataStore;
@@ -1259,6 +1270,7 @@
 				DB7EAADB1EEEF76A00FEF504 /* UIImageViewExtension.swift in Sources */,
 				DB05D1E11E43FBCB00781BF7 /* ConferenceListViewController.swift in Sources */,
 				DB10DE9D1EDFDF3B00DAED31 /* UIStoryboardExtension.swift in Sources */,
+				DB1140C51F60506D0046442E /* MoreListDataStore.swift in Sources */,
 				DB05D1B41E43FBCB00781BF7 /* TalkDetail.swift in Sources */,
 				DB05D1E31E43FBCB00781BF7 /* ConferencePageViewController.swift in Sources */,
 				DB05D1DB1E43FBCB00781BF7 /* DetailImageViewController.swift in Sources */,
