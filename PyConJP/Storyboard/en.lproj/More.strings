@@ -28,54 +28,6 @@
 /* Class = "UIBarButtonItem"; title = " "; ObjectID = "atp-H1-RH7"; */
 "atp-H1-RH7.title" = " ";
 
-/* Class = "UILabel"; text = "Participants Information"; ObjectID = "AUO-Ab-Rn1"; */
-"AUO-Ab-Rn1.text" = "Participants Information";
-
-/* Class = "UILabel"; text = "What is PyCon JP?"; ObjectID = "uwO-ra-bUh"; */
-"uwO-ra-bUh.text" = "What is PyCon JP?";
-
-/* Class = "UILabel"; text = "Code of Conduct"; ObjectID = "mBD-f5-xKD"; */
-"mBD-f5-xKD.text" = "Code of Conduct";
-
-/* Class = "UILabel"; text = "Summary"; ObjectID = "8dF-VI-mA2"; */
-"8dF-VI-mA2.text" = "Summary";
-
-/* Class = "UILabel"; text = "Sponsor"; ObjectID = "yFZ-CD-jgB"; */
-"yFZ-CD-jgB.text" = "Sponsor";
-
-/* Class = "UILabel"; text = "Staff List"; ObjectID = "fe1-28-yP9"; */
-"fe1-28-yP9.text" = "Staff List";
-
-/* Class = "UILabel"; text = "Survey"; ObjectID = "Ksi-rC-XC6"; */
-"Ksi-rC-XC6.text" = "Survey";
-
-/* Class = "UITableViewSection"; headerTitle = "Venue Information"; ObjectID = "OVX-Ci-m6R"; */
-"OVX-Ci-m6R.headerTitle" = "Venue Information";
-
-/* Class = "UILabel"; text = "Tutorials・Conference"; ObjectID = "hoO-0c-K2E"; */
-"hoO-0c-K2E.text" = "Tutorials・Conference";
-
-/* Class = "UILabel"; text = "Sprints"; ObjectID = "J3n-hJ-8rS"; */
-"J3n-hJ-8rS.text" = "Sprints";
-
-/* Class = "UITableViewSection"; headerTitle = "About Application"; ObjectID = "FgW-wC-612"; */
-"FgW-wC-612.headerTitle" = "About Application";
-
-/* Class = "UILabel"; text = "Repository"; ObjectID = "PYC-kg-am7"; */
-"PYC-kg-am7.text" = "Repository";
-
-/* Class = "UILabel"; text = "Acknowledgments"; ObjectID = "Mrt-oQ-gLO"; */
-"Mrt-oQ-gLO.text" = "Acknowledgments";
-
-/* Class = "UILabel"; text = "The MIT License (MIT)"; ObjectID = "YPP-Wn-fR4"; */
-"YPP-Wn-fR4.text" = "The MIT License (MIT)";
-
-/* Class = "UILabel"; text = "Feedback (Open Mail)"; ObjectID = "TPw-fl-DhO"; */
-"TPw-fl-DhO.text" = "Feedback (Open Mail)";
-
-/* Class = "UITableViewSection"; footerTitle = " "; ObjectID = "FgW-wC-612"; */
-"FgW-wC-612.footerTitle" = " ";
-
 
 /**
  WhatsPyConJPViewController

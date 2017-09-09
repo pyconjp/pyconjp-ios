@@ -1,0 +1,28 @@
+/* 
+  MoreList.strings
+  PyConJP
+
+  Created by Yutaro Muta on 2017/09/07.
+  Copyright © 2017 PyCon JP. All rights reserved.
+*/
+
+/**
+ MoreListViewController
+ */
+
+"participantsInformation" = "参加の手引き";
+"whatsPyConJP" = "PyCon JPってなに？";
+"codeOfConduct" = "行動規範";
+"summary" = "開催概要";
+"sponsor" = "スポンサー";
+"staffList" = "スタッフ一覧";
+"survey" = "アンケート";
+
+"venue" = "会場情報";
+"conferenceMap" = "チュートリアル・カンファレンス";
+"sprintMap" = "スプリント";
+
+"application" = "このアプリについて";
+"repository" = "リポジトリ";
+"license" = "The MIT License (MIT)";
+"feedback" = "フィードバック (Mailを起動)";

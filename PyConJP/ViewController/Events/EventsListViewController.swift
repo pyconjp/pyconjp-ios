@@ -25,7 +25,7 @@ class EventsListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section].headerTitle
+        return sections[section].title
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,7 +49,7 @@ class EventsListViewController: UITableViewController {
         
         static let sections: [Section] = [.tutorialsDay, .conferenseDay, .sprintsDay]
         
-        var headerTitle: String {
+        var title: String {
             switch self {
             case .tutorialsDay:
                 return "2017-09-07"
