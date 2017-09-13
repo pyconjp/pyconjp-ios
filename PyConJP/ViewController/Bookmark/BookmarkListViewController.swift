@@ -48,7 +48,7 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate, Storybo
         refresh()
     }
     
-    func refreshNotification(_ notification: Notification) {
+    @objc func refreshNotification(_ notification: Notification) {
         refresh()
     }
     

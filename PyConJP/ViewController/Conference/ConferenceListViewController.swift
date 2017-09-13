@@ -62,7 +62,7 @@ class ConferenceListViewController: UIViewController, ErrorAlertProtocol {
         
     }
     
-    func onRefresh(_ sender: UIRefreshControl) {
+    @objc func onRefresh(_ sender: UIRefreshControl) {
         conferenceListDataSource.timelines.removeAll()
         tableView.reloadData()
         conferenceListDataSource.getTalksFromAPI { [weak self](result) in
@@ -79,7 +79,7 @@ class ConferenceListViewController: UIViewController, ErrorAlertProtocol {
         }
     }
     
-    func refreshNotification(_ notification: Notification) {
+    @objc func refreshNotification(_ notification: Notification) {
         refresh()
     }
     

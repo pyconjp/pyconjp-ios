@@ -49,7 +49,7 @@ class StaffListViewController: UIViewController, StoryboardIdentifiable, Twitter
         
     }
     
-    func onRefresh(_ sender: UIRefreshControl) {
+    @objc func onRefresh(_ sender: UIRefreshControl) {
         refresh()
     }
     

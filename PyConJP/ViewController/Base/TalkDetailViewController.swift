@@ -94,7 +94,7 @@ class TalkDetailViewController: UIViewController, StoryboardIdentifiable, Twitte
         
     }
     
-    func refresh(_ refreshControl: UIRefreshControl) {
+    @objc func refresh(_ refreshControl: UIRefreshControl) {
         talkDetail = nil
         getDetail()
     }

@@ -73,11 +73,11 @@ class ZoomableImageViewController: UIViewController, UIScrollViewDelegate, Story
         toolBar.isHidden = true
     }
     
-    func singleTap(_ gesture: UITapGestureRecognizer) {
+    @objc func singleTap(_ gesture: UITapGestureRecognizer) {
         toggleToolBarHiddenWithAnimation(!toolBar.isHidden)
     }
     
-    func doubleTap(_ gesture: UITapGestureRecognizer) {
+    @objc func doubleTap(_ gesture: UITapGestureRecognizer) {
         UIView.animate(withDuration: 0.2, animations: {
             self.baseScrollView?.zoomScale = 1
         }) 
