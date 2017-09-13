@@ -21,7 +21,7 @@ class BookmarkListDataSource: TimelineDataSource {
             for tuple in keys.enumerated() {
                 timelines.append(Timeline(key: keys[tuple.offset], talks: talks.filter { $0.day == keys[tuple.offset]}))
             }
-            completionHandler(.success())
+            completionHandler(.success(()))
         } catch let error as NSError {
             completionHandler(.failure(error))
         }

@@ -35,7 +35,7 @@ class CustomImageView: UIImageView {
         //        self.addGestureRecognizer(panGesture)
     }
     
-    func handleGesture(_ gesture: UIGestureRecognizer) {
+    @objc func handleGesture(_ gesture: UIGestureRecognizer) {
         if let doubleTapGesture = gesture as? UITapGestureRecognizer {
             doubleTap(gesture: doubleTapGesture)
         } else if let pinchGesture = gesture as? UIPinchGestureRecognizer {
