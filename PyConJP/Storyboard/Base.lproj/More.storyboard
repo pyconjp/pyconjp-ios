@@ -770,32 +770,24 @@ We expect participants to follow these rules at conference and workshop venues a
                                     <outlet property="delegate" destination="hhW-At-Wtj" id="VLa-2w-reU"/>
                                 </connections>
                             </scrollView>
-                            <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.0" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xom-51-Gi3">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="MQr-xy-iCo"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem systemItem="stop" id="4XM-P3-vpc">
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <action selector="onCloseButton:" destination="hhW-At-Wtj" id="ipF-ZY-eBB"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jb2-gB-fGL">
+                                <rect key="frame" x="0.0" y="44" width="36" height="36"/>
+                                <state key="normal" image="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClose:" destination="hhW-At-Wtj" eventType="touchUpInside" id="6G0-TX-erI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Xom-51-Gi3" firstAttribute="top" secondItem="rnB-oC-k3l" secondAttribute="top" id="4la-8O-1ax"/>
                             <constraint firstItem="g8d-9r-04f" firstAttribute="top" secondItem="LSb-QY-qaR" secondAttribute="top" id="E9h-jX-QQ6"/>
                             <constraint firstAttribute="bottom" secondItem="g8d-9r-04f" secondAttribute="bottom" id="Fvz-ba-NqS"/>
-                            <constraint firstItem="rnB-oC-k3l" firstAttribute="trailing" secondItem="Xom-51-Gi3" secondAttribute="trailing" id="LkA-FB-tg8"/>
+                            <constraint firstItem="Jb2-gB-fGL" firstAttribute="top" secondItem="rnB-oC-k3l" secondAttribute="top" id="Kz5-lM-wHT"/>
+                            <constraint firstItem="Jb2-gB-fGL" firstAttribute="leading" secondItem="rnB-oC-k3l" secondAttribute="leading" id="YBr-JV-dgz"/>
                             <constraint firstItem="g8d-9r-04f" firstAttribute="leading" secondItem="rnB-oC-k3l" secondAttribute="leading" id="aGQ-Ym-jPY"/>
                             <constraint firstItem="nJq-te-IHj" firstAttribute="width" secondItem="LSb-QY-qaR" secondAttribute="width" priority="750" id="bYp-Zv-RnS"/>
-                            <constraint firstItem="Xom-51-Gi3" firstAttribute="leading" secondItem="rnB-oC-k3l" secondAttribute="leading" id="cdm-aH-EhB"/>
                             <constraint firstItem="nJq-te-IHj" firstAttribute="height" secondItem="LSb-QY-qaR" secondAttribute="height" priority="750" id="ceR-bV-oDd"/>
                             <constraint firstItem="rnB-oC-k3l" firstAttribute="trailing" secondItem="g8d-9r-04f" secondAttribute="trailing" id="tej-q3-FZD"/>
                         </constraints>
@@ -806,8 +798,8 @@ We expect participants to follow these rules at conference and workshop venues a
                     </navigationItem>
                     <connections>
                         <outlet property="baseScrollView" destination="g8d-9r-04f" id="p6x-w4-zf0"/>
+                        <outlet property="closeButton" destination="Jb2-gB-fGL" id="kDP-rs-ubt"/>
                         <outlet property="imageView" destination="nJq-te-IHj" id="Kye-OF-De0"/>
-                        <outlet property="toolBar" destination="Xom-51-Gi3" id="uoi-hh-2rE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ucW-TQ-iOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -816,6 +808,7 @@ We expect participants to follow these rules at conference and workshop venues a
         </scene>
     </scenes>
     <resources>
+        <image name="Close" width="36" height="36"/>
         <image name="More" width="36" height="36"/>
     </resources>
 </document>

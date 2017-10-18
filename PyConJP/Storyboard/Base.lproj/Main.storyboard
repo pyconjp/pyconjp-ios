@@ -477,41 +477,30 @@
                                     <outlet property="delegate" destination="HRg-2a-QnY" id="JEn-YQ-yJO"/>
                                 </connections>
                             </scrollView>
-                            <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.0" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJ6-fC-Q2b">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="UPu-wN-nfb"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem systemItem="stop" id="mT9-ir-evS">
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <action selector="onCloseButton:" destination="HRg-2a-QnY" id="FEe-Px-Mf3"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mjp-Ge-Xh0">
+                                <rect key="frame" x="0.0" y="44" width="36" height="36"/>
+                                <state key="normal" image="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Mjp-Ge-Xh0" firstAttribute="leading" secondItem="tO0-Em-C59" secondAttribute="leading" id="0VU-Od-gee"/>
                             <constraint firstItem="XzD-9T-h16" firstAttribute="height" secondItem="A3Y-jc-ROr" secondAttribute="height" priority="750" id="5ed-9d-q61"/>
                             <constraint firstAttribute="bottom" secondItem="KM5-Ef-bYc" secondAttribute="bottom" id="WT4-Wn-Vnn"/>
                             <constraint firstItem="KM5-Ef-bYc" firstAttribute="top" secondItem="A3Y-jc-ROr" secondAttribute="top" id="Wkd-zE-qql"/>
                             <constraint firstItem="KM5-Ef-bYc" firstAttribute="leading" secondItem="tO0-Em-C59" secondAttribute="leading" id="co1-pk-Fvo"/>
-                            <constraint firstItem="dJ6-fC-Q2b" firstAttribute="leading" secondItem="tO0-Em-C59" secondAttribute="leading" id="dC9-SG-AgW"/>
                             <constraint firstItem="XzD-9T-h16" firstAttribute="width" secondItem="A3Y-jc-ROr" secondAttribute="width" priority="750" id="fHC-az-WTB"/>
-                            <constraint firstItem="dJ6-fC-Q2b" firstAttribute="top" secondItem="tO0-Em-C59" secondAttribute="top" id="jlY-Mb-gLf"/>
+                            <constraint firstItem="Mjp-Ge-Xh0" firstAttribute="top" secondItem="tO0-Em-C59" secondAttribute="top" id="hnP-vI-uh9"/>
                             <constraint firstItem="tO0-Em-C59" firstAttribute="trailing" secondItem="KM5-Ef-bYc" secondAttribute="trailing" id="m7G-RI-dhZ"/>
-                            <constraint firstItem="tO0-Em-C59" firstAttribute="trailing" secondItem="dJ6-fC-Q2b" secondAttribute="trailing" id="yRO-lQ-pCI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tO0-Em-C59"/>
                     </view>
                     <connections>
                         <outlet property="baseScrollView" destination="KM5-Ef-bYc" id="Kud-dg-3jg"/>
+                        <outlet property="closeButton" destination="Mjp-Ge-Xh0" id="9eV-Cd-sNS"/>
                         <outlet property="imageView" destination="XzD-9T-h16" id="tIg-Cp-q9b"/>
-                        <outlet property="toolBar" destination="dJ6-fC-Q2b" id="Gb0-4a-Td6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4K-uA-cgz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -522,6 +511,7 @@
     <resources>
         <image name="BookmarkOff" width="36" height="36"/>
         <image name="Clock" width="36" height="36"/>
+        <image name="Close" width="36" height="36"/>
         <image name="Pin" width="36" height="36"/>
     </resources>
 </document>
