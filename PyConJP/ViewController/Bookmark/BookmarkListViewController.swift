@@ -12,7 +12,7 @@ class BookmarkListViewController: UIViewController, UITableViewDelegate, Storybo
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            let nib  = UINib(nibName: bookmarkListDataSource.reuseIdentifier, bundle:nil)
+            let nib  = UINib(nibName: bookmarkListDataSource.reuseIdentifier, bundle: nil)
             tableView.register(nib, forCellReuseIdentifier: bookmarkListDataSource.reuseIdentifier)
             tableView.dataSource = bookmarkListDataSource
             tableView.rowHeight = UITableViewAutomaticDimension

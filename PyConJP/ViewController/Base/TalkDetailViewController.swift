@@ -32,7 +32,7 @@ class TalkDetailViewController: UIViewController, StoryboardIdentifiable, Twitte
     
     @IBOutlet weak var speakersCollectionView: UICollectionView! {
         didSet {
-            let nib  = UINib(nibName: speakersCollectionViewDataSource.reuseIdentifier, bundle:nil)
+            let nib  = UINib(nibName: speakersCollectionViewDataSource.reuseIdentifier, bundle: nil)
             speakersCollectionView.register(nib, forCellWithReuseIdentifier: speakersCollectionViewDataSource.reuseIdentifier)
             speakersCollectionView.dataSource = speakersCollectionViewDataSource
         }

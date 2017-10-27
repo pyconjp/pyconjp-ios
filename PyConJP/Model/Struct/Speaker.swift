@@ -18,7 +18,7 @@ struct Speaker {
 
 extension Speaker {
     
-    init(dictionary: [String : Any]) {
+    init(dictionary: [String: Any]) {
         name = dictionary["name"] as? String ?? ""
         imageURL = dictionary["image_uri"] as? String
         twitterAccount = dictionary["twitter"] as? String
