@@ -2,9 +2,9 @@ name: Result, nameSpecified: , owner: antitypical, version: 3.2.3
 
 name: APIKit, nameSpecified: , owner: ishkawa, version: 3.1.2
 
-name: SpreadsheetView, nameSpecified: , owner: kishikawakatsumi, version: v0.8.3
+name: SpreadsheetView, nameSpecified: , owner: kishikawakatsumi, version: v0.8.4
 
-name: Kingfisher, nameSpecified: , owner: onevcat, version: 3.12.1
+name: Kingfisher, nameSpecified: , owner: onevcat, version: 3.13.0
 
 name: realm-cocoa, nameSpecified: , owner: realm, version: v2.10.0
 

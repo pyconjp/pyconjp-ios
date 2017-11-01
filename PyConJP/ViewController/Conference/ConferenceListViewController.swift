@@ -13,7 +13,7 @@ class ConferenceListViewController: UIViewController, ErrorAlertProtocol {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            let nib  = UINib(nibName: conferenceListDataSource.reuseIdentifier, bundle:nil)
+            let nib  = UINib(nibName: conferenceListDataSource.reuseIdentifier, bundle: nil)
             tableView.register(nib, forCellReuseIdentifier: conferenceListDataSource.reuseIdentifier)
             
             refreshControl.addTarget(self, action: #selector(ConferenceListViewController.onRefresh(_:)), for: .valueChanged)
@@ -62,7 +62,7 @@ class ConferenceListViewController: UIViewController, ErrorAlertProtocol {
         
     }
     
-    func onRefresh(_ sender: UIRefreshControl) {
+    @objc func onRefresh(_ sender: UIRefreshControl) {
         conferenceListDataSource.timelines.removeAll()
         tableView.reloadData()
         conferenceListDataSource.getTalksFromAPI { [weak self](result) in
@@ -79,7 +79,7 @@ class ConferenceListViewController: UIViewController, ErrorAlertProtocol {
         }
     }
     
-    func refreshNotification(_ notification: Notification) {
+    @objc func refreshNotification(_ notification: Notification) {
         refresh()
     }
     

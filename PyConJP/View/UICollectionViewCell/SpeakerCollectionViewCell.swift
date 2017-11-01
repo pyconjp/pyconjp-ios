@@ -25,7 +25,7 @@ class SpeakerCollectionViewCell: UICollectionViewCell {
         iconImageView.setImage(withURL: URL(string: WebConfig.hostURL + (speaker.imageURL ?? "")),
                                imageTrainsition: UIImageView.ImageTransition.crossDissolve(0.3))
         nameLabel.text = speaker.name
-        twitterLabel.text = (speaker.twitterName != nil ? "@\(speaker.twitterName!)" : nil)
+        twitterLabel.text = (speaker.twitterAccount != nil ? "@\(speaker.twitterAccount!)" : nil)
     }
     
 }

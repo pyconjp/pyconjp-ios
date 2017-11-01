@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     
-    func topMostViewController() -> UIViewController {
+    @objc func topMostViewController() -> UIViewController {
         if let presentedViewController = self.presentedViewController {
             return presentedViewController.topMostViewController()
         } else {

@@ -41,7 +41,7 @@ final class ConferenceTimetableViewController: UIViewController, StoryboardIdent
         refresh()
     }
     
-    func refreshNotification(_ notification: Notification) {
+    @objc func refreshNotification(_ notification: Notification) {
         refresh()
     }
     
