@@ -1,13 +1,13 @@
-name: Result, nameSpecified: , owner: antitypical, version: 3.2.3
+name: Result, nameSpecified: , owner: antitypical, version: 3.2.4
 
 name: APIKit, nameSpecified: , owner: ishkawa, version: 3.1.2
 
-name: SpreadsheetView, nameSpecified: , owner: kishikawakatsumi, version: v0.8.3
+name: SpreadsheetView, nameSpecified: , owner: kishikawakatsumi, version: v0.8.4
 
-name: Kingfisher, nameSpecified: , owner: onevcat, version: 3.12.1
+name: Kingfisher, nameSpecified: , owner: onevcat, version: 3.13.1
 
-name: realm-cocoa, nameSpecified: , owner: realm, version: v2.10.0
+name: realm-cocoa, nameSpecified: , owner: realm, version: v2.10.2
 
 add-version-numbers: false
 
-LicensePlist Version: 1.4.5
+LicensePlist Version: 1.7.0

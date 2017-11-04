@@ -32,7 +32,7 @@ class TalkDetailViewController: UIViewController, StoryboardIdentifiable, Twitte
     
     @IBOutlet weak var speakersCollectionView: UICollectionView! {
         didSet {
-            let nib  = UINib(nibName: speakersCollectionViewDataSource.reuseIdentifier, bundle:nil)
+            let nib  = UINib(nibName: speakersCollectionViewDataSource.reuseIdentifier, bundle: nil)
             speakersCollectionView.register(nib, forCellWithReuseIdentifier: speakersCollectionViewDataSource.reuseIdentifier)
             speakersCollectionView.dataSource = speakersCollectionViewDataSource
         }
@@ -94,7 +94,7 @@ class TalkDetailViewController: UIViewController, StoryboardIdentifiable, Twitte
         
     }
     
-    func refresh(_ refreshControl: UIRefreshControl) {
+    @objc func refresh(_ refreshControl: UIRefreshControl) {
         talkDetail = nil
         getDetail()
     }
@@ -172,7 +172,7 @@ class TalkDetailViewController: UIViewController, StoryboardIdentifiable, Twitte
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: IndexPath) {
-        guard let userName = speakersCollectionViewDataSource.speakers[indexPath.row].twitterName else { return }
+        guard let userName = speakersCollectionViewDataSource.speakers[indexPath.row].twitterAccount else { return }
         openTwitter(userName: userName, from: self)
     }
 }

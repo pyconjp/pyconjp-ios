@@ -35,7 +35,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, StoryboardIdentifi
         region.center = venue.location
         region.span.latitudeDelta = 0.01
         region.span.longitudeDelta = 0.01
-        mapView.setRegion(region, animated:true)
+        mapView.setRegion(region, animated: true)
         
         let annotation = MKPointAnnotation()
         annotation.coordinate = venue.location

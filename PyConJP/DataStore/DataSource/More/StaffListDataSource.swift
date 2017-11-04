@@ -34,7 +34,7 @@ class StaffListDataSource: NSObject {
                 for tuple in teamNames.enumerated() {
                     self?.teams.append(Team(name: teamNames[tuple.offset], staffs: staffs.filter({ $0.team == teamNames[tuple.offset] })))
                 }
-                completionHandler(.success())
+                completionHandler(.success(()))
             case .failure(let error):
                 completionHandler(.failure(error))
             }

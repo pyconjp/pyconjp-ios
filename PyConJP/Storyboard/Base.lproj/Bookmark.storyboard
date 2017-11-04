@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,7 +18,7 @@
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4b0-ci-VgR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -29,15 +34,12 @@
         <scene sceneID="5hN-GQ-xrd">
             <objects>
                 <viewController storyboardIdentifier="BookmarkViewController" id="iuN-5Y-9Vy" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="heA-JU-1Z6"/>
-                        <viewControllerLayoutGuide type="bottom" id="pa5-5h-VUN"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cDV-GR-tnU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufG-kH-06H">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <connections>
                                     <segue destination="hH3-Av-77x" kind="embed" id="x4G-Dc-w6M"/>
                                 </connections>
@@ -46,10 +48,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ufG-kH-06H" secondAttribute="bottom" id="F6u-ik-3Yn"/>
-                            <constraint firstAttribute="trailing" secondItem="ufG-kH-06H" secondAttribute="trailing" id="U5V-iH-S51"/>
-                            <constraint firstItem="ufG-kH-06H" firstAttribute="leading" secondItem="cDV-GR-tnU" secondAttribute="leading" id="o83-cT-E3a"/>
+                            <constraint firstItem="TpP-7l-jev" firstAttribute="trailing" secondItem="ufG-kH-06H" secondAttribute="trailing" id="U5V-iH-S51"/>
+                            <constraint firstItem="ufG-kH-06H" firstAttribute="leading" secondItem="TpP-7l-jev" secondAttribute="leading" id="o83-cT-E3a"/>
                             <constraint firstItem="ufG-kH-06H" firstAttribute="top" secondItem="cDV-GR-tnU" secondAttribute="top" id="se7-fM-DYW"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="TpP-7l-jev"/>
                     </view>
                     <navigationItem key="navigationItem" title="Bookmark" id="gT9-SV-IIF">
                         <barButtonItem key="backBarButtonItem" title=" " id="mln-vy-6xh"/>
@@ -62,16 +65,13 @@
         <!--Bookmark-->
         <scene sceneID="djX-fO-D6u">
             <objects>
-                <viewController storyboardIdentifier="BookmarkListViewController" id="hH3-Av-77x" customClass="BookmarkListViewController" customModule="PyConJP2016" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="k4Z-iN-YfK"/>
-                        <viewControllerLayoutGuide type="bottom" id="MEW-aO-yGH"/>
-                    </layoutGuides>
+                <viewController storyboardIdentifier="BookmarkListViewController" id="hH3-Av-77x" customClass="BookmarkListViewController" customModule="PyConJP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JJ1-rw-5K7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="saF-8x-xjf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="hH3-Av-77x" id="FaZ-3G-lg1"/>
@@ -82,9 +82,10 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="saF-8x-xjf" secondAttribute="bottom" id="RWL-Kr-iCg"/>
                             <constraint firstItem="saF-8x-xjf" firstAttribute="top" secondItem="JJ1-rw-5K7" secondAttribute="top" id="bWw-dP-Hu2"/>
-                            <constraint firstAttribute="trailing" secondItem="saF-8x-xjf" secondAttribute="trailing" id="e0o-dw-A4r"/>
-                            <constraint firstItem="saF-8x-xjf" firstAttribute="leading" secondItem="JJ1-rw-5K7" secondAttribute="leading" id="lrN-FR-5qP"/>
+                            <constraint firstItem="5Gj-4x-ECP" firstAttribute="trailing" secondItem="saF-8x-xjf" secondAttribute="trailing" id="e0o-dw-A4r"/>
+                            <constraint firstItem="saF-8x-xjf" firstAttribute="leading" secondItem="5Gj-4x-ECP" secondAttribute="leading" id="lrN-FR-5qP"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Gj-4x-ECP"/>
                     </view>
                     <navigationItem key="navigationItem" title="Bookmark" id="dBi-0j-5q3">
                         <barButtonItem key="backBarButtonItem" title=" " id="dK4-lC-Czn"/>

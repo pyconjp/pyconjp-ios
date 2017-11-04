@@ -12,19 +12,19 @@ import RealmSwift
 
 final class TalkObject: RealmSwift.Object {
     
-    dynamic var id: Int = 0
-    dynamic var title: String = ""
-    dynamic var descriptionText: String = ""
-    dynamic var speakers: String = ""
-    dynamic var startDate: Date = Date()
-    dynamic var endDate: Date = Date()
-    dynamic var day: String = ""
-    dynamic var startTime: String = ""
-    dynamic var endTime: String = ""
-    dynamic var category: String = ""
-    dynamic var roomString: String = ""
-    dynamic var languageString: String = ""
-    dynamic var isFavorite: Bool = false
+    @objc dynamic var id: Int = 0
+    @objc dynamic var title: String = ""
+    @objc dynamic var descriptionText: String = ""
+    @objc dynamic var speakers: String = ""
+    @objc dynamic var startDate: Date = Date()
+    @objc dynamic var endDate: Date = Date()
+    @objc dynamic var day: String = ""
+    @objc dynamic var startTime: String = ""
+    @objc dynamic var endTime: String = ""
+    @objc dynamic var category: String = ""
+    @objc dynamic var roomString: String = ""
+    @objc dynamic var languageString: String = ""
+    @objc dynamic var isFavorite: Bool = false
     
     convenience init(id: Int, title: String, descriptionText: String, speakers: String, startDate: Date, endDate: Date, day: String, startTime: String, endTime: String, category: String, roomString: String, languageString: String, isFavorite: Bool) {
         self.init()

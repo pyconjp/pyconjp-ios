@@ -25,7 +25,7 @@ class ConferenceListDataSource: TimelineDataSource {
             switch result {
             case .success(let talks):
                 try? SaveTalksRequest().save(talks: talks)
-                completionHandler(.success())
+                completionHandler(.success(()))
             case .failure(let error):
                 completionHandler(.failure(error))
             }
@@ -40,7 +40,7 @@ class ConferenceListDataSource: TimelineDataSource {
             for tuple in keys.enumerated() {
                 timelines.append(Timeline(time: keys[tuple.offset], talks: talks.filter { $0.startTime == keys[tuple.offset]}))
             }
-            completionHandler(.success())
+            completionHandler(.success(()))
         } catch let error as NSError {
             completionHandler(.failure(error))
         }

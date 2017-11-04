@@ -10,10 +10,9 @@ import UIKit
 
 class ZoomableImageViewController: UIViewController, UIScrollViewDelegate, StoryboardIdentifiable {
     
-    @IBOutlet weak var toolBar: UIToolbar!
-    
     @IBOutlet weak var baseScrollView: UIScrollView?
     @IBOutlet weak var imageView: UIImageView?
+    @IBOutlet weak var closeButton: UIButton!
     
     private var isCompletedLayoutSubviews = false
     
@@ -51,14 +50,14 @@ class ZoomableImageViewController: UIViewController, UIScrollViewDelegate, Story
     private func toggleToolBarHiddenWithAnimation(_ toHidden: Bool) {
         if toHidden {
             UIView.animate(withDuration: 0.2, animations: {
-                self.toolBar.alpha = 0
+                self.closeButton.alpha = 0
                 }, completion: { _ in
-                    self.toolBar.isHidden = true
+                    self.closeButton.isHidden = true
             })
         } else {
-            toolBar.isHidden = false
+            closeButton.isHidden = false
             UIView.animate(withDuration: 0.2, animations: {
-                self.toolBar.alpha = 1
+                self.closeButton.alpha = 1
             })
         }
     }
@@ -70,20 +69,20 @@ class ZoomableImageViewController: UIViewController, UIScrollViewDelegate, Story
     }
     
     func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
-        toolBar.isHidden = true
+        closeButton.isHidden = true
     }
     
-    func singleTap(_ gesture: UITapGestureRecognizer) {
-        toggleToolBarHiddenWithAnimation(!toolBar.isHidden)
+    @objc func singleTap(_ gesture: UITapGestureRecognizer) {
+        toggleToolBarHiddenWithAnimation(!closeButton.isHidden)
     }
     
-    func doubleTap(_ gesture: UITapGestureRecognizer) {
+    @objc func doubleTap(_ gesture: UITapGestureRecognizer) {
         UIView.animate(withDuration: 0.2, animations: {
             self.baseScrollView?.zoomScale = 1
         }) 
     }
     
-    @IBAction func onCloseButton(_ sender: UIBarButtonItem) {
+    @IBAction func onClose(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     

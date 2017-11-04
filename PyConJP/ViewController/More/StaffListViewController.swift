@@ -13,7 +13,7 @@ class StaffListViewController: UIViewController, StoryboardIdentifiable, Twitter
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            let nib  = UINib(nibName: staffListDataSource.reuseIdentifier, bundle:nil)
+            let nib  = UINib(nibName: staffListDataSource.reuseIdentifier, bundle: nil)
             tableView.register(nib, forCellReuseIdentifier: staffListDataSource.reuseIdentifier)
             
             refreshControl.addTarget(self, action: #selector(StaffListViewController.onRefresh(_:)), for: .valueChanged)
@@ -49,7 +49,7 @@ class StaffListViewController: UIViewController, StoryboardIdentifiable, Twitter
         
     }
     
-    func onRefresh(_ sender: UIRefreshControl) {
+    @objc func onRefresh(_ sender: UIRefreshControl) {
         refresh()
     }
     

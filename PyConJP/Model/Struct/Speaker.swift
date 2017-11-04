@@ -12,16 +12,16 @@ struct Speaker {
     
     let name: String
     let imageURL: String?
-    let twitterName: String?
+    let twitterAccount: String?
     
 }
 
 extension Speaker {
     
-    init(dictionary: [String : Any]) {
+    init(dictionary: [String: Any]) {
         name = dictionary["name"] as? String ?? ""
         imageURL = dictionary["image_uri"] as? String
-        twitterName = dictionary["twitter"] as? String
+        twitterAccount = dictionary["twitter"] as? String
     }
         
 }
