@@ -23,8 +23,8 @@ class MapListViewController: UITableViewController, StoryboardIdentifiable {
             let mapViewController = MapViewController.build(venue: MapViewController.Venue.waseda)
             self.navigationController?.pushViewController(mapViewController, animated: true)
         case .floor:
-            let floorListViewController = self.storyboard?.instantiateViewController(withIdentifier: "FloorMapListViewController")
-            self.navigationController?.pushViewController(floorListViewController!, animated: true)
+            let floorListViewController: FloorMapListViewController = UIStoryboard(storyboard: .more).instantiateViewController()
+            self.navigationController?.pushViewController(floorListViewController, animated: true)
         }
     }
     

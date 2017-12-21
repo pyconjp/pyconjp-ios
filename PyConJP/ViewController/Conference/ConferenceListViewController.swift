@@ -9,7 +9,7 @@
 import UIKit
 import APIKit
 
-class ConferenceListViewController: UIViewController, ErrorAlertProtocol {
+class ConferenceListViewController: UIViewController, StoryboardIdentifiable, ErrorAlertProtocol {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -36,8 +36,8 @@ class ConferenceListViewController: UIViewController, ErrorAlertProtocol {
         NotificationCenter.default.removeObserver(self)
     }
     
-    static func build(at index: Int, storyboard: UIStoryboard, pyconJPDate: PyConJPDate) -> ConferenceListViewController {
-        let conferenceListViewController = storyboard.instantiateViewController(withIdentifier: "ConferenceListViewController") as! ConferenceListViewController
+    static func build(at index: Int, pyconJPDate: PyConJPDate) -> ConferenceListViewController {
+        let conferenceListViewController: ConferenceListViewController = UIStoryboard(storyboard: .conference).instantiateViewController()
         conferenceListViewController.viewControllerIndex = index
         conferenceListViewController.pyconJPDate = pyconJPDate
         
