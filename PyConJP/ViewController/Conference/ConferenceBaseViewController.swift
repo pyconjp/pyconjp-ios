@@ -40,30 +40,6 @@ class ConferenceBaseViewController: UIViewController, UIPageViewControllerDelega
         conferenceDateViewController.didMove(toParentViewController: self)
         
     }
-//    
-//    override func viewDidAppear(_ animated: Bool) {
-//        //        offsetToChange = 0.0
-//    }
-//    
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//    }
-//    
-//    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-//        let displayViewController = pageViewController.viewControllers?.last as! ConferenceListViewController
-//        displayIndex = displayViewController.viewControllerIndex
-//        //        if 1 - barContainerView.frame.origin.x < 1 {
-//        //
-//        //        } else if 1 - (barContainerView.frame.size.width / 2) < 1 {
-//        //
-//        //        }
-//    }
-//    
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if scrollView.contentOffset.x - pageContainerView.frame.size.width != 0 {
-//            offsetToChange = scrollView.contentOffset.x - pageContainerView.frame.size.width
-//        }
-//    }
     
 }
 
