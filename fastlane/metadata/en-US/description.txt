@@ -1,0 +1,27 @@
+PyCon JP 2017 Guide Application.
+
+# Conference Talk List
+
+You can search for talks your interested in and add them to your bookmark list
+by tapping the button in the top right corner of the talk detail view.
+
+(Notification are not implemented yet.)
+
+
+# Event List
+
+You can view confirmed events that will be held at PyCon JP 2017.
+
+
+# Map
+
+Access maps to the conference venue as well as floor maps of the venue.
+
+
+# EvenT Summary
+
+Tutorial: 2017-9-7 (Thu) 2017, Waseda University, Nishi-Waseda Campus
+Conference: 2017-9-8 (Fri) - 9 (Sat) 2017, Waseda University, Nishi-Waseda Campus
+Development Sprints: 2017-9-10 (Sun) 2017, Microsoft Japan
+
+Please note that in order to join the tutorials and the conference, a ticket is required.
