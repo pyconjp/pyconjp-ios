@@ -43,7 +43,7 @@ Carthage/*
 Cartfile.resolved
 
 # fastlane
-fastlane/*
+#fastlane/*
 !fastlane/Fastfile
 
 # AppCode
