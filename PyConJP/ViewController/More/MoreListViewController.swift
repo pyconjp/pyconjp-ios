@@ -60,7 +60,7 @@ class MoreListViewController: UITableViewController {
             self.navigationController?.pushViewController(mapViewController, animated: true)
         case .feedback:
             guard let urlSheme = row.urlSheme else { return }
-            UIApplication.shared.openURL(urlSheme)
+            UIApplication.shared.open(urlSheme, options: [:], completionHandler: nil)
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
