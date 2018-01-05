@@ -27,7 +27,7 @@ extension TwitterURLSchemeProtocol {
                                                 message: String(format: NSLocalizedString("twitterAlertMessage", tableName: "URLScheme", comment: ""), arguments: [targetName]),
                                                 preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: NSLocalizedString("open", comment: ""), style: .default, handler: { _ in
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }))
         alertController.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil))
         viewController.present(alertController, animated: true, completion: nil)
@@ -39,7 +39,7 @@ extension TwitterURLSchemeProtocol {
             if alertBefore {
                 openTwitterAppWithAlert(targetName: "@\(userName)", url: url, from: viewController)
             } else {
-                UIApplication.shared.openURL(url)
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         } else {
             guard let url = URL(string: "https://mobile.twitter.com/" + userName) else { return }
@@ -54,7 +54,7 @@ extension TwitterURLSchemeProtocol {
             if alertBefore {
                 openTwitterAppWithAlert(targetName: "#\(hashTag)", url: url, from: viewController)
             } else {
-                UIApplication.shared.openURL(url)
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         } else {
             guard let url = URL(string: "https://mobile.twitter.com/search?q=%23" + hashTag + "&s=typd") else { return }

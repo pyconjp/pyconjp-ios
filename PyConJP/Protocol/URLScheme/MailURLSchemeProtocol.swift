@@ -28,7 +28,7 @@ extension MailURLSchemeProtocol {
     
     func openMail(to address: String, subject: String, body: String) {
         guard let url =  mailURLScheme(to: address, subject: subject, body: body) else { return }
-        UIApplication.shared.openURL(url)
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
 }

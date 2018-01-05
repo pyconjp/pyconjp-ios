@@ -11,7 +11,7 @@ import APIKit
 import RealmSwift
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, ReceiveLocalNotificationProtocol, ErrorAlertProtocol {
+class AppDelegate: UIResponder, UIApplicationDelegate, ErrorAlertProtocol {
     
     var window: UIWindow?
     
@@ -33,11 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ReceiveLocalNotificationP
         Realm.Configuration.defaultConfiguration = configuration
         
         return true
-    }
-    
-    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
-        handle(application, didReceiveLocalNotification: notification)        
-        UIApplication.shared.cancelLocalNotification(notification)
     }
     
 }
