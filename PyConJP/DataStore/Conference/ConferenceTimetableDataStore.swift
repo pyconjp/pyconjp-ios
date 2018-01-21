@@ -73,11 +73,11 @@ final class ConferenceTimetableDataStore {
     }
     
     func widthForColumn(_ column: Int) -> CGFloat {
-        return Section(indexPath: IndexPath(row: 0, column: column)).widthForColumn
+        return Section(indexPath: IndexPath(row: 0, column: column)).width(of: timetable.rooms.count)
     }
     
     func heightForRow(_ row: Int) -> CGFloat {
-        return Section(indexPath: IndexPath(row: row, column: 0)).heightForRow
+        return Section(indexPath: IndexPath(row: row, column: 0)).height
     }
     
     func reloadTimetable() {
@@ -120,24 +120,25 @@ final class ConferenceTimetableDataStore {
             }
         }
         
-        var widthForColumn: CGFloat {
+        func width(of columnCount: Int) -> CGFloat {
             switch self {
             case .corner:
                 return TimetableTimeAxisCell.width
-            case .rowHeader:
-                return TimetableRoomCell.width
+            case .rowHeader, .timetable:
+                let timetableWidth: CGFloat = UIScreen.main.bounds.width - TimetableTimeAxisCell.width
+                if timetableWidth < TimetableRoomCell.width * CGFloat(columnCount) {
+                    return TimetableCell.width
+                } else {
+                    return timetableWidth / CGFloat(columnCount)
+                }
             case .columnHeader:
                 return TimetableTimeAxisCell.width
-            case .timetable:
-                return TimetableCell.width
             }
         }
         
-        var heightForRow: CGFloat {
+        var height: CGFloat {
             switch self {
-            case .corner:
-                return TimetableRoomCell.height
-            case .rowHeader:
+            case .corner, .rowHeader:
                 return TimetableRoomCell.height
             case .columnHeader:
                 return TimetableTimeAxisCell.height
