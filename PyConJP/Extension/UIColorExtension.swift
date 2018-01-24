@@ -29,22 +29,20 @@ extension UIColor {
 
 extension UIColor {
     
-    struct PyConJP2017 {
-        
-        static var navy: UIColor { return #colorLiteral(red: 0.1098039216, green: 0.4274509804, blue: 0.6235294118, alpha: 1) }
-        
-        static var yellow: UIColor { return #colorLiteral(red: 0.8862745098, green: 0.6666666667, blue: 0.07843137255, alpha: 1) }
-        
-        static var red: UIColor { return #colorLiteral(red: 0.8392156863, green: 0, blue: 0.2274509804, alpha: 1) }
-        
-        static var gray: UIColor { return #colorLiteral(red: 0.7843137255, green: 0.7843137255, blue: 0.7843137255, alpha: 1) }
-        
-        static var favorite: UIColor { return #colorLiteral(red: 1, green: 1, blue: 0.5987487964, alpha: 1) }
-        
-    }
+    static let navy: UIColor = UIColor(named: "navy")!
     
-    static var twitter: UIColor { return #colorLiteral(red: 0.3333333333, green: 0.6745098039, blue: 0.9333333333, alpha: 1) }
+    static let goldenrod: UIColor = UIColor(named: "goldenrod")!
     
-    static var facebook: UIColor { return #colorLiteral(red: 0.1921568627, green: 0.3137254902, blue: 0.5882352941, alpha: 1) }
+    static let crimson: UIColor = UIColor(named: "crimson")!
+    
+    static let lightYellow: UIColor = UIColor(named: "lightYellow")!
+    
+    static let silver: UIColor = UIColor(named: "silver")!
+    
+    static let davyGray: UIColor = UIColor(named: "davyGray")!
+    
+    static let twitter: UIColor = UIColor(named: "twitter")!
+    
+    static let facebook: UIColor = UIColor(named: "facebook")!
     
 }
