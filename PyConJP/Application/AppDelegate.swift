@@ -19,15 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ErrorAlertProtocol {
         
         getTalksFromAPI()
         
-        UINavigationBar.appearance().barTintColor = UIColor.PyConJP2017.navy
+        UINavigationBar.appearance().barTintColor = UIColor.navy
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         if #available(iOS 11.0, *) {
             UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         }
         
-        UITabBar.appearance().tintColor = UIColor.PyConJP2017.yellow
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 10), NSAttributedStringKey.foregroundColor: UIColor.PyConJP2017.yellow], for: .selected)
+        UITabBar.appearance().tintColor = UIColor.goldenrod
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 10), NSAttributedStringKey.foregroundColor: UIColor.goldenrod], for: .selected)
         
         let configuration = Realm.Configuration(schemaVersion: 1, deleteRealmIfMigrationNeeded: true)
         Realm.Configuration.defaultConfiguration = configuration

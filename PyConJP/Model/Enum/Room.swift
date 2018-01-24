@@ -35,9 +35,9 @@ enum Room: CustomStringConvertible {
     
     var color: UIColor {
         switch self {
-        case .room201: return UIColor.PyConJP2017.navy
-        case .room202: return UIColor.PyConJP2017.yellow
-        case .room203: return UIColor.PyConJP2017.red
+        case .room201: return UIColor.navy
+        case .room202: return UIColor.goldenrod
+        case .room203: return UIColor.crimson
         }
     }
     
