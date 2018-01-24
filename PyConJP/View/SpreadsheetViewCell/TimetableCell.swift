@@ -35,7 +35,7 @@ final class TimetableCell: Cell, NibInstantitable {
         titleLabel.text = talkObject.title
         timeLabel.text = talkObject.periodTime
         speakerLabel.text = talkObject.speakers
-        self.backgroundColor = talkObject.isFavorite ? UIColor.PyConJP2017.favorite : nil
+        self.backgroundColor = talkObject.isFavorite ? UIColor.lightYellow : nil
     }
     
 }
