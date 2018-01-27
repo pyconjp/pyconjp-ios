@@ -1,6 +1,6 @@
 name: Result, nameSpecified: , owner: antitypical, version: 3.2.4
 
-name: APIKit, nameSpecified: , owner: ishkawa, version: 3.1.2
+name: APIKit, nameSpecified: , owner: ishkawa, version: 3.2.0
 
 name: SpreadsheetView, nameSpecified: , owner: kishikawakatsumi, version: v0.8.4
 
@@ -10,4 +10,4 @@ name: realm-cocoa, nameSpecified: , owner: realm, version: v2.10.2
 
 add-version-numbers: false
 
-LicensePlist Version: 1.7.0
+LicensePlist Version: 1.8.2
